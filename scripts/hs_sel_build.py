@@ -19,6 +19,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from hs_sel_common import EDGES, QUESTIONS, STANDARDS, TOPICS  # noqa: E402
+from hs_common import ELECTIVE, PAGES  # noqa: E402
 import hs_sel_standards  # noqa: E402,F401
 import hs_sel_b1  # noqa: E402,F401
 import hs_sel_b2  # noqa: E402,F401
@@ -422,10 +423,12 @@ def main():
             "section": s["section"],
             "clause": s["clause"],
             "text": s["text"],
-            "page_or_ref": "待核",
+            "page_or_ref": ("课标印刷页码 %d" % PAGES[s["code"]]) if s["code"] in PAGES else "待核",
             "verbatim": False,
             "text_status": "公开转述整理，未与教育部 PDF 逐页核对，待核",
         })
+        if s["code"] in ELECTIVE:
+            std["items"][-1]["elective"] = True
 
     topics.extend(new_topics)
     if [(t.get("id"), t.get("name")) for t in topics[:len(frozen)]] != frozen:

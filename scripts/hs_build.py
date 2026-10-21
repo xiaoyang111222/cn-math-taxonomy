@@ -18,7 +18,7 @@ from fractions import Fraction
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from hs_common import EDGES, QUESTIONS, STANDARDS, TOPICS  # noqa: E402
+from hs_common import EDGES, ELECTIVE, PAGES, QUESTIONS, STANDARDS, TOPICS  # noqa: E402
 import hs_standards  # noqa: E402,F401
 import hs_book1  # noqa: E402,F401
 import hs_book2  # noqa: E402,F401
@@ -419,10 +419,12 @@ def main():
             "section": s["section"],
             "clause": s["clause"],
             "text": s["text"],
-            "page_or_ref": "待核",
+            "page_or_ref": ("课标印刷页码 %d" % PAGES[s["code"]]) if s["code"] in PAGES else "待核",
             "verbatim": False,
             "text_status": "公开转述整理，未与教育部 PDF 逐页核对，待核",
         })
+        if s["code"] in ELECTIVE:
+            std["items"][-1]["elective"] = True
 
     topics.extend(new_topics)
     questions = load("questions.json")
