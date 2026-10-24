@@ -130,14 +130,16 @@ numeric 和 choice 题可以带 `verify` 表达式，脚本在**受限环境**�
 
 ## 高中选择性必修题（2026-10-20）
 
-每个人教 A 版（2019）选择性必修知识点 4 题，共 **512** 题，id 从 `cnm_h144_q1` 起。字段与必修题相同。q1、q2 是 basic，q3、q4 是 standard。题干自包含：不写「同一 / 上题 / 该函数」这类指着别的题的说法，也不问「本知识点 / 课标是否要求」。
+每个人教 A 版（2019）选择性必修知识点 4 题，共 **512** 题，id 从 `cnm_h144_q1` 起。字段与必修题相同。q1、q2 是 basic，q3、q4 是 standard。
 
-| 项 | 选择性必修 512 题 | 全库 3355 题 |
+**2026-10 补 advanced**：选择性必修第一册第一章（`cnm_h144`–`cnm_h164`，21 个知识点）每点追加一道 `advanced`（id 形如 `cnm_h144_q5`），共 **21** 题，该章合计 533 题。题目是多步计算（先求坐标或模，再代入公式），答案仍由 `verify` 求值后写入。生成脚本 `scripts/hs_adv1.py` 会拒绝把 `isqrt` 用在非完全平方数上——`isqrt(2)` 得 1 而不是根号 2，这类写法会让答案在毫无提示的情况下算错。题干自包含：不写「同一 / 上题 / 该函数」这类指着别的题的说法，也不问「本知识点 / 课标是否要求」。
+
+| 项 | 选择性必修 533 题 | 全库 3355 题 |
 |---|---|---|
 | type | numeric 340，choice 172 | numeric 2251，choice 1075，short 23，self 6 |
-| difficulty | basic 256，standard 256 | basic 1566，standard 1510，advanced 279 |
+| difficulty | basic 256，standard 256，advanced 21 | basic 1566，standard 1510，advanced 279 |
 | 每知识点 | 正好 4 题 | 最少 4，最多 5 |
-| auto_verified | 512 | **2823** |
+| auto_verified | 533 | **2823** |
 | mismatch | 0 | **0** |
 | unverifiable | 0 | 532（仍是原来没有 verify 的初中题） |
 
