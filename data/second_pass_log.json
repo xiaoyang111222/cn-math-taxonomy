@@ -46,6 +46,13 @@
       "questions": 512,
       "note": "答案由同一条 verify 表达式求值后写入，再被核验脚本比对，所以 mismatch 反映的是格式而不是另一遍独立解题。没有做初中 A/B 轮那种盲解。概念题的选项文字与 verify 返回的字符串相同。",
       "disagreements": 0
+    },
+    {
+      "name": "F：高中数学选必一第一章补 advanced 档（21 题），答案由 verify 求值写入",
+      "solver": "scripts/hs_adv1.py + scripts/verify_questions.py",
+      "questions": 21,
+      "note": "D/E 两轮只覆盖 basic 与 standard 两档。本轮补齐该章每个知识点的第三档（advanced）：题目为多步计算，verify 由同一条表达式求值后写入，再被核验脚本比对。仍未做盲解，答案正确性依赖 verify 与被核验表达式一致。",
+      "disagreements": 0
     }
   ],
   "checked": 1401,
@@ -116,5 +123,6 @@
   "primary_checked": 864,
   "primary_disagreements": [],
   "high_school_checked_by_verify": 572,
-  "high_school_selective_checked_by_verify": 512
+  "high_school_selective_checked_by_verify": 512,
+  "high_school_advanced_batch1": 21
 }
