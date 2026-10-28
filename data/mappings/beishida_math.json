@@ -1,0 +1,1729 @@
+{
+ "edition": "beishida_math",
+ "label": "北师大版（北京师范大学出版社）数学",
+ "status": "draft",
+ "source": "对照依据：北师大版（2024 审定）一上、一下、二上、二下、三上、三下、四上、五上、六上共 9 册，目录取自教材 PDF 书签与目录页，2026-10-28 逐册核对；四下、五下、六下尚无 2024 审定新版，按现行旧版（北京师范大学出版社）目录页核对。新教材把部分内容（分数初步认识、面积、小数除法、负数、除数是两位数的除法等）安排在尚未出版的新版四（五）下，相关知识点暂按现有册次的相关单元落点并在 note 标明，待新册出版后补正。",
+ "entries": [
+  {
+   "topicId": "cnm_p001",
+   "grade": 1,
+   "term": "上",
+   "unit": "第一单元 生活中的数",
+   "chapter": "玩具"
+  },
+  {
+   "topicId": "cnm_p002",
+   "grade": 1,
+   "term": "上",
+   "unit": "第一单元 生活中的数",
+   "chapter": "快乐的午餐；动物乐园"
+  },
+  {
+   "topicId": "cnm_p003",
+   "grade": 1,
+   "term": "上",
+   "unit": "第一单元 生活中的数",
+   "note": "几和第几在数数与排队活动中渗透，目录无专节"
+  },
+  {
+   "topicId": "cnm_p004",
+   "grade": 1,
+   "term": "上",
+   "unit": "第一单元 生活中的数",
+   "chapter": "分与合",
+   "note": "分与合与本单元合并编排"
+  },
+  {
+   "topicId": "cnm_p005",
+   "grade": 1,
+   "term": "上",
+   "unit": "第一单元 生活中的数",
+   "chapter": "小猫钓鱼"
+  },
+  {
+   "topicId": "cnm_p006",
+   "grade": 1,
+   "term": "上",
+   "unit": "第二单元 5以内数加与减",
+   "chapter": "一共有多少"
+  },
+  {
+   "topicId": "cnm_p007",
+   "grade": 1,
+   "term": "上",
+   "unit": "第二单元 5以内数加与减",
+   "chapter": "还剩下多少"
+  },
+  {
+   "topicId": "cnm_p008",
+   "grade": 1,
+   "term": "上",
+   "unit": "第一单元 生活中的数",
+   "chapter": "文具"
+  },
+  {
+   "topicId": "cnm_p009",
+   "grade": 1,
+   "term": "上",
+   "unit": "第一单元 生活中的数",
+   "chapter": "快乐的午餐；动物乐园"
+  },
+  {
+   "topicId": "cnm_p010",
+   "grade": 1,
+   "term": "上",
+   "unit": "第四单元 10以内数加与减",
+   "chapter": "猜数游戏；背土豆"
+  },
+  {
+   "topicId": "cnm_p011",
+   "grade": 1,
+   "term": "上",
+   "unit": "第四单元 10以内数加与减",
+   "chapter": "课间；小鸡吃食"
+  },
+  {
+   "topicId": "cnm_p012",
+   "grade": 1,
+   "term": "上",
+   "unit": "第四单元 10以内数加与减",
+   "chapter": "乘车"
+  },
+  {
+   "topicId": "cnm_p013",
+   "grade": 1,
+   "term": "上",
+   "unit": "第四单元 10以内数加与减",
+   "chapter": "乘车"
+  },
+  {
+   "topicId": "cnm_p014",
+   "grade": 1,
+   "term": "上",
+   "unit": "第五单元 有趣的立体图形",
+   "chapter": "认识图形"
+  },
+  {
+   "topicId": "cnm_p015",
+   "grade": 1,
+   "term": "上",
+   "unit": "综合实践 介绍我的教室",
+   "note": "上下前后左右在介绍教室的活动中学习，无独立单元"
+  },
+  {
+   "topicId": "cnm_p016",
+   "grade": 1,
+   "term": "下",
+   "unit": "第一单元 20以内数与加法",
+   "chapter": "古人计数（一）；古人计数（二）",
+   "note": "北师大版在一年级下册"
+  },
+  {
+   "topicId": "cnm_p017",
+   "grade": 1,
+   "term": "下",
+   "unit": "第一单元 20以内数与加法",
+   "chapter": "古人计数（二）；搭积木",
+   "note": "北师大版在一年级下册"
+  },
+  {
+   "topicId": "cnm_p018",
+   "grade": 1,
+   "term": "下",
+   "unit": "第一单元 20以内数与加法",
+   "chapter": "搭积木",
+   "note": "北师大版在一年级下册"
+  },
+  {
+   "topicId": "cnm_p019",
+   "grade": 1,
+   "term": "下",
+   "unit": "第一单元 20以内数与加法",
+   "note": "北师大版在一年级下册；凑十法在20以内进位加法中学习"
+  },
+  {
+   "topicId": "cnm_p020",
+   "grade": 1,
+   "term": "下",
+   "unit": "第一单元 20以内数与加法",
+   "note": "北师大版在一年级下册"
+  },
+  {
+   "topicId": "cnm_p021",
+   "grade": 1,
+   "term": "下",
+   "unit": "第一单元 20以内数与加法",
+   "note": "北师大版在一年级下册"
+  },
+  {
+   "topicId": "cnm_p022",
+   "grade": 1,
+   "term": "上",
+   "unit": "第三单元 整理与分类",
+   "chapter": "整理房间；一起来分类"
+  },
+  {
+   "topicId": "cnm_p023",
+   "grade": 1,
+   "term": "下",
+   "unit": "第六单元 有趣的平面图形（一）",
+   "chapter": "认识图形"
+  },
+  {
+   "topicId": "cnm_p024",
+   "grade": 1,
+   "term": "下",
+   "unit": "第六单元 有趣的平面图形（一）",
+   "chapter": "动手做（一）～（三）；拼图大挑战"
+  },
+  {
+   "topicId": "cnm_p025",
+   "grade": 1,
+   "term": "下",
+   "unit": "第三单元 20以内数与减法",
+   "chapter": "买文具"
+  },
+  {
+   "topicId": "cnm_p026",
+   "grade": 1,
+   "term": "下",
+   "unit": "第三单元 20以内数与减法",
+   "chapter": "捉迷藏"
+  },
+  {
+   "topicId": "cnm_p027",
+   "grade": 1,
+   "term": "下",
+   "unit": "第三单元 20以内数与减法",
+   "chapter": "开会啦；跳伞表演"
+  },
+  {
+   "topicId": "cnm_p028",
+   "grade": 1,
+   "term": "下",
+   "unit": "第四单元 100以内数的认识",
+   "chapter": "数一数；数豆子"
+  },
+  {
+   "topicId": "cnm_p029",
+   "grade": 1,
+   "term": "下",
+   "unit": "第四单元 100以内数的认识",
+   "chapter": "谁的红果多"
+  },
+  {
+   "topicId": "cnm_p030",
+   "grade": 1,
+   "term": "下",
+   "unit": "第五单元 100以内数加与减（一）",
+   "chapter": "小兔请客"
+  },
+  {
+   "topicId": "cnm_p031",
+   "grade": 1,
+   "term": "下",
+   "unit": "第五单元 100以内数加与减（一）",
+   "chapter": "采松果；青蛙吃虫子"
+  },
+  {
+   "topicId": "cnm_p032",
+   "grade": 1,
+   "term": "下",
+   "unit": "第五单元 100以内数加与减（一）",
+   "chapter": "青蛙吃虫子；算一算"
+  },
+  {
+   "topicId": "cnm_p033",
+   "grade": 2,
+   "term": "上",
+   "unit": "第一单元 100以内数加与减（二）",
+   "chapter": "图书角；摘苹果",
+   "note": "北师大版把100以内笔算加减放在二年级上册"
+  },
+  {
+   "topicId": "cnm_p034",
+   "grade": 2,
+   "term": "上",
+   "unit": "第一单元 100以内数加与减（二）",
+   "chapter": "借阅图书；收玉米",
+   "note": "北师大版把100以内笔算加减放在二年级上册"
+  },
+  {
+   "topicId": "cnm_p035",
+   "grade": 1,
+   "term": "下",
+   "unit": "第五单元 100以内数加与减（一）",
+   "note": "部分与总数关系在本单元加减问题中渗透"
+  },
+  {
+   "topicId": "cnm_p036",
+   "grade": 2,
+   "term": "上",
+   "unit": "综合实践 参加欢乐购物活动",
+   "chapter": "模拟购物活动",
+   "note": "北师大版在二年级上册"
+  },
+  {
+   "topicId": "cnm_p037",
+   "grade": 2,
+   "term": "下",
+   "unit": "第七单元 分类",
+   "chapter": "怎样分组；分扣子",
+   "note": "北师大版在二年级下册"
+  },
+  {
+   "topicId": "cnm_p038",
+   "grade": 2,
+   "term": "上",
+   "unit": "第三单元 数一数与乘法",
+   "chapter": "儿童乐园；点子图中的乘法"
+  },
+  {
+   "topicId": "cnm_p039",
+   "grade": 2,
+   "term": "上",
+   "unit": "第四单元 乘法口诀（一）",
+   "chapter": "做家务；需要几个轮子；回家路上"
+  },
+  {
+   "topicId": "cnm_p040",
+   "grade": 2,
+   "term": "上",
+   "unit": "第二单元 测量（一）",
+   "chapter": "课桌有多长"
+  },
+  {
+   "topicId": "cnm_p041",
+   "grade": 2,
+   "term": "上",
+   "unit": "第二单元 测量（一）",
+   "chapter": "1米有多长"
+  },
+  {
+   "topicId": "cnm_p042",
+   "grade": 2,
+   "term": "上",
+   "unit": "第七单元 乘法口诀（二）",
+   "chapter": "有多少张贴画；有多少无人机；做个乘法表"
+  },
+  {
+   "topicId": "cnm_p043",
+   "grade": 2,
+   "term": "上",
+   "unit": "第五单元 分一分与除法",
+   "chapter": "分物游戏；分香蕉"
+  },
+  {
+   "topicId": "cnm_p044",
+   "grade": 2,
+   "term": "上",
+   "unit": "第八单元 乘除法的应用（一）",
+   "note": "用7~9的口诀求商在本单元学习"
+  },
+  {
+   "topicId": "cnm_p045",
+   "grade": 2,
+   "term": "下",
+   "unit": "综合实践 发现身体上的尺子",
+   "note": "北师大版在二年级下册"
+  },
+  {
+   "topicId": "cnm_p046",
+   "grade": 2,
+   "term": "上",
+   "unit": "第五单元 分一分与除法",
+   "chapter": "小熊开店；花园"
+  },
+  {
+   "topicId": "cnm_p047",
+   "grade": 2,
+   "term": "上",
+   "unit": "第五单元 分一分与除法",
+   "note": "北师大版不单列「用乘法验算除法」，在乘除关系中渗透"
+  },
+  {
+   "topicId": "cnm_p048",
+   "grade": 2,
+   "term": "上",
+   "unit": "第八单元 乘除法的应用（一）",
+   "chapter": "长颈鹿与小鸟；农家小院"
+  },
+  {
+   "topicId": "cnm_p049",
+   "grade": 2,
+   "term": "上",
+   "unit": "综合实践 画校园路线图",
+   "chapter": "认识东南西北"
+  },
+  {
+   "topicId": "cnm_p050",
+   "grade": 2,
+   "term": "下",
+   "unit": "第三单元 除法的应用",
+   "chapter": "搭一搭（一）"
+  },
+  {
+   "topicId": "cnm_p051",
+   "grade": 2,
+   "term": "下",
+   "unit": "第三单元 除法的应用",
+   "chapter": "搭一搭（二）"
+  },
+  {
+   "topicId": "cnm_p052",
+   "grade": 2,
+   "term": "下",
+   "unit": "第三单元 除法的应用",
+   "chapter": "租船"
+  },
+  {
+   "topicId": "cnm_p053",
+   "grade": 2,
+   "term": "下",
+   "unit": "第四单元 生活中的大数",
+   "chapter": "数一数（一）；数一数（二）；有多少个字"
+  },
+  {
+   "topicId": "cnm_p054",
+   "grade": 2,
+   "term": "下",
+   "unit": "第四单元 生活中的大数",
+   "chapter": "哪座山更高"
+  },
+  {
+   "topicId": "cnm_p055",
+   "grade": 2,
+   "term": "下",
+   "unit": "第四单元 生活中的大数",
+   "chapter": "数一数（一）；数说西藏"
+  },
+  {
+   "topicId": "cnm_p056",
+   "grade": 3,
+   "term": "下",
+   "unit": "综合实践 制作动物体重“说明书”",
+   "chapter": "动物有多重",
+   "note": "北师大版在三年级下册综合实践"
+  },
+  {
+   "topicId": "cnm_p057",
+   "grade": 2,
+   "term": "上",
+   "unit": "第四单元 乘法口诀（一）",
+   "note": "乘加乘减在口诀与解决问题中渗透，无独立小节"
+  },
+  {
+   "topicId": "cnm_p058",
+   "grade": 3,
+   "term": "上",
+   "unit": "第一单元 混合运算",
+   "chapter": "过河"
+  },
+  {
+   "topicId": "cnm_p059",
+   "grade": 3,
+   "term": "上",
+   "unit": "第一单元 混合运算",
+   "chapter": "小熊购物；买文具"
+  },
+  {
+   "topicId": "cnm_p060",
+   "grade": 3,
+   "term": "下",
+   "unit": "第六单元 关系与规律",
+   "chapter": "欢庆节日",
+   "note": "北师大版在三年级下册"
+  },
+  {
+   "topicId": "cnm_p061",
+   "grade": 2,
+   "term": "下",
+   "unit": "综合实践 参加趣味运动会",
+   "chapter": "时间有多长",
+   "note": "北师大版把时分秒放在综合实践中"
+  },
+  {
+   "topicId": "cnm_p062",
+   "grade": 2,
+   "term": "下",
+   "unit": "综合实践 参加趣味运动会",
+   "chapter": "时间有多长"
+  },
+  {
+   "topicId": "cnm_p063",
+   "grade": 2,
+   "term": "下",
+   "unit": "综合实践 参加趣味运动会",
+   "chapter": "时间有多长"
+  },
+  {
+   "topicId": "cnm_p064",
+   "grade": 2,
+   "term": "下",
+   "unit": "第六单元 大数加与减（一）",
+   "chapter": "鱼菜共生；保护野生鸟类"
+  },
+  {
+   "topicId": "cnm_p065",
+   "grade": 2,
+   "term": "下",
+   "unit": "第六单元 大数加与减（一）",
+   "chapter": "美丽滇池"
+  },
+  {
+   "topicId": "cnm_p066",
+   "grade": 2,
+   "term": "下",
+   "unit": "第六单元 大数加与减（一）",
+   "chapter": "有多远"
+  },
+  {
+   "topicId": "cnm_p067",
+   "grade": 3,
+   "term": "上",
+   "unit": "第二单元 测量（二）",
+   "chapter": "铅笔有多长"
+  },
+  {
+   "topicId": "cnm_p068",
+   "grade": 3,
+   "term": "上",
+   "unit": "第二单元 测量（二）",
+   "chapter": "铅笔有多长"
+  },
+  {
+   "topicId": "cnm_p069",
+   "grade": 3,
+   "term": "上",
+   "unit": "第二单元 测量（二）",
+   "chapter": "1千米有多长"
+  },
+  {
+   "topicId": "cnm_p070",
+   "grade": 3,
+   "term": "上",
+   "unit": "第二单元 测量（二）",
+   "note": "吨的认识在本单元学习"
+  },
+  {
+   "topicId": "cnm_p071",
+   "grade": 2,
+   "term": "下",
+   "unit": "第六单元 大数加与减（一）",
+   "chapter": "保护野生鸟类；美丽滇池"
+  },
+  {
+   "topicId": "cnm_p072",
+   "grade": 2,
+   "term": "下",
+   "unit": "第六单元 大数加与减（一）",
+   "chapter": "美丽滇池"
+  },
+  {
+   "topicId": "cnm_p073",
+   "grade": 2,
+   "term": "上",
+   "unit": "第八单元 乘除法的应用（一）",
+   "chapter": "求一个数是另一个数的几倍",
+   "note": "北师大版在二年级上册"
+  },
+  {
+   "topicId": "cnm_p074",
+   "grade": 3,
+   "term": "上",
+   "unit": "第六单元 乘除法的应用（二）",
+   "chapter": "包饺子；需要多少钱"
+  },
+  {
+   "topicId": "cnm_p075",
+   "grade": 3,
+   "term": "上",
+   "unit": "第六单元 乘除法的应用（二）",
+   "chapter": "包饺子",
+   "note": "整十整百数乘一位数；0的处理在3下第一单元「神奇的0」深化"
+  },
+  {
+   "topicId": "cnm_p076",
+   "grade": 4,
+   "term": "上",
+   "unit": "综合实践 编码",
+   "note": "北师大版在四年级上册"
+  },
+  {
+   "topicId": "cnm_p077",
+   "grade": 3,
+   "term": "上",
+   "unit": "第五单元 认识图形",
+   "chapter": "长方形与正方形",
+   "note": "北师大版在三年级上册"
+  },
+  {
+   "topicId": "cnm_p078",
+   "grade": 3,
+   "term": "下",
+   "unit": "第三单元 周长",
+   "chapter": "长方形周长"
+  },
+  {
+   "topicId": "cnm_p079",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "note": "北师大新版将分数初步认识安排在四年级下册（尚未出版）；现行旧版在三年级下册（本库未收）"
+  },
+  {
+   "topicId": "cnm_p080",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "note": "北师大新版将分数初步认识安排在四年级下册（尚未出版）；同分母加减在本册分数加减法中运用"
+  },
+  {
+   "topicId": "cnm_p082",
+   "grade": 3,
+   "term": "上",
+   "unit": "综合实践 记录我们的校园",
+   "chapter": "校园里的八个方向",
+   "note": "北师大版在三年级上册"
+  },
+  {
+   "topicId": "cnm_p083",
+   "grade": 3,
+   "term": "下",
+   "unit": "第四单元 整数除法（一）",
+   "chapter": "分松果；家庭阅读"
+  },
+  {
+   "topicId": "cnm_p084",
+   "grade": 3,
+   "term": "下",
+   "unit": "第四单元 整数除法（一）",
+   "chapter": "集邮；买新书；讲故事"
+  },
+  {
+   "topicId": "cnm_p085",
+   "grade": 3,
+   "term": "下",
+   "unit": "第七单元 数据的整理与表示",
+   "chapter": "统计表",
+   "note": "复式统计表在本单元数据整理中学习"
+  },
+  {
+   "topicId": "cnm_p086",
+   "grade": 3,
+   "term": "下",
+   "unit": "第一单元 整数乘法（一）",
+   "chapter": "武术表演；去游乐园",
+   "note": "北师大版在三年级下册"
+  },
+  {
+   "topicId": "cnm_p087",
+   "grade": 3,
+   "term": "下",
+   "unit": "第一单元 整数乘法（一）",
+   "chapter": "饮品店；有多少名观众；怎样买最省钱",
+   "note": "北师大版在三年级下册"
+  },
+  {
+   "topicId": "cnm_p088",
+   "grade": 5,
+   "term": "上",
+   "unit": "第五单元 多边形的面积",
+   "chapter": "比较图形的面积",
+   "note": "北师大新版把面积安排在五年级上册；旧版在三年级下册"
+  },
+  {
+   "topicId": "cnm_p089",
+   "grade": 5,
+   "term": "上",
+   "unit": "第五单元 多边形的面积",
+   "chapter": "探索平行四边形面积",
+   "note": "以长方形面积公式为基础；旧版在三年级下册"
+  },
+  {
+   "topicId": "cnm_p090",
+   "grade": 5,
+   "term": "上",
+   "unit": "第五单元 多边形的面积",
+   "chapter": "公顷、平方千米",
+   "note": "常用面积单位换算在旧版三年级下册；本单元学习公顷、平方千米"
+  },
+  {
+   "topicId": "cnm_p091",
+   "grade": 3,
+   "term": "上",
+   "unit": "综合实践 探索年月日的秘密",
+   "chapter": "走进年月日；年月日知多少",
+   "note": "北师大版在三年级上册"
+  },
+  {
+   "topicId": "cnm_p092",
+   "grade": 3,
+   "term": "上",
+   "unit": "综合实践 探索年月日的秘密",
+   "chapter": "一天有多长"
+  },
+  {
+   "topicId": "cnm_p093",
+   "grade": 3,
+   "term": "上",
+   "unit": "第七单元 认识小数",
+   "chapter": "水果店；生活中的小数"
+  },
+  {
+   "topicId": "cnm_p094",
+   "grade": 3,
+   "term": "上",
+   "unit": "第七单元 认识小数",
+   "chapter": "存零用钱；竹子的生长"
+  },
+  {
+   "topicId": "cnm_p095",
+   "grade": 3,
+   "term": "上",
+   "unit": "数学好玩 搭配中的学问"
+  },
+  {
+   "topicId": "cnm_p096",
+   "grade": 4,
+   "term": "上",
+   "unit": "第一单元 认识更大的数",
+   "chapter": "数说祖国；认识更大的数"
+  },
+  {
+   "topicId": "cnm_p097",
+   "grade": 4,
+   "term": "上",
+   "unit": "第一单元 认识更大的数",
+   "chapter": "人口普查；大豆产量"
+  },
+  {
+   "topicId": "cnm_p098",
+   "grade": 5,
+   "term": "上",
+   "unit": "第五单元 多边形的面积",
+   "chapter": "公顷、平方千米"
+  },
+  {
+   "topicId": "cnm_p099",
+   "grade": 4,
+   "term": "上",
+   "unit": "第二单元 线与角",
+   "chapter": "线的认识",
+   "note": "北师大版在四年级上册"
+  },
+  {
+   "topicId": "cnm_p100",
+   "grade": 4,
+   "term": "上",
+   "unit": "第二单元 线与角",
+   "chapter": "角的度量"
+  },
+  {
+   "topicId": "cnm_p101",
+   "grade": 3,
+   "term": "上",
+   "unit": "第五单元 认识图形",
+   "chapter": "比一比；认识直角",
+   "note": "锐角、直角、钝角的判断"
+  },
+  {
+   "topicId": "cnm_p102",
+   "grade": 4,
+   "term": "上",
+   "unit": "第三单元 整数乘法（二）",
+   "chapter": "卫星运行时间"
+  },
+  {
+   "topicId": "cnm_p103",
+   "grade": 4,
+   "term": "上",
+   "unit": "第二单元 线与角",
+   "chapter": "相交与垂直"
+  },
+  {
+   "topicId": "cnm_p104",
+   "grade": 4,
+   "term": "上",
+   "unit": "第二单元 线与角",
+   "chapter": "平移与平行"
+  },
+  {
+   "topicId": "cnm_p105",
+   "grade": 4,
+   "term": "下",
+   "unit": "二 认识三角形和四边形",
+   "chapter": "四边形分类",
+   "note": "北师大现行旧版在四年级下册；新版待4下出版"
+  },
+  {
+   "topicId": "cnm_p108",
+   "grade": 4,
+   "term": "上",
+   "unit": "第八单元 数据的表示和分析（一）",
+   "chapter": "同学的生日；获奖时的年龄"
+  },
+  {
+   "topicId": "cnm_p110",
+   "grade": 3,
+   "term": "下",
+   "unit": "第六单元 关系与规律",
+   "note": "北师大版在三年级下册学习加减关系；乘除关系在运算律与方程中渗透"
+  },
+  {
+   "topicId": "cnm_p111",
+   "grade": 4,
+   "term": "上",
+   "unit": "第七单元 运用数量关系解决问题",
+   "chapter": "单价、数量与总价；速度、时间与路程"
+  },
+  {
+   "topicId": "cnm_p112",
+   "grade": 3,
+   "term": "上",
+   "unit": "第一单元 混合运算",
+   "chapter": "小熊购物；买文具；过河",
+   "note": "北师大版在三年级上册；四年级结合运算律深化"
+  },
+  {
+   "topicId": "cnm_p113",
+   "grade": 3,
+   "term": "上",
+   "unit": "第四单元 我们生活的空间（一）",
+   "chapter": "看一看（一）～（四）",
+   "note": "北师大版在三年级上册"
+  },
+  {
+   "topicId": "cnm_p114",
+   "grade": 4,
+   "term": "上",
+   "unit": "第五单元 运算律",
+   "chapter": "加法交换律和乘法交换律；加法结合律"
+  },
+  {
+   "topicId": "cnm_p115",
+   "grade": 4,
+   "term": "上",
+   "unit": "第五单元 运算律",
+   "chapter": "乘法结合律"
+  },
+  {
+   "topicId": "cnm_p116",
+   "grade": 4,
+   "term": "上",
+   "unit": "第五单元 运算律",
+   "chapter": "乘法分配律"
+  },
+  {
+   "topicId": "cnm_p117",
+   "grade": 4,
+   "term": "上",
+   "unit": "第五单元 运算律",
+   "note": "简便计算在本单元学习"
+  },
+  {
+   "topicId": "cnm_p118",
+   "grade": 5,
+   "term": "上",
+   "unit": "第一单元 小数的再认识和加减法",
+   "chapter": "小数的再认识",
+   "note": "北师大新版在五年级上册"
+  },
+  {
+   "topicId": "cnm_p119",
+   "grade": 5,
+   "term": "上",
+   "unit": "第一单元 小数的再认识和加减法",
+   "chapter": "比大小",
+   "note": "北师大新版在五年级上册"
+  },
+  {
+   "topicId": "cnm_p120",
+   "grade": 5,
+   "term": "上",
+   "unit": "第三单元 小数乘法",
+   "note": "小数点移动引起大小变化"
+  },
+  {
+   "topicId": "cnm_p121",
+   "grade": 5,
+   "term": "上",
+   "unit": "第三单元 小数乘法",
+   "note": "求小数的近似数在本单元「积的近似数」中学习"
+  },
+  {
+   "topicId": "cnm_p122",
+   "grade": 5,
+   "term": "上",
+   "unit": "第二单元 三角形的再认识",
+   "note": "三角形的分类在本单元学习；北师大新版在五年级上册"
+  },
+  {
+   "topicId": "cnm_p123",
+   "grade": 5,
+   "term": "上",
+   "unit": "第二单元 三角形的再认识",
+   "chapter": "探索三角形三边关系"
+  },
+  {
+   "topicId": "cnm_p124",
+   "grade": 5,
+   "term": "上",
+   "unit": "第二单元 三角形的再认识",
+   "chapter": "探索三角形内角和"
+  },
+  {
+   "topicId": "cnm_p125",
+   "grade": 5,
+   "term": "上",
+   "unit": "第一单元 小数的再认识和加减法",
+   "chapter": "买菜；称体重；歌手大赛",
+   "note": "北师大新版在五年级上册"
+  },
+  {
+   "topicId": "cnm_p126",
+   "grade": 5,
+   "term": "上",
+   "unit": "第一单元 小数的再认识和加减法",
+   "note": "小数加减混合运算"
+  },
+  {
+   "topicId": "cnm_p127",
+   "grade": 3,
+   "term": "下",
+   "unit": "第二单元 图形的运动（二）",
+   "chapter": "轴对称（一）（二）",
+   "note": "北师大版在三年级下册"
+  },
+  {
+   "topicId": "cnm_p128",
+   "grade": 3,
+   "term": "下",
+   "unit": "第二单元 图形的运动（二）",
+   "chapter": "平移和旋转",
+   "note": "北师大版在三年级下册"
+  },
+  {
+   "topicId": "cnm_p129",
+   "grade": 4,
+   "term": "上",
+   "unit": "第八单元 数据的表示和分析（一）",
+   "note": "平均数在本单元学习；北师大在四年级上册"
+  },
+  {
+   "topicId": "cnm_p130",
+   "grade": 6,
+   "term": "上",
+   "unit": "第九单元 数据的表示和分析（三）",
+   "note": "北师大新版把复式条形统计图放在六年级上册；旧版在5下"
+  },
+  {
+   "topicId": "cnm_p131",
+   "grade": 5,
+   "term": "上",
+   "unit": "数学好玩 鸡兔同笼",
+   "note": "北师大版在五年级上册"
+  },
+  {
+   "topicId": "cnm_p132",
+   "grade": 5,
+   "term": "上",
+   "unit": "第三单元 小数乘法",
+   "chapter": "买文具"
+  },
+  {
+   "topicId": "cnm_p133",
+   "grade": 5,
+   "term": "上",
+   "unit": "第三单元 小数乘法",
+   "chapter": "街心广场；包装"
+  },
+  {
+   "topicId": "cnm_p134",
+   "grade": 5,
+   "term": "上",
+   "unit": "第三单元 小数乘法",
+   "chapter": "蚕丝；手拉手"
+  },
+  {
+   "topicId": "cnm_p135",
+   "grade": 5,
+   "term": "上",
+   "unit": "第三单元 小数乘法",
+   "note": "积的近似数在本单元学习"
+  },
+  {
+   "topicId": "cnm_p136",
+   "grade": 5,
+   "term": "上",
+   "unit": "第六单元 图形的位置与运动（一）",
+   "chapter": "确定位置",
+   "note": "北师大版在五年级上册"
+  },
+  {
+   "topicId": "cnm_p140",
+   "grade": 5,
+   "term": "上",
+   "unit": "第八单元 可能性",
+   "chapter": "不确定性"
+  },
+  {
+   "topicId": "cnm_p141",
+   "grade": 5,
+   "term": "上",
+   "unit": "第八单元 可能性",
+   "chapter": "谁先走；摸球游戏"
+  },
+  {
+   "topicId": "cnm_p142",
+   "grade": 5,
+   "term": "上",
+   "unit": "第四单元 用字母表示（一）",
+   "chapter": "青蛙歌；用字母表示数量关系"
+  },
+  {
+   "topicId": "cnm_p143",
+   "grade": 5,
+   "term": "上",
+   "unit": "第四单元 用字母表示（一）",
+   "note": "方程意义在本单元学习"
+  },
+  {
+   "topicId": "cnm_p144",
+   "grade": 5,
+   "term": "上",
+   "unit": "第四单元 用字母表示（一）",
+   "chapter": "等式中的规律"
+  },
+  {
+   "topicId": "cnm_p145",
+   "grade": 5,
+   "term": "上",
+   "unit": "第四单元 用字母表示（一）",
+   "note": "解方程在本单元学习"
+  },
+  {
+   "topicId": "cnm_p146",
+   "grade": 6,
+   "term": "上",
+   "unit": "第三单元 用字母表示（二）",
+   "note": "北师大新版在六年级上册学习用方程解决实际问题"
+  },
+  {
+   "topicId": "cnm_p147",
+   "grade": 5,
+   "term": "上",
+   "unit": "第五单元 多边形的面积",
+   "chapter": "探索平行四边形面积"
+  },
+  {
+   "topicId": "cnm_p148",
+   "grade": 5,
+   "term": "上",
+   "unit": "第五单元 多边形的面积",
+   "chapter": "探索三角形面积"
+  },
+  {
+   "topicId": "cnm_p149",
+   "grade": 5,
+   "term": "上",
+   "unit": "第五单元 多边形的面积",
+   "chapter": "探索梯形面积"
+  },
+  {
+   "topicId": "cnm_p150",
+   "grade": 5,
+   "term": "上",
+   "unit": "第五单元 多边形的面积",
+   "chapter": "组合图形的面积"
+  },
+  {
+   "topicId": "cnm_p151",
+   "grade": 4,
+   "term": "上",
+   "unit": "数学好玩 数图形的学问",
+   "note": "北师大版以数图形/间隔问题渗透，无植树问题专节"
+  },
+  {
+   "topicId": "cnm_p152",
+   "grade": 6,
+   "term": "上",
+   "unit": "第八单元 观察物体（二）",
+   "chapter": "观察物体；搭积木",
+   "note": "北师大版在六年级上册"
+  },
+  {
+   "topicId": "cnm_p153",
+   "grade": 5,
+   "term": "上",
+   "unit": "第七单元 倍数与因数",
+   "chapter": "倍数与因数",
+   "note": "北师大版在五年级上册"
+  },
+  {
+   "topicId": "cnm_p154",
+   "grade": 5,
+   "term": "上",
+   "unit": "第七单元 倍数与因数",
+   "chapter": "探索2,5的倍数特征"
+  },
+  {
+   "topicId": "cnm_p155",
+   "grade": 5,
+   "term": "上",
+   "unit": "第七单元 倍数与因数",
+   "chapter": "探索3的倍数特征"
+  },
+  {
+   "topicId": "cnm_p156",
+   "grade": 5,
+   "term": "上",
+   "unit": "第七单元 倍数与因数",
+   "note": "奇偶性在本单元学习"
+  },
+  {
+   "topicId": "cnm_p157",
+   "grade": 5,
+   "term": "上",
+   "unit": "第七单元 倍数与因数",
+   "chapter": "质数与合数；寻找质数"
+  },
+  {
+   "topicId": "cnm_p158",
+   "grade": 5,
+   "term": "上",
+   "unit": "第七单元 倍数与因数",
+   "chapter": "最大公因数和最小公倍数"
+  },
+  {
+   "topicId": "cnm_p159",
+   "grade": 5,
+   "term": "上",
+   "unit": "第七单元 倍数与因数",
+   "chapter": "最大公因数和最小公倍数"
+  },
+  {
+   "topicId": "cnm_p160",
+   "grade": 5,
+   "term": "下",
+   "unit": "二 长方体（一）",
+   "chapter": "长方体的认识",
+   "note": "北师大现行旧版在五年级下册；新版待5下出版"
+  },
+  {
+   "topicId": "cnm_p161",
+   "grade": 5,
+   "term": "下",
+   "unit": "二 长方体（一）",
+   "chapter": "长方体的表面积"
+  },
+  {
+   "topicId": "cnm_p162",
+   "grade": 5,
+   "term": "下",
+   "unit": "四 长方体（二）",
+   "chapter": "体积单位"
+  },
+  {
+   "topicId": "cnm_p163",
+   "grade": 5,
+   "term": "下",
+   "unit": "四 长方体（二）",
+   "chapter": "长方体的体积"
+  },
+  {
+   "topicId": "cnm_p164",
+   "grade": 5,
+   "term": "下",
+   "unit": "四 长方体（二）",
+   "chapter": "体积与容积"
+  },
+  {
+   "topicId": "cnm_p165",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "note": "分数意义为前置知识；北师大现行旧版在五年级上册"
+  },
+  {
+   "topicId": "cnm_p166",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "note": "真分数、假分数为前置知识；北师大现行旧版在五年级上册"
+  },
+  {
+   "topicId": "cnm_p167",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "note": "分数的基本性质为通分、约分的依据"
+  },
+  {
+   "topicId": "cnm_p168",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "note": "约分在分数加减中运用"
+  },
+  {
+   "topicId": "cnm_p169",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "note": "通分后比较分数大小"
+  },
+  {
+   "topicId": "cnm_p170",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "chapter": "“分数王国”与“小数王国”"
+  },
+  {
+   "topicId": "cnm_p171",
+   "grade": 6,
+   "term": "下",
+   "unit": "三 图形的运动",
+   "chapter": "图形的旋转（一）（二）（三）",
+   "note": "北师大版在六年级下册"
+  },
+  {
+   "topicId": "cnm_p172",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "chapter": "折纸；星期日的安排",
+   "note": "通分在异分母加减中学习"
+  },
+  {
+   "topicId": "cnm_p173",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "chapter": "折纸；星期日的安排"
+  },
+  {
+   "topicId": "cnm_p174",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "chapter": "星期日的安排"
+  },
+  {
+   "topicId": "cnm_p175",
+   "grade": 6,
+   "term": "上",
+   "unit": "第九单元 数据的表示和分析（三）",
+   "note": "北师大新版在六年级上册；旧版在5下"
+  },
+  {
+   "topicId": "cnm_p177",
+   "grade": 6,
+   "term": "上",
+   "unit": "第四单元 分数的应用",
+   "note": "分数乘法"
+  },
+  {
+   "topicId": "cnm_p178",
+   "grade": 6,
+   "term": "上",
+   "unit": "第四单元 分数的应用",
+   "note": "分数乘法"
+  },
+  {
+   "topicId": "cnm_p179",
+   "grade": 6,
+   "term": "上",
+   "unit": "第四单元 分数的应用",
+   "note": "分数乘法应用"
+  },
+  {
+   "topicId": "cnm_p180",
+   "grade": 6,
+   "term": "上",
+   "unit": "第六单元 确定位置",
+   "chapter": "象群北迁",
+   "note": "用方向和距离确定位置"
+  },
+  {
+   "topicId": "cnm_p181",
+   "grade": 6,
+   "term": "上",
+   "unit": "第六单元 确定位置",
+   "chapter": "象群北迁",
+   "note": "描述路线图"
+  },
+  {
+   "topicId": "cnm_p182",
+   "grade": 6,
+   "term": "上",
+   "unit": "第一单元 分数除法",
+   "note": "分数除以整数"
+  },
+  {
+   "topicId": "cnm_p183",
+   "grade": 6,
+   "term": "上",
+   "unit": "第一单元 分数除法",
+   "note": "一个数除以分数"
+  },
+  {
+   "topicId": "cnm_p184",
+   "grade": 6,
+   "term": "上",
+   "unit": "第四单元 分数的应用",
+   "note": "已知部分求整体"
+  },
+  {
+   "topicId": "cnm_p185",
+   "grade": 6,
+   "term": "上",
+   "unit": "第五单元 比的认识",
+   "chapter": "生活中的比",
+   "note": "北师大版在六年级上册"
+  },
+  {
+   "topicId": "cnm_p186",
+   "grade": 6,
+   "term": "上",
+   "unit": "第五单元 比的认识",
+   "chapter": "比的化简"
+  },
+  {
+   "topicId": "cnm_p187",
+   "grade": 6,
+   "term": "上",
+   "unit": "第五单元 比的认识",
+   "note": "按比分配在本单元学习"
+  },
+  {
+   "topicId": "cnm_p188",
+   "grade": 6,
+   "term": "上",
+   "unit": "第二单元 圆",
+   "chapter": "圆的认识"
+  },
+  {
+   "topicId": "cnm_p189",
+   "grade": 6,
+   "term": "上",
+   "unit": "第二单元 圆",
+   "chapter": "圆周率的历史"
+  },
+  {
+   "topicId": "cnm_p190",
+   "grade": 6,
+   "term": "上",
+   "unit": "第二单元 圆",
+   "chapter": "圆的周长"
+  },
+  {
+   "topicId": "cnm_p191",
+   "grade": 6,
+   "term": "上",
+   "unit": "第二单元 圆",
+   "chapter": "圆的周长"
+  },
+  {
+   "topicId": "cnm_p192",
+   "grade": 6,
+   "term": "上",
+   "unit": "第二单元 圆",
+   "chapter": "圆的面积"
+  },
+  {
+   "topicId": "cnm_p193",
+   "grade": 6,
+   "term": "上",
+   "unit": "第二单元 圆",
+   "note": "扇形在本单元学习"
+  },
+  {
+   "topicId": "cnm_p194",
+   "grade": 6,
+   "term": "上",
+   "unit": "第七单元 百分数的认识与应用（一）",
+   "chapter": "百分数的认识"
+  },
+  {
+   "topicId": "cnm_p195",
+   "grade": 6,
+   "term": "上",
+   "unit": "第七单元 百分数的认识与应用（一）",
+   "chapter": "合格率"
+  },
+  {
+   "topicId": "cnm_p196",
+   "grade": 6,
+   "term": "上",
+   "unit": "第七单元 百分数的认识与应用（一）",
+   "chapter": "餐桌上的百分数"
+  },
+  {
+   "topicId": "cnm_p197",
+   "grade": 6,
+   "term": "上",
+   "unit": "第七单元 百分数的认识与应用（一）",
+   "chapter": "合格率"
+  },
+  {
+   "topicId": "cnm_p198",
+   "grade": 6,
+   "term": "上",
+   "unit": "第七单元 百分数的认识与应用（一）",
+   "note": "已知一个数的百分之几求这个数"
+  },
+  {
+   "topicId": "cnm_p199",
+   "grade": 6,
+   "term": "上",
+   "unit": "第九单元 数据的表示和分析（三）",
+   "note": "扇形统计图；北师大版在六年级上册"
+  },
+  {
+   "topicId": "cnm_p200",
+   "grade": 6,
+   "term": "上",
+   "unit": "第三单元 用字母表示（二）",
+   "chapter": "探索规律",
+   "note": "数与形在探索规律中渗透"
+  },
+  {
+   "topicId": "cnm_p203",
+   "grade": 6,
+   "term": "上",
+   "unit": "第七单元 百分数的认识与应用（一）",
+   "note": "折扣在百分数应用中渗透"
+  },
+  {
+   "topicId": "cnm_p204",
+   "grade": 6,
+   "term": "上",
+   "unit": "第七单元 百分数的认识与应用（一）",
+   "chapter": "储蓄中的百分数"
+  },
+  {
+   "topicId": "cnm_p205",
+   "grade": 6,
+   "term": "上",
+   "unit": "第七单元 百分数的认识与应用（一）"
+  },
+  {
+   "topicId": "cnm_p206",
+   "grade": 6,
+   "term": "下",
+   "unit": "一 圆柱与圆锥",
+   "chapter": "面的旋转"
+  },
+  {
+   "topicId": "cnm_p207",
+   "grade": 6,
+   "term": "下",
+   "unit": "一 圆柱与圆锥",
+   "chapter": "圆柱的体积"
+  },
+  {
+   "topicId": "cnm_p208",
+   "grade": 6,
+   "term": "下",
+   "unit": "一 圆柱与圆锥",
+   "chapter": "圆柱的表面积"
+  },
+  {
+   "topicId": "cnm_p209",
+   "grade": 6,
+   "term": "下",
+   "unit": "一 圆柱与圆锥",
+   "chapter": "圆锥的体积"
+  },
+  {
+   "topicId": "cnm_p210",
+   "grade": 6,
+   "term": "下",
+   "unit": "二 比例",
+   "chapter": "比例的认识"
+  },
+  {
+   "topicId": "cnm_p211",
+   "grade": 6,
+   "term": "下",
+   "unit": "二 比例",
+   "chapter": "比例的应用"
+  },
+  {
+   "topicId": "cnm_p212",
+   "grade": 6,
+   "term": "下",
+   "unit": "二 比例",
+   "chapter": "比例尺"
+  },
+  {
+   "topicId": "cnm_p213",
+   "grade": 6,
+   "term": "下",
+   "unit": "四 正比例与反比例",
+   "chapter": "正比例"
+  },
+  {
+   "topicId": "cnm_p214",
+   "grade": 6,
+   "term": "下",
+   "unit": "四 正比例与反比例",
+   "chapter": "反比例"
+  },
+  {
+   "topicId": "cnm_p215",
+   "grade": 6,
+   "term": "下",
+   "unit": "二 比例",
+   "note": "用比例解决实际问题"
+  },
+  {
+   "topicId": "cnm_p217",
+   "grade": 1,
+   "term": "下",
+   "unit": "第五单元 100以内数加与减（一）",
+   "chapter": "回收废品"
+  },
+  {
+   "topicId": "cnm_p218",
+   "grade": 1,
+   "term": "下",
+   "unit": "第五单元 100以内数加与减（一）",
+   "chapter": "回收废品"
+  },
+  {
+   "topicId": "cnm_p219",
+   "grade": 2,
+   "term": "上",
+   "unit": "第八单元 乘除法的应用（一）",
+   "chapter": "求一个数是另一个数的几倍；求一个数的几倍是多少",
+   "note": "北师大版在二年级上册"
+  },
+  {
+   "topicId": "cnm_p220",
+   "grade": 3,
+   "term": "下",
+   "unit": "第六单元 关系与规律",
+   "note": "北师大版在三年级下册「关系与规律」中学习加减关系"
+  },
+  {
+   "topicId": "cnm_p221",
+   "grade": 3,
+   "term": "上",
+   "unit": "第四单元 我们生活的空间（一）",
+   "chapter": "看一看（一）～（四）"
+  },
+  {
+   "topicId": "cnm_p222",
+   "grade": 3,
+   "term": "下",
+   "unit": "第五单元 动手做",
+   "chapter": "拆盒子；叠盒子",
+   "note": "北师大版在三年级下册"
+  },
+  {
+   "topicId": "cnm_p223",
+   "grade": 3,
+   "term": "上",
+   "unit": "第一单元 混合运算",
+   "chapter": "小熊购物；买文具"
+  },
+  {
+   "topicId": "cnm_p224",
+   "grade": 3,
+   "term": "下",
+   "unit": "综合实践 制作动物体重“说明书”",
+   "chapter": "我也来称象",
+   "note": "北师大版在三年级下册综合实践"
+  },
+  {
+   "topicId": "cnm_p225",
+   "grade": 3,
+   "term": "上",
+   "unit": "第五单元 认识图形",
+   "chapter": "认识角"
+  },
+  {
+   "topicId": "cnm_p226",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "note": "北师大新版将分数初步认识安排在四年级下册（尚未出版）；现行旧版在三年级下册（本库未收）"
+  },
+  {
+   "topicId": "cnm_p227",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "note": "北师大新版将分数初步认识安排在四年级下册（尚未出版）；现行旧版在三年级下册（本库未收）"
+  },
+  {
+   "topicId": "cnm_p228",
+   "grade": 3,
+   "term": "下",
+   "unit": "第二单元 图形的运动（二）",
+   "chapter": "轴对称（一）（二）；平移和旋转"
+  },
+  {
+   "topicId": "cnm_p229",
+   "grade": 3,
+   "term": "上",
+   "unit": "第五单元 认识图形",
+   "chapter": "长方形与正方形",
+   "note": "北师大版在三年级上册；平行四边形在2下第五单元"
+  },
+  {
+   "topicId": "cnm_p230",
+   "grade": 4,
+   "term": "上",
+   "unit": "第七单元 运用数量关系解决问题",
+   "chapter": "总量与分量"
+  },
+  {
+   "topicId": "cnm_p231",
+   "grade": 4,
+   "term": "上",
+   "unit": "第七单元 运用数量关系解决问题",
+   "chapter": "单价、数量与总价；速度、时间与路程"
+  },
+  {
+   "topicId": "cnm_p232",
+   "grade": 4,
+   "term": "上",
+   "unit": "第二单元 线与角",
+   "chapter": "旋转与角"
+  },
+  {
+   "topicId": "cnm_p233",
+   "grade": 4,
+   "term": "上",
+   "unit": "第三单元 整数乘法（二）",
+   "note": "估算在本单元学习"
+  },
+  {
+   "topicId": "cnm_p234",
+   "grade": 4,
+   "term": "上",
+   "unit": "第二单元 线与角",
+   "chapter": "平移与平行",
+   "note": "北师大版用平移法画平行线；尺规作图在5上第二单元"
+  },
+  {
+   "topicId": "cnm_p235",
+   "grade": 2,
+   "term": "上",
+   "unit": "综合实践 画校园路线图",
+   "note": "北师大版在二年级上册综合实践"
+  },
+  {
+   "topicId": "cnm_p236",
+   "grade": 4,
+   "term": "上",
+   "unit": "第一单元 认识更大的数",
+   "chapter": "十万有多大"
+  },
+  {
+   "topicId": "cnm_p237",
+   "grade": 6,
+   "term": "上",
+   "unit": "第八单元 观察物体（二）",
+   "chapter": "观察物体",
+   "note": "北师大版在六年级上册"
+  },
+  {
+   "topicId": "cnm_p238",
+   "grade": 5,
+   "term": "上",
+   "unit": "第六单元 图形的位置与运动（一）",
+   "chapter": "摆图案；国庆阅兵",
+   "note": "轴对称在2上第六单元"
+  },
+  {
+   "topicId": "cnm_p239",
+   "grade": 5,
+   "term": "上",
+   "unit": "综合实践 小小设计师",
+   "chapter": "欣赏密铺作品；寻找密铺图形；设计密铺作品"
+  },
+  {
+   "topicId": "cnm_p240",
+   "grade": 5,
+   "term": "上",
+   "unit": "第五单元 多边形的面积",
+   "chapter": "认识底和高"
+  },
+  {
+   "topicId": "cnm_p242",
+   "grade": 6,
+   "term": "上",
+   "unit": "综合实践 制订节水方案",
+   "chapter": "水是生命之源"
+  },
+  {
+   "topicId": "cnm_p243",
+   "grade": 5,
+   "term": "下",
+   "unit": "一 分数加减法",
+   "note": "同分母加减为异分母加减的前置"
+  },
+  {
+   "topicId": "cnm_p246",
+   "grade": 6,
+   "term": "上",
+   "unit": "第一单元 分数除法",
+   "note": "倒数在本单元学习"
+  },
+  {
+   "topicId": "cnm_p247",
+   "grade": 6,
+   "term": "上",
+   "unit": "第一单元 分数除法",
+   "note": "分数混合运算在本单元学习"
+  },
+  {
+   "topicId": "cnm_p248",
+   "grade": 6,
+   "term": "下",
+   "unit": "一 圆柱与圆锥",
+   "chapter": "面的旋转"
+  },
+  {
+   "topicId": "cnm_p249",
+   "grade": 6,
+   "term": "下",
+   "unit": "二 比例",
+   "chapter": "图形的放大与缩小"
+  },
+  {
+   "topicId": "cnm_p251",
+   "grade": 1,
+   "term": "下",
+   "unit": "第一单元 20以内数与加法",
+   "note": "北师大版在一年级下册"
+  },
+  {
+   "topicId": "cnm_p252",
+   "grade": 1,
+   "term": "下",
+   "unit": "第一单元 20以内数与加法",
+   "note": "北师大版在一年级下册；逆向用加法在20以内加减解决问题中渗透"
+  },
+  {
+   "topicId": "cnm_p253",
+   "grade": 1,
+   "term": "上",
+   "unit": "第四单元 10以内数加与减",
+   "chapter": "可爱的企鹅；乘车"
+  },
+  {
+   "topicId": "cnm_p254",
+   "grade": 1,
+   "term": "上",
+   "unit": "第五单元 有趣的立体图形",
+   "chapter": "怎样搭得高",
+   "note": "用积木拼搭"
+  }
+ ]
+}

@@ -62,7 +62,12 @@
 - 文件名必须以 `edition` 开头；示例文件叫 `<edition>.example.json`，`status` 必须是 `example`，至多 10 条。
 - `entries[].topicId` 必须是已存在的数学正式知识点，同一文件里不能重复；`grade`、`term`、`unit`、`chapter`、`note` 规则同上。
 
-仓库里现有的 `data/mappings/hujiao_math.example.json` 只有 6 条**占位**数据，没有对照沪教版教材核对，不能当沪教版目录用。
+仓库里现有的对照文件：
+
+- `data/mappings/hujiao_math.json`：沪教版小学数学，`draft`，按新版目录与现行旧版目录逐条核对。
+- `data/mappings/sd54_math.json`：山东五四制·青岛版小学数学，`draft`，目前只覆盖三年级上册。
+- `data/mappings/beishida_math.json`：北师大版小学数学，`draft`，覆盖 239 / 253 个知识点；依据 2024 审定一上至六上 9 册与现行旧版四下、五下、六下目录，2026-10-28 核对。新版四（五）下尚未出版，涉及分数初步认识、面积、小数除法、负数等内容按现有册次的相关单元落点，并在 `note` 标明。
+- `data/mappings/hujiao_math.example.json`：只有 6 条**占位**数据，仅演示格式，没有对照沪教版教材核对，不能当沪教版目录用。
 
 ## 怎么提 PR
 

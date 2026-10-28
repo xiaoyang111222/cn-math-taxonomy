@@ -113,7 +113,7 @@ data/topics.json         知识点节点（JSON 数组）
 data/dependencies.json   先修边（JSON 数组）
 data/cn-curriculum-standards.json  课标（627 条：数学 314 + 英语 116 + 物理 197（初中 89 + 高中 108）；高中和英语待核）
 data/id-aliases.json               旧 id cnm_ext_001…018 → 小学正式知识点（方案 b，节点已删除）
-data/mappings/             教材版本对照表（可选，沪教、苏教等；现只有一个占位示例 hujiao_math.example.json），说明见 docs/edition-mappings.md
+data/mappings/             教材版本对照表（可选，沪教、北师大、山东五四制等），说明见 docs/edition-mappings.md
 docs/standards-mapping.md          课标对齐说明：来源、映射规则、覆盖率、未映射清单、局限
 data/questions.json      题库：数学 3467 题 + 英语 2896 题（小学 832 + 初中 1028 + 高中 1036）+ 物理 1076 题（初中 368 + 高中 708），共 7427 题
 data/_qbatches/primary_g1.json … primary_g6.json、high.json、high_sel.json   生成批次（保留，便于对照；不部署）
@@ -158,7 +158,7 @@ screenshots/             首页、知识图谱与诊断页截图（01–05 诊�
 | `external` | `false` |
 | `standards` | 课标映射数组，元素 `{"id", "confidence", "note"?}`，见下节；可为空数组 |
 | `root_reason` | 仅当没有任何先修边时必填。现在只有 `cnm_p001`（1到5各数的认识） |
-| `mappings` | 可选。其他教材版本的对照，`{版本 id: {grade, term, unit?, chapter?, note?}}`，如 `hujiao_math`（沪教版）；缺省就是只有人教版。目前没有知识点带这个字段，贡献方式见 [docs/edition-mappings.md](docs/edition-mappings.md) |
+| `mappings` | 可选。其他教材版本的对照，`{版本 id: {grade, term, unit?, chapter?, note?}}`，如 `hujiao_math`（沪教版）、`beishida_math`（北师大版）；缺省就是只有人教版。对照数据目前放在 `data/mappings/` 下的独立文件，尚未合并进 `topic.mappings`，贡献方式见 [docs/edition-mappings.md](docs/edition-mappings.md) |
 | `external` | 全部为 `false`。旧的小学外部节点已按方案 b 删除，见 `data/id-aliases.json` |
 
 说明：
