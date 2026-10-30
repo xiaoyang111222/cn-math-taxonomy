@@ -1,0 +1,1739 @@
+{
+  "edition": "yilin_english",
+  "label": "译林版（译林出版社）英语",
+  "status": "draft",
+  "source": "对照依据：国家中小学智慧教育平台「电子课本」（https://basic.smartedu.cn/tchMaterial/）收录的译林出版社《义务教育教科书·英语》三年级上册至六年级下册，共8册；三上、三下、四上、四下、五上、六上为2022年版课程标准修订本，五下、六下为三年级起点现行本。逐册核对目录、Story time、Grammar time、Sounds/Letters in focus、Wrap-up/Project及词表，2026-10-30查证。",
+  "entries": [
+    {
+      "topicId": "cne_p001",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 1 Hello!",
+      "chapter": "Letters in focus；书后 The English alphabet",
+      "note": "26个字母分散在各单元Letters in focus教学，完整字母表见书后The English alphabet；此处取首次教学落点"
+    },
+    {
+      "topicId": "cne_p002",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 1 Hello!",
+      "chapter": "Letters in focus；书后 The English alphabet",
+      "note": "26个字母分散在各单元Letters in focus教学，完整字母表见书后The English alphabet；此处取首次教学落点"
+    },
+    {
+      "topicId": "cne_p005",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 1 Hello!",
+      "chapter": "Cartoon time；Story time"
+    },
+    {
+      "topicId": "cne_p006",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 1 Hello!",
+      "chapter": "Cartoon time；Story time"
+    },
+    {
+      "topicId": "cne_p007",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 1 Hello!",
+      "chapter": "Cartoon time；Story time"
+    },
+    {
+      "topicId": "cne_p008",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 2 What's your name?",
+      "chapter": "Story time A new classmate"
+    },
+    {
+      "topicId": "cne_p035",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 5 She's my mother",
+      "chapter": "Lead-in；Story time Meeting Liu Tao's family"
+    },
+    {
+      "topicId": "cne_p036",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 5 She's my mother",
+      "chapter": "Lead-in；Story time Meeting Liu Tao's family"
+    },
+    {
+      "topicId": "cne_p037",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 5 She's my mother",
+      "chapter": "Lead-in；Story time Meeting Liu Tao's family"
+    },
+    {
+      "topicId": "cne_p038",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 5 She's my mother",
+      "chapter": "Lead-in；Story time Meeting Liu Tao's family"
+    },
+    {
+      "topicId": "cne_p024",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 7 Happy Birthday!",
+      "chapter": "Lead-in；Story time Thank you, Dad!"
+    },
+    {
+      "topicId": "cne_p027",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 7 Happy Birthday!",
+      "chapter": "Lead-in；Story time Thank you, Dad!"
+    },
+    {
+      "topicId": "cne_p121",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 8 I can do this for you",
+      "chapter": "Lead-in；Story time I can sing"
+    },
+    {
+      "topicId": "cne_p122",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 8 I can do this for you",
+      "chapter": "Lead-in；Story time I can sing"
+    },
+    {
+      "topicId": "cne_p123",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 8 I can do this for you",
+      "chapter": "Wrap-up time Talk about things you can do for your family",
+      "note": "以I can ...自述及为家人做事为主，What can you do?不是本单元核心问句"
+    },
+    {
+      "topicId": "cne_p124",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit 8 I can do this for you",
+      "chapter": "Lead-in；Story time I can sing"
+    },
+    {
+      "topicId": "cne_p004",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 1 School things",
+      "chapter": "Sounds in focus"
+    },
+    {
+      "topicId": "cne_p014",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 1 School things",
+      "chapter": "Cartoon time；Story time What's that?",
+      "note": "在What's this/that?及Is it ...?语境中合并学习this/that，非PEP家人介绍语境"
+    },
+    {
+      "topicId": "cne_p063",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 1 School things",
+      "chapter": "Cartoon time；Story time What's that?",
+      "note": "译林核心词用rubber，对应PEP的eraser"
+    },
+    {
+      "topicId": "cne_p064",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 1 School things",
+      "chapter": "Cartoon time；Story time What's that?"
+    },
+    {
+      "topicId": "cne_p065",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 1 School things",
+      "chapter": "Cartoon time；Story time What's that?",
+      "note": "阅读重点为文具及所属，颜色不是本单元阅读重点"
+    },
+    {
+      "topicId": "cne_p044",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 2 Clean our classroom",
+      "chapter": "Lead-in；Story time Let's clean our classroom；Word lists",
+      "note": "desk、chair、book在本单元教室清洁语境出现，bag在相邻Unit 1 School things教学，属相邻单元词包拆分"
+    },
+    {
+      "topicId": "cne_p058",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 2 Clean our classroom",
+      "chapter": "Lead-in；Story time Let's clean our classroom"
+    },
+    {
+      "topicId": "cne_p059",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 2 Clean our classroom",
+      "chapter": "Lead-in；Story time Let's clean our classroom"
+    },
+    {
+      "topicId": "cne_p060",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 2 Clean our classroom",
+      "chapter": "Lead-in；Story time Let's clean our classroom"
+    },
+    {
+      "topicId": "cne_p061",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 2 Clean our classroom",
+      "chapter": "Lead-in；Story time Let's clean our classroom",
+      "note": "文本为教室清洁配图故事和韵文，不是PEP的短通知体裁"
+    },
+    {
+      "topicId": "cne_p151",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 3 School rules",
+      "chapter": "Lead-in；Story time In the library",
+      "note": "核心词含rule、library、talk、quiet、keep等，与PEP规则词包不完全相同"
+    },
+    {
+      "topicId": "cne_p152",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 3 School rules",
+      "chapter": "Lead-in；Story time In the library"
+    },
+    {
+      "topicId": "cne_p153",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 3 School rules",
+      "chapter": "Lead-in；Story time In the library"
+    },
+    {
+      "topicId": "cne_p154",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 3 School rules",
+      "chapter": "Lead-in；Story time In the library"
+    },
+    {
+      "topicId": "cne_p247",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 3 School rules",
+      "chapter": "Wrap-up time Make class rules"
+    },
+    {
+      "topicId": "cne_p270",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 3 School rules",
+      "chapter": "Lead-in；Story time In the library",
+      "note": "覆盖quietly/quiet、talk、keep等，公共秩序词包与PEP不完全相同"
+    },
+    {
+      "topicId": "cne_p271",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 3 School rules",
+      "chapter": "Lead-in；Story time In the library",
+      "note": "以Don't ...、Please keep quiet和No, thank you等呈现，未集中归纳No + doing"
+    },
+    {
+      "topicId": "cne_p272",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 3 School rules",
+      "chapter": "Lead-in；Story time In the library"
+    },
+    {
+      "topicId": "cne_p275",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 3 School rules",
+      "chapter": "Lead-in；Story time In the library"
+    },
+    {
+      "topicId": "cne_p045",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 4 Have fun after class",
+      "chapter": "Cartoon time；Story time Drawing in the school",
+      "note": "位置词还合教behind、by，不局限于PEP的in、on、under"
+    },
+    {
+      "topicId": "cne_p046",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 4 Have fun after class",
+      "chapter": "Cartoon time；Story time Drawing in the school",
+      "note": "位置词还合教behind、by，不局限于PEP的in、on、under"
+    },
+    {
+      "topicId": "cne_p047",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 4 Have fun after class",
+      "chapter": "Cartoon time；Story time Drawing in the school",
+      "note": "位置词还合教behind、by，不局限于PEP的in、on、under"
+    },
+    {
+      "topicId": "cne_p026",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 5 Fruit",
+      "chapter": "Lead-in；Cartoon time；Story time Let's make a fruit salad",
+      "note": "How many见于数芒果等水果的韵文和活动"
+    },
+    {
+      "topicId": "cne_p028",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 5 Fruit",
+      "chapter": "Lead-in；Cartoon time；Story time Let's make a fruit salad"
+    },
+    {
+      "topicId": "cne_p050",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 5 Fruit",
+      "chapter": "Lead-in；Cartoon time；Story time Let's make a fruit salad",
+      "note": "核心水果为orange、grape、banana、apple、mango，未完整覆盖PEP的pear等例词"
+    },
+    {
+      "topicId": "cne_p052",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 5 Fruit",
+      "chapter": "Lead-in；Cartoon time；Story time Let's make a fruit salad",
+      "note": "结合apple/apples、mango/mangoes及Learning tips讲名词数，含-es和不规则复数提示"
+    },
+    {
+      "topicId": "cne_p096",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 6 On the farm",
+      "chapter": "Cartoon time；Story time On Grandpa's farm",
+      "note": "覆盖cow、carrot等农场词，但horse、tomato、potato不是本单元核心词，属部分对应"
+    },
+    {
+      "topicId": "cne_p097",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 6 On the farm",
+      "chapter": "Cartoon time；Story time On Grandpa's farm"
+    },
+    {
+      "topicId": "cne_p098",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 6 On the farm",
+      "chapter": "Cartoon time；Story time On Grandpa's farm"
+    },
+    {
+      "topicId": "cne_p099",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 6 On the farm",
+      "chapter": "Cartoon time；Story time On Grandpa's farm"
+    },
+    {
+      "topicId": "cne_p252",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 6 On the farm",
+      "chapter": "Cartoon time；Story time On Grandpa's farm",
+      "note": "核心词含chicken、cow、rabbit、sheep、carrot等，未完整覆盖hen、horse、tomato、potato等PEP例词"
+    },
+    {
+      "topicId": "cne_p017",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 7 Animals",
+      "chapter": "Lead-in；Story time At the zoo；Word lists",
+      "note": "本单元集中教学monkey、lion、bear、tiger、panda、elephant等动物词；PEP的cat、dog、bird、duck分散于其他册次/单元，属同主题词包差异"
+    },
+    {
+      "topicId": "cne_p021",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 7 Animals",
+      "chapter": "Cartoon time High five!；Story time At the zoo；Read and match"
+    },
+    {
+      "topicId": "cne_p023",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 7 Animals",
+      "chapter": "Cartoon time High five!；Story time At the zoo；Read and match",
+      "note": "Cartoon time及Read and match直接读取Bobby和朋友们喜欢的食物；与cne_p053同单元合教，本点侧重人物食物喜好，cne_p053侧重Do you like ...?水果问答"
+    },
+    {
+      "topicId": "cne_p051",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 7 Animals",
+      "chapter": "Cartoon time High five!；Story time At the zoo；Read and match"
+    },
+    {
+      "topicId": "cne_p053",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 7 Animals",
+      "chapter": "Cartoon time High five!；Story time At the zoo；Read and match",
+      "note": "阅读对话含bananas、cakes等喜好，动物主题为At the zoo"
+    },
+    {
+      "topicId": "cne_p009",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 8 Colours",
+      "chapter": "Cartoon time；Story time A little friend；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p010",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 8 Colours",
+      "chapter": "Cartoon time；Story time A little friend；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p011",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 8 Colours",
+      "chapter": "Cartoon time；Story time A little friend；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p012",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 8 Colours",
+      "chapter": "Cartoon time；Story time A little friend；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p018",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 8 Colours",
+      "chapter": "Cartoon time；Story time A little friend；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p179",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit 8 Colours",
+      "chapter": "Sounds in focus Rising and falling tones",
+      "note": "在韵句朗读中标注升调和降调，未按PEP句类作同样细分"
+    },
+    {
+      "topicId": "cne_p019",
+      "grade": 3,
+      "term": "下",
+      "unit": "Project 2 My nature park",
+      "chapter": "Show your nature park to the class"
+    },
+    {
+      "topicId": "cne_p129",
+      "grade": 3,
+      "term": "下",
+      "unit": "Project 2 My nature park",
+      "chapter": "Show your nature park to the class",
+      "note": "项目词汇为cow、bear、rabbit、sheep、apple tree、orange tree等公园内容，river、lake、mountain、forest未集中教学，属同主题词包差异"
+    },
+    {
+      "topicId": "cne_p132",
+      "grade": 3,
+      "term": "下",
+      "unit": "Project 2 My nature park",
+      "chapter": "Show your nature park to the class",
+      "note": "项目展示文本读取公园里的动物及位置，不含PEP自然公园全部地貌词"
+    },
+    {
+      "topicId": "cne_p054",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 2 My day",
+      "chapter": "Lead-in；Story time Wang Bing's day；Wrap-up time",
+      "note": "Story time集中列出eleven至twenty及thirty，用于时刻表达"
+    },
+    {
+      "topicId": "cne_p088",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 2 My day",
+      "chapter": "Lead-in；Story time Wang Bing's day；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p089",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 2 My day",
+      "chapter": "Lead-in；Story time Wang Bing's day；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p090",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 2 My day",
+      "chapter": "Lead-in；Story time Wang Bing's day；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p091",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 2 My day",
+      "chapter": "Lead-in；Story time Wang Bing's day；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p133",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 2 My day",
+      "chapter": "Lead-in；Story time Wang Bing's day；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p135",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 2 My day",
+      "chapter": "Lead-in；Story time Wang Bing's day；Wrap-up time",
+      "note": "主要用It's ...、It's time for/to ...及日常活动表达作息，I ... at ...并非唯一核心句式"
+    },
+    {
+      "topicId": "cne_p136",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 2 My day",
+      "chapter": "Lead-in；Story time Wang Bing's day；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p248",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 2 My day",
+      "chapter": "Lead-in；Story time Wang Bing's day；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p249",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 2 My day",
+      "chapter": "Lead-in；Story time Wang Bing's day；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p113",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 3 My week",
+      "chapter": "Lead-in；Story time After school；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p114",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 3 My week",
+      "chapter": "Lead-in；Story time After school；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p117",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 3 My week",
+      "chapter": "Lead-in；Story time After school；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p134",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 3 My week",
+      "chapter": "Cartoon time Oh, it's Saturday!",
+      "note": "以When do you get up every day?和I get up at five呈现，也合教按星期回答"
+    },
+    {
+      "topicId": "cne_p029",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 4 I like sport",
+      "chapter": "Sounds in focus a (happy)",
+      "note": "以happy、mat、bat等韵词练短元音a，不按PEP同样词表编排"
+    },
+    {
+      "topicId": "cne_p013",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 5 Different toys, same fun",
+      "chapter": "Lead-in；Cartoon time；Story time Our dolls"
+    },
+    {
+      "topicId": "cne_p015",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 5 Different toys, same fun",
+      "chapter": "Lead-in；Cartoon time；Story time Our dolls",
+      "note": "用My/His/Her加身体部位描述玩偶，不以This is my ...介绍自己的五官"
+    },
+    {
+      "topicId": "cne_p016",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 5 Different toys, same fun",
+      "chapter": "Lead-in；Cartoon time；Story time Our dolls"
+    },
+    {
+      "topicId": "cne_p025",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 5 Different toys, same fun",
+      "chapter": "Lead-in；Cartoon time；Story time Our dolls",
+      "note": "核心玩具为robot、doll，ball、kite、boat等PEP例词不在本单元集中教学"
+    },
+    {
+      "topicId": "cne_p040",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 5 Different toys, same fun",
+      "chapter": "Lead-in；Cartoon time；Story time Our dolls",
+      "note": "big、small、tall、short均出现，但short在本单元指短的，不是PEP所指的矮"
+    },
+    {
+      "topicId": "cne_p041",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 5 Different toys, same fun",
+      "chapter": "Lead-in；Cartoon time；Story time Our dolls",
+      "note": "用His/Her ... is/are ...及You're ...描述玩偶，非It is ...描述动物"
+    },
+    {
+      "topicId": "cne_p057",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 5 Different toys, same fun",
+      "chapter": "Sounds in focus a (name)",
+      "note": "以name、Grace、face、late等韵词学习a-e读音"
+    },
+    {
+      "topicId": "cne_p034",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 6 Weather",
+      "chapter": "Sounds in focus e (Wednesday)",
+      "note": "以Wednesday、wet、weather、together等韵词练短元音e"
+    },
+    {
+      "topicId": "cne_p092",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 6 Weather",
+      "chapter": "Lead-in；Story time In the park；Wrap-up time",
+      "note": "Unit 6重点为warm、cool、hot及sunny、rainy等，cold在Unit 7季节语境出现，属部分词项拆分"
+    },
+    {
+      "topicId": "cne_p093",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 6 Weather",
+      "chapter": "Lead-in；Story time In the park；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p094",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 6 Weather",
+      "chapter": "Lead-in；Story time In the park；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p095",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 6 Weather",
+      "chapter": "Lead-in；Story time In the park；Wrap-up time",
+      "note": "阅读材料为逐日天气变化及公园活动配图故事，不是按城市排列的天气预报"
+    },
+    {
+      "topicId": "cne_p218",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 6 Weather",
+      "chapter": "Lead-in；Story time In the park；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p076",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 7 Seasons",
+      "chapter": "Sounds in focus e (these)",
+      "note": "以these、tree、leave等韵词练长元音e"
+    },
+    {
+      "topicId": "cne_p137",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 7 Seasons",
+      "chapter": "Lead-in；Story time Four seasons；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p138",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 7 Seasons",
+      "chapter": "Lead-in；Story time Four seasons；Wrap-up time",
+      "note": "Unit 7以I like ... best谈最爱季节，Which season do you like best?在Project 2 A puppet show复现"
+    },
+    {
+      "topicId": "cne_p139",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 7 Seasons",
+      "chapter": "Lead-in；Story time Four seasons；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p220",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 7 Seasons",
+      "chapter": "Lead-in；Story time Four seasons；Wrap-up time",
+      "note": "活动为go swimming、pick fruit、play in the snow、go skating等，与PEP活动词包不完全相同"
+    },
+    {
+      "topicId": "cne_p260",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 7 Seasons",
+      "chapter": "Lead-in；Story time Four seasons；Wrap-up time",
+      "note": "核心活动为plant trees、go boating、go swimming、pick fruit、go climbing、go skating等"
+    },
+    {
+      "topicId": "cne_p262",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 7 Seasons",
+      "chapter": "Lead-in；Story time Four seasons；Wrap-up time",
+      "note": "以季节天气和活动说明喜好理由，未集中使用Why/Because问答"
+    },
+    {
+      "topicId": "cne_p100",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 8 What we wear",
+      "chapter": "Cartoon time；Story time Happy Chinese New Year!；Wrap-up time",
+      "note": "译林用trousers对应PEP的pants，并合教cap、coat、shorts等"
+    },
+    {
+      "topicId": "cne_p101",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 8 What we wear",
+      "chapter": "Cartoon time；Story time Happy Chinese New Year!；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p102",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 8 What we wear",
+      "chapter": "Cartoon time；Story time Happy Chinese New Year!；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p103",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit 8 What we wear",
+      "chapter": "Cartoon time；Story time Happy Chinese New Year!；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p042",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 1 We're friends",
+      "chapter": "Story time The lion and the mouse；Wrap-up time",
+      "note": "阅读狮子与老鼠的big/small/strong/thin等特征，未完整覆盖高矮描述"
+    },
+    {
+      "topicId": "cne_p062",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 1 We're friends",
+      "chapter": "Sounds in focus i (I)",
+      "note": "以I、bike、ride、side等韵词学习长i及i-e读音"
+    },
+    {
+      "topicId": "cne_p067",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 1 We're friends",
+      "chapter": "Story time The lion and the mouse；Wrap-up time",
+      "note": "覆盖friend、strong、kind等，quiet、friendly不是本单元核心词"
+    },
+    {
+      "topicId": "cne_p069",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 1 We're friends",
+      "chapter": "Story time The lion and the mouse；Wrap-up time",
+      "note": "以The lion is ...、The mouse is ...描述朋友特征，未使用He has ..."
+    },
+    {
+      "topicId": "cne_p070",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 1 We're friends",
+      "chapter": "Story time The lion and the mouse；Wrap-up time",
+      "note": "文本为朋友互助的寓言配图故事，非独立朋友介绍短文"
+    },
+    {
+      "topicId": "cne_p126",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 1 We're friends",
+      "chapter": "Story time The lion and the mouse；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p212",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 1 We're friends",
+      "chapter": "Story time The lion and the mouse；Wrap-up time",
+      "note": "品质词以kind及互助行为为主，funny、honest未在本单元集中教学"
+    },
+    {
+      "topicId": "cne_p213",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 1 We're friends",
+      "chapter": "Story time The lion and the mouse；Wrap-up time",
+      "note": "主题为朋友互助与和睦相处，不是PEP的选择朋友小书"
+    },
+    {
+      "topicId": "cne_p253",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 1 We're friends",
+      "chapter": "Story time The lion and the mouse；Wrap-up time",
+      "note": "There is/are在森林、公园和朋友分享语境首次集中出现，不是农场语境"
+    },
+    {
+      "topicId": "cne_p039",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 2 Helping others at school",
+      "chapter": "Sounds in focus i (Miss)",
+      "note": "以Miss、is、six等韵词练短元音i"
+    },
+    {
+      "topicId": "cne_p084",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 2 Helping others at school",
+      "chapter": "Lead-in；Story time Let me show you around；Wrap-up time",
+      "note": "核心词为classroom、computer room、library、playground等，computer以computer room呈现"
+    },
+    {
+      "topicId": "cne_p085",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 2 Helping others at school",
+      "chapter": "Lead-in；Story time Let me show you around；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p086",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 2 Helping others at school",
+      "chapter": "Lead-in；Story time Let me show you around；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p087",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 2 Helping others at school",
+      "chapter": "Lead-in；Story time Let me show you around；Wrap-up time",
+      "note": "文本为新生校园导览及楼层说明，不是独立学校平面图短文"
+    },
+    {
+      "topicId": "cne_p130",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 2 Helping others at school",
+      "chapter": "Lead-in；Story time Let me show you around；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p131",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 2 Helping others at school",
+      "chapter": "Lead-in；Story time Let me show you around；Wrap-up time",
+      "note": "Is there/Are there用于学校场所问答，不是自然公园语境"
+    },
+    {
+      "topicId": "cne_p144",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 2 Helping others at school",
+      "chapter": "Lead-in；Story time Let me show you around；Wrap-up time",
+      "note": "首次结合first、second、third floor学习序数词，更多序数词在六上Unit 4集中扩展"
+    },
+    {
+      "topicId": "cne_p217",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 2 Helping others at school",
+      "chapter": "Lead-in；Story time Let me show you around；Wrap-up time",
+      "note": "阅读帮助新生熟悉校园的配图故事，不是学校帮手海报"
+    },
+    {
+      "topicId": "cne_p066",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 3 Road safety",
+      "chapter": "Sounds in focus o (oh)",
+      "note": "教材标作o (oh)，韵文含home等词；覆盖长o及部分o-e，不是完整o-e词组教学"
+    },
+    {
+      "topicId": "cne_p043",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 4 Caring about others",
+      "chapter": "Sounds in focus o (tick-tock)",
+      "note": "以tick-tock、o'clock、not、hot等韵词练短元音o"
+    },
+    {
+      "topicId": "cne_p078",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 4 Caring about others",
+      "chapter": "Story time What's the matter, Mum?",
+      "note": "以Would you like some bread?及No, thanks呈现用餐/照护对话"
+    },
+    {
+      "topicId": "cne_p071",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 5 Eating out",
+      "chapter": "Sounds in focus u (student)",
+      "note": "教材以u (student)练长u，韵文含cute，覆盖u-e但未按PEP词表集中归纳"
+    },
+    {
+      "topicId": "cne_p118",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 5 Eating out",
+      "chapter": "Lead-in；Story time In a Chinese restaurant；Wrap-up time",
+      "note": "覆盖tea、sandwich及noodles、fried rice、jiaozi等，salad、hamburger不是核心词"
+    },
+    {
+      "topicId": "cne_p119",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 5 Eating out",
+      "chapter": "Lead-in；Story time In a Chinese restaurant；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p120",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 5 Eating out",
+      "chapter": "Lead-in；Story time In a Chinese restaurant；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p048",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 6 Jobs",
+      "chapter": "Sounds in focus u (mum)",
+      "note": "以mum、driver、trucks、rubber、ducks等韵词练短元音u"
+    },
+    {
+      "topicId": "cne_p080",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 6 Jobs",
+      "chapter": "Lead-in；Cartoon time Our parents' jobs；Story time Happy Labour Day!"
+    },
+    {
+      "topicId": "cne_p081",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 6 Jobs",
+      "chapter": "Lead-in；Cartoon time Our parents' jobs；Story time Happy Labour Day!",
+      "note": "主要问法为What's your father's/mother's job?，his/her用于所属关系，未以What is his job?为核心"
+    },
+    {
+      "topicId": "cne_p082",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 6 Jobs",
+      "chapter": "Lead-in；Cartoon time Our parents' jobs；Story time Happy Labour Day!"
+    },
+    {
+      "topicId": "cne_p083",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 6 Jobs",
+      "chapter": "Lead-in；Cartoon time Our parents' jobs；Story time Happy Labour Day!"
+    },
+    {
+      "topicId": "cne_p172",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 6 Jobs",
+      "chapter": "Lead-in；Cartoon time Our parents' jobs；Story time Happy Labour Day!",
+      "note": "用What's ... job?询问职业，不用What does he/she do?；works工作地点仅在部分语篇出现"
+    },
+    {
+      "topicId": "cne_p173",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 6 Jobs",
+      "chapter": "Lead-in；Cartoon time Our parents' jobs；Story time Happy Labour Day!"
+    },
+    {
+      "topicId": "cne_p174",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 6 Jobs",
+      "chapter": "Lead-in；Cartoon time Our parents' jobs；Story time Happy Labour Day!",
+      "note": "重点为家人职业及社会作用，工作地点在Cartoon time以work there/hospital等呈现"
+    },
+    {
+      "topicId": "cne_p148",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 7 Doing chores at home",
+      "chapter": "Lead-in；Story time A busy weekend；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p150",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 7 Doing chores at home",
+      "chapter": "Lead-in；Story time A busy weekend；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p209",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 7 Doing chores at home",
+      "chapter": "Lead-in；Story time A busy weekend；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p210",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 7 Doing chores at home",
+      "chapter": "Lead-in；Story time A busy weekend；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p211",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 7 Doing chores at home",
+      "chapter": "Lead-in；Story time A busy weekend；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p022",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 8 In the kitchen",
+      "chapter": "Story time A happy dinner；Wrap-up time",
+      "note": "用I love ...和Have some ...表达喜好及劝食，与PEP的I like/Have some句式略有差异"
+    },
+    {
+      "topicId": "cne_p077",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 8 In the kitchen",
+      "chapter": "Story time A happy dinner；Wrap-up time",
+      "note": "覆盖chicken、soup及meat、potato等，beef、noodles不是本单元核心词"
+    },
+    {
+      "topicId": "cne_p079",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 8 In the kitchen",
+      "chapter": "Story time A happy dinner；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p268",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit 8 In the kitchen",
+      "chapter": "Story time A happy dinner；Wrap-up time",
+      "note": "教材集中列出cook/wash/make/take/cut/swim等-ing变化"
+    },
+    {
+      "topicId": "cne_p222",
+      "grade": 4,
+      "term": "下",
+      "unit": "Project 2 A good helper",
+      "chapter": "Tell your class how you can help at home",
+      "note": "项目综合职业、家务和烹饪帮忙，不覆盖PEP复习单元全部朋友与社区语境"
+    },
+    {
+      "topicId": "cne_p068",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 1 Good habits",
+      "chapter": "Story time Yang Ling's and Wang Bing's habits；Grammar time",
+      "note": "在I have ... habits与He/She has ... habits中对比have/has，不是人物外貌语境"
+    },
+    {
+      "topicId": "cne_p108",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 1 Good habits",
+      "chapter": "Sounds in focus bl (blackboard)；Unit 2 Sounds in focus cl (climbing)",
+      "note": "bl在Unit 1、cl在Unit 2分教，fl未见对应集中教学，属部分覆盖；取首次落点"
+    },
+    {
+      "topicId": "cne_p235",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 1 Good habits",
+      "chapter": "Story time Yang Ling's and Wang Bing's habits；Grammar time",
+      "note": "覆盖healthy、habit、do exercise及作息习惯；diet在六下Unit 3集中教学"
+    },
+    {
+      "topicId": "cne_p237",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 1 Good habits",
+      "chapter": "Story time Yang Ling's and Wang Bing's habits；Grammar time"
+    },
+    {
+      "topicId": "cne_p175",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 2 I feel good",
+      "chapter": "Lead-in；Story time Helen Keller",
+      "note": "核心词含happy、worried、excited、sad、angry，afraid未在本单元作为核心词"
+    },
+    {
+      "topicId": "cne_p167",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 3 Hobbies",
+      "chapter": "Lead-in；Story time Our school clubs；Grammar time",
+      "note": "核心爱好为paper-cutting、dancing、singing、skipping、playing ping-pong等，与PEP词包不同"
+    },
+    {
+      "topicId": "cne_p168",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 3 Hobbies",
+      "chapter": "Lead-in；Story time Our school clubs；Grammar time"
+    },
+    {
+      "topicId": "cne_p169",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 3 Hobbies",
+      "chapter": "Lead-in；Story time Our school clubs；Grammar time",
+      "note": "语境为学校社团及家人爱好，不含pen pal介绍"
+    },
+    {
+      "topicId": "cne_p170",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 3 Hobbies",
+      "chapter": "Lead-in；Story time Our school clubs；Grammar time",
+      "note": "阅读为学校社团和爱好，不读取笔友住址信息"
+    },
+    {
+      "topicId": "cne_p176",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 4 Safety first",
+      "chapter": "Story time Keeping safe at school；Grammar time should, shouldn't"
+    },
+    {
+      "topicId": "cne_p115",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 5 At weekends",
+      "chapter": "Lead-in；Story time Weekend fun；Grammar time；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p116",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 5 At weekends",
+      "chapter": "Lead-in；Story time Weekend fun；Grammar time；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p254",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 5 At weekends",
+      "chapter": "Lead-in；Story time Weekend fun；Grammar time；Wrap-up time",
+      "note": "覆盖picnic、cinema、visit等周末活动词，但以一般现在时谈常态活动，museum/plan不是核心词"
+    },
+    {
+      "topicId": "cne_p258",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 5 At weekends",
+      "chapter": "Lead-in；Story time Weekend fun；Grammar time；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p259",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 5 At weekends",
+      "chapter": "Lead-in；Story time Weekend fun；Grammar time；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p104",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 7 Shopping smart",
+      "chapter": "Lead-in；Story time In the shop；Word lists",
+      "note": "本单元购物物品为shoes、sweater、socks、bows等，PEP的glove、scarf、umbrella、sunglasses未在本单元集中教学，属同主题词包差异"
+    },
+    {
+      "topicId": "cne_p105",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 7 Shopping smart",
+      "chapter": "Story time In the shop；Grammar time；Wrap-up time Make a shopping plan"
+    },
+    {
+      "topicId": "cne_p106",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 7 Shopping smart",
+      "chapter": "Story time In the shop；Grammar time；Wrap-up time Make a shopping plan"
+    },
+    {
+      "topicId": "cne_p107",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 7 Shopping smart",
+      "chapter": "Story time In the shop；Grammar time；Wrap-up time Make a shopping plan",
+      "note": "通过购物故事及价格练习读取物品与价钱，不是独立价签短文"
+    },
+    {
+      "topicId": "cne_p201",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 7 Shopping smart",
+      "chapter": "Story time In the shop；Grammar time；Wrap-up time Make a shopping plan",
+      "note": "重点为pocket money、spend、need及预算；save、cost不作为本单元核心词"
+    },
+    {
+      "topicId": "cne_p203",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 7 Shopping smart",
+      "chapter": "Story time In the shop；Grammar time；Wrap-up time Make a shopping plan"
+    },
+    {
+      "topicId": "cne_p239",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 7 Shopping smart",
+      "chapter": "Story time In the shop；Grammar time；Wrap-up time Make a shopping plan",
+      "note": "对应零花钱购物预算和支出计划，不是专门储蓄计划"
+    },
+    {
+      "topicId": "cne_p250",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 7 Shopping smart",
+      "chapter": "Story time In the shop；Grammar time；Wrap-up time Make a shopping plan",
+      "note": "教材用Let's take it及I'd like ...表达购买，未以I'll take ...为原句"
+    },
+    {
+      "topicId": "cne_p251",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 7 Shopping smart",
+      "chapter": "Story time In the shop；Grammar time；Wrap-up time Make a shopping plan",
+      "note": "读取购物清单、购买结果和价格，不含购物小票体裁"
+    },
+    {
+      "topicId": "cne_p141",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 8 We love festivals!",
+      "chapter": "Story time Time to celebrate；Grammar time in, on, at"
+    },
+    {
+      "topicId": "cne_p142",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit 8 We love festivals!",
+      "chapter": "Story time Time to celebrate；Grammar time in, on, at"
+    },
+    {
+      "topicId": "cne_p261",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 1 Cinderella",
+      "chapter": "Grammar time Why ...? Because ...",
+      "note": "以童话故事中的原因问答系统教学Why/Because，不是季节喜好语境"
+    },
+    {
+      "topicId": "cne_p159",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 2 How do you come to school?",
+      "chapter": "Story time；Grammar time；Checkout time",
+      "note": "覆盖bus、metro、taxi、bike及ship等，plane、train在六下Unit 7假期出行语境出现，属词包拆合"
+    },
+    {
+      "topicId": "cne_p161",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 2 How do you come to school?",
+      "chapter": "Story time；Grammar time；Checkout time"
+    },
+    {
+      "topicId": "cne_p155",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 3 Asking the way",
+      "chapter": "Lead-in；Story time；Grammar time",
+      "note": "核心场所含bookshop、cinema、hospital、shop等；bookshop对应PEP的bookstore，post office见Project 1"
+    },
+    {
+      "topicId": "cne_p156",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 3 Asking the way",
+      "chapter": "Lead-in；Story time；Grammar time",
+      "note": "用Turn left/right及Go along this street指路，Go along对应直走指引而非Go straight原句"
+    },
+    {
+      "topicId": "cne_p157",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 3 Asking the way",
+      "chapter": "Lead-in；Story time；Grammar time"
+    },
+    {
+      "topicId": "cne_p158",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 3 Asking the way",
+      "chapter": "Lead-in；Story time；Grammar time"
+    },
+    {
+      "topicId": "cne_p214",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 3 Asking the way",
+      "chapter": "Lead-in；Story time；Grammar time",
+      "note": "主题为城市场所和问路，含shop、hospital、library等，不是PEP社区单元原词包"
+    },
+    {
+      "topicId": "cne_p177",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 4 Seeing the doctor",
+      "chapter": "Story time；Grammar time should/shouldn't；Cartoon time",
+      "note": "用How do you feel now?、What should I do?及should/shouldn't问答，语境为疾病和身体不适而非情绪"
+    },
+    {
+      "topicId": "cne_p178",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 4 Seeing the doctor",
+      "chapter": "Story time；Grammar time should/shouldn't；Cartoon time",
+      "note": "阅读患者感受及医嘱，建议主题为健康照护而非情绪调节"
+    },
+    {
+      "topicId": "cne_p236",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 4 Seeing the doctor",
+      "chapter": "Story time；Grammar time should/shouldn't；Cartoon time",
+      "note": "围绕休息、饮水、刷牙、少吃甜食等健康习惯使用should/shouldn't"
+    },
+    {
+      "topicId": "cne_p072",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 5 Helping our parents",
+      "chapter": "Story time；Grammar time",
+      "note": "覆盖kitchen、living room、bedroom，bathroom、study未在本单元集中教学"
+    },
+    {
+      "topicId": "cne_p073",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 5 Helping our parents",
+      "chapter": "Story time；Grammar time"
+    },
+    {
+      "topicId": "cne_p074",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 5 Helping our parents",
+      "chapter": "Story time；Grammar time"
+    },
+    {
+      "topicId": "cne_p075",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 5 Helping our parents",
+      "chapter": "Story time；Grammar time"
+    },
+    {
+      "topicId": "cne_p140",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 7 Chinese festivals",
+      "chapter": "Story time；Grammar time；Checkout time",
+      "note": "Grammar time集中复习12个月，Story time按月份介绍中国节日"
+    },
+    {
+      "topicId": "cne_p263",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 7 Chinese festivals",
+      "chapter": "Story time；Grammar time；Checkout time"
+    },
+    {
+      "topicId": "cne_p264",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 7 Chinese festivals",
+      "chapter": "Story time；Grammar time；Checkout time",
+      "note": "以When's the ... Festival? / It's in ...谈节日月份，不是PEP校历活动语境"
+    },
+    {
+      "topicId": "cne_p145",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 8 Birthdays",
+      "chapter": "Story time；Grammar time；Checkout time"
+    },
+    {
+      "topicId": "cne_p266",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 8 Birthdays",
+      "chapter": "Story time；Grammar time；Checkout time"
+    },
+    {
+      "topicId": "cne_p267",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit 8 Birthdays",
+      "chapter": "Story time；Grammar time；Checkout time",
+      "note": "读取生日日期和庆祝活动，不是学校活动通知或日程表"
+    },
+    {
+      "topicId": "cne_p185",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 1 Try your best",
+      "chapter": "Story time It was great!；Grammar time I was/did ... We were/did ..."
+    },
+    {
+      "topicId": "cne_p189",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 1 Try your best",
+      "chapter": "Story time It was great!；Grammar time I was/did ... We were/did ...",
+      "note": "本单元含see/saw、begin/began、forget/forgot等，go/went、eat/ate在Unit 3继续归纳"
+    },
+    {
+      "topicId": "cne_p193",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 1 Try your best",
+      "chapter": "Story time It was great!；Grammar time I was/did ... We were/did ..."
+    },
+    {
+      "topicId": "cne_p186",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 2 Honesty",
+      "chapter": "Story time Meng Xin and his ox；Grammar time I did (not) ... Did you ...?"
+    },
+    {
+      "topicId": "cne_p242",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 2 Honesty",
+      "chapter": "Story time Meng Xin and his ox；Grammar time I did (not) ... Did you ...?",
+      "note": "Did you ...?及Yes/No回答用于诚信故事等过去事件，不是专门询问上周末"
+    },
+    {
+      "topicId": "cne_p243",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 3 Great people",
+      "chapter": "Cartoon time My hero；Grammar time How/Who was ...? How did ...?",
+      "note": "教材有How was school today? / Great!，对应过去评价句式，但不是How was your weekend?原句"
+    },
+    {
+      "topicId": "cne_p225",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 4 Getting together",
+      "chapter": "Story time Grandma's birthday；Wrap-up time",
+      "note": "用What did ... do?谈生日聚会中的过去活动，不是假期旅行语境"
+    },
+    {
+      "topicId": "cne_p265",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 4 Getting together",
+      "chapter": "Grammar time first, second, third ..."
+    },
+    {
+      "topicId": "cne_p166",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 5 Keeping our city clean",
+      "chapter": "Story time Let's go plogging；Grammar time；Wrap-up time",
+      "note": "文本为周末plogging计划，主要使用will而非be going to"
+    },
+    {
+      "topicId": "cne_p205",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 5 Keeping our city clean",
+      "chapter": "Story time Let's go plogging；Grammar time；Wrap-up time",
+      "note": "仅对应will表将来；首次集中教学语境为城市清洁和环保，不含太空生活"
+    },
+    {
+      "topicId": "cne_p216",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 5 Keeping our city clean",
+      "chapter": "Story time Let's go plogging；Grammar time；Wrap-up time",
+      "note": "以学生参与plogging、城市清洁等公益活动呈现年轻人服务社区/城市"
+    },
+    {
+      "topicId": "cne_p255",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 5 Keeping our city clean",
+      "chapter": "Story time Let's go plogging；Grammar time；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p256",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 5 Keeping our city clean",
+      "chapter": "Story time Let's go plogging；Grammar time；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p257",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 5 Keeping our city clean",
+      "chapter": "Story time Let's go plogging；Grammar time；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p207",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 6 Going green",
+      "chapter": "Lead-in；Story time Take care of the Earth；Wrap-up time Make an action plan",
+      "note": "覆盖save、turn off、wind及electricity等，solar/power未按PEP词表集中列出"
+    },
+    {
+      "topicId": "cne_p208",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 6 Going green",
+      "chapter": "Lead-in；Story time Take care of the Earth；Wrap-up time Make an action plan"
+    },
+    {
+      "topicId": "cne_p192",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 8 Then and now",
+      "chapter": "Story time Changes in life；Grammar time；Wrap-up time",
+      "note": "核心表达为ago、in the past、these days、internet等，different以changes主题呈现"
+    },
+    {
+      "topicId": "cne_p194",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 8 Then and now",
+      "chapter": "Story time Changes in life；Grammar time；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p195",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit 8 Then and now",
+      "chapter": "Story time Changes in life；Grammar time；Wrap-up time"
+    },
+    {
+      "topicId": "cne_p187",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 1 The lion and the mouse",
+      "chapter": "Checkout time Su Hai's email My weekend"
+    },
+    {
+      "topicId": "cne_p188",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 1 The lion and the mouse",
+      "chapter": "Checkout time Su Hai's email My weekend",
+      "note": "文本体裁为写给e-friend的周末邮件，不是日记"
+    },
+    {
+      "topicId": "cne_p241",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 1 The lion and the mouse",
+      "chapter": "Checkout time Su Hai's email My weekend",
+      "note": "过去活动词为went、saw、helped等周末助人经历，与PEP家务/生病词包不同"
+    },
+    {
+      "topicId": "cne_p244",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 1 The lion and the mouse",
+      "chapter": "Checkout time Su Hai's email My weekend"
+    },
+    {
+      "topicId": "cne_p128",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 2 Good habits",
+      "chapter": "Cartoon time Tina's house and Bobby's bedroom",
+      "note": "通过配图对话读取房间及books、toys、bed等物品，不是独立房间说明短文"
+    },
+    {
+      "topicId": "cne_p020",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 3 A healthy diet",
+      "chapter": "Story time Mike's and Yang Ling's diets；Grammar time",
+      "note": "在健康饮食中集中复现bread、egg、rice、milk等食物词，册次明显晚于PEP"
+    },
+    {
+      "topicId": "cne_p200",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 3 A healthy diet",
+      "chapter": "Story time Mike's and Yang Ling's diets；Grammar time",
+      "note": "覆盖rice、milk、egg、bread，侧重健康饮食而非农场到餐桌的来源关系，wheat未作为核心词"
+    },
+    {
+      "topicId": "cne_p160",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 4 Road safety",
+      "chapter": "Story time；Grammar time；Checkout time"
+    },
+    {
+      "topicId": "cne_p162",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 4 Road safety",
+      "chapter": "Story time；Grammar time；Checkout time"
+    },
+    {
+      "topicId": "cne_p246",
+      "grade": 6,
+      "term": "下",
+      "unit": "Project 1 Being a good student",
+      "chapter": "Make a poster about being a good student",
+      "note": "以A good student must/mustn't ...做好学生/校园规则海报，不是PEP班规原语境"
+    },
+    {
+      "topicId": "cne_p146",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 5 A party",
+      "chapter": "Story time；Grammar time；Fun time",
+      "note": "阅读派对Invitation中的Date、Time、Place，不是学校活动通知"
+    },
+    {
+      "topicId": "cne_p164",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 5 A party",
+      "chapter": "Story time；Grammar time；Fun time"
+    },
+    {
+      "topicId": "cne_p165",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 5 A party",
+      "chapter": "Story time；Grammar time；Fun time",
+      "note": "以儿童节派对计划为语境谈be going to，不是周末计划"
+    },
+    {
+      "topicId": "cne_p197",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 5 A party",
+      "chapter": "Story time；Grammar time；Fun time",
+      "note": "邀请函含日期、时间、地点和派对活动，对应短信的时间/地点/事件要素"
+    },
+    {
+      "topicId": "cne_p238",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 5 A party",
+      "chapter": "Story time；Grammar time；Fun time",
+      "note": "核心材料含party、invitation及snacks、drinks、balloons等，invite/celebrate等词形未完全按PEP词包列出"
+    },
+    {
+      "topicId": "cne_p030",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 6 An interesting country",
+      "chapter": "Story time Australia；Grammar time；Culture time",
+      "note": "国家含Australia、PRC、UK、US、Canada等，PRC对应中国，未按PEP四国词表编排"
+    },
+    {
+      "topicId": "cne_p031",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 6 An interesting country",
+      "chapter": "Story time Australia；Grammar time；Culture time",
+      "note": "用He comes from Australia等come(s) from表达来源，不以am/is from为核心句型"
+    },
+    {
+      "topicId": "cne_p171",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 8 Our dreams",
+      "chapter": "Story time；Cartoon time；Checkout time",
+      "note": "本单元扩展astronaut、dancer、writer、pianist等职业词，factory、postman、businessman未集中教学，属职业词包差异"
+    },
+    {
+      "topicId": "cne_p204",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 8 Our dreams",
+      "chapter": "Story time；Cartoon time；Checkout time",
+      "note": "覆盖astronaut、spaceship、Moon、Mars、stars等太空相关词，earth、planet、rocket未按PEP词包集中列出"
+    },
+    {
+      "topicId": "cne_p206",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 8 Our dreams",
+      "chapter": "Story time；Cartoon time；Checkout time",
+      "note": "阅读材料为职业梦想及astronaut/spaceship/Moon，不是中国航天事件说明文"
+    },
+    {
+      "topicId": "cne_p240",
+      "grade": 6,
+      "term": "下",
+      "unit": "Unit 8 Our dreams",
+      "chapter": "Story time；Cartoon time；Checkout time",
+      "note": "用What do you want to be? / I want to ...谈太空职业梦想，不以will/be going to谈探索计划"
+    }
+  ]
+}

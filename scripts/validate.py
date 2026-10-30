@@ -239,6 +239,8 @@ def check_mapping_files(ids):
             continue
         if status == "example" and len(entries) > 10:
             err("%s 示例文件至多 10 条，现有 %d 条" % (where, len(entries)))
+        expected_subject = "english" if isinstance(edition, str) and edition.endswith("_english") else "math"
+        subject_label = "英语" if expected_subject == "english" else "数学"
         seen = set()
         for i, e in enumerate(entries):
             ew = "%s entries[%d]" % (where, i)
@@ -249,8 +251,8 @@ def check_mapping_files(ids):
             t = ids.get(tid)
             if t is None:
                 err("%s topicId 不存在：%r" % (ew, tid))
-            elif t.get("external") or topic_subject(tid) != "math":
-                err("%s 只能对照数学正式知识点：%s" % (ew, tid))
+            elif t.get("external") or topic_subject(tid) != expected_subject:
+                err("%s 只能对照%s正式知识点：%s" % (ew, subject_label, tid))
             if tid in seen:
                 err("%s topicId 重复：%s" % (ew, tid))
             seen.add(tid)
