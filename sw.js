@@ -115,6 +115,7 @@ self.addEventListener('fetch', function (event) {
   var url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
   if (url.pathname === '/sw.js') return;
+  if (url.pathname.indexOf('/store/') === 0) return; // 跨设备同步数据必须走网络，不能吃缓存
   if (req.mode === 'navigate') {
     event.respondWith(networkFirst(req, true, abs('./')));
     return;

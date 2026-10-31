@@ -1,4 +1,4 @@
-/* 孩子档案：多个孩子、当前孩子、每个孩子的诊断记录。全部保存在本机 localStorage，不上传、不需要账号。
+/* 孩子档案、诊断记录、进行中的诊断会话：本机 localStorage 是缓存，另有 /store/ 与家人同步（见下方同步段）。
  * 诊断页和档案页共用。window.CnmChildren。 */
 (function () {
   'use strict';
@@ -15,6 +15,191 @@
   }
   function write(k, v) {
     try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; }
+  }
+
+  /* ===== 跨设备同步：家人共用一份档案 =====
+   * /store/*.json 由 nginx 的 DAV 模块提供，外面套着 Basic Auth；localStorage 仍是本地缓存。
+   * 读永远同步（页面启动不等网络），写完异步推上去，打开页面时拉一次、合并后刷新一次。
+   * 诊断页用它自己的 lsSet/lsDel 写会话和已出过的题，不走 write()，所以在存储原语上挂一道。
+   * 限制：整文件 PUT，两人同时改同一条记录时后写者赢（家庭场景够用）。 */
+  var SYNC = {};
+  SYNC[KEY] = { file: 'children.json', merge: mergeState };
+  SYNC[REC_KEY] = { file: 'records.json', merge: mergeRecords };
+  SYNC['cnmDiagnose.session.v2'] = { file: 'session-math.json', merge: mergeSession, tomb: true };
+  SYNC['cneDiagnose.session.v2'] = { file: 'session-en.json', merge: mergeSession, tomb: true };
+  SYNC['cnpDiagnose.session.v2'] = { file: 'session-phy.json', merge: mergeSession, tomb: true };
+  SYNC['cncDiagnose.session.v2'] = { file: 'session-zh.json', merge: mergeSession, tomb: true };
+  SYNC['cnmDiagnose.seen.v1'] = { file: 'seen.json', merge: unionList };
+  var inflight = {};
+  var holding = false; // 拉取时刚从服务端拿下来的值不回推，省一次无用 PUT
+
+  (function hookStorage() {
+    var origSet = localStorage.setItem;
+    var origDel = localStorage.removeItem;
+    localStorage.setItem = function (k, v) {
+      origSet.call(localStorage, k, v);
+      if (SYNC[k] && !holding) push(k);
+    };
+    localStorage.removeItem = function (k) {
+      var cfg = SYNC[k];
+      if (cfg && cfg.tomb) { // 会话被放弃：写墓碑而不是真删，否则另一台设备会把它复活
+        origSet.call(localStorage, k, JSON.stringify({ deletedAt: new Date().toISOString() }));
+        push(k);
+        return;
+      }
+      origDel.call(localStorage, k);
+    };
+  })();
+
+  function parseJson(s) { try { var v = JSON.parse(s); return v == null ? null : v; } catch (e) { return null; } }
+  function emptyState() { return { v: 1, current: null, children: [], deleted: {} }; }
+  function isEmptyValue(k, v) {
+    if (v == null) return true;
+    if (k === KEY) {
+      if (!Array.isArray(v.children)) return true;
+      // 有墓碑就不算空：全删光的档案也要上传，否则另一端会把孩子复活
+      return v.children.length === 0 && !(v.deleted && Object.keys(v.deleted).length);
+    }
+    if (Array.isArray(v)) return v.length === 0;   // seen：题目 id 列表
+    if (typeof v !== 'object') return false;
+    if (v.deletedAt) return false;                 // 墓碑必须上传，否则放弃的存档会回来
+    if (k.indexOf('.session.') >= 0) return !Array.isArray(v.targets) || v.targets.length === 0;
+    return Object.keys(v).length === 0;
+  }
+  function ts(x) { return String((x && (x.updatedAt || x.createdAt)) || ''); }
+  function rts(r) { return String((r && (r.updatedAt || r.savedAt)) || ''); }
+
+  /* 合并两份孩子档案：按 id 取并集，同 id 取时间戳新的；墓碑 deleted 不让被删的孩子复活 */
+  function mergeState(a, b) {
+    a = a && Array.isArray(a.children) ? a : emptyState();
+    b = b && Array.isArray(b.children) ? b : emptyState();
+    var deleted = Object.assign({}, a.deleted || {}, b.deleted || {});
+    var byId = {};
+    function put(c) {
+      if (!c || !c.id) return;
+      var tomb = deleted[c.id];
+      if (tomb && ts(c) < tomb) return;        // 删除比这次改动晚 → 不复活
+      if (tomb && ts(c) >= tomb) delete deleted[c.id]; // 删除之后又改过 → 视为撤销删除
+      var o = byId[c.id];
+      if (!o || ts(c) > ts(o)) byId[c.id] = c;
+    }
+    a.children.forEach(put);
+    b.children.forEach(put);
+    var children = Object.keys(byId).map(function (id) { return byId[id]; }).sort(function (x, y) {
+      return ts(x) < ts(y) ? -1 : ts(x) > ts(y) ? 1 : (String(x.id) < String(y.id) ? -1 : 1);
+    });
+    var cur = a.current && byId[a.current] ? a.current : (b.current && byId[b.current] ? b.current : null);
+    var out = { v: 1, current: cur, children: children };
+    if (Object.keys(deleted).length) out.deleted = deleted; // 没有墓碑就别加这个字段，否则每台设备都会多回写一次
+    return out;
+  }
+
+  /* 合并诊断记录：按 childId → rec.key 取并集，同 key 取新的那条 */
+  function mergeRecords(a, b) {
+    a = a && typeof a === 'object' && !Array.isArray(a) ? a : {};
+    b = b && typeof b === 'object' && !Array.isArray(b) ? b : {};
+    var ids = {};
+    Object.keys(a).forEach(function (id) { ids[id] = 1; });
+    Object.keys(b).forEach(function (id) { ids[id] = 1; });
+    var out = {};
+    Object.keys(ids).forEach(function (id) {
+      var byKey = {};
+      [a[id], b[id]].forEach(function (arr) {
+        (Array.isArray(arr) ? arr : []).forEach(function (r) {
+          if (!r || !r.key) return;
+          var o = byKey[r.key];
+          if (!o || rts(r) > rts(o)) byKey[r.key] = r;
+        });
+      });
+      var list = Object.keys(byKey).map(function (k) { return byKey[k]; }).sort(function (x, y) {
+        return String(y.savedAt || '').localeCompare(String(x.savedAt || ''));
+      });
+      // 导入进来的完整历史不截断，与 saveRecord/moveRecord 的规则一致
+      var keep = (Array.isArray(a[id]) && a[id].length > MAX_RECORDS) ||
+                 (Array.isArray(b[id]) && b[id].length > MAX_RECORDS);
+      if (list.length) out[id] = keep ? list : list.slice(0, MAX_RECORDS);
+    });
+    return out;
+  }
+
+  /* 诊断会话存档：整份取 savedAt 新的；墓碑 deletedAt 不让被放弃的存档复活 */
+  function mergeSession(a, b) {
+    var da = a && a.deletedAt, db = b && b.deletedAt;
+    if (da || db) {
+      var tomb = da && db ? (da > db ? da : db) : (da || db);
+      var other = da ? b : a;
+      if (other && !other.deletedAt && String(other.savedAt || '') > tomb) return other; // 放弃之后又接着做 → 撤销墓碑
+      return { deletedAt: tomb };
+    }
+    if (!a) return b;
+    if (!b) return a;
+    return String(a.savedAt || '') >= String(b.savedAt || '') ? a : b;
+  }
+
+  /* 已出过的题：取并集，谁也别覆盖谁，两台设备才不会重复出题 */
+  function unionList(a, b) {
+    var out = [], seen = {};
+    [a, b].forEach(function (arr) {
+      (Array.isArray(arr) ? arr : []).forEach(function (x) { if (!seen[x]) { seen[x] = 1; out.push(x); } });
+    });
+    return out;
+  }
+
+  /* 推送：每个文件一个在途请求，期间又写了就记 pending，在途的回来再推最新值（避免乱序覆盖） */
+  function push(k) {
+    var cfg = SYNC[k];
+    if (!cfg || typeof fetch !== 'function') return; // 老浏览器没 fetch → 只用本地存储
+    if (inflight[cfg.file]) { inflight[cfg.file].pending = true; return; }
+    var body = localStorage.getItem(k);
+    if (isEmptyValue(k, parseJson(body))) return; // 空档案不上传，免得把别人的数据覆盖成空
+    inflight[cfg.file] = { pending: false };
+    fetch('/store/' + cfg.file, { method: 'PUT', body: body || '', headers: { 'Content-Type': 'application/json' } })
+      .catch(function () { /* 离线或没通过认证：留在本地，下次写入再推 */ })
+      .then(function () {
+        var st = inflight[cfg.file];
+        delete inflight[cfg.file];
+        if (st && st.pending) push(k);
+      });
+  }
+
+  /* 拉取：服务端有就合并进本地；服务端还没有而本地非空，就用本地建库（手机首次把自己的档案推上去） */
+  function pullOne(k) {
+    var cfg = SYNC[k];
+    return fetch('/store/' + cfg.file, { cache: 'no-store' }).then(function (res) {
+      if (res.status === 404) {
+        if (!isEmptyValue(k, parseJson(localStorage.getItem(k)))) push(k);
+        return false;
+      }
+      if (!res.ok) return false;
+      return res.json().then(function (remote) {
+        var local = parseJson(localStorage.getItem(k));
+        if (isEmptyValue(k, local)) {
+          holding = true; // 这份就是从服务端拿下来的，原样写进去就行，不用再推回去
+          try { localStorage.setItem(k, JSON.stringify(remote)); } finally { holding = false; }
+          return true;
+        }
+        var merged = cfg.merge(local, remote);
+        if (JSON.stringify(merged) === JSON.stringify(local)) return false;
+        localStorage.setItem(k, JSON.stringify(merged)); // setItem 钩子会把合并结果推上去
+        return true;
+      });
+    }).catch(function () { return false; });
+  }
+  function pull() {
+    return Promise.all(Object.keys(SYNC).map(pullOne)).then(function (r) { return r.some(Boolean); });
+  }
+
+  /* 打开页面时拉一次；拉到新数据就刷新一次让已渲染的页面显示出来（sessionStorage 保证最多刷一次，不会循环） */
+  function bootstrap() {
+    if (typeof fetch !== 'function' || typeof Promise !== 'function') return; // 老浏览器只用本地存储
+    var FLAG = 'cnmSync.reloaded';
+    var reloaded = false;
+    try { reloaded = sessionStorage.getItem(FLAG) === '1'; sessionStorage.removeItem(FLAG); } catch (e) { /* 隐私模式 */ }
+    pull().then(function (changed) {
+      if (!changed || reloaded) return;
+      try { sessionStorage.setItem(FLAG, '1'); } catch (e) { return; }
+      location.reload();
+    });
   }
 
   function state() {
@@ -73,7 +258,7 @@
     if (i < 0) return { ok: false, error: '找不到这个孩子。' };
     var err = check(s, f, id);
     if (err) return { ok: false, error: err };
-    s.children[i] = Object.assign({}, s.children[i], f);
+    s.children[i] = Object.assign({}, s.children[i], f, { updatedAt: new Date().toISOString() });
     write(KEY, s);
     return { ok: true, child: s.children[i] };
   }
@@ -81,6 +266,8 @@
     var s = state();
     s.children = s.children.filter(function (c) { return c.id !== id; });
     if (s.current === id) s.current = s.children.length ? s.children[0].id : null;
+    s.deleted = s.deleted || {};
+    s.deleted[id] = new Date().toISOString(); // 墓碑：没有它，另一台设备合并时会把这个孩子复活
     write(KEY, s);
     var r = records();
     delete r[id];
@@ -331,6 +518,8 @@
     add: add, update: update, remove: remove,
     recordsOf: recordsOf, saveRecord: saveRecord, hasRecord: hasRecord, moveRecord: moveRecord, removeRecord: removeRecord,
     latestStatus: latestStatus, exportBackup: exportBackup,
-    MAX_BACKUP_BYTES: MAX_BACKUP_BYTES, parseBackup: parseBackup, previewImport: previewImport, importBackup: importBackup
+    MAX_BACKUP_BYTES: MAX_BACKUP_BYTES, parseBackup: parseBackup, previewImport: previewImport, importBackup: importBackup,
+    sync: pull // 暴露给 tests/test_sync.js
   };
+  bootstrap();
 })();
