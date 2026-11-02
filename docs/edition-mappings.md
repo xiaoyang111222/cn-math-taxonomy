@@ -60,7 +60,7 @@
 
 - `status`：`example`（示例，仅演示格式）、`draft`（有依据，待核）、`reviewed`（已另一人对照教材核过）。`draft` 和 `reviewed` 必须写 `source`。
 - 文件名必须以 `edition` 开头；示例文件叫 `<edition>.example.json`，`status` 必须是 `example`，至多 10 条。
-- `entries[].topicId` 必须是已存在的数学正式知识点，同一文件里不能重复；`grade`、`term`、`unit`、`chapter`、`note` 规则同上。
+- `entries[].topicId` 必须是已存在的正式知识点，同一文件里不能重复；`*_math` 文件只能对照数学点，`*_english` 文件只能对照英语点；`grade`、`term`、`unit`、`chapter`、`note` 规则同上。
 
 仓库里现有的 `data/mappings/hujiao_math.example.json` 只有 6 条**占位**数据，没有对照沪教版教材核对，不能当沪教版目录用。
 
