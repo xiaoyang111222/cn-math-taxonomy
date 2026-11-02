@@ -8,6 +8,8 @@
 [![在线试用](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E8%AF%95%E7%94%A8-math.pansgo.com-2ea44f)](https://math.pansgo.com/)
 [![GitHub Pages 备份](https://img.shields.io/badge/备份-GitHub%20Pages-lightgrey)](https://xiaoyang111222.github.io/cn-math-taxonomy/)
 
+> **商业授权：** 本项目采用 CC BY-NC 4.0，个人学习、教学、研究可免费使用；**商业使用（付费课程、付费 App、机构收费服务等）需单独授权**，请通过 X 私信 [@hassanyehiaa](https://x.com/hassanyehiaa)、邮箱 [499749204@qq.com](mailto:499749204@qq.com) 或在本仓库 [提交 Issue](https://github.com/xiaoyang111222/cn-math-taxonomy/issues) 联系，条款见文末「许可证 / License」。
+
 **[→ 在线试用诊断（演示：配方法）](https://math.pansgo.com/diagnose/?target=cnm_221&demo=1)** · [首页](https://math.pansgo.com/) · [知识图谱](https://math.pansgo.com/explore/) · [诊断工具](https://math.pansgo.com/diagnose/) · [GitHub Pages 备份](https://xiaoyang111222.github.io/cn-math-taxonomy/)
 
 ![首页：三步说明、实时统计和年级入口](screenshots/06-home.png)
@@ -545,6 +547,6 @@ python3 -m http.server 8000
 - ✅ 可以免费用于个人学习、教学、研究，可以修改和再分发，但需署名并注明来源（本仓库链接）。
 - ❌ 不得用于商业用途（包括但不限于付费课程、付费 App、机构收费服务、售卖题库等）。
 
-**商用授权：** 如需商业使用，请联系作者获取单独授权：X（Twitter）私信 [@hassanyehiaa](https://x.com/hassanyehiaa)，或在本仓库 [提交 Issue](https://github.com/xiaoyang111222/cn-math-taxonomy/issues) 说明用途。
+**商用授权：** 如需商业使用，请联系作者获取单独授权：X（Twitter）私信 [@hassanyehiaa](https://x.com/hassanyehiaa)、邮箱 [499749204@qq.com](mailto:499749204@qq.com)，或在本仓库 [提交 Issue](https://github.com/xiaoyang111222/cn-math-taxonomy/issues) 说明用途。
 
-This project is licensed under CC BY-NC 4.0. For commercial licensing, please contact the author via X [@hassanyehiaa](https://x.com/hassanyehiaa) or open an issue.
+This project is licensed under CC BY-NC 4.0. For commercial licensing, please contact the author via X [@hassanyehiaa](https://x.com/hassanyehiaa), email [499749204@qq.com](mailto:499749204@qq.com), or open an issue.
