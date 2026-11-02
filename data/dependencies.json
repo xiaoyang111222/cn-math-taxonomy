@@ -1706,8 +1706,8 @@
   {
     "topicId": "cnm_p205",
     "prerequisiteId": "cnm_p204",
-    "strength": "hard",
-    "reason": "学习「百分数的应用」需要先掌握「利率」。"
+    "strength": "soft",
+    "reason": "学习「求一个数比另一个数多百分之几（增长率）」时，利率是同类的百分数应用，可以作参考，但不是必须先会。"
   },
   {
     "topicId": "cnm_p206",

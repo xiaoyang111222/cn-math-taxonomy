@@ -3819,8 +3819,8 @@
     "name": "除数是两位数的除法",
     "domain": "数与代数",
     "grade": 4,
-    "semester": "下",
-    "chapter": "四年级下册 第9单元 除数是两位数的除法",
+    "semester": "上",
+    "chapter": "四年级上册 第6单元 除数是两位数的除法",
     "type": "procedural",
     "description": "会计算除数是两位数的除法，先用整十数试商。",
     "mastery_criteria": [
@@ -3844,8 +3844,8 @@
     "name": "商不变的规律",
     "domain": "数与代数",
     "grade": 4,
-    "semester": "下",
-    "chapter": "四年级下册 第9单元 除数是两位数的除法",
+    "semester": "上",
+    "chapter": "四年级上册 第6单元 除数是两位数的除法",
     "type": "reasoning",
     "description": "知道被除数和除数同时乘或除以相同的数（0 除外），商不变。",
     "mastery_criteria": [
@@ -5792,7 +5792,7 @@
   },
   {
     "id": "cnm_p205",
-    "name": "百分数的应用",
+    "name": "求一个数比另一个数多百分之几（增长率）",
     "domain": "数与代数",
     "grade": 6,
     "semester": "上",
@@ -5804,8 +5804,8 @@
       "能把增加量除以原来的数写成百分数"
     ],
     "diagnostic_question": {
-      "question": "50 的 20% 是多少？",
-      "answer": "10"
+      "question": "某厂原计划生产 8 万辆，实际生产 10 万辆，实际比原计划增长了百分之几？",
+      "answer": "25%"
     },
     "external": false,
     "standards": [

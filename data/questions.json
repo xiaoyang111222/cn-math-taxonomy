@@ -10416,10 +10416,10 @@
   {
     "difficulty": "basic",
     "type": "numeric",
-    "prompt": "50 的 20% 是多少？",
-    "answer": "10",
-    "explanation": "50×20%＝10。",
-    "verify": "50*20/100",
+    "prompt": "某厂原计划生产 8 万辆，实际生产 10 万辆，实际比原计划增长了百分之几？（只写百分号前面的数）",
+    "answer": "25",
+    "explanation": "(10－8)÷8＝25%。",
+    "verify": "(10-8)*100/8",
     "id": "cnm_p205_q1",
     "topicId": "cnm_p205"
   },
