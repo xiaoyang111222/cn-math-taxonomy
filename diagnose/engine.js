@@ -550,10 +550,10 @@
     return { volume: m[1], chapterNo: m[2], chapterName: m[3], section: m[4] || '' };
   }
 
-  /** 学科：显式 subject 优先，否则 cne_ 是英语、cnp_ 是物理、cnc_ 是语文、cns_ 是科学、cnd_ 是道德与法治、cnh_ 是历史、cng_ 是地理，其余算数学。 */
+  /** 学科：显式 subject 优先，否则 cne_ 是英语、cnp_ 是物理、cnc_ 是语文、cns_ 是科学、cnd_ 是道德与法治、cnh_ 是历史、cng_ 是地理、cnb_ 是生物，其余算数学。 */
   function subjectOf(topic) {
     if (!topic) return 'math';
-    if (topic.subject === 'english' || topic.subject === 'math' || topic.subject === 'physics' || topic.subject === 'chinese' || topic.subject === 'science' || topic.subject === 'morality' || topic.subject === 'history' || topic.subject === 'geography') return topic.subject;
+    if (topic.subject === 'english' || topic.subject === 'math' || topic.subject === 'physics' || topic.subject === 'chinese' || topic.subject === 'science' || topic.subject === 'morality' || topic.subject === 'history' || topic.subject === 'geography' || topic.subject === 'biology') return topic.subject;
     if (String(topic.id || '').indexOf('cne_') === 0) return 'english';
     if (String(topic.id || '').indexOf('cnp_') === 0) return 'physics';
     if (String(topic.id || '').indexOf('cnc_') === 0) return 'chinese';
@@ -561,6 +561,7 @@
     if (String(topic.id || '').indexOf('cnd_') === 0) return 'morality';
     if (String(topic.id || '').indexOf('cnh_') === 0) return 'history';
     if (String(topic.id || '').indexOf('cng_') === 0) return 'geography';
+    if (String(topic.id || '').indexOf('cnb_') === 0) return 'biology';
     return 'math';
   }
 

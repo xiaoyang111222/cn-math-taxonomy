@@ -139,6 +139,17 @@ body.subject-geography {
   --logo-fold: #ffffff;
 }
 
+body.subject-biology {
+  --brand: #3f6212;
+  --brand-strong: #365314;
+  --brand-soft: #f7fee7;
+  --on-brand: #ffffff;
+  --focus: #4d7c0f;
+  --accent: #4d7c0f;
+  --logo-sheet: #ecfccb;
+  --logo-fold: #ffffff;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -266,6 +277,16 @@ body.subject-geography {
     --accent: #67e8f9;
     --logo-sheet: #155e75;
     --logo-fold: #0e7490;
+  }
+  body.subject-biology {
+    --brand: #bef264;
+    --brand-strong: #d9f99d;
+    --brand-soft: #1a2e05;
+    --on-brand: #1a2e05;
+    --focus: #d9f99d;
+    --accent: #bef264;
+    --logo-sheet: #365314;
+    --logo-fold: #4d7c0f;
   }
 }
 

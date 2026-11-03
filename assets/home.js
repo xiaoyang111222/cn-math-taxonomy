@@ -3,13 +3,13 @@
   'use strict';
   var raw = location.hash.replace(/^#/, '');
   try { raw = decodeURIComponent(raw); } catch (e) { /* 保持原样 */ }
-  if (/^(?:cnm|cne|cnp|cnc|cns|cnd|cnh|cng)_[A-Za-z0-9]+$/.test(raw)) return;
+  if (/^(?:cnm|cne|cnp|cnc|cns|cnd|cnh|cng|cnb)_[A-Za-z0-9]+$/.test(raw)) return;
 
   var CN = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
   var subjectParam = new URLSearchParams(location.search).get('subject');
-  var subject = subjectParam === 'english' || subjectParam === 'physics' || subjectParam === 'chinese' || subjectParam === 'science' || subjectParam === 'morality' || subjectParam === 'history' || subjectParam === 'geography' ? subjectParam : 'math';
-  var PREFIX = { math: 'cnm_', english: 'cne_', physics: 'cnp_', chinese: 'cnc_', science: 'cns_', morality: 'cnd_', history: 'cnh_', geography: 'cng_' };
-  var STD_PREFIX = { math: 'cms-', english: 'ces-', physics: 'cps-', chinese: 'ccs-', science: 'css-', morality: 'cds-', history: 'chs-', geography: 'cgs-' };
+  var subject = subjectParam === 'english' || subjectParam === 'physics' || subjectParam === 'chinese' || subjectParam === 'science' || subjectParam === 'morality' || subjectParam === 'history' || subjectParam === 'geography' || subjectParam === 'biology' ? subjectParam : 'math';
+  var PREFIX = { math: 'cnm_', english: 'cne_', physics: 'cnp_', chinese: 'cnc_', science: 'cns_', morality: 'cnd_', history: 'cnh_', geography: 'cng_', biology: 'cnb_' };
+  var STD_PREFIX = { math: 'cms-', english: 'ces-', physics: 'cps-', chinese: 'ccs-', science: 'css-', morality: 'cds-', history: 'chs-', geography: 'cgs-', biology: 'cbs-' };
 
   function withSubject(href) {
     if (subject === 'math' || !href || href.indexOf('subject=') >= 0 || href.indexOf('http') === 0) return href;
@@ -23,6 +23,7 @@
   document.body.classList.toggle('subject-morality', subject === 'morality');
   document.body.classList.toggle('subject-history', subject === 'history');
   document.body.classList.toggle('subject-geography', subject === 'geography');
+  document.body.classList.toggle('subject-biology', subject === 'biology');
   document.querySelectorAll('.subject-link').forEach(function (link) {
     var on = link.getAttribute('data-subject') === subject;
     link.classList.toggle('on', on);
@@ -125,6 +126,19 @@
       gdemo.setAttribute('href', 'diagnose/?subject=geography&grade=' + encodeURIComponent('七上') + '&demo=1');
       gdemo.textContent = '先看一遍演示：七年级上册地理';
     }
+  } else if (subject === 'biology') {
+    document.title = '初中生物 · 中小学·高中知识图谱';
+    var beye = document.querySelector('.eyebrow');
+    if (beye) beye.textContent = '生物：初中七至八年级 · 人教版';
+    var bprimary = document.querySelector('.hero-actions a.btn-primary');
+    var bbrowse = document.querySelector('.hero-actions a.btn:not(.btn-primary)');
+    if (bprimary) bprimary.setAttribute('href', 'diagnose/?subject=biology');
+    if (bbrowse) bbrowse.setAttribute('href', 'explore/?subject=biology');
+    var bdemo = document.querySelector('.quiet-link a');
+    if (bdemo) {
+      bdemo.setAttribute('href', 'diagnose/?subject=biology&grade=' + encodeURIComponent('七上') + '&demo=1');
+      bdemo.textContent = '先看一遍演示：七年级上册生物';
+    }
   }
 
   function setText(id, value) {
@@ -218,6 +232,7 @@
       if (id.indexOf('cnd_') === 0) return 'morality';
       if (id.indexOf('cnh_') === 0) return 'history';
       if (id.indexOf('cng_') === 0) return 'geography';
+      if (id.indexOf('cnb_') === 0) return 'biology';
       return 'math';
     }
     function subjectOfStd(id) {
@@ -229,6 +244,7 @@
       if (id.indexOf('cds-') === 0) return 'morality';
       if (id.indexOf('chs-') === 0) return 'history';
       if (id.indexOf('cgs-') === 0) return 'geography';
+      if (id.indexOf('cbs-') === 0) return 'biology';
       return 'math';
     }
     var wantEnglish = subject === 'english';
@@ -236,6 +252,7 @@
     var wantChinese = subject === 'chinese' || subject === 'science' || subject === 'morality';
     var wantHistory = subject === 'history';
     var wantGeography = subject === 'geography';
+    var wantBiology = subject === 'biology';
     topics = topics.filter(function (topic) { return (topic.subject || subjectOfId(topic.id)) === subject; });
     deps = deps.filter(function (edge) { return subjectOfId(edge.topicId) === subject; });
     questions = questions.filter(function (question) { return subjectOfId(question.topicId) === subject; });
@@ -268,8 +285,8 @@
       link.append(stage, name, count, split);
       grades.append(link);
     }
-    var from = wantPhysics ? 8 : (wantEnglish ? 3 : (wantHistory || wantGeography ? 7 : 1));
-    var to = wantChinese ? 6 : (wantGeography ? 8 : 9);
+    var from = wantPhysics ? 8 : (wantEnglish ? 3 : (wantHistory || wantGeography || wantBiology ? 7 : 1));
+    var to = wantChinese ? 6 : (wantGeography || wantBiology ? 8 : 9);
     for (var g = from; g <= to; g++) {
       var list = topics.filter(function (topic) { return topic.grade === g; });
       var up = list.filter(function (topic) { return topic.semester === '上'; }).length;
@@ -285,6 +302,8 @@
       /* 初中历史只到九年级 */
     } else if (wantGeography) {
       /* 初中地理只到八年级 */
+    } else if (wantBiology) {
+      /* 初中生物只到八年级，九年级没有生物课 */
     } else if (wantPhysics) {
       addCard(10, '高中物理', '必修一', 'is-senior', '必修第一册', 'explore/?subject=physics&grade=10');
       addCard(11, '高中物理', '必修二', 'is-senior', '必修第二册', 'explore/?subject=physics&grade=11');

@@ -286861,5 +286861,7397 @@
     "answer": "D",
     "explanation": "粮食安全和对外援助、国际合作都体现大国责任。",
     "verify": "\"中国是负责任的大国\""
+  },
+  {
+    "id": "cnb_j001_q1",
+    "topicId": "cnb_j001",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "科学观察生物时，首先要做的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只看自己喜欢的部分"
+      },
+      {
+        "key": "B",
+        "text": "不写记录，全靠记忆"
+      },
+      {
+        "key": "C",
+        "text": "有明确的观察目的"
+      },
+      {
+        "key": "D",
+        "text": "把没看到的内容补进记录"
+      }
+    ],
+    "answer": "C",
+    "explanation": "科学观察要有目的、全面、真实，并及时记录。",
+    "verify": "\"有明确的观察目的\""
+  },
+  {
+    "id": "cnb_j001_q2",
+    "topicId": "cnb_j001",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "观察蚂蚁的外形，不适合的做法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "用放大镜看口器和足"
+      },
+      {
+        "key": "B",
+        "text": "从不同方向观察"
+      },
+      {
+        "key": "C",
+        "text": "把看到的现象记下来"
+      },
+      {
+        "key": "D",
+        "text": "把没有看清的足也写成六条"
+      }
+    ],
+    "answer": "D",
+    "explanation": "记录只能写实际观察到的现象。",
+    "verify": "\"把没有看清的足也写成六条\""
+  },
+  {
+    "id": "cnb_j001_q3",
+    "topicId": "cnb_j001",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "观察校园里的生物，较合适的一组工具是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "放大镜和记录本"
+      },
+      {
+        "key": "B",
+        "text": "天平和量筒"
+      },
+      {
+        "key": "C",
+        "text": "电压表和电流表"
+      },
+      {
+        "key": "D",
+        "text": "试管和酒精灯"
+      }
+    ],
+    "answer": "A",
+    "explanation": "认识生物的外形和习性，常用放大镜，并把现象记下来。",
+    "verify": "\"放大镜和记录本\""
+  },
+  {
+    "id": "cnb_j001_q4",
+    "topicId": "cnb_j001",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列做法符合科学观察要求的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只观察一次就下结论"
+      },
+      {
+        "key": "B",
+        "text": "反复观察，并把现象如实记下"
+      },
+      {
+        "key": "C",
+        "text": "看到的和想到的混在一起写"
+      },
+      {
+        "key": "D",
+        "text": "观察时先改动生物再记录原状"
+      }
+    ],
+    "answer": "B",
+    "explanation": "观察要真实、可重复，记录的是看到的现象。",
+    "verify": "\"反复观察，并把现象如实记下\""
+  },
+  {
+    "id": "cnb_j002_q1",
+    "topicId": "cnb_j002",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "下列哪一项是生物的共同特征？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一定由很多细胞构成"
+      },
+      {
+        "key": "B",
+        "text": "都能自己制造有机物"
+      },
+      {
+        "key": "C",
+        "text": "都用肺呼吸"
+      },
+      {
+        "key": "D",
+        "text": "能生长和繁殖"
+      }
+    ],
+    "answer": "D",
+    "explanation": "生物都能生长、繁殖；单细胞生物、异养生物和用鳃呼吸的生物也都是生物。",
+    "verify": "\"能生长和繁殖\""
+  },
+  {
+    "id": "cnb_j002_q2",
+    "topicId": "cnb_j002",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "含羞草被碰后叶片合拢，说明生物能？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "对外界刺激作出反应"
+      },
+      {
+        "key": "B",
+        "text": "进行光合作用"
+      },
+      {
+        "key": "C",
+        "text": "用种子繁殖"
+      },
+      {
+        "key": "D",
+        "text": "在体外消化食物"
+      }
+    ],
+    "answer": "A",
+    "explanation": "植物受到触摸后改变姿态，是对刺激作出反应。",
+    "verify": "\"对外界刺激作出反应\""
+  },
+  {
+    "id": "cnb_j002_q3",
+    "topicId": "cnb_j002",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "下列物体中属于生物的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "机器人"
+      },
+      {
+        "key": "B",
+        "text": "生石花"
+      },
+      {
+        "key": "C",
+        "text": "钟乳石"
+      },
+      {
+        "key": "D",
+        "text": "汽车"
+      }
+    ],
+    "answer": "B",
+    "explanation": "生石花是植物；机器人、钟乳石和汽车没有生物的生命活动。",
+    "verify": "\"生石花\""
+  },
+  {
+    "id": "cnb_j002_q4",
+    "topicId": "cnb_j002",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "生物体产生的后代与亲代既像又不完全一样，说明生物具有？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只有遗传、没有差异"
+      },
+      {
+        "key": "B",
+        "text": "只按环境临时改变、不能传代"
+      },
+      {
+        "key": "C",
+        "text": "遗传和变异"
+      },
+      {
+        "key": "D",
+        "text": "全部性状都与亲代不同"
+      }
+    ],
+    "answer": "C",
+    "explanation": "后代保持亲代的基本特征是遗传，个体之间有差异是变异。",
+    "verify": "\"遗传和变异\""
+  },
+  {
+    "id": "cnb_j003_q1",
+    "topicId": "cnb_j003",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "显微镜的放大倍数等于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "目镜放大倍数乘物镜放大倍数"
+      },
+      {
+        "key": "B",
+        "text": "目镜与物镜放大倍数之和"
+      },
+      {
+        "key": "C",
+        "text": "只有物镜的放大倍数"
+      },
+      {
+        "key": "D",
+        "text": "只有目镜的放大倍数"
+      }
+    ],
+    "answer": "A",
+    "explanation": "放大倍数是目镜和物镜倍数的乘积。",
+    "verify": "\"目镜放大倍数乘物镜放大倍数\""
+  },
+  {
+    "id": "cnb_j003_q2",
+    "topicId": "cnb_j003",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "视野中已经找到物像，但不够清晰，应调节？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "粗准焦螺旋大幅度转动"
+      },
+      {
+        "key": "B",
+        "text": "细准焦螺旋"
+      },
+      {
+        "key": "C",
+        "text": "转换器换成更小的光圈"
+      },
+      {
+        "key": "D",
+        "text": "反光镜换成平面镜"
+      }
+    ],
+    "answer": "B",
+    "explanation": "细准焦螺旋用来把物像调清晰；找到物像前才主要用粗准焦螺旋。",
+    "verify": "\"细准焦螺旋\""
+  },
+  {
+    "id": "cnb_j003_q3",
+    "topicId": "cnb_j003",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "目镜 10×、物镜 40× 时，显微镜的放大倍数是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "50 倍"
+      },
+      {
+        "key": "B",
+        "text": "30 倍"
+      },
+      {
+        "key": "C",
+        "text": "400 倍"
+      },
+      {
+        "key": "D",
+        "text": "4 倍"
+      }
+    ],
+    "answer": "C",
+    "explanation": "10 乘 40 等于 400。",
+    "verify": "\"400 倍\""
+  },
+  {
+    "id": "cnb_j003_q4",
+    "topicId": "cnb_j003",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "把玻片向右移动，视野里的物像会？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "向右移动"
+      },
+      {
+        "key": "B",
+        "text": "停留不动"
+      },
+      {
+        "key": "C",
+        "text": "先向上再向下"
+      },
+      {
+        "key": "D",
+        "text": "向左移动"
+      }
+    ],
+    "answer": "D",
+    "explanation": "显微镜成的是倒像，物像移动方向与玻片移动方向相反。",
+    "verify": "\"向左移动\""
+  },
+  {
+    "id": "cnb_j004_q1",
+    "topicId": "cnb_j004",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "对细胞起支持和保护作用的结构是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "细胞膜"
+      },
+      {
+        "key": "B",
+        "text": "细胞壁"
+      },
+      {
+        "key": "C",
+        "text": "细胞核"
+      },
+      {
+        "key": "D",
+        "text": "液泡"
+      }
+    ],
+    "answer": "B",
+    "explanation": "细胞壁位于植物细胞最外面，使细胞保持一定形态。",
+    "verify": "\"细胞壁\""
+  },
+  {
+    "id": "cnb_j004_q2",
+    "topicId": "cnb_j004",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "植物细胞中，控制物质进出的结构是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "细胞壁"
+      },
+      {
+        "key": "B",
+        "text": "液泡"
+      },
+      {
+        "key": "C",
+        "text": "细胞膜"
+      },
+      {
+        "key": "D",
+        "text": "叶绿体"
+      }
+    ],
+    "answer": "C",
+    "explanation": "细胞膜能控制物质进出细胞；细胞壁全透，不能控制物质进出。",
+    "verify": "\"细胞膜\""
+  },
+  {
+    "id": "cnb_j004_q3",
+    "topicId": "cnb_j004",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "洋葱鳞片叶内表皮细胞一般看不到的结构是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "细胞壁"
+      },
+      {
+        "key": "B",
+        "text": "细胞核"
+      },
+      {
+        "key": "C",
+        "text": "液泡"
+      },
+      {
+        "key": "D",
+        "text": "叶绿体"
+      }
+    ],
+    "answer": "D",
+    "explanation": "内表皮不见光，细胞中没有叶绿体；叶片绿色部分的细胞才有叶绿体。",
+    "verify": "\"叶绿体\""
+  },
+  {
+    "id": "cnb_j004_q4",
+    "topicId": "cnb_j004",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "植物细胞进行光合作用的场所是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "叶绿体"
+      },
+      {
+        "key": "B",
+        "text": "线粒体"
+      },
+      {
+        "key": "C",
+        "text": "液泡"
+      },
+      {
+        "key": "D",
+        "text": "细胞膜"
+      }
+    ],
+    "answer": "A",
+    "explanation": "叶绿体中的色素能吸收光能，是光合作用的场所。",
+    "verify": "\"叶绿体\""
+  },
+  {
+    "id": "cnb_j005_q1",
+    "topicId": "cnb_j005",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "人口腔上皮细胞属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "植物细胞"
+      },
+      {
+        "key": "B",
+        "text": "细菌细胞"
+      },
+      {
+        "key": "C",
+        "text": "动物细胞"
+      },
+      {
+        "key": "D",
+        "text": "病毒"
+      }
+    ],
+    "answer": "C",
+    "explanation": "人口腔上皮来自人体，用来观察动物细胞。",
+    "verify": "\"动物细胞\""
+  },
+  {
+    "id": "cnb_j005_q2",
+    "topicId": "cnb_j005",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "动物细胞和植物细胞都有的结构是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "细胞壁、叶绿体、液泡"
+      },
+      {
+        "key": "B",
+        "text": "只共有细胞壁"
+      },
+      {
+        "key": "C",
+        "text": "只共有叶绿体"
+      },
+      {
+        "key": "D",
+        "text": "细胞膜、细胞质、细胞核"
+      }
+    ],
+    "answer": "D",
+    "explanation": "动植物细胞都有细胞膜、细胞质和细胞核。",
+    "verify": "\"细胞膜、细胞质、细胞核\""
+  },
+  {
+    "id": "cnb_j005_q3",
+    "topicId": "cnb_j005",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "与植物细胞相比，动物细胞没有的结构是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "细胞壁、叶绿体和液泡"
+      },
+      {
+        "key": "B",
+        "text": "细胞膜和细胞质"
+      },
+      {
+        "key": "C",
+        "text": "细胞核和线粒体"
+      },
+      {
+        "key": "D",
+        "text": "只有细胞核"
+      }
+    ],
+    "answer": "A",
+    "explanation": "动物细胞没有细胞壁、叶绿体，也没有植物细胞那样的大液泡。",
+    "verify": "\"细胞壁、叶绿体和液泡\""
+  },
+  {
+    "id": "cnb_j005_q4",
+    "topicId": "cnb_j005",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "观察人口腔上皮细胞时，在载玻片上滴的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "清水"
+      },
+      {
+        "key": "B",
+        "text": "生理盐水"
+      },
+      {
+        "key": "C",
+        "text": "碘酒原液当唯一液体"
+      },
+      {
+        "key": "D",
+        "text": "酒精"
+      }
+    ],
+    "answer": "B",
+    "explanation": "生理盐水有助于保持动物细胞的正常形态；滴清水会使细胞吸水涨破。",
+    "verify": "\"生理盐水\""
+  },
+  {
+    "id": "cnb_j006_q1",
+    "topicId": "cnb_j006",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "细胞中的遗传信息主要储存在？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "细胞膜"
+      },
+      {
+        "key": "B",
+        "text": "细胞壁"
+      },
+      {
+        "key": "C",
+        "text": "液泡"
+      },
+      {
+        "key": "D",
+        "text": "细胞核"
+      }
+    ],
+    "answer": "D",
+    "explanation": "细胞核含有遗传物质，是遗传信息库。",
+    "verify": "\"细胞核\""
+  },
+  {
+    "id": "cnb_j006_q2",
+    "topicId": "cnb_j006",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "把有机物里的化学能释放出来，供细胞利用的结构主要是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "线粒体"
+      },
+      {
+        "key": "B",
+        "text": "叶绿体"
+      },
+      {
+        "key": "C",
+        "text": "液泡"
+      },
+      {
+        "key": "D",
+        "text": "细胞壁"
+      }
+    ],
+    "answer": "A",
+    "explanation": "线粒体是呼吸作用的主要场所，能分解有机物、释放能量。",
+    "verify": "\"线粒体\""
+  },
+  {
+    "id": "cnb_j006_q3",
+    "topicId": "cnb_j006",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "克隆羊多莉的遗传性状主要像提供细胞核的母羊，说明？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "细胞膜决定所有性状"
+      },
+      {
+        "key": "B",
+        "text": "细胞核控制着生物的发育和遗传"
+      },
+      {
+        "key": "C",
+        "text": "细胞质中没有遗传物质所以与遗传无关"
+      },
+      {
+        "key": "D",
+        "text": "细胞壁里有全部遗传信息"
+      }
+    ],
+    "answer": "B",
+    "explanation": "多莉的性状与供核母羊一致，说明细胞核是遗传控制中心。",
+    "verify": "\"细胞核控制着生物的发育和遗传\""
+  },
+  {
+    "id": "cnb_j006_q4",
+    "topicId": "cnb_j006",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "叶绿体和线粒体都被称为能量转换器，区别是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "两者都只能储存光能"
+      },
+      {
+        "key": "B",
+        "text": "两者都只存在于动物细胞"
+      },
+      {
+        "key": "C",
+        "text": "叶绿体把光能变成化学能，线粒体把化学能释放出来"
+      },
+      {
+        "key": "D",
+        "text": "线粒体制造有机物，叶绿体分解有机物"
+      }
+    ],
+    "answer": "C",
+    "explanation": "叶绿体在光下制造有机物并储存能量；线粒体分解有机物、释放能量。",
+    "verify": "\"叶绿体把光能变成化学能，线粒体把化学能释放出来\""
+  },
+  {
+    "id": "cnb_j007_q1",
+    "topicId": "cnb_j007",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "细胞分裂产生的新细胞，染色体数目与原细胞相比？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "相同"
+      },
+      {
+        "key": "B",
+        "text": "一定减半"
+      },
+      {
+        "key": "C",
+        "text": "一定加倍"
+      },
+      {
+        "key": "D",
+        "text": "随机增减"
+      }
+    ],
+    "answer": "A",
+    "explanation": "染色体先复制，再平均进入两个新细胞，数目保持不变。",
+    "verify": "\"相同\""
+  },
+  {
+    "id": "cnb_j007_q2",
+    "topicId": "cnb_j007",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "细胞分裂时，染色体的变化是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "不复制就直接分开"
+      },
+      {
+        "key": "B",
+        "text": "先复制，再平均分配"
+      },
+      {
+        "key": "C",
+        "text": "只复制不分开"
+      },
+      {
+        "key": "D",
+        "text": "随机分到一个新细胞"
+      }
+    ],
+    "answer": "B",
+    "explanation": "复制后再均分，两个新细胞才能得到同样的遗传物质。",
+    "verify": "\"先复制，再平均分配\""
+  },
+  {
+    "id": "cnb_j007_q3",
+    "topicId": "cnb_j007",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "植物细胞分裂末期，在细胞中央形成的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "新的叶绿体和液泡"
+      },
+      {
+        "key": "B",
+        "text": "只形成细胞核、不再分细胞质"
+      },
+      {
+        "key": "C",
+        "text": "新的细胞膜和细胞壁"
+      },
+      {
+        "key": "D",
+        "text": "一整块骨骼"
+      }
+    ],
+    "answer": "C",
+    "explanation": "植物细胞的细胞质分成两份后，中央长出新的细胞膜和细胞壁。",
+    "verify": "\"新的细胞膜和细胞壁\""
+  },
+  {
+    "id": "cnb_j007_q4",
+    "topicId": "cnb_j007",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "一个细胞经连续两次分裂，若不计死亡，可以得到？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "2 个细胞"
+      },
+      {
+        "key": "B",
+        "text": "3 个细胞"
+      },
+      {
+        "key": "C",
+        "text": "8 个细胞"
+      },
+      {
+        "key": "D",
+        "text": "4 个细胞"
+      }
+    ],
+    "answer": "D",
+    "explanation": "一次分裂由 1 个变成 2 个，再分裂一次变成 4 个。",
+    "verify": "\"4 个细胞\""
+  },
+  {
+    "id": "cnb_j008_q1",
+    "topicId": "cnb_j008",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "人体的结构层次由小到大是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "细胞、器官、组织、系统、人体"
+      },
+      {
+        "key": "B",
+        "text": "细胞、组织、器官、系统、人体"
+      },
+      {
+        "key": "C",
+        "text": "组织、细胞、系统、器官、人体"
+      },
+      {
+        "key": "D",
+        "text": "系统、器官、组织、细胞、人体"
+      }
+    ],
+    "answer": "B",
+    "explanation": "细胞形成组织，组织形成器官，器官形成系统，系统构成人体。",
+    "verify": "\"细胞、组织、器官、系统、人体\""
+  },
+  {
+    "id": "cnb_j008_q2",
+    "topicId": "cnb_j008",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "人的胃属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "组织"
+      },
+      {
+        "key": "B",
+        "text": "系统"
+      },
+      {
+        "key": "C",
+        "text": "器官"
+      },
+      {
+        "key": "D",
+        "text": "细胞"
+      }
+    ],
+    "answer": "C",
+    "explanation": "胃由几种组织按一定次序组成，能完成消化等功能，是器官。",
+    "verify": "\"器官\""
+  },
+  {
+    "id": "cnb_j008_q3",
+    "topicId": "cnb_j008",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "下列属于结缔组织的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "神经"
+      },
+      {
+        "key": "B",
+        "text": "骨骼肌"
+      },
+      {
+        "key": "C",
+        "text": "皮肤表皮"
+      },
+      {
+        "key": "D",
+        "text": "血液"
+      }
+    ],
+    "answer": "D",
+    "explanation": "血液是结缔组织；上皮组织、肌肉组织和神经组织是另外三类基本组织。",
+    "verify": "\"血液\""
+  },
+  {
+    "id": "cnb_j008_q4",
+    "topicId": "cnb_j008",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "人体中，由心脏、血管和血液按一定次序组成的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "循环系统"
+      },
+      {
+        "key": "B",
+        "text": "一个器官"
+      },
+      {
+        "key": "C",
+        "text": "一种组织"
+      },
+      {
+        "key": "D",
+        "text": "一个细胞"
+      }
+    ],
+    "answer": "A",
+    "explanation": "心脏、血管等器官与血液配合，构成循环系统。",
+    "verify": "\"循环系统\""
+  },
+  {
+    "id": "cnb_j009_q1",
+    "topicId": "cnb_j009",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "植物体的结构层次一般是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "细胞、组织、器官、系统、植物体"
+      },
+      {
+        "key": "B",
+        "text": "组织、细胞、系统、植物体"
+      },
+      {
+        "key": "C",
+        "text": "细胞、组织、器官、植物体"
+      },
+      {
+        "key": "D",
+        "text": "器官、组织、细胞、植物体"
+      }
+    ],
+    "answer": "C",
+    "explanation": "植物没有系统这一层次，器官直接构成植物体。",
+    "verify": "\"细胞、组织、器官、植物体\""
+  },
+  {
+    "id": "cnb_j009_q2",
+    "topicId": "cnb_j009",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "绿色开花植物的营养器官是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "花、果实、种子"
+      },
+      {
+        "key": "B",
+        "text": "只有花和果实"
+      },
+      {
+        "key": "C",
+        "text": "只有种子"
+      },
+      {
+        "key": "D",
+        "text": "根、茎、叶"
+      }
+    ],
+    "answer": "D",
+    "explanation": "根、茎、叶与营养有关；花、果实、种子与生殖有关。",
+    "verify": "\"根、茎、叶\""
+  },
+  {
+    "id": "cnb_j009_q3",
+    "topicId": "cnb_j009",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "番茄的果肉主要属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "营养组织"
+      },
+      {
+        "key": "B",
+        "text": "保护组织"
+      },
+      {
+        "key": "C",
+        "text": "分生组织"
+      },
+      {
+        "key": "D",
+        "text": "输导组织"
+      }
+    ],
+    "answer": "A",
+    "explanation": "果肉细胞壁薄、液泡大，储存营养物质，属于营养组织。",
+    "verify": "\"营养组织\""
+  },
+  {
+    "id": "cnb_j009_q4",
+    "topicId": "cnb_j009",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "植物体内运输水和无机盐的结构属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "保护组织"
+      },
+      {
+        "key": "B",
+        "text": "输导组织"
+      },
+      {
+        "key": "C",
+        "text": "分生组织"
+      },
+      {
+        "key": "D",
+        "text": "上皮组织"
+      }
+    ],
+    "answer": "B",
+    "explanation": "导管等输导组织运输水分和无机盐；上皮组织是动物组织。",
+    "verify": "\"输导组织\""
+  },
+  {
+    "id": "cnb_j010_q1",
+    "topicId": "cnb_j010",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "草履虫整个身体由几个细胞构成？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "2 个"
+      },
+      {
+        "key": "B",
+        "text": "无数个、没有细胞界限"
+      },
+      {
+        "key": "C",
+        "text": "没有细胞"
+      },
+      {
+        "key": "D",
+        "text": "1 个"
+      }
+    ],
+    "answer": "D",
+    "explanation": "草履虫是单细胞生物，一个细胞就是一个个体。",
+    "verify": "\"1 个\""
+  },
+  {
+    "id": "cnb_j010_q2",
+    "topicId": "cnb_j010",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "草履虫在水中运动，依靠的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "纤毛"
+      },
+      {
+        "key": "B",
+        "text": "鞭毛和伪足一起"
+      },
+      {
+        "key": "C",
+        "text": "肌肉"
+      },
+      {
+        "key": "D",
+        "text": "鳍"
+      }
+    ],
+    "answer": "A",
+    "explanation": "草履虫体表的纤毛摆动，使它旋转前进。",
+    "verify": "\"纤毛\""
+  },
+  {
+    "id": "cnb_j010_q3",
+    "topicId": "cnb_j010",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "下列都是单细胞生物的一组是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "水绵、葫芦藓、肾蕨"
+      },
+      {
+        "key": "B",
+        "text": "酵母菌、衣藻、草履虫"
+      },
+      {
+        "key": "C",
+        "text": "蚯蚓、蝗虫、鲫鱼"
+      },
+      {
+        "key": "D",
+        "text": "松树、玉米、向日葵"
+      }
+    ],
+    "answer": "B",
+    "explanation": "酵母菌、衣藻和草履虫都由一个细胞构成；其余各组是多细胞生物。",
+    "verify": "\"酵母菌、衣藻、草履虫\""
+  },
+  {
+    "id": "cnb_j010_q4",
+    "topicId": "cnb_j010",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "单细胞生物能够独立生活，说明？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只有多细胞生物才有生命活动"
+      },
+      {
+        "key": "B",
+        "text": "细胞必须组成系统才能存活"
+      },
+      {
+        "key": "C",
+        "text": "一个细胞就能完成营养、呼吸、排泄、运动和生殖等生命活动"
+      },
+      {
+        "key": "D",
+        "text": "单细胞生物没有细胞膜"
+      }
+    ],
+    "answer": "C",
+    "explanation": "细胞是生命活动的基本单位，单细胞生物用一个细胞完成这些活动。",
+    "verify": "\"一个细胞就能完成营养、呼吸、排泄、运动和生殖等生命活动\""
+  },
+  {
+    "id": "cnb_j011_q1",
+    "topicId": "cnb_j011",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "藻类植物的主要特点是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "没有根、茎、叶的分化"
+      },
+      {
+        "key": "B",
+        "text": "有真正的根、茎、叶"
+      },
+      {
+        "key": "C",
+        "text": "用种子繁殖"
+      },
+      {
+        "key": "D",
+        "text": "全部生活在干旱的沙漠表面"
+      }
+    ],
+    "answer": "A",
+    "explanation": "藻类结构简单，大多生活在水中，全身都能吸收水分和无机盐。",
+    "verify": "\"没有根、茎、叶的分化\""
+  },
+  {
+    "id": "cnb_j011_q2",
+    "topicId": "cnb_j011",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "苔藓植物可以作为监测空气污染的指示植物，主要因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "它有发达的输导组织"
+      },
+      {
+        "key": "B",
+        "text": "叶很薄，有毒气体容易进入"
+      },
+      {
+        "key": "C",
+        "text": "它靠种子度过不良环境"
+      },
+      {
+        "key": "D",
+        "text": "它只生活在深水中"
+      }
+    ],
+    "answer": "B",
+    "explanation": "苔藓的叶通常只由一层细胞构成，对有毒气体敏感。",
+    "verify": "\"叶很薄，有毒气体容易进入\""
+  },
+  {
+    "id": "cnb_j011_q3",
+    "topicId": "cnb_j011",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "蕨类植物与苔藓植物相比，更适应陆地生活的重要原因是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "没有根，只有假根"
+      },
+      {
+        "key": "B",
+        "text": "用种子繁殖"
+      },
+      {
+        "key": "C",
+        "text": "有根、茎、叶的分化，并有输导组织"
+      },
+      {
+        "key": "D",
+        "text": "细胞里没有叶绿体"
+      }
+    ],
+    "answer": "C",
+    "explanation": "输导组织能运输水分和有机物，根能固定植物并吸收水分。",
+    "verify": "\"有根、茎、叶的分化，并有输导组织\""
+  },
+  {
+    "id": "cnb_j011_q4",
+    "topicId": "cnb_j011",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "葫芦藓吸收水分和无机盐，主要依靠？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "假根"
+      },
+      {
+        "key": "B",
+        "text": "导管"
+      },
+      {
+        "key": "C",
+        "text": "种子"
+      },
+      {
+        "key": "D",
+        "text": "叶"
+      }
+    ],
+    "answer": "D",
+    "explanation": "假根主要起固定作用；叶通常只有一层细胞，吸收水分和无机盐主要靠叶。",
+    "verify": "\"叶\""
+  },
+  {
+    "id": "cnb_j012_q1",
+    "topicId": "cnb_j012",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "种子植物包括？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "藻类和蕨类"
+      },
+      {
+        "key": "B",
+        "text": "裸子植物和被子植物"
+      },
+      {
+        "key": "C",
+        "text": "只有被子植物，不包括松树"
+      },
+      {
+        "key": "D",
+        "text": "苔藓和蕨类"
+      }
+    ],
+    "answer": "B",
+    "explanation": "种子植物用种子繁殖，分为种子裸露的裸子植物和种子有果皮包被的被子植物。",
+    "verify": "\"裸子植物和被子植物\""
+  },
+  {
+    "id": "cnb_j012_q2",
+    "topicId": "cnb_j012",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "松树的种子外面没有果皮包被，它属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "被子植物"
+      },
+      {
+        "key": "B",
+        "text": "蕨类植物"
+      },
+      {
+        "key": "C",
+        "text": "裸子植物"
+      },
+      {
+        "key": "D",
+        "text": "苔藓植物"
+      }
+    ],
+    "answer": "C",
+    "explanation": "银杏、松、杉、苏铁等种子裸露，是裸子植物。",
+    "verify": "\"裸子植物\""
+  },
+  {
+    "id": "cnb_j012_q3",
+    "topicId": "cnb_j012",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "桃的食用部分主要由什么发育而来？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "胚珠"
+      },
+      {
+        "key": "B",
+        "text": "花粉"
+      },
+      {
+        "key": "C",
+        "text": "花瓣"
+      },
+      {
+        "key": "D",
+        "text": "子房壁"
+      }
+    ],
+    "answer": "D",
+    "explanation": "受精后子房发育成果实，子房壁发育成果皮，胚珠发育成种子。",
+    "verify": "\"子房壁\""
+  },
+  {
+    "id": "cnb_j012_q4",
+    "topicId": "cnb_j012",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "种子植物比蕨类植物更适于干旱陆地的主要原因是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "用种子繁殖，受精过程脱离了水的限制"
+      },
+      {
+        "key": "B",
+        "text": "没有叶绿体，不需要水"
+      },
+      {
+        "key": "C",
+        "text": "靠孢子直接在干燥空气中受精"
+      },
+      {
+        "key": "D",
+        "text": "没有根和叶，水分散失少"
+      }
+    ],
+    "answer": "A",
+    "explanation": "种子有种皮保护，胚有营养储备；花粉管使受精可以不依赖外界的水。",
+    "verify": "\"用种子繁殖，受精过程脱离了水的限制\""
+  },
+  {
+    "id": "cnb_j013_q1",
+    "topicId": "cnb_j013",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "无脊椎动物的共同特点是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "都用肺呼吸"
+      },
+      {
+        "key": "B",
+        "text": "都有外骨骼"
+      },
+      {
+        "key": "C",
+        "text": "身体内没有由脊椎骨组成的脊柱"
+      },
+      {
+        "key": "D",
+        "text": "都生活在海水里"
+      }
+    ],
+    "answer": "C",
+    "explanation": "无脊椎动物种类很多，共同之处是体内没有脊柱。",
+    "verify": "\"身体内没有由脊椎骨组成的脊柱\""
+  },
+  {
+    "id": "cnb_j013_q2",
+    "topicId": "cnb_j013",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "水螅抓住猎物，依靠的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "外骨骼"
+      },
+      {
+        "key": "B",
+        "text": "贝壳"
+      },
+      {
+        "key": "C",
+        "text": "脊椎"
+      },
+      {
+        "key": "D",
+        "text": "刺细胞"
+      }
+    ],
+    "answer": "D",
+    "explanation": "腔肠动物（刺胞动物）有刺细胞，用来捕食和防御。",
+    "verify": "\"刺细胞\""
+  },
+  {
+    "id": "cnb_j013_q3",
+    "topicId": "cnb_j013",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "蝗虫能够在陆地上防止水分散失，与哪一结构有关？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "外骨骼"
+      },
+      {
+        "key": "B",
+        "text": "湿润的皮肤"
+      },
+      {
+        "key": "C",
+        "text": "贝壳里的珍珠层"
+      },
+      {
+        "key": "D",
+        "text": "脊椎骨"
+      }
+    ],
+    "answer": "A",
+    "explanation": "节肢动物的外骨骼可以保护身体，并减少水分蒸发。",
+    "verify": "\"外骨骼\""
+  },
+  {
+    "id": "cnb_j013_q4",
+    "topicId": "cnb_j013",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "身体由许多相似体节构成、靠刚毛和肌肉配合运动的动物是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "水母"
+      },
+      {
+        "key": "B",
+        "text": "蚯蚓"
+      },
+      {
+        "key": "C",
+        "text": "蜗牛"
+      },
+      {
+        "key": "D",
+        "text": "蛔虫"
+      }
+    ],
+    "answer": "B",
+    "explanation": "蚯蚓是环节动物，身体分节，腹面有刚毛。",
+    "verify": "\"蚯蚓\""
+  },
+  {
+    "id": "cnb_j014_q1",
+    "topicId": "cnb_j014",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "鱼在水中呼吸，进行气体交换的结构是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "肺"
+      },
+      {
+        "key": "B",
+        "text": "皮肤上的鳞片"
+      },
+      {
+        "key": "C",
+        "text": "鳍"
+      },
+      {
+        "key": "D",
+        "text": "鳃"
+      }
+    ],
+    "answer": "D",
+    "explanation": "水从口进入，经过鳃丝时完成气体交换。",
+    "verify": "\"鳃\""
+  },
+  {
+    "id": "cnb_j014_q2",
+    "topicId": "cnb_j014",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "鱼的鳍的主要作用是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "游泳并保持平衡"
+      },
+      {
+        "key": "B",
+        "text": "呼吸"
+      },
+      {
+        "key": "C",
+        "text": "产生卵细胞"
+      },
+      {
+        "key": "D",
+        "text": "吸收阳光制造有机物"
+      }
+    ],
+    "answer": "A",
+    "explanation": "胸鳍、腹鳍、尾鳍等配合，使鱼能够游动和转向。",
+    "verify": "\"游泳并保持平衡\""
+  },
+  {
+    "id": "cnb_j014_q3",
+    "topicId": "cnb_j014",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "鲫鱼身体两侧的侧线能？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "代替鳃呼吸"
+      },
+      {
+        "key": "B",
+        "text": "感知水流方向和压力"
+      },
+      {
+        "key": "C",
+        "text": "分泌消化酶"
+      },
+      {
+        "key": "D",
+        "text": "进行光合作用"
+      }
+    ],
+    "answer": "B",
+    "explanation": "侧线是鱼的感觉器官，能测定方位和水压。",
+    "verify": "\"感知水流方向和压力\""
+  },
+  {
+    "id": "cnb_j014_q4",
+    "topicId": "cnb_j014",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列动物用鳃呼吸、用鳍游泳、体表常覆鳞片的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "海豚"
+      },
+      {
+        "key": "B",
+        "text": "青蛙"
+      },
+      {
+        "key": "C",
+        "text": "鲫鱼"
+      },
+      {
+        "key": "D",
+        "text": "扬子鳄"
+      }
+    ],
+    "answer": "C",
+    "explanation": "鲫鱼是鱼类。海豚用肺呼吸、胎生哺乳；青蛙和扬子鳄也不是鱼。",
+    "verify": "\"鲫鱼\""
+  },
+  {
+    "id": "cnb_j015_q1",
+    "topicId": "cnb_j015",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "青蛙的成体可以在陆地生活，呼吸时主要依靠？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "肺，并靠皮肤辅助"
+      },
+      {
+        "key": "B",
+        "text": "只靠鳃"
+      },
+      {
+        "key": "C",
+        "text": "只靠气囊"
+      },
+      {
+        "key": "D",
+        "text": "只靠体表的角质鳞片"
+      }
+    ],
+    "answer": "A",
+    "explanation": "成蛙用肺呼吸，湿润的皮肤也能辅助呼吸。",
+    "verify": "\"肺，并靠皮肤辅助\""
+  },
+  {
+    "id": "cnb_j015_q2",
+    "topicId": "cnb_j015",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "蝌蚪的呼吸器官是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "肺和气囊"
+      },
+      {
+        "key": "B",
+        "text": "鳃"
+      },
+      {
+        "key": "C",
+        "text": "角质甲"
+      },
+      {
+        "key": "D",
+        "text": "乳腺"
+      }
+    ],
+    "answer": "B",
+    "explanation": "蝌蚪生活在水中，用鳃呼吸，发育为成蛙后才主要用肺。",
+    "verify": "\"鳃\""
+  },
+  {
+    "id": "cnb_j015_q3",
+    "topicId": "cnb_j015",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "爬行动物真正适应陆地生活，与哪一项有关？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "幼体必须在水中用鳃呼吸"
+      },
+      {
+        "key": "B",
+        "text": "皮肤裸露并保持湿润"
+      },
+      {
+        "key": "C",
+        "text": "体表有角质鳞片或甲，卵有坚韧的卵壳"
+      },
+      {
+        "key": "D",
+        "text": "生殖和发育都离不开水"
+      }
+    ],
+    "answer": "C",
+    "explanation": "角质覆盖物减少水分散失，卵壳使胚胎发育可以脱离水。",
+    "verify": "\"体表有角质鳞片或甲，卵有坚韧的卵壳\""
+  },
+  {
+    "id": "cnb_j015_q4",
+    "topicId": "cnb_j015",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列配对正确的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "青蛙是爬行动物"
+      },
+      {
+        "key": "B",
+        "text": "蛇是两栖动物"
+      },
+      {
+        "key": "C",
+        "text": "龟用鳃呼吸、属于鱼类"
+      },
+      {
+        "key": "D",
+        "text": "大鲵是两栖动物，扬子鳄是爬行动物"
+      }
+    ],
+    "answer": "D",
+    "explanation": "大鲵幼体水生、成体可上陆，是两栖动物；扬子鳄体表有角质覆盖，是爬行动物。",
+    "verify": "\"大鲵是两栖动物，扬子鳄是爬行动物\""
+  },
+  {
+    "id": "cnb_j016_q1",
+    "topicId": "cnb_j016",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "鸟类呼吸的特点是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只用气囊进行气体交换"
+      },
+      {
+        "key": "B",
+        "text": "气体两次经过肺，气囊辅助呼吸"
+      },
+      {
+        "key": "C",
+        "text": "用鳃呼吸"
+      },
+      {
+        "key": "D",
+        "text": "只用皮肤呼吸"
+      }
+    ],
+    "answer": "B",
+    "explanation": "肺是气体交换的场所，气囊储存空气，使吸气和呼气时都有气流过肺。",
+    "verify": "\"气体两次经过肺，气囊辅助呼吸\""
+  },
+  {
+    "id": "cnb_j016_q2",
+    "topicId": "cnb_j016",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "家鸽的体温？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "随环境温度明显变化"
+      },
+      {
+        "key": "B",
+        "text": "只有飞行时才恒定"
+      },
+      {
+        "key": "C",
+        "text": "恒定"
+      },
+      {
+        "key": "D",
+        "text": "与鱼类一样不恒定"
+      }
+    ],
+    "answer": "C",
+    "explanation": "鸟类和哺乳动物是恒温动物。",
+    "verify": "\"恒定\""
+  },
+  {
+    "id": "cnb_j016_q3",
+    "topicId": "cnb_j016",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "哺乳动物特有的生殖发育方式是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "全部卵生且不哺乳"
+      },
+      {
+        "key": "B",
+        "text": "变态发育"
+      },
+      {
+        "key": "C",
+        "text": "体外受精、水中发育"
+      },
+      {
+        "key": "D",
+        "text": "胎生、哺乳"
+      }
+    ],
+    "answer": "D",
+    "explanation": "绝大多数哺乳动物胎生，并用乳汁哺育幼崽。",
+    "verify": "\"胎生、哺乳\""
+  },
+  {
+    "id": "cnb_j016_q4",
+    "topicId": "cnb_j016",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列关于鲸的判断正确的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "鲸用肺呼吸、胎生哺乳，是哺乳动物"
+      },
+      {
+        "key": "B",
+        "text": "鲸用鳃呼吸，是鱼类"
+      },
+      {
+        "key": "C",
+        "text": "鲸体表有羽毛，是鸟类"
+      },
+      {
+        "key": "D",
+        "text": "鲸幼体用鳃、成体用肺，是两栖动物"
+      }
+    ],
+    "answer": "A",
+    "explanation": "鲸生活在水中，但具有哺乳动物的特征，不是鱼。",
+    "verify": "\"鲸用肺呼吸、胎生哺乳，是哺乳动物\""
+  },
+  {
+    "id": "cnb_j017_q1",
+    "topicId": "cnb_j017",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "由一个细菌或真菌繁殖后形成的、肉眼可见的集合体叫做？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "组织"
+      },
+      {
+        "key": "B",
+        "text": "器官"
+      },
+      {
+        "key": "C",
+        "text": "菌落"
+      },
+      {
+        "key": "D",
+        "text": "孢子植物"
+      }
+    ],
+    "answer": "C",
+    "explanation": "菌落是肉眼可见的微生物集团，不同菌落的形态、颜色可以不同。",
+    "verify": "\"菌落\""
+  },
+  {
+    "id": "cnb_j017_q2",
+    "topicId": "cnb_j017",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "培养细菌、真菌前，对培养基和培养皿进行高温处理，是为了？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "增加营养"
+      },
+      {
+        "key": "B",
+        "text": "降低温度让微生物立刻繁殖"
+      },
+      {
+        "key": "C",
+        "text": "把细菌变成真菌"
+      },
+      {
+        "key": "D",
+        "text": "灭菌"
+      }
+    ],
+    "answer": "D",
+    "explanation": "高温灭菌是为了杀死原有的细菌和真菌，避免干扰实验结果。",
+    "verify": "\"灭菌\""
+  },
+  {
+    "id": "cnb_j017_q3",
+    "topicId": "cnb_j017",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "检测不同环境中的细菌和真菌，接种之后一般还要？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "在适宜温度下培养"
+      },
+      {
+        "key": "B",
+        "text": "立刻冷冻并停止观察"
+      },
+      {
+        "key": "C",
+        "text": "放在火焰上持续灼烧"
+      },
+      {
+        "key": "D",
+        "text": "打开盖子让灰尘一直落入"
+      }
+    ],
+    "answer": "A",
+    "explanation": "恒温培养一段时间后，才能看到菌落。",
+    "verify": "\"在适宜温度下培养\""
+  },
+  {
+    "id": "cnb_j017_q4",
+    "topicId": "cnb_j017",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列现象能说明微生物分布广泛的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只有土壤里才有细菌"
+      },
+      {
+        "key": "B",
+        "text": "未洗手的手指在培养基上按一下，培养后出现菌落"
+      },
+      {
+        "key": "C",
+        "text": "煮沸后的培养基敞口放久了仍永远无菌"
+      },
+      {
+        "key": "D",
+        "text": "真菌只生活在动物体内"
+      }
+    ],
+    "answer": "B",
+    "explanation": "手上、空气、土壤和水中都有微生物，所以要无菌操作。",
+    "verify": "\"未洗手的手指在培养基上按一下，培养后出现菌落\""
+  },
+  {
+    "id": "cnb_j018_q1",
+    "topicId": "cnb_j018",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "细菌与酵母菌相比，结构上最主要的区别是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "细菌没有细胞壁"
+      },
+      {
+        "key": "B",
+        "text": "细菌有叶绿体"
+      },
+      {
+        "key": "C",
+        "text": "细菌由多个细胞构成"
+      },
+      {
+        "key": "D",
+        "text": "细菌没有成形的细胞核"
+      }
+    ],
+    "answer": "D",
+    "explanation": "细菌是原核生物；酵母菌是真菌，有成形的细胞核。",
+    "verify": "\"细菌没有成形的细胞核\""
+  },
+  {
+    "id": "cnb_j018_q2",
+    "topicId": "cnb_j018",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "细菌的生殖方式是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "分裂生殖"
+      },
+      {
+        "key": "B",
+        "text": "种子繁殖"
+      },
+      {
+        "key": "C",
+        "text": "产卵"
+      },
+      {
+        "key": "D",
+        "text": "出芽形成果实"
+      }
+    ],
+    "answer": "A",
+    "explanation": "一个细菌分裂成两个，在适宜条件下繁殖很快。",
+    "verify": "\"分裂生殖\""
+  },
+  {
+    "id": "cnb_j018_q3",
+    "topicId": "cnb_j018",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "芽孢是细菌的？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "生殖细胞"
+      },
+      {
+        "key": "B",
+        "text": "休眠体"
+      },
+      {
+        "key": "C",
+        "text": "运动器官"
+      },
+      {
+        "key": "D",
+        "text": "叶绿体"
+      }
+    ],
+    "answer": "B",
+    "explanation": "环境恶劣时细菌形成芽孢度过不良环境，条件适宜再萌发，芽孢不是生殖细胞。",
+    "verify": "\"休眠体\""
+  },
+  {
+    "id": "cnb_j018_q4",
+    "topicId": "cnb_j018",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "大多数细菌的营养方式是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "像绿色植物一样自养"
+      },
+      {
+        "key": "B",
+        "text": "寄生在死细胞里进行光合作用"
+      },
+      {
+        "key": "C",
+        "text": "异养，不能自己制造有机物"
+      },
+      {
+        "key": "D",
+        "text": "只吸收阳光、不需要有机物"
+      }
+    ],
+    "answer": "C",
+    "explanation": "多数细菌没有叶绿体，靠分解现成的有机物生活；少数细菌可以自养。",
+    "verify": "\"异养，不能自己制造有机物\""
+  },
+  {
+    "id": "cnb_j019_q1",
+    "topicId": "cnb_j019",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "蘑菇、酵母菌和霉菌都属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "真菌"
+      },
+      {
+        "key": "B",
+        "text": "细菌"
+      },
+      {
+        "key": "C",
+        "text": "病毒"
+      },
+      {
+        "key": "D",
+        "text": "藻类植物"
+      }
+    ],
+    "answer": "A",
+    "explanation": "它们都有成形的细胞核，主要靠菌丝或单细胞吸收现成的有机物。",
+    "verify": "\"真菌\""
+  },
+  {
+    "id": "cnb_j019_q2",
+    "topicId": "cnb_j019",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "酵母菌常用来发面，是因为它分解有机物时产生？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "氧气"
+      },
+      {
+        "key": "B",
+        "text": "二氧化碳"
+      },
+      {
+        "key": "C",
+        "text": "叶绿素"
+      },
+      {
+        "key": "D",
+        "text": "淀粉酶以外的蛋白质外壳"
+      }
+    ],
+    "answer": "B",
+    "explanation": "二氧化碳使面团膨胀；酿酒时则主要利用酵母菌产生的酒精。",
+    "verify": "\"二氧化碳\""
+  },
+  {
+    "id": "cnb_j019_q3",
+    "topicId": "cnb_j019",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "蘑菇的地下菌丝主要作用是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "进行光合作用"
+      },
+      {
+        "key": "B",
+        "text": "形成种子"
+      },
+      {
+        "key": "C",
+        "text": "吸收水和有机物"
+      },
+      {
+        "key": "D",
+        "text": "用刺细胞捕食"
+      }
+    ],
+    "answer": "C",
+    "explanation": "蘑菇没有叶绿体，营养菌丝从环境中吸收有机物。",
+    "verify": "\"吸收水和有机物\""
+  },
+  {
+    "id": "cnb_j019_q4",
+    "topicId": "cnb_j019",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "制作馒头时酵母菌起作用，这一做法属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "用病毒固定太阳能"
+      },
+      {
+        "key": "B",
+        "text": "让细菌进行光合作用"
+      },
+      {
+        "key": "C",
+        "text": "用藻类产生酒精"
+      },
+      {
+        "key": "D",
+        "text": "利用真菌制作发酵食品"
+      }
+    ],
+    "answer": "D",
+    "explanation": "发酵食品制作是用微生物把原料转变成食品的常见做法。",
+    "verify": "\"利用真菌制作发酵食品\""
+  },
+  {
+    "id": "cnb_j020_q1",
+    "topicId": "cnb_j020",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "病毒的结构通常包括？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "细胞壁、细胞膜和细胞核"
+      },
+      {
+        "key": "B",
+        "text": "蛋白质外壳和内部的遗传物质"
+      },
+      {
+        "key": "C",
+        "text": "菌丝和孢子"
+      },
+      {
+        "key": "D",
+        "text": "根、茎、叶"
+      }
+    ],
+    "answer": "B",
+    "explanation": "病毒没有细胞结构，由蛋白质外壳和遗传物质组成。",
+    "verify": "\"蛋白质外壳和内部的遗传物质\""
+  },
+  {
+    "id": "cnb_j020_q2",
+    "topicId": "cnb_j020",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "病毒的生活方式是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "可以在任何死细胞和清水中独立繁殖"
+      },
+      {
+        "key": "B",
+        "text": "像植物一样自养"
+      },
+      {
+        "key": "C",
+        "text": "必须寄生在活细胞里"
+      },
+      {
+        "key": "D",
+        "text": "在培养基上形成菌落后独立生活"
+      }
+    ],
+    "answer": "C",
+    "explanation": "病毒不能独立完成生命活动，离开活细胞一般就停止活动。",
+    "verify": "\"必须寄生在活细胞里\""
+  },
+  {
+    "id": "cnb_j020_q3",
+    "topicId": "cnb_j020",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "病毒产生后代的方式是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "分裂成两个细胞"
+      },
+      {
+        "key": "B",
+        "text": "开花结果"
+      },
+      {
+        "key": "C",
+        "text": "产下受精卵"
+      },
+      {
+        "key": "D",
+        "text": "自我复制"
+      }
+    ],
+    "answer": "D",
+    "explanation": "病毒利用寄主细胞的物质，复制出新的病毒。",
+    "verify": "\"自我复制\""
+  },
+  {
+    "id": "cnb_j020_q4",
+    "topicId": "cnb_j020",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列利用病毒的做法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "用减毒或灭活的病毒制成疫苗"
+      },
+      {
+        "key": "B",
+        "text": "用病毒代替叶绿体制造淀粉"
+      },
+      {
+        "key": "C",
+        "text": "用病毒把面团发起来"
+      },
+      {
+        "key": "D",
+        "text": "用病毒在土壤里分解落叶"
+      }
+    ],
+    "answer": "A",
+    "explanation": "疫苗可以刺激人体产生抵抗相应病原体的能力；分解落叶的主要是细菌和真菌。",
+    "verify": "\"用减毒或灭活的病毒制成疫苗\""
+  },
+  {
+    "id": "cnb_j021_q1",
+    "topicId": "cnb_j021",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "对生物进行分类，主要依据是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "发现的先后顺序"
+      },
+      {
+        "key": "B",
+        "text": "个体的大小"
+      },
+      {
+        "key": "C",
+        "text": "形态结构等特征"
+      },
+      {
+        "key": "D",
+        "text": "生活地区的名称"
+      }
+    ],
+    "answer": "C",
+    "explanation": "分类要比较生物的形态、结构和生理特征，而不是按名字或发现顺序。",
+    "verify": "\"形态结构等特征\""
+  },
+  {
+    "id": "cnb_j021_q2",
+    "topicId": "cnb_j021",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "把小麦、银杏、葫芦藓、水绵分成一类「植物」，依据的是它们？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "都用种子繁殖"
+      },
+      {
+        "key": "B",
+        "text": "都有果实"
+      },
+      {
+        "key": "C",
+        "text": "都生活在水中"
+      },
+      {
+        "key": "D",
+        "text": "都能进行光合作用，属于植物"
+      }
+    ],
+    "answer": "D",
+    "explanation": "这四种生物营养方式都是自养，但繁殖方式和结构层次并不相同。",
+    "verify": "\"都能进行光合作用，属于植物\""
+  },
+  {
+    "id": "cnb_j021_q3",
+    "topicId": "cnb_j021",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "使用检索表时，正确的做法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "按特征逐条选择，直到找出名称"
+      },
+      {
+        "key": "B",
+        "text": "只看最后一行"
+      },
+      {
+        "key": "C",
+        "text": "按页码从小到大随便选"
+      },
+      {
+        "key": "D",
+        "text": "先假定名称再倒着改特征"
+      }
+    ],
+    "answer": "A",
+    "explanation": "检索表每次根据一个或一组特征分成两支，顺着符合的一支继续查。",
+    "verify": "\"按特征逐条选择，直到找出名称\""
+  },
+  {
+    "id": "cnb_j021_q4",
+    "topicId": "cnb_j021",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "把蝙蝠分到哺乳动物而不是鸟类，关键特征是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "会飞"
+      },
+      {
+        "key": "B",
+        "text": "胎生、哺乳，没有羽毛"
+      },
+      {
+        "key": "C",
+        "text": "体温恒定"
+      },
+      {
+        "key": "D",
+        "text": "生活在夜间"
+      }
+    ],
+    "answer": "B",
+    "explanation": "会飞和恒温不是鸟类独有；蝙蝠有毛、胎生哺乳。",
+    "verify": "\"胎生、哺乳，没有羽毛\""
+  },
+  {
+    "id": "cnb_j022_q1",
+    "topicId": "cnb_j022",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "生物分类的单位从大到小依次是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "种、属、科、目、纲、门、界"
+      },
+      {
+        "key": "B",
+        "text": "界、纲、门、科、目、属、种"
+      },
+      {
+        "key": "C",
+        "text": "门、界、纲、科、属、目、种"
+      },
+      {
+        "key": "D",
+        "text": "界、门、纲、目、科、属、种"
+      }
+    ],
+    "answer": "D",
+    "explanation": "等级越大，包含的生物越多，共同特征越少。",
+    "verify": "\"界、门、纲、目、科、属、种\""
+  },
+  {
+    "id": "cnb_j022_q2",
+    "topicId": "cnb_j022",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "最基本的分类单位是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "种"
+      },
+      {
+        "key": "B",
+        "text": "界"
+      },
+      {
+        "key": "C",
+        "text": "门"
+      },
+      {
+        "key": "D",
+        "text": "科"
+      }
+    ],
+    "answer": "A",
+    "explanation": "同种生物的亲缘关系最近，共同特征最多。",
+    "verify": "\"种\""
+  },
+  {
+    "id": "cnb_j022_q3",
+    "topicId": "cnb_j022",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "马和驴能够交配产下骡，但骡通常不能生育。马和驴属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "同一种生物"
+      },
+      {
+        "key": "B",
+        "text": "同属的不同种"
+      },
+      {
+        "key": "C",
+        "text": "不同界的生物"
+      },
+      {
+        "key": "D",
+        "text": "没有分类关系"
+      }
+    ],
+    "answer": "B",
+    "explanation": "马和驴的属名相同、种加词不同，亲缘关系较近，但不是同一个种。",
+    "verify": "\"同属的不同种\""
+  },
+  {
+    "id": "cnb_j022_q4",
+    "topicId": "cnb_j022",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "分类单位越小，同一单位中的生物？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "共同特征越少"
+      },
+      {
+        "key": "B",
+        "text": "一定生活在同一个省"
+      },
+      {
+        "key": "C",
+        "text": "共同特征越多"
+      },
+      {
+        "key": "D",
+        "text": "个体数量一定更多"
+      }
+    ],
+    "answer": "C",
+    "explanation": "种比属小，同种生物的共同特征比同属生物更多。",
+    "verify": "\"共同特征越多\""
+  },
+  {
+    "id": "cnb_j023_q1",
+    "topicId": "cnb_j023",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "种子萌发所需的环境条件是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "适宜的温度、一定的水分和充足的空气"
+      },
+      {
+        "key": "B",
+        "text": "只需要光照"
+      },
+      {
+        "key": "C",
+        "text": "只需要土壤中的有机肥"
+      },
+      {
+        "key": "D",
+        "text": "必须浸泡在煮沸后密闭的水里"
+      }
+    ],
+    "answer": "A",
+    "explanation": "胚是活的、完整的，并已度过休眠期，再加上适宜的外界条件，种子才能萌发。",
+    "verify": "\"适宜的温度、一定的水分和充足的空气\""
+  },
+  {
+    "id": "cnb_j023_q2",
+    "topicId": "cnb_j023",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "种子萌发时，最先突破种皮的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "胚芽"
+      },
+      {
+        "key": "B",
+        "text": "胚根"
+      },
+      {
+        "key": "C",
+        "text": "叶"
+      },
+      {
+        "key": "D",
+        "text": "果实"
+      }
+    ],
+    "answer": "B",
+    "explanation": "胚根发育成根，先固定植物并吸收水分。",
+    "verify": "\"胚根\""
+  },
+  {
+    "id": "cnb_j023_q3",
+    "topicId": "cnb_j023",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "测定种子发芽率时，应选择？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只挑一粒种子"
+      },
+      {
+        "key": "B",
+        "text": "已经霉变的种子"
+      },
+      {
+        "key": "C",
+        "text": "粒大饱满、储存时间短的种子重复试验"
+      },
+      {
+        "key": "D",
+        "text": "煮熟后的种子"
+      }
+    ],
+    "answer": "C",
+    "explanation": "重复实验并选用有活力的种子，结果才可靠；煮熟的种子胚已死亡。",
+    "verify": "\"粒大饱满、储存时间短的种子重复试验\""
+  },
+  {
+    "id": "cnb_j023_q4",
+    "topicId": "cnb_j023",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "把种子放在潮湿但密闭、没有空气的环境中，通常？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "萌发得更快"
+      },
+      {
+        "key": "B",
+        "text": "只长叶不长根"
+      },
+      {
+        "key": "C",
+        "text": "一定长成完整植株"
+      },
+      {
+        "key": "D",
+        "text": "不能正常萌发"
+      }
+    ],
+    "answer": "D",
+    "explanation": "胚进行呼吸需要氧气，缺少空气时种子不能正常萌发。",
+    "verify": "\"不能正常萌发\""
+  },
+  {
+    "id": "cnb_j024_q1",
+    "topicId": "cnb_j024",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "根吸收水分和无机盐的主要部位是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "根冠"
+      },
+      {
+        "key": "B",
+        "text": "成熟区"
+      },
+      {
+        "key": "C",
+        "text": "分生区"
+      },
+      {
+        "key": "D",
+        "text": "伸长区的最前端、还没有根毛"
+      }
+    ],
+    "answer": "B",
+    "explanation": "成熟区生有大量根毛，增大了吸收面积。",
+    "verify": "\"成熟区\""
+  },
+  {
+    "id": "cnb_j024_q2",
+    "topicId": "cnb_j024",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "使枝叶繁茂的无机盐主要含？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "磷"
+      },
+      {
+        "key": "B",
+        "text": "钾"
+      },
+      {
+        "key": "C",
+        "text": "氮"
+      },
+      {
+        "key": "D",
+        "text": "只有钙"
+      }
+    ],
+    "answer": "C",
+    "explanation": "含氮的无机盐促进细胞分生和生长，使枝叶茂盛。",
+    "verify": "\"氮\""
+  },
+  {
+    "id": "cnb_j024_q3",
+    "topicId": "cnb_j024",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "根能不断长长，是因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "根冠细胞不断进行光合作用"
+      },
+      {
+        "key": "B",
+        "text": "成熟区细胞壁消失"
+      },
+      {
+        "key": "C",
+        "text": "茎把长度直接传给根"
+      },
+      {
+        "key": "D",
+        "text": "分生区细胞分裂、伸长区细胞伸长"
+      }
+    ],
+    "answer": "D",
+    "explanation": "分生区增加细胞数目，伸长区使新细胞体积变大。",
+    "verify": "\"分生区细胞分裂、伸长区细胞伸长\""
+  },
+  {
+    "id": "cnb_j024_q4",
+    "topicId": "cnb_j024",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "植物缺钾时，较常见的表现是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "茎秆软弱，容易倒伏"
+      },
+      {
+        "key": "B",
+        "text": "只影响开花、茎秆反而更硬"
+      },
+      {
+        "key": "C",
+        "text": "叶片立刻失去全部细胞"
+      },
+      {
+        "key": "D",
+        "text": "根毛变成叶绿体"
+      }
+    ],
+    "answer": "A",
+    "explanation": "钾使茎秆健壮；磷与开花结果关系密切，氮与枝叶繁茂关系密切。",
+    "verify": "\"茎秆软弱，容易倒伏\""
+  },
+  {
+    "id": "cnb_j025_q1",
+    "topicId": "cnb_j025",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "一朵花中，与结出果实和种子直接有关的结构是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "花瓣和萼片"
+      },
+      {
+        "key": "B",
+        "text": "花柄和花托"
+      },
+      {
+        "key": "C",
+        "text": "雄蕊和雌蕊"
+      },
+      {
+        "key": "D",
+        "text": "只有花瓣"
+      }
+    ],
+    "answer": "C",
+    "explanation": "雄蕊产生花粉，雌蕊中的子房将来发育成果实。",
+    "verify": "\"雄蕊和雌蕊\""
+  },
+  {
+    "id": "cnb_j025_q2",
+    "topicId": "cnb_j025",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "花粉落到雌蕊柱头上的过程叫做？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "受精"
+      },
+      {
+        "key": "B",
+        "text": "蒸腾"
+      },
+      {
+        "key": "C",
+        "text": "呼吸"
+      },
+      {
+        "key": "D",
+        "text": "传粉"
+      }
+    ],
+    "answer": "D",
+    "explanation": "花粉管中的精子与卵细胞结合才是受精，发生在传粉之后。",
+    "verify": "\"传粉\""
+  },
+  {
+    "id": "cnb_j025_q3",
+    "topicId": "cnb_j025",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "受精完成后，胚珠发育成？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "种子"
+      },
+      {
+        "key": "B",
+        "text": "果实"
+      },
+      {
+        "key": "C",
+        "text": "果皮"
+      },
+      {
+        "key": "D",
+        "text": "花瓣"
+      }
+    ],
+    "answer": "A",
+    "explanation": "子房发育成果实，胚珠发育成种子，子房壁发育成果皮。",
+    "verify": "\"种子\""
+  },
+  {
+    "id": "cnb_j025_q4",
+    "topicId": "cnb_j025",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "玉米传粉不足会出现缺粒，可以采用的办法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把根全部剪掉"
+      },
+      {
+        "key": "B",
+        "text": "人工辅助授粉"
+      },
+      {
+        "key": "C",
+        "text": "停止浇水"
+      },
+      {
+        "key": "D",
+        "text": "摘掉全部叶片"
+      }
+    ],
+    "answer": "B",
+    "explanation": "人工把花粉撒到柱头上，可以弥补自然传粉的不足。",
+    "verify": "\"人工辅助授粉\""
+  },
+  {
+    "id": "cnb_j026_q1",
+    "topicId": "cnb_j026",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "水分在植物体内上升，主要经过？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "筛管"
+      },
+      {
+        "key": "B",
+        "text": "气孔直接进入果实"
+      },
+      {
+        "key": "C",
+        "text": "花瓣的表面"
+      },
+      {
+        "key": "D",
+        "text": "导管"
+      }
+    ],
+    "answer": "D",
+    "explanation": "导管把根吸收的水和无机盐向上运输；筛管主要运输有机物。",
+    "verify": "\"导管\""
+  },
+  {
+    "id": "cnb_j026_q2",
+    "topicId": "cnb_j026",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "蒸腾作用的水主要通过哪里散失？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "叶片上的气孔"
+      },
+      {
+        "key": "B",
+        "text": "根毛"
+      },
+      {
+        "key": "C",
+        "text": "果皮"
+      },
+      {
+        "key": "D",
+        "text": "种子的种皮"
+      }
+    ],
+    "answer": "A",
+    "explanation": "气孔由成对的保卫细胞围成，是水蒸气外出的门户。",
+    "verify": "\"叶片上的气孔\""
+  },
+  {
+    "id": "cnb_j026_q3",
+    "topicId": "cnb_j026",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "移栽幼苗时保留根部的土坨，是为了？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "让叶不再进行蒸腾"
+      },
+      {
+        "key": "B",
+        "text": "保护根毛，利于吸水"
+      },
+      {
+        "key": "C",
+        "text": "阻止呼吸作用"
+      },
+      {
+        "key": "D",
+        "text": "促使立即开花"
+      }
+    ],
+    "answer": "B",
+    "explanation": "根毛很容易受损，土坨可以保护幼根和根毛。",
+    "verify": "\"保护根毛，利于吸水\""
+  },
+  {
+    "id": "cnb_j026_q4",
+    "topicId": "cnb_j026",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "蒸腾作用对植物生活的意义是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "制造有机物并释放氧气"
+      },
+      {
+        "key": "B",
+        "text": "把二氧化碳合成淀粉"
+      },
+      {
+        "key": "C",
+        "text": "拉动水分和无机盐向上运输，并降低叶片温度"
+      },
+      {
+        "key": "D",
+        "text": "代替根吸收无机盐"
+      }
+    ],
+    "answer": "C",
+    "explanation": "蒸腾产生的拉力促使水和无机盐上升，同时带走热量。",
+    "verify": "\"拉动水分和无机盐向上运输，并降低叶片温度\""
+  },
+  {
+    "id": "cnb_j027_q1",
+    "topicId": "cnb_j027",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "光合作用的原料是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "二氧化碳和水"
+      },
+      {
+        "key": "B",
+        "text": "只有氧气"
+      },
+      {
+        "key": "C",
+        "text": "只有淀粉"
+      },
+      {
+        "key": "D",
+        "text": "酒精和碘液"
+      }
+    ],
+    "answer": "A",
+    "explanation": "二氧化碳和水在光下、在叶绿体中转变成有机物和氧气。",
+    "verify": "\"二氧化碳和水\""
+  },
+  {
+    "id": "cnb_j027_q2",
+    "topicId": "cnb_j027",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "绿叶在光下制造有机物的实验中，滴加碘液后变蓝的部位说明产生了？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "脂肪"
+      },
+      {
+        "key": "B",
+        "text": "淀粉"
+      },
+      {
+        "key": "C",
+        "text": "蛋白质"
+      },
+      {
+        "key": "D",
+        "text": "二氧化碳"
+      }
+    ],
+    "answer": "B",
+    "explanation": "淀粉遇碘变蓝。遮光部分不变蓝，说明光是光合作用的必要条件。",
+    "verify": "\"淀粉\""
+  },
+  {
+    "id": "cnb_j027_q3",
+    "topicId": "cnb_j027",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "实验前把天竺葵放到黑暗处一昼夜，目的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "让叶片提前变蓝"
+      },
+      {
+        "key": "B",
+        "text": "杀死叶片细胞"
+      },
+      {
+        "key": "C",
+        "text": "运走或耗尽叶片中原有的淀粉"
+      },
+      {
+        "key": "D",
+        "text": "增加叶片中的二氧化碳储存"
+      }
+    ],
+    "answer": "C",
+    "explanation": "这样后来检测到的淀粉，才是实验过程中新制造的。",
+    "verify": "\"运走或耗尽叶片中原有的淀粉\""
+  },
+  {
+    "id": "cnb_j027_q4",
+    "topicId": "cnb_j027",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "光合作用的表达式可以概括为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "有机物和氧气生成二氧化碳和水，不需要光"
+      },
+      {
+        "key": "B",
+        "text": "水直接变成淀粉，不需要二氧化碳"
+      },
+      {
+        "key": "C",
+        "text": "氧气和水生成二氧化碳"
+      },
+      {
+        "key": "D",
+        "text": "二氧化碳和水在光与叶绿体的作用下生成有机物和氧气"
+      }
+    ],
+    "answer": "D",
+    "explanation": "叶绿体利用光能，把二氧化碳和水合成储存能量的有机物，并释放氧气。",
+    "verify": "\"二氧化碳和水在光与叶绿体的作用下生成有机物和氧气\""
+  },
+  {
+    "id": "cnb_j028_q1",
+    "topicId": "cnb_j028",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "植物呼吸作用的主要场所是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "叶绿体"
+      },
+      {
+        "key": "B",
+        "text": "线粒体"
+      },
+      {
+        "key": "C",
+        "text": "液泡"
+      },
+      {
+        "key": "D",
+        "text": "导管"
+      }
+    ],
+    "answer": "B",
+    "explanation": "活细胞的线粒体分解有机物，释放能量。",
+    "verify": "\"线粒体\""
+  },
+  {
+    "id": "cnb_j028_q2",
+    "topicId": "cnb_j028",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "呼吸作用产生的气体是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只有氧气"
+      },
+      {
+        "key": "B",
+        "text": "只有氮气"
+      },
+      {
+        "key": "C",
+        "text": "二氧化碳"
+      },
+      {
+        "key": "D",
+        "text": "一氧化碳作为主要产物"
+      }
+    ],
+    "answer": "C",
+    "explanation": "有机物被分解成二氧化碳和水，同时释放能量。",
+    "verify": "\"二氧化碳\""
+  },
+  {
+    "id": "cnb_j028_q3",
+    "topicId": "cnb_j028",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "储藏粮食时保持干燥、低温，是为了？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "促进光合作用"
+      },
+      {
+        "key": "B",
+        "text": "让种子立刻萌发"
+      },
+      {
+        "key": "C",
+        "text": "增加氧气使呼吸更旺盛"
+      },
+      {
+        "key": "D",
+        "text": "减弱种子的呼吸作用"
+      }
+    ],
+    "answer": "D",
+    "explanation": "干燥、低温使呼吸放慢，减少有机物消耗，也抑制霉菌。",
+    "verify": "\"减弱种子的呼吸作用\""
+  },
+  {
+    "id": "cnb_j028_q4",
+    "topicId": "cnb_j028",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "绿色植物在白天？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "同时进行光合作用和呼吸作用"
+      },
+      {
+        "key": "B",
+        "text": "只进行光合作用"
+      },
+      {
+        "key": "C",
+        "text": "只进行呼吸作用"
+      },
+      {
+        "key": "D",
+        "text": "两种作用都停止"
+      }
+    ],
+    "answer": "A",
+    "explanation": "只要细胞是活的就进行呼吸；有光时叶肉细胞还进行光合作用。",
+    "verify": "\"同时进行光合作用和呼吸作用\""
+  },
+  {
+    "id": "cnb_j029_q1",
+    "topicId": "cnb_j029",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "绿色植物维持生物圈碳氧平衡，主要依靠？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只进行呼吸作用"
+      },
+      {
+        "key": "B",
+        "text": "蒸腾作用产生氧气"
+      },
+      {
+        "key": "C",
+        "text": "光合作用释放氧气、吸收二氧化碳"
+      },
+      {
+        "key": "D",
+        "text": "根吸收氧气"
+      }
+    ],
+    "answer": "C",
+    "explanation": "光合作用吸收的二氧化碳和释放的氧气，抵消了生物呼吸等消耗。",
+    "verify": "\"光合作用释放氧气、吸收二氧化碳\""
+  },
+  {
+    "id": "cnb_j029_q2",
+    "topicId": "cnb_j029",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "植物参与生物圈水循环，主要依靠？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "受精作用"
+      },
+      {
+        "key": "B",
+        "text": "分裂生殖"
+      },
+      {
+        "key": "C",
+        "text": "反射"
+      },
+      {
+        "key": "D",
+        "text": "蒸腾作用"
+      }
+    ],
+    "answer": "D",
+    "explanation": "蒸腾把植物吸收的水分散到大气中，再以降水等形式回到地面。",
+    "verify": "\"蒸腾作用\""
+  },
+  {
+    "id": "cnb_j029_q3",
+    "topicId": "cnb_j029",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "动物和人生命活动所需的有机物，归根到底主要来自？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "绿色植物的光合作用"
+      },
+      {
+        "key": "B",
+        "text": "土壤中的无机盐直接变成淀粉"
+      },
+      {
+        "key": "C",
+        "text": "动物自己的光合作用"
+      },
+      {
+        "key": "D",
+        "text": "空气中的氮气"
+      }
+    ],
+    "answer": "A",
+    "explanation": "植物制造的有机物沿食物关系传递，动物不能自己把无机物合成有机物。",
+    "verify": "\"绿色植物的光合作用\""
+  },
+  {
+    "id": "cnb_j029_q4",
+    "topicId": "cnb_j029",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "如果一个地区的森林被大面积砍伐，较可能出现的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "氧气立刻无限增加"
+      },
+      {
+        "key": "B",
+        "text": "空气中二氧化碳增多，水土流失加重"
+      },
+      {
+        "key": "C",
+        "text": "降水量一定增加且不再变化"
+      },
+      {
+        "key": "D",
+        "text": "植物的蒸腾作用增强"
+      }
+    ],
+    "answer": "B",
+    "explanation": "森林减少后，吸收二氧化碳和蒸腾散水都减弱，保持水土的能力也下降。",
+    "verify": "\"空气中二氧化碳增多，水土流失加重\""
+  },
+  {
+    "id": "cnb_j030_q1",
+    "topicId": "cnb_j030",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "男性产生精子并分泌雄性激素的器官是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "卵巢"
+      },
+      {
+        "key": "B",
+        "text": "子宫"
+      },
+      {
+        "key": "C",
+        "text": "输卵管"
+      },
+      {
+        "key": "D",
+        "text": "睾丸"
+      }
+    ],
+    "answer": "D",
+    "explanation": "睾丸是男性的主要生殖器官。",
+    "verify": "\"睾丸\""
+  },
+  {
+    "id": "cnb_j030_q2",
+    "topicId": "cnb_j030",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "女性产生卵细胞并分泌雌性激素的器官是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "卵巢"
+      },
+      {
+        "key": "B",
+        "text": "子宫"
+      },
+      {
+        "key": "C",
+        "text": "输卵管"
+      },
+      {
+        "key": "D",
+        "text": "胎盘"
+      }
+    ],
+    "answer": "A",
+    "explanation": "卵巢是女性的主要生殖器官；子宫是胚胎发育的场所。",
+    "verify": "\"卵巢\""
+  },
+  {
+    "id": "cnb_j030_q3",
+    "topicId": "cnb_j030",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "精子和卵细胞结合形成受精卵的场所通常是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "卵巢"
+      },
+      {
+        "key": "B",
+        "text": "输卵管"
+      },
+      {
+        "key": "C",
+        "text": "子宫"
+      },
+      {
+        "key": "D",
+        "text": "阴道"
+      }
+    ],
+    "answer": "B",
+    "explanation": "受精发生在输卵管，受精卵随后进入子宫着床。",
+    "verify": "\"输卵管\""
+  },
+  {
+    "id": "cnb_j030_q4",
+    "topicId": "cnb_j030",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "胎儿通过什么从母体获得营养和氧气？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "肺直接呼吸外界空气"
+      },
+      {
+        "key": "B",
+        "text": "乳腺"
+      },
+      {
+        "key": "C",
+        "text": "胎盘和脐带"
+      },
+      {
+        "key": "D",
+        "text": "卵黄"
+      }
+    ],
+    "answer": "C",
+    "explanation": "胎儿的肺尚未承担呼吸，物质交换通过胎盘和脐带完成。",
+    "verify": "\"胎盘和脐带\""
+  },
+  {
+    "id": "cnb_j031_q1",
+    "topicId": "cnb_j031",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "青春期发育最明显的特点是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "身高和体重迅速增长，生殖器官发育成熟"
+      },
+      {
+        "key": "B",
+        "text": "只长头发、其他器官不再变化"
+      },
+      {
+        "key": "C",
+        "text": "身体停止生长"
+      },
+      {
+        "key": "D",
+        "text": "全部第二性征消失"
+      }
+    ],
+    "answer": "A",
+    "explanation": "青春期是身体发育和智力发展的重要时期。",
+    "verify": "\"身高和体重迅速增长，生殖器官发育成熟\""
+  },
+  {
+    "id": "cnb_j031_q2",
+    "topicId": "cnb_j031",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "男孩出现遗精、女孩出现月经，说明？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一定生病了"
+      },
+      {
+        "key": "B",
+        "text": "生殖器官开始发育成熟，是正常生理现象"
+      },
+      {
+        "key": "C",
+        "text": "生殖器官停止发育"
+      },
+      {
+        "key": "D",
+        "text": "不必讲究卫生"
+      }
+    ],
+    "answer": "B",
+    "explanation": "遗精和月经是青春期的正常现象，同时要注意清洁卫生。",
+    "verify": "\"生殖器官开始发育成熟，是正常生理现象\""
+  },
+  {
+    "id": "cnb_j031_q3",
+    "topicId": "cnb_j031",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "青春期第二性征出现，与哪一类物质直接有关？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "唾液淀粉酶"
+      },
+      {
+        "key": "B",
+        "text": "血红蛋白"
+      },
+      {
+        "key": "C",
+        "text": "性激素"
+      },
+      {
+        "key": "D",
+        "text": "生长激素是唯一原因、与性激素无关"
+      }
+    ],
+    "answer": "C",
+    "explanation": "睾丸分泌雄性激素，卵巢分泌雌性激素，促使第二性征出现。",
+    "verify": "\"性激素\""
+  },
+  {
+    "id": "cnb_j031_q4",
+    "topicId": "cnb_j031",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "对待青春期的身体变化，合适的做法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "因为害羞而拒绝所有卫生护理"
+      },
+      {
+        "key": "B",
+        "text": "自行长期服用激素加快发育"
+      },
+      {
+        "key": "C",
+        "text": "嘲笑同伴的发育差异"
+      },
+      {
+        "key": "D",
+        "text": "了解科学知识，有困惑时向家长或老师求助"
+      }
+    ],
+    "answer": "D",
+    "explanation": "青春期的变化是正常的，需要科学认识和健康的生活习惯。",
+    "verify": "\"了解科学知识，有困惑时向家长或老师求助\""
+  },
+  {
+    "id": "cnb_j032_q1",
+    "topicId": "cnb_j032",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "为人体生命活动提供能量的主要物质是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "维生素"
+      },
+      {
+        "key": "B",
+        "text": "糖类"
+      },
+      {
+        "key": "C",
+        "text": "水"
+      },
+      {
+        "key": "D",
+        "text": "无机盐"
+      }
+    ],
+    "answer": "B",
+    "explanation": "糖类是主要的供能物质；脂肪是备用能源，蛋白质主要用来建造和修复身体。",
+    "verify": "\"糖类\""
+  },
+  {
+    "id": "cnb_j032_q2",
+    "topicId": "cnb_j032",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "儿童缺乏维生素 D 容易患？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "坏血病"
+      },
+      {
+        "key": "B",
+        "text": "夜盲症"
+      },
+      {
+        "key": "C",
+        "text": "佝偻病"
+      },
+      {
+        "key": "D",
+        "text": "脚气病"
+      }
+    ],
+    "answer": "C",
+    "explanation": "维生素 D 促进钙的吸收；缺乏维生素 A 患夜盲症，缺乏维生素 C 患坏血病，缺乏维生素 B1 患脚气病。",
+    "verify": "\"佝偻病\""
+  },
+  {
+    "id": "cnb_j032_q3",
+    "topicId": "cnb_j032",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "铁是构成什么的原料？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "甲状腺激素"
+      },
+      {
+        "key": "B",
+        "text": "维生素 C"
+      },
+      {
+        "key": "C",
+        "text": "淀粉"
+      },
+      {
+        "key": "D",
+        "text": "血红蛋白"
+      }
+    ],
+    "answer": "D",
+    "explanation": "血红蛋白含铁，运输氧；缺铁容易贫血。",
+    "verify": "\"血红蛋白\""
+  },
+  {
+    "id": "cnb_j032_q4",
+    "topicId": "cnb_j032",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "长期不吃蔬菜水果，又很少接触其他维生素 C 来源，可能引起？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "坏血病"
+      },
+      {
+        "key": "B",
+        "text": "地方性甲状腺肿"
+      },
+      {
+        "key": "C",
+        "text": "夜盲症"
+      },
+      {
+        "key": "D",
+        "text": "只与缺碘有关的呆小症"
+      }
+    ],
+    "answer": "A",
+    "explanation": "维生素 C 维持正常代谢，严重缺乏会患坏血病；呆小症与幼年甲状腺激素不足有关。",
+    "verify": "\"坏血病\""
+  },
+  {
+    "id": "cnb_j033_q1",
+    "topicId": "cnb_j033",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "淀粉开始被消化的部位是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "胃"
+      },
+      {
+        "key": "B",
+        "text": "大肠"
+      },
+      {
+        "key": "C",
+        "text": "口腔"
+      },
+      {
+        "key": "D",
+        "text": "肝脏"
+      }
+    ],
+    "answer": "C",
+    "explanation": "唾液淀粉酶在口腔把部分淀粉分解成麦芽糖。",
+    "verify": "\"口腔\""
+  },
+  {
+    "id": "cnb_j033_q2",
+    "topicId": "cnb_j033",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "营养物质消化和吸收的主要场所是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "口腔"
+      },
+      {
+        "key": "B",
+        "text": "食道"
+      },
+      {
+        "key": "C",
+        "text": "大肠"
+      },
+      {
+        "key": "D",
+        "text": "小肠"
+      }
+    ],
+    "answer": "D",
+    "explanation": "小肠很长，内表面有皱襞和小肠绒毛，并有多种消化液。",
+    "verify": "\"小肠\""
+  },
+  {
+    "id": "cnb_j033_q3",
+    "topicId": "cnb_j033",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "胆汁的作用是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把脂肪乳化成小滴，胆汁中不含消化酶"
+      },
+      {
+        "key": "B",
+        "text": "直接把淀粉分解成葡萄糖"
+      },
+      {
+        "key": "C",
+        "text": "把蛋白质分解成氨基酸"
+      },
+      {
+        "key": "D",
+        "text": "代替胃液消化所有食物"
+      }
+    ],
+    "answer": "A",
+    "explanation": "胆汁由肝脏分泌，乳化脂肪，便于脂肪酶发挥作用。",
+    "verify": "\"把脂肪乳化成小滴，胆汁中不含消化酶\""
+  },
+  {
+    "id": "cnb_j033_q4",
+    "topicId": "cnb_j033",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "蛋白质开始被消化的部位是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "口腔"
+      },
+      {
+        "key": "B",
+        "text": "胃"
+      },
+      {
+        "key": "C",
+        "text": "大肠"
+      },
+      {
+        "key": "D",
+        "text": "食道"
+      }
+    ],
+    "answer": "B",
+    "explanation": "胃液中的蛋白酶把蛋白质初步分解；蛋白质在小肠才被彻底分解。",
+    "verify": "\"胃\""
+  },
+  {
+    "id": "cnb_j034_q1",
+    "topicId": "cnb_j034",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "合理营养是指？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只吃肉类和精制糖"
+      },
+      {
+        "key": "B",
+        "text": "每餐只吃一种食物"
+      },
+      {
+        "key": "C",
+        "text": "用保健品代替全部正餐"
+      },
+      {
+        "key": "D",
+        "text": "食物多样，营养比例合适，并能满足身体需要"
+      }
+    ],
+    "answer": "D",
+    "explanation": "平衡膳食要求谷薯、蔬菜水果、鱼禽肉蛋和奶豆等搭配。",
+    "verify": "\"食物多样，营养比例合适，并能满足身体需要\""
+  },
+  {
+    "id": "cnb_j034_q2",
+    "topicId": "cnb_j034",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "购买带包装的食品，首先要查看？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "生产日期、保质期和配料"
+      },
+      {
+        "key": "B",
+        "text": "只看广告语"
+      },
+      {
+        "key": "C",
+        "text": "包装是否颜色鲜艳"
+      },
+      {
+        "key": "D",
+        "text": "是否写着「绝对无害」却没有日期"
+      }
+    ],
+    "answer": "A",
+    "explanation": "过期或成分不清的食品不应购买。",
+    "verify": "\"生产日期、保质期和配料\""
+  },
+  {
+    "id": "cnb_j034_q3",
+    "topicId": "cnb_j034",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "早餐只吃少量饼干就上学，上午容易能量不足。较合理的调整是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "用糖果完全代替正餐"
+      },
+      {
+        "key": "B",
+        "text": "增加谷类、蛋奶和蔬菜水果"
+      },
+      {
+        "key": "C",
+        "text": "不吃午餐把食物留到晚餐"
+      },
+      {
+        "key": "D",
+        "text": "只喝碳酸饮料"
+      }
+    ],
+    "answer": "B",
+    "explanation": "谷类提供糖类，蛋奶提供蛋白质，蔬菜水果提供维生素。",
+    "verify": "\"增加谷类、蛋奶和蔬菜水果\""
+  },
+  {
+    "id": "cnb_j034_q4",
+    "topicId": "cnb_j034",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "绿色食品标志表示该食品？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一定是未加工的野果"
+      },
+      {
+        "key": "B",
+        "text": "可以不看保质期"
+      },
+      {
+        "key": "C",
+        "text": "产自良好生态环境、符合安全标准"
+      },
+      {
+        "key": "D",
+        "text": "没有经过任何检验"
+      }
+    ],
+    "answer": "C",
+    "explanation": "绿色食品有特定标志和标准，购买时仍要看日期和保存条件。",
+    "verify": "\"产自良好生态环境、符合安全标准\""
+  },
+  {
+    "id": "cnb_j035_q1",
+    "topicId": "cnb_j035",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "呼吸道由上到下依次包括？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "鼻、咽、喉、气管、支气管"
+      },
+      {
+        "key": "B",
+        "text": "口、食道、胃、肠"
+      },
+      {
+        "key": "C",
+        "text": "肺、心脏、血管"
+      },
+      {
+        "key": "D",
+        "text": "鼻、食道、气管、胃"
+      }
+    ],
+    "answer": "A",
+    "explanation": "呼吸道是气体进出肺的通道，肺是气体交换的场所。",
+    "verify": "\"鼻、咽、喉、气管、支气管\""
+  },
+  {
+    "id": "cnb_j035_q2",
+    "topicId": "cnb_j035",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "用鼻呼吸比用口呼吸好，主要因为鼻腔能？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "直接完成全部气体交换"
+      },
+      {
+        "key": "B",
+        "text": "使空气变得温暖、湿润、清洁"
+      },
+      {
+        "key": "C",
+        "text": "制造氧气"
+      },
+      {
+        "key": "D",
+        "text": "代替肺"
+      }
+    ],
+    "answer": "B",
+    "explanation": "鼻毛、黏液和黏膜中的毛细血管处理进入的空气。",
+    "verify": "\"使空气变得温暖、湿润、清洁\""
+  },
+  {
+    "id": "cnb_j035_q3",
+    "topicId": "cnb_j035",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "痰形成的主要部位是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "肺泡"
+      },
+      {
+        "key": "B",
+        "text": "胃"
+      },
+      {
+        "key": "C",
+        "text": "气管和支气管"
+      },
+      {
+        "key": "D",
+        "text": "口腔"
+      }
+    ],
+    "answer": "C",
+    "explanation": "气管和支气管黏膜上的纤毛把黏液及灰尘推向喉部，形成痰。",
+    "verify": "\"气管和支气管\""
+  },
+  {
+    "id": "cnb_j035_q4",
+    "topicId": "cnb_j035",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "吞咽时能盖住喉口、避免食物进入气管的结构是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "声带"
+      },
+      {
+        "key": "B",
+        "text": "膈肌"
+      },
+      {
+        "key": "C",
+        "text": "鼻毛"
+      },
+      {
+        "key": "D",
+        "text": "会厌软骨"
+      }
+    ],
+    "answer": "D",
+    "explanation": "吞咽时喉上升，会厌软骨盖住喉口；吃饭时说笑容易使食物误入气管。",
+    "verify": "\"会厌软骨\""
+  },
+  {
+    "id": "cnb_j036_q1",
+    "topicId": "cnb_j036",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "人体与外界进行气体交换的主要场所是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "鼻腔"
+      },
+      {
+        "key": "B",
+        "text": "肺"
+      },
+      {
+        "key": "C",
+        "text": "气管"
+      },
+      {
+        "key": "D",
+        "text": "皮肤"
+      }
+    ],
+    "answer": "B",
+    "explanation": "肺泡数量多、壁薄，外面缠着毛细血管，便于气体交换。",
+    "verify": "\"肺\""
+  },
+  {
+    "id": "cnb_j036_q2",
+    "topicId": "cnb_j036",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "吸气时？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "肋间肌和膈肌舒张，胸廓缩小"
+      },
+      {
+        "key": "B",
+        "text": "肺主动收缩把空气压出去"
+      },
+      {
+        "key": "C",
+        "text": "肋间肌和膈肌收缩，胸廓扩大"
+      },
+      {
+        "key": "D",
+        "text": "气管壁的肌肉把空气压进胃"
+      }
+    ],
+    "answer": "C",
+    "explanation": "胸廓扩大使肺扩张，肺内气压低于外界，空气进入肺。",
+    "verify": "\"肋间肌和膈肌收缩，胸廓扩大\""
+  },
+  {
+    "id": "cnb_j036_q3",
+    "topicId": "cnb_j036",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "肺泡与血液之间的气体交换是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "两种气体都不移动"
+      },
+      {
+        "key": "B",
+        "text": "氧气和二氧化碳同时进入肺泡、血液中没有变化"
+      },
+      {
+        "key": "C",
+        "text": "只有氮气进行交换"
+      },
+      {
+        "key": "D",
+        "text": "氧气进入血液，二氧化碳进入肺泡"
+      }
+    ],
+    "answer": "D",
+    "explanation": "交换后血液由静脉血变成动脉血。",
+    "verify": "\"氧气进入血液，二氧化碳进入肺泡\""
+  },
+  {
+    "id": "cnb_j036_q4",
+    "topicId": "cnb_j036",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "肺泡适于气体交换的特点包括？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "数目多、壁只由一层上皮细胞构成、外面包绕毛细血管"
+      },
+      {
+        "key": "B",
+        "text": "壁很厚，外面没有血管"
+      },
+      {
+        "key": "C",
+        "text": "肺泡里充满食物"
+      },
+      {
+        "key": "D",
+        "text": "肺泡直接开口在皮肤表面"
+      }
+    ],
+    "answer": "A",
+    "explanation": "这些特点使气体经过的距离短、交换面积大。",
+    "verify": "\"数目多、壁只由一层上皮细胞构成、外面包绕毛细血管\""
+  },
+  {
+    "id": "cnb_j037_q1",
+    "topicId": "cnb_j037",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "血液由哪两部分组成？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只有红细胞"
+      },
+      {
+        "key": "B",
+        "text": "血清和氧气"
+      },
+      {
+        "key": "C",
+        "text": "血浆和血细胞"
+      },
+      {
+        "key": "D",
+        "text": "淋巴和胆汁"
+      }
+    ],
+    "answer": "C",
+    "explanation": "血细胞包括红细胞、白细胞和血小板。",
+    "verify": "\"血浆和血细胞\""
+  },
+  {
+    "id": "cnb_j037_q2",
+    "topicId": "cnb_j037",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "运输氧的血细胞是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "白细胞"
+      },
+      {
+        "key": "B",
+        "text": "血小板"
+      },
+      {
+        "key": "C",
+        "text": "血浆中的纤维蛋白"
+      },
+      {
+        "key": "D",
+        "text": "红细胞"
+      }
+    ],
+    "answer": "D",
+    "explanation": "红细胞里的血红蛋白在氧含量高的地方与氧结合，在氧含量低的地方释放氧。",
+    "verify": "\"红细胞\""
+  },
+  {
+    "id": "cnb_j037_q3",
+    "topicId": "cnb_j037",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "人体受伤后能够止血，与哪种血细胞有关？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "血小板"
+      },
+      {
+        "key": "B",
+        "text": "只有白细胞"
+      },
+      {
+        "key": "C",
+        "text": "成熟红细胞有细胞核所以能止血"
+      },
+      {
+        "key": "D",
+        "text": "叶绿体"
+      }
+    ],
+    "answer": "A",
+    "explanation": "血小板在伤口处聚集成团并促进凝血。",
+    "verify": "\"血小板\""
+  },
+  {
+    "id": "cnb_j037_q4",
+    "topicId": "cnb_j037",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "医生说某人贫血，通常是指？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "白细胞过多"
+      },
+      {
+        "key": "B",
+        "text": "红细胞数量过少或血红蛋白含量过低"
+      },
+      {
+        "key": "C",
+        "text": "血小板过多"
+      },
+      {
+        "key": "D",
+        "text": "血浆中水太多"
+      }
+    ],
+    "answer": "B",
+    "explanation": "血红蛋白或红细胞不足，血液运输氧的能力下降。",
+    "verify": "\"红细胞数量过少或血红蛋白含量过低\""
+  },
+  {
+    "id": "cnb_j038_q1",
+    "topicId": "cnb_j038",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "把血液从心脏送到全身各处的血管是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "静脉"
+      },
+      {
+        "key": "B",
+        "text": "毛细血管"
+      },
+      {
+        "key": "C",
+        "text": "淋巴管"
+      },
+      {
+        "key": "D",
+        "text": "动脉"
+      }
+    ],
+    "answer": "D",
+    "explanation": "动脉管壁厚、弹性大，血流速度快。",
+    "verify": "\"动脉\""
+  },
+  {
+    "id": "cnb_j038_q2",
+    "topicId": "cnb_j038",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "静脉中防止血液倒流的结构是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "静脉瓣"
+      },
+      {
+        "key": "B",
+        "text": "动脉瓣位于静脉中"
+      },
+      {
+        "key": "C",
+        "text": "声带"
+      },
+      {
+        "key": "D",
+        "text": "会厌软骨"
+      }
+    ],
+    "answer": "A",
+    "explanation": "四肢静脉的内表面有静脉瓣，使血液只能流回心脏。",
+    "verify": "\"静脉瓣\""
+  },
+  {
+    "id": "cnb_j038_q3",
+    "topicId": "cnb_j038",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "毛细血管适于物质交换，是因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "管壁最厚"
+      },
+      {
+        "key": "B",
+        "text": "管壁只由一层上皮细胞构成，血流速度慢，只允许红细胞单行通过"
+      },
+      {
+        "key": "C",
+        "text": "血流速度最快"
+      },
+      {
+        "key": "D",
+        "text": "里面没有血液"
+      }
+    ],
+    "answer": "B",
+    "explanation": "营养物质和氧透过这层细胞进入组织细胞，废物和二氧化碳进入血液。",
+    "verify": "\"管壁只由一层上皮细胞构成，血流速度慢，只允许红细胞单行通过\""
+  },
+  {
+    "id": "cnb_j038_q4",
+    "topicId": "cnb_j038",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "肺动脉里流的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "动脉血"
+      },
+      {
+        "key": "B",
+        "text": "只含氧气、不含二氧化碳的水"
+      },
+      {
+        "key": "C",
+        "text": "静脉血"
+      },
+      {
+        "key": "D",
+        "text": "淋巴"
+      }
+    ],
+    "answer": "C",
+    "explanation": "肺动脉把右心室的静脉血送到肺；名称里的「动脉」指的是从心脏发出，不是血液含氧多少。",
+    "verify": "\"静脉血\""
+  },
+  {
+    "id": "cnb_j039_q1",
+    "topicId": "cnb_j039",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "心脏四个腔中，壁最厚的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "左心室"
+      },
+      {
+        "key": "B",
+        "text": "右心室"
+      },
+      {
+        "key": "C",
+        "text": "左心房"
+      },
+      {
+        "key": "D",
+        "text": "右心房"
+      }
+    ],
+    "answer": "A",
+    "explanation": "左心室要把血液压到全身，所以肌肉壁最厚。",
+    "verify": "\"左心室\""
+  },
+  {
+    "id": "cnb_j039_q2",
+    "topicId": "cnb_j039",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "心房和心室之间的瓣膜保证血液？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "由心室流回心房"
+      },
+      {
+        "key": "B",
+        "text": "由心房流向心室，不会倒流"
+      },
+      {
+        "key": "C",
+        "text": "在四个腔里来回流动"
+      },
+      {
+        "key": "D",
+        "text": "直接从左心室进入右心室"
+      }
+    ],
+    "answer": "B",
+    "explanation": "心室与动脉之间也有瓣膜，防止血液从动脉流回心室。",
+    "verify": "\"由心房流向心室，不会倒流\""
+  },
+  {
+    "id": "cnb_j039_q3",
+    "topicId": "cnb_j039",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "体循环的路径是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "右心室、肺动脉、肺、肺静脉、左心房"
+      },
+      {
+        "key": "B",
+        "text": "左心房直接到右心房"
+      },
+      {
+        "key": "C",
+        "text": "左心室、主动脉、全身毛细血管、上下腔静脉、右心房"
+      },
+      {
+        "key": "D",
+        "text": "右心房、主动脉、肺、左心室"
+      }
+    ],
+    "answer": "C",
+    "explanation": "体循环把氧和营养送到全身，血液由动脉血变成静脉血。",
+    "verify": "\"左心室、主动脉、全身毛细血管、上下腔静脉、右心房\""
+  },
+  {
+    "id": "cnb_j039_q4",
+    "topicId": "cnb_j039",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "经过肺循环后，血液发生的变化是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "动脉血变成静脉血"
+      },
+      {
+        "key": "B",
+        "text": "血液不再含有二氧化碳"
+      },
+      {
+        "key": "C",
+        "text": "血细胞全部留在肺泡"
+      },
+      {
+        "key": "D",
+        "text": "静脉血变成动脉血"
+      }
+    ],
+    "answer": "D",
+    "explanation": "肺循环中血液在肺部获得氧、排出二氧化碳。",
+    "verify": "\"静脉血变成动脉血\""
+  },
+  {
+    "id": "cnb_j040_q1",
+    "topicId": "cnb_j040",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "排泄是指排出？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "没有消化的食物残渣"
+      },
+      {
+        "key": "B",
+        "text": "二氧化碳、尿素和多余的水、无机盐等代谢废物"
+      },
+      {
+        "key": "C",
+        "text": "全部血液"
+      },
+      {
+        "key": "D",
+        "text": "只排出粪便"
+      }
+    ],
+    "answer": "B",
+    "explanation": "粪便是排遗，不是排泄；排泄经过呼吸、泌尿和皮肤等途径。",
+    "verify": "\"二氧化碳、尿素和多余的水、无机盐等代谢废物\""
+  },
+  {
+    "id": "cnb_j040_q2",
+    "topicId": "cnb_j040",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "泌尿系统包括？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "心脏、血管和血液"
+      },
+      {
+        "key": "B",
+        "text": "肺、气管和支气管"
+      },
+      {
+        "key": "C",
+        "text": "肾、输尿管、膀胱和尿道"
+      },
+      {
+        "key": "D",
+        "text": "胃、肠和肝"
+      }
+    ],
+    "answer": "C",
+    "explanation": "肾形成尿液，输尿管输送，膀胱暂时储存，尿道排出。",
+    "verify": "\"肾、输尿管、膀胱和尿道\""
+  },
+  {
+    "id": "cnb_j040_q3",
+    "topicId": "cnb_j040",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "尿液形成时，肾小球和肾小囊内壁的滤过作用发生在？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "膀胱"
+      },
+      {
+        "key": "B",
+        "text": "尿道"
+      },
+      {
+        "key": "C",
+        "text": "皮肤"
+      },
+      {
+        "key": "D",
+        "text": "肾单位"
+      }
+    ],
+    "answer": "D",
+    "explanation": "肾单位包括肾小球、肾小囊和肾小管，是形成尿液的结构单位。",
+    "verify": "\"肾单位\""
+  },
+  {
+    "id": "cnb_j040_q4",
+    "topicId": "cnb_j040",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "健康人原尿中的葡萄糖，经过肾小管后通常？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "被全部重吸收"
+      },
+      {
+        "key": "B",
+        "text": "全部留在尿液里"
+      },
+      {
+        "key": "C",
+        "text": "变成血细胞"
+      },
+      {
+        "key": "D",
+        "text": "直接排出体外约 180 升"
+      }
+    ],
+    "answer": "A",
+    "explanation": "肾小管重吸收全部葡萄糖、大部分水和部分无机盐；每天形成的尿液大约只有 1.5 升。",
+    "verify": "\"被全部重吸收\""
+  },
+  {
+    "id": "cnb_j041_q1",
+    "topicId": "cnb_j041",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "外界物体反射来的光线，在眼球里成像的部位是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "晶状体"
+      },
+      {
+        "key": "B",
+        "text": "角膜"
+      },
+      {
+        "key": "C",
+        "text": "视网膜"
+      },
+      {
+        "key": "D",
+        "text": "玻璃体"
+      }
+    ],
+    "answer": "C",
+    "explanation": "晶状体相当于镜头，视网膜相当于底片，成像在视网膜上。",
+    "verify": "\"视网膜\""
+  },
+  {
+    "id": "cnb_j041_q2",
+    "topicId": "cnb_j041",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "听觉感受器位于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "鼓膜"
+      },
+      {
+        "key": "B",
+        "text": "耳郭"
+      },
+      {
+        "key": "C",
+        "text": "听小骨"
+      },
+      {
+        "key": "D",
+        "text": "耳蜗"
+      }
+    ],
+    "answer": "D",
+    "explanation": "声波经外耳道、鼓膜和听小骨传到内耳，刺激耳蜗内的感受器。",
+    "verify": "\"耳蜗\""
+  },
+  {
+    "id": "cnb_j041_q3",
+    "topicId": "cnb_j041",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "看近处物体时，晶状体的变化是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "曲度变大"
+      },
+      {
+        "key": "B",
+        "text": "曲度变小"
+      },
+      {
+        "key": "C",
+        "text": "完全停止调节"
+      },
+      {
+        "key": "D",
+        "text": "移到视网膜后面"
+      }
+    ],
+    "answer": "A",
+    "explanation": "睫状肌收缩，晶状体曲度变大，近处物体才能清楚成像。",
+    "verify": "\"曲度变大\""
+  },
+  {
+    "id": "cnb_j041_q4",
+    "topicId": "cnb_j041",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "近视若是眼球前后径过长或晶状体曲度过大，物像落在视网膜前方，应佩戴？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "凸透镜"
+      },
+      {
+        "key": "B",
+        "text": "凹透镜"
+      },
+      {
+        "key": "C",
+        "text": "平面镜"
+      },
+      {
+        "key": "D",
+        "text": "放大镜"
+      }
+    ],
+    "answer": "B",
+    "explanation": "凹透镜使光线发散后再进入眼球，使物像后移到视网膜上。",
+    "verify": "\"凹透镜\""
+  },
+  {
+    "id": "cnb_j042_q1",
+    "topicId": "cnb_j042",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "完成反射的神经结构是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只有大脑"
+      },
+      {
+        "key": "B",
+        "text": "只有一根神经"
+      },
+      {
+        "key": "C",
+        "text": "骨骼"
+      },
+      {
+        "key": "D",
+        "text": "反射弧"
+      }
+    ],
+    "answer": "D",
+    "explanation": "反射弧包括感受器、传入神经、神经中枢、传出神经和效应器。",
+    "verify": "\"反射弧\""
+  },
+  {
+    "id": "cnb_j042_q2",
+    "topicId": "cnb_j042",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "膝跳反射的神经中枢位于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "脊髓"
+      },
+      {
+        "key": "B",
+        "text": "大脑皮层"
+      },
+      {
+        "key": "C",
+        "text": "小脑"
+      },
+      {
+        "key": "D",
+        "text": "耳蜗"
+      }
+    ],
+    "answer": "A",
+    "explanation": "膝跳反射是简单反射，神经中枢在脊髓。",
+    "verify": "\"脊髓\""
+  },
+  {
+    "id": "cnb_j042_q3",
+    "topicId": "cnb_j042",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "望梅止渴属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "生来就有的简单反射"
+      },
+      {
+        "key": "B",
+        "text": "复杂反射，要经过后天学习"
+      },
+      {
+        "key": "C",
+        "text": "不需要大脑皮层参与"
+      },
+      {
+        "key": "D",
+        "text": "只靠激素、不靠神经"
+      }
+    ],
+    "answer": "B",
+    "explanation": "在吃过梅的经验之后，看到梅就能分泌唾液，这是后天形成的复杂反射。",
+    "verify": "\"复杂反射，要经过后天学习\""
+  },
+  {
+    "id": "cnb_j042_q4",
+    "topicId": "cnb_j042",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "如果反射弧中的传入神经受损，刺激感受器后？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "反射仍然完整"
+      },
+      {
+        "key": "B",
+        "text": "只有效应器自己收缩、与神经无关"
+      },
+      {
+        "key": "C",
+        "text": "不能产生反射"
+      },
+      {
+        "key": "D",
+        "text": "神经中枢会直接看到刺激"
+      }
+    ],
+    "answer": "C",
+    "explanation": "反射弧的五个部分缺一不可，冲动到不了神经中枢。",
+    "verify": "\"不能产生反射\""
+  },
+  {
+    "id": "cnb_j043_q1",
+    "topicId": "cnb_j043",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "运动系统主要由哪些结构组成？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "骨、关节和骨骼肌"
+      },
+      {
+        "key": "B",
+        "text": "只有肌肉"
+      },
+      {
+        "key": "C",
+        "text": "脑、脊髓和神经"
+      },
+      {
+        "key": "D",
+        "text": "心脏和血管"
+      }
+    ],
+    "answer": "A",
+    "explanation": "骨是杠杆，关节是支点，骨骼肌提供动力。",
+    "verify": "\"骨、关节和骨骼肌\""
+  },
+  {
+    "id": "cnb_j043_q2",
+    "topicId": "cnb_j043",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "骨骼肌接受刺激后的反应是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "既拉长又主动推开骨"
+      },
+      {
+        "key": "B",
+        "text": "收缩"
+      },
+      {
+        "key": "C",
+        "text": "变成神经"
+      },
+      {
+        "key": "D",
+        "text": "停止血液循环"
+      }
+    ],
+    "answer": "B",
+    "explanation": "一组骨骼肌只能收缩牵拉骨，不能主动伸长把骨推开。",
+    "verify": "\"收缩\""
+  },
+  {
+    "id": "cnb_j043_q3",
+    "topicId": "cnb_j043",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "屈肘时，肱二头肌和肱三头肌的状态是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "两块肌肉同时收缩"
+      },
+      {
+        "key": "B",
+        "text": "两块肌肉同时舒张"
+      },
+      {
+        "key": "C",
+        "text": "肱二头肌收缩，肱三头肌舒张"
+      },
+      {
+        "key": "D",
+        "text": "肱二头肌舒张，肱三头肌收缩"
+      }
+    ],
+    "answer": "C",
+    "explanation": "屈肘和伸肘由这组肌肉互相配合完成。",
+    "verify": "\"肱二头肌收缩，肱三头肌舒张\""
+  },
+  {
+    "id": "cnb_j043_q4",
+    "topicId": "cnb_j043",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "关节里减少摩擦的结构是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "骨髓"
+      },
+      {
+        "key": "B",
+        "text": "骨膜里的神经"
+      },
+      {
+        "key": "C",
+        "text": "肌腹"
+      },
+      {
+        "key": "D",
+        "text": "关节软骨和关节腔内的滑液"
+      }
+    ],
+    "answer": "D",
+    "explanation": "关节面覆盖软骨，关节囊分泌滑液，使运动更灵活。",
+    "verify": "\"关节软骨和关节腔内的滑液\""
+  },
+  {
+    "id": "cnb_j044_q1",
+    "topicId": "cnb_j044",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "幼年时期生长激素分泌不足，可能患？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "呆小症"
+      },
+      {
+        "key": "B",
+        "text": "侏儒症"
+      },
+      {
+        "key": "C",
+        "text": "糖尿病"
+      },
+      {
+        "key": "D",
+        "text": "甲亢"
+      }
+    ],
+    "answer": "B",
+    "explanation": "侏儒症智力一般正常；幼年甲状腺激素不足才会患呆小症，智力受影响。",
+    "verify": "\"侏儒症\""
+  },
+  {
+    "id": "cnb_j044_q2",
+    "topicId": "cnb_j044",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "胰岛素的主要作用是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "促进生长发育"
+      },
+      {
+        "key": "B",
+        "text": "提高神经系统兴奋性"
+      },
+      {
+        "key": "C",
+        "text": "降低血糖"
+      },
+      {
+        "key": "D",
+        "text": "促进生殖器官发育"
+      }
+    ],
+    "answer": "C",
+    "explanation": "胰岛素由胰岛分泌，能促进组织细胞摄取和利用葡萄糖。",
+    "verify": "\"降低血糖\""
+  },
+  {
+    "id": "cnb_j044_q3",
+    "topicId": "cnb_j044",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "体内缺碘，合成甲状腺激素的原料不足，可能引起？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "侏儒症"
+      },
+      {
+        "key": "B",
+        "text": "坏血病"
+      },
+      {
+        "key": "C",
+        "text": "夜盲症"
+      },
+      {
+        "key": "D",
+        "text": "地方性甲状腺肿"
+      }
+    ],
+    "answer": "D",
+    "explanation": "甲状腺激素的合成需要碘；缺碘时甲状腺会代偿性增生。",
+    "verify": "\"地方性甲状腺肿\""
+  },
+  {
+    "id": "cnb_j044_q4",
+    "topicId": "cnb_j044",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "神经调节和激素调节相比？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "神经调节迅速、准确，激素调节作用时间通常较长"
+      },
+      {
+        "key": "B",
+        "text": "激素调节不需要体液运输"
+      },
+      {
+        "key": "C",
+        "text": "两者不能配合"
+      },
+      {
+        "key": "D",
+        "text": "只有激素能对刺激作出反应"
+      }
+    ],
+    "answer": "A",
+    "explanation": "人体以神经调节为主，激素调节配合，共同维持稳定。",
+    "verify": "\"神经调节迅速、准确，激素调节作用时间通常较长\""
+  },
+  {
+    "id": "cnb_j045_q1",
+    "topicId": "cnb_j045",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "传染病流行必须同时具备？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只有易感人群"
+      },
+      {
+        "key": "B",
+        "text": "只有病原体、没有传染源"
+      },
+      {
+        "key": "C",
+        "text": "传染源、传播途径和易感人群"
+      },
+      {
+        "key": "D",
+        "text": "健康的生活环境就一定会流行"
+      }
+    ],
+    "answer": "C",
+    "explanation": "三个环节缺少任何一个，传染病就不能在人群中流行。",
+    "verify": "\"传染源、传播途径和易感人群\""
+  },
+  {
+    "id": "cnb_j045_q2",
+    "topicId": "cnb_j045",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "对患传染病的人进行隔离治疗，属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "切断传播途径"
+      },
+      {
+        "key": "B",
+        "text": "保护易感人群"
+      },
+      {
+        "key": "C",
+        "text": "增加易感者"
+      },
+      {
+        "key": "D",
+        "text": "控制传染源"
+      }
+    ],
+    "answer": "D",
+    "explanation": "传染源是能够散播病原体的人或动物；隔离是为了控制传染源。",
+    "verify": "\"控制传染源\""
+  },
+  {
+    "id": "cnb_j045_q3",
+    "topicId": "cnb_j045",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "开窗通风、食物器具消毒，主要是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "切断传播途径"
+      },
+      {
+        "key": "B",
+        "text": "控制全部易感人群的遗传物质"
+      },
+      {
+        "key": "C",
+        "text": "消灭所有人体细胞"
+      },
+      {
+        "key": "D",
+        "text": "代替接种疫苗"
+      }
+    ],
+    "answer": "A",
+    "explanation": "这些做法减少病原体从传染源到达健康人的机会。",
+    "verify": "\"切断传播途径\""
+  },
+  {
+    "id": "cnb_j045_q4",
+    "topicId": "cnb_j045",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "艾滋病病毒主要不会通过哪一方式传播？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "输入含病毒的血液"
+      },
+      {
+        "key": "B",
+        "text": "一起进餐和握手"
+      },
+      {
+        "key": "C",
+        "text": "不安全性行为"
+      },
+      {
+        "key": "D",
+        "text": "母婴传播"
+      }
+    ],
+    "answer": "B",
+    "explanation": "艾滋病通过血液、性接触和母婴传播；一般握手、共同进餐不会感染。",
+    "verify": "\"一起进餐和握手\""
+  },
+  {
+    "id": "cnb_j046_q1",
+    "topicId": "cnb_j046",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "皮肤和黏膜阻挡病原体，属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "第三道防线"
+      },
+      {
+        "key": "B",
+        "text": "特异性免疫"
+      },
+      {
+        "key": "C",
+        "text": "免疫规划"
+      },
+      {
+        "key": "D",
+        "text": "第一道防线"
+      }
+    ],
+    "answer": "D",
+    "explanation": "第一道防线是皮肤和黏膜；体液中的杀菌物质和吞噬细胞是第二道防线。",
+    "verify": "\"第一道防线\""
+  },
+  {
+    "id": "cnb_j046_q2",
+    "topicId": "cnb_j046",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "接种疫苗后产生抗体，这种免疫是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "特异性免疫"
+      },
+      {
+        "key": "B",
+        "text": "第一道防线"
+      },
+      {
+        "key": "C",
+        "text": "生来就有、对所有病原体完全相同的非特异性免疫"
+      },
+      {
+        "key": "D",
+        "text": "只由皮肤完成"
+      }
+    ],
+    "answer": "A",
+    "explanation": "疫苗相当于抗原，促使淋巴细胞产生相应抗体，只针对特定病原体。",
+    "verify": "\"特异性免疫\""
+  },
+  {
+    "id": "cnb_j046_q3",
+    "topicId": "cnb_j046",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "按规定有计划地接种疫苗，叫做？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "控制传染源的隔离"
+      },
+      {
+        "key": "B",
+        "text": "免疫规划"
+      },
+      {
+        "key": "C",
+        "text": "非处方药治疗"
+      },
+      {
+        "key": "D",
+        "text": "反射弧"
+      }
+    ],
+    "answer": "B",
+    "explanation": "免疫规划是保护易感人群的重要措施。",
+    "verify": "\"免疫规划\""
+  },
+  {
+    "id": "cnb_j046_q4",
+    "topicId": "cnb_j046",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "免疫的功能不包括？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "抵抗抗原的侵入"
+      },
+      {
+        "key": "B",
+        "text": "清除体内衰老、死亡的细胞"
+      },
+      {
+        "key": "C",
+        "text": "制造病原体让疾病流行"
+      },
+      {
+        "key": "D",
+        "text": "监视并清除异常细胞"
+      }
+    ],
+    "answer": "C",
+    "explanation": "免疫有防御、自稳和监视功能；免疫过强可能引起过敏或自身免疫病。",
+    "verify": "\"制造病原体让疾病流行\""
+  },
+  {
+    "id": "cnb_j047_q1",
+    "topicId": "cnb_j047",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "非处方药的英文简称是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "OTC"
+      },
+      {
+        "key": "B",
+        "text": "DNA"
+      },
+      {
+        "key": "C",
+        "text": "HIV"
+      },
+      {
+        "key": "D",
+        "text": "AQI"
+      }
+    ],
+    "answer": "A",
+    "explanation": "OTC 可以按说明书自行购买使用；处方药必须凭医师处方。",
+    "verify": "\"OTC\""
+  },
+  {
+    "id": "cnb_j047_q2",
+    "topicId": "cnb_j047",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "用药时正确的做法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把几种药一起加倍服用"
+      },
+      {
+        "key": "B",
+        "text": "按说明书或医嘱使用，不随意加大剂量"
+      },
+      {
+        "key": "C",
+        "text": "过期药只要没有变色就可以吃"
+      },
+      {
+        "key": "D",
+        "text": "用别人的处方药给自己治病"
+      }
+    ],
+    "answer": "B",
+    "explanation": "加大剂量或服用过期药都可能造成伤害。",
+    "verify": "\"按说明书或医嘱使用，不随意加大剂量\""
+  },
+  {
+    "id": "cnb_j047_q3",
+    "topicId": "cnb_j047",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "动脉出血时，止血带应压迫在？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "伤口的远心端"
+      },
+      {
+        "key": "B",
+        "text": "手指末端无论伤口在哪里"
+      },
+      {
+        "key": "C",
+        "text": "伤口的近心端"
+      },
+      {
+        "key": "D",
+        "text": "只压迫静脉的远心端"
+      }
+    ],
+    "answer": "C",
+    "explanation": "动脉血从心脏流向伤口，近心端压迫才能阻断来血；静脉出血则压远心端。",
+    "verify": "\"伤口的近心端\""
+  },
+  {
+    "id": "cnb_j047_q4",
+    "topicId": "cnb_j047",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "发现有人煤气中毒，首先应？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "在密闭房间里点火查看"
+      },
+      {
+        "key": "B",
+        "text": "让中毒者继续躺在泄漏点旁边"
+      },
+      {
+        "key": "C",
+        "text": "先喂食物再开门"
+      },
+      {
+        "key": "D",
+        "text": "打开门窗，把人移到通风处，再拨打急救电话"
+      }
+    ],
+    "answer": "D",
+    "explanation": "煤气的主要成分一氧化碳会与血红蛋白结合；先脱离现场并保持呼吸通畅。",
+    "verify": "\"打开门窗，把人移到通风处，再拨打急救电话\""
+  },
+  {
+    "id": "cnb_j048_q1",
+    "topicId": "cnb_j048",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "健康的生活方式包括？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "用吸烟提神"
+      },
+      {
+        "key": "B",
+        "text": "均衡营养、坚持锻炼、不吸烟、不酗酒、拒绝毒品"
+      },
+      {
+        "key": "C",
+        "text": "每天只睡很少时间"
+      },
+      {
+        "key": "D",
+        "text": "靠饮料代替饮水"
+      }
+    ],
+    "answer": "B",
+    "explanation": "这些习惯能降低心血管疾病和部分癌症的风险。",
+    "verify": "\"均衡营养、坚持锻炼、不吸烟、不酗酒、拒绝毒品\""
+  },
+  {
+    "id": "cnb_j048_q2",
+    "topicId": "cnb_j048",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "酗酒对人体危害最大的系统之一是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "可以保护肝脏"
+      },
+      {
+        "key": "B",
+        "text": "只影响头发颜色"
+      },
+      {
+        "key": "C",
+        "text": "神经系统"
+      },
+      {
+        "key": "D",
+        "text": "使免疫力无限提高"
+      }
+    ],
+    "answer": "C",
+    "explanation": "酒精麻痹神经系统，长期饮酒还会损害肝脏和心血管。",
+    "verify": "\"神经系统\""
+  },
+  {
+    "id": "cnb_j048_q3",
+    "topicId": "cnb_j048",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "毒品危害健康，根本原因是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "可以代替一日三餐"
+      },
+      {
+        "key": "B",
+        "text": "能提高学习效率且没有依赖"
+      },
+      {
+        "key": "C",
+        "text": "只影响皮肤颜色"
+      },
+      {
+        "key": "D",
+        "text": "损害神经系统，而且容易成瘾"
+      }
+    ],
+    "answer": "D",
+    "explanation": "毒品会损害脑和神经系统，一旦成瘾很难戒断。",
+    "verify": "\"损害神经系统，而且容易成瘾\""
+  },
+  {
+    "id": "cnb_j048_q4",
+    "topicId": "cnb_j048",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "为了降低心血管疾病的风险，合适的做法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "少吃高脂食物，经常运动，不吸烟"
+      },
+      {
+        "key": "B",
+        "text": "用静坐代替所有活动"
+      },
+      {
+        "key": "C",
+        "text": "每天大量饮酒"
+      },
+      {
+        "key": "D",
+        "text": "自行长期服用未经医生同意的激素"
+      }
+    ],
+    "answer": "A",
+    "explanation": "生活方式与心血管疾病、癌症有关，预防要从饮食、运动和戒烟做起。",
+    "verify": "\"少吃高脂食物，经常运动，不吸烟\""
+  },
+  {
+    "id": "cnb_j049_q1",
+    "topicId": "cnb_j049",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "影响生物生活的非生物因素包括？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只有食物链"
+      },
+      {
+        "key": "B",
+        "text": "只有捕食关系"
+      },
+      {
+        "key": "C",
+        "text": "光、温度、水和空气"
+      },
+      {
+        "key": "D",
+        "text": "分类等级"
+      }
+    ],
+    "answer": "C",
+    "explanation": "非生物因素和生物因素合称生态因素。",
+    "verify": "\"光、温度、水和空气\""
+  },
+  {
+    "id": "cnb_j049_q2",
+    "topicId": "cnb_j049",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "鼠妇适于生活在？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "强光干燥的地方"
+      },
+      {
+        "key": "B",
+        "text": "开水里"
+      },
+      {
+        "key": "C",
+        "text": "没有空气的密封罐"
+      },
+      {
+        "key": "D",
+        "text": "阴暗潮湿的地方"
+      }
+    ],
+    "answer": "D",
+    "explanation": "探究实验中，鼠妇较多集中在阴暗潮湿一侧。",
+    "verify": "\"阴暗潮湿的地方\""
+  },
+  {
+    "id": "cnb_j049_q3",
+    "topicId": "cnb_j049",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "蚯蚓在土壤中活动，能使土壤更疏松，这说明？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "生物能影响环境"
+      },
+      {
+        "key": "B",
+        "text": "环境对生物没有任何作用"
+      },
+      {
+        "key": "C",
+        "text": "生物不能适应环境"
+      },
+      {
+        "key": "D",
+        "text": "只有非生物因素起作用"
+      }
+    ],
+    "answer": "A",
+    "explanation": "生物既受环境限制，也会改变环境。",
+    "verify": "\"生物能影响环境\""
+  },
+  {
+    "id": "cnb_j049_q4",
+    "topicId": "cnb_j049",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "沙漠中的骆驼尿液很少、体温可以在一定范围内变化，主要说明？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "生物不需要水"
+      },
+      {
+        "key": "B",
+        "text": "生物能适应环境"
+      },
+      {
+        "key": "C",
+        "text": "环境不会影响生物"
+      },
+      {
+        "key": "D",
+        "text": "骆驼不属于生物"
+      }
+    ],
+    "answer": "B",
+    "explanation": "这些特征有利于在缺水、昼夜温差大的环境中生活。",
+    "verify": "\"生物能适应环境\""
+  },
+  {
+    "id": "cnb_j050_q1",
+    "topicId": "cnb_j050",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "生态系统中，能把无机物制造成有机物的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "消费者"
+      },
+      {
+        "key": "B",
+        "text": "分解者"
+      },
+      {
+        "key": "C",
+        "text": "非生物部分里的石头"
+      },
+      {
+        "key": "D",
+        "text": "生产者"
+      }
+    ],
+    "answer": "D",
+    "explanation": "生产者主要是绿色植物，是食物链的起点。",
+    "verify": "\"生产者\""
+  },
+  {
+    "id": "cnb_j050_q2",
+    "topicId": "cnb_j050",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "细菌和真菌在生态系统中主要作为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "分解者"
+      },
+      {
+        "key": "B",
+        "text": "生产者"
+      },
+      {
+        "key": "C",
+        "text": "消费者中的最高营养级"
+      },
+      {
+        "key": "D",
+        "text": "非生物成分"
+      }
+    ],
+    "answer": "A",
+    "explanation": "分解者把动植物遗体里的有机物分解成无机物，供生产者重新利用。",
+    "verify": "\"分解者\""
+  },
+  {
+    "id": "cnb_j050_q3",
+    "topicId": "cnb_j050",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "一条食物链「草→兔→狐」中，能量流动的特点是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "循环利用且越来越多"
+      },
+      {
+        "key": "B",
+        "text": "单向流动、逐级递减"
+      },
+      {
+        "key": "C",
+        "text": "从狐流向草"
+      },
+      {
+        "key": "D",
+        "text": "每个营养级获得的能量相同"
+      }
+    ],
+    "answer": "B",
+    "explanation": "能量沿食物链传递时大部分被消耗，营养级越高，获得的能量越少。",
+    "verify": "\"单向流动、逐级递减\""
+  },
+  {
+    "id": "cnb_j050_q4",
+    "topicId": "cnb_j050",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "有毒物质进入食物链后，浓度通常最高的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "生产者"
+      },
+      {
+        "key": "B",
+        "text": "空气"
+      },
+      {
+        "key": "C",
+        "text": "营养级最高的生物"
+      },
+      {
+        "key": "D",
+        "text": "分解者一定最低且不受影响"
+      }
+    ],
+    "answer": "C",
+    "explanation": "有毒物质不易分解，会沿着食物链积累。",
+    "verify": "\"营养级最高的生物\""
+  },
+  {
+    "id": "cnb_j051_q1",
+    "topicId": "cnb_j051",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "生物圈的范围大致包括？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "大气圈的底部、水圈的大部和岩石圈的表面"
+      },
+      {
+        "key": "B",
+        "text": "只有海洋"
+      },
+      {
+        "key": "C",
+        "text": "只有地面以上 1 米"
+      },
+      {
+        "key": "D",
+        "text": "地核"
+      }
+    ],
+    "answer": "A",
+    "explanation": "绝大多数生物生活在这三部分交界的范围内。",
+    "verify": "\"大气圈的底部、水圈的大部和岩石圈的表面\""
+  },
+  {
+    "id": "cnb_j051_q2",
+    "topicId": "cnb_j051",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "生物圈是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "最小的一个细胞"
+      },
+      {
+        "key": "B",
+        "text": "地球上最大的生态系统"
+      },
+      {
+        "key": "C",
+        "text": "一种组织"
+      },
+      {
+        "key": "D",
+        "text": "一个器官"
+      }
+    ],
+    "answer": "B",
+    "explanation": "森林、草原、海洋、湿地等都是生物圈中的生态系统。",
+    "verify": "\"地球上最大的生态系统\""
+  },
+  {
+    "id": "cnb_j051_q3",
+    "topicId": "cnb_j051",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "生物生存需要的基本条件包括？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只需要土壤的颜色"
+      },
+      {
+        "key": "B",
+        "text": "只需要重力"
+      },
+      {
+        "key": "C",
+        "text": "营养物质、阳光、空气、水和适宜的温度"
+      },
+      {
+        "key": "D",
+        "text": "不需要空间"
+      }
+    ],
+    "answer": "C",
+    "explanation": "还需要一定的生存空间；缺少这些条件，生物就不能正常生活。",
+    "verify": "\"营养物质、阳光、空气、水和适宜的温度\""
+  },
+  {
+    "id": "cnb_j051_q4",
+    "topicId": "cnb_j051",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "像生物圈那样为生物提供生存条件的整体，在目前已知范围内？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "太阳系每颗行星都有"
+      },
+      {
+        "key": "B",
+        "text": "月球表面已经具备"
+      },
+      {
+        "key": "C",
+        "text": "可以不依赖能量输入"
+      },
+      {
+        "key": "D",
+        "text": "地球是唯一的"
+      }
+    ],
+    "answer": "D",
+    "explanation": "保护生物圈就是保护人类自己的家园。",
+    "verify": "\"地球是唯一的\""
+  },
+  {
+    "id": "cnb_j052_q1",
+    "topicId": "cnb_j052",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "大量砍伐森林后，较容易引起？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "空气中的氧气无限增加"
+      },
+      {
+        "key": "B",
+        "text": "水土流失"
+      },
+      {
+        "key": "C",
+        "text": "当地降水量必定升高且不再变化"
+      },
+      {
+        "key": "D",
+        "text": "生物种类一定增多"
+      }
+    ],
+    "answer": "B",
+    "explanation": "植被破坏后，土壤失去保护，雨水更容易把泥土冲走。",
+    "verify": "\"水土流失\""
+  },
+  {
+    "id": "cnb_j052_q2",
+    "topicId": "cnb_j052",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "随意引进外来物种，可能？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一定使本地生物全部受益"
+      },
+      {
+        "key": "B",
+        "text": "不会繁殖"
+      },
+      {
+        "key": "C",
+        "text": "挤占本地生物的生存空间"
+      },
+      {
+        "key": "D",
+        "text": "自动提高生态系统的调节能力且没有上限"
+      }
+    ],
+    "answer": "C",
+    "explanation": "缺少天敌时，外来物种可能大量繁殖，破坏原有的食物关系。",
+    "verify": "\"挤占本地生物的生存空间\""
+  },
+  {
+    "id": "cnb_j052_q3",
+    "topicId": "cnb_j052",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "工厂把未经处理的污水排进河流，直接影响的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只会让水中的氧气自动增多"
+      },
+      {
+        "key": "B",
+        "text": "与人类健康无关"
+      },
+      {
+        "key": "C",
+        "text": "使有毒物质沿食物链越来越少"
+      },
+      {
+        "key": "D",
+        "text": "水生生物的生存和下游的用水安全"
+      }
+    ],
+    "answer": "D",
+    "explanation": "污染会通过饮水和食物链影响其他生物和人。",
+    "verify": "\"水生生物的生存和下游的用水安全\""
+  },
+  {
+    "id": "cnb_j052_q4",
+    "topicId": "cnb_j052",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "分析「围湖造田」的影响，较合理的结论是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "湖泊调蓄洪水和净化水质的能力下降"
+      },
+      {
+        "key": "B",
+        "text": "湖泊生物一定增多"
+      },
+      {
+        "key": "C",
+        "text": "当地气候完全不受影响"
+      },
+      {
+        "key": "D",
+        "text": "围得越大，生态系统越稳定"
+      }
+    ],
+    "answer": "A",
+    "explanation": "湖泊是生态系统，缩小湖面就会削弱它的生态功能。",
+    "verify": "\"湖泊调蓄洪水和净化水质的能力下降\""
+  },
+  {
+    "id": "cnb_j053_q1",
+    "topicId": "cnb_j053",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "维护生态安全，较合适的做法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把所有野生动物都关进家里饲养"
+      },
+      {
+        "key": "B",
+        "text": "继续向河流排放污水"
+      },
+      {
+        "key": "C",
+        "text": "保护植被、治理污染、防止外来物种随意扩散"
+      },
+      {
+        "key": "D",
+        "text": "锯掉全部森林改成裸地"
+      }
+    ],
+    "answer": "C",
+    "explanation": "生态安全关心的是生态系统能否保持完整并持续提供服务。",
+    "verify": "\"保护植被、治理污染、防止外来物种随意扩散\""
+  },
+  {
+    "id": "cnb_j053_q2",
+    "topicId": "cnb_j053",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "保护当地的森林和湿地，属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把全部生物迁到外地"
+      },
+      {
+        "key": "B",
+        "text": "只保护一种观赏植物的花色"
+      },
+      {
+        "key": "C",
+        "text": "停止一切科学观察"
+      },
+      {
+        "key": "D",
+        "text": "就地维护生态系统"
+      }
+    ],
+    "answer": "D",
+    "explanation": "保护栖息地，比把生物全部搬走更能维持原有的生态关系。",
+    "verify": "\"就地维护生态系统\""
+  },
+  {
+    "id": "cnb_j053_q3",
+    "topicId": "cnb_j053",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "垃圾分类的作用是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "减少污染，便于回收可利用的物质"
+      },
+      {
+        "key": "B",
+        "text": "让有害垃圾直接进入农田"
+      },
+      {
+        "key": "C",
+        "text": "代替污水处理"
+      },
+      {
+        "key": "D",
+        "text": "使塑料在自然界中立刻消失"
+      }
+    ],
+    "answer": "A",
+    "explanation": "分类投放可以减少有害物质进入土壤和水体。",
+    "verify": "\"减少污染，便于回收可利用的物质\""
+  },
+  {
+    "id": "cnb_j053_q4",
+    "topicId": "cnb_j053",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "某地为了增加粮食而毁林开荒，后来洪水和沙尘加重。更可取的做法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "继续扩大开荒"
+      },
+      {
+        "key": "B",
+        "text": "退耕还林，恢复植被"
+      },
+      {
+        "key": "C",
+        "text": "把河水全部截断"
+      },
+      {
+        "key": "D",
+        "text": "引入没有检验的外来植物"
+      }
+    ],
+    "answer": "B",
+    "explanation": "恢复植被有利于保持水土，也有利于维护生态安全。",
+    "verify": "\"退耕还林，恢复植被\""
+  },
+  {
+    "id": "cnb_j054_q1",
+    "topicId": "cnb_j054",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "无性生殖的特点是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "必须经过精子和卵细胞结合"
+      },
+      {
+        "key": "B",
+        "text": "后代一定具有双亲的遗传特性"
+      },
+      {
+        "key": "C",
+        "text": "只存在于动物"
+      },
+      {
+        "key": "D",
+        "text": "不经过两性生殖细胞的结合"
+      }
+    ],
+    "answer": "D",
+    "explanation": "扦插、嫁接、组织培养以及酵母菌的出芽生殖都属于无性生殖。",
+    "verify": "\"不经过两性生殖细胞的结合\""
+  },
+  {
+    "id": "cnb_j054_q2",
+    "topicId": "cnb_j054",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "用葡萄的一段枝条插入土壤长成新植株，这种生殖方式是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "扦插"
+      },
+      {
+        "key": "B",
+        "text": "种子繁殖"
+      },
+      {
+        "key": "C",
+        "text": "出芽形成受精卵"
+      },
+      {
+        "key": "D",
+        "text": "分裂产生精子"
+      }
+    ],
+    "answer": "A",
+    "explanation": "扦插使用的是营养器官，没有两性生殖细胞的结合。",
+    "verify": "\"扦插\""
+  },
+  {
+    "id": "cnb_j054_q3",
+    "topicId": "cnb_j054",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "嫁接时，成活的关键是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "接穗和砧木换成同一种花瓣颜色即可，形成层可以分开"
+      },
+      {
+        "key": "B",
+        "text": "接穗和砧木的形成层紧贴"
+      },
+      {
+        "key": "C",
+        "text": "只把叶贴在一起"
+      },
+      {
+        "key": "D",
+        "text": "让接穗先完成受精"
+      }
+    ],
+    "answer": "B",
+    "explanation": "形成层的细胞能分裂，长出新组织，使接穗和砧木长在一起。",
+    "verify": "\"接穗和砧木的形成层紧贴\""
+  },
+  {
+    "id": "cnb_j054_q4",
+    "topicId": "cnb_j054",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "用无性生殖培育果树，主要优点是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "后代一定比母体更适应一切环境"
+      },
+      {
+        "key": "B",
+        "text": "必须经过开花传粉"
+      },
+      {
+        "key": "C",
+        "text": "后代能保持母体的优良性状"
+      },
+      {
+        "key": "D",
+        "text": "变异一定比有性生殖更大"
+      }
+    ],
+    "answer": "C",
+    "explanation": "后代的遗传物质主要来自母体，优良特性不容易被另一亲本改变。",
+    "verify": "\"后代能保持母体的优良性状\""
+  },
+  {
+    "id": "cnb_j055_q1",
+    "topicId": "cnb_j055",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "有性生殖必须经过？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "两性生殖细胞结合"
+      },
+      {
+        "key": "B",
+        "text": "扦插"
+      },
+      {
+        "key": "C",
+        "text": "嫁接"
+      },
+      {
+        "key": "D",
+        "text": "出芽"
+      }
+    ],
+    "answer": "A",
+    "explanation": "精子和卵细胞结合形成受精卵，由受精卵发育成新个体。",
+    "verify": "\"两性生殖细胞结合\""
+  },
+  {
+    "id": "cnb_j055_q2",
+    "topicId": "cnb_j055",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "有性生殖的后代？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只保留母本性状、与父本无关"
+      },
+      {
+        "key": "B",
+        "text": "具有双亲的遗传特性"
+      },
+      {
+        "key": "C",
+        "text": "与亲代没有任何相同点"
+      },
+      {
+        "key": "D",
+        "text": "不能变异"
+      }
+    ],
+    "answer": "B",
+    "explanation": "两性生殖细胞各带一份遗传物质，后代因此具有双亲的特征。",
+    "verify": "\"具有双亲的遗传特性\""
+  },
+  {
+    "id": "cnb_j055_q3",
+    "topicId": "cnb_j055",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "被子植物经过开花、传粉和受精后，种子里的胚由什么发育而来？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "花瓣"
+      },
+      {
+        "key": "B",
+        "text": "叶肉细胞直接变来"
+      },
+      {
+        "key": "C",
+        "text": "受精卵"
+      },
+      {
+        "key": "D",
+        "text": "花粉管的壁"
+      }
+    ],
+    "answer": "C",
+    "explanation": "受精卵发育成胚，胚珠发育成种子，子房发育成果实。",
+    "verify": "\"受精卵\""
+  },
+  {
+    "id": "cnb_j055_q4",
+    "topicId": "cnb_j055",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "与无性生殖相比，有性生殖的意义主要是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "后代永远和母体一模一样"
+      },
+      {
+        "key": "B",
+        "text": "不需要生殖细胞"
+      },
+      {
+        "key": "C",
+        "text": "速度在任何情况下都更快"
+      },
+      {
+        "key": "D",
+        "text": "后代变异更多，更有利于适应变化的环境"
+      }
+    ],
+    "answer": "D",
+    "explanation": "遗传物质来自双亲，后代的差异通常更大。",
+    "verify": "\"后代变异更多，更有利于适应变化的环境\""
+  },
+  {
+    "id": "cnb_j056_q1",
+    "topicId": "cnb_j056",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "基因是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一条染色体上的全部蛋白质"
+      },
+      {
+        "key": "B",
+        "text": "有遗传效应的 DNA 片段"
+      },
+      {
+        "key": "C",
+        "text": "细胞壁的主要成分"
+      },
+      {
+        "key": "D",
+        "text": "一种维生素"
+      }
+    ],
+    "answer": "B",
+    "explanation": "染色体主要由 DNA 和蛋白质组成，基因是 DNA 上控制性状的区段。",
+    "verify": "\"有遗传效应的 DNA 片段\""
+  },
+  {
+    "id": "cnb_j056_q2",
+    "topicId": "cnb_j056",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "把大鼠生长激素基因转入小鼠体内，小鼠长得很大，说明？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "性状只由食物决定，与基因无关"
+      },
+      {
+        "key": "B",
+        "text": "DNA 不是遗传物质"
+      },
+      {
+        "key": "C",
+        "text": "基因控制生物的性状"
+      },
+      {
+        "key": "D",
+        "text": "基因不能从一个细胞进入另一个细胞"
+      }
+    ],
+    "answer": "C",
+    "explanation": "转入的基因使小鼠表现出相应性状。",
+    "verify": "\"基因控制生物的性状\""
+  },
+  {
+    "id": "cnb_j056_q3",
+    "topicId": "cnb_j056",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "同卵双生的兄弟，一个长期锻炼、一个很少运动，肌肉发达程度不同，说明？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "基因会因为锻炼立刻全部改变"
+      },
+      {
+        "key": "B",
+        "text": "两人的基因完全不同"
+      },
+      {
+        "key": "C",
+        "text": "环境不能影响任何性状"
+      },
+      {
+        "key": "D",
+        "text": "性状还受环境的影响"
+      }
+    ],
+    "answer": "D",
+    "explanation": "基因提供了发育的可能，环境会影响性状的表现。",
+    "verify": "\"性状还受环境的影响\""
+  },
+  {
+    "id": "cnb_j056_q4",
+    "topicId": "cnb_j056",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "生物体内的遗传物质主要是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "DNA"
+      },
+      {
+        "key": "B",
+        "text": "脂肪"
+      },
+      {
+        "key": "C",
+        "text": "淀粉"
+      },
+      {
+        "key": "D",
+        "text": "纤维素"
+      }
+    ],
+    "answer": "A",
+    "explanation": "DNA 携带遗传信息；基因是有遗传效应的 DNA 片段。",
+    "verify": "\"DNA\""
+  },
+  {
+    "id": "cnb_j057_q1",
+    "topicId": "cnb_j057",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "人的体细胞中染色体数目是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "23 条"
+      },
+      {
+        "key": "B",
+        "text": "46 对"
+      },
+      {
+        "key": "C",
+        "text": "23 对"
+      },
+      {
+        "key": "D",
+        "text": "92 对"
+      }
+    ],
+    "answer": "C",
+    "explanation": "体细胞中染色体成对存在，人有 23 对、46 条。",
+    "verify": "\"23 对\""
+  },
+  {
+    "id": "cnb_j057_q2",
+    "topicId": "cnb_j057",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "生殖细胞中的染色体数目是体细胞的？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "两倍"
+      },
+      {
+        "key": "B",
+        "text": "相同且仍然成对"
+      },
+      {
+        "key": "C",
+        "text": "四分之一"
+      },
+      {
+        "key": "D",
+        "text": "一半"
+      }
+    ],
+    "answer": "D",
+    "explanation": "形成生殖细胞时染色体数目减半，受精后才恢复成对。",
+    "verify": "\"一半\""
+  },
+  {
+    "id": "cnb_j057_q3",
+    "topicId": "cnb_j057",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "子女的染色体？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一半来自父方，一半来自母方"
+      },
+      {
+        "key": "B",
+        "text": "全部来自母方"
+      },
+      {
+        "key": "C",
+        "text": "全部来自父方"
+      },
+      {
+        "key": "D",
+        "text": "只来自细胞质、不来自父母"
+      }
+    ],
+    "answer": "A",
+    "explanation": "精子和卵细胞各提供一半染色体。",
+    "verify": "\"一半来自父方，一半来自母方\""
+  },
+  {
+    "id": "cnb_j057_q4",
+    "topicId": "cnb_j057",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "基因在亲子代间传递时，主要随着什么传递？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "细胞壁"
+      },
+      {
+        "key": "B",
+        "text": "染色体"
+      },
+      {
+        "key": "C",
+        "text": "食物中的蛋白质"
+      },
+      {
+        "key": "D",
+        "text": "血浆"
+      }
+    ],
+    "answer": "B",
+    "explanation": "染色体上有 DNA，基因位于 DNA 上，所以基因随染色体传递。",
+    "verify": "\"染色体\""
+  },
+  {
+    "id": "cnb_j058_q1",
+    "topicId": "cnb_j058",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "相对性状是指？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "不同种生物的全部特征"
+      },
+      {
+        "key": "B",
+        "text": "只指身高"
+      },
+      {
+        "key": "C",
+        "text": "环境造成的暂时晒黑"
+      },
+      {
+        "key": "D",
+        "text": "同种生物同一性状的不同表现"
+      }
+    ],
+    "answer": "D",
+    "explanation": "豌豆的高茎和矮茎、人的有耳垂和无耳垂，都是相对性状。",
+    "verify": "\"同种生物同一性状的不同表现\""
+  },
+  {
+    "id": "cnb_j058_q2",
+    "topicId": "cnb_j058",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "基因组成为 Dd 时，如果 D 对 d 为显性，表现出来的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "显性性状"
+      },
+      {
+        "key": "B",
+        "text": "隐性性状"
+      },
+      {
+        "key": "C",
+        "text": "两种性状同时各占一半身体"
+      },
+      {
+        "key": "D",
+        "text": "没有性状"
+      }
+    ],
+    "answer": "A",
+    "explanation": "一对基因中只要有一个显性基因，通常就表现显性性状。",
+    "verify": "\"显性性状\""
+  },
+  {
+    "id": "cnb_j058_q3",
+    "topicId": "cnb_j058",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "隐性性状的基因组成是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一个显性基因和一个隐性基因"
+      },
+      {
+        "key": "B",
+        "text": "两个隐性基因"
+      },
+      {
+        "key": "C",
+        "text": "两个显性基因"
+      },
+      {
+        "key": "D",
+        "text": "没有基因"
+      }
+    ],
+    "answer": "B",
+    "explanation": "只有两个隐性基因在一起时，隐性性状才表现出来。",
+    "verify": "\"两个隐性基因\""
+  },
+  {
+    "id": "cnb_j058_q4",
+    "topicId": "cnb_j058",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "禁止近亲结婚，主要是为了？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "让显性基因消失"
+      },
+      {
+        "key": "B",
+        "text": "改变人的染色体数目"
+      },
+      {
+        "key": "C",
+        "text": "降低隐性致病基因相遇的机会"
+      },
+      {
+        "key": "D",
+        "text": "阻止一切变异"
+      }
+    ],
+    "answer": "C",
+    "explanation": "近亲带有相同隐性致病基因的可能性较大，后代隐性遗传病的风险更高。",
+    "verify": "\"降低隐性致病基因相遇的机会\""
+  },
+  {
+    "id": "cnb_j059_q1",
+    "topicId": "cnb_j059",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "女性体细胞中的性染色体组成是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "XX"
+      },
+      {
+        "key": "B",
+        "text": "XY"
+      },
+      {
+        "key": "C",
+        "text": "YY"
+      },
+      {
+        "key": "D",
+        "text": "XO"
+      }
+    ],
+    "answer": "A",
+    "explanation": "男性是 XY，女性是 XX。",
+    "verify": "\"XX\""
+  },
+  {
+    "id": "cnb_j059_q2",
+    "topicId": "cnb_j059",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "就性染色体而言，卵细胞含有？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一条 Y 染色体"
+      },
+      {
+        "key": "B",
+        "text": "一条 X 染色体"
+      },
+      {
+        "key": "C",
+        "text": "X 和 Y 各一条"
+      },
+      {
+        "key": "D",
+        "text": "没有性染色体"
+      }
+    ],
+    "answer": "B",
+    "explanation": "女性只产生含 X 的卵细胞；男性产生含 X 或含 Y 的精子。",
+    "verify": "\"一条 X 染色体\""
+  },
+  {
+    "id": "cnb_j059_q3",
+    "topicId": "cnb_j059",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "生男孩还是女孩，通常取决于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "母亲的饮食"
+      },
+      {
+        "key": "B",
+        "text": "出生的季节"
+      },
+      {
+        "key": "C",
+        "text": "与卵细胞结合的精子所含的性染色体"
+      },
+      {
+        "key": "D",
+        "text": "母亲的血型"
+      }
+    ],
+    "answer": "C",
+    "explanation": "含 X 的精子与卵细胞结合发育为女孩，含 Y 的精子与卵细胞结合发育为男孩。",
+    "verify": "\"与卵细胞结合的精子所含的性染色体\""
+  },
+  {
+    "id": "cnb_j059_q4",
+    "topicId": "cnb_j059",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "从性染色体的组合看，生男生女的机会？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一定是男孩更多"
+      },
+      {
+        "key": "B",
+        "text": "完全由母亲决定"
+      },
+      {
+        "key": "C",
+        "text": "隔代才改变"
+      },
+      {
+        "key": "D",
+        "text": "大致相等"
+      }
+    ],
+    "answer": "D",
+    "explanation": "两种精子数量大致相当，与卵细胞结合的机会也大致相等。",
+    "verify": "\"大致相等\""
+  },
+  {
+    "id": "cnb_j060_q1",
+    "topicId": "cnb_j060",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "变异是指？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只有亲代和子代完全相同"
+      },
+      {
+        "key": "B",
+        "text": "亲子代之间以及子代个体之间的差异"
+      },
+      {
+        "key": "C",
+        "text": "环境永远不变化"
+      },
+      {
+        "key": "D",
+        "text": "基因不能改变"
+      }
+    ],
+    "answer": "B",
+    "explanation": "生物界普遍存在变异，变异为进化提供了原材料。",
+    "verify": "\"亲子代之间以及子代个体之间的差异\""
+  },
+  {
+    "id": "cnb_j060_q2",
+    "topicId": "cnb_j060",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "花生果实有大有小，这种差异属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "完全没有差异的同一性状"
+      },
+      {
+        "key": "B",
+        "text": "只发生在动物身上的现象"
+      },
+      {
+        "key": "C",
+        "text": "变异"
+      },
+      {
+        "key": "D",
+        "text": "分类单位"
+      }
+    ],
+    "answer": "C",
+    "explanation": "同一性状在不同个体上的不同表现，就是变异。",
+    "verify": "\"变异\""
+  },
+  {
+    "id": "cnb_j060_q3",
+    "topicId": "cnb_j060",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "由遗传物质改变引起的变异？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一定不能遗传"
+      },
+      {
+        "key": "B",
+        "text": "只改变当代、后代恢复原样"
+      },
+      {
+        "key": "C",
+        "text": "都属于不可遗传变异"
+      },
+      {
+        "key": "D",
+        "text": "可以遗传给后代"
+      }
+    ],
+    "answer": "D",
+    "explanation": "遗传物质改变引起的变异是可遗传变异。",
+    "verify": "\"可以遗传给后代\""
+  },
+  {
+    "id": "cnb_j060_q4",
+    "topicId": "cnb_j060",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "把遗传物质相同的小麦分别种在肥沃和贫瘠的土壤里，植株高度不同。这种差异一般是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "环境引起的不可遗传变异"
+      },
+      {
+        "key": "B",
+        "text": "染色体数目改变"
+      },
+      {
+        "key": "C",
+        "text": "一定会传给下一代并在贫瘠土地上同样表现"
+      },
+      {
+        "key": "D",
+        "text": "基因重组"
+      }
+    ],
+    "answer": "A",
+    "explanation": "如果遗传物质没有改变，只是水肥条件不同，这种变异一般不能遗传。",
+    "verify": "\"环境引起的不可遗传变异\""
+  },
+  {
+    "id": "cnb_j061_q1",
+    "topicId": "cnb_j061",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "原始生命诞生的场所，目前较普遍的认识是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "现代的陆地森林"
+      },
+      {
+        "key": "B",
+        "text": "火山口的岩石内部"
+      },
+      {
+        "key": "C",
+        "text": "原始海洋"
+      },
+      {
+        "key": "D",
+        "text": "月球"
+      }
+    ],
+    "answer": "C",
+    "explanation": "原始海洋为早期生命提供了场所。",
+    "verify": "\"原始海洋\""
+  },
+  {
+    "id": "cnb_j061_q2",
+    "topicId": "cnb_j061",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "米勒实验模拟原始大气放电后，得到了？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "完整的动植物"
+      },
+      {
+        "key": "B",
+        "text": "现代的细菌细胞核"
+      },
+      {
+        "key": "C",
+        "text": "氧气成为主要成分"
+      },
+      {
+        "key": "D",
+        "text": "氨基酸等有机小分子"
+      }
+    ],
+    "answer": "D",
+    "explanation": "实验说明在类似条件下，无机物可以形成有机小分子，并没有制造出生命。",
+    "verify": "\"氨基酸等有机小分子\""
+  },
+  {
+    "id": "cnb_j061_q3",
+    "topicId": "cnb_j061",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "关于原始大气，教材中的常见说法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "没有氧气"
+      },
+      {
+        "key": "B",
+        "text": "以氧气为主要成分"
+      },
+      {
+        "key": "C",
+        "text": "与今天的大气完全相同"
+      },
+      {
+        "key": "D",
+        "text": "只含有氮气且没有其他气体"
+      }
+    ],
+    "answer": "A",
+    "explanation": "原始大气中有水蒸气、氢气、氨、甲烷、二氧化碳等，氧气是后来光合生物产生的。",
+    "verify": "\"没有氧气\""
+  },
+  {
+    "id": "cnb_j061_q4",
+    "topicId": "cnb_j061",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "研究生命起源时，化石能够？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "直接显示明天的进化结果"
+      },
+      {
+        "key": "B",
+        "text": "作为古代生物曾经生活过的证据"
+      },
+      {
+        "key": "C",
+        "text": "代替全部实验"
+      },
+      {
+        "key": "D",
+        "text": "证明每种现代生物都单独突然出现"
+      }
+    ],
+    "answer": "B",
+    "explanation": "地层中的化石记录了不同时期生物的样子，是研究进化的重要证据。",
+    "verify": "\"作为古代生物曾经生活过的证据\""
+  },
+  {
+    "id": "cnb_j062_q1",
+    "topicId": "cnb_j062",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "研究生物进化历程最直接的证据之一是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "现在某种动物数量的多少"
+      },
+      {
+        "key": "B",
+        "text": "生物的商品价格"
+      },
+      {
+        "key": "C",
+        "text": "地图上的国界"
+      },
+      {
+        "key": "D",
+        "text": "化石"
+      }
+    ],
+    "answer": "D",
+    "explanation": "不同地层中的化石，反映了生物出现的大致顺序。",
+    "verify": "\"化石\""
+  },
+  {
+    "id": "cnb_j062_q2",
+    "topicId": "cnb_j062",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "植物进化的大致历程是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "藻类植物，到苔藓植物和蕨类植物，再到种子植物"
+      },
+      {
+        "key": "B",
+        "text": "种子植物到藻类植物"
+      },
+      {
+        "key": "C",
+        "text": "只有动物进化、植物不进化"
+      },
+      {
+        "key": "D",
+        "text": "真菌到哺乳动物"
+      }
+    ],
+    "answer": "A",
+    "explanation": "总体趋势是从简单到复杂、从水生到陆生。",
+    "verify": "\"藻类植物，到苔藓植物和蕨类植物，再到种子植物\""
+  },
+  {
+    "id": "cnb_j062_q3",
+    "topicId": "cnb_j062",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "脊椎动物进化的大致顺序是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "哺乳类到鱼类"
+      },
+      {
+        "key": "B",
+        "text": "鱼类、两栖类、爬行类，再到鸟类和哺乳类"
+      },
+      {
+        "key": "C",
+        "text": "鸟类到爬行类再到鱼类"
+      },
+      {
+        "key": "D",
+        "text": "两栖类直接到鱼类"
+      }
+    ],
+    "answer": "B",
+    "explanation": "鸟类和哺乳类都是由古代爬行动物进化而来的，不是鸟类变成哺乳类。",
+    "verify": "\"鱼类、两栖类、爬行类，再到鸟类和哺乳类\""
+  },
+  {
+    "id": "cnb_j062_q4",
+    "topicId": "cnb_j062",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "生物进化的总体趋势是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "由复杂到简单"
+      },
+      {
+        "key": "B",
+        "text": "由陆生全部回到水生并停止变化"
+      },
+      {
+        "key": "C",
+        "text": "由简单到复杂，由低等到高等，由水生到陆生"
+      },
+      {
+        "key": "D",
+        "text": "每种生物都越来越大"
+      }
+    ],
+    "answer": "C",
+    "explanation": "这是总体趋势，不是说每一种现存生物都还在变成另一种。",
+    "verify": "\"由简单到复杂，由低等到高等，由水生到陆生\""
+  },
+  {
+    "id": "cnb_j063_q1",
+    "topicId": "cnb_j063",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "达尔文解释生物进化的学说是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "自然选择学说"
+      },
+      {
+        "key": "B",
+        "text": "用进废退是达尔文学说的核心"
+      },
+      {
+        "key": "C",
+        "text": "地球中心说"
+      },
+      {
+        "key": "D",
+        "text": "细胞学说"
+      }
+    ],
+    "answer": "A",
+    "explanation": "自然选择包括过度繁殖、遗传变异、生存斗争和适者生存。",
+    "verify": "\"自然选择学说\""
+  },
+  {
+    "id": "cnb_j063_q2",
+    "topicId": "cnb_j063",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "长颈鹿的长颈，按自然选择学说应解释为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "经常伸脖子使颈变长，并且这一代就全部遗传"
+      },
+      {
+        "key": "B",
+        "text": "颈长的变异能吃到高处树叶，这种有利变异被保留下来"
+      },
+      {
+        "key": "C",
+        "text": "所有长颈鹿生来颈一样长，没有变异"
+      },
+      {
+        "key": "D",
+        "text": "环境不能影响生存机会"
+      }
+    ],
+    "answer": "B",
+    "explanation": "拉马克用「经常使用而变长」解释；达尔文强调可遗传变异和选择。",
+    "verify": "\"颈长的变异能吃到高处树叶，这种有利变异被保留下来\""
+  },
+  {
+    "id": "cnb_j063_q3",
+    "topicId": "cnb_j063",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "害虫抗药性增强，原因是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "农药使每一只害虫都主动产生抗药基因"
+      },
+      {
+        "key": "B",
+        "text": "害虫喜欢农药所以变强"
+      },
+      {
+        "key": "C",
+        "text": "抗药变异个体存活并繁殖，抗药性状被选择保留"
+      },
+      {
+        "key": "D",
+        "text": "没有变异也能产生抗药性"
+      }
+    ],
+    "answer": "C",
+    "explanation": "农药杀死不抗药的个体，抗药个体把变异传给后代。",
+    "verify": "\"抗药变异个体存活并繁殖，抗药性状被选择保留\""
+  },
+  {
+    "id": "cnb_j063_q4",
+    "topicId": "cnb_j063",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "自然选择保留的变异是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "所有变异"
+      },
+      {
+        "key": "B",
+        "text": "只保留有害变异"
+      },
+      {
+        "key": "C",
+        "text": "环境引起、遗传物质没有改变的变异"
+      },
+      {
+        "key": "D",
+        "text": "有利于生物在当时环境中生存和繁殖的可遗传变异"
+      }
+    ],
+    "answer": "D",
+    "explanation": "不利变异的个体更容易被淘汰，有利的可遗传变异更可能积累。",
+    "verify": "\"有利于生物在当时环境中生存和繁殖的可遗传变异\""
+  },
+  {
+    "id": "cnb_j064_q1",
+    "topicId": "cnb_j064",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "现代类人猿和人类的共同祖先是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "现在的黑猩猩"
+      },
+      {
+        "key": "B",
+        "text": "森林古猿"
+      },
+      {
+        "key": "C",
+        "text": "现在的长臂猿"
+      },
+      {
+        "key": "D",
+        "text": "恐龙"
+      }
+    ],
+    "answer": "B",
+    "explanation": "人类不是由现代黑猩猩或现代猴子变成的，而是和类人猿有共同的祖先。",
+    "verify": "\"森林古猿\""
+  },
+  {
+    "id": "cnb_j064_q2",
+    "topicId": "cnb_j064",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "从古猿到人的进化中，最重要的标志是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "使用鳃呼吸"
+      },
+      {
+        "key": "B",
+        "text": "体表长出羽毛"
+      },
+      {
+        "key": "C",
+        "text": "直立行走"
+      },
+      {
+        "key": "D",
+        "text": "回到四足爬行"
+      }
+    ],
+    "answer": "C",
+    "explanation": "直立行走使前肢解放出来，能够使用和制造工具。",
+    "verify": "\"直立行走\""
+  },
+  {
+    "id": "cnb_j064_q3",
+    "topicId": "cnb_j064",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "古人类在进化过程中逐渐学会？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "用种子进行光合作用"
+      },
+      {
+        "key": "B",
+        "text": "用鳃在陆地呼吸"
+      },
+      {
+        "key": "C",
+        "text": "放弃群体生活"
+      },
+      {
+        "key": "D",
+        "text": "制造工具和使用火"
+      }
+    ],
+    "answer": "D",
+    "explanation": "工具、火和语言的发展，与脑的发展和社会生活有关。",
+    "verify": "\"制造工具和使用火\""
+  },
+  {
+    "id": "cnb_j064_q4",
+    "topicId": "cnb_j064",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列说法符合人类起源证据的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "人类和现代类人猿都起源于森林古猿"
+      },
+      {
+        "key": "B",
+        "text": "人是现代猴子直接生下来的"
+      },
+      {
+        "key": "C",
+        "text": "世界各地的人属于不同的界"
+      },
+      {
+        "key": "D",
+        "text": "人类没有哺乳动物的特征"
+      }
+    ],
+    "answer": "A",
+    "explanation": "人有毛发、胎生、哺乳，属于哺乳动物，并与类人猿亲缘关系最近。",
+    "verify": "\"人类和现代类人猿都起源于森林古猿\""
+  },
+  {
+    "id": "cnb_j065_q1",
+    "topicId": "cnb_j065",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "生物多样性包括？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只有物种数量"
+      },
+      {
+        "key": "B",
+        "text": "只有森林一种生态系统"
+      },
+      {
+        "key": "C",
+        "text": "基因多样性、物种多样性和生态系统多样性"
+      },
+      {
+        "key": "D",
+        "text": "只指动物、不包括植物"
+      }
+    ],
+    "answer": "C",
+    "explanation": "三个层次从遗传物质、生物种类到生态系统。",
+    "verify": "\"基因多样性、物种多样性和生态系统多样性\""
+  },
+  {
+    "id": "cnb_j065_q2",
+    "topicId": "cnb_j065",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "一个物种内部，不同个体的基因并不完全相同。这属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "生态系统多样性"
+      },
+      {
+        "key": "B",
+        "text": "只有物种多样性、与基因无关"
+      },
+      {
+        "key": "C",
+        "text": "非生物的多样性"
+      },
+      {
+        "key": "D",
+        "text": "基因多样性"
+      }
+    ],
+    "answer": "D",
+    "explanation": "基因多样性也叫遗传多样性。",
+    "verify": "\"基因多样性\""
+  },
+  {
+    "id": "cnb_j065_q3",
+    "topicId": "cnb_j065",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "森林、草原、湿地和海洋提供的多样性主要属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "生态系统多样性"
+      },
+      {
+        "key": "B",
+        "text": "一个物种内部的全部差异"
+      },
+      {
+        "key": "C",
+        "text": "分类等级中的「种」本身"
+      },
+      {
+        "key": "D",
+        "text": "非生物因素的名称"
+      }
+    ],
+    "answer": "A",
+    "explanation": "不同生态系统为不同生物提供生存条件。",
+    "verify": "\"生态系统多样性\""
+  },
+  {
+    "id": "cnb_j065_q4",
+    "topicId": "cnb_j065",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "多种多样的生物是长期进化的结果，保护多样性首先要？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只记下生物的名字、可以破坏环境"
+      },
+      {
+        "key": "B",
+        "text": "保护生物赖以生活的栖息地和生态系统"
+      },
+      {
+        "key": "C",
+        "text": "让所有生物都变成同一个种"
+      },
+      {
+        "key": "D",
+        "text": "停止对化石和分类的研究"
+      }
+    ],
+    "answer": "B",
+    "explanation": "栖息地破坏后，物种和基因多样性也会失去。",
+    "verify": "\"保护生物赖以生活的栖息地和生态系统\""
+  },
+  {
+    "id": "cnb_j066_q1",
+    "topicId": "cnb_j066",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "保护生物多样性最有效的措施是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把所有野生生物都移出原生环境"
+      },
+      {
+        "key": "B",
+        "text": "只保护动物园里的动物"
+      },
+      {
+        "key": "C",
+        "text": "禁止任何科学研究"
+      },
+      {
+        "key": "D",
+        "text": "建立自然保护区，就地保护"
+      }
+    ],
+    "answer": "D",
+    "explanation": "就地保护能保存生物及其生存环境；迁地保护是必要的补充。",
+    "verify": "\"建立自然保护区，就地保护\""
+  },
+  {
+    "id": "cnb_j066_q2",
+    "topicId": "cnb_j066",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "将濒危动物迁到动物园繁殖，属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "迁地保护"
+      },
+      {
+        "key": "B",
+        "text": "就地保护"
+      },
+      {
+        "key": "C",
+        "text": "引入外来物种"
+      },
+      {
+        "key": "D",
+        "text": "自然选择本身"
+      }
+    ],
+    "answer": "A",
+    "explanation": "原生环境难以维持时，动物园、繁育中心和种质库可以进行迁地保护。",
+    "verify": "\"迁地保护\""
+  },
+  {
+    "id": "cnb_j066_q3",
+    "topicId": "cnb_j066",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "威胁生物多样性的主要原因是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "生物本身拒绝进化"
+      },
+      {
+        "key": "B",
+        "text": "栖息地破坏、过度利用、环境污染和外来物种入侵"
+      },
+      {
+        "key": "C",
+        "text": "分类单位太多"
+      },
+      {
+        "key": "D",
+        "text": "只有火山，与人类无关"
+      }
+    ],
+    "answer": "B",
+    "explanation": "人类活动是当前许多物种濒危的主要原因。",
+    "verify": "\"栖息地破坏、过度利用、环境污染和外来物种入侵\""
+  },
+  {
+    "id": "cnb_j066_q4",
+    "topicId": "cnb_j066",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "做到人与自然和谐共生，个人可以？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "食用一切野生动物"
+      },
+      {
+        "key": "B",
+        "text": "把外来生物随意放生"
+      },
+      {
+        "key": "C",
+        "text": "不购买野生动物制品，并节约资源、减少污染"
+      },
+      {
+        "key": "D",
+        "text": "破坏自然保护区的围栏去采集"
+      }
+    ],
+    "answer": "C",
+    "explanation": "和谐共生不是禁止认识自然，而是在利用资源时不破坏生态安全。",
+    "verify": "\"不购买野生动物制品，并节约资源、减少污染\""
   }
 ]

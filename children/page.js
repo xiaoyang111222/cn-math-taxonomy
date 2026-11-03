@@ -42,7 +42,7 @@
   if (params.get('from') === 'diagnose') {
     var back = document.getElementById('back');
     var sub = params.get('subject');
-    var href = '../diagnose/' + (sub === 'english' || sub === 'physics' || sub === 'chinese' || sub === 'science' || sub === 'morality' || sub === 'history' || sub === 'geography' ? '?subject=' + sub : '');
+    var href = '../diagnose/' + (sub === 'english' || sub === 'physics' || sub === 'chinese' || sub === 'science' || sub === 'morality' || sub === 'history' || sub === 'geography' || sub === 'biology' ? '?subject=' + sub : '');
     var a = el('a', null, '← 回到诊断');
     a.href = href;
     back.appendChild(a);

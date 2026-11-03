@@ -313,7 +313,7 @@ def main():
         standards_out[k] = v
 
     snapshots = {}
-    for prefix in ("cnm_", "cne_", "cnp_", "cnc_", "cns_", "cnd_", "cng_"):
+    for prefix in ("cnm_", "cne_", "cnp_", "cnc_", "cns_", "cnd_", "cng_", "cnb_"):
         snapshots[prefix] = [(t["id"], t["name"]) for t in base_topics if str(t["id"]).startswith(prefix)]
 
     n_hard = sum(1 for e in his_edges_out if e["strength"] == "hard")
@@ -344,7 +344,7 @@ def main():
     if again_topics != base_topics or again_deps != base_deps or again_qs != base_questions or again_items != base_items:
         print("其他学科数据在写回后发生了变化", file=sys.stderr)
         return 1
-    labels = {"cnm_": "数学", "cne_": "英语", "cnp_": "物理", "cnc_": "语文", "cns_": "科学", "cnd_": "道德与法治", "cng_": "地理"}
+    labels = {"cnm_": "数学", "cne_": "英语", "cnp_": "物理", "cnc_": "语文", "cns_": "科学", "cnd_": "道德与法治", "cng_": "地理", "cnb_": "生物"}
     for prefix, label in labels.items():
         if [(t["id"], t["name"]) for t in again_t if str(t["id"]).startswith(prefix)] != snapshots[prefix]:
             print("%s知识点 id 或名称变了" % label, file=sys.stderr)
@@ -356,8 +356,8 @@ def main():
     if again_s.get("history", {}).get("title") != "义务教育历史课程标准（2022年版）":
         print("历史课标标题不正确", file=sys.stderr)
         return 1
-    print("数学 %d、英语 %d、物理 %d、语文 %d、科学 %d、道德与法治 %d、地理 %d 个知识点的 id 与名称未改" % tuple(
-        len(snapshots[p]) for p in ("cnm_", "cne_", "cnp_", "cnc_", "cns_", "cnd_", "cng_")))
+    print("数学 %d、英语 %d、物理 %d、语文 %d、科学 %d、道德与法治 %d、地理 %d、生物 %d 个知识点的 id 与名称未改" % tuple(
+        len(snapshots[p]) for p in ("cnm_", "cne_", "cnp_", "cnc_", "cns_", "cnd_", "cng_", "cnb_")))
     return 0
 
 

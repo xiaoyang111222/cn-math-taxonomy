@@ -1450,6 +1450,17 @@ test('gradeTargets：一年级 = 一上 + 一下，七上只含七上；写法�
   assert.strictEqual(g8geo.ids.length, 14);
   assert.ok(g8geo.ids.every((id) => id.startsWith('cng_') && RGQ.byId[id].grade === 8 && RGQ.byId[id].semester === '下'));
   assert.strictEqual(E.gradeTargets(RGQ, '九上', 'geography'), null);
+  const g7bio = E.gradeTargets(RGQ, '七上', 'biology');
+  assert.strictEqual(g7bio.ids.length, 22);
+  assert.ok(g7bio.ids.every((id) => id.startsWith('cnb_')));
+  const g8bio = E.gradeTargets(RGQ, '八下', 'biology');
+  assert.strictEqual(g8bio.ids.length, 13);
+  assert.ok(g8bio.ids.every((id) => id.startsWith('cnb_') && RGQ.byId[id].grade === 8 && RGQ.byId[id].semester === '下'));
+  assert.strictEqual(E.gradeTargets(RGQ, '九上', 'biology'), null);
+  const g7bioYear = E.gradeTargets(RGQ, '七年级', 'biology');
+  assert.strictEqual(g7bioYear.ids.length, 40);
+  assert.ok(g7bioYear.ids.every((id) => id.startsWith('cnb_') && RGQ.byId[id].grade === 7));
+  assert.strictEqual(E.subjectOf(RGQ.byId[g7bio.ids[0]]), 'biology');
   const g7 = E.gradeTargets(RGQ, '七年级');
   assert.strictEqual(g7.ids.length, formal.filter((t) => t.grade === 7 && String(t.id).startsWith('cnm_')).length);
   assert.ok(g7.ids.every((id) => id.startsWith('cnm_')));

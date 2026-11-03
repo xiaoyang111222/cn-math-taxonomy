@@ -26734,5 +26734,539 @@
     "prerequisiteId": "cng_j045",
     "strength": "hard",
     "reason": "奋进中的中国所谈的挑战与责任，建立在环境保护和可持续发展的基础上。"
+  },
+  {
+    "topicId": "cnb_j002",
+    "prerequisiteId": "cnb_j001",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「观察周边环境中的生物」，再学「生物的特征」。"
+  },
+  {
+    "topicId": "cnb_j003",
+    "prerequisiteId": "cnb_j002",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「生物的特征」，再学「学习使用显微镜」。"
+  },
+  {
+    "topicId": "cnb_j009",
+    "prerequisiteId": "cnb_j008",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「动物体的结构层次」，再学「植物体的结构层次」。"
+  },
+  {
+    "topicId": "cnb_j010",
+    "prerequisiteId": "cnb_j009",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「植物体的结构层次」，再学「单细胞生物」。"
+  },
+  {
+    "topicId": "cnb_j011",
+    "prerequisiteId": "cnb_j010",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「单细胞生物」，再学「藻类、苔藓植物和蕨类植物」。"
+  },
+  {
+    "topicId": "cnb_j013",
+    "prerequisiteId": "cnb_j012",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「种子植物」，再学「无脊椎动物」。"
+  },
+  {
+    "topicId": "cnb_j017",
+    "prerequisiteId": "cnb_j016",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「鸟和哺乳动物」，再学「微生物的分布」。"
+  },
+  {
+    "topicId": "cnb_j019",
+    "prerequisiteId": "cnb_j018",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「细菌」，再学「真菌」。"
+  },
+  {
+    "topicId": "cnb_j020",
+    "prerequisiteId": "cnb_j019",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「真菌」，再学「病毒」。"
+  },
+  {
+    "topicId": "cnb_j021",
+    "prerequisiteId": "cnb_j020",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「病毒」，再学「尝试对生物进行分类」。"
+  },
+  {
+    "topicId": "cnb_j023",
+    "prerequisiteId": "cnb_j022",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「从种到界」，再学「种子的萌发」。"
+  },
+  {
+    "topicId": "cnb_j026",
+    "prerequisiteId": "cnb_j025",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「开花和结果」，再学「水的利用与散失」。"
+  },
+  {
+    "topicId": "cnb_j027",
+    "prerequisiteId": "cnb_j026",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「水的利用与散失」，再学「光合作用」。"
+  },
+  {
+    "topicId": "cnb_j030",
+    "prerequisiteId": "cnb_j029",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「植物在自然界中的作用」，再学「人的生殖」。"
+  },
+  {
+    "topicId": "cnb_j032",
+    "prerequisiteId": "cnb_j031",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「青春期」，再学「食物中的营养物质」。"
+  },
+  {
+    "topicId": "cnb_j035",
+    "prerequisiteId": "cnb_j034",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「合理营养与食品安全」，再学「呼吸道对空气的处理」。"
+  },
+  {
+    "topicId": "cnb_j037",
+    "prerequisiteId": "cnb_j036",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「发生在肺内的气体交换」，再学「流动的组织——血液」。"
+  },
+  {
+    "topicId": "cnb_j041",
+    "prerequisiteId": "cnb_j040",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「人体内废物的排出」，再学「人体对外界环境的感知」。"
+  },
+  {
+    "topicId": "cnb_j044",
+    "prerequisiteId": "cnb_j043",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「神经系统支配下的运动」，再学「激素调节」。"
+  },
+  {
+    "topicId": "cnb_j045",
+    "prerequisiteId": "cnb_j044",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「激素调节」，再学「传染病及其预防」。"
+  },
+  {
+    "topicId": "cnb_j047",
+    "prerequisiteId": "cnb_j046",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「免疫与免疫规划」，再学「用药与急救」。"
+  },
+  {
+    "topicId": "cnb_j049",
+    "prerequisiteId": "cnb_j048",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「选择健康的生活方式」，再学「生物与环境的相互作用」。"
+  },
+  {
+    "topicId": "cnb_j052",
+    "prerequisiteId": "cnb_j051",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「生物圈」，再学「分析人类活动对生态环境的影响」。"
+  },
+  {
+    "topicId": "cnb_j054",
+    "prerequisiteId": "cnb_j053",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「维护生态安全」，再学「无性生殖」。"
+  },
+  {
+    "topicId": "cnb_j059",
+    "prerequisiteId": "cnb_j058",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「基因的显性和隐性」，再学「人的性别决定」。"
+  },
+  {
+    "topicId": "cnb_j060",
+    "prerequisiteId": "cnb_j059",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「人的性别决定」，再学「生物的变异」。"
+  },
+  {
+    "topicId": "cnb_j061",
+    "prerequisiteId": "cnb_j060",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「生物的变异」，再学「地球上生命的起源」。"
+  },
+  {
+    "topicId": "cnb_j064",
+    "prerequisiteId": "cnb_j063",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「生物进化的原因」，再学「人类的起源」。"
+  },
+  {
+    "topicId": "cnb_j065",
+    "prerequisiteId": "cnb_j064",
+    "strength": "soft",
+    "reason": "按人教版生物学的教学顺序，先学「人类的起源」，再学「进化与生物多样性」。"
+  },
+  {
+    "topicId": "cnb_j004",
+    "prerequisiteId": "cnb_j003",
+    "strength": "hard",
+    "reason": "观察植物细胞，要先会使用显微镜。"
+  },
+  {
+    "topicId": "cnb_j005",
+    "prerequisiteId": "cnb_j004",
+    "strength": "hard",
+    "reason": "比较动物细胞和植物细胞，要先认识植物细胞的结构。"
+  },
+  {
+    "topicId": "cnb_j006",
+    "prerequisiteId": "cnb_j005",
+    "strength": "hard",
+    "reason": "理解细胞怎样生活，要先知道动物细胞有哪些结构。"
+  },
+  {
+    "topicId": "cnb_j007",
+    "prerequisiteId": "cnb_j006",
+    "strength": "hard",
+    "reason": "细胞通过分裂产生新细胞，建立在细胞生活需要物质和能量的基础上。"
+  },
+  {
+    "topicId": "cnb_j008",
+    "prerequisiteId": "cnb_j007",
+    "strength": "hard",
+    "reason": "动物体的结构层次从细胞分裂和分化讲起。"
+  },
+  {
+    "topicId": "cnb_j009",
+    "prerequisiteId": "cnb_j007",
+    "strength": "hard",
+    "reason": "植物体的结构层次同样从细胞分裂和分化讲起。"
+  },
+  {
+    "topicId": "cnb_j010",
+    "prerequisiteId": "cnb_j006",
+    "strength": "hard",
+    "reason": "单细胞生物能独立完成生命活动，要先知道细胞是生命活动的基本单位。"
+  },
+  {
+    "topicId": "cnb_j012",
+    "prerequisiteId": "cnb_j011",
+    "strength": "hard",
+    "reason": "种子植物要和藻类、苔藓植物、蕨类植物比较，先认识这些类群。"
+  },
+  {
+    "topicId": "cnb_j014",
+    "prerequisiteId": "cnb_j013",
+    "strength": "hard",
+    "reason": "鱼是脊椎动物，认识它要先区分无脊椎动物。"
+  },
+  {
+    "topicId": "cnb_j015",
+    "prerequisiteId": "cnb_j014",
+    "strength": "hard",
+    "reason": "两栖动物、爬行动物与鱼同属脊椎动物，比较类群要先认识鱼。"
+  },
+  {
+    "topicId": "cnb_j016",
+    "prerequisiteId": "cnb_j015",
+    "strength": "hard",
+    "reason": "鸟和哺乳动物与两栖动物、爬行动物都是脊椎动物，按教材顺序比较。"
+  },
+  {
+    "topicId": "cnb_j018",
+    "prerequisiteId": "cnb_j017",
+    "strength": "hard",
+    "reason": "认识细菌，要先知道微生物的分布和培养观察的基本方法。"
+  },
+  {
+    "topicId": "cnb_j019",
+    "prerequisiteId": "cnb_j017",
+    "strength": "hard",
+    "reason": "认识真菌，要先知道微生物的分布。"
+  },
+  {
+    "topicId": "cnb_j020",
+    "prerequisiteId": "cnb_j018",
+    "strength": "hard",
+    "reason": "病毒没有细胞结构，要和有细胞结构的细菌比较。"
+  },
+  {
+    "topicId": "cnb_j021",
+    "prerequisiteId": "cnb_j011",
+    "strength": "hard",
+    "reason": "尝试对生物进行分类，要用到前面学过的植物类群特征。"
+  },
+  {
+    "topicId": "cnb_j021",
+    "prerequisiteId": "cnb_j013",
+    "strength": "hard",
+    "reason": "尝试对生物进行分类，要用到前面学过的动物类群特征。"
+  },
+  {
+    "topicId": "cnb_j022",
+    "prerequisiteId": "cnb_j021",
+    "strength": "hard",
+    "reason": "从种到界的分类等级，建立在已经尝试按特征分类的基础上。"
+  },
+  {
+    "topicId": "cnb_j023",
+    "prerequisiteId": "cnb_j012",
+    "strength": "hard",
+    "reason": "种子萌发是种子植物生活的起点，要先认识种子植物。"
+  },
+  {
+    "topicId": "cnb_j024",
+    "prerequisiteId": "cnb_j023",
+    "strength": "hard",
+    "reason": "植株的生长接在种子萌发之后。"
+  },
+  {
+    "topicId": "cnb_j025",
+    "prerequisiteId": "cnb_j024",
+    "strength": "hard",
+    "reason": "开花和结果是植株生长到一定阶段后的繁殖过程。"
+  },
+  {
+    "topicId": "cnb_j026",
+    "prerequisiteId": "cnb_j024",
+    "strength": "hard",
+    "reason": "讨论水分的吸收、运输和散失，要先知道植株怎样生长。"
+  },
+  {
+    "topicId": "cnb_j027",
+    "prerequisiteId": "cnb_j004",
+    "strength": "hard",
+    "reason": "光合作用主要在叶绿体中进行，要先认识植物细胞里的叶绿体。"
+  },
+  {
+    "topicId": "cnb_j028",
+    "prerequisiteId": "cnb_j027",
+    "strength": "hard",
+    "reason": "呼吸作用和光合作用是植物体内相对的物质与能量变化。"
+  },
+  {
+    "topicId": "cnb_j029",
+    "prerequisiteId": "cnb_j028",
+    "strength": "hard",
+    "reason": "说明植物参与碳氧平衡，也要用到呼吸作用消耗氧气、产生二氧化碳。"
+  },
+  {
+    "topicId": "cnb_j029",
+    "prerequisiteId": "cnb_j026",
+    "strength": "hard",
+    "reason": "说明植物参与水循环，要先知道蒸腾作用散失水分。"
+  },
+  {
+    "topicId": "cnb_j031",
+    "prerequisiteId": "cnb_j030",
+    "strength": "hard",
+    "reason": "青春期是生殖器官发育和性成熟的阶段，接在人的生殖之后。"
+  },
+  {
+    "topicId": "cnb_j033",
+    "prerequisiteId": "cnb_j032",
+    "strength": "hard",
+    "reason": "消化和吸收针对的是食物中的营养物质。"
+  },
+  {
+    "topicId": "cnb_j034",
+    "prerequisiteId": "cnb_j033",
+    "strength": "hard",
+    "reason": "安排膳食和判断食品安全，要知道营养物质怎样被消化吸收。"
+  },
+  {
+    "topicId": "cnb_j036",
+    "prerequisiteId": "cnb_j035",
+    "strength": "hard",
+    "reason": "肺内的气体交换接在呼吸道对空气的处理之后。"
+  },
+  {
+    "topicId": "cnb_j038",
+    "prerequisiteId": "cnb_j037",
+    "strength": "hard",
+    "reason": "血管是血液流动的管道，要先认识血液。"
+  },
+  {
+    "topicId": "cnb_j039",
+    "prerequisiteId": "cnb_j038",
+    "strength": "hard",
+    "reason": "心脏把血液压进血管，要先知道三类血管。"
+  },
+  {
+    "topicId": "cnb_j040",
+    "prerequisiteId": "cnb_j039",
+    "strength": "hard",
+    "reason": "尿液排出前，废物要随血液循环送到肾，先认识心脏和血液循环。"
+  },
+  {
+    "topicId": "cnb_j042",
+    "prerequisiteId": "cnb_j041",
+    "strength": "hard",
+    "reason": "神经调节建立在感受器接受外界刺激的基础上。"
+  },
+  {
+    "topicId": "cnb_j043",
+    "prerequisiteId": "cnb_j042",
+    "strength": "hard",
+    "reason": "骨骼肌的收缩受神经系统支配。"
+  },
+  {
+    "topicId": "cnb_j044",
+    "prerequisiteId": "cnb_j042",
+    "strength": "hard",
+    "reason": "激素调节与神经调节互相配合，先认识神经调节。"
+  },
+  {
+    "topicId": "cnb_j046",
+    "prerequisiteId": "cnb_j045",
+    "strength": "hard",
+    "reason": "免疫规划用来预防传染病，要先知道传染病怎样流行。"
+  },
+  {
+    "topicId": "cnb_j048",
+    "prerequisiteId": "cnb_j045",
+    "strength": "hard",
+    "reason": "选择健康的生活方式，包括预防传染病。"
+  },
+  {
+    "topicId": "cnb_j048",
+    "prerequisiteId": "cnb_j047",
+    "strength": "hard",
+    "reason": "选择健康的生活方式，也包括合理用药和急救。"
+  },
+  {
+    "topicId": "cnb_j050",
+    "prerequisiteId": "cnb_j049",
+    "strength": "hard",
+    "reason": "生态系统的结构和功能，建立在生物与环境相互作用的基础上。"
+  },
+  {
+    "topicId": "cnb_j051",
+    "prerequisiteId": "cnb_j050",
+    "strength": "hard",
+    "reason": "生物圈是最大的生态系统，要先知道生态系统的组成。"
+  },
+  {
+    "topicId": "cnb_j052",
+    "prerequisiteId": "cnb_j050",
+    "strength": "hard",
+    "reason": "分析人类活动的影响，要先知道生态系统怎样维持稳定。"
+  },
+  {
+    "topicId": "cnb_j053",
+    "prerequisiteId": "cnb_j052",
+    "strength": "hard",
+    "reason": "维护生态安全，针对的是人类活动造成的生态问题。"
+  },
+  {
+    "topicId": "cnb_j054",
+    "prerequisiteId": "cnb_j009",
+    "strength": "hard",
+    "reason": "植物的扦插、嫁接等无性生殖，用的是根、茎、叶等营养器官。"
+  },
+  {
+    "topicId": "cnb_j055",
+    "prerequisiteId": "cnb_j054",
+    "strength": "hard",
+    "reason": "有性生殖和无性生殖是产生后代的两条途径，先比较无性生殖。"
+  },
+  {
+    "topicId": "cnb_j055",
+    "prerequisiteId": "cnb_j025",
+    "strength": "hard",
+    "reason": "被子植物的有性生殖要经过开花、传粉和受精，结出果实和种子。"
+  },
+  {
+    "topicId": "cnb_j055",
+    "prerequisiteId": "cnb_j030",
+    "strength": "hard",
+    "reason": "人的生殖是有性生殖，精子和卵细胞结合形成受精卵。"
+  },
+  {
+    "topicId": "cnb_j056",
+    "prerequisiteId": "cnb_j055",
+    "strength": "hard",
+    "reason": "基因控制的性状要通过生殖传给后代。"
+  },
+  {
+    "topicId": "cnb_j057",
+    "prerequisiteId": "cnb_j056",
+    "strength": "hard",
+    "reason": "基因在亲子代间传递，先要知道基因与性状的关系。"
+  },
+  {
+    "topicId": "cnb_j058",
+    "prerequisiteId": "cnb_j057",
+    "strength": "hard",
+    "reason": "显性和隐性是一对基因在亲子代传递中的表现。"
+  },
+  {
+    "topicId": "cnb_j059",
+    "prerequisiteId": "cnb_j057",
+    "strength": "hard",
+    "reason": "人的性别由性染色体决定，建立在基因随染色体传递的基础上。"
+  },
+  {
+    "topicId": "cnb_j060",
+    "prerequisiteId": "cnb_j056",
+    "strength": "hard",
+    "reason": "变异是亲子代性状上的差异，包括遗传物质改变引起的可遗传变异。"
+  },
+  {
+    "topicId": "cnb_j062",
+    "prerequisiteId": "cnb_j061",
+    "strength": "hard",
+    "reason": "生物进化的历程，从地球上生命的起源讲起。"
+  },
+  {
+    "topicId": "cnb_j063",
+    "prerequisiteId": "cnb_j062",
+    "strength": "hard",
+    "reason": "解释进化的原因，要先知道生物进化的大致历程。"
+  },
+  {
+    "topicId": "cnb_j063",
+    "prerequisiteId": "cnb_j060",
+    "strength": "hard",
+    "reason": "自然选择解释的是可遗传的变异怎样被保留下来。"
+  },
+  {
+    "topicId": "cnb_j064",
+    "prerequisiteId": "cnb_j062",
+    "strength": "hard",
+    "reason": "人类的起源是生物进化历程中的一部分。"
+  },
+  {
+    "topicId": "cnb_j064",
+    "prerequisiteId": "cnb_j016",
+    "strength": "hard",
+    "reason": "人类属于哺乳动物，比较人类和类人猿要先认识哺乳动物。"
+  },
+  {
+    "topicId": "cnb_j065",
+    "prerequisiteId": "cnb_j062",
+    "strength": "hard",
+    "reason": "生物多样性是长期进化的结果。"
+  },
+  {
+    "topicId": "cnb_j065",
+    "prerequisiteId": "cnb_j022",
+    "strength": "hard",
+    "reason": "描述生物多样性，要用到从种到界的分类框架。"
+  },
+  {
+    "topicId": "cnb_j066",
+    "prerequisiteId": "cnb_j065",
+    "strength": "hard",
+    "reason": "人与自然和谐共生，建立在认识并保护生物多样性的基础上。"
+  },
+  {
+    "topicId": "cnb_j066",
+    "prerequisiteId": "cnb_j053",
+    "strength": "hard",
+    "reason": "维护生态安全是人与自然和谐共生的一部分。"
   }
 ]

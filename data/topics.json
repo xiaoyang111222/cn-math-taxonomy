@@ -81123,5 +81123,1793 @@
         "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
       }
     ]
+  },
+  {
+    "id": "cnb_j001",
+    "name": "观察周边环境中的生物",
+    "domain": "生物体的结构层次",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第1单元 生物和细胞",
+    "type": "procedural",
+    "description": "能有目的地观察周边生物，并做真实记录。",
+    "mastery_criteria": [
+      "能说出本课的基本结构和生命活动",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "科学观察生物时，首先要做的是？",
+      "answer": "有明确的观察目的"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BS.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ],
+    "root_reason": "七年级上册从观察周边环境中的生物讲起，认识什么是生物是初中生物的起点，前面没有更早的初中生物知识点。"
+  },
+  {
+    "id": "cnb_j002",
+    "name": "生物的特征",
+    "domain": "生物体的结构层次",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第1单元 生物和细胞",
+    "type": "conceptual",
+    "description": "能根据营养、呼吸、生长、繁殖和对刺激的反应等判断是否属于生物。",
+    "mastery_criteria": [
+      "能说出本课的基本结构和生命活动",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "下列哪一项是生物的共同特征？",
+      "answer": "能生长和繁殖"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BS.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j003",
+    "name": "学习使用显微镜",
+    "domain": "生物体的结构层次",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第1单元 生物和细胞",
+    "type": "procedural",
+    "description": "会计算显微镜的放大倍数，并按规范找到清晰物像。",
+    "mastery_criteria": [
+      "能说出本课的基本结构和生命活动",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "显微镜的放大倍数等于？",
+      "answer": "目镜放大倍数乘物镜放大倍数"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BS.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j004",
+    "name": "植物细胞",
+    "domain": "生物体的结构层次",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第1单元 生物和细胞",
+    "type": "conceptual",
+    "description": "能认出植物细胞的细胞壁、细胞膜、细胞质、细胞核、液泡和叶绿体。",
+    "mastery_criteria": [
+      "能说出本课的基本结构和生命活动",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "对细胞起支持和保护作用的结构是？",
+      "answer": "细胞壁"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BS.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j005",
+    "name": "动物细胞",
+    "domain": "生物体的结构层次",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第1单元 生物和细胞",
+    "type": "conceptual",
+    "description": "能说出动物细胞与植物细胞在结构上的主要区别。",
+    "mastery_criteria": [
+      "能说出本课的基本结构和生命活动",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "人口腔上皮细胞属于？",
+      "answer": "动物细胞"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BS.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j006",
+    "name": "细胞的生活",
+    "domain": "生物体的结构层次",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第1单元 生物和细胞",
+    "type": "conceptual",
+    "description": "知道细胞膜、细胞质、细胞核和能量转换器在细胞生活中的作用。",
+    "mastery_criteria": [
+      "能说出本课的基本结构和生命活动",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "细胞中的遗传信息主要储存在？",
+      "answer": "细胞核"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BS.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j007",
+    "name": "细胞通过分裂产生新细胞",
+    "domain": "生物体的结构层次",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第1单元 生物和细胞",
+    "type": "conceptual",
+    "description": "知道细胞分裂时染色体先复制再平均分配，新细胞与原细胞染色体数目相同。",
+    "mastery_criteria": [
+      "能说出本课的基本结构和生命活动",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "细胞分裂产生的新细胞，染色体数目与原细胞相比？",
+      "answer": "相同"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BS.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j008",
+    "name": "动物体的结构层次",
+    "domain": "生物体的结构层次",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第1单元 生物和细胞",
+    "type": "conceptual",
+    "description": "能按细胞、组织、器官、系统、动物体说明人体的结构层次。",
+    "mastery_criteria": [
+      "能说出本课的基本结构和生命活动",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "人体的结构层次由小到大是？",
+      "answer": "细胞、组织、器官、系统、人体"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BS.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j009",
+    "name": "植物体的结构层次",
+    "domain": "生物体的结构层次",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第1单元 生物和细胞",
+    "type": "conceptual",
+    "description": "能说出植物体由细胞、组织、器官构成，并区分营养器官和生殖器官。",
+    "mastery_criteria": [
+      "能说出本课的基本结构和生命活动",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "植物体的结构层次一般是？",
+      "answer": "细胞、组织、器官、植物体"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BS.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j010",
+    "name": "单细胞生物",
+    "domain": "生物体的结构层次",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第1单元 生物和细胞",
+    "type": "conceptual",
+    "description": "知道一个细胞也能完成各项生命活动，能举出草履虫等例子。",
+    "mastery_criteria": [
+      "能说出本课的基本结构和生命活动",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "草履虫整个身体由几个细胞构成？",
+      "answer": "1 个"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BS.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j011",
+    "name": "藻类、苔藓植物和蕨类植物",
+    "domain": "生物的多样性",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第2单元 多种多样的生物",
+    "type": "conceptual",
+    "description": "能根据有没有根茎叶的分化、有没有输导组织比较藻类、苔藓植物和蕨类植物。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "藻类植物的主要特点是？",
+      "answer": "没有根、茎、叶的分化"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j012",
+    "name": "种子植物",
+    "domain": "生物的多样性",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第2单元 多种多样的生物",
+    "type": "conceptual",
+    "description": "能区分裸子植物和被子植物，并说明种子繁殖对陆地生活的意义。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "种子植物包括？",
+      "answer": "裸子植物和被子植物"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j013",
+    "name": "无脊椎动物",
+    "domain": "生物的多样性",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第2单元 多种多样的生物",
+    "type": "conceptual",
+    "description": "能根据身体是否分节、有无外骨骼等特征辨认常见无脊椎动物类群。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "无脊椎动物的共同特点是？",
+      "answer": "身体内没有由脊椎骨组成的脊柱"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j014",
+    "name": "鱼",
+    "domain": "生物的多样性",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第2单元 多种多样的生物",
+    "type": "conceptual",
+    "description": "能说出鱼适于水中生活的形态结构和呼吸方式。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "鱼在水中呼吸，进行气体交换的结构是？",
+      "answer": "鳃"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j015",
+    "name": "两栖动物和爬行动物",
+    "domain": "生物的多样性",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第2单元 多种多样的生物",
+    "type": "conceptual",
+    "description": "能比较两栖动物和爬行动物在呼吸、皮肤和生殖上的差别。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "青蛙的成体可以在陆地生活，呼吸时主要依靠？",
+      "answer": "肺，并靠皮肤辅助"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j016",
+    "name": "鸟和哺乳动物",
+    "domain": "生物的多样性",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第2单元 多种多样的生物",
+    "type": "conceptual",
+    "description": "能说出鸟类适于飞行的特征，以及哺乳动物胎生、哺乳的特点。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "鸟类呼吸的特点是？",
+      "answer": "气体两次经过肺，气囊辅助呼吸"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j017",
+    "name": "微生物的分布",
+    "domain": "生物的多样性",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第2单元 多种多样的生物",
+    "type": "procedural",
+    "description": "知道细菌和真菌分布广泛，并了解检测菌落的基本步骤。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "由一个细菌或真菌繁殖后形成的、肉眼可见的集合体叫做？",
+      "answer": "菌落"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j018",
+    "name": "细菌",
+    "domain": "生物的多样性",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第2单元 多种多样的生物",
+    "type": "conceptual",
+    "description": "知道细菌没有成形的细胞核，靠分裂繁殖，芽孢是休眠体。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "细菌与酵母菌相比，结构上最主要的区别是？",
+      "answer": "细菌没有成形的细胞核"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j019",
+    "name": "真菌",
+    "domain": "生物的多样性",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第2单元 多种多样的生物",
+    "type": "conceptual",
+    "description": "知道真菌有成形的细胞核，营异养生活，酵母菌可以出芽生殖并用于发酵。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "蘑菇、酵母菌和霉菌都属于？",
+      "answer": "真菌"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      },
+      {
+        "id": "cbs-2022:BX.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j020",
+    "name": "病毒",
+    "domain": "生物的多样性",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第2单元 多种多样的生物",
+    "type": "conceptual",
+    "description": "知道病毒没有细胞结构，必须寄生在活细胞里，以复制方式增殖。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "病毒的结构通常包括？",
+      "answer": "蛋白质外壳和内部的遗传物质"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j021",
+    "name": "尝试对生物进行分类",
+    "domain": "生物的多样性",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第2单元 多种多样的生物",
+    "type": "procedural",
+    "description": "能根据形态结构等特征，把生物逐级归类。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "对生物进行分类，主要依据是？",
+      "answer": "形态结构等特征"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j022",
+    "name": "从种到界",
+    "domain": "生物的多样性",
+    "grade": 7,
+    "semester": "上",
+    "chapter": "七年级上册 第2单元 多种多样的生物",
+    "type": "conceptual",
+    "description": "知道界、门、纲、目、科、属、种七个等级，种是最基本的分类单位。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "生物分类的单位从大到小依次是？",
+      "answer": "界、门、纲、目、科、属、种"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j023",
+    "name": "种子的萌发",
+    "domain": "植物的生活",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第3单元 植物的生活",
+    "type": "conceptual",
+    "description": "知道种子萌发需要完整有活力的胚、适宜的温度、一定的水分和充足的空气。",
+    "mastery_criteria": [
+      "能说出植物生活中的结构和生理过程",
+      "能把实验现象对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "种子萌发所需的环境条件是？",
+      "answer": "适宜的温度、一定的水分和充足的空气"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BP.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j024",
+    "name": "植株的生长",
+    "domain": "植物的生活",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第3单元 植物的生活",
+    "type": "conceptual",
+    "description": "知道根的生长、芽的发育，以及氮、磷、钾对植株的作用。",
+    "mastery_criteria": [
+      "能说出植物生活中的结构和生理过程",
+      "能把实验现象对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "根吸收水分和无机盐的主要部位是？",
+      "answer": "成熟区"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BP.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j025",
+    "name": "开花和结果",
+    "domain": "植物的生活",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第3单元 植物的生活",
+    "type": "conceptual",
+    "description": "能说出花的主要结构，以及传粉、受精后子房和胚珠的发育结果。",
+    "mastery_criteria": [
+      "能说出植物生活中的结构和生理过程",
+      "能把实验现象对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "一朵花中，与结出果实和种子直接有关的结构是？",
+      "answer": "雄蕊和雌蕊"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BP.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j026",
+    "name": "水的利用与散失",
+    "domain": "植物的生活",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第3单元 植物的生活",
+    "type": "conceptual",
+    "description": "知道导管运输水分，气孔和保卫细胞与蒸腾作用有关。",
+    "mastery_criteria": [
+      "能说出植物生活中的结构和生理过程",
+      "能把实验现象对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "水分在植物体内上升，主要经过？",
+      "answer": "导管"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BP.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j027",
+    "name": "光合作用",
+    "domain": "植物的生活",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第3单元 植物的生活",
+    "type": "conceptual",
+    "description": "能说明光合作用的原料、产物、条件和场所，并解释绿叶在光下制造淀粉的实验。",
+    "mastery_criteria": [
+      "能说出植物生活中的结构和生理过程",
+      "能把实验现象对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "光合作用的原料是？",
+      "answer": "二氧化碳和水"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BP.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j028",
+    "name": "呼吸作用",
+    "domain": "植物的生活",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第3单元 植物的生活",
+    "type": "conceptual",
+    "description": "能说明呼吸作用分解有机物、释放能量，并与光合作用比较。",
+    "mastery_criteria": [
+      "能说出植物生活中的结构和生理过程",
+      "能把实验现象对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "植物呼吸作用的主要场所是？",
+      "answer": "线粒体"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BP.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j029",
+    "name": "植物在自然界中的作用",
+    "domain": "植物的生活",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第3单元 植物的生活",
+    "type": "reasoning",
+    "description": "能说明植物为其他生物提供食物、维持碳氧平衡并参与水循环。",
+    "mastery_criteria": [
+      "能说出植物生活中的结构和生理过程",
+      "能把实验现象对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "绿色植物维持生物圈碳氧平衡，主要依靠？",
+      "answer": "光合作用释放氧气、吸收二氧化碳"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BP.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j030",
+    "name": "人的生殖",
+    "domain": "人体生理与健康",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第4单元 人体生理与健康（一）",
+    "type": "conceptual",
+    "description": "能说出睾丸、卵巢的功能，以及受精和胚胎发育的场所。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "男性产生精子并分泌雄性激素的器官是？",
+      "answer": "睾丸"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j031",
+    "name": "青春期",
+    "domain": "人体生理与健康",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第4单元 人体生理与健康（一）",
+    "type": "conceptual",
+    "description": "知道青春期身体和心理的主要变化，以及遗精、月经是正常生理现象。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "青春期发育最明显的特点是？",
+      "answer": "身高和体重迅速增长，生殖器官发育成熟"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j032",
+    "name": "食物中的营养物质",
+    "domain": "人体生理与健康",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第4单元 人体生理与健康（一）",
+    "type": "conceptual",
+    "description": "能说出六类营养物质的作用，以及缺乏维生素或无机盐时的常见表现。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "为人体生命活动提供能量的主要物质是？",
+      "answer": "糖类"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j033",
+    "name": "消化和吸收",
+    "domain": "人体生理与健康",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第4单元 人体生理与健康（一）",
+    "type": "conceptual",
+    "description": "能说出淀粉、蛋白质、脂肪开始消化的部位，以及小肠是主要吸收场所。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "淀粉开始被消化的部位是？",
+      "answer": "口腔"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j034",
+    "name": "合理营养与食品安全",
+    "domain": "人体生理与健康",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第4单元 人体生理与健康（一）",
+    "type": "application",
+    "description": "能根据平衡膳食判断一日三餐，并会查看食品的生产日期和保质期。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "合理营养是指？",
+      "answer": "食物多样，营养比例合适，并能满足身体需要"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j035",
+    "name": "呼吸道对空气的处理",
+    "domain": "人体生理与健康",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第4单元 人体生理与健康（一）",
+    "type": "conceptual",
+    "description": "能按顺序说出呼吸道的组成，并说明呼吸道对空气的温暖、湿润和清洁作用。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "呼吸道由上到下依次包括？",
+      "answer": "鼻、咽、喉、气管、支气管"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j036",
+    "name": "发生在肺内的气体交换",
+    "domain": "人体生理与健康",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第4单元 人体生理与健康（一）",
+    "type": "conceptual",
+    "description": "能说明肺泡适于气体交换的特点，以及吸气和呼气时胸廓的变化。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "人体与外界进行气体交换的主要场所是？",
+      "answer": "肺"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j037",
+    "name": "流动的组织——血液",
+    "domain": "人体生理与健康",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第4单元 人体生理与健康（一）",
+    "type": "conceptual",
+    "description": "能说出血浆和三种血细胞的功能，并解释贫血的常见原因。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "血液由哪两部分组成？",
+      "answer": "血浆和血细胞"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j038",
+    "name": "血流的管道——血管",
+    "domain": "人体生理与健康",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第4单元 人体生理与健康（一）",
+    "type": "conceptual",
+    "description": "能比较动脉、静脉和毛细血管的结构与功能。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "把血液从心脏送到全身各处的血管是？",
+      "answer": "动脉"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j039",
+    "name": "输送血液的泵——心脏",
+    "domain": "人体生理与健康",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第4单元 人体生理与健康（一）",
+    "type": "conceptual",
+    "description": "能描述心脏四腔、瓣膜和体循环、肺循环的路径。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "心脏四个腔中，壁最厚的是？",
+      "answer": "左心室"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j040",
+    "name": "人体内废物的排出",
+    "domain": "人体生理与健康",
+    "grade": 7,
+    "semester": "下",
+    "chapter": "七年级下册 第4单元 人体生理与健康（一）",
+    "type": "conceptual",
+    "description": "能区分排泄和排遗，说出泌尿系统、肾单位以及尿的形成。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "排泄是指排出？",
+      "answer": "二氧化碳、尿素和多余的水、无机盐等代谢废物"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j041",
+    "name": "人体对外界环境的感知",
+    "domain": "人体生理与健康",
+    "grade": 8,
+    "semester": "上",
+    "chapter": "八年级上册 第4单元 人体生理与健康（二）",
+    "type": "conceptual",
+    "description": "能说出视觉、听觉形成的基本路径，以及近视的成因和矫正。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "外界物体反射来的光线，在眼球里成像的部位是？",
+      "answer": "视网膜"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j042",
+    "name": "神经调节",
+    "domain": "人体生理与健康",
+    "grade": 8,
+    "semester": "上",
+    "chapter": "八年级上册 第4单元 人体生理与健康（二）",
+    "type": "conceptual",
+    "description": "能说出反射弧的五个部分，并区分简单反射和复杂反射。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "完成反射的神经结构是？",
+      "answer": "反射弧"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j043",
+    "name": "神经系统支配下的运动",
+    "domain": "人体生理与健康",
+    "grade": 8,
+    "semester": "上",
+    "chapter": "八年级上册 第4单元 人体生理与健康（二）",
+    "type": "conceptual",
+    "description": "知道运动系统由骨、关节和骨骼肌组成，骨骼肌要受神经支配才能收缩。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "运动系统主要由哪些结构组成？",
+      "answer": "骨、关节和骨骼肌"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j044",
+    "name": "激素调节",
+    "domain": "人体生理与健康",
+    "grade": 8,
+    "semester": "上",
+    "chapter": "八年级上册 第4单元 人体生理与健康（二）",
+    "type": "conceptual",
+    "description": "能说出生长激素、甲状腺激素和胰岛素的主要作用及异常时的表现。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "幼年时期生长激素分泌不足，可能患？",
+      "answer": "侏儒症"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j045",
+    "name": "传染病及其预防",
+    "domain": "人体生理与健康",
+    "grade": 8,
+    "semester": "上",
+    "chapter": "八年级上册 第4单元 人体生理与健康（二）",
+    "type": "conceptual",
+    "description": "能说出传染病流行的三个环节和预防措施。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "传染病流行必须同时具备？",
+      "answer": "传染源、传播途径和易感人群"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j046",
+    "name": "免疫与免疫规划",
+    "domain": "人体生理与健康",
+    "grade": 8,
+    "semester": "上",
+    "chapter": "八年级上册 第4单元 人体生理与健康（二）",
+    "type": "conceptual",
+    "description": "能区分三道免疫防线，并说明接种疫苗属于免疫规划。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "皮肤和黏膜阻挡病原体，属于？",
+      "answer": "第一道防线"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j047",
+    "name": "用药与急救",
+    "domain": "人体生理与健康",
+    "grade": 8,
+    "semester": "上",
+    "chapter": "八年级上册 第4单元 人体生理与健康（二）",
+    "type": "application",
+    "description": "能区分处方药和非处方药，并知道常见急救原则。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "非处方药的英文简称是？",
+      "answer": "OTC"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j048",
+    "name": "选择健康的生活方式",
+    "domain": "人体生理与健康",
+    "grade": 8,
+    "semester": "上",
+    "chapter": "八年级上册 第4单元 人体生理与健康（二）",
+    "type": "application",
+    "description": "能说明吸烟、酗酒、毒品和缺乏运动对健康的危害。",
+    "mastery_criteria": [
+      "能说出本课涉及的结构、生理过程或健康常识",
+      "能把结构与功能对应到教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "健康的生活方式包括？",
+      "answer": "均衡营养、坚持锻炼、不吸烟、不酗酒、拒绝毒品"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BH.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j049",
+    "name": "生物与环境的相互作用",
+    "domain": "生物与环境",
+    "grade": 8,
+    "semester": "上",
+    "chapter": "八年级上册 第5单元 生物与环境",
+    "type": "conceptual",
+    "description": "能举出环境影响生物、生物适应并影响环境的例子。",
+    "mastery_criteria": [
+      "能说出生物与环境、生态系统的基本关系",
+      "能判断食物链、能量流动或生态问题的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "影响生物生活的非生物因素包括？",
+      "answer": "光、温度、水和空气"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BE.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j050",
+    "name": "生态系统的结构和功能",
+    "domain": "生物与环境",
+    "grade": 8,
+    "semester": "上",
+    "chapter": "八年级上册 第5单元 生物与环境",
+    "type": "conceptual",
+    "description": "能说出生态系统的组成、食物链和能量流动的特点。",
+    "mastery_criteria": [
+      "能说出生物与环境、生态系统的基本关系",
+      "能判断食物链、能量流动或生态问题的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "生态系统中，能把无机物制造成有机物的是？",
+      "answer": "生产者"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BE.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j051",
+    "name": "生物圈",
+    "domain": "生物与环境",
+    "grade": 8,
+    "semester": "上",
+    "chapter": "八年级上册 第5单元 生物与环境",
+    "type": "conceptual",
+    "description": "知道生物圈是最大的生态系统，以及生物生存的基本条件。",
+    "mastery_criteria": [
+      "能说出生物与环境、生态系统的基本关系",
+      "能判断食物链、能量流动或生态问题的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "生物圈的范围大致包括？",
+      "answer": "大气圈的底部、水圈的大部和岩石圈的表面"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BE.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j052",
+    "name": "分析人类活动对生态环境的影响",
+    "domain": "生物与环境",
+    "grade": 8,
+    "semester": "上",
+    "chapter": "八年级上册 第5单元 生物与环境",
+    "type": "reasoning",
+    "description": "能用具体事例说明人类活动对植被、生物多样性和环境质量的影响。",
+    "mastery_criteria": [
+      "能说出生物与环境、生态系统的基本关系",
+      "能判断食物链、能量流动或生态问题的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "大量砍伐森林后，较容易引起？",
+      "answer": "水土流失"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BE.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j053",
+    "name": "维护生态安全",
+    "domain": "生物与环境",
+    "grade": 8,
+    "semester": "上",
+    "chapter": "八年级上册 第5单元 生物与环境",
+    "type": "application",
+    "description": "能说出保护植被、建立保护区和减少污染等维护生态安全的做法。",
+    "mastery_criteria": [
+      "能说出生物与环境、生态系统的基本关系",
+      "能判断食物链、能量流动或生态问题的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "维护生态安全，较合适的做法是？",
+      "answer": "保护植被、治理污染、防止外来物种随意扩散"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BE.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j054",
+    "name": "无性生殖",
+    "domain": "遗传与进化",
+    "grade": 8,
+    "semester": "下",
+    "chapter": "八年级下册 第6单元 生命的延续和发展",
+    "type": "conceptual",
+    "description": "能判断不经过两性生殖细胞结合的生殖方式，并说明嫁接的要点。",
+    "mastery_criteria": [
+      "能说出生殖、遗传或进化的基本事实",
+      "能用教材中的概念解释一个典型例子"
+    ],
+    "diagnostic_question": {
+      "question": "无性生殖的特点是？",
+      "answer": "不经过两性生殖细胞的结合"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BG.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j055",
+    "name": "有性生殖",
+    "domain": "遗传与进化",
+    "grade": 8,
+    "semester": "下",
+    "chapter": "八年级下册 第6单元 生命的延续和发展",
+    "type": "conceptual",
+    "description": "知道有性生殖要经过两性生殖细胞结合，后代具有双亲的遗传特性。",
+    "mastery_criteria": [
+      "能说出生殖、遗传或进化的基本事实",
+      "能用教材中的概念解释一个典型例子"
+    ],
+    "diagnostic_question": {
+      "question": "有性生殖必须经过？",
+      "answer": "两性生殖细胞结合"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BG.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j056",
+    "name": "基因与生物性状的关系",
+    "domain": "遗传与进化",
+    "grade": 8,
+    "semester": "下",
+    "chapter": "八年级下册 第6单元 生命的延续和发展",
+    "type": "conceptual",
+    "description": "知道基因是有遗传效应的 DNA 片段，基因控制性状，环境也会影响性状。",
+    "mastery_criteria": [
+      "能说出生殖、遗传或进化的基本事实",
+      "能用教材中的概念解释一个典型例子"
+    ],
+    "diagnostic_question": {
+      "question": "基因是？",
+      "answer": "有遗传效应的 DNA 片段"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BG.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j057",
+    "name": "基因在亲子代间的传递",
+    "domain": "遗传与进化",
+    "grade": 8,
+    "semester": "下",
+    "chapter": "八年级下册 第6单元 生命的延续和发展",
+    "type": "conceptual",
+    "description": "知道体细胞中染色体成对、生殖细胞中染色体成单，受精后恢复成对。",
+    "mastery_criteria": [
+      "能说出生殖、遗传或进化的基本事实",
+      "能用教材中的概念解释一个典型例子"
+    ],
+    "diagnostic_question": {
+      "question": "人的体细胞中染色体数目是？",
+      "answer": "23 对"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BG.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j058",
+    "name": "基因的显性和隐性",
+    "domain": "遗传与进化",
+    "grade": 8,
+    "semester": "下",
+    "chapter": "八年级下册 第6单元 生命的延续和发展",
+    "type": "conceptual",
+    "description": "能根据相对性状判断显性表现和隐性纯合时的基因组成。",
+    "mastery_criteria": [
+      "能说出生殖、遗传或进化的基本事实",
+      "能用教材中的概念解释一个典型例子"
+    ],
+    "diagnostic_question": {
+      "question": "相对性状是指？",
+      "answer": "同种生物同一性状的不同表现"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BG.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j059",
+    "name": "人的性别决定",
+    "domain": "遗传与进化",
+    "grade": 8,
+    "semester": "下",
+    "chapter": "八年级下册 第6单元 生命的延续和发展",
+    "type": "conceptual",
+    "description": "知道女性性染色体是 XX、男性是 XY，生男生女取决于精子的类型。",
+    "mastery_criteria": [
+      "能说出生殖、遗传或进化的基本事实",
+      "能用教材中的概念解释一个典型例子"
+    ],
+    "diagnostic_question": {
+      "question": "女性体细胞中的性染色体组成是？",
+      "answer": "XX"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BG.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j060",
+    "name": "生物的变异",
+    "domain": "遗传与进化",
+    "grade": 8,
+    "semester": "下",
+    "chapter": "八年级下册 第6单元 生命的延续和发展",
+    "type": "conceptual",
+    "description": "能区分可遗传变异和不可遗传变异。",
+    "mastery_criteria": [
+      "能说出生殖、遗传或进化的基本事实",
+      "能用教材中的概念解释一个典型例子"
+    ],
+    "diagnostic_question": {
+      "question": "变异是指？",
+      "answer": "亲子代之间以及子代个体之间的差异"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BG.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j061",
+    "name": "地球上生命的起源",
+    "domain": "遗传与进化",
+    "grade": 8,
+    "semester": "下",
+    "chapter": "八年级下册 第6单元 生命的延续和发展",
+    "type": "conceptual",
+    "description": "知道原始生命起源于原始海洋，以及米勒实验说明了什么。",
+    "mastery_criteria": [
+      "能说出生殖、遗传或进化的基本事实",
+      "能用教材中的概念解释一个典型例子"
+    ],
+    "diagnostic_question": {
+      "question": "原始生命诞生的场所，目前较普遍的认识是？",
+      "answer": "原始海洋"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BG.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j062",
+    "name": "生物进化的历程",
+    "domain": "遗传与进化",
+    "grade": 8,
+    "semester": "下",
+    "chapter": "八年级下册 第6单元 生命的延续和发展",
+    "type": "conceptual",
+    "description": "能根据化石和比较的证据，说出生物进化的总体趋势。",
+    "mastery_criteria": [
+      "能说出生殖、遗传或进化的基本事实",
+      "能用教材中的概念解释一个典型例子"
+    ],
+    "diagnostic_question": {
+      "question": "研究生物进化历程最直接的证据之一是？",
+      "answer": "化石"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BG.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j063",
+    "name": "生物进化的原因",
+    "domain": "遗传与进化",
+    "grade": 8,
+    "semester": "下",
+    "chapter": "八年级下册 第6单元 生命的延续和发展",
+    "type": "reasoning",
+    "description": "能用过度繁殖、遗传变异、生存斗争和适者生存说明自然选择。",
+    "mastery_criteria": [
+      "能说出生殖、遗传或进化的基本事实",
+      "能用教材中的概念解释一个典型例子"
+    ],
+    "diagnostic_question": {
+      "question": "达尔文解释生物进化的学说是？",
+      "answer": "自然选择学说"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BG.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j064",
+    "name": "人类的起源",
+    "domain": "遗传与进化",
+    "grade": 8,
+    "semester": "下",
+    "chapter": "八年级下册 第6单元 生命的延续和发展",
+    "type": "conceptual",
+    "description": "知道现代类人猿和人类的共同祖先是森林古猿，直立行走是重要标志。",
+    "mastery_criteria": [
+      "能说出生殖、遗传或进化的基本事实",
+      "能用教材中的概念解释一个典型例子"
+    ],
+    "diagnostic_question": {
+      "question": "现代类人猿和人类的共同祖先是？",
+      "answer": "森林古猿"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BG.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j065",
+    "name": "进化与生物多样性",
+    "domain": "生物的多样性",
+    "grade": 8,
+    "semester": "下",
+    "chapter": "八年级下册 第6单元 生命的延续和发展",
+    "type": "conceptual",
+    "description": "能说出生物多样性的三个层次，并把多样性与进化联系起来。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "生物多样性包括？",
+      "answer": "基因多样性、物种多样性和生态系统多样性"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.05",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnb_j066",
+    "name": "人与自然和谐共生",
+    "domain": "生物的多样性",
+    "grade": 8,
+    "semester": "下",
+    "chapter": "八年级下册 第6单元 生命的延续和发展",
+    "type": "conceptual",
+    "description": "能说出威胁生物多样性的主要原因，以及就地保护和迁地保护。",
+    "mastery_criteria": [
+      "能说出本课类群或分类的主要特征",
+      "能把类群特征对应到教材中的典型生物"
+    ],
+    "diagnostic_question": {
+      "question": "保护生物多样性最有效的措施是？",
+      "answer": "建立自然保护区，就地保护"
+    },
+    "external": false,
+    "subject": "biology",
+    "standards": [
+      {
+        "id": "cbs-2022:BD.05",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
   }
 ]

@@ -4,8 +4,8 @@
   var CC = window.CnmChildren;
   var picker = document.getElementById('picker');
   var content = document.getElementById('content');
-  var SUBJECTS = [['', '全部'], ['math', '数学'], ['chinese', '语文'], ['science', '科学'], ['morality', '道德与法治'], ['history', '历史'], ['geography', '地理'], ['english', '英语'], ['physics', '物理']];
-  var SUBJECT_NAME = { math: '数学', chinese: '语文', science: '科学', morality: '道德与法治', history: '历史', geography: '地理', english: '英语', physics: '物理' };
+  var SUBJECTS = [['', '全部'], ['math', '数学'], ['chinese', '语文'], ['science', '科学'], ['morality', '道德与法治'], ['history', '历史'], ['geography', '地理'], ['biology', '生物'], ['english', '英语'], ['physics', '物理']];
+  var SUBJECT_NAME = { math: '数学', chinese: '语文', science: '科学', morality: '道德与法治', history: '历史', geography: '地理', biology: '生物', english: '英语', physics: '物理' };
   var topics = null;
   var childId = null;
   var subjectSel = '';
@@ -18,7 +18,7 @@
   }
   function subjectOfId(id) {
     id = String(id || '');
-    return id.indexOf('cne_') === 0 ? 'english' : id.indexOf('cnp_') === 0 ? 'physics' : id.indexOf('cnc_') === 0 ? 'chinese' : id.indexOf('cns_') === 0 ? 'science' : id.indexOf('cnd_') === 0 ? 'morality' : id.indexOf('cnh_') === 0 ? 'history' : id.indexOf('cng_') === 0 ? 'geography' : 'math';
+    return id.indexOf('cne_') === 0 ? 'english' : id.indexOf('cnp_') === 0 ? 'physics' : id.indexOf('cnc_') === 0 ? 'chinese' : id.indexOf('cns_') === 0 ? 'science' : id.indexOf('cnd_') === 0 ? 'morality' : id.indexOf('cnh_') === 0 ? 'history' : id.indexOf('cng_') === 0 ? 'geography' : id.indexOf('cnb_') === 0 ? 'biology' : 'math';
   }
   function exploreHref(id) {
     var sub = subjectOfId(id);
@@ -201,7 +201,7 @@
       recs.forEach(function (r) { sec.appendChild(recordCard(child, r)); });
     }
     var go = el('a', 'btn btn-primary', '去做一次诊断');
-    go.href = '../diagnose/' + (subjectSel === 'english' || subjectSel === 'physics' || subjectSel === 'chinese' || subjectSel === 'science' || subjectSel === 'morality' || subjectSel === 'history' || subjectSel === 'geography' ? '?subject=' + subjectSel : '');
+    go.href = '../diagnose/' + (subjectSel === 'english' || subjectSel === 'physics' || subjectSel === 'chinese' || subjectSel === 'science' || subjectSel === 'morality' || subjectSel === 'history' || subjectSel === 'geography' || subjectSel === 'biology' ? '?subject=' + subjectSel : '');
     sec.appendChild(go);
     return sec;
   }
