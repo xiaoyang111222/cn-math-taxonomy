@@ -3,7 +3,7 @@
 
 可以重复运行：先去掉已有的 cnb_ 知识点和 cbs- 课标条目，再按脚本重新写入。
 不改数学、英语、物理、语文、科学、道德与法治、历史、地理的知识点、先修、题目和课标。
-先修边只对生物边做传递约简。
+先修边只对生物边做传递约简。登记过的示意图在编译题目时写入 figure。
 
 用法：python3 scripts/bio_build.py
 """
@@ -25,6 +25,7 @@ from bio_lib import (  # noqa: E402
     CODE_OF, EXTRA_STD, HARD, STANDARD_ROWS, TEXT_STATUS, TOPICS,
     chapter, check_question, materialise_questions,
 )
+from bio_figs import figure_for  # noqa: E402
 from verify_questions import verify_all  # noqa: E402
 
 CHAPTER_RE = re.compile(r"^([一二三四五六七八九])年级([上下全])册 (第\d+单元|预备单元\d) (.+)$")
@@ -228,6 +229,9 @@ def main():
         diag_answer = None
         for n, item in enumerate(made, start=1):
             q, shown = build_question(tid, n, item, slot=i + n)
+            fig = figure_for(q)
+            if fig:
+                q["figure"] = fig
             built.append(q)
             if n == 1:
                 diag_answer = shown

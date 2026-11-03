@@ -249,9 +249,9 @@ screenshots/             首页、知识图谱与诊断页截图（01–05 诊�
 - 知识点 66 个（`cnb_j001`–`cnb_j066`）：七上 22、七下 18、八上 13、八下 13。
 - 领域：生物体的结构层次 10、生物的多样性 14、植物的生活 7、人体生理与健康 19、生物与环境 5、遗传与进化 11。领域名用课标七个学习主题中的前六个；跨学科实践不单建点。
 - 先修边 89 条（hard 60，soft 29），只在生物内部。后一册接在前一册后面，按教学顺序走软边；硬边只连接真正用到的概念（如显微镜→植物细胞、叶绿体→光合作用、基因传递→显隐性与性别决定）。
-- 题库 264 题，每个知识点 4 道选择题（2 道 basic、1 道 standard、1 道 challenge），全部带 `verify`。答案按教材中的结构、过程和经典实验判定对错。本轮不做生物配图。
+- 题库 264 题，每个知识点 4 道选择题（2 道 basic、1 道 standard、1 道 challenge），全部带 `verify`。答案按教材中的结构、过程和经典实验判定对错。其中 48 道题配有内联结构示意图（`scripts/bio_figs.py`，显微镜、细胞、植物、人体、食物链与碳氧循环、遗传），重跑 `bio_build.py` 时会写回 `figure`。
 - 课标条目 18 条（`cbs-2022:`）。首页、知识图谱、诊断通过 `?subject=biology` 切换，主题色为叶绿（生命绿）；诊断会话键 `cnbDiagnose.session.v1`。
-- 可复跑脚本：`python3 scripts/bio_build.py`（内容在 `scripts/bio_g7.py`、`scripts/bio_g8.py`，硬先修在 `scripts/bio_edges.py`）。
+- 可复跑脚本：`python3 scripts/bio_build.py`（内容在 `scripts/bio_g7.py`、`scripts/bio_g8.py`，硬先修在 `scripts/bio_edges.py`，配图在 `scripts/bio_figs.py`）。
 
 ## 小学英语（三至六年级）
 

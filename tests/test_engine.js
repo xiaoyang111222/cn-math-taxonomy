@@ -1045,6 +1045,16 @@ test('题库：带 figure 的题是可解析的内联 SVG，不引用外网；�
   assert.ok(n >= 80, '带图的题太少：' + n);
 });
 
+test('题库：初中生物有内联结构示意图', () => {
+  const bio = questions.filter((q) => String(q.topicId || '').startsWith('cnb_') && q.figure);
+  assert.ok(bio.length >= 35 && bio.length <= 50, '生物配图题数 ' + bio.length);
+  ['cnb_j003_q1', 'cnb_j004_q1', 'cnb_j050_q3'].forEach((id) => {
+    const q = questions.find((item) => item.id === id);
+    assert.ok(q && q.figure && q.figure.indexOf('currentColor') > 0, id);
+    assert.ok(q.figure.indexOf('viewBox=') > 0, id);
+  });
+});
+
 test('题库：choice 题有 3–4 个选项、key 不重复、answer 是某个选项的 key', () => {
   let n = 0;
   questions.filter((q) => q.type === 'choice').forEach((q) => {
