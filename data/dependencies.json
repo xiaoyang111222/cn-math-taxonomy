@@ -27268,5 +27268,485 @@
     "prerequisiteId": "cnb_j053",
     "strength": "hard",
     "reason": "维护生态安全是人与自然和谐共生的一部分。"
+  },
+  {
+    "topicId": "cnk_j002",
+    "prerequisiteId": "cnk_j001",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「化学使世界变得更加绚丽多彩」，再学「物质的变化和性质」。"
+  },
+  {
+    "topicId": "cnk_j003",
+    "prerequisiteId": "cnk_j002",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「物质的变化和性质」，再学「科学探究」。"
+  },
+  {
+    "topicId": "cnk_j005",
+    "prerequisiteId": "cnk_j004",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「化学实验基本操作」，再学「我们周围的空气」。"
+  },
+  {
+    "topicId": "cnk_j009",
+    "prerequisiteId": "cnk_j008",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「氧气的实验室制取与性质」，再学「分子和原子」。"
+  },
+  {
+    "topicId": "cnk_j012",
+    "prerequisiteId": "cnk_j011",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「元素」，再学「水资源及其利用」。"
+  },
+  {
+    "topicId": "cnk_j013",
+    "prerequisiteId": "cnk_j012",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「水资源及其利用」，再学「水的组成」。"
+  },
+  {
+    "topicId": "cnk_j014",
+    "prerequisiteId": "cnk_j013",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「水的组成」，再学「化学式与化合价」。"
+  },
+  {
+    "topicId": "cnk_j016",
+    "prerequisiteId": "cnk_j015",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「根据化学式的计算」，再学「水的组成及变化的探究」。"
+  },
+  {
+    "topicId": "cnk_j017",
+    "prerequisiteId": "cnk_j016",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「水的组成及变化的探究」，再学「质量守恒定律」。"
+  },
+  {
+    "topicId": "cnk_j020",
+    "prerequisiteId": "cnk_j019",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「利用化学方程式的简单计算」，再学「碳单质的多样性」。"
+  },
+  {
+    "topicId": "cnk_j023",
+    "prerequisiteId": "cnk_j022",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「一氧化碳」，再学「二氧化碳的实验室制取」。"
+  },
+  {
+    "topicId": "cnk_j025",
+    "prerequisiteId": "cnk_j024",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「二氧化碳的实验室制取与性质」，再学「燃料的燃烧」。"
+  },
+  {
+    "topicId": "cnk_j027",
+    "prerequisiteId": "cnk_j026",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「化石能源的合理利用」，再学「燃烧条件的探究」。"
+  },
+  {
+    "topicId": "cnk_j028",
+    "prerequisiteId": "cnk_j027",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「燃烧条件的探究」，再学「金属材料」。"
+  },
+  {
+    "topicId": "cnk_j031",
+    "prerequisiteId": "cnk_j030",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「金属活动性顺序」，再学「金属资源的利用和保护」。"
+  },
+  {
+    "topicId": "cnk_j032",
+    "prerequisiteId": "cnk_j031",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「金属资源的利用和保护」，再学「常见金属的物理性质和化学性质」。"
+  },
+  {
+    "topicId": "cnk_j033",
+    "prerequisiteId": "cnk_j032",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「常见金属的物理性质和化学性质」，再学「溶液及其应用」。"
+  },
+  {
+    "topicId": "cnk_j035",
+    "prerequisiteId": "cnk_j034",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「溶解度」，再学「溶质的质量分数」。"
+  },
+  {
+    "topicId": "cnk_j037",
+    "prerequisiteId": "cnk_j036",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「一定溶质质量分数的氯化钠溶液的配制」，再学「粗盐中难溶性杂质的去除」。"
+  },
+  {
+    "topicId": "cnk_j038",
+    "prerequisiteId": "cnk_j037",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「粗盐中难溶性杂质的去除」，再学「溶液的酸碱性」。"
+  },
+  {
+    "topicId": "cnk_j040",
+    "prerequisiteId": "cnk_j039",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「常见的酸」，再学「常见的碱」。"
+  },
+  {
+    "topicId": "cnk_j043",
+    "prerequisiteId": "cnk_j042",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「常见的盐」，再学「常见酸、碱的化学性质」。"
+  },
+  {
+    "topicId": "cnk_j044",
+    "prerequisiteId": "cnk_j043",
+    "strength": "soft",
+    "reason": "按人教版化学的教学顺序，先学「常见酸、碱的化学性质」，再学「化学与人体健康」。"
+  },
+  {
+    "topicId": "cnk_j004",
+    "prerequisiteId": "cnk_j003",
+    "strength": "hard",
+    "reason": "做化学实验，要先知道科学探究里实验和记录证据这一步。"
+  },
+  {
+    "topicId": "cnk_j006",
+    "prerequisiteId": "cnk_j005",
+    "strength": "hard",
+    "reason": "氧气是空气的一种成分，认识氧气的性质要先知道空气里有氧气。"
+  },
+  {
+    "topicId": "cnk_j007",
+    "prerequisiteId": "cnk_j006",
+    "strength": "hard",
+    "reason": "实验室制取氧气，要先知道氧气的性质和检验方法。"
+  },
+  {
+    "topicId": "cnk_j007",
+    "prerequisiteId": "cnk_j004",
+    "strength": "hard",
+    "reason": "制取气体要会连接仪器、检查气密性和加热。"
+  },
+  {
+    "topicId": "cnk_j008",
+    "prerequisiteId": "cnk_j007",
+    "strength": "hard",
+    "reason": "氧气的制取实验，用的就是实验室制取氧气的原理。"
+  },
+  {
+    "topicId": "cnk_j009",
+    "prerequisiteId": "cnk_j002",
+    "strength": "hard",
+    "reason": "用分子、原子解释物质变化，要先区分物理变化和化学变化。"
+  },
+  {
+    "topicId": "cnk_j010",
+    "prerequisiteId": "cnk_j009",
+    "strength": "hard",
+    "reason": "认识原子结构，要先知道原子是构成物质的一种微粒。"
+  },
+  {
+    "topicId": "cnk_j011",
+    "prerequisiteId": "cnk_j010",
+    "strength": "hard",
+    "reason": "元素按质子数归类，要先知道原子核内有质子。"
+  },
+  {
+    "topicId": "cnk_j013",
+    "prerequisiteId": "cnk_j009",
+    "strength": "hard",
+    "reason": "电解水生成氢气和氧气，要用分子分成原子再重新组合来理解。"
+  },
+  {
+    "topicId": "cnk_j013",
+    "prerequisiteId": "cnk_j006",
+    "strength": "hard",
+    "reason": "检验电解水得到的氧气，要先会检验氧气。"
+  },
+  {
+    "topicId": "cnk_j014",
+    "prerequisiteId": "cnk_j011",
+    "strength": "hard",
+    "reason": "化学式用元素符号表示物质组成，要先认识元素符号。"
+  },
+  {
+    "topicId": "cnk_j015",
+    "prerequisiteId": "cnk_j014",
+    "strength": "hard",
+    "reason": "根据化学式计算，要先会写化学式和化合价。"
+  },
+  {
+    "topicId": "cnk_j016",
+    "prerequisiteId": "cnk_j013",
+    "strength": "hard",
+    "reason": "探究水的组成，用的就是电解水的结论。"
+  },
+  {
+    "topicId": "cnk_j016",
+    "prerequisiteId": "cnk_j004",
+    "strength": "hard",
+    "reason": "完成水的组成实验，要先会基本操作。"
+  },
+  {
+    "topicId": "cnk_j017",
+    "prerequisiteId": "cnk_j009",
+    "strength": "hard",
+    "reason": "从微观解释质量守恒，要知道化学变化中原子的种类和数目不变。"
+  },
+  {
+    "topicId": "cnk_j018",
+    "prerequisiteId": "cnk_j017",
+    "strength": "hard",
+    "reason": "书写化学方程式，必须遵守质量守恒定律。"
+  },
+  {
+    "topicId": "cnk_j018",
+    "prerequisiteId": "cnk_j014",
+    "strength": "hard",
+    "reason": "化学方程式里的化学式，要先会根据组成来写。"
+  },
+  {
+    "topicId": "cnk_j019",
+    "prerequisiteId": "cnk_j018",
+    "strength": "hard",
+    "reason": "根据化学方程式计算，要先会写出配平的化学方程式。"
+  },
+  {
+    "topicId": "cnk_j019",
+    "prerequisiteId": "cnk_j015",
+    "strength": "hard",
+    "reason": "化学方程式计算要用到相对分子质量。"
+  },
+  {
+    "topicId": "cnk_j020",
+    "prerequisiteId": "cnk_j011",
+    "strength": "hard",
+    "reason": "金刚石、石墨都由碳元素组成，要先知道什么是元素。"
+  },
+  {
+    "topicId": "cnk_j021",
+    "prerequisiteId": "cnk_j014",
+    "strength": "hard",
+    "reason": "认识二氧化碳，要会看化学式 CO2。"
+  },
+  {
+    "topicId": "cnk_j021",
+    "prerequisiteId": "cnk_j020",
+    "strength": "hard",
+    "reason": "二氧化碳是碳的氧化物，要先知道碳单质。"
+  },
+  {
+    "topicId": "cnk_j022",
+    "prerequisiteId": "cnk_j021",
+    "strength": "hard",
+    "reason": "一氧化碳和二氧化碳都是碳的氧化物，性质要对着比较。"
+  },
+  {
+    "topicId": "cnk_j023",
+    "prerequisiteId": "cnk_j021",
+    "strength": "hard",
+    "reason": "实验室制取二氧化碳，要先知道它的性质和检验方法。"
+  },
+  {
+    "topicId": "cnk_j023",
+    "prerequisiteId": "cnk_j007",
+    "strength": "hard",
+    "reason": "制取二氧化碳要会选择发生装置和收集方法，这和制取氧气用的是同一套思路。"
+  },
+  {
+    "topicId": "cnk_j024",
+    "prerequisiteId": "cnk_j023",
+    "strength": "hard",
+    "reason": "二氧化碳的制取实验，用的就是实验室制取二氧化碳的原理。"
+  },
+  {
+    "topicId": "cnk_j025",
+    "prerequisiteId": "cnk_j006",
+    "strength": "hard",
+    "reason": "燃烧需要氧气，要先知道氧气能支持燃烧。"
+  },
+  {
+    "topicId": "cnk_j026",
+    "prerequisiteId": "cnk_j025",
+    "strength": "hard",
+    "reason": "讨论燃料怎样合理利用，要先知道燃烧和灭火。"
+  },
+  {
+    "topicId": "cnk_j027",
+    "prerequisiteId": "cnk_j025",
+    "strength": "hard",
+    "reason": "探究燃烧条件，就是检验可燃物、氧气和着火点这三条。"
+  },
+  {
+    "topicId": "cnk_j027",
+    "prerequisiteId": "cnk_j004",
+    "strength": "hard",
+    "reason": "完成燃烧条件实验，要先会基本操作。"
+  },
+  {
+    "topicId": "cnk_j029",
+    "prerequisiteId": "cnk_j028",
+    "strength": "hard",
+    "reason": "讨论金属和氧气、酸的反应，要先认识常见金属材料。"
+  },
+  {
+    "topicId": "cnk_j029",
+    "prerequisiteId": "cnk_j006",
+    "strength": "hard",
+    "reason": "金属在氧气中燃烧，用到氧气能支持燃烧。"
+  },
+  {
+    "topicId": "cnk_j030",
+    "prerequisiteId": "cnk_j029",
+    "strength": "hard",
+    "reason": "金属活动性顺序，是从金属与酸、与盐溶液的反应比较出来的。"
+  },
+  {
+    "topicId": "cnk_j031",
+    "prerequisiteId": "cnk_j029",
+    "strength": "hard",
+    "reason": "铁生锈和金属的防护，建立在金属能与氧气反应的基础上。"
+  },
+  {
+    "topicId": "cnk_j031",
+    "prerequisiteId": "cnk_j022",
+    "strength": "hard",
+    "reason": "用一氧化碳炼铁，要先知道一氧化碳能与某些金属氧化物反应。"
+  },
+  {
+    "topicId": "cnk_j032",
+    "prerequisiteId": "cnk_j030",
+    "strength": "hard",
+    "reason": "探究金属的化学性质，要用金属活动性顺序解释现象。"
+  },
+  {
+    "topicId": "cnk_j032",
+    "prerequisiteId": "cnk_j004",
+    "strength": "hard",
+    "reason": "完成金属性质实验，要先会基本操作。"
+  },
+  {
+    "topicId": "cnk_j033",
+    "prerequisiteId": "cnk_j002",
+    "strength": "hard",
+    "reason": "判断溶解多半是物理变化，要先会区分物理变化和化学变化。"
+  },
+  {
+    "topicId": "cnk_j034",
+    "prerequisiteId": "cnk_j033",
+    "strength": "hard",
+    "reason": "溶解度描述的是溶质在溶剂里溶解的限度，要先认识溶液。"
+  },
+  {
+    "topicId": "cnk_j035",
+    "prerequisiteId": "cnk_j033",
+    "strength": "hard",
+    "reason": "溶质的质量分数表示溶液组成，要先分清溶质、溶剂和溶液。"
+  },
+  {
+    "topicId": "cnk_j036",
+    "prerequisiteId": "cnk_j035",
+    "strength": "hard",
+    "reason": "配制一定质量分数的溶液，要先会计算溶质和溶剂的质量。"
+  },
+  {
+    "topicId": "cnk_j036",
+    "prerequisiteId": "cnk_j004",
+    "strength": "hard",
+    "reason": "配制溶液要用到称量、溶解等基本操作。"
+  },
+  {
+    "topicId": "cnk_j037",
+    "prerequisiteId": "cnk_j004",
+    "strength": "hard",
+    "reason": "除去粗盐中的难溶性杂质，要用过滤和蒸发。"
+  },
+  {
+    "topicId": "cnk_j037",
+    "prerequisiteId": "cnk_j033",
+    "strength": "hard",
+    "reason": "粗盐提纯先把粗盐溶解成溶液，要先认识溶液。"
+  },
+  {
+    "topicId": "cnk_j038",
+    "prerequisiteId": "cnk_j033",
+    "strength": "hard",
+    "reason": "溶液的酸碱性是溶液的一种性质，要先认识溶液。"
+  },
+  {
+    "topicId": "cnk_j039",
+    "prerequisiteId": "cnk_j038",
+    "strength": "hard",
+    "reason": "认识常见的酸，要先会用指示剂和 pH 判断酸性。"
+  },
+  {
+    "topicId": "cnk_j040",
+    "prerequisiteId": "cnk_j038",
+    "strength": "hard",
+    "reason": "认识常见的碱，要先会用指示剂和 pH 判断碱性。"
+  },
+  {
+    "topicId": "cnk_j041",
+    "prerequisiteId": "cnk_j039",
+    "strength": "hard",
+    "reason": "中和反应是酸和碱的反应，要先认识常见的酸。"
+  },
+  {
+    "topicId": "cnk_j041",
+    "prerequisiteId": "cnk_j040",
+    "strength": "hard",
+    "reason": "中和反应是酸和碱的反应，要先认识常见的碱。"
+  },
+  {
+    "topicId": "cnk_j042",
+    "prerequisiteId": "cnk_j041",
+    "strength": "hard",
+    "reason": "许多盐可以由中和反应生成，要先知道中和反应生成盐和水。"
+  },
+  {
+    "topicId": "cnk_j042",
+    "prerequisiteId": "cnk_j014",
+    "strength": "hard",
+    "reason": "常见的盐用化学式表示，要先会写化学式。"
+  },
+  {
+    "topicId": "cnk_j043",
+    "prerequisiteId": "cnk_j039",
+    "strength": "hard",
+    "reason": "酸的化学性质实验，检验的是酸与指示剂、金属、金属氧化物等的反应。"
+  },
+  {
+    "topicId": "cnk_j043",
+    "prerequisiteId": "cnk_j040",
+    "strength": "hard",
+    "reason": "碱的化学性质实验，检验的是碱与指示剂、非金属氧化物等的反应。"
+  },
+  {
+    "topicId": "cnk_j043",
+    "prerequisiteId": "cnk_j004",
+    "strength": "hard",
+    "reason": "完成酸、碱性质实验，要先会基本操作。"
+  },
+  {
+    "topicId": "cnk_j044",
+    "prerequisiteId": "cnk_j011",
+    "strength": "hard",
+    "reason": "讨论人体中的元素，要先认识元素。"
+  },
+  {
+    "topicId": "cnk_j045",
+    "prerequisiteId": "cnk_j026",
+    "strength": "hard",
+    "reason": "化学与可持续发展里的能源问题，接在化石能源的合理利用之后。"
+  },
+  {
+    "topicId": "cnk_j045",
+    "prerequisiteId": "cnk_j044",
+    "strength": "hard",
+    "reason": "材料与健康同属化学与社会，可持续发展要连着人体健康来看化学的作用。"
   }
 ]

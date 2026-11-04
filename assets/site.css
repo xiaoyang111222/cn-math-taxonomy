@@ -150,6 +150,17 @@ body.subject-biology {
   --logo-fold: #ffffff;
 }
 
+body.subject-chemistry {
+  --brand: #de3b16;
+  --brand-strong: #9f2a10;
+  --brand-soft: #fff1ec;
+  --on-brand: #ffffff;
+  --focus: #de3b16;
+  --accent: #de3b16;
+  --logo-sheet: #ffe4dc;
+  --logo-fold: #ffffff;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -287,6 +298,16 @@ body.subject-biology {
     --accent: #bef264;
     --logo-sheet: #365314;
     --logo-fold: #4d7c0f;
+  }
+  body.subject-chemistry {
+    --brand: #ff8a65;
+    --brand-strong: #ffccbc;
+    --brand-soft: #5d1a0e;
+    --on-brand: #3e0e06;
+    --focus: #ffccbc;
+    --accent: #ff8a65;
+    --logo-sheet: #7a2614;
+    --logo-fold: #de3b16;
   }
 }
 

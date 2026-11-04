@@ -82911,5 +82911,1236 @@
         "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
       }
     ]
+  },
+  {
+    "id": "cnk_j001",
+    "name": "化学使世界变得更加绚丽多彩",
+    "domain": "科学探究与化学实验",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第1单元 走进化学世界",
+    "type": "conceptual",
+    "description": "绪言（教师之家作「绪论」，用词待核）。认识化学研究物质的组成、结构、性质与变化，以及化学在材料、能源、健康和环境保护中的作用。挂在第 1 单元下，便于按册浏览。",
+    "mastery_criteria": [
+      "能说出本课的探究步骤或实验操作要点",
+      "能把现象和证据对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "化学主要在哪个层次上研究物质？",
+      "answer": "分子、原子"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SQ.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ],
+    "root_reason": "九年级上册从认识化学研究什么讲起。六三制初中化学在九年级开设，前面没有更早的初中化学知识点。"
+  },
+  {
+    "id": "cnk_j002",
+    "name": "物质的变化和性质",
+    "domain": "物质的化学变化",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第1单元 走进化学世界",
+    "type": "conceptual",
+    "description": "能区分物理变化和化学变化，也能区分物理性质和化学性质。化学变化有新物质生成。",
+    "mastery_criteria": [
+      "能判断变化类型或写出相关的化学方程式",
+      "能用质量守恒或反应规律解释一个典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "有新物质生成的变化是？",
+      "answer": "化学变化"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SR.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j003",
+    "name": "科学探究",
+    "domain": "科学探究与化学实验",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第1单元 走进化学世界",
+    "type": "procedural",
+    "description": "能按提出问题、猜想、设计实验、记录现象、得出结论和反思的顺序完成简单探究。",
+    "mastery_criteria": [
+      "能说出本课的探究步骤或实验操作要点",
+      "能把现象和证据对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "科学探究中，实验之前通常要先做的是？",
+      "answer": "提出问题并作出猜想"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SQ.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j004",
+    "name": "化学实验基本操作",
+    "domain": "科学探究与化学实验",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第1单元 走进化学世界",
+    "type": "procedural",
+    "description": "初步学会药品取用、加热、检查气密性，以及溶解、过滤、蒸发，并遵守实验室安全规则。这一部分属于「化学实验与科学探究」，不是单独印出的课题名。",
+    "mastery_criteria": [
+      "能说出本课的探究步骤或实验操作要点",
+      "能把现象和证据对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "闻气体气味时，正确的方法是？",
+      "answer": "用手在瓶口轻轻扇动，使少量气体飘进鼻孔"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SQ.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j005",
+    "name": "我们周围的空气",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第2单元 空气和氧气",
+    "type": "conceptual",
+    "description": "知道空气的主要成分及大致体积分数，能说明氮气、氧气的常见用途，并知道空气是混合物。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "空气中体积分数最大的气体是？",
+      "answer": "氮气"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      },
+      {
+        "id": "cks-2022:SC.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j006",
+    "name": "氧气",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第2单元 空气和氧气",
+    "type": "conceptual",
+    "description": "认识氧气的物理性质和氧化性：能支持燃烧，本身一般不燃烧。会用带火星的木条检验氧气。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "检验一瓶气体是不是氧气，常用的方法是？",
+      "answer": "把带火星的木条伸入瓶中，木条复燃"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j007",
+    "name": "制取氧气",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第2单元 空气和氧气",
+    "type": "procedural",
+    "description": "知道用过氧化氢在二氧化锰催化下制氧气，以及加热高锰酸钾制氧气。能选择发生装置和收集方法，并知道分解反应和催化剂。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "实验室用过氧化氢溶液和二氧化锰制氧气，二氧化锰的作用是？",
+      "answer": "催化剂，能加快反应，反应前后质量和化学性质不变"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      },
+      {
+        "id": "cks-2022:SR.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j008",
+    "name": "氧气的实验室制取与性质",
+    "domain": "科学探究与化学实验",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第2单元 空气和氧气",
+    "type": "procedural",
+    "description": "完成实验活动：检查气密性，用过氧化氢和二氧化锰制取氧气，并用带火星的木条检验。",
+    "mastery_criteria": [
+      "能说出本课的探究步骤或实验操作要点",
+      "能把现象和证据对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "制取氧气前，必须先做的一步是？",
+      "answer": "检查装置气密性"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SQ.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j009",
+    "name": "分子和原子",
+    "domain": "物质的组成与结构",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第3单元 物质构成的奥秘",
+    "type": "conceptual",
+    "description": "知道物质可以由分子、原子构成。分子、原子在不断运动，彼此有间隔。化学变化中分子可以分成原子，原子再重新组合。",
+    "mastery_criteria": [
+      "能用微粒、元素或化学式表示物质的组成",
+      "能完成教材要求的简单判断或计算"
+    ],
+    "diagnostic_question": {
+      "question": "墙内开花墙外香，主要说明？",
+      "answer": "分子在不断运动"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SC.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j010",
+    "name": "原子结构",
+    "domain": "物质的组成与结构",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第3单元 物质构成的奥秘",
+    "type": "conceptual",
+    "description": "知道原子由原子核和核外电子构成，原子核由质子和中子构成。原子中质子数等于核外电子数。",
+    "mastery_criteria": [
+      "能用微粒、元素或化学式表示物质的组成",
+      "能完成教材要求的简单判断或计算"
+    ],
+    "diagnostic_question": {
+      "question": "原子的中心部分是？",
+      "answer": "原子核"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SC.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j011",
+    "name": "元素",
+    "domain": "物质的组成与结构",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第3单元 物质构成的奥秘",
+    "type": "conceptual",
+    "description": "元素是质子数相同的一类原子的总称。能书写常见元素符号，并知道元素周期表给出原子序数、符号和相对原子质量。",
+    "mastery_criteria": [
+      "能用微粒、元素或化学式表示物质的组成",
+      "能完成教材要求的简单判断或计算"
+    ],
+    "diagnostic_question": {
+      "question": "决定元素种类的是？",
+      "answer": "质子数（核电荷数）"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SC.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j012",
+    "name": "水资源及其利用",
+    "domain": "化学与社会·跨学科实践",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第4单元 自然界的水",
+    "type": "application",
+    "description": "知道淡水并不充裕，能说出沉淀、过滤、吸附和蒸馏等净化水的方法，以及节约用水、防止水污染。",
+    "mastery_criteria": [
+      "能说出化学与资源、健康或材料的一个基本事实",
+      "能判断一种常见做法是否符合节约资源和保护环境"
+    ],
+    "diagnostic_question": {
+      "question": "净化水时，能把不溶性杂质与液体分离的操作是？",
+      "answer": "过滤"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SS.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j013",
+    "name": "水的组成",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第4单元 自然界的水",
+    "type": "conceptual",
+    "description": "通过电解水知道水由氢、氧两种元素组成。氢气与氧气体积比约为 2:1，并会检验这两种气体。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "电解水的实验说明水是？",
+      "answer": "由氢元素和氧元素组成的化合物"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j014",
+    "name": "化学式与化合价",
+    "domain": "物质的组成与结构",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第4单元 自然界的水",
+    "type": "procedural",
+    "description": "能用化学式表示常见物质，知道常见元素的化合价，并据此书写简单化学式。这一部分属于「物质组成的表示」。",
+    "mastery_criteria": [
+      "能用微粒、元素或化学式表示物质的组成",
+      "能完成教材要求的简单判断或计算"
+    ],
+    "diagnostic_question": {
+      "question": "化学式 H2O 表示？",
+      "answer": "1 个水分子由 2 个氢原子和 1 个氧原子构成"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SC.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j015",
+    "name": "根据化学式的计算",
+    "domain": "物质的组成与结构",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第4单元 自然界的水",
+    "type": "procedural",
+    "description": "能根据化学式，由相对原子质量求相对分子质量，并求元素质量比。计算用的相对原子质量在题中给出。这一部分仍属于「物质组成的表示」，不是单独的课题名。",
+    "mastery_criteria": [
+      "能用微粒、元素或化学式表示物质的组成",
+      "能完成教材要求的简单判断或计算"
+    ],
+    "diagnostic_question": {
+      "question": "相对分子质量等于？",
+      "answer": "化学式中各原子的相对原子质量之和"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SC.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j016",
+    "name": "水的组成及变化的探究",
+    "domain": "科学探究与化学实验",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第4单元 自然界的水",
+    "type": "procedural",
+    "description": "完成实验活动：电解水，比较两端气体体积，并检验氢气和氧气。",
+    "mastery_criteria": [
+      "能说出本课的探究步骤或实验操作要点",
+      "能把现象和证据对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "电解水实验中，体积较小的那一端气体能使？",
+      "answer": "带火星的木条复燃"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SQ.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j017",
+    "name": "质量守恒定律",
+    "domain": "物质的化学变化",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第5单元 化学反应的定量关系",
+    "type": "conceptual",
+    "description": "认识质量守恒定律：参加化学反应的各物质质量总和等于生成的各物质质量总和。能从原子种类、数目和质量不变来解释。",
+    "mastery_criteria": [
+      "能判断变化类型或写出相关的化学方程式",
+      "能用质量守恒或反应规律解释一个典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "质量守恒定律说的是？",
+      "answer": "参加反应的各物质质量总和等于生成的各物质质量总和"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SR.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j018",
+    "name": "化学方程式的书写",
+    "domain": "物质的化学变化",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第5单元 化学反应的定量关系",
+    "type": "procedural",
+    "description": "能根据实验事实书写简单化学方程式：配平、注明条件，气体和沉淀用箭头标出。不能改动化学式右下角的数字来配平。",
+    "mastery_criteria": [
+      "能判断变化类型或写出相关的化学方程式",
+      "能用质量守恒或反应规律解释一个典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "书写化学方程式的依据是？",
+      "answer": "客观事实和质量守恒定律"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SR.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j019",
+    "name": "利用化学方程式的简单计算",
+    "domain": "物质的化学变化",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第5单元 化学反应的定量关系",
+    "type": "procedural",
+    "description": "能根据配平的化学方程式，由一种纯净物的质量求出另一种物质的质量。参加计算的必须是实际参加反应的纯净物质量。",
+    "mastery_criteria": [
+      "能判断变化类型或写出相关的化学方程式",
+      "能用质量守恒或反应规律解释一个典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "根据化学方程式计算时，代入的质量必须是？",
+      "answer": "实际参加反应的纯净物质量"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SR.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j020",
+    "name": "碳单质的多样性",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第6单元 碳和碳的氧化物",
+    "type": "conceptual",
+    "description": "知道金刚石、石墨等都由碳元素组成，但物理性质差异很大。知道木炭、活性炭有吸附性。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "金刚石和石墨的相同点是？",
+      "answer": "都由碳元素组成"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j021",
+    "name": "二氧化碳的性质",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第6单元 碳和碳的氧化物",
+    "type": "conceptual",
+    "description": "知道二氧化碳的主要性质和用途：密度比空气大，能溶于水并与水反应，能使澄清石灰水变浑浊，一般不燃烧也不支持燃烧。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "检验二氧化碳的常用试剂是？",
+      "answer": "澄清石灰水"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j022",
+    "name": "一氧化碳",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第6单元 碳和碳的氧化物",
+    "type": "conceptual",
+    "description": "了解一氧化碳有可燃性和毒性，并能与某些金属氧化物反应。不把「还原性」当作必须记住的术语。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "一氧化碳的一个显著危害是？",
+      "answer": "有毒，能与血液中的血红蛋白结合"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j023",
+    "name": "二氧化碳的实验室制取",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第6单元 碳和碳的氧化物",
+    "type": "procedural",
+    "description": "用大理石或石灰石与稀盐酸制取二氧化碳，选择固液不加热装置和向上排空气法，并用澄清石灰水检验。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "实验室制取二氧化碳，常用的药品是？",
+      "answer": "大理石（或石灰石）和稀盐酸"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j024",
+    "name": "二氧化碳的实验室制取与性质",
+    "domain": "科学探究与化学实验",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第6单元 碳和碳的氧化物",
+    "type": "procedural",
+    "description": "完成实验活动：制取二氧化碳，检验，并观察它不支持燃烧、密度比空气大等性质。",
+    "mastery_criteria": [
+      "能说出本课的探究步骤或实验操作要点",
+      "能把现象和证据对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "制取二氧化碳时，长颈漏斗的下端应？",
+      "answer": "伸入液面以下"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SQ.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j025",
+    "name": "燃料的燃烧",
+    "domain": "物质的化学变化",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第7单元 能源的合理利用与开发",
+    "type": "conceptual",
+    "description": "知道燃烧需要可燃物、与氧气接触以及温度达到着火点。灭火就是破坏其中至少一个条件。不采用具体的着火点数字。",
+    "mastery_criteria": [
+      "能判断变化类型或写出相关的化学方程式",
+      "能用质量守恒或反应规律解释一个典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "燃烧需要同时满足的条件是？",
+      "answer": "可燃物、与氧气接触、温度达到着火点"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SR.05",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j026",
+    "name": "化石能源的合理利用",
+    "domain": "化学与社会·跨学科实践",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第7单元 能源的合理利用与开发",
+    "type": "application",
+    "description": "知道煤、石油、天然气是化石能源。石油分馏主要是物理变化。完全燃烧与不完全燃烧的产物不同。节约能源、减少排放。",
+    "mastery_criteria": [
+      "能说出化学与资源、健康或材料的一个基本事实",
+      "能判断一种常见做法是否符合节约资源和保护环境"
+    ],
+    "diagnostic_question": {
+      "question": "煤、石油、天然气属于？",
+      "answer": "化石能源，在短期内不能再生"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SS.01",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      },
+      {
+        "id": "cks-2022:SS.03",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j027",
+    "name": "燃烧条件的探究",
+    "domain": "科学探究与化学实验",
+    "grade": 9,
+    "semester": "上",
+    "chapter": "九年级上册 第7单元 能源的合理利用与开发",
+    "type": "procedural",
+    "description": "完成实验活动：用对照实验说明燃烧的三个条件。不记录红磷、白磷的具体着火点数字。",
+    "mastery_criteria": [
+      "能说出本课的探究步骤或实验操作要点",
+      "能把现象和证据对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "铜片上的白磷燃烧、红磷不燃烧，水中的白磷不燃烧。这个实验说明燃烧需要？",
+      "answer": "温度达到着火点，并且与氧气接触"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SQ.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j028",
+    "name": "金属材料",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第8单元 金属和金属材料",
+    "type": "conceptual",
+    "description": "知道金属的导电性、导热性、延展性和金属光泽，以及合金与纯金属的性质差异。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "多数金属共有的物理性质是？",
+      "answer": "有金属光泽，能导电、导热，有延展性"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.05",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j029",
+    "name": "金属与氧气、酸的反应",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第8单元 金属和金属材料",
+    "type": "conceptual",
+    "description": "知道常见金属与氧气、与稀酸反应的现象和化学方程式。铝表面的致密氧化膜能保护内部。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "铝在空气中不易继续被腐蚀，主要因为？",
+      "answer": "表面生成致密的氧化膜"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.05",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j030",
+    "name": "金属活动性顺序",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第8单元 金属和金属材料",
+    "type": "reasoning",
+    "description": "能用金属活动性顺序判断金属与酸、金属与盐溶液能否反应。这一部分是「金属的化学性质」中的比较，不是单独印出的课题名。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "金属活动性顺序里，排在氢前面的金属？",
+      "answer": "能与稀盐酸或稀硫酸反应产生氢气"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.05",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j031",
+    "name": "金属资源的利用和保护",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第8单元 金属和金属材料",
+    "type": "application",
+    "description": "知道铁矿石炼铁、铁锈蚀需要空气和水，以及涂油、喷漆、镀层等防锈方法。回收金属。炼铁反应不要求使用「还原性」这一术语。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "铁生锈需要的主要条件是？",
+      "answer": "与氧气和水同时接触"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.05",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j032",
+    "name": "常见金属的物理性质和化学性质",
+    "domain": "科学探究与化学实验",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第8单元 金属和金属材料",
+    "type": "procedural",
+    "description": "完成实验活动：比较常见金属的导电、颜色等物理性质，以及与稀酸、与盐溶液反应的现象。实验活动名称各公开目录用词不完全一致，待核。",
+    "mastery_criteria": [
+      "能说出本课的探究步骤或实验操作要点",
+      "能把现象和证据对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "比较镁、铁、铜与同浓度稀盐酸的反应，产生气泡由快到慢，说明活动性？",
+      "answer": "镁大于铁大于铜"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SQ.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j033",
+    "name": "溶液及其应用",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第9单元 溶液",
+    "type": "conceptual",
+    "description": "认识溶液由溶质和溶剂组成，是均一、稳定的混合物。能区分溶液、悬浊液和乳浊液。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "溶液的特征是？",
+      "answer": "均一、稳定的混合物"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j034",
+    "name": "溶解度",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第9单元 溶液",
+    "type": "conceptual",
+    "description": "理解固体溶解度要指明温度，单位是在 100 g 溶剂里达到饱和所溶解的溶质质量。知道多数固体溶解度随温度升高而增大。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "固体溶解度的含义是？",
+      "answer": "一定温度下，100 g 溶剂中达到饱和时溶解的溶质质量"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j035",
+    "name": "溶质的质量分数",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第9单元 溶液",
+    "type": "procedural",
+    "description": "能用溶质质量与溶液质量之比表示溶液组成，并计算配制溶液所需的溶质和溶剂质量。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "溶质的质量分数等于？",
+      "answer": "溶质质量除以溶液质量"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j036",
+    "name": "一定溶质质量分数的氯化钠溶液的配制",
+    "domain": "科学探究与化学实验",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第9单元 溶液",
+    "type": "procedural",
+    "description": "完成实验活动：计算、称量、量取、溶解，配制一定质量分数的氯化钠溶液。",
+    "mastery_criteria": [
+      "能说出本课的探究步骤或实验操作要点",
+      "能把现象和证据对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "配制溶液时，称量氯化钠常用？",
+      "answer": "托盘天平"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SQ.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j037",
+    "name": "粗盐中难溶性杂质的去除",
+    "domain": "科学探究与化学实验",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第9单元 溶液",
+    "type": "procedural",
+    "description": "完成实验活动：溶解、过滤、蒸发，除去粗盐中的泥沙等难溶性杂质。可溶性杂质不能靠这一套操作除尽。",
+    "mastery_criteria": [
+      "能说出本课的探究步骤或实验操作要点",
+      "能把现象和证据对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "除去粗盐中的泥沙，正确的顺序是？",
+      "answer": "溶解、过滤、蒸发"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SQ.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j038",
+    "name": "溶液的酸碱性",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第10单元 常见的酸、碱、盐",
+    "type": "conceptual",
+    "description": "会用酸碱指示剂和 pH 判断溶液的酸碱性。酸性溶液 pH 小于 7，中性等于 7，碱性大于 7。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "pH 小于 7 的溶液呈？",
+      "answer": "酸性"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.06",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j039",
+    "name": "常见的酸",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第10单元 常见的酸、碱、盐",
+    "type": "conceptual",
+    "description": "认识盐酸、硫酸等常见酸的主要性质：与指示剂、活泼金属、金属氧化物和碱反应。浓硫酸稀释必须酸入水。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "稀盐酸中滴入紫色石蕊试液，溶液变为？",
+      "answer": "红色"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.06",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j040",
+    "name": "常见的碱",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第10单元 常见的酸、碱、盐",
+    "type": "conceptual",
+    "description": "认识氢氧化钠、氢氧化钙等碱的主要性质、用途和腐蚀性。碱溶液能使酚酞变红，能与某些非金属氧化物反应。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "氢氧化钠露置在空气中容易潮解，保存时应？",
+      "answer": "密封"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.06",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j041",
+    "name": "酸和碱的中和反应",
+    "domain": "物质的化学变化",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第10单元 常见的酸、碱、盐",
+    "type": "conceptual",
+    "description": "知道酸与碱作用生成盐和水，属于复分解反应。了解中和反应在改良土壤、处理废水中的应用。这一部分是从「常见的酸和碱」里抽出的反应规律，不是单独印出的课题名。",
+    "mastery_criteria": [
+      "能判断变化类型或写出相关的化学方程式",
+      "能用质量守恒或反应规律解释一个典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "中和反应是？",
+      "answer": "酸与碱作用生成盐和水"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SR.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j042",
+    "name": "常见的盐",
+    "domain": "物质的性质与应用",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第10单元 常见的酸、碱、盐",
+    "type": "conceptual",
+    "description": "认识氯化钠、碳酸钠、碳酸钙等盐的组成和用途。知道盐不一定是食盐，碳酸钠溶液呈碱性。化肥中的铵盐遇碱会放出氨气。",
+    "mastery_criteria": [
+      "能说出本课物质的主要性质或用途",
+      "能用性质解释一个教材中的典型事实"
+    ],
+    "diagnostic_question": {
+      "question": "食盐的主要成分是？",
+      "answer": "氯化钠"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SP.06",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j043",
+    "name": "常见酸、碱的化学性质",
+    "domain": "科学探究与化学实验",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第10单元 常见的酸、碱、盐",
+    "type": "procedural",
+    "description": "完成实验活动：试验常见酸、碱与指示剂、金属、金属氧化物或相互之间的反应，并记录现象。",
+    "mastery_criteria": [
+      "能说出本课的探究步骤或实验操作要点",
+      "能把现象和证据对应到教材中的结论"
+    ],
+    "diagnostic_question": {
+      "question": "把稀盐酸分别滴到紫色石蕊和酚酞上，现象是？",
+      "answer": "石蕊变红，酚酞仍为无色"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SQ.04",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j044",
+    "name": "化学与人体健康",
+    "domain": "化学与社会·跨学科实践",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第11单元 化学与社会",
+    "type": "conceptual",
+    "description": "知道人体所需的蛋白质、糖类、油脂、维生素、无机盐和水，以及钙、铁、碘、锌等元素的大致作用。",
+    "mastery_criteria": [
+      "能说出化学与资源、健康或材料的一个基本事实",
+      "能判断一种常见做法是否符合节约资源和保护环境"
+    ],
+    "diagnostic_question": {
+      "question": "人体所需的营养物质包括？",
+      "answer": "蛋白质、糖类、油脂、维生素、无机盐和水"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SS.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_j045",
+    "name": "化学与可持续发展",
+    "domain": "化学与社会·跨学科实践",
+    "grade": 9,
+    "semester": "下",
+    "chapter": "九年级下册 第11单元 化学与社会",
+    "type": "application",
+    "description": "知道塑料、合成纤维、合成橡胶等合成材料，认识化学在新材料、新能源中的作用，以及减少污染、回收利用对可持续发展的意义。",
+    "mastery_criteria": [
+      "能说出化学与资源、健康或材料的一个基本事实",
+      "能判断一种常见做法是否符合节约资源和保护环境"
+    ],
+    "diagnostic_question": {
+      "question": "塑料、合成纤维和合成橡胶属于？",
+      "answer": "合成材料"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-2022:SS.02",
+        "confidence": "inferred",
+        "note": "人教版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
   }
 ]

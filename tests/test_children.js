@@ -417,4 +417,12 @@ test('生物学科的诊断记录可以备份和恢复', () => {
   assert.ok(stored(storage, RECORD_KEY)['child-b'].some((r) => r.subject === 'biology'));
 });
 
+test('化学学科的诊断记录可以备份和恢复', () => {
+  const data = backup();
+  data.records['child-b'] = data.records['child-b'].concat([{ key: 'chemistry|seed|target', subject: 'chemistry', mode: 'target', targets: ['cnk_j001'], weak: [], savedAt: '2026-11-04T00:00:00.000Z' }]);
+  const { api, storage } = load();
+  importInto(api, api.parseBackup(JSON.stringify(data)));
+  assert.ok(stored(storage, RECORD_KEY)['child-b'].some((r) => r.subject === 'chemistry'));
+});
+
 console.log('\n' + passed + ' passed, 0 failed');

@@ -210,7 +210,7 @@
       var keys = new Set();
       history[id].forEach(function (r) {
         if (!isObject(r) || typeof r.key !== 'string' || !r.key || keys.has(r.key) ||
-            ['math', 'chinese', 'science', 'morality', 'history', 'geography', 'biology', 'english', 'physics'].indexOf(r.subject) < 0 || !validDate(r.savedAt) ||
+            ['math', 'chinese', 'science', 'morality', 'history', 'geography', 'biology', 'chemistry', 'english', 'physics'].indexOf(r.subject) < 0 || !validDate(r.savedAt) ||
             (own(r, 'updatedAt') && !validDate(r.updatedAt))) throw new Error('诊断记录的标识、学科或时间不正确。');
         keys.add(r.key);
         ['weak', 'roots', 'shaky', 'mastered', 'targets'].forEach(function (field) {

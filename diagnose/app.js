@@ -11,6 +11,7 @@
   const LS_SESSION_HIS = 'cnhDiagnose.session.v1';
   const LS_SESSION_GEO = 'cngDiagnose.session.v1';
   const LS_SESSION_BIO = 'cnbDiagnose.session.v1';
+  const LS_SESSION_CHEM = 'cnkDiagnose.session.v1';
   const LS_SETTINGS = 'cnmDiagnose.settings.v2';
   const LS_SEEN = 'cnmDiagnose.seen.v1';
   const LIMIT_MIN = 8, LIMIT_MAX = 30;
@@ -95,6 +96,7 @@
     if (subject === 'history') return LS_SESSION_HIS;
     if (subject === 'geography') return LS_SESSION_GEO;
     if (subject === 'biology') return LS_SESSION_BIO;
+    if (subject === 'chemistry') return LS_SESSION_CHEM;
     return LS_SESSION;
   }
   function withSubject(href) {
@@ -104,7 +106,7 @@
   function detectSubject() {
     const params = new URLSearchParams(location.search);
     const explicit = params.get('subject');
-    if (explicit === 'english' || explicit === 'math' || explicit === 'physics' || explicit === 'chinese' || explicit === 'science' || explicit === 'morality' || explicit === 'history' || explicit === 'geography' || explicit === 'biology') return explicit;
+    if (explicit === 'english' || explicit === 'math' || explicit === 'physics' || explicit === 'chinese' || explicit === 'science' || explicit === 'morality' || explicit === 'history' || explicit === 'geography' || explicit === 'biology' || explicit === 'chemistry') return explicit;
     const target = params.get('target') || '';
     let hashId = (location.hash || '').replace(/^#/, '');
     try { hashId = decodeURIComponent(hashId); } catch (e) { /* 保持原样 */ }
@@ -138,6 +140,11 @@
       history.replaceState(null, '', location.pathname + '?' + params.toString() + location.hash);
       return 'biology';
     }
+    if (/(^|,)\s*cnk_/.test(target) || /^cnk_/.test(hashId)) {
+      params.set('subject', 'chemistry');
+      history.replaceState(null, '', location.pathname + '?' + params.toString() + location.hash);
+      return 'chemistry';
+    }
     if (/(^|,)\s*cnh_/.test(target) || /^cnh_/.test(hashId)) {
       params.set('subject', 'history');
       history.replaceState(null, '', location.pathname + '?' + params.toString() + location.hash);
@@ -159,6 +166,7 @@
     document.body.classList.toggle('subject-history', subject === 'history');
     document.body.classList.toggle('subject-geography', subject === 'geography');
     document.body.classList.toggle('subject-biology', subject === 'biology');
+    document.body.classList.toggle('subject-chemistry', subject === 'chemistry');
     document.querySelectorAll('.site-nav a:not(.subject-link), a.brand').forEach(function (link) {
       const href = link.getAttribute('href');
       const next = withSubject(href);
@@ -204,6 +212,11 @@
     if (subject === 'biology') {
       document.title = '诊断 · 初中生物';
       if ('七八'.indexOf(gradeSel) < 0) gradeSel = '七';
+      if (volSel === '全') volSel = '';
+    }
+    if (subject === 'chemistry') {
+      document.title = '诊断 · 初中化学';
+      if (gradeSel !== '九') gradeSel = '九';
       if (volSel === '全') volSel = '';
     }
     if (subject === 'chinese') {
@@ -599,15 +612,17 @@
         ? '选一个想学会或想检查的地理知识点。' + confirmHelp
         : subject === 'biology'
         ? '选一个想学会或想检查的生物知识点。' + confirmHelp
+        : subject === 'chemistry'
+        ? '选一个想学会或想检查的化学知识点。' + confirmHelp
         : '选一个想学会或想检查的知识点。' + confirmHelp),
       h('div', { class: 'stage-tabs', role: 'tablist', 'aria-label': '学段' },
         subject === 'physics' ? [stageButton('', '全部'), stageButton('j', '初中'), stageButton('h', '高中')]
-          : subject === 'history' || subject === 'geography' || subject === 'biology' ? [stageButton('', '全部'), stageButton('j', '初中')]
+          : subject === 'history' || subject === 'geography' || subject === 'biology' || subject === 'chemistry' ? [stageButton('', '全部'), stageButton('j', '初中')]
           : subject === 'chinese' || subject === 'science' || subject === 'morality' ? [stageButton('', '全部'), stageButton('p', '小学')]
           : [stageButton('', '全部'), stageButton('p', '小学'), stageButton('j', '初中'), stageButton('h', '高中')]),
       h('input', {
         type: 'search', class: 'search-lg', id: 'search',
-        placeholder: subject === 'physics' ? '搜索知识点，例如：欧姆定律、浮力、牛顿第二定律、楞次定律' : subject === 'english' ? '搜索知识点，例如：现在进行时、虚拟语气、there is' : subject === 'chinese' ? '搜索知识点，例如：声母、静夜思、的地得' : subject === 'science' ? '搜索知识点，例如：溶解、电路、昼夜交替' : subject === 'morality' ? '搜索知识点，例如：升国旗、排队、宪法、节约用水' : subject === 'history' ? '搜索知识点，例如：鸦片战争、丝绸之路、五四运动' : subject === 'geography' ? '搜索知识点，例如：经纬网、季风气候、长江' : subject === 'biology' ? '搜索知识点，例如：细胞、光合作用、基因' : '搜索知识点，例如：配方法、20 以内加法、一次函数',
+        placeholder: subject === 'physics' ? '搜索知识点，例如：欧姆定律、浮力、牛顿第二定律、楞次定律' : subject === 'english' ? '搜索知识点，例如：现在进行时、虚拟语气、there is' : subject === 'chinese' ? '搜索知识点，例如：声母、静夜思、的地得' : subject === 'science' ? '搜索知识点，例如：溶解、电路、昼夜交替' : subject === 'morality' ? '搜索知识点，例如：升国旗、排队、宪法、节约用水' : subject === 'history' ? '搜索知识点，例如：鸦片战争、丝绸之路、五四运动' : subject === 'geography' ? '搜索知识点，例如：经纬网、季风气候、长江' : subject === 'biology' ? '搜索知识点，例如：细胞、光合作用、基因' : subject === 'chemistry' ? '搜索知识点，例如：氧气、质量守恒定律、酸碱盐' : '搜索知识点，例如：配方法、20 以内加法、一次函数',
         value: startQuery, autocomplete: 'off', 'aria-label': '搜索知识点',
         oninput: function (e) {
           startQuery = e.target.value;
@@ -679,6 +694,8 @@
           ? '七八九'.split('').map(function (x) { return [x, x + '年级']; })
           : subject === 'geography' || subject === 'biology'
           ? '七八'.split('').map(function (x) { return [x, x + '年级']; })
+          : subject === 'chemistry'
+          ? [['九', '九年级']]
           : subject === 'chinese' || subject === 'science' || subject === 'morality'
           ? '一二三四五六'.split('').map(function (x) { return [x, x + '年级']; })
           : GRADES.map(function (x) { return [x, x + '年级']; }).concat([
@@ -736,9 +753,10 @@
       if (!chapters.length) return;
       const count = chapters.reduce(function (n, c) { return n + c.rows.length; }, 0);
       shown += count;
-      const openVol = subject === 'physics' ? '八上' : subject === 'english' ? '三上' : subject === 'history' || subject === 'geography' || subject === 'biology' ? '七上' : '一上';
+      const openVol = subject === 'physics' ? '八上' : subject === 'english' ? '三上' : subject === 'chemistry' ? '九上' : subject === 'history' || subject === 'geography' || subject === 'biology' ? '七上' : '一上';
+      const juniorOpen = subject === 'chemistry' ? '九上' : '七上';
       const seniorOpen = subject === 'english' || subject === 'physics' ? '必修一' : '高一';
-      const det = h('details', { class: 'vol', open: !!q || (startStage === 'j' ? vv[0] === '七上' : startStage === 'h' ? vv[0] === seniorOpen : vv[0] === openVol) },
+      const det = h('details', { class: 'vol', open: !!q || (startStage === 'j' ? vv[0] === juniorOpen : startStage === 'h' ? vv[0] === seniorOpen : vv[0] === openVol) },
         h('summary', null, vv[1] + '（' + count + ' 个知识点）'));
       chapters.forEach(function (c) {
         const ch = c.ch;
@@ -957,7 +975,7 @@
     return raw || '本次诊断';
   }
   function buildShareModel(sum, chapters) {
-    var subjectName = subject === 'english' ? '英语' : subject === 'physics' ? '物理' : subject === 'chinese' ? '语文' : subject === 'science' ? '科学' : subject === 'morality' ? '道德与法治' : subject === 'history' ? '历史' : subject === 'geography' ? '地理' : subject === 'biology' ? '生物' : '数学';
+    var subjectName = subject === 'english' ? '英语' : subject === 'physics' ? '物理' : subject === 'chinese' ? '语文' : subject === 'science' ? '科学' : subject === 'morality' ? '道德与法治' : subject === 'history' ? '历史' : subject === 'geography' ? '地理' : subject === 'biology' ? '生物' : subject === 'chemistry' ? '化学' : '数学';
     var spots = [];
     var spotKind = 'topic';
     if (chapters && chapters.length) {
@@ -1275,6 +1293,8 @@
         ? '目标与学习路径上的知识点对应的《义务教育地理课程标准（2022年版）》第四学段内容要求的公开转述。'
         : subject === 'biology'
         ? '目标与学习路径上的知识点对应的《义务教育生物学课程标准（2022年版）》第四学段内容要求的公开转述。'
+        : subject === 'chemistry'
+        ? '目标与学习路径上的知识点对应的《义务教育化学课程标准（2022年版）》五个学习主题内容要求的公开转述。'
         : '目标与学习路径上的知识点对应的《义务教育数学课程标准（2022年版）》内容要求（第一至第四学段）。'),
       keys.length ? keys.map(function (k) {
         const item = D.stdById[k];
