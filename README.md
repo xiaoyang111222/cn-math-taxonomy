@@ -229,9 +229,9 @@ screenshots/             首页、知识图谱与诊断页截图（01–05 诊�
 - 知识点 59 个（`cng_j001`–`cng_j059`）：七上 17、七下 13、八上 15、八下 14。
 - 领域：地球与地图 9、世界地理 21、中国地理 29。
 - 先修边 76 条（hard 26，soft 50），只在地理内部。中国地理接在世界地理后面，按教学顺序走软边；硬边只连接真正用到的概念（如经纬网→地球运动、气候类型→亚洲自然环境、秦岭—淮河→四大区域）。
-- 题库 236 题，每个知识点 4 道选择题（2 道 basic、1 道 standard、1 道 challenge）。答案按教材中的位置、数据、分布和区域特征判定对错。地图配图可后补。
+- 题库 236 题，每个知识点 4 道选择题（2 道 basic、1 道 standard、1 道 challenge）。答案按教材中的位置、数据、分布和区域特征判定对错。其中 48 道题配有内联示意图（`scripts/geo_figs.py`，地球与太阳系、地图三要素与等高线、海陆和板块、气候、中国地势阶梯与四大区域），重跑 `geo_build.py` 时会写回 `figure`。
 - 课标条目 22 条（`cgs-2022:`）。首页、知识图谱、诊断通过 `?subject=geography` 切换，主题色为海洋青；诊断会话键 `cngDiagnose.session.v1`。
-- 可复跑脚本：`python3 scripts/geo_build.py`（内容在 `scripts/geo_g7.py`、`scripts/geo_g8.py`，硬先修在 `scripts/geo_edges.py`）。
+- 可复跑脚本：`python3 scripts/geo_build.py`（内容在 `scripts/geo_g7.py`、`scripts/geo_g8.py`，硬先修在 `scripts/geo_edges.py`，配图在 `scripts/geo_figs.py`）。
 
 ## 初中生物
 

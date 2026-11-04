@@ -3,7 +3,7 @@
 
 可以重复运行：先去掉已有的 cng_ 知识点和 cgs- 课标条目，再按脚本重新写入。
 不改数学、英语、物理、语文、科学、道德与法治、历史的知识点、先修、题目和课标。
-先修边只对地理边做传递约简。
+先修边只对地理边做传递约简。登记过的示意图在编译题目时写入 figure。
 
 用法：python3 scripts/geo_build.py
 """
@@ -22,6 +22,7 @@ import geo_g7  # noqa: E402,F401
 import geo_g8  # noqa: E402,F401
 import geo_edges  # noqa: E402,F401
 from geo_lib import HARD, CODE_OF, STANDARD_ROWS, TOPICS, chapter, check_question, materialise_questions  # noqa: E402
+from geo_figs import figure_for  # noqa: E402
 from verify_questions import verify_all  # noqa: E402
 
 CHAPTER_RE = re.compile(r"^([一二三四五六七八九])年级([上下全])册 (第\d+单元|预备单元\d) (.+)$")
@@ -211,6 +212,9 @@ def main():
         diag_answer = None
         for n, item in enumerate(made, start=1):
             q, shown = build_question(tid, n, item, slot=i + n)
+            fig = figure_for(q)
+            if fig:
+                q["figure"] = fig
             built.append(q)
             if n == 1:
                 diag_answer = shown

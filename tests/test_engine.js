@@ -1055,6 +1055,16 @@ test('题库：初中生物有内联结构示意图', () => {
   });
 });
 
+test('题库：初中地理有内联示意图', () => {
+  const geo = questions.filter((q) => String(q.topicId || '').startsWith('cng_') && q.figure);
+  assert.ok(geo.length >= 35 && geo.length <= 50, '地理配图题数 ' + geo.length);
+  ['cng_j001_q3', 'cng_j005_q3', 'cng_j034_q1'].forEach((id) => {
+    const q = questions.find((item) => item.id === id);
+    assert.ok(q && q.figure && q.figure.indexOf('currentColor') > 0, id);
+    assert.ok(q.figure.indexOf('viewBox=') > 0, id);
+  });
+});
+
 test('题库：choice 题有 3–4 个选项、key 不重复、answer 是某个选项的 key', () => {
   let n = 0;
   questions.filter((q) => q.type === 'choice').forEach((q) => {
