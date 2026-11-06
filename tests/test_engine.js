@@ -1456,7 +1456,18 @@ test('gradeTargets：一年级 = 一上 + 一下，七上只含七上；写法�
   assert.strictEqual(g1.ids.length, want);
   const g1zh = E.gradeTargets(RGQ, '一年级', 'chinese');
   assert.strictEqual(g1zh.ids.length, 79); // 一上 41 + 一下 38
-  assert.ok(g1zh.ids.every((id) => id.startsWith('cnc_')));
+  assert.ok(g1zh.ids.every((id) => id.startsWith('cnc_p')));
+  const g7zh = E.gradeTargets(RGQ, '七上', 'chinese');
+  assert.strictEqual(g7zh.ids.length, 29);
+  assert.ok(g7zh.ids.every((id) => id.startsWith('cnc_j') && RGQ.byId[id].grade === 7 && RGQ.byId[id].semester === '上'));
+  const g7zhYear = E.gradeTargets(RGQ, '七年级', 'chinese');
+  assert.strictEqual(g7zhYear.ids.length, 59);
+  assert.ok(g7zhYear.ids.every((id) => id.startsWith('cnc_j') && RGQ.byId[id].grade === 7));
+  const g9zh = E.gradeTargets(RGQ, '九下', 'chinese');
+  assert.strictEqual(g9zh.ids.length, 28);
+  assert.ok(g9zh.ids.every((id) => id.startsWith('cnc_j') && RGQ.byId[id].grade === 9 && RGQ.byId[id].semester === '下'));
+  assert.strictEqual(E.subjectOf(RGQ.byId[g7zh.ids[0]]), 'chinese');
+  assert.strictEqual(E.subjectOf({ id: 'cnc_j001' }), 'chinese');
   const g1sci = E.gradeTargets(RGQ, '一年级', 'science');
   assert.strictEqual(g1sci.ids.length, 30); // 一上 15 + 一下 15
   assert.ok(g1sci.ids.every((id) => id.startsWith('cns_')));

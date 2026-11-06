@@ -220,8 +220,10 @@
       if (volSel === '全') volSel = '';
     }
     if (subject === 'chinese') {
-      document.title = '诊断 · 小学语文';
-      if ('一二三四五六'.indexOf(gradeSel) < 0) gradeSel = '一';
+      document.title = '诊断 · 语文';
+      if ('一二三四五六七八九'.indexOf(gradeSel) < 0) gradeSel = '一';
+      // 全站初始值是七年级。语文原先从一年级进入，这里仍改回一年级；点选七年级之后不会再进这段。
+      else if (gradeSel === '七') gradeSel = '一';
       if (volSel === '全') volSel = '';
     }
   }
@@ -618,11 +620,12 @@
       h('div', { class: 'stage-tabs', role: 'tablist', 'aria-label': '学段' },
         subject === 'physics' ? [stageButton('', '全部'), stageButton('j', '初中'), stageButton('h', '高中')]
           : subject === 'history' || subject === 'geography' || subject === 'biology' || subject === 'chemistry' ? [stageButton('', '全部'), stageButton('j', '初中')]
-          : subject === 'chinese' || subject === 'science' || subject === 'morality' ? [stageButton('', '全部'), stageButton('p', '小学')]
+          : subject === 'chinese' ? [stageButton('', '全部'), stageButton('p', '小学'), stageButton('j', '初中')]
+          : subject === 'science' || subject === 'morality' ? [stageButton('', '全部'), stageButton('p', '小学')]
           : [stageButton('', '全部'), stageButton('p', '小学'), stageButton('j', '初中'), stageButton('h', '高中')]),
       h('input', {
         type: 'search', class: 'search-lg', id: 'search',
-        placeholder: subject === 'physics' ? '搜索知识点，例如：欧姆定律、浮力、牛顿第二定律、楞次定律' : subject === 'english' ? '搜索知识点，例如：现在进行时、虚拟语气、there is' : subject === 'chinese' ? '搜索知识点，例如：声母、静夜思、的地得' : subject === 'science' ? '搜索知识点，例如：溶解、电路、昼夜交替' : subject === 'morality' ? '搜索知识点，例如：升国旗、排队、宪法、节约用水' : subject === 'history' ? '搜索知识点，例如：鸦片战争、丝绸之路、五四运动' : subject === 'geography' ? '搜索知识点，例如：经纬网、季风气候、长江' : subject === 'biology' ? '搜索知识点，例如：细胞、光合作用、基因' : subject === 'chemistry' ? '搜索知识点，例如：氧气、质量守恒定律、酸碱盐' : '搜索知识点，例如：配方法、20 以内加法、一次函数',
+        placeholder: subject === 'physics' ? '搜索知识点，例如：欧姆定律、浮力、牛顿第二定律、楞次定律' : subject === 'english' ? '搜索知识点，例如：现在进行时、虚拟语气、there is' : subject === 'chinese' ? '搜索知识点，例如：声母、静夜思、春、岳阳楼记' : subject === 'science' ? '搜索知识点，例如：溶解、电路、昼夜交替' : subject === 'morality' ? '搜索知识点，例如：升国旗、排队、宪法、节约用水' : subject === 'history' ? '搜索知识点，例如：鸦片战争、丝绸之路、五四运动' : subject === 'geography' ? '搜索知识点，例如：经纬网、季风气候、长江' : subject === 'biology' ? '搜索知识点，例如：细胞、光合作用、基因' : subject === 'chemistry' ? '搜索知识点，例如：氧气、质量守恒定律、酸碱盐' : '搜索知识点，例如：配方法、20 以内加法、一次函数',
         value: startQuery, autocomplete: 'off', 'aria-label': '搜索知识点',
         oninput: function (e) {
           startQuery = e.target.value;
@@ -696,7 +699,9 @@
           ? '七八'.split('').map(function (x) { return [x, x + '年级']; })
           : subject === 'chemistry'
           ? [['九', '九年级']]
-          : subject === 'chinese' || subject === 'science' || subject === 'morality'
+          : subject === 'chinese'
+          ? '一二三四五六七八九'.split('').map(function (x) { return [x, x + '年级']; })
+          : subject === 'science' || subject === 'morality'
           ? '一二三四五六'.split('').map(function (x) { return [x, x + '年级']; })
           : GRADES.map(function (x) { return [x, x + '年级']; }).concat([
             ['高一', '高一'], ['高二', '高二'], ['选必一', '选必一'], ['选必二', '选必二'], ['选必三', '选必三']
@@ -1282,7 +1287,7 @@
         : subject === 'english'
         ? '目标与学习路径上的知识点对应的《义务教育英语课程标准（2022年版）》和《普通高中英语课程标准（2017年版2025年修订）》公开转述（一级、二级、三级，以及高中必修、选择性必修）。'
         : subject === 'chinese'
-        ? '目标与学习路径上的知识点对应的《义务教育语文课程标准（2022年版）》第一至第三学段的公开转述。'
+        ? '目标与学习路径上的知识点对应的《义务教育语文课程标准（2022年版）》第一至第四学段的公开转述。'
         : subject === 'science'
         ? '目标与学习路径上的知识点对应的《义务教育科学课程标准（2022年版）》第一至第三学段学习内容的公开转述。'
         : subject === 'morality'

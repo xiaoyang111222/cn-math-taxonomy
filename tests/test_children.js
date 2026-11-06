@@ -58,6 +58,30 @@ function fixture() {
   return { [PROFILE_KEY]: JSON.stringify(profiles), [RECORD_KEY]: JSON.stringify(records) };
 }
 
+test('语文档案同时保留小学 cnc_p 和初中 cnc_j，且不混进数学', () => {
+  const entries = fixture();
+  const recs = JSON.parse(entries[RECORD_KEY]);
+  recs['child-a'].push({
+    key: 'chinese|junior|cnc_j001', subject: 'chinese', label: '七年级上册', mode: 'target', asked: 4,
+    targets: ['cnc_j001'], counts: { weak: 1, shaky: 0, mastered: 1, untested: 0 },
+    weak: ['cnc_j001'], roots: ['cnc_j001'], shaky: [], mastered: ['cnc_p001'],
+    savedAt: '2026-11-06T00:00:00.000Z', updatedAt: '2026-11-06T00:00:00.000Z'
+  });
+  entries[RECORD_KEY] = JSON.stringify(recs);
+  const { api } = load(entries);
+  const status = api.latestStatus('child-a', 'chinese');
+  assert.equal(status.cnc_j001.status, 'weak');
+  assert.equal(status.cnc_j001.subject, 'chinese');
+  assert.equal(status.cnc_p001.status, 'mastered');
+  assert.equal(status.cnc_p001.subject, 'chinese');
+  assert.equal(api.latestStatus('child-a', 'math').cnc_j001, undefined);
+  const backup = exported(api);
+  const saved = backup.records['child-a'].find((r) => r.key === 'chinese|junior|cnc_j001');
+  assert.equal(saved.subject, 'chinese');
+  assert.deepStrictEqual(saved.targets, ['cnc_j001']);
+  assert.deepStrictEqual(saved.mastered, ['cnc_p001']);
+});
+
 test('导出包含全部孩子、当前孩子和四学科完整历史，并带备份版本和时间', () => {
   const { api } = load(fixture());
   const before = Date.now();

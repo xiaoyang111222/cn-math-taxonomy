@@ -63,9 +63,9 @@
       pdemo.textContent = '先看一遍演示：八年级上册物理';
     }
   } else if (subject === 'chinese') {
-    document.title = '小学语文 · 中小学·高中知识图谱';
+    document.title = '语文 · 中小学·高中知识图谱';
     var zeye = document.querySelector('.eyebrow');
-    if (zeye) zeye.textContent = '语文：小学一至六年级 · 统编版';
+    if (zeye) zeye.textContent = '语文：小学一至六年级 · 初中七至九年级 · 统编版';
     var zprimary = document.querySelector('.hero-actions a.btn-primary');
     var zbrowse = document.querySelector('.hero-actions a.btn:not(.btn-primary)');
     if (zprimary) zprimary.setAttribute('href', 'diagnose/?subject=chinese');
@@ -265,7 +265,7 @@
     }
     var wantEnglish = subject === 'english';
     var wantPhysics = subject === 'physics';
-    var wantChinese = subject === 'chinese' || subject === 'science' || subject === 'morality';
+    var wantPrimary = subject === 'science' || subject === 'morality';
     var wantHistory = subject === 'history';
     var wantGeography = subject === 'geography';
     var wantBiology = subject === 'biology';
@@ -303,7 +303,7 @@
       grades.append(link);
     }
     var from = wantPhysics ? 8 : (wantEnglish ? 3 : (wantChemistry ? 9 : (wantHistory || wantGeography || wantBiology ? 7 : 1)));
-    var to = wantChinese ? 6 : (wantChemistry ? 9 : (wantGeography || wantBiology ? 8 : 9));
+    var to = wantPrimary ? 6 : (wantChemistry ? 9 : (wantGeography || wantBiology ? 8 : 9));
     for (var g = from; g <= to; g++) {
       var list = topics.filter(function (topic) { return topic.grade === g; });
       var up = list.filter(function (topic) { return topic.semester === '上'; }).length;
@@ -313,8 +313,8 @@
       var href = subject !== 'math' ? 'explore/?subject=' + subject + '&grade=' + g : 'explore/?grade=' + g;
       addCard(g, g <= 6 ? '小学' : (wantPhysics ? '初中物理' : '初中'), CN[g] + '年级', g <= 6 ? 'is-primary' : 'is-junior', splitText, href);
     }
-    if (wantChinese) {
-      /* 小学语文、小学科学、小学道德与法治只到六年级 */
+    if (wantPrimary || subject === 'chinese') {
+      /* 语文到九年级（上下册），科学和道德与法治到六年级；都不加高中卡片 */
     } else if (wantHistory) {
       /* 初中历史只到九年级 */
     } else if (wantGeography) {

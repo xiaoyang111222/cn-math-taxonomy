@@ -93,6 +93,34 @@ test('diagnoseHref 带学科参数', () => {
     'diagnose/?subject=biology&target=cnb_j001');
   assert.equal(api.diagnoseHref(['cnk_j001']),
     'diagnose/?subject=chemistry&target=cnk_j001');
+  assert.equal(api.diagnoseHref(['cnc_j001']),
+    'diagnose/?subject=chinese&target=cnc_j001');
+  assert.equal(api.diagnoseHref(['cnc_p001', 'cnc_j002']),
+    'diagnose/?subject=chinese&target=cnc_p001,cnc_j002');
+  assert.equal(api.subjectOfId('cnc_j001'), 'chinese');
+  assert.equal(api.subjectOfId('cnc_p001'), 'chinese');
+});
+
+test('初中语文未完成会话仍归语文，并与小学会话共用 cncDiagnose.session.v2', () => {
+  const { api } = load({
+    'cncDiagnose.session.v2': JSON.stringify({
+      label: '七上 春', savedAt: '2026-11-06T01:00:00.000Z',
+      answers: [
+        { id: 'cnc_j001', result: 'wrong' },
+        { id: 'cnc_p001', result: 'wrong' },
+        { id: 'cnc_j002', result: 'correct' }
+      ]
+    })
+  });
+  const rows = api.list({ subject: 'chinese' });
+  const ids = [];
+  rows.forEach((r) => ids.push(String(r.id)));
+  ids.sort();
+  assert.deepStrictEqual(ids, ['cnc_j001', 'cnc_p001']);
+  rows.forEach((r) => {
+    assert.equal(r.subject, 'chinese');
+    assert.equal(r.source, 'session');
+  });
 });
 
 test('subject 过滤与未完成会话答错合并', () => {
