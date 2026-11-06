@@ -42,6 +42,8 @@
   var dagreReady = false;
   var FOLD_AT = 40;
   var questionsByTopic = new Map();
+  var MAPPING_FILES = ['sujiao_math', 'hujiao_math', 'sd54_math', 'yilin_english'];
+  var mappingsByTopic = new Map();
 
   function $(id) { return document.getElementById(id); }
 
@@ -407,6 +409,11 @@
     return el('div', { class: wide ? 'span-2' : '' }, el('dt', { text: label }), el('dd', { text: value || '—' }));
   }
 
+  function mappingTermLabel(m) {
+    var g = CN[m.grade] || String(m.grade);
+    return m.term === '全' ? g + '年级' : g + m.term;
+  }
+
   function renderDetail() {
     var box = $('detail');
     if (!selected || !byId.has(selected)) {
@@ -478,6 +485,20 @@
         el('p', { class: 'sample-q', text: topic.diagnostic_question.question }),
         sampleFigureNodes(topic),
         answer));
+    }
+
+    var editions = mappingsByTopic.get(topic.id) || [];
+    if (editions.length) {
+      parts.push(el('section', null,
+        el('h2', { text: '其他教材版本（待核）' }),
+        el('p', { class: 'muted', text: '来自贡献的对照表，只是大致位置，还没有合并进知识点；图谱和诊断仍按人教版的年级册次。' }),
+        el('ul', { class: 'plain' }, editions.map(function (m) {
+          var where = [m.label, mappingTermLabel(m)].join(' ');
+          var text = [where, m.unit, m.chapter].filter(Boolean).join(' · ');
+          return el('li', null,
+            el('span', { text: text + (m.status === 'reviewed' ? '（已核）' : '') }),
+            m.note ? el('span', { class: 'muted', text: '：' + m.note.replace(/\*\*/g, '') }) : null);
+        }))));
     }
 
     var pres = pre.get(topic.id) || [];
@@ -1306,6 +1327,33 @@
     } catch (e) { /* 题库读不到时，样题只显示原来的文字 */ }
   }
 
+  async function loadMappings() {
+    mappingsByTopic = new Map();
+    var files = await Promise.all(MAPPING_FILES.map(function (name) {
+      return fetch('../data/mappings/' + name + '.json')
+        .then(function (response) { return response.ok ? response.json() : null; })
+        .catch(function () { return null; });
+    }));
+    files.forEach(function (file) {
+      if (!file || !Array.isArray(file.entries) || file.status === 'example') return;
+      var label = String(file.label || file.edition || '').split(/[（·(]/)[0].trim() || file.edition;
+      file.entries.forEach(function (entry) {
+        if (!entry || !entry.topicId) return;
+        var bucket = mappingsByTopic.get(entry.topicId);
+        if (!bucket) mappingsByTopic.set(entry.topicId, bucket = []);
+        bucket.push({
+          label: label,
+          grade: entry.grade,
+          term: entry.term,
+          unit: entry.unit || '',
+          chapter: entry.chapter || '',
+          note: entry.note || '',
+          status: file.status || 'draft'
+        });
+      });
+    });
+  }
+
   async function load() {
     var files = ['topics.json', 'dependencies.json', 'id-aliases.json', 'cn-curriculum-standards.json'];
     var responses = await Promise.all(files.map(function (file) { return fetch('../data/' + file); }));
@@ -1350,7 +1398,7 @@
   syncDepthButtons();
   applyQuery();
   bind();
-  load().then(function () { return loadQuestions(); }).then(function () {
+  load().then(function () { return Promise.all([loadQuestions(), loadMappings()]); }).then(function () {
     fillDomain();
     syncControls();
     renderList();

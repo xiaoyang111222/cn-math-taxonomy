@@ -5,7 +5,7 @@
 - `manifest.webmanifest`：名称、`display: standalone`、主题色 `#0f6e62`、图标和三个快捷入口（诊断、知识图谱、孩子档案）。路径都是相对写法，站点放在域名根目录或子目录都能用。`start_url` 带 `?source=pwa`。
 - 图标在 `assets/icons/`，由 `python3 scripts/make_pwa_icons.py` 用站点 logo 和配色（`#0f6e62`、`#dff3ef`）生成：`icon-192.png`、`icon-512.png`（带圆角）、`icon-maskable-512.png`（安全区内）、`apple-touch-icon.png`（180，不透明，给 iOS）。
 - `sw.js`（必须在站点根目录，才能管整个站点）：
-  - 安装时预缓存页面、脚本、样式、图标和 `data/*.json`（约 6 MB，其中题库 3.7 MB）。壳必须齐全才算安装成功，数据缓存失败不挡安装。
+  - 安装时预缓存页面、脚本、样式、图标、`data/*.json` 和知识图谱用到的 `data/mappings/` 对照表（约 6 MB，其中题库 3.7 MB）。壳必须齐全才算安装成功，数据缓存失败不挡安装。
   - 页面和脚本：网络优先（5 秒超时），断网用缓存，所以发布后在线用户直接拿到新版。
   - 数据、图标、manifest：先用缓存，同时后台更新（下一次打开拿到新数据）。
   - 改了缓存清单，或数据结构有不兼容的变化，把 `sw.js` 里的 `VERSION` 加一，旧缓存会在激活时删掉。
