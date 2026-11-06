@@ -1,5 +1,9 @@
 # 变更日志
 
+## 2026-11-06（初中语文课标核对）
+
+- 2026-11-06：初中语文第四学段 12 条 `ccs-2022:4.*` 对照人教社电子书印刷页 14–16 补了 `page_or_ref` 和 `text_status`，text 仍是转述，`verbatim` 仍为 false；189 个知识点保持 `inferred`。九下修订版目录未公开。详见 `docs/standards-verify-2026-11-06-junior-chinese.md`。
+
 ## 2026-11-06（初中物理配图）
 
 - 2026-11-06：初中物理 50 道题补了内联示意图（`scripts/phy_figs.py`），覆盖力的示意图、压强与浮力、光的反射折射与透镜、电路串并联与电表、常见实验装置；`phy_build.py --junior-only` 编译时写回 `figure`。原有 6 道图保留。图只用 currentColor，不引用外网。

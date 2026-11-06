@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import zhj_topics  # noqa: E402,F401
 from zhj_lib import (  # noqa: E402
-    CODES, HARD, STANDARD_ROWS, TEXT_STATUS, TOPICS,
+    CODES, HARD, STAGE4_REF, STAGE4_STATUS, STANDARD_ROWS, TOPICS,
     chapter, check_question, materialise_questions,
 )
 from verify_questions import verify_all  # noqa: E402
@@ -131,15 +131,23 @@ def build_standards():
         counters[key] = counters.get(key, 0) + 1
         sid = "ccs-2022:%s.%s.%02d" % (level, code, counters[key])
         id_of[symbol] = sid
+        ref = STAGE4_REF.get(symbol)
+        status = STAGE4_STATUS.get(symbol)
+        if not ref or not status:
+            raise SystemExit("第四学段缺少印刷页或核对说明：%s" % symbol)
+        if not str(ref).startswith("人教社电子书印刷页") or "转述" not in ref:
+            raise SystemExit("第四学段 page_or_ref 不合格：%s" % symbol)
+        if "2026-11-06" not in status:
+            raise SystemExit("第四学段 text_status 未记下核对日期：%s" % symbol)
         items.append({
             "id": sid,
             "domain": domain,
             "section": section,
             "clause": "(%d)" % counters[key],
             "text": text,
-            "page_or_ref": "待核",
+            "page_or_ref": ref,
             "verbatim": False,
-            "text_status": TEXT_STATUS,
+            "text_status": status,
         })
     return id_of, items
 
@@ -175,6 +183,24 @@ def primary_key_map():
     return {"p:%s" % t["key"]: "cnc_p%03d" % i for i, t in enumerate(PRIMARY, start=1)}, list(PRIMARY)
 
 
+NEW_FOURTH = (
+    "第四学段（7–9年级）12 条于 2026-11-06 对照人教社电子书"
+    "《义务教育语文课程标准（2022年版）》印刷页 14–16"
+    "（https://www.pep.com.cn/ebook/2022yjkcbz/yw/mobile/index.html ，"
+    "大图 files/large/21.jpg、22.jpg、23.jpg）。"
+    "该处是课程目标里的学段要求，印刷页 14–16 上没有名为【内容要求】的标题。"
+    "课程内容部分的大图本次没有打开，不写入 page_or_ref。"
+    "条目 text 仍是压缩转述，verbatim 为 false，"
+    "page_or_ref 记人教社电子书印刷页，不是教育部 PDF 页码。"
+    "未取得教育部官网 PDF。详见 docs/standards-verify-2026-11-06-junior-chinese.md。"
+)
+BLANKET_REF = "verbatim 为 false，page_or_ref 为「待核」。"
+CLARIFIED_REF = (
+    "verbatim 为 false。第一至第三学段 page_or_ref 仍为「待核」；"
+    "第四学段 page_or_ref 记人教社电子书印刷页，不是教育部 PDF 页码。"
+)
+
+
 def merge_chinese_meta(existing):
     meta = dict(existing or {})
     meta["title"] = "义务教育语文课程标准（2022年版）"
@@ -184,12 +210,13 @@ def merge_chinese_meta(existing):
     note = meta.get("note") or ""
     if "第一至第三学段" in note and "第一至第四学段" not in note:
         note = note.replace("第一至第三学段", "第一至第四学段", 1)
-    extra = (
-        "第四学段（7–9年级）条目是对课标内容要求的公开转述，不是逐页核对的原文；"
-        "来源为中国教育在线、龙源期刊网等公开介绍（查证日期 2026-11-05）。"
-    )
-    if "第四学段（7–9年级）" not in note:
-        note = (note + " " + extra).strip()
+    marker = "第四学段（7–9年级）"
+    if marker in note:
+        note = note[:note.find(marker)].rstrip() + " " + NEW_FOURTH
+    else:
+        note = (note.rstrip() + " " + NEW_FOURTH).strip()
+    if BLANKET_REF in note:
+        note = note.replace(BLANKET_REF, CLARIFIED_REF, 1)
     meta["note"] = note
     return meta
 

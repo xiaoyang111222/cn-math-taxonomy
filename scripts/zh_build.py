@@ -320,13 +320,23 @@ def main():
     old_zh = standards.get("chinese") or {}
     if has_junior_std:
         zh_note = zh_note.replace("第一至第三学段", "第一至第四学段", 1)
+        zh_note = zh_note.replace(
+            "verbatim 为 false，page_or_ref 为「待核」。",
+            "verbatim 为 false。第一至第三学段 page_or_ref 仍为「待核」；"
+            "第四学段 page_or_ref 记人教社电子书印刷页，不是教育部 PDF 页码。",
+            1,
+        )
         extra = old_zh.get("note") or ""
-        if "第四学段（7–9年级）" in extra and "第四学段（7–9年级）" not in zh_note:
-            # 保留初中编译脚本写入的第四学段说明。
-            tail = extra[extra.find("第四学段（7–9年级）"):]
+        marker = "第四学段（7–9年级）"
+        if marker in extra and marker not in zh_note:
+            # 保留初中编译脚本写入的第四学段说明（含 2026-11-06 人教社电子书印刷页）。
+            tail = extra[extra.find(marker):]
             zh_note = (zh_note + " " + tail).strip()
-        elif "第四学段（7–9年级）" not in zh_note:
-            zh_note += "第四学段（7–9年级）条目是对课标内容要求的公开转述，不是逐页核对的原文。"
+        elif marker not in zh_note:
+            zh_note += (
+                "第四学段（7–9年级）条目是对学段要求的公开转述，不是逐页核对的原文。"
+                "印刷页说明由 scripts/zhj_build.py 写入。"
+            )
     standards_out["chinese"] = {
         "title": "义务教育语文课程标准（2022年版）",
         "issuer": "中华人民共和国教育部",
