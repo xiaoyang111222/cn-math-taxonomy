@@ -236,6 +236,41 @@ def reduce_junior(edges):
     return kept, dropped
 
 
+# 与 en_lib 同一套人教社电子书印刷页。三级语音在表9，词汇在表10（三级+续表在印刷页21），语法在表11。
+J_STATUS = (
+    "2026-11-06 对照人教社电子书《义务教育英语课程标准（2022年版）》印刷页，"
+    "text 仍是转述，不是表内逐字原文"
+)
+J_UNSEEN = (
+    "2026-11-06 已打开表9–11（印刷页19–21）；语用知识和语言技能表的大图未打开，本条仍待核"
+)
+_P19 = "人教社电子书印刷页19，"
+_P20 = "人教社电子书印刷页20，"
+_P21 = "人教社电子书印刷页21，"
+_GR3 = _P21 + "表11三级第1–4条（转述；具体时态、从句和语态不在表11分条，附录4大图未打开）"
+J_PAGE_REF = {
+    "stress": _P19 + "表9三级第3–4条（转述；未单列双音节、多音节重音位置）",
+    "tone": _P19 + "表9三级第3–4条（转述；未把降调、升调按句类分开写）",
+    "esound": _P19 + "表9三级第5条（转述；未单列名词复数和第三人称 -s、-es 的读音）",
+    "edsound": _P19 + "表9三级第5条（转述；未单列过去式 -ed 的三种读音）",
+    "link": _P19 + "表9三级（转述；连读不在表9分条，附录2大图未打开）",
+    "plosion": _P19 + "表9三级（转述；不完全爆破不在表9分条）",
+    "pause": _P19 + "表9三级第2条（转述；写的是按意群表达，未单列停顿规则）",
+    "vocab7": _P20 + "表10三级第4–5条（转述；姓名、家庭等主题不在表10；三级约1600词见附录3）",
+    "vocab8": _P20 + "表10三级第4–5条（转述；习惯、比较等主题不在表10）",
+    "vocab9": _P20 + "表10三级第4–5条（转述；学习、节日等主题不在表10；印刷页21三级+是约1800加200，本条未改挂）",
+}
+
+
+def j_fields(symbol):
+    if symbol in J_PAGE_REF:
+        return J_PAGE_REF[symbol], J_STATUS
+    row = next(r for r in STANDARD_ROWS if r[0] == symbol)
+    if row[2] == "GR":
+        return _GR3, J_STATUS
+    return "待核", J_UNSEEN
+
+
 def build_standards():
     counters = {}
     id_of = {}
@@ -249,15 +284,18 @@ def build_standards():
         counters[key] = counters.get(key, 0) + 1
         sid = "ces-2022:%s.%s.%02d" % (level, code, counters[key])
         id_of[symbol] = sid
+        ref, status = j_fields(symbol)
+        if ref != "待核" and ("人教社电子书印刷页" not in ref or "转述" not in ref):
+            raise SystemExit("课标页码必须写明人教社电子书印刷页和转述：%s" % symbol)
         items.append({
             "id": sid,
             "domain": domain,
             "section": section,
             "clause": "(%d)" % counters[key],
             "text": text,
-            "page_or_ref": "待核",
+            "page_or_ref": ref,
             "verbatim": False,
-            "text_status": "公开转述，未与《义务教育英语课程标准（2022年版）》三级逐页核对",
+            "text_status": status,
         })
     return id_of, items
 
@@ -495,9 +533,10 @@ def main():
         return 1
     eng["stage"] = "一级（3～4年级）、二级（5～6年级）与三级（7～9年级）"
     eng["note"] = (
-        "条目是对一级（3–4年级）、二级（5–6年级）和三级（7–9年级）语言知识的公开转述，不是逐页核对的原文。"
-        "verbatim 为 false，page_or_ref 为「待核」。编号 ces-2022 是本图谱编的，不是教育部原编号。"
-        "小学按人教 PEP 三年级起点的常见目录；初中按人教版 Go for it! 七上到九年级全一册的通行目录，都没有写入页码。"
+        "2026-11-06 对照人教社电子书印刷页19–21（表9语音、表10词汇、表11语法）。"
+        "一级至三级的语音、词汇、语法 page_or_ref 记这些印刷页，text 仍是转述，verbatim 为 false。"
+        "日常表达和读写的大图未打开，page_or_ref 仍为「待核」。"
+        "编号 ces-2022 是本图谱编的，不是教育部原编号。教材册次另见核对文档。"
     )
     standards["items"].extend(new_items)
     dump("topics.json", topics + new_topics)

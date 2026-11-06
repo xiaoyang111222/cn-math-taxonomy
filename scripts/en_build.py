@@ -17,7 +17,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import en_topics  # noqa: E402,F401
-from en_lib import HARD, STANDARD_ROWS, TOPICS, check_question, materialise_questions  # noqa: E402
+from en_lib import (  # noqa: E402
+    HARD, STANDARD_ROWS, TOPICS, check_question, materialise_questions, yy_fields,
+)
 from verify_questions import verify_all  # noqa: E402
 
 EN_CODES = {"PH": "语音", "VO": "词汇", "GR": "语法", "FU": "日常表达", "RW": "读写"}
@@ -85,15 +87,18 @@ def build_standards():
         counters[key] = counters.get(key, 0) + 1
         sid = "ces-2022:%s.%s.%02d" % (level, code, counters[key])
         id_of[symbol] = sid
+        ref, status = yy_fields(symbol)
+        if ref != "待核" and ("人教社电子书印刷页" not in ref or "转述" not in ref):
+            raise SystemExit("课标页码必须写明人教社电子书印刷页和转述：%s" % symbol)
         items.append({
             "id": sid,
             "domain": domain,
             "section": section,
             "clause": "(%d)" % counters[key],
             "text": text,
-            "page_or_ref": "待核",
+            "page_or_ref": ref,
             "verbatim": False,
-            "text_status": "公开转述，未与《义务教育英语课程标准（2022年版）》逐页核对",
+            "text_status": status,
         })
     return id_of, items
 
@@ -280,7 +285,12 @@ def main():
         "issuer": "中华人民共和国教育部",
         "year": 2022,
         "stage": "义务教育三级（3～4年级，一级）与四级（5～6年级，二级）",
-        "note": "条目是对一级、二级语言技能的公开转述，不是逐页核对的原文。verbatim 为 false，page_or_ref 为「待核」。编号 ces-2022 是本图谱编的，不是教育部原编号。教材按人教 PEP 三年级起点的常见目录编排，没有写入页码。",
+        "note": (
+            "2026-11-06 对照人教社电子书印刷页19–21（表9语音、表10词汇、表11语法）。"
+            "语音、词汇、语法的 page_or_ref 记这些印刷页，text 仍是转述，verbatim 为 false。"
+            "日常表达和读写的大图未打开，page_or_ref 仍为「待核」。"
+            "编号 ces-2022 是本图谱编的，不是教育部原编号。教材册次另见核对文档。"
+        ),
     }
     standards["items"].extend(new_items)
     dump("topics.json", topics + new_topics)
