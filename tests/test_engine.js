@@ -1742,5 +1742,100 @@ test('普通整章 / 单点诊断不受影响：不带 mode 的会话仍回溯�
   sum.roots.forEach((r) => assert.deepStrictEqual(r.outOfScopePrereqs, []));
 });
 
+console.log('筛查只沿 hard 先修推断掌握（#34）');
+
+test('筛查：答对后只沿 hard 先修推断掌握，soft 先修保持未测', () => {
+  const scope = ['F', 'E', 'C', 'D', 'B', 'T'];
+  let s = E.createSession(G, scope, { mode: 'screen' });
+  assert.strictEqual(E.nextQuestion(G, s), 'T');
+  s = E.applyAnswer(G, s, 'T', 'correct');
+  assert.strictEqual(s.status.T.src, 'direct');
+  ['C', 'D', 'E', 'F', 'X'].forEach((id) => {
+    assert.strictEqual(E.statusOf(s, id), 'mastered', id);
+    assert.strictEqual(s.status[id].src, 'inferred', id);
+  });
+  assert.strictEqual(E.statusOf(s, 'B'), 'unknown');
+  assert.strictEqual(E.nextQuestion(G, s), 'B');
+});
+
+test('筛查：soft 先修答对后才推断它自己的 hard 祖先', () => {
+  let s = E.createSession(G, ['F', 'E', 'C', 'D', 'B', 'T'], { mode: 'screen' });
+  s = E.applyAnswer(G, s, 'T', 'correct');
+  s = E.applyAnswer(G, s, 'B', 'correct');
+  assert.strictEqual(s.status.B.src, 'direct');
+  assert.strictEqual(E.nextQuestion(G, s), null);
+  const sum = E.summarize(G, s);
+  assert.deepStrictEqual(sum.untested, []);
+});
+
+test('筛查：soft 边之后的 hard 链也不推断；target 模式仍推断全部祖先', () => {
+  const topicsS = [mk('R'), mk('S'), mk('A')];
+  const depsS = [
+    { topicId: 'S', prerequisiteId: 'R', strength: 'hard' },
+    { topicId: 'A', prerequisiteId: 'S', strength: 'soft' }
+  ];
+  const GS = E.buildGraph(topicsS, depsS);
+  let scr = E.createSession(GS, ['R', 'S', 'A'], { mode: 'screen' });
+  scr = E.applyAnswer(GS, scr, 'A', 'correct');
+  assert.strictEqual(E.statusOf(scr, 'A'), 'mastered');
+  assert.strictEqual(E.statusOf(scr, 'S'), 'unknown');
+  assert.strictEqual(E.statusOf(scr, 'R'), 'unknown');
+  // 同一张图（缓存已建立）上的 target 会话不受影响
+  let tgt = E.createSession(GS, ['A']);
+  tgt = E.applyAnswer(GS, tgt, 'A', 'correct');
+  assert.strictEqual(E.statusOf(tgt, 'S'), 'mastered');
+  assert.strictEqual(E.statusOf(tgt, 'R'), 'mastered');
+  assert.strictEqual(tgt.status.R.src, 'inferred');
+  // 再开一次筛查，结果与第一次一致（缓存不串）
+  let scr2 = E.createSession(GS, ['R', 'S', 'A'], { mode: 'screen' });
+  scr2 = E.applyAnswer(GS, scr2, 'A', 'correct');
+  assert.deepStrictEqual(scr2.status, scr.status);
+});
+
+test('筛查：只有 soft 先修的点答对后不推断任何祖先', () => {
+  const topicsS = [mk('P'), mk('Q'), mk('W')];
+  const depsS = [
+    { topicId: 'W', prerequisiteId: 'P', strength: 'soft' },
+    { topicId: 'W', prerequisiteId: 'Q', strength: 'soft' }
+  ];
+  const GS = E.buildGraph(topicsS, depsS);
+  let s = E.createSession(GS, ['P', 'Q', 'W'], { mode: 'screen' });
+  s = E.applyAnswer(GS, s, 'W', 'correct');
+  assert.deepStrictEqual(Object.keys(s.status), ['W']);
+  const asked = [];
+  for (let i = 0; i < 10; i++) {
+    const q = E.nextQuestion(GS, s);
+    if (!q) break;
+    asked.push(q);
+    s = E.applyAnswer(GS, s, q, 'correct');
+  }
+  assert.deepStrictEqual(sorted(asked), ['P', 'Q']);
+  assert.strictEqual(E.summarize(GS, s).untested.length, 0);
+});
+
+test('筛查：推断掌握不覆盖直接判定', () => {
+  let s = E.createSession(G, ['F', 'E', 'C', 'D', 'B', 'T'], { mode: 'screen' });
+  s = E.applyAnswer(G, s, 'E', 'wrong');
+  s = E.applyAnswer(G, s, 'T', 'correct');
+  assert.strictEqual(E.statusOf(s, 'E'), 'weak');
+  assert.strictEqual(E.statusOf(s, 'C'), 'mastered');
+});
+
+test('筛查真实数据（历史七上）：每个推断掌握的点都能从某个直接掌握点沿 hard 先修到达', () => {
+  const g = E.gradeTargets(RGQ, '七上', 'history');
+  const s = screenRun(g, allRight, 1000, 'scr', 1);
+  const direct = Object.keys(s.status).filter((id) => s.status[id].src === 'direct' && s.status[id].s === 'mastered');
+  const reach = new Set();
+  const walk = (id) => RGQ.prereqs[id].forEach((p) => {
+    if (p.strength === 'hard' && !reach.has(p.id)) { reach.add(p.id); walk(p.id); }
+  });
+  direct.forEach(walk);
+  const inferred = Object.keys(s.status).filter((id) => s.status[id].src === 'inferred');
+  inferred.forEach((id) => assert.ok(reach.has(id), id + ' 不应沿 soft 先修推断'));
+  // 历史七上大多是软边：直接问到的点应远多于旧行为的 3 个左右
+  assert.ok(direct.length > 3, '只直接问了 ' + direct.length + ' 个点');
+  assert.strictEqual(E.summarize(RGQ, s).mastered.length, g.ids.length);
+});
+
 console.log('\n' + passed + ' passed, ' + failed + ' failed');
 process.exit(failed ? 1 : 0);
