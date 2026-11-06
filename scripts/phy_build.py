@@ -24,6 +24,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import phy_g8a  # noqa: E402,F401
 import phy_g8b  # noqa: E402,F401
 import phy_g9  # noqa: E402,F401
+from phy_figs import figure_for  # noqa: E402
 from phy_lib import TOPICS  # noqa: E402
 from phy_std import CLAUSES, SECTIONS, TOP  # noqa: E402
 from verify_questions import verify_all  # noqa: E402
@@ -146,6 +147,9 @@ def build_junior(math_ids, id_of, order, name_of):
                        "verify": q["verify"] if q["verify"] else json.dumps(q["right"], ensure_ascii=False)}
             if q.get("figure"):
                 obj["figure"] = q["figure"]
+            fig = figure_for(obj)
+            if fig:
+                obj["figure"] = fig
             new_qs.append(obj)
     res = verify_all(new_qs)
     for m in res["mismatch"]:

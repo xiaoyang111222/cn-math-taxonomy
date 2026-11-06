@@ -1075,6 +1075,16 @@ test('题库：初中化学有内联示意图', () => {
   });
 });
 
+test('题库：初中物理有内联示意图', () => {
+  const phy = questions.filter((q) => /^cnp_\d/.test(String(q.id || '')) && q.figure);
+  assert.ok(phy.length >= 48, '初中物理配图题数 ' + phy.length);
+  ['cnp_016_q3', 'cnp_033_q2', 'cnp_049_q3', 'cnp_065_q4', 'cnp_004_q3'].forEach((id) => {
+    const q = questions.find((item) => item.id === id);
+    assert.ok(q && q.figure && q.figure.indexOf('currentColor') > 0, id);
+    assert.ok(q.figure.indexOf('viewBox=') > 0, id);
+  });
+});
+
 test('题库：choice 题有 3–4 个选项、key 不重复、answer 是某个选项的 key', () => {
   let n = 0;
   questions.filter((q) => q.type === 'choice').forEach((q) => {
