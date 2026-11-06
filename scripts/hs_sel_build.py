@@ -20,6 +20,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from hs_sel_common import EDGES, QUESTIONS, STANDARDS, TOPICS  # noqa: E402
 import hs_sel_standards  # noqa: E402,F401
+from hs_sel_standards import PAGE_REF, PAGE_STATUS  # noqa: E402
 import hs_sel_b1  # noqa: E402,F401
 import hs_sel_b2  # noqa: E402,F401
 import hs_sel_b3  # noqa: E402,F401
@@ -397,8 +398,8 @@ def main():
     std = load("cn-curriculum-standards.json")
     note = std["source"].get("note") or ""
     extra = (" 选择性必修条目续接同一套编号（函数 FUN.18 起，几何与代数 GA.13 起，"
-             "概率与统计 PS.09 起，建模与探究 MI.03 起），仍是公开转述，verbatim 为 false，"
-             "page_or_ref 为「待核」。")
+             "概率与统计 PS.09 起，建模与探究 MI.03 起），仍是公开转述，verbatim 为 false。"
+             "2026-11-06 起 page_or_ref 记人教社转载的 2020 年修订版 PDF 印刷页，text 仍是转述。")
     if "选择性必修条目" not in note:
         std["source"]["note"] = note + extra
     std["source"]["stage"] = "义务教育第一至第四学段（1～9年级）；普通高中必修课程与选择性必修课程"
@@ -408,13 +409,16 @@ def main():
     hs = std["source"].setdefault("high_school", {})
     old_hs_note = hs.get("note") or ""
     if "选择性必修" not in old_hs_note:
-        hs["note"] = old_hs_note + " 选择性必修主题同样未逐页核对，标为待核。"
+        hs["note"] = old_hs_note + (
+            " 2026-11-06 选择性必修 page_or_ref 记了人教社转载 PDF 印刷页，text 仍是转述。"
+        )
     existing_ids = {it["id"] for it in std["items"]}
     for s in STANDARDS:
         sid = "cms-2017:H.%s" % s["code"]
         if sid in existing_ids:
             print("课标 id 已存在：%s" % sid, file=sys.stderr)
             return 1
+        ref = PAGE_REF.get(s["code"], "待核")
         std["items"].append({
             "id": sid,
             "domain": s["domain"],
@@ -422,9 +426,9 @@ def main():
             "section": s["section"],
             "clause": s["clause"],
             "text": s["text"],
-            "page_or_ref": "待核",
+            "page_or_ref": ref,
             "verbatim": False,
-            "text_status": "公开转述整理，未与教育部 PDF 逐页核对，待核",
+            "text_status": PAGE_STATUS if ref != "待核" else "公开转述整理，未与教育部 PDF 逐页核对，待核",
         })
 
     topics.extend(new_topics)

@@ -20,6 +20,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from hs_common import EDGES, QUESTIONS, STANDARDS, TOPICS  # noqa: E402
 import hs_standards  # noqa: E402,F401
+from hs_standards import PAGE_REF, PAGE_STATUS  # noqa: E402
 import hs_book1  # noqa: E402,F401
 import hs_book2  # noqa: E402,F401
 from verify_questions import safe_eval  # noqa: E402
@@ -390,7 +391,8 @@ def main():
     std = load("cn-curriculum-standards.json")
     note = std["source"].get("note") or ""
     extra = (" 高中必修条目据《普通高中数学课程标准（2017年版2025年修订）》五个主题的公开转述整理，"
-             "不是逐页核对的原文，verbatim 为 false，page_or_ref 为「待核」。"
+             "不是逐页核对的原文，verbatim 为 false。"
+             "2026-11-06 起 page_or_ref 记人教社转载的 2020 年修订版 PDF 印刷页，text 仍是转述。"
              "编号 cms-2017:H.<模块>.NN 是本图谱按主题编的，不是教育部原编号。")
     if "cms-2017" not in note:
         std["source"]["note"] = note + extra
@@ -404,7 +406,11 @@ def main():
         "year": 2020,
         "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/t20200603_462199.html",
         "reference_pdf": "https://www.pep.com.cn/xw/zt/rjwy/gzkb2020/202205/P020220517519489596282.pdf",
-        "note": "印发通知见教育部网页。条目正文未与该 PDF 逐页核对，标为待核。",
+        "note": (
+            "2026-11-06 对照的是人教社转载的 2020 年修订版 PDF，不是 2025 年日常修订版。"
+            "必修和选择性必修的 page_or_ref 记了印刷页，text 仍是转述。"
+            "函数零点与二分法在印刷页 22–23，三角恒等变换在印刷页 22。"
+        ),
     }
     existing_ids = {it["id"] for it in std["items"]}
     for s in STANDARDS:
@@ -412,6 +418,7 @@ def main():
         if sid in existing_ids:
             print("课标 id 已存在：%s" % sid, file=sys.stderr)
             return 1
+        ref = PAGE_REF.get(s["code"], "待核")
         std["items"].append({
             "id": sid,
             "domain": s["domain"],
@@ -419,9 +426,9 @@ def main():
             "section": s["section"],
             "clause": s["clause"],
             "text": s["text"],
-            "page_or_ref": "待核",
+            "page_or_ref": ref,
             "verbatim": False,
-            "text_status": "公开转述整理，未与教育部 PDF 逐页核对，待核",
+            "text_status": PAGE_STATUS if ref != "待核" else "公开转述整理，未与教育部 PDF 逐页核对，待核",
         })
 
     topics.extend(new_topics)

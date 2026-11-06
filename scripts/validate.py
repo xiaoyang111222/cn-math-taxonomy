@@ -898,6 +898,12 @@ def check_standards_file(std):
             last[key] = num
             if it.get("verbatim") is not False:
                 err("%s 高中条目必须显式标 verbatim:false（原文未逐页核对）" % where)
+            ref = it.get("page_or_ref")
+            if ref != "待核":
+                if not (isinstance(ref, str) and ref.startswith("人教社转载 PDF 印刷页") and "转述" in ref):
+                    err("%s 高中数学课标 page_or_ref 必须标明人教社转载 PDF 印刷页，并写明是转述" % where)
+                if "2026-11-06" not in str(it.get("text_status") or ""):
+                    err("%s 高中数学课标 text_status 必须记下 2026-11-06 的核对" % where)
         elif em:
             saw_english = True
             level, code, num = em.group(1), em.group(2), int(em.group(3))
