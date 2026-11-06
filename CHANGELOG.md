@@ -1,5 +1,9 @@
 # 变更日志
 
+## 2026-11-06（小学语文课标核对）
+
+- 2026-11-06：小学语文第一至第三学段 20 条 `ccs-2022:1.*`–`3.*` 对照人教社电子书印刷页 7–13 补了 `page_or_ref` 和 `text_status`，text 仍是转述，`verbatim` 仍为 false；知识点 confidence 仍是 `inferred`。册次逐课目录没有升成官方已核。详见 `docs/standards-verify-2026-11-06-b2.md`。
+
 ## 2026-11-06（初中语文课标核对）
 
 - 2026-11-06：初中语文第四学段 12 条 `ccs-2022:4.*` 对照人教社电子书印刷页 14–16 补了 `page_or_ref` 和 `text_status`，text 仍是转述，`verbatim` 仍为 false；189 个知识点保持 `inferred`。九下修订版目录未公开。详见 `docs/standards-verify-2026-11-06-junior-chinese.md`。

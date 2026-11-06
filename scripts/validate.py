@@ -951,12 +951,12 @@ def check_standards_file(std):
             if it.get("verbatim") is not False:
                 err("%s 语文课标必须显式标 verbatim:false（原文未逐页核对）" % where)
             ref = it.get("page_or_ref")
-            if level == "4":
-                # 只放开第四学段：必须是人教社电子书印刷页上的转述，不能写成教育部 PDF 页码。
+            if level in ("1", "2", "3", "4"):
+                # 学段要求对照过人教社电子书印刷页。必须写明是转述，不能写成教育部 PDF 页码。
                 if not (isinstance(ref, str) and ref.startswith("人教社电子书印刷页") and "转述" in ref):
-                    err("%s 第四学段 page_or_ref 必须标明人教社电子书印刷页，并写明是转述" % where)
+                    err("%s 语文课标 page_or_ref 必须标明人教社电子书印刷页，并写明是转述" % where)
                 if "2026-11-06" not in str(it.get("text_status") or ""):
-                    err("%s 第四学段 text_status 必须记下 2026-11-06 的核对" % where)
+                    err("%s 语文课标 text_status 必须记下 2026-11-06 的核对" % where)
             elif ref != "待核":
                 err("%s 语文课标 page_or_ref 必须是「待核」，不能编页码" % where)
         elif mrm:

@@ -195,9 +195,13 @@ NEW_FOURTH = (
     "未取得教育部官网 PDF。详见 docs/standards-verify-2026-11-06-junior-chinese.md。"
 )
 BLANKET_REF = "verbatim 为 false，page_or_ref 为「待核」。"
-CLARIFIED_REF = (
+OLD_CLARIFIED_REF = (
     "verbatim 为 false。第一至第三学段 page_or_ref 仍为「待核」；"
     "第四学段 page_or_ref 记人教社电子书印刷页，不是教育部 PDF 页码。"
+)
+CLARIFIED_REF = (
+    "verbatim 为 false。第一至第三学段 page_or_ref 记人教社电子书印刷页7–13，"
+    "第四学段记印刷页14–16，都不是教育部 PDF 页码。"
 )
 
 
@@ -215,7 +219,9 @@ def merge_chinese_meta(existing):
         note = note[:note.find(marker)].rstrip() + " " + NEW_FOURTH
     else:
         note = (note.rstrip() + " " + NEW_FOURTH).strip()
-    if BLANKET_REF in note:
+    if OLD_CLARIFIED_REF in note:
+        note = note.replace(OLD_CLARIFIED_REF, CLARIFIED_REF, 1)
+    elif BLANKET_REF in note:
         note = note.replace(BLANKET_REF, CLARIFIED_REF, 1)
     meta["note"] = note
     return meta
