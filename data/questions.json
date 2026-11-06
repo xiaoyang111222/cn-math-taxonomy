@@ -74605,196 +74605,196 @@
     "topicId": "cne_j008",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "介绍一位姐姐，哪一句正确？",
+    "prompt": "近处一只兔子，哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "These are my sister."
+        "text": "These are a rabbit."
       },
       {
         "key": "B",
-        "text": "This is my sister."
+        "text": "This is a rabbit."
       },
       {
         "key": "C",
-        "text": "This are my sister."
+        "text": "This are a rabbit."
       },
       {
         "key": "D",
-        "text": "These is my sister."
+        "text": "These is a rabbit."
       }
     ],
     "answer": "B",
-    "explanation": "一个人用 This is。",
-    "verify": "\"This is my sister.\""
+    "explanation": "近处单数用 This is。",
+    "verify": "\"This is a rabbit.\""
   },
   {
     "id": "cne_j008_q2",
     "topicId": "cne_j008",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "介绍两个弟弟，哪一句正确？",
+    "prompt": "远处那些是树，哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "This is my brothers."
+        "text": "That are trees."
       },
       {
         "key": "B",
-        "text": "These is my brothers."
+        "text": "Those is trees."
       },
       {
         "key": "C",
-        "text": "These are my brothers."
+        "text": "Those are trees."
       },
       {
         "key": "D",
-        "text": "This are my brothers."
+        "text": "This are trees."
       }
     ],
     "answer": "C",
-    "explanation": "复数用 These are。",
-    "verify": "\"These are my brothers.\""
+    "explanation": "远处复数用 Those are。",
+    "verify": "\"Those are trees.\""
   },
   {
     "id": "cne_j008_q3",
     "topicId": "cne_j008",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "These are my parents. 这句在说什么？",
+    "prompt": "What are these? 这些是胡萝卜，应回答什么？",
     "choices": [
       {
         "key": "A",
-        "text": "这是我的姐姐"
+        "text": "It is carrots."
       },
       {
         "key": "B",
-        "text": "这些是我的书"
+        "text": "This are carrots."
       },
       {
         "key": "C",
-        "text": "这是我的朋友"
+        "text": "They is carrots."
       },
       {
         "key": "D",
-        "text": "这些是我的父母"
+        "text": "They are carrots."
       }
     ],
     "answer": "D",
-    "explanation": "parents 是父母，these are 表示这些是。",
-    "verify": "\"这些是我的父母\""
+    "explanation": "these 用 They are 回答。",
+    "verify": "\"They are carrots.\""
   },
   {
     "id": "cne_j008_q4",
     "topicId": "cne_j008",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "That is my brother. 哪一个词表示远指单数？",
+    "prompt": "What's that? 远处是一只鹅，哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "That"
+        "text": "It's a goose."
       },
       {
         "key": "B",
-        "text": "These"
+        "text": "They're a goose."
       },
       {
         "key": "C",
-        "text": "Those"
+        "text": "This are a goose."
       },
       {
         "key": "D",
-        "text": "Are"
+        "text": "Those are a goose."
       }
     ],
     "answer": "A",
-    "explanation": "That 指较远的那一个。",
-    "verify": "\"That\""
+    "explanation": "that 指单数，用 It's。",
+    "verify": "\"It's a goose.\""
   },
   {
     "id": "cne_j009_q1",
     "topicId": "cne_j009",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "book 的复数是哪一个？",
+    "prompt": "tomato 的复数是哪一个？",
     "choices": [
       {
         "key": "A",
-        "text": "bookes"
+        "text": "tomatos"
       },
       {
         "key": "B",
-        "text": "book"
+        "text": "tomatoies"
       },
       {
         "key": "C",
-        "text": "books"
+        "text": "tomatoes"
       },
       {
         "key": "D",
-        "text": "bookies"
+        "text": "tomato"
       }
     ],
     "answer": "C",
-    "explanation": "一般直接加 s，books。",
-    "verify": "\"books\""
+    "explanation": "以 o 结尾的 tomato 加 es。",
+    "verify": "\"tomatoes\""
   },
   {
     "id": "cne_j009_q2",
     "topicId": "cne_j009",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "box 的复数是哪一个？",
+    "prompt": "sheep 的复数是哪一个？",
     "choices": [
       {
         "key": "A",
-        "text": "boxs"
+        "text": "sheeps"
       },
       {
         "key": "B",
-        "text": "boxies"
+        "text": "sheepes"
       },
       {
         "key": "C",
-        "text": "box"
+        "text": "sheepies"
       },
       {
         "key": "D",
-        "text": "boxes"
+        "text": "sheep"
       }
     ],
     "answer": "D",
-    "explanation": "以 x 结尾加 es，boxes。",
-    "verify": "\"boxes\""
+    "explanation": "sheep 单复数同形。",
+    "verify": "\"sheep\""
   },
   {
     "id": "cne_j009_q3",
     "topicId": "cne_j009",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "family 的复数是哪一个？",
+    "prompt": "goose 的复数是哪一个？",
     "choices": [
       {
         "key": "A",
-        "text": "families"
+        "text": "geese"
       },
       {
         "key": "B",
-        "text": "familys"
+        "text": "gooses"
       },
       {
         "key": "C",
-        "text": "familyes"
+        "text": "geeses"
       },
       {
         "key": "D",
-        "text": "family's"
+        "text": "goose"
       }
     ],
     "answer": "A",
-    "explanation": "辅音字母加 y 结尾，变 y 为 i 再加 es。",
-    "verify": "\"families\""
+    "explanation": "goose 的复数是 geese。",
+    "verify": "\"geese\""
   },
   {
     "id": "cne_j009_q4",
@@ -74805,24 +74805,24 @@
     "choices": [
       {
         "key": "A",
-        "text": "I have two sister."
+        "text": "I see two rabbit."
       },
       {
         "key": "B",
-        "text": "I have two sisters."
+        "text": "I see two rabbits."
       },
       {
         "key": "C",
-        "text": "I have two sister's."
+        "text": "I see two rabites."
       },
       {
         "key": "D",
-        "text": "I have two sisters'."
+        "text": "I see two rabbites."
       }
     ],
     "answer": "B",
-    "explanation": "two 后面用复数 sisters。",
-    "verify": "\"I have two sisters.\""
+    "explanation": "two 后面用 rabbits。",
+    "verify": "\"I see two rabbits.\""
   },
   {
     "id": "cne_j010_q1",
@@ -75165,19 +75165,19 @@
     "topicId": "cne_j013",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "哪个单词的意思是「铅笔」？",
+    "prompt": "哪个单词的意思是「钥匙」？",
     "choices": [
       {
         "key": "A",
-        "text": "eraser"
+        "text": "cap"
       },
       {
         "key": "B",
-        "text": "dictionary"
+        "text": "pencil"
       },
       {
         "key": "C",
-        "text": "pencil"
+        "text": "key"
       },
       {
         "key": "D",
@@ -75185,23 +75185,23 @@
       }
     ],
     "answer": "C",
-    "explanation": "pencil 的意思是铅笔。",
-    "verify": "\"pencil\""
+    "explanation": "key 的意思是钥匙。",
+    "verify": "\"key\""
   },
   {
     "id": "cne_j013_q2",
     "topicId": "cne_j013",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "「eraser」的中文意思是哪一个？",
+    "prompt": "「cap」的中文意思是哪一个？",
     "choices": [
       {
         "key": "A",
-        "text": "铅笔"
+        "text": "钥匙"
       },
       {
         "key": "B",
-        "text": "词典"
+        "text": "铅笔"
       },
       {
         "key": "C",
@@ -75209,31 +75209,31 @@
       },
       {
         "key": "D",
-        "text": "橡皮"
+        "text": "帽子"
       }
     ],
     "answer": "D",
-    "explanation": "eraser 的意思是橡皮。",
-    "verify": "\"橡皮\""
+    "explanation": "cap 的意思是帽子。",
+    "verify": "\"帽子\""
   },
   {
     "id": "cne_j013_q3",
     "topicId": "cne_j013",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "选择表示「词典」的单词。",
+    "prompt": "选择表示「铅笔」的单词。",
     "choices": [
       {
         "key": "A",
-        "text": "dictionary"
-      },
-      {
-        "key": "B",
         "text": "pencil"
       },
       {
+        "key": "B",
+        "text": "key"
+      },
+      {
         "key": "C",
-        "text": "eraser"
+        "text": "cap"
       },
       {
         "key": "D",
@@ -75241,8 +75241,8 @@
       }
     ],
     "answer": "A",
-    "explanation": "表示词典的单词是 dictionary。",
-    "verify": "\"dictionary\""
+    "explanation": "表示铅笔的单词是 pencil。",
+    "verify": "\"pencil\""
   },
   {
     "id": "cne_j013_q4",
@@ -75253,7 +75253,7 @@
     "choices": [
       {
         "key": "A",
-        "text": "pencil"
+        "text": "key"
       },
       {
         "key": "B",
@@ -75261,11 +75261,11 @@
       },
       {
         "key": "C",
-        "text": "eraser"
+        "text": "cap"
       },
       {
         "key": "D",
-        "text": "dictionary"
+        "text": "pencil"
       }
     ],
     "answer": "B",
@@ -75277,35 +75277,35 @@
     "topicId": "cne_j014",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "这是她的橡皮。哪一句正确？",
+    "prompt": "这是她的名字。哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "This is she eraser."
+        "text": "This is she name."
       },
       {
         "key": "B",
-        "text": "This is hers eraser."
+        "text": "This is hers name."
       },
       {
         "key": "C",
-        "text": "This is her an eraser."
+        "text": "This is her a name."
       },
       {
         "key": "D",
-        "text": "This is her eraser."
+        "text": "This is her name."
       }
     ],
     "answer": "D",
     "explanation": "her 后面直接加名词。",
-    "verify": "\"This is her eraser.\""
+    "verify": "\"This is her name.\""
   },
   {
     "id": "cne_j014_q2",
     "topicId": "cne_j014",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "___ pencil is blue. 铅笔是 Tom 的，横线处填哪一个？",
+    "prompt": "___ friend is Tom. 朋友是男生 Tom 的，横线处填哪一个？",
     "choices": [
       {
         "key": "A",
@@ -75365,59 +75365,59 @@
     "choices": [
       {
         "key": "A",
-        "text": "You dictionary is here."
+        "text": "You book is here."
       },
       {
         "key": "B",
-        "text": "Your is dictionary here."
+        "text": "Your is book here."
       },
       {
         "key": "C",
-        "text": "Your dictionary is here."
+        "text": "Your book is here."
       },
       {
         "key": "D",
-        "text": "Yours dictionary is here."
+        "text": "Yours book is here."
       }
     ],
     "answer": "C",
-    "explanation": "your 修饰 dictionary，名词性物主代词 yours 后面不再加名词。",
-    "verify": "\"Your dictionary is here.\""
+    "explanation": "your 修饰 book，名词性物主代词 yours 后面不再加名词。",
+    "verify": "\"Your book is here.\""
   },
   {
     "id": "cne_j015_q1",
     "topicId": "cne_j015",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "This is her pencil. 改成一般疑问句，哪一句正确？",
+    "prompt": "She is your classmate. 改成一般疑问句，哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "Is this her pencil?"
+        "text": "Is she your classmate?"
       },
       {
         "key": "B",
-        "text": "Does this is her pencil?"
+        "text": "Does she is your classmate?"
       },
       {
         "key": "C",
-        "text": "Is this her pencil."
+        "text": "Is she your classmate."
       },
       {
         "key": "D",
-        "text": "Are this her pencil?"
+        "text": "Are she your classmate?"
       }
     ],
     "answer": "A",
-    "explanation": "be 动词提到句首，this 仍用 is。",
-    "verify": "\"Is this her pencil?\""
+    "explanation": "be 动词提到句首，she 仍用 is。",
+    "verify": "\"Is she your classmate?\""
   },
   {
     "id": "cne_j015_q2",
     "topicId": "cne_j015",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "Are you Gina? 肯定简答是哪一句？",
+    "prompt": "Are you Tom? 肯定简答是哪一句？",
     "choices": [
       {
         "key": "A",
@@ -75445,7 +75445,7 @@
     "topicId": "cne_j015",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Is he your brother? 否定简答是哪一句？",
+    "prompt": "Is he your friend? 否定简答是哪一句？",
     "choices": [
       {
         "key": "A",
@@ -75477,59 +75477,59 @@
     "choices": [
       {
         "key": "A",
-        "text": "These are your rulers."
+        "text": "They are your classmates."
       },
       {
         "key": "B",
-        "text": "Your rulers are these."
+        "text": "Your classmates are they."
       },
       {
         "key": "C",
-        "text": "What these are?"
+        "text": "What they are?"
       },
       {
         "key": "D",
-        "text": "Are these your rulers?"
+        "text": "Are they your classmates?"
       }
     ],
     "answer": "D",
-    "explanation": "Are these 把 are 放在句首。",
-    "verify": "\"Are these your rulers?\""
+    "explanation": "Are they 把 are 放在句首。",
+    "verify": "\"Are they your classmates?\""
   },
   {
     "id": "cne_j016_q1",
     "topicId": "cne_j016",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "捡到一支铅笔，想问是不是对方的，哪一句合适？",
+    "prompt": "想问这顶帽子是不是对方的，哪一句合适？",
     "choices": [
       {
         "key": "A",
-        "text": "This is your pencil."
+        "text": "This is your cap."
       },
       {
         "key": "B",
-        "text": "Is this your pencil?"
+        "text": "Is this your cap?"
       },
       {
         "key": "C",
-        "text": "Are this your pencil?"
+        "text": "Are this your cap?"
       },
       {
         "key": "D",
-        "text": "What your pencil?"
+        "text": "What your cap?"
       }
     ],
     "answer": "B",
-    "explanation": "询问用 Is this your pencil。",
-    "verify": "\"Is this your pencil?\""
+    "explanation": "询问用 Is this your cap。",
+    "verify": "\"Is this your cap?\""
   },
   {
     "id": "cne_j016_q2",
     "topicId": "cne_j016",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "对方问 Is this your eraser? 是你的，应回答什么？",
+    "prompt": "对方问 Is this your key? 是你的，应回答什么？",
     "choices": [
       {
         "key": "A",
@@ -75557,168 +75557,168 @@
     "topicId": "cne_j016",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "失物招领牌上写什么可以表示「请找老师」？",
+    "prompt": "想说这把钥匙是他的，哪一句合适？",
     "choices": [
       {
         "key": "A",
-        "text": "I am the teacher."
+        "text": "This is he key."
       },
       {
         "key": "B",
-        "text": "This are a teacher."
+        "text": "This is him key."
       },
       {
         "key": "C",
-        "text": "Ask you teacher."
+        "text": "This are his key."
       },
       {
         "key": "D",
-        "text": "Ask the teacher for it."
+        "text": "This is his key."
       }
     ],
     "answer": "D",
-    "explanation": "Ask the teacher for it 是向老师索取。",
-    "verify": "\"Ask the teacher for it.\""
+    "explanation": "his 修饰 key。",
+    "verify": "\"This is his key.\""
   },
   {
     "id": "cne_j016_q4",
     "topicId": "cne_j016",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "想说这本词典是他的，哪一句合适？",
+    "prompt": "Whose cap is this? 这句在问什么？",
     "choices": [
       {
         "key": "A",
-        "text": "This is his dictionary."
+        "text": "这顶帽子是谁的"
       },
       {
         "key": "B",
-        "text": "This is he dictionary."
+        "text": "帽子在哪里"
       },
       {
         "key": "C",
-        "text": "This is him dictionary."
+        "text": "帽子多少钱"
       },
       {
         "key": "D",
-        "text": "This are his dictionary."
+        "text": "帽子是什么颜色"
       }
     ],
     "answer": "A",
-    "explanation": "his 修饰 dictionary。",
-    "verify": "\"This is his dictionary.\""
+    "explanation": "Whose 问所属。",
+    "verify": "\"这顶帽子是谁的\""
   },
   {
     "id": "cne_j017_q1",
     "topicId": "cne_j017",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "Found: a blue pencil. Is this your pencil? Call Mary at 622-6033. 捡到的是什么？",
+    "prompt": "This is my desk. The pencil is mine. The cap is his. The key is in the bag. 铅笔是谁的？",
     "choices": [
       {
         "key": "A",
-        "text": "一块橡皮"
+        "text": "他"
       },
       {
         "key": "B",
-        "text": "一本词典"
+        "text": "老师"
       },
       {
         "key": "C",
-        "text": "一支蓝色铅笔"
+        "text": "说话人自己"
       },
       {
         "key": "D",
-        "text": "一把尺子"
+        "text": "短文没说"
       }
     ],
     "answer": "C",
-    "explanation": "a blue pencil 是蓝色铅笔。",
-    "verify": "\"一支蓝色铅笔\""
+    "explanation": "The pencil is mine 是说话人自己的。",
+    "verify": "\"说话人自己\""
   },
   {
     "id": "cne_j017_q2",
     "topicId": "cne_j017",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "Found: a blue pencil. Is this your pencil? Call Mary at 622-6033. 应该给谁打电话？",
+    "prompt": "This is my desk. The pencil is mine. The cap is his. The key is in the bag. 帽子是谁的？",
     "choices": [
       {
         "key": "A",
-        "text": "Gina"
+        "text": "说话人自己"
       },
       {
         "key": "B",
-        "text": "Tom"
+        "text": "老师"
       },
       {
         "key": "C",
-        "text": "Jack"
+        "text": "Mary"
       },
       {
         "key": "D",
-        "text": "Mary"
+        "text": "他"
       }
     ],
     "answer": "D",
-    "explanation": "Call Mary 是给 Mary 打电话。",
-    "verify": "\"Mary\""
+    "explanation": "The cap is his。",
+    "verify": "\"他\""
   },
   {
     "id": "cne_j017_q3",
     "topicId": "cne_j017",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Lost: my dictionary. My name is Tom. Please call 139-0011. 谁丢了词典？",
+    "prompt": "This is my desk. The pencil is mine. The cap is his. The key is in the bag. 钥匙在哪里？",
     "choices": [
       {
         "key": "A",
-        "text": "Tom"
+        "text": "在包里"
       },
       {
         "key": "B",
-        "text": "Mary"
+        "text": "在帽子上"
       },
       {
         "key": "C",
-        "text": "Gina"
+        "text": "在铅笔盒外的地上"
       },
       {
         "key": "D",
-        "text": "Alice"
+        "text": "在书桌上，短文没这么写"
       }
     ],
     "answer": "A",
-    "explanation": "My name is Tom，丢的是 my dictionary。",
-    "verify": "\"Tom\""
+    "explanation": "The key is in the bag。",
+    "verify": "\"在包里\""
   },
   {
     "id": "cne_j017_q4",
     "topicId": "cne_j017",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Lost: my dictionary. My name is Tom. Please call 139-0011. 哪一句和启事一致？",
+    "prompt": "This is my desk. The pencil is mine. The cap is his. The key is in the bag. 哪一句和短文一致？",
     "choices": [
       {
         "key": "A",
-        "text": "Tom found a dictionary."
+        "text": "The cap is mine."
       },
       {
         "key": "B",
-        "text": "Tom lost a dictionary."
+        "text": "The key is in the bag."
       },
       {
         "key": "C",
-        "text": "Mary lost a pencil."
+        "text": "The pencil is his."
       },
       {
         "key": "D",
-        "text": "The dictionary is blue."
+        "text": "The desk is his."
       }
     ],
     "answer": "B",
-    "explanation": "Lost: my dictionary 表示词典丢失了。",
-    "verify": "\"Tom lost a dictionary.\""
+    "explanation": "钥匙在包里，帽子是他的，铅笔是我的。",
+    "verify": "\"The key is in the bag.\""
   },
   {
     "id": "cne_j018_q1",
@@ -75837,112 +75837,112 @@
     "topicId": "cne_j019",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "书在桌子上。哪一句正确？",
+    "prompt": "礼堂在教学楼前面。哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "The book is on the table."
+        "text": "The hall is in front of the building."
       },
       {
         "key": "B",
-        "text": "The book is under the table."
+        "text": "The hall is in the front building."
       },
       {
         "key": "C",
-        "text": "The book is in the table."
+        "text": "The hall are in front of the building."
       },
       {
         "key": "D",
-        "text": "The book are on the table."
+        "text": "The hall is front the building."
       }
     ],
     "answer": "A",
-    "explanation": "在表面上用 on。",
-    "verify": "\"The book is on the table.\""
+    "explanation": "在……前面用 in front of。",
+    "verify": "\"The hall is in front of the building.\""
   },
   {
     "id": "cne_j019_q2",
     "topicId": "cne_j019",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "包在床底下。哪一句正确？",
+    "prompt": "教学楼在礼堂对面。哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "The bag is on the bed."
+        "text": "The building is across to the hall."
       },
       {
         "key": "B",
-        "text": "The bag is under the bed."
+        "text": "The building is across from the hall."
       },
       {
         "key": "C",
-        "text": "The bag is under the chair only."
+        "text": "The building across from the hall."
       },
       {
         "key": "D",
-        "text": "The bag are under the bed."
+        "text": "The building is across from hall the."
       }
     ],
     "answer": "B",
-    "explanation": "在下面用 under。",
-    "verify": "\"The bag is under the bed.\""
+    "explanation": "在对面用 across from。",
+    "verify": "\"The building is across from the hall.\""
   },
   {
     "id": "cne_j019_q3",
     "topicId": "cne_j019",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Where is my schoolbag? 这句在问什么？",
+    "prompt": "Where is the hall? 这句在问什么？",
     "choices": [
       {
         "key": "A",
-        "text": "我的书包是什么颜色"
+        "text": "礼堂是什么颜色"
       },
       {
         "key": "B",
-        "text": "书包是谁的"
+        "text": "礼堂多少钱"
       },
       {
         "key": "C",
-        "text": "我的书包在哪里"
+        "text": "礼堂在哪里"
       },
       {
         "key": "D",
-        "text": "书包多少钱"
+        "text": "礼堂是谁的"
       }
     ],
     "answer": "C",
     "explanation": "Where 问地点。",
-    "verify": "\"我的书包在哪里\""
+    "verify": "\"礼堂在哪里\""
   },
   {
     "id": "cne_j019_q4",
     "topicId": "cne_j019",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "钥匙在书包里。哪一句正确？",
+    "prompt": "餐厅在教学楼旁边。哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "The keys is in the schoolbag."
+        "text": "The dining hall is next the building."
       },
       {
         "key": "B",
-        "text": "The keys are on the in."
+        "text": "The dining hall next to the building."
       },
       {
         "key": "C",
-        "text": "The key are in the schoolbag."
+        "text": "The dining hall are next to the building."
       },
       {
         "key": "D",
-        "text": "The keys are in the schoolbag."
+        "text": "The dining hall is next to the building."
       }
     ],
     "answer": "D",
-    "explanation": "keys 是复数，用 are；在里面用 in。",
-    "verify": "\"The keys are in the schoolbag.\""
+    "explanation": "在旁边用 next to。",
+    "verify": "\"The dining hall is next to the building.\""
   },
   {
     "id": "cne_j020_q1",
@@ -76285,7 +76285,7 @@
     "topicId": "cne_j023",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "I ___ a soccer ball. 横线处填哪一个？",
+    "prompt": "I ___ a brother. 横线处填哪一个？",
     "choices": [
       {
         "key": "A",
@@ -76313,7 +76313,7 @@
     "topicId": "cne_j023",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "She ___ a tennis ball. 横线处填哪一个？",
+    "prompt": "She ___ a red hat. 横线处填哪一个？",
     "choices": [
       {
         "key": "A",
@@ -76341,7 +76341,7 @@
     "topicId": "cne_j023",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "They ___ two basketballs. 横线处填哪一个？",
+    "prompt": "They ___ two sons. 横线处填哪一个？",
     "choices": [
       {
         "key": "A",
@@ -76373,31 +76373,31 @@
     "choices": [
       {
         "key": "A",
-        "text": "He have a volleyball."
+        "text": "He have a ping-pong bat."
       },
       {
         "key": "B",
-        "text": "He haves a volleyball."
+        "text": "He haves a ping-pong bat."
       },
       {
         "key": "C",
-        "text": "He is have a volleyball."
+        "text": "He have bat a."
       },
       {
         "key": "D",
-        "text": "He has a volleyball."
+        "text": "He has a ping-pong bat."
       }
     ],
     "answer": "D",
     "explanation": "He 用 has。",
-    "verify": "\"He has a volleyball.\""
+    "verify": "\"He has a ping-pong bat.\""
   },
   {
     "id": "cne_j024_q1",
     "topicId": "cne_j024",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "___ you have a soccer ball? 横线处填哪一个？",
+    "prompt": "___ you play chess? 横线处填哪一个？",
     "choices": [
       {
         "key": "A",
@@ -76425,7 +76425,7 @@
     "topicId": "cne_j024",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "___ she have a tennis ball? 横线处填哪一个？",
+    "prompt": "___ she have a piano? 横线处填哪一个？",
     "choices": [
       {
         "key": "A",
@@ -76453,35 +76453,35 @@
     "topicId": "cne_j024",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "他没有篮球。哪一句正确？",
+    "prompt": "他不踢足球。哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "He don't have a basketball."
+        "text": "He don't play football."
       },
       {
         "key": "B",
-        "text": "He doesn't has a basketball."
+        "text": "He doesn't plays football."
       },
       {
         "key": "C",
-        "text": "He not have a basketball."
+        "text": "He not play football."
       },
       {
         "key": "D",
-        "text": "He doesn't have a basketball."
+        "text": "He doesn't play football."
       }
     ],
     "answer": "D",
-    "explanation": "doesn't 后面用动词原形 have。",
-    "verify": "\"He doesn't have a basketball.\""
+    "explanation": "doesn't 后面用动词原形 play。",
+    "verify": "\"He doesn't play football.\""
   },
   {
     "id": "cne_j024_q4",
     "topicId": "cne_j024",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Do they have a volleyball? 肯定简答是哪一句？",
+    "prompt": "Do they read every evening? 肯定简答是哪一句？",
     "choices": [
       {
         "key": "A",
@@ -76509,84 +76509,84 @@
     "topicId": "cne_j025",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "想问对方有没有足球，哪一句合适？",
+    "prompt": "想问对方会不会打篮球，哪一句合适？",
     "choices": [
       {
         "key": "A",
-        "text": "Are you have a soccer ball?"
+        "text": "Are you play basketball?"
       },
       {
         "key": "B",
-        "text": "Does you have a soccer ball?"
+        "text": "Do you can play basketball?"
       },
       {
         "key": "C",
-        "text": "Do you have a soccer ball?"
+        "text": "Can you play basketball?"
       },
       {
         "key": "D",
-        "text": "Do you has a soccer ball?"
+        "text": "Can you plays basketball?"
       }
     ],
     "answer": "C",
-    "explanation": "you 用 Do you have。",
-    "verify": "\"Do you have a soccer ball?\""
+    "explanation": "能力用 Can you play。",
+    "verify": "\"Can you play basketball?\""
   },
   {
     "id": "cne_j025_q2",
     "topicId": "cne_j025",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "对方问 Do you have a basketball? 你有，应回答什么？",
+    "prompt": "对方问 Can you play tennis? 你会，应回答什么？",
     "choices": [
       {
         "key": "A",
-        "text": "Yes, I have."
+        "text": "Yes, I can to."
       },
       {
         "key": "B",
-        "text": "Yes, I does."
-      },
-      {
-        "key": "C",
         "text": "Yes, I am."
       },
       {
+        "key": "C",
+        "text": "Yes, I does."
+      },
+      {
         "key": "D",
-        "text": "Yes, I do."
+        "text": "Yes, I can."
       }
     ],
     "answer": "D",
-    "explanation": "Do you 的肯定简答是 Yes, I do。",
-    "verify": "\"Yes, I do.\""
+    "explanation": "Can you 的肯定简答是 Yes, I can。",
+    "verify": "\"Yes, I can.\""
   },
   {
     "id": "cne_j025_q3",
     "topicId": "cne_j025",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "想说我们在学校打排球，哪一句合适？",
+    "prompt": "想说你想加入体育社团，哪一句合适？",
     "choices": [
       {
         "key": "A",
-        "text": "We play volleyball at school."
+        "text": "I want to join the sports club."
       },
       {
         "key": "B",
-        "text": "We plays volleyball at school."
+        "text": "I want join the sports club."
       },
       {
         "key": "C",
-        "text": "We play the volleyball at school."
+        "text": "I wants to join the sports club."
       },
       {
         "key": "D",
-        "text": "Us play volleyball."
+        "text": "I want to joining the sports club."
       }
     ],
     "answer": "A",
-    "explanation": "We 后面用动词原形 play。球类前通常不加 the。",
-    "verify": "\"We play volleyball at school.\""
+    "explanation": "want to 后面用动词原形 join。",
+    "verify": "\"I want to join the sports club.\""
   },
   {
     "id": "cne_j025_q4",
@@ -76621,15 +76621,15 @@
     "topicId": "cne_j026",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "Tom has a basketball. He doesn't have a soccer ball. His sister has a tennis ball. Tom 有足球吗？",
+    "prompt": "The sports club meets on Friday. Tom can play basketball. He cannot play tennis. His sister can play tennis. Tom 会打网球吗？",
     "choices": [
       {
         "key": "A",
-        "text": "有"
+        "text": "会"
       },
       {
         "key": "B",
-        "text": "有两个"
+        "text": "只在星期五会，短文没这么说"
       },
       {
         "key": "C",
@@ -76637,19 +76637,19 @@
       },
       {
         "key": "D",
-        "text": "没有"
+        "text": "不会"
       }
     ],
     "answer": "D",
-    "explanation": "He doesn't have a soccer ball。",
-    "verify": "\"没有\""
+    "explanation": "He cannot play tennis。",
+    "verify": "\"不会\""
   },
   {
     "id": "cne_j026_q2",
     "topicId": "cne_j026",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "Tom has a basketball. He doesn't have a soccer ball. His sister has a tennis ball. 谁有网球？",
+    "prompt": "The sports club meets on Friday. Tom can play basketball. He cannot play tennis. His sister can play tennis. 谁会打网球？",
     "choices": [
       {
         "key": "A",
@@ -76661,15 +76661,15 @@
       },
       {
         "key": "C",
-        "text": "Tom 的爸爸"
+        "text": "老师"
       },
       {
         "key": "D",
-        "text": "Tom 的老师"
+        "text": "短文没说"
       }
     ],
     "answer": "A",
-    "explanation": "His sister has a tennis ball。",
+    "explanation": "His sister can play tennis。",
     "verify": "\"Tom 的姐姐或妹妹\""
   },
   {
@@ -76677,56 +76677,56 @@
     "topicId": "cne_j026",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "We have a volleyball. We play it after class. 他们有什么？",
+    "prompt": "The sports club meets on Friday. Tom can play basketball. He cannot play tennis. His sister can play tennis. 社团在星期几活动？",
     "choices": [
       {
         "key": "A",
-        "text": "一个篮球"
+        "text": "星期一"
       },
       {
         "key": "B",
-        "text": "一个排球"
+        "text": "星期五"
       },
       {
         "key": "C",
-        "text": "一个足球"
+        "text": "每天"
       },
       {
         "key": "D",
-        "text": "一个网球"
+        "text": "星期日"
       }
     ],
     "answer": "B",
-    "explanation": "a volleyball 是排球。",
-    "verify": "\"一个排球\""
+    "explanation": "meets on Friday。",
+    "verify": "\"星期五\""
   },
   {
     "id": "cne_j026_q4",
     "topicId": "cne_j026",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "We have a volleyball. We play it after class. 他们什么时候打？",
+    "prompt": "The sports club meets on Friday. Tom can play basketball. He cannot play tennis. His sister can play tennis. 哪一句和短文一致？",
     "choices": [
       {
         "key": "A",
-        "text": "早上起床前"
+        "text": "Tom can play tennis."
       },
       {
         "key": "B",
-        "text": "在家里睡觉时"
+        "text": "The club meets on Monday."
       },
       {
         "key": "C",
-        "text": "课后"
+        "text": "Tom can play basketball."
       },
       {
         "key": "D",
-        "text": "只在周末的夜里"
+        "text": "His sister cannot play tennis."
       }
     ],
     "answer": "C",
-    "explanation": "after class 是课后。",
-    "verify": "\"课后\""
+    "explanation": "Tom can play basketball，他不会网球。",
+    "verify": "\"Tom can play basketball.\""
   },
   {
     "id": "cne_j027_q1",
@@ -76957,63 +76957,63 @@
     "topicId": "cne_j029",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "她喜欢香蕉。哪一句正确？",
+    "prompt": "她喜欢历史。哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "She like bananas."
+        "text": "She like history."
       },
       {
         "key": "B",
-        "text": "She likes banana."
+        "text": "She likes histories."
       },
       {
         "key": "C",
-        "text": "She likes bananas."
+        "text": "She likes history."
       },
       {
         "key": "D",
-        "text": "She like a bananas."
+        "text": "She like a history."
       }
     ],
     "answer": "C",
-    "explanation": "She 后面动词加 s，bananas 用复数。",
-    "verify": "\"She likes bananas.\""
+    "explanation": "She 后面动词加 s。",
+    "verify": "\"She likes history.\""
   },
   {
     "id": "cne_j029_q2",
     "topicId": "cne_j029",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "我不喜欢汉堡。哪一句正确？",
+    "prompt": "我不喜欢地理。哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "I doesn't like hamburgers."
+        "text": "I doesn't like geography."
       },
       {
         "key": "B",
-        "text": "I don't likes hamburgers."
+        "text": "I don't likes geography."
       },
       {
         "key": "C",
-        "text": "I not like hamburgers."
+        "text": "I not like geography."
       },
       {
         "key": "D",
-        "text": "I don't like hamburgers."
+        "text": "I don't like geography."
       }
     ],
     "answer": "D",
     "explanation": "I 的否定用 don't，后面动词用原形。",
-    "verify": "\"I don't like hamburgers.\""
+    "verify": "\"I don't like geography.\""
   },
   {
     "id": "cne_j029_q3",
     "topicId": "cne_j029",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "___ she like salad? 横线处填哪一个？",
+    "prompt": "___ she like science? 横线处填哪一个？",
     "choices": [
       {
         "key": "A",
@@ -77041,7 +77041,7 @@
     "topicId": "cne_j029",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Do you like ice-cream? 否定回答是哪一句？",
+    "prompt": "Do you like P.E.? 否定回答是哪一句？",
     "choices": [
       {
         "key": "A",
@@ -77293,259 +77293,259 @@
     "topicId": "cne_j032",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "哪个单词的意思是「短袜」？",
+    "prompt": "哪个单词的意思是「生日」？",
     "choices": [
       {
         "key": "A",
-        "text": "shirt"
+        "text": "party"
       },
       {
         "key": "B",
-        "text": "sock"
+        "text": "birthday"
       },
       {
         "key": "C",
-        "text": "skirt"
+        "text": "cake"
       },
       {
         "key": "D",
-        "text": "sweater"
+        "text": "balloon"
       }
     ],
     "answer": "B",
-    "explanation": "sock 的意思是短袜。",
-    "verify": "\"sock\""
+    "explanation": "birthday 的意思是生日。",
+    "verify": "\"birthday\""
   },
   {
     "id": "cne_j032_q2",
     "topicId": "cne_j032",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "「shirt」的中文意思是哪一个？",
+    "prompt": "「party」的中文意思是哪一个？",
     "choices": [
       {
         "key": "A",
-        "text": "短袜"
+        "text": "生日"
       },
       {
         "key": "B",
-        "text": "短裙"
+        "text": "蛋糕"
       },
       {
         "key": "C",
-        "text": "衬衫"
+        "text": "聚会"
       },
       {
         "key": "D",
-        "text": "毛衣"
+        "text": "气球"
       }
     ],
     "answer": "C",
-    "explanation": "shirt 的意思是衬衫。",
-    "verify": "\"衬衫\""
+    "explanation": "party 的意思是聚会。",
+    "verify": "\"聚会\""
   },
   {
     "id": "cne_j032_q3",
     "topicId": "cne_j032",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "选择表示「短裙」的单词。",
+    "prompt": "选择表示「蛋糕」的单词。",
     "choices": [
       {
         "key": "A",
-        "text": "sock"
+        "text": "birthday"
       },
       {
         "key": "B",
-        "text": "shirt"
+        "text": "party"
       },
       {
         "key": "C",
-        "text": "sweater"
+        "text": "balloon"
       },
       {
         "key": "D",
-        "text": "skirt"
+        "text": "cake"
       }
     ],
     "answer": "D",
-    "explanation": "表示短裙的单词是 skirt。",
-    "verify": "\"skirt\""
+    "explanation": "表示蛋糕的单词是 cake。",
+    "verify": "\"cake\""
   },
   {
     "id": "cne_j032_q4",
     "topicId": "cne_j032",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "哪个单词的意思是「毛衣」？",
+    "prompt": "哪个单词的意思是「气球」？",
     "choices": [
       {
         "key": "A",
-        "text": "sweater"
+        "text": "balloon"
       },
       {
         "key": "B",
-        "text": "sock"
+        "text": "birthday"
       },
       {
         "key": "C",
-        "text": "shirt"
+        "text": "party"
       },
       {
         "key": "D",
-        "text": "skirt"
+        "text": "cake"
       }
     ],
     "answer": "A",
-    "explanation": "sweater 的意思是毛衣。",
-    "verify": "\"sweater\""
+    "explanation": "balloon 的意思是气球。",
+    "verify": "\"balloon\""
   },
   {
     "id": "cne_j033_q1",
     "topicId": "cne_j033",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "询问这双袜子多少钱，哪一句正确？",
+    "prompt": "询问这个生日蛋糕多少钱，哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "How much is these socks?"
+        "text": "How much are this cake?"
       },
       {
         "key": "B",
-        "text": "How many are these socks?"
+        "text": "How many is this cake?"
       },
       {
         "key": "C",
-        "text": "How much are these socks?"
+        "text": "How much is this cake?"
       },
       {
         "key": "D",
-        "text": "How much these socks are?"
+        "text": "How much this cake is?"
       }
     ],
     "answer": "C",
-    "explanation": "socks 是复数，用 are；问价格用 How much。",
-    "verify": "\"How much are these socks?\""
+    "explanation": "蛋糕是单数，用 How much is。",
+    "verify": "\"How much is this cake?\""
   },
   {
     "id": "cne_j033_q2",
     "topicId": "cne_j033",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "这件毛衣 20 美元。哪一句正确？",
+    "prompt": "这些气球 6 美元。哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "The sweater are 20 dollars."
+        "text": "The balloons is 6 dollars."
       },
       {
         "key": "B",
-        "text": "The sweater is 20 dollar."
+        "text": "The balloons are 6 dollar."
       },
       {
         "key": "C",
-        "text": "The sweater has 20 dollar."
+        "text": "The balloons have 6 dollar."
       },
       {
         "key": "D",
-        "text": "The sweater is 20 dollars."
+        "text": "The balloons are 6 dollars."
       }
     ],
     "answer": "D",
-    "explanation": "价格里美元复数用 dollars，单数毛衣用 is。",
-    "verify": "\"The sweater is 20 dollars.\""
+    "explanation": "复数用 are，美元复数用 dollars。",
+    "verify": "\"The balloons are 6 dollars.\""
   },
   {
     "id": "cne_j033_q3",
     "topicId": "cne_j033",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "How much is this shirt? 这句在问什么？",
+    "prompt": "How much are the balloons? 这句在问什么？",
     "choices": [
       {
         "key": "A",
-        "text": "这件衬衫多少钱"
+        "text": "这些气球多少钱"
       },
       {
         "key": "B",
-        "text": "衬衫是什么颜色"
+        "text": "气球是什么颜色"
       },
       {
         "key": "C",
-        "text": "衬衫在哪里"
+        "text": "气球在哪里"
       },
       {
         "key": "D",
-        "text": "你有几件衬衫"
+        "text": "你有几个气球"
       }
     ],
     "answer": "A",
     "explanation": "How much 问价格。",
-    "verify": "\"这件衬衫多少钱\""
+    "verify": "\"这些气球多少钱\""
   },
   {
     "id": "cne_j033_q4",
     "topicId": "cne_j033",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "短裙 15 美元。哪一句正确？",
+    "prompt": "蛋糕 15 美元。哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "The skirt are fifteen dollars."
+        "text": "The cake are fifteen dollars."
       },
       {
         "key": "B",
-        "text": "The skirt is fifteen dollars."
+        "text": "The cake is fifteen dollars."
       },
       {
         "key": "C",
-        "text": "The skirt is fifteen dollar."
+        "text": "The cake is fifteen dollar."
       },
       {
         "key": "D",
-        "text": "The skirts is fifteen dollars."
+        "text": "The cakes is fifteen dollars."
       }
     ],
     "answer": "B",
-    "explanation": "一件短裙用 is，dollars 用复数。",
-    "verify": "\"The skirt is fifteen dollars.\""
+    "explanation": "一个蛋糕用 is，dollars 用复数。",
+    "verify": "\"The cake is fifteen dollars.\""
   },
   {
     "id": "cne_j034_q1",
     "topicId": "cne_j034",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "在商店想问毛衣的价格，哪一句合适？",
+    "prompt": "在商店想问蛋糕的价格，哪一句合适？",
     "choices": [
       {
         "key": "A",
-        "text": "How many is the sweater?"
+        "text": "How many is the cake?"
       },
       {
         "key": "B",
-        "text": "What much is the sweater?"
+        "text": "What much is the cake?"
       },
       {
         "key": "C",
-        "text": "How much the sweater is?"
+        "text": "How much the cake is?"
       },
       {
         "key": "D",
-        "text": "How much is the sweater?"
+        "text": "How much is the cake?"
       }
     ],
     "answer": "D",
     "explanation": "单数物品用 How much is。",
-    "verify": "\"How much is the sweater?\""
+    "verify": "\"How much is the cake?\""
   },
   {
     "id": "cne_j034_q2",
     "topicId": "cne_j034",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "店员说 It is 8 dollars. 你决定买下，哪一句合适？",
+    "prompt": "店员说 It is 20 dollars. 你决定买下，哪一句合适？",
     "choices": [
       {
         "key": "A",
@@ -77573,28 +77573,28 @@
     "topicId": "cne_j034",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "想要一件红色的衬衫，哪一句合适？",
+    "prompt": "想要一些气球，哪一句合适？",
     "choices": [
       {
         "key": "A",
-        "text": "I want a red shirts."
+        "text": "I want a balloons."
       },
       {
         "key": "B",
-        "text": "I want a red shirt."
+        "text": "I want some balloons."
       },
       {
         "key": "C",
-        "text": "I want red a shirt."
+        "text": "I want some balloones."
       },
       {
         "key": "D",
-        "text": "I wants a red shirt."
+        "text": "I wants some balloons."
       }
     ],
     "answer": "B",
-    "explanation": "a red shirt 是一件红色衬衫。",
-    "verify": "\"I want a red shirt.\""
+    "explanation": "some 加复数 balloons。",
+    "verify": "\"I want some balloons.\""
   },
   {
     "id": "cne_j034_q4",
@@ -77605,11 +77605,11 @@
     "choices": [
       {
         "key": "A",
-        "text": "询问你的名字"
+        "text": "询问你的生日"
       },
       {
         "key": "B",
-        "text": "说衬衫很贵"
+        "text": "说蛋糕很贵"
       },
       {
         "key": "C",
@@ -77629,35 +77629,35 @@
     "topicId": "cne_j035",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "Woman: How much is this skirt? Clerk: It is 15 dollars. Woman: I'll take it. 短裙多少钱？",
+    "prompt": "Girl: How much is this cake? Clerk: It is 20 dollars. Girl: I'll take it. 蛋糕多少钱？",
     "choices": [
       {
         "key": "A",
-        "text": "15 美元"
-      },
-      {
-        "key": "B",
-        "text": "8 美元"
-      },
-      {
-        "key": "C",
         "text": "20 美元"
       },
       {
+        "key": "B",
+        "text": "6 美元"
+      },
+      {
+        "key": "C",
+        "text": "15 美元"
+      },
+      {
         "key": "D",
-        "text": "50 美元"
+        "text": "8 美元"
       }
     ],
     "answer": "A",
-    "explanation": "It is 15 dollars。",
-    "verify": "\"15 美元\""
+    "explanation": "It is 20 dollars。",
+    "verify": "\"20 美元\""
   },
   {
     "id": "cne_j035_q2",
     "topicId": "cne_j035",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "Woman: How much is this skirt? Clerk: It is 15 dollars. Woman: I'll take it. 她买了吗？",
+    "prompt": "Girl: How much is this cake? Clerk: It is 20 dollars. Girl: I'll take it. 她买了吗？",
     "choices": [
       {
         "key": "A",
@@ -77685,7 +77685,7 @@
     "topicId": "cne_j035",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Boy: How much are the socks? Clerk: They are 5 dollars. Boy: They are too dear. I will not take them. 袜子贵不贵？按男孩的话。",
+    "prompt": "Boy: How much are the balloons? Clerk: They are 6 dollars. Boy: They are too dear. I will not take them. 按男孩的话，气球贵不贵？",
     "choices": [
       {
         "key": "A",
@@ -77713,7 +77713,7 @@
     "topicId": "cne_j035",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "选词填空：The sweater is 20 ___. I will take it. 哪个词使句子完整？",
+    "prompt": "选词填空：The cake is 20 ___. I will take it. 哪个词使句子完整？",
     "choices": [
       {
         "key": "A",
@@ -77725,7 +77725,7 @@
       },
       {
         "key": "C",
-        "text": "color"
+        "text": "party"
       },
       {
         "key": "D",
@@ -78077,7 +78077,7 @@
     "topicId": "cne_j039",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "School Day is on September 21st. The basketball game is on October 2nd. 校庆是哪一天？",
+    "prompt": "Tom's birthday is on September 21st. His party is on that day. The family dinner is on October 2nd. Tom 的生日是哪一天？",
     "choices": [
       {
         "key": "A",
@@ -78097,7 +78097,7 @@
       }
     ],
     "answer": "A",
-    "explanation": "School Day is on September 21st。",
+    "explanation": "September 21st 是 9 月 21 日。",
     "verify": "\"9 月 21 日\""
   },
   {
@@ -78105,7 +78105,7 @@
     "topicId": "cne_j039",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "School Day is on September 21st. The basketball game is on October 2nd. 篮球赛在哪一天？",
+    "prompt": "Tom's birthday is on September 21st. His party is on that day. The family dinner is on October 2nd. 家庭晚餐在哪一天？",
     "choices": [
       {
         "key": "A",
@@ -78133,56 +78133,56 @@
     "topicId": "cne_j039",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Alice's birthday party is on May 5th. She is twelve. 聚会在几月？",
+    "prompt": "Tom's birthday is on September 21st. His party is on that day. The family dinner is on October 2nd. 聚会和生日是不是同一天？",
     "choices": [
       {
         "key": "A",
-        "text": "四月"
+        "text": "不是"
       },
       {
         "key": "B",
-        "text": "六月"
+        "text": "聚会在十月"
       },
       {
         "key": "C",
-        "text": "五月"
+        "text": "是"
       },
       {
         "key": "D",
-        "text": "三月"
+        "text": "短文没说聚会"
       }
     ],
     "answer": "C",
-    "explanation": "May 是五月。",
-    "verify": "\"五月\""
+    "explanation": "His party is on that day，that day 指生日。",
+    "verify": "\"是\""
   },
   {
     "id": "cne_j039_q4",
     "topicId": "cne_j039",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Alice's birthday party is on May 5th. She is twelve. 哪一句和短文一致？",
+    "prompt": "Tom's birthday is on September 21st. His party is on that day. The family dinner is on October 2nd. 哪一句和短文一致？",
     "choices": [
       {
         "key": "A",
-        "text": "Alice is five."
+        "text": "The dinner is on September 21st."
       },
       {
         "key": "B",
-        "text": "The party is in May 5th without on."
+        "text": "Tom's birthday is on October 2nd."
       },
       {
         "key": "C",
-        "text": "Alice is twenty."
+        "text": "There is no party."
       },
       {
         "key": "D",
-        "text": "Alice is twelve."
+        "text": "The party is on September 21st."
       }
     ],
     "answer": "D",
-    "explanation": "She is twelve。年龄是十二，不是五岁或二十岁。",
-    "verify": "\"Alice is twelve.\""
+    "explanation": "聚会在生日当天，也就是 9 月 21 日。",
+    "verify": "\"The party is on September 21st.\""
   },
   {
     "id": "cne_j040_q1",
@@ -82109,175 +82109,175 @@
     "topicId": "cne_j075",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "哪个单词的意思是「医院」？",
+    "prompt": "哪个单词的意思是「礼堂」？",
     "choices": [
       {
         "key": "A",
-        "text": "hospital"
+        "text": "hall"
       },
       {
         "key": "B",
-        "text": "bank"
+        "text": "building"
       },
       {
         "key": "C",
-        "text": "hotel"
+        "text": "dining hall"
       },
       {
         "key": "D",
-        "text": "street"
+        "text": "reading corner"
       }
     ],
     "answer": "A",
-    "explanation": "hospital 的意思是医院。",
-    "verify": "\"hospital\""
+    "explanation": "hall 的意思是礼堂。",
+    "verify": "\"hall\""
   },
   {
     "id": "cne_j075_q2",
     "topicId": "cne_j075",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "「bank」的中文意思是哪一个？",
+    "prompt": "「building」的中文意思是哪一个？",
     "choices": [
       {
         "key": "A",
-        "text": "医院"
+        "text": "礼堂"
       },
       {
         "key": "B",
-        "text": "银行"
+        "text": "建筑物"
       },
       {
         "key": "C",
-        "text": "旅馆"
+        "text": "餐厅"
       },
       {
         "key": "D",
-        "text": "街道"
+        "text": "阅读角"
       }
     ],
     "answer": "B",
-    "explanation": "bank 的意思是银行。",
-    "verify": "\"银行\""
+    "explanation": "building 的意思是建筑物。",
+    "verify": "\"建筑物\""
   },
   {
     "id": "cne_j075_q3",
     "topicId": "cne_j075",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "选择表示「旅馆」的单词。",
+    "prompt": "选择表示「餐厅」的单词。",
     "choices": [
       {
         "key": "A",
-        "text": "hospital"
+        "text": "hall"
       },
       {
         "key": "B",
-        "text": "bank"
+        "text": "building"
       },
       {
         "key": "C",
-        "text": "hotel"
+        "text": "dining hall"
       },
       {
         "key": "D",
-        "text": "street"
+        "text": "reading corner"
       }
     ],
     "answer": "C",
-    "explanation": "表示旅馆的单词是 hotel。",
-    "verify": "\"hotel\""
+    "explanation": "表示餐厅的单词是 dining hall。",
+    "verify": "\"dining hall\""
   },
   {
     "id": "cne_j075_q4",
     "topicId": "cne_j075",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "哪个单词的意思是「街道」？",
+    "prompt": "哪个单词的意思是「阅读角」？",
     "choices": [
       {
         "key": "A",
-        "text": "hospital"
+        "text": "hall"
       },
       {
         "key": "B",
-        "text": "bank"
+        "text": "building"
       },
       {
         "key": "C",
-        "text": "hotel"
+        "text": "dining hall"
       },
       {
         "key": "D",
-        "text": "street"
+        "text": "reading corner"
       }
     ],
     "answer": "D",
-    "explanation": "street 的意思是街道。",
-    "verify": "\"street\""
+    "explanation": "reading corner 的意思是阅读角。",
+    "verify": "\"reading corner\""
   },
   {
     "id": "cne_j076_q1",
     "topicId": "cne_j076",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "附近有一家银行。哪一句正确？",
+    "prompt": "学校里有一座礼堂。哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "There are a bank near here."
+        "text": "There are a hall in the school."
       },
       {
         "key": "B",
-        "text": "There is a bank near here."
+        "text": "There is a hall in the school."
       },
       {
         "key": "C",
-        "text": "There have a bank near here."
+        "text": "There have a hall in the school."
       },
       {
         "key": "D",
-        "text": "There is bank near here."
+        "text": "There is hall in the school."
       }
     ],
     "answer": "B",
-    "explanation": "单数用 There is a bank。",
-    "verify": "\"There is a bank near here.\""
+    "explanation": "单数用 There is a hall。",
+    "verify": "\"There is a hall in the school.\""
   },
   {
     "id": "cne_j076_q2",
     "topicId": "cne_j076",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "这条街上有两家旅馆。哪一句正确？",
+    "prompt": "教学楼前面有两棵树。哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "There is two hotels on this street."
+        "text": "There is two trees in front of the building."
       },
       {
         "key": "B",
-        "text": "There are two hotel on this street."
+        "text": "There are two tree in front of the building."
       },
       {
         "key": "C",
-        "text": "There are two hotels on this street."
+        "text": "There are two trees in front of the building."
       },
       {
         "key": "D",
-        "text": "There have two hotels on this street."
+        "text": "There have two trees in front of the building."
       }
     ],
     "answer": "C",
-    "explanation": "复数用 There are，hotels 用复数。",
-    "verify": "\"There are two hotels on this street.\""
+    "explanation": "复数用 There are，trees 用复数。",
+    "verify": "\"There are two trees in front of the building.\""
   },
   {
     "id": "cne_j076_q3",
     "topicId": "cne_j076",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Is there a hospital near here? 肯定回答是哪一句？",
+    "prompt": "Is there a dining hall in your school? 肯定回答是哪一句？",
     "choices": [
       {
         "key": "A",
@@ -82309,388 +82309,388 @@
     "choices": [
       {
         "key": "A",
-        "text": "There isn't a post office on this street."
+        "text": "There isn't a reading corner in this building."
       },
       {
         "key": "B",
-        "text": "There isn't any post office are on this street."
+        "text": "There aren't a reading corner in this building."
       },
       {
         "key": "C",
-        "text": "There aren't a post office on this street."
+        "text": "There not a reading corner in this building."
       },
       {
         "key": "D",
-        "text": "There not a post office on this street."
+        "text": "There isn't any reading corner are in this building."
       }
     ],
     "answer": "A",
     "explanation": "单数否定用 There isn't a。",
-    "verify": "\"There isn't a post office on this street.\""
+    "verify": "\"There isn't a reading corner in this building.\""
   },
   {
     "id": "cne_j077_q1",
     "topicId": "cne_j077",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "想问附近有没有医院，哪一句合适？",
+    "prompt": "想问学校里有没有餐厅，哪一句合适？",
     "choices": [
       {
         "key": "A",
-        "text": "Are there a hospital near here?"
+        "text": "Are there a dining hall in your school?"
       },
       {
         "key": "B",
-        "text": "Is there hospital near here?"
+        "text": "Is there dining hall in your school?"
       },
       {
         "key": "C",
-        "text": "Is there a hospital near here?"
+        "text": "Is there a dining hall in your school?"
       },
       {
         "key": "D",
-        "text": "Does there a hospital near here?"
+        "text": "Does there a dining hall in your school?"
       }
     ],
     "answer": "C",
-    "explanation": "Is there a hospital。",
-    "verify": "\"Is there a hospital near here?\""
+    "explanation": "Is there a dining hall。",
+    "verify": "\"Is there a dining hall in your school?\""
   },
   {
     "id": "cne_j077_q2",
     "topicId": "cne_j077",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "银行在旅馆对面，应怎么说？",
+    "prompt": "餐厅在教学楼对面，应怎么说？",
     "choices": [
       {
         "key": "A",
-        "text": "The bank is across to the hotel."
+        "text": "The dining hall is across to the building."
       },
       {
         "key": "B",
-        "text": "The bank across from the hotel."
+        "text": "The dining hall across from the building."
       },
       {
         "key": "C",
-        "text": "The bank is across from hotel the."
+        "text": "The dining hall is across from building the."
       },
       {
         "key": "D",
-        "text": "The bank is across from the hotel."
+        "text": "The dining hall is across from the building."
       }
     ],
     "answer": "D",
     "explanation": "across from 表示在对面。",
-    "verify": "\"The bank is across from the hotel.\""
+    "verify": "\"The dining hall is across from the building.\""
   },
   {
     "id": "cne_j077_q3",
     "topicId": "cne_j077",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Where is the pay phone? 这句在问什么？",
+    "prompt": "Where is the reading corner? 这句在问什么？",
     "choices": [
       {
         "key": "A",
-        "text": "付费电话在哪里"
+        "text": "阅读角在哪里"
       },
       {
         "key": "B",
-        "text": "付费电话多少钱"
+        "text": "阅读角多少钱"
       },
       {
         "key": "C",
-        "text": "有没有付费电话的品牌"
+        "text": "阅读角是谁的"
       },
       {
         "key": "D",
-        "text": "谁的付费电话"
+        "text": "阅读角几点开门，这句没问时间"
       }
     ],
     "answer": "A",
     "explanation": "Where 问位置。",
-    "verify": "\"付费电话在哪里\""
+    "verify": "\"阅读角在哪里\""
   },
   {
     "id": "cne_j077_q4",
     "topicId": "cne_j077",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "想说邮局在银行旁边，哪一句合适？",
+    "prompt": "想说礼堂在餐厅旁边，哪一句合适？",
     "choices": [
       {
         "key": "A",
-        "text": "The post office is next the bank."
+        "text": "The hall is next the dining hall."
       },
       {
         "key": "B",
-        "text": "The post office is next to the bank."
+        "text": "The hall is next to the dining hall."
       },
       {
         "key": "C",
-        "text": "The post office next to the bank."
+        "text": "The hall next to the dining hall."
       },
       {
         "key": "D",
-        "text": "The post office is next to bank the."
+        "text": "The hall are next to the dining hall."
       }
     ],
     "answer": "B",
     "explanation": "next to 表示在旁边。",
-    "verify": "\"The post office is next to the bank.\""
+    "verify": "\"The hall is next to the dining hall.\""
   },
   {
     "id": "cne_j078_q1",
     "topicId": "cne_j078",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "The hotel is on Center Street. The bank is across from the hotel. The hospital is next to the bank. 银行在哪里？",
+    "prompt": "Our hall is in front of the building. The dining hall is across from the hall. The reading corner is next to the library. 礼堂在哪里？",
     "choices": [
       {
         "key": "A",
-        "text": "在医院里面"
+        "text": "在餐厅里面"
       },
       {
         "key": "B",
-        "text": "在中心街的尽头以外"
+        "text": "在图书馆对面"
       },
       {
         "key": "C",
-        "text": "在邮局旁边，短文没写邮局"
+        "text": "在阅读角里面"
       },
       {
         "key": "D",
-        "text": "在旅馆对面"
+        "text": "在教学楼前面"
       }
     ],
     "answer": "D",
-    "explanation": "across from the hotel。",
-    "verify": "\"在旅馆对面\""
+    "explanation": "in front of the building。",
+    "verify": "\"在教学楼前面\""
   },
   {
     "id": "cne_j078_q2",
     "topicId": "cne_j078",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "The hotel is on Center Street. The bank is across from the hotel. The hospital is next to the bank. 医院在银行的哪一边？",
+    "prompt": "Our hall is in front of the building. The dining hall is across from the hall. The reading corner is next to the library. 餐厅在礼堂的哪一边？",
     "choices": [
       {
         "key": "A",
-        "text": "在银行旁边"
+        "text": "在对面"
       },
       {
         "key": "B",
-        "text": "在银行对面"
+        "text": "在前面"
       },
       {
         "key": "C",
-        "text": "在旅馆里面"
+        "text": "在里面"
       },
       {
         "key": "D",
-        "text": "在银行楼上"
+        "text": "在楼上"
       }
     ],
     "answer": "A",
-    "explanation": "next to the bank。",
-    "verify": "\"在银行旁边\""
+    "explanation": "across from the hall。",
+    "verify": "\"在对面\""
   },
   {
     "id": "cne_j078_q3",
     "topicId": "cne_j078",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Go along Bridge Street and turn left. The park is on the right. 公园在哪一侧？",
+    "prompt": "Our hall is in front of the building. The dining hall is across from the hall. The reading corner is next to the library. 阅读角在哪里？",
     "choices": [
       {
         "key": "A",
-        "text": "左侧"
+        "text": "在礼堂里面"
       },
       {
         "key": "B",
-        "text": "右侧"
+        "text": "在图书馆旁边"
       },
       {
         "key": "C",
-        "text": "对面"
+        "text": "在餐厅对面"
       },
       {
         "key": "D",
-        "text": "桥下"
+        "text": "在教学楼后面"
       }
     ],
     "answer": "B",
-    "explanation": "on the right 是右侧。",
-    "verify": "\"右侧\""
+    "explanation": "next to the library。",
+    "verify": "\"在图书馆旁边\""
   },
   {
     "id": "cne_j078_q4",
     "topicId": "cne_j078",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Go along Bridge Street and turn left. The park is on the right. 哪一句和说明一致？",
+    "prompt": "Our hall is in front of the building. The dining hall is across from the hall. The reading corner is next to the library. 哪一句和短文一致？",
     "choices": [
       {
         "key": "A",
-        "text": "You turn right at once and the park is on the left."
+        "text": "The hall is across from the building."
       },
       {
         "key": "B",
-        "text": "The park is on Bridge Street and you do not turn."
+        "text": "The reading corner is in the hall."
       },
       {
         "key": "C",
-        "text": "You turn left to find the park."
+        "text": "The dining hall is across from the hall."
       },
       {
         "key": "D",
-        "text": "The park is next to a hospital in this text."
+        "text": "The library is in front of the hall."
       }
     ],
     "answer": "C",
-    "explanation": "turn left，公园在右边。短文没有写医院。",
-    "verify": "\"You turn left to find the park.\""
+    "explanation": "餐厅在礼堂对面。礼堂在教学楼前面，不是在对面。",
+    "verify": "\"The dining hall is across from the hall.\""
   },
   {
     "id": "cne_j079_q1",
     "topicId": "cne_j079",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "哪个单词的意思是「身高」？",
+    "prompt": "哪个单词的意思是「英俊的」？",
     "choices": [
       {
         "key": "A",
-        "text": "height"
+        "text": "handsome"
       },
       {
         "key": "B",
-        "text": "heavy"
+        "text": "tall"
       },
       {
         "key": "C",
-        "text": "glasses"
+        "text": "short"
       },
       {
         "key": "D",
-        "text": "handsome"
+        "text": "hair"
       }
     ],
     "answer": "A",
-    "explanation": "height 的意思是身高。",
-    "verify": "\"height\""
+    "explanation": "handsome 的意思是英俊的。",
+    "verify": "\"handsome\""
   },
   {
     "id": "cne_j079_q2",
     "topicId": "cne_j079",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "「heavy」的中文意思是哪一个？",
+    "prompt": "「tall」的中文意思是哪一个？",
     "choices": [
       {
         "key": "A",
-        "text": "身高"
+        "text": "英俊的"
       },
       {
         "key": "B",
-        "text": "重的"
+        "text": "高的"
       },
       {
         "key": "C",
-        "text": "眼镜"
+        "text": "矮的"
       },
       {
         "key": "D",
-        "text": "英俊的"
+        "text": "头发"
       }
     ],
     "answer": "B",
-    "explanation": "heavy 的意思是重的。",
-    "verify": "\"重的\""
+    "explanation": "tall 的意思是高的。",
+    "verify": "\"高的\""
   },
   {
     "id": "cne_j079_q3",
     "topicId": "cne_j079",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "选择表示「眼镜」的单词。",
+    "prompt": "选择表示「矮的」的单词。",
     "choices": [
       {
         "key": "A",
-        "text": "height"
+        "text": "handsome"
       },
       {
         "key": "B",
-        "text": "heavy"
+        "text": "tall"
       },
       {
         "key": "C",
-        "text": "glasses"
+        "text": "short"
       },
       {
         "key": "D",
-        "text": "handsome"
+        "text": "hair"
       }
     ],
     "answer": "C",
-    "explanation": "表示眼镜的单词是 glasses。",
-    "verify": "\"glasses\""
+    "explanation": "表示矮的的单词是 short。",
+    "verify": "\"short\""
   },
   {
     "id": "cne_j079_q4",
     "topicId": "cne_j079",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "哪个单词的意思是「英俊的」？",
+    "prompt": "哪个单词的意思是「头发」？",
     "choices": [
       {
         "key": "A",
-        "text": "height"
+        "text": "handsome"
       },
       {
         "key": "B",
-        "text": "heavy"
+        "text": "tall"
       },
       {
         "key": "C",
-        "text": "glasses"
+        "text": "short"
       },
       {
         "key": "D",
-        "text": "handsome"
+        "text": "hair"
       }
     ],
     "answer": "D",
-    "explanation": "handsome 的意思是英俊的。",
-    "verify": "\"handsome\""
+    "explanation": "hair 的意思是头发。",
+    "verify": "\"hair\""
   },
   {
     "id": "cne_j080_q1",
     "topicId": "cne_j080",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "他很高。哪一句正确？",
+    "prompt": "他很英俊。哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "He has tall."
+        "text": "He has handsome."
       },
       {
         "key": "B",
-        "text": "He is tall."
+        "text": "He is handsome."
       },
       {
         "key": "C",
-        "text": "He is a tall."
+        "text": "He is a handsome."
       },
       {
         "key": "D",
-        "text": "He wears tall."
+        "text": "He wears handsome."
       }
     ],
     "answer": "B",
-    "explanation": "高用 be 加形容词，不用 have。",
-    "verify": "\"He is tall.\""
+    "explanation": "英俊用 be 加形容词。",
+    "verify": "\"He is handsome.\""
   },
   {
     "id": "cne_j080_q2",
@@ -82725,28 +82725,28 @@
     "topicId": "cne_j080",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "他戴着眼镜。哪一句正确？",
+    "prompt": "我爷爷又高又英俊。哪一句正确？",
     "choices": [
       {
         "key": "A",
-        "text": "He wears glass."
+        "text": "My grandfather has tall and handsome."
       },
       {
         "key": "B",
-        "text": "He is wear glasses."
+        "text": "My grandfather is tall and handsome hair."
       },
       {
         "key": "C",
-        "text": "He wears a glasses."
+        "text": "My grandfather are tall and handsome."
       },
       {
         "key": "D",
-        "text": "He wears glasses."
+        "text": "My grandfather is tall and handsome."
       }
     ],
     "answer": "D",
-    "explanation": "glasses 是复数形式，不加 a。",
-    "verify": "\"He wears glasses.\""
+    "explanation": "高和英俊都用 is，不用 has。",
+    "verify": "\"My grandfather is tall and handsome.\""
   },
   {
     "id": "cne_j080_q4",
@@ -82781,159 +82781,159 @@
     "topicId": "cne_j081",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "想问那位老师长什么样，哪一句合适？",
+    "prompt": "想问你哥哥长什么样，哪一句合适？",
     "choices": [
       {
         "key": "A",
-        "text": "What does your teacher like?"
+        "text": "What does your brother like?"
       },
       {
         "key": "B",
-        "text": "What is your teacher look like?"
+        "text": "What is your brother look like?"
       },
       {
         "key": "C",
-        "text": "What does your teacher look like?"
+        "text": "What does your brother look like?"
       },
       {
         "key": "D",
-        "text": "How does your teacher look like?"
+        "text": "How does your brother look like?"
       }
     ],
     "answer": "C",
     "explanation": "问外貌用 What does ... look like。What does he like 是问喜好。",
-    "verify": "\"What does your teacher look like?\""
+    "verify": "\"What does your brother look like?\""
   },
   {
     "id": "cne_j081_q2",
     "topicId": "cne_j081",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "他中等身高，应怎么说？",
+    "prompt": "她个子矮，应怎么说？",
     "choices": [
       {
         "key": "A",
-        "text": "He has of medium height."
+        "text": "She has short."
       },
       {
         "key": "B",
-        "text": "He is medium height of."
+        "text": "She is a short."
       },
       {
         "key": "C",
-        "text": "He is of medium high."
+        "text": "She wears short."
       },
       {
         "key": "D",
-        "text": "He is of medium height."
+        "text": "She is short."
       }
     ],
     "answer": "D",
-    "explanation": "of medium height 表示中等身高。",
-    "verify": "\"He is of medium height.\""
+    "explanation": "矮用 is short。",
+    "verify": "\"She is short.\""
   },
   {
     "id": "cne_j081_q3",
     "topicId": "cne_j081",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "She has curly hair. 这句话的意思是什么？",
+    "prompt": "He has short grey hair. 这句话的意思是什么？",
     "choices": [
       {
         "key": "A",
-        "text": "她留着卷发"
+        "text": "他留着花白的短发"
       },
       {
         "key": "B",
-        "text": "她很高"
+        "text": "他很高"
       },
       {
         "key": "C",
-        "text": "她戴眼镜"
+        "text": "他很英俊所以头发长"
       },
       {
         "key": "D",
-        "text": "她很瘦"
+        "text": "他戴着帽子"
       }
     ],
     "answer": "A",
-    "explanation": "curly hair 是卷发。",
-    "verify": "\"她留着卷发\""
+    "explanation": "short grey hair 是花白短发。",
+    "verify": "\"他留着花白的短发\""
   },
   {
     "id": "cne_j081_q4",
     "topicId": "cne_j081",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "想说那个男孩又瘦又英俊，哪一句合适？",
+    "prompt": "想说那个男孩又高又英俊，哪一句合适？",
     "choices": [
       {
         "key": "A",
-        "text": "The boy is thin and handsome hair."
+        "text": "The boy has tall and handsome."
       },
       {
         "key": "B",
-        "text": "The boy is thin and handsome."
+        "text": "The boy is tall and handsome."
       },
       {
         "key": "C",
-        "text": "The boy has thin and handsome."
+        "text": "The boy is tall and handsome hair."
       },
       {
         "key": "D",
-        "text": "The boy are thin and handsome."
+        "text": "The boy are tall and handsome."
       }
     ],
     "answer": "B",
     "explanation": "is 加两个形容词。",
-    "verify": "\"The boy is thin and handsome.\""
+    "verify": "\"The boy is tall and handsome.\""
   },
   {
     "id": "cne_j082_q1",
     "topicId": "cne_j082",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "My friend Jack is tall and thin. He has short black hair. He wears glasses. Jack 戴眼镜吗？",
+    "prompt": "This is my family. My grandfather is tall and handsome. He has short grey hair. My sister is short. She has long brown hair. 爷爷高吗？",
     "choices": [
       {
         "key": "A",
-        "text": "不戴"
+        "text": "矮"
       },
       {
         "key": "B",
-        "text": "只在学校戴，短文没写"
+        "text": "和姐姐一样矮"
       },
       {
         "key": "C",
-        "text": "短文说他不戴"
+        "text": "短文没说"
       },
       {
         "key": "D",
-        "text": "戴"
+        "text": "高"
       }
     ],
     "answer": "D",
-    "explanation": "wears glasses。",
-    "verify": "\"戴\""
+    "explanation": "My grandfather is tall。",
+    "verify": "\"高\""
   },
   {
     "id": "cne_j082_q2",
     "topicId": "cne_j082",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "My friend Jack is tall and thin. He has short black hair. 他的头发是什么样的？",
+    "prompt": "This is my family. My grandfather is tall and handsome. He has short grey hair. My sister is short. She has long brown hair. 姐姐的头发是什么样的？",
     "choices": [
       {
         "key": "A",
-        "text": "短的黑发"
+        "text": "长的棕色头发"
       },
       {
         "key": "B",
-        "text": "长的卷发"
+        "text": "花白短发"
       },
       {
         "key": "C",
-        "text": "金色短发"
+        "text": "短的黑发"
       },
       {
         "key": "D",
@@ -82941,64 +82941,64 @@
       }
     ],
     "answer": "A",
-    "explanation": "short black hair。",
-    "verify": "\"短的黑发\""
+    "explanation": "long brown hair。",
+    "verify": "\"长的棕色头发\""
   },
   {
     "id": "cne_j082_q3",
     "topicId": "cne_j082",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Lisa is of medium height. She has long curly hair. She is a little heavy. Lisa 胖还是瘦？",
+    "prompt": "This is my family. My grandfather is tall and handsome. He has short grey hair. My sister is short. She has long brown hair. 爷爷的头发是什么样的？",
     "choices": [
       {
         "key": "A",
-        "text": "很瘦"
+        "text": "棕色长发"
       },
       {
         "key": "B",
-        "text": "有点重"
+        "text": "花白的短发"
       },
       {
         "key": "C",
-        "text": "中等身高所以不谈体重"
+        "text": "金色卷发"
       },
       {
         "key": "D",
-        "text": "短文没说体重"
+        "text": "短文没说"
       }
     ],
     "answer": "B",
-    "explanation": "a little heavy 是有点重。",
-    "verify": "\"有点重\""
+    "explanation": "short grey hair。",
+    "verify": "\"花白的短发\""
   },
   {
     "id": "cne_j082_q4",
     "topicId": "cne_j082",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "Lisa is of medium height. She has long curly hair. 哪一句和短文一致？",
+    "prompt": "This is my family. My grandfather is tall and handsome. He has short grey hair. My sister is short. She has long brown hair. 哪一句和短文一致？",
     "choices": [
       {
         "key": "A",
-        "text": "Lisa is very short."
+        "text": "My sister is tall."
       },
       {
         "key": "B",
-        "text": "Lisa has short hair."
+        "text": "Grandfather has long hair."
       },
       {
         "key": "C",
-        "text": "Lisa's hair is long and curly."
+        "text": "My sister is short."
       },
       {
         "key": "D",
-        "text": "Lisa wears glasses in this text."
+        "text": "My sister is handsome in this text."
       }
     ],
     "answer": "C",
-    "explanation": "long curly hair。短文没有说眼镜。",
-    "verify": "\"Lisa's hair is long and curly.\""
+    "explanation": "姐姐个子矮。爷爷高，而且头发短。",
+    "verify": "\"My sister is short.\""
   },
   {
     "id": "cne_j083_q1",

@@ -1,17 +1,23 @@
 # -*- coding: utf-8 -*-
-"""七年级下册。人教版 Go for it! 通行目录，单元名与册次待核。"""
+"""七年级下册，以及已经挂在七年级上册新版单元上的点。
+
+才艺、作息改到七上 Unit 5、Unit 6。学校场所、家人外貌改到七上 Unit 3、Unit 2。
+出行方式改到七上「待核」（unit 90），不写进 A Day in the Life。
+其余点仍是七年级下册旧编号，本轮不改题目。
+"""
 from en_tx import V, P, G, F, R
+from enj_g7a import PENDING
 
 
 def q(prompt, answer, wrongs, expl):
     return ("c", prompt, answer, wrongs, expl)
 
 
-V("vo_talent", "才艺与俱乐部", 7, "下", 1,
+V("vo_talent", "才艺与俱乐部", 7, "上", 5,
   "认读 guitar、chess、club 和 dance。",
   [("guitar", "吉他"), ("chess", "国际象棋"), ("club", "俱乐部"), ("dance", "跳舞")], "vocab7")
 
-G("gr_can7", "情态动词 can", 7, "下", 1,
+G("gr_can7", "情态动词 can", 7, "上", 5,
   "能用 can 和 can't 谈论能力。", "modal", [
     q("我会弹吉他。哪一句正确？", "I can play the guitar.",
       ["I can to play the guitar.", "I can plays the guitar.", "I can play guitar the."],
@@ -25,7 +31,7 @@ G("gr_can7", "情态动词 can", 7, "下", 1,
       ["Does he can dance?", "Can he dances?", "Is he can dance?"], "can 直接提前，后面用原形。"),
 ])
 
-F("fu_club", "谈论才能与俱乐部", 7, "下", 1,
+F("fu_club", "谈论才能与俱乐部", 7, "上", 5,
   "能询问才能，并说明想加入哪个俱乐部。", "func_school", [
     q("想问对方会不会画画，哪一句合适？", "Can you draw?",
       ["Do you can draw?", "Can you draws?", "Are you can draw?"], "Can you draw 询问能力。"),
@@ -38,7 +44,7 @@ F("fu_club", "谈论才能与俱乐部", 7, "下", 1,
       ["你会不会游泳", "俱乐部在哪里", "吉他多少钱"], "what club 问哪一个俱乐部。"),
 ])
 
-R("rw_ad", "读俱乐部广告", 7, "下", 1,
+R("rw_ad", "读俱乐部广告", 7, "上", 5,
   "读一则俱乐部广告，找出需要的才能。", "read_detail", [
     q("Music Club. Can you sing or dance? Come and join us. Call Mr. Brown. 这个俱乐部需要什么才能？", "唱歌或跳舞",
       ["下棋", "踢足球", "画画"], "sing or dance 是唱歌或跳舞。"),
@@ -51,11 +57,11 @@ R("rw_ad", "读俱乐部广告", 7, "下", 1,
       "广告要会下棋的学生。"),
 ])
 
-V("vo_daily", "日常作息", 7, "下", 2,
+V("vo_daily", "日常作息", 7, "上", 6,
   "认读 shower、exercise、quarter 和 homework。",
   [("shower", "淋浴"), ("exercise", "锻炼"), ("quarter", "一刻钟"), ("homework", "家庭作业")], "vocab7")
 
-G("gr_clock", "时刻表达", 7, "下", 2,
+G("gr_clock", "时刻表达", 7, "上", 6,
   "能用 past、to 和数字读出时刻。", "question", [
     q("6:15 用哪一种说法？", "a quarter past six",
       ["a quarter to six", "six past a quarter", "half past six"], "15 分是 a quarter past。"),
@@ -81,7 +87,7 @@ G("gr_often", "频度副词", 7, "下", 2,
       "always 最高，never 最低。"),
 ])
 
-F("fu_time7", "谈论作息时间", 7, "下", 2,
+F("fu_time7", "谈论作息时间", 7, "上", 6,
   "能询问和说明每天几点做什么。", "func_school", [
     q("想问对方几点上学，哪一句合适？", "What time do you go to school?",
       ["What time does you go to school?", "What time do you goes to school?", "When time do you go to school?"],
@@ -96,7 +102,7 @@ F("fu_time7", "谈论作息时间", 7, "下", 2,
       "He does，homework 不可数，in the evening。"),
 ])
 
-R("rw_day7", "读一天的安排", 7, "下", 2,
+R("rw_day7", "读一天的安排", 7, "上", 6,
   "读一段作息短文，找出时间。", "read_detail", [
     q("Scott gets up at 6:00. He exercises at 6:30. He goes to school at 7:15. 他几点锻炼？", "6:30",
       ["6:00", "7:15", "8:00"], "exercises at 6:30。"),
@@ -109,12 +115,12 @@ R("rw_day7", "读一天的安排", 7, "下", 2,
       "at 7:00 in the evening 是晚上七点。"),
 ])
 
-V("vo_trans7", "交通方式", 7, "下", 3,
-  "认读 train、subway、bike 和 bus。",
+V("vo_trans7", "交通方式", 7, "上", 90,
+  "认读 train、subway、bike 和 bus。" + PENDING,
   [("train", "火车"), ("subway", "地铁"), ("bike", "自行车"), ("bus", "公共汽车")], "vocab7")
 
-G("gr_howfar", "How 问交通", 7, "下", 3,
-  "能用 how、how long 和 how far 询问出行方式、时间和距离。", "question", [
+G("gr_howfar", "How 问交通", 7, "上", 90,
+  "能用 how、how long 和 how far 询问出行方式、时间和距离。" + PENDING, "question", [
     q("询问对方怎么去学校，哪一句正确？", "How do you get to school?",
       ["How does you get to school?", "How do you gets to school?", "How you get to school?"],
       "you 用 How do you get。"),
@@ -128,8 +134,8 @@ G("gr_howfar", "How 问交通", 7, "下", 3,
       "步行用 walks；by foot 不是标准说法，应说 on foot，且不再叠用 walks to。"),
 ])
 
-F("fu_trans7", "谈论怎么上学", 7, "下", 3,
-  "能说明自己怎么上学、花多长时间。", "func_life", [
+F("fu_trans7", "谈论怎么上学", 7, "上", 90,
+  "能说明自己怎么上学、花多长时间。" + PENDING, "func_life", [
     q("想说你乘地铁上学，哪一句合适？", "I take the subway to school.",
       ["I by the subway to school.", "I take the subway to school by.", "I takes the subway to school."],
       "I take the subway。"),
@@ -143,8 +149,8 @@ F("fu_trans7", "谈论怎么上学", 7, "下", 3,
       "He rides his bike。不必再加 by bike。"),
 ])
 
-R("rw_trans7", "读上学方式", 7, "下", 3,
-  "读一段出行短文，找出方式和时间。", "read_detail", [
+R("rw_trans7", "读上学方式", 7, "上", 90,
+  "读一段出行短文，找出方式和时间。" + PENDING, "read_detail", [
     q("Lisa lives 5 kilometers from school. She rides her bike. It takes her 15 minutes. 她怎么上学？", "骑自行车",
       ["乘地铁", "乘火车", "步行"], "rides her bike 是骑自行车。"),
     q("Lisa lives 5 kilometers from school. She rides her bike. It takes her 15 minutes. 大约要多久？", "15 分钟",
@@ -374,97 +380,96 @@ R("rw_weather7", "读天气消息", 7, "下", 7,
       "a cold day 说明很冷。短文没有说下雨。"),
 ])
 
-V("vo_place", "场所", 7, "下", 8,
-  "认读 hospital、bank、hotel 和 street。",
-  [("hospital", "医院"), ("bank", "银行"), ("hotel", "旅馆"), ("street", "街道")], "vocab7")
+V("vo_place", "学校场所", 7, "上", 3,
+  "认读 hall、building、dining hall 和 reading corner。",
+  [("hall", "礼堂"), ("building", "建筑物"), ("dining hall", "餐厅"), ("reading corner", "阅读角")], "vocab7")
 
-G("gr_there7", "There be 句型", 7, "下", 8,
-  "能用 There is 和 There are 描述某处有什么。", "there_prep", [
-    q("附近有一家银行。哪一句正确？", "There is a bank near here.",
-      ["There are a bank near here.", "There have a bank near here.", "There is bank near here."],
-      "单数用 There is a bank。"),
-    q("这条街上有两家旅馆。哪一句正确？", "There are two hotels on this street.",
-      ["There is two hotels on this street.", "There are two hotel on this street.", "There have two hotels on this street."],
-      "复数用 There are，hotels 用复数。"),
-    q("Is there a hospital near here? 肯定回答是哪一句？", "Yes, there is.",
+G("gr_there7", "There be 句型", 7, "上", 3,
+  "能用 There is 和 There are 描述学校里有什么。", "there_prep", [
+    q("学校里有一座礼堂。哪一句正确？", "There is a hall in the school.",
+      ["There are a hall in the school.", "There have a hall in the school.", "There is hall in the school."],
+      "单数用 There is a hall。"),
+    q("教学楼前面有两棵树。哪一句正确？", "There are two trees in front of the building.",
+      ["There is two trees in front of the building.", "There are two tree in front of the building.", "There have two trees in front of the building."],
+      "复数用 There are，trees 用复数。"),
+    q("Is there a dining hall in your school? 肯定回答是哪一句？", "Yes, there is.",
       ["Yes, there are.", "Yes, it is.", "Yes, there has."], "Is there 用 Yes, there is 回答。"),
-    q("哪一句是正确的否定句？", "There isn't a post office on this street.",
-      ["There isn't any post office are on this street.", "There aren't a post office on this street.", "There not a post office on this street."],
+    q("哪一句是正确的否定句？", "There isn't a reading corner in this building.",
+      ["There aren't a reading corner in this building.", "There not a reading corner in this building.", "There isn't any reading corner are in this building."],
       "单数否定用 There isn't a。"),
 ])
 
-F("fu_way7", "问路与指路", 7, "下", 8,
-  "能问路，并用 across from、next to 指路。", "func_life", [
-    q("想问附近有没有医院，哪一句合适？", "Is there a hospital near here?",
-      ["Are there a hospital near here?", "Is there hospital near here?", "Does there a hospital near here?"],
-      "Is there a hospital。"),
-    q("银行在旅馆对面，应怎么说？", "The bank is across from the hotel.",
-      ["The bank is across to the hotel.", "The bank across from the hotel.", "The bank is across from hotel the."],
+F("fu_way7", "询问学校场所", 7, "上", 3,
+  "能询问学校里有没有某处，并用 across from、next to 说明位置。", "func_life", [
+    q("想问学校里有没有餐厅，哪一句合适？", "Is there a dining hall in your school?",
+      ["Are there a dining hall in your school?", "Is there dining hall in your school?", "Does there a dining hall in your school?"],
+      "Is there a dining hall。"),
+    q("餐厅在教学楼对面，应怎么说？", "The dining hall is across from the building.",
+      ["The dining hall is across to the building.", "The dining hall across from the building.", "The dining hall is across from building the."],
       "across from 表示在对面。"),
-    q("Where is the pay phone? 这句在问什么？", "付费电话在哪里",
-      ["付费电话多少钱", "有没有付费电话的品牌", "谁的付费电话"], "Where 问位置。"),
-    q("想说邮局在银行旁边，哪一句合适？", "The post office is next to the bank.",
-      ["The post office is next the bank.", "The post office next to the bank.", "The post office is next to bank the."],
+    q("Where is the reading corner? 这句在问什么？", "阅读角在哪里",
+      ["阅读角多少钱", "阅读角是谁的", "阅读角几点开门，这句没问时间"], "Where 问位置。"),
+    q("想说礼堂在餐厅旁边，哪一句合适？", "The hall is next to the dining hall.",
+      ["The hall is next the dining hall.", "The hall next to the dining hall.", "The hall are next to the dining hall."],
       "next to 表示在旁边。"),
 ])
 
-R("rw_way7", "读路线说明", 7, "下", 8,
-  "读一段路线说明，找出场所的位置。", "read_detail", [
-    q("The hotel is on Center Street. The bank is across from the hotel. The hospital is next to the bank. 银行在哪里？", "在旅馆对面",
-      ["在医院里面", "在中心街的尽头以外", "在邮局旁边，短文没写邮局"], "across from the hotel。"),
-    q("The hotel is on Center Street. The bank is across from the hotel. The hospital is next to the bank. 医院在银行的哪一边？", "在银行旁边",
-      ["在银行对面", "在旅馆里面", "在银行楼上"], "next to the bank。"),
-    q("Go along Bridge Street and turn left. The park is on the right. 公园在哪一侧？", "右侧",
-      ["左侧", "对面", "桥下"], "on the right 是右侧。"),
-    q("Go along Bridge Street and turn left. The park is on the right. 哪一句和说明一致？", "You turn left to find the park.",
-      ["You turn right at once and the park is on the left.", "The park is on Bridge Street and you do not turn.", "The park is next to a hospital in this text."],
-      "turn left，公园在右边。短文没有写医院。"),
+R("rw_way7", "读学校位置", 7, "上", 3,
+  "读一段学校位置说明，找出场所在哪里。", "read_detail", [
+    q("Our hall is in front of the building. The dining hall is across from the hall. The reading corner is next to the library. 礼堂在哪里？", "在教学楼前面",
+      ["在餐厅里面", "在图书馆对面", "在阅读角里面"], "in front of the building。"),
+    q("Our hall is in front of the building. The dining hall is across from the hall. The reading corner is next to the library. 餐厅在礼堂的哪一边？", "在对面",
+      ["在前面", "在里面", "在楼上"], "across from the hall。"),
+    q("Our hall is in front of the building. The dining hall is across from the hall. The reading corner is next to the library. 阅读角在哪里？", "在图书馆旁边",
+      ["在礼堂里面", "在餐厅对面", "在教学楼后面"], "next to the library。"),
+    q("Our hall is in front of the building. The dining hall is across from the hall. The reading corner is next to the library. 哪一句和短文一致？", "The dining hall is across from the hall.",
+      ["The hall is across from the building.", "The reading corner is in the hall.", "The library is in front of the hall."],
+      "餐厅在礼堂对面。礼堂在教学楼前面，不是在对面。"),
 ])
 
-V("vo_look", "外貌", 7, "下", 9,
-  "认读 height、heavy、glasses 和 handsome。",
-  [("height", "身高"), ("heavy", "重的"), ("glasses", "眼镜"), ("handsome", "英俊的")], "vocab7")
+V("vo_look", "外貌", 7, "上", 2,
+  "认读描述家人外貌时用到的 handsome、tall、short 和 hair。",
+  [("handsome", "英俊的"), ("tall", "高的"), ("short", "矮的"), ("hair", "头发")], "vocab7")
 
-G("gr_look", "描述外貌", 7, "下", 9,
-  "能用 be、have 和 wear 描述外貌。", "present", [
-    q("他很高。哪一句正确？", "He is tall.",
-      ["He has tall.", "He is a tall.", "He wears tall."], "高用 be 加形容词，不用 have。"),
+G("gr_look", "描述外貌", 7, "上", 2,
+  "能用 be 和 have 描述家人的高矮和头发。", "present", [
+    q("他很英俊。哪一句正确？", "He is handsome.",
+      ["He has handsome.", "He is a handsome.", "He wears handsome."], "英俊用 be 加形容词。"),
     q("她留着长发。哪一句正确？", "She has long hair.",
       ["She is long hair.", "She has long hairs.", "She is has long hair."],
       "有某种头发用 has，hair 通常不可数。"),
-    q("他戴着眼镜。哪一句正确？", "He wears glasses.",
-      ["He wears glass.", "He is wear glasses.", "He wears a glasses."],
-      "glasses 是复数形式，不加 a。"),
+    q("我爷爷又高又英俊。哪一句正确？", "My grandfather is tall and handsome.",
+      ["My grandfather has tall and handsome.", "My grandfather is tall and handsome hair.", "My grandfather are tall and handsome."],
+      "高和英俊都用 is，不用 has。"),
     q("What does he look like? 这句在问什么？", "他长什么样",
       ["他喜欢什么", "他看起来在看书", "他来自哪里"], "look like 问外貌，不是问喜好。"),
 ])
 
-F("fu_look", "询问长什么样", 7, "下", 9,
-  "能询问和描述一个人的外貌。", "func_life", [
-    q("想问那位老师长什么样，哪一句合适？", "What does your teacher look like?",
-      ["What does your teacher like?", "What is your teacher look like?", "How does your teacher look like?"],
+F("fu_look", "询问长什么样", 7, "上", 2,
+  "能询问和描述家人的外貌。", "func_life", [
+    q("想问你哥哥长什么样，哪一句合适？", "What does your brother look like?",
+      ["What does your brother like?", "What is your brother look like?", "How does your brother look like?"],
       "问外貌用 What does ... look like。What does he like 是问喜好。"),
-    q("他中等身高，应怎么说？", "He is of medium height.",
-      ["He has of medium height.", "He is medium height of.", "He is of medium high."],
-      "of medium height 表示中等身高。"),
-    q("She has curly hair. 这句话的意思是什么？", "她留着卷发",
-      ["她很高", "她戴眼镜", "她很瘦"], "curly hair 是卷发。"),
-    q("想说那个男孩又瘦又英俊，哪一句合适？", "The boy is thin and handsome.",
-      ["The boy is thin and handsome hair.", "The boy has thin and handsome.", "The boy are thin and handsome."],
+    q("她个子矮，应怎么说？", "She is short.",
+      ["She has short.", "She is a short.", "She wears short."], "矮用 is short。"),
+    q("He has short grey hair. 这句话的意思是什么？", "他留着花白的短发",
+      ["他很高", "他很英俊所以头发长", "他戴着帽子"], "short grey hair 是花白短发。"),
+    q("想说那个男孩又高又英俊，哪一句合适？", "The boy is tall and handsome.",
+      ["The boy has tall and handsome.", "The boy is tall and handsome hair.", "The boy are tall and handsome."],
       "is 加两个形容词。"),
 ])
 
-R("rw_look", "读人物外貌", 7, "下", 9,
-  "读一段外貌描述，找出人物特征。", "read_detail", [
-    q("My friend Jack is tall and thin. He has short black hair. He wears glasses. Jack 戴眼镜吗？", "戴",
-      ["不戴", "只在学校戴，短文没写", "短文说他不戴"], "wears glasses。"),
-    q("My friend Jack is tall and thin. He has short black hair. 他的头发是什么样的？", "短的黑发",
-      ["长的卷发", "金色短发", "没有头发"], "short black hair。"),
-    q("Lisa is of medium height. She has long curly hair. She is a little heavy. Lisa 胖还是瘦？", "有点重",
-      ["很瘦", "中等身高所以不谈体重", "短文没说体重"], "a little heavy 是有点重。"),
-    q("Lisa is of medium height. She has long curly hair. 哪一句和短文一致？", "Lisa's hair is long and curly.",
-      ["Lisa is very short.", "Lisa has short hair.", "Lisa wears glasses in this text."],
-      "long curly hair。短文没有说眼镜。"),
+R("rw_look", "读人物外貌", 7, "上", 2,
+  "读一段家人外貌描述，找出人物特征。", "read_detail", [
+    q("This is my family. My grandfather is tall and handsome. He has short grey hair. My sister is short. She has long brown hair. 爷爷高吗？", "高",
+      ["矮", "和姐姐一样矮", "短文没说"], "My grandfather is tall。"),
+    q("This is my family. My grandfather is tall and handsome. He has short grey hair. My sister is short. She has long brown hair. 姐姐的头发是什么样的？", "长的棕色头发",
+      ["花白短发", "短的黑发", "没有头发"], "long brown hair。"),
+    q("This is my family. My grandfather is tall and handsome. He has short grey hair. My sister is short. She has long brown hair. 爷爷的头发是什么样的？", "花白的短发",
+      ["棕色长发", "金色卷发", "短文没说"], "short grey hair。"),
+    q("This is my family. My grandfather is tall and handsome. He has short grey hair. My sister is short. She has long brown hair. 哪一句和短文一致？", "My sister is short.",
+      ["My sister is tall.", "Grandfather has long hair.", "My sister is handsome in this text."],
+      "姐姐个子矮。爷爷高，而且头发短。"),
 ])
 
 V("vo_noodle", "点餐食物", 7, "下", 10,

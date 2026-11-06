@@ -17,7 +17,7 @@ hard("ph_pause", "ph_tone7", "按意群停顿之前，要先会句末的升降�
 
 # 七年级上：句型承接小学
 hard("gr_be7", "p:gr_am", "初中继续区分 am、is、are，先要会 I am。")
-hard("gr_this7", "p:gr_this", "This is 与 These are 承接小学的 This is。")
+hard("gr_this7", "p:gr_this", "指示代词 this、that、these、those 承接小学的 This is。")
 hard("gr_plural7", "p:gr_plural", "初中名词复数承接小学已经学过的复数。")
 hard("gr_poss7", "p:gr_job", "形容词性物主代词承接小学的 his 和 her。")
 hard("gr_yesno", "gr_be7", "把含 be 的句子改成疑问句之前，要先会 am、is、are。")

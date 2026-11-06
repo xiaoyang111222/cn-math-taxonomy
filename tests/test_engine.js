@@ -729,6 +729,13 @@ test('英语：小学 197、初中 180–260、高中 220–320，不与数学�
     { volume: '八下', chapterNo: '第8单元', chapterName: 'Have you read Treasure Island yet', section: '' }
   );
   assert.deepStrictEqual(
+    E.parseChapter('七年级上册 待核'),
+    { volume: '七上', chapterNo: '待核', chapterName: '未挂到具体单元', section: '' }
+  );
+  const en7 = E.gradeTargets(RG, '七上', 'english');
+  assert.ok(en7.ids.indexOf('cne_j001') >= 0);
+  assert.strictEqual(en7.ids.filter((id) => RG.byId[id].chapter === '七年级上册 待核').length, 9);
+  assert.deepStrictEqual(
     E.parseChapter('必修第一册 欢迎单元 Welcome Unit'),
     { volume: '必修一', chapterNo: '欢迎单元', chapterName: 'Welcome Unit', section: '' }
   );
@@ -758,10 +765,15 @@ test('英语：小学 197、初中 180–260、高中 220–320，不与数学�
   const ces = stdFile.items.filter((it) => String(it.id).startsWith('ces-2022:'));
   const ces3 = ces.filter((it) => String(it.id).indexOf('ces-2022:3.') === 0);
   assert.ok(ces.length >= 20 && ces3.length >= 20, '三级课标 ' + ces3.length);
-  assert.ok(ces.every((it) => it.verbatim === false && it.page_or_ref === '待核'));
+  const enPageOk = (it) => it.verbatim === false && (
+    it.page_or_ref === '待核' || (/印刷页/.test(it.page_or_ref) && /转述/.test(it.page_or_ref))
+  );
+  assert.ok(ces.every(enPageOk));
+  assert.ok(ces.some((it) => it.page_or_ref === '待核') && ces.some((it) => /印刷页/.test(it.page_or_ref)));
   const cesH = stdFile.items.filter((it) => String(it.id).startsWith('ces-2017:H.'));
   assert.ok(cesH.length >= 20, '高中英语课标 ' + cesH.length);
-  assert.ok(cesH.every((it) => it.verbatim === false && it.page_or_ref === '待核'));
+  assert.ok(cesH.every(enPageOk));
+  assert.ok(cesH.some((it) => it.page_or_ref === '待核') && cesH.some((it) => /印刷页/.test(it.page_or_ref)));
   assert.ok(cesH.some((it) => String(it.id).indexOf('ces-2017:H.B.') === 0));
   assert.ok(cesH.some((it) => String(it.id).indexOf('ces-2017:H.S.') === 0));
   assert.strictEqual(stdFile.english.senior.year, 2025);

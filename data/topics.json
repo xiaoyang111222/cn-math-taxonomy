@@ -30020,9 +30020,9 @@
     "domain": "语音",
     "grade": 7,
     "semester": "上",
-    "chapter": "七年级上册 预备单元1 Hello!",
+    "chapter": "七年级上册 待核",
     "type": "procedural",
-    "description": "能判断常见单词的重音在第几个音节。",
+    "description": "能判断常见单词的重音在第几个音节。 2026-11-06 人教社七上资源页没有把这项写进某个单元标题，公开教辅也未把它定为本册某一课的重点。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能根据字母或读音选出正确的一项",
       "能把字母、发音和例词对上"
@@ -30047,9 +30047,9 @@
     "domain": "语音",
     "grade": 7,
     "semester": "上",
-    "chapter": "七年级上册 预备单元1 Hello!",
+    "chapter": "七年级上册 待核",
     "type": "procedural",
-    "description": "能区分陈述句、特殊疑问句的降调和一般疑问句的升调。",
+    "description": "能区分陈述句、特殊疑问句的降调和一般疑问句的升调。 2026-11-06 人教社七上资源页没有把这项写进某个单元标题，公开教辅也未把它定为本册某一课的重点。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能根据字母或读音选出正确的一项",
       "能把字母、发音和例词对上"
@@ -30130,14 +30130,14 @@
     "semester": "上",
     "chapter": "七年级上册 预备单元2 Keep Tidy!",
     "type": "conceptual",
-    "description": "认读 pencil、eraser、dictionary 和 ruler。",
+    "description": "认读书包里的 key、cap、pencil 和 ruler。",
     "mastery_criteria": [
       "能选出单词的中文意思",
       "能根据中文选出英文单词"
     ],
     "diagnostic_question": {
-      "question": "哪个单词的意思是「铅笔」？",
-      "answer": "pencil"
+      "question": "哪个单词的意思是「钥匙」？",
+      "answer": "key"
     },
     "external": false,
     "subject": "english",
@@ -30151,20 +30151,20 @@
   },
   {
     "id": "cne_j016",
-    "name": "认领失物",
+    "name": "确认物品是谁的",
     "domain": "日常表达",
     "grade": 7,
     "semester": "上",
     "chapter": "七年级上册 预备单元2 Keep Tidy!",
     "type": "application",
-    "description": "能询问物品是谁的，并回答是或不是。",
+    "description": "能询问帽子、钥匙是不是对方的，并说明是谁的。",
     "mastery_criteria": [
       "能选出符合情境的英文句子",
       "能读懂这个功能句在问什么或在说什么"
     ],
     "diagnostic_question": {
-      "question": "捡到一支铅笔，想问是不是对方的，哪一句合适？",
-      "answer": "Is this your pencil?"
+      "question": "想问这顶帽子是不是对方的，哪一句合适？",
+      "answer": "Is this your cap?"
     },
     "external": false,
     "subject": "english",
@@ -30178,20 +30178,20 @@
   },
   {
     "id": "cne_j017",
-    "name": "读失物招领",
+    "name": "读物品归属",
     "domain": "读写",
     "grade": 7,
     "semester": "上",
     "chapter": "七年级上册 预备单元2 Keep Tidy!",
     "type": "application",
-    "description": "读一则失物招领，找出物品和联系人。",
+    "description": "读一段课桌说明，找出物品是谁的、在哪里。",
     "mastery_criteria": [
       "能根据短文选出与文字一致的信息",
       "能选出和短文意思一致的句子"
     ],
     "diagnostic_question": {
-      "question": "Found: a blue pencil. Is this your pencil? Call Mary at 622-6033. 捡到的是什么？",
-      "answer": "一支蓝色铅笔"
+      "question": "This is my desk. The pencil is mine. The cap is his. The key is in the bag. 铅笔是谁的？",
+      "answer": "说话人自己"
     },
     "external": false,
     "subject": "english",
@@ -30286,20 +30286,20 @@
   },
   {
     "id": "cne_j008",
-    "name": "This is 与 These are",
+    "name": "指示代词 this、that、these、those",
     "domain": "语法",
     "grade": 7,
     "semester": "上",
     "chapter": "七年级上册 预备单元3 Welcome!",
     "type": "procedural",
-    "description": "能用 This is 介绍单数，用 These are 介绍复数。",
+    "description": "能用 this、that 指单数，用 these、those 指复数，并回答 What's this 和 What are these。",
     "mastery_criteria": [
       "能选出语法正确的词或句子",
       "能在句子里用对这个句型"
     ],
     "diagnostic_question": {
-      "question": "介绍一位姐姐，哪一句正确？",
-      "answer": "This is my sister."
+      "question": "近处一只兔子，哪一句正确？",
+      "answer": "This is a rabbit."
     },
     "external": false,
     "subject": "english",
@@ -30319,14 +30319,14 @@
     "semester": "上",
     "chapter": "七年级上册 预备单元3 Welcome!",
     "type": "procedural",
-    "description": "能把常见可数名词变成复数。",
+    "description": "能把院子、农场里的常见名词变成复数，包括 sheep 和 goose。",
     "mastery_criteria": [
       "能选出语法正确的词或句子",
       "能在句子里用对这个句型"
     ],
     "diagnostic_question": {
-      "question": "book 的复数是哪一个？",
-      "answer": "books"
+      "question": "tomato 的复数是哪一个？",
+      "answer": "tomatoes"
     },
     "external": false,
     "subject": "english",
@@ -30344,9 +30344,9 @@
     "domain": "语音",
     "grade": 7,
     "semester": "上",
-    "chapter": "七年级上册 预备单元3 Welcome!",
+    "chapter": "七年级上册 待核",
     "type": "procedural",
-    "description": "能分辨词尾 -s、-es 读 /s/、/z/ 还是 /ɪz/。",
+    "description": "能分辨词尾 -s、-es 读 /s/、/z/ 还是 /ɪz/。 2026-11-06 人教社七上资源页没有把这项写进某个单元标题，公开教辅也未把它定为本册某一课的重点。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能根据字母或读音选出正确的一项",
       "能把字母、发音和例词对上"
@@ -30400,14 +30400,14 @@
     "semester": "上",
     "chapter": "七年级上册 第1单元 You and Me",
     "type": "procedural",
-    "description": "能选用 my、your、his、her 修饰名词。",
+    "description": "能选用 my、your、his、her 修饰名词，用来谈论你和我。",
     "mastery_criteria": [
       "能选出语法正确的词或句子",
       "能在句子里用对这个句型"
     ],
     "diagnostic_question": {
-      "question": "这是她的橡皮。哪一句正确？",
-      "answer": "This is her eraser."
+      "question": "这是她的名字。哪一句正确？",
+      "answer": "This is her name."
     },
     "external": false,
     "subject": "english",
@@ -30427,14 +30427,14 @@
     "semester": "上",
     "chapter": "七年级上册 第1单元 You and Me",
     "type": "procedural",
-    "description": "能把含 be 动词的句子改成一般疑问句并作简答。",
+    "description": "能把含 be 动词的句子改成一般疑问句，并用来确认同学是谁。",
     "mastery_criteria": [
       "能选出语法正确的词或句子",
       "能在句子里用对这个句型"
     ],
     "diagnostic_question": {
-      "question": "This is her pencil. 改成一般疑问句，哪一句正确？",
-      "answer": "Is this her pencil?"
+      "question": "She is your classmate. 改成一般疑问句，哪一句正确？",
+      "answer": "Is she your classmate?"
     },
     "external": false,
     "subject": "english",
@@ -30508,13 +30508,13 @@
     "semester": "上",
     "chapter": "七年级上册 第2单元 We're Family!",
     "type": "procedural",
-    "description": "能用 do 或 does 构成一般现在时的疑问句和否定句。",
+    "description": "能用 do 或 does 构成一般现在时的疑问句和否定句，用来谈家人的活动。",
     "mastery_criteria": [
       "能选出语法正确的词或句子",
       "能在句子里用对这个句型"
     ],
     "diagnostic_question": {
-      "question": "___ you have a soccer ball? 横线处填哪一个？",
+      "question": "___ you play chess? 横线处填哪一个？",
       "answer": "Do"
     },
     "external": false,
@@ -30615,14 +30615,14 @@
     "semester": "上",
     "chapter": "七年级上册 第2单元 We're Family!",
     "type": "conceptual",
-    "description": "认读 height、heavy、glasses 和 handsome。",
+    "description": "认读描述家人外貌时用到的 handsome、tall、short 和 hair。",
     "mastery_criteria": [
       "能选出单词的中文意思",
       "能根据中文选出英文单词"
     ],
     "diagnostic_question": {
-      "question": "哪个单词的意思是「身高」？",
-      "answer": "height"
+      "question": "哪个单词的意思是「英俊的」？",
+      "answer": "handsome"
     },
     "external": false,
     "subject": "english",
@@ -30642,14 +30642,14 @@
     "semester": "上",
     "chapter": "七年级上册 第2单元 We're Family!",
     "type": "procedural",
-    "description": "能用 be、have 和 wear 描述外貌。",
+    "description": "能用 be 和 have 描述家人的高矮和头发。",
     "mastery_criteria": [
       "能选出语法正确的词或句子",
       "能在句子里用对这个句型"
     ],
     "diagnostic_question": {
-      "question": "他很高。哪一句正确？",
-      "answer": "He is tall."
+      "question": "他很英俊。哪一句正确？",
+      "answer": "He is handsome."
     },
     "external": false,
     "subject": "english",
@@ -30669,14 +30669,14 @@
     "semester": "上",
     "chapter": "七年级上册 第2单元 We're Family!",
     "type": "application",
-    "description": "能询问和描述一个人的外貌。",
+    "description": "能询问和描述家人的外貌。",
     "mastery_criteria": [
       "能选出符合情境的英文句子",
       "能读懂这个功能句在问什么或在说什么"
     ],
     "diagnostic_question": {
-      "question": "想问那位老师长什么样，哪一句合适？",
-      "answer": "What does your teacher look like?"
+      "question": "想问你哥哥长什么样，哪一句合适？",
+      "answer": "What does your brother look like?"
     },
     "external": false,
     "subject": "english",
@@ -30696,14 +30696,14 @@
     "semester": "上",
     "chapter": "七年级上册 第2单元 We're Family!",
     "type": "application",
-    "description": "读一段外貌描述，找出人物特征。",
+    "description": "读一段家人外貌描述，找出人物特征。",
     "mastery_criteria": [
       "能根据短文选出与文字一致的信息",
       "能选出和短文意思一致的句子"
     ],
     "diagnostic_question": {
-      "question": "My friend Jack is tall and thin. He has short black hair. He wears glasses. Jack 戴眼镜吗？",
-      "answer": "戴"
+      "question": "This is my family. My grandfather is tall and handsome. He has short grey hair. My sister is short. She has long brown hair. 爷爷高吗？",
+      "answer": "高"
     },
     "external": false,
     "subject": "english",
@@ -30717,20 +30717,20 @@
   },
   {
     "id": "cne_j075",
-    "name": "场所",
+    "name": "学校场所",
     "domain": "词汇",
     "grade": 7,
     "semester": "上",
     "chapter": "七年级上册 第3单元 My School",
     "type": "conceptual",
-    "description": "认读 hospital、bank、hotel 和 street。",
+    "description": "认读 hall、building、dining hall 和 reading corner。",
     "mastery_criteria": [
       "能选出单词的中文意思",
       "能根据中文选出英文单词"
     ],
     "diagnostic_question": {
-      "question": "哪个单词的意思是「医院」？",
-      "answer": "hospital"
+      "question": "哪个单词的意思是「礼堂」？",
+      "answer": "hall"
     },
     "external": false,
     "subject": "english",
@@ -30750,14 +30750,14 @@
     "semester": "上",
     "chapter": "七年级上册 第3单元 My School",
     "type": "procedural",
-    "description": "能用 There is 和 There are 描述某处有什么。",
+    "description": "能用 There is 和 There are 描述学校里有什么。",
     "mastery_criteria": [
       "能选出语法正确的词或句子",
       "能在句子里用对这个句型"
     ],
     "diagnostic_question": {
-      "question": "附近有一家银行。哪一句正确？",
-      "answer": "There is a bank near here."
+      "question": "学校里有一座礼堂。哪一句正确？",
+      "answer": "There is a hall in the school."
     },
     "external": false,
     "subject": "english",
@@ -30777,14 +30777,14 @@
     "semester": "上",
     "chapter": "七年级上册 第3单元 My School",
     "type": "procedural",
-    "description": "能用 in、on、under 表示物品的位置。",
+    "description": "能用 in front of、behind、across from 和 next to 表示学校里场所的位置。",
     "mastery_criteria": [
       "能选出语法正确的词或句子",
       "能在句子里用对这个句型"
     ],
     "diagnostic_question": {
-      "question": "书在桌子上。哪一句正确？",
-      "answer": "The book is on the table."
+      "question": "礼堂在教学楼前面。哪一句正确？",
+      "answer": "The hall is in front of the building."
     },
     "external": false,
     "subject": "english",
@@ -30798,20 +30798,20 @@
   },
   {
     "id": "cne_j077",
-    "name": "问路与指路",
+    "name": "询问学校场所",
     "domain": "日常表达",
     "grade": 7,
     "semester": "上",
     "chapter": "七年级上册 第3单元 My School",
     "type": "application",
-    "description": "能问路，并用 across from、next to 指路。",
+    "description": "能询问学校里有没有某处，并用 across from、next to 说明位置。",
     "mastery_criteria": [
       "能选出符合情境的英文句子",
       "能读懂这个功能句在问什么或在说什么"
     ],
     "diagnostic_question": {
-      "question": "想问附近有没有医院，哪一句合适？",
-      "answer": "Is there a hospital near here?"
+      "question": "想问学校里有没有餐厅，哪一句合适？",
+      "answer": "Is there a dining hall in your school?"
     },
     "external": false,
     "subject": "english",
@@ -30825,20 +30825,20 @@
   },
   {
     "id": "cne_j078",
-    "name": "读路线说明",
+    "name": "读学校位置",
     "domain": "读写",
     "grade": 7,
     "semester": "上",
     "chapter": "七年级上册 第3单元 My School",
     "type": "application",
-    "description": "读一段路线说明，找出场所的位置。",
+    "description": "读一段学校位置说明，找出场所在哪里。",
     "mastery_criteria": [
       "能根据短文选出与文字一致的信息",
       "能选出和短文意思一致的句子"
     ],
     "diagnostic_question": {
-      "question": "The hotel is on Center Street. The bank is across from the hotel. The hospital is next to the bank. 银行在哪里？",
-      "answer": "在旅馆对面"
+      "question": "Our hall is in front of the building. The dining hall is across from the hall. The reading corner is next to the library. 礼堂在哪里？",
+      "answer": "在教学楼前面"
     },
     "external": false,
     "subject": "english",
@@ -30856,9 +30856,9 @@
     "domain": "语音",
     "grade": 7,
     "semester": "上",
-    "chapter": "七年级上册 第4单元 My Favourite Subject",
+    "chapter": "七年级上册 待核",
     "type": "procedural",
-    "description": "能判断辅音结尾的词和元音开头的词能否连读。",
+    "description": "能判断辅音结尾的词和元音开头的词能否连读。 2026-11-06 人教社七上资源页没有把这项写进某个单元标题，公开教辅也未把它定为本册某一课的重点。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能根据字母或读音选出正确的一项",
       "能把字母、发音和例词对上"
@@ -30912,14 +30912,14 @@
     "semester": "上",
     "chapter": "七年级上册 第4单元 My Favourite Subject",
     "type": "procedural",
-    "description": "能用 like 的肯定句、否定句和疑问句谈论喜好。",
+    "description": "能用 like 的肯定句、否定句和疑问句谈论对学科的喜好。",
     "mastery_criteria": [
       "能选出语法正确的词或句子",
       "能在句子里用对这个句型"
     ],
     "diagnostic_question": {
-      "question": "她喜欢香蕉。哪一句正确？",
-      "answer": "She likes bananas."
+      "question": "她喜欢历史。哪一句正确？",
+      "answer": "She likes history."
     },
     "external": false,
     "subject": "english",
@@ -31018,9 +31018,9 @@
     "domain": "语音",
     "grade": 7,
     "semester": "上",
-    "chapter": "七年级上册 第5单元 Fun Clubs",
+    "chapter": "七年级上册 待核",
     "type": "procedural",
-    "description": "能识别两个爆破音相邻时，前一个音不完全爆破。",
+    "description": "能识别两个爆破音相邻时，前一个音不完全爆破。 2026-11-06 人教社七上资源页没有把这项写进某个单元标题，公开教辅也未把它定为本册某一课的重点。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能根据字母或读音选出正确的一项",
       "能把字母、发音和例词对上"
@@ -31155,7 +31155,7 @@
     "semester": "上",
     "chapter": "七年级上册 第5单元 Fun Clubs",
     "type": "conceptual",
-    "description": "认读 basketball、soccer、tennis 和 volleyball。",
+    "description": "认读社团活动里的 basketball、soccer、tennis 和 volleyball。",
     "mastery_criteria": [
       "能选出单词的中文意思",
       "能根据中文选出英文单词"
@@ -31180,15 +31180,15 @@
     "domain": "语法",
     "grade": 7,
     "semester": "上",
-    "chapter": "七年级上册 第5单元 Fun Clubs",
+    "chapter": "七年级上册 第2单元 We're Family!",
     "type": "procedural",
-    "description": "能按主语选用 have 或 has。",
+    "description": "能按主语选用 have 或 has，用来说明家人有什么。",
     "mastery_criteria": [
       "能选出语法正确的词或句子",
       "能在句子里用对这个句型"
     ],
     "diagnostic_question": {
-      "question": "I ___ a soccer ball. 横线处填哪一个？",
+      "question": "I ___ a brother. 横线处填哪一个？",
       "answer": "have"
     },
     "external": false,
@@ -31203,20 +31203,20 @@
   },
   {
     "id": "cne_j025",
-    "name": "谈论运动",
+    "name": "谈论社团运动",
     "domain": "日常表达",
     "grade": 7,
     "semester": "上",
     "chapter": "七年级上册 第5单元 Fun Clubs",
     "type": "application",
-    "description": "能询问别人有没有球，并谈论运动。",
+    "description": "能询问会不会某项运动，并说想加入体育社团。",
     "mastery_criteria": [
       "能选出符合情境的英文句子",
       "能读懂这个功能句在问什么或在说什么"
     ],
     "diagnostic_question": {
-      "question": "想问对方有没有足球，哪一句合适？",
-      "answer": "Do you have a soccer ball?"
+      "question": "想问对方会不会打篮球，哪一句合适？",
+      "answer": "Can you play basketball?"
     },
     "external": false,
     "subject": "english",
@@ -31230,20 +31230,20 @@
   },
   {
     "id": "cne_j026",
-    "name": "读运动短文",
+    "name": "读体育社团短文",
     "domain": "读写",
     "grade": 7,
     "semester": "上",
     "chapter": "七年级上册 第5单元 Fun Clubs",
     "type": "application",
-    "description": "读一段运动短文，判断谁有什么球。",
+    "description": "读一段体育社团短文，找出谁会什么、哪天活动。",
     "mastery_criteria": [
       "能根据短文选出与文字一致的信息",
       "能选出和短文意思一致的句子"
     ],
     "diagnostic_question": {
-      "question": "Tom has a basketball. He doesn't have a soccer ball. His sister has a tennis ball. Tom 有足球吗？",
-      "answer": "没有"
+      "question": "The sports club meets on Friday. Tom can play basketball. He cannot play tennis. His sister can play tennis. Tom 会打网球吗？",
+      "answer": "不会"
     },
     "external": false,
     "subject": "english",
@@ -31369,9 +31369,9 @@
     "domain": "词汇",
     "grade": 7,
     "semester": "上",
-    "chapter": "七年级上册 第6单元 A Day in the Life",
+    "chapter": "七年级上册 待核",
     "type": "conceptual",
-    "description": "认读 train、subway、bike 和 bus。",
+    "description": "认读 train、subway、bike 和 bus。 2026-11-06 人教社七上资源页没有把这项写进某个单元标题，公开教辅也未把它定为本册某一课的重点。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能选出单词的中文意思",
       "能根据中文选出英文单词"
@@ -31396,9 +31396,9 @@
     "domain": "语法",
     "grade": 7,
     "semester": "上",
-    "chapter": "七年级上册 第6单元 A Day in the Life",
+    "chapter": "七年级上册 待核",
     "type": "procedural",
-    "description": "能用 how、how long 和 how far 询问出行方式、时间和距离。",
+    "description": "能用 how、how long 和 how far 询问出行方式、时间和距离。 2026-11-06 人教社七上资源页没有把这项写进某个单元标题，公开教辅也未把它定为本册某一课的重点。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能选出语法正确的词或句子",
       "能在句子里用对这个句型"
@@ -31423,9 +31423,9 @@
     "domain": "日常表达",
     "grade": 7,
     "semester": "上",
-    "chapter": "七年级上册 第6单元 A Day in the Life",
+    "chapter": "七年级上册 待核",
     "type": "application",
-    "description": "能说明自己怎么上学、花多长时间。",
+    "description": "能说明自己怎么上学、花多长时间。 2026-11-06 人教社七上资源页没有把这项写进某个单元标题，公开教辅也未把它定为本册某一课的重点。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能选出符合情境的英文句子",
       "能读懂这个功能句在问什么或在说什么"
@@ -31450,9 +31450,9 @@
     "domain": "读写",
     "grade": 7,
     "semester": "上",
-    "chapter": "七年级上册 第6单元 A Day in the Life",
+    "chapter": "七年级上册 待核",
     "type": "application",
-    "description": "读一段出行短文，找出方式和时间。",
+    "description": "读一段出行短文，找出方式和时间。 2026-11-06 人教社七上资源页没有把这项写进某个单元标题，公开教辅也未把它定为本册某一课的重点。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能根据短文选出与文字一致的信息",
       "能选出和短文意思一致的句子"
@@ -31554,19 +31554,19 @@
   },
   {
     "id": "cne_j039",
-    "name": "读活动安排",
+    "name": "读生日安排",
     "domain": "读写",
     "grade": 7,
     "semester": "上",
     "chapter": "七年级上册 第7单元 Happy Birthday!",
     "type": "application",
-    "description": "读一则活动安排，找出日期和活动。",
+    "description": "读一则生日安排，找出日期和活动。",
     "mastery_criteria": [
       "能根据短文选出与文字一致的信息",
       "能选出和短文意思一致的句子"
     ],
     "diagnostic_question": {
-      "question": "School Day is on September 21st. The basketball game is on October 2nd. 校庆是哪一天？",
+      "question": "Tom's birthday is on September 21st. His party is on that day. The family dinner is on October 2nd. Tom 的生日是哪一天？",
       "answer": "9 月 21 日"
     },
     "external": false,
@@ -31581,20 +31581,20 @@
   },
   {
     "id": "cne_j032",
-    "name": "衣物与颜色",
+    "name": "生日聚会",
     "domain": "词汇",
     "grade": 7,
     "semester": "上",
     "chapter": "七年级上册 第7单元 Happy Birthday!",
     "type": "conceptual",
-    "description": "认读 sock、shirt、skirt 和 sweater。",
+    "description": "认读 birthday、party、cake 和 balloon。",
     "mastery_criteria": [
       "能选出单词的中文意思",
       "能根据中文选出英文单词"
     ],
     "diagnostic_question": {
-      "question": "哪个单词的意思是「短袜」？",
-      "answer": "sock"
+      "question": "哪个单词的意思是「生日」？",
+      "answer": "birthday"
     },
     "external": false,
     "subject": "english",
@@ -31614,14 +31614,14 @@
     "semester": "上",
     "chapter": "七年级上册 第7单元 Happy Birthday!",
     "type": "procedural",
-    "description": "能用 How much 询问价格，并用美元表达价钱。",
+    "description": "能用 How much 询问生日蛋糕、气球的价格。",
     "mastery_criteria": [
       "能选出语法正确的词或句子",
       "能在句子里用对这个句型"
     ],
     "diagnostic_question": {
-      "question": "询问这双袜子多少钱，哪一句正确？",
-      "answer": "How much are these socks?"
+      "question": "询问这个生日蛋糕多少钱，哪一句正确？",
+      "answer": "How much is this cake?"
     },
     "external": false,
     "subject": "english",
@@ -31635,20 +31635,20 @@
   },
   {
     "id": "cne_j034",
-    "name": "购物用语",
+    "name": "为聚会询价",
     "domain": "日常表达",
     "grade": 7,
     "semester": "上",
     "chapter": "七年级上册 第7单元 Happy Birthday!",
     "type": "application",
-    "description": "能询问价格、颜色，并决定买或不买。",
+    "description": "能为生日聚会询问价格，并决定买或不买。",
     "mastery_criteria": [
       "能选出符合情境的英文句子",
       "能读懂这个功能句在问什么或在说什么"
     ],
     "diagnostic_question": {
-      "question": "在商店想问毛衣的价格，哪一句合适？",
-      "answer": "How much is the sweater?"
+      "question": "在商店想问蛋糕的价格，哪一句合适？",
+      "answer": "How much is the cake?"
     },
     "external": false,
     "subject": "english",
@@ -31662,20 +31662,20 @@
   },
   {
     "id": "cne_j035",
-    "name": "读购物对话",
+    "name": "读聚会购物",
     "domain": "读写",
     "grade": 7,
     "semester": "上",
     "chapter": "七年级上册 第7单元 Happy Birthday!",
     "type": "application",
-    "description": "读一段购物对话，找出价格和决定。",
+    "description": "读一段为聚会买东西的对话，找出价格和决定。",
     "mastery_criteria": [
       "能根据短文选出与文字一致的信息",
       "能选出和短文意思一致的句子"
     ],
     "diagnostic_question": {
-      "question": "Woman: How much is this skirt? Clerk: It is 15 dollars. Woman: I'll take it. 短裙多少钱？",
-      "answer": "15 美元"
+      "question": "Girl: How much is this cake? Clerk: It is 20 dollars. Girl: I'll take it. 蛋糕多少钱？",
+      "answer": "20 美元"
     },
     "external": false,
     "subject": "english",

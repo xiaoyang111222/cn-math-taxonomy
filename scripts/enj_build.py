@@ -117,16 +117,23 @@ NOTE = {
     "读写": "短文为诊断而写，考查阅读或书面表达要点。册次待核。",
 }
 
+# 七上单元名对照人教社资源页 2026-11-06（Asia/Tokyo）：
+# https://www.pep.com.cn/zslth/yyptzy/czyy/7s/
+# 101–103 是 Starter Unit 1–3；1–7 是 Unit 1–7；90 是未挂到具体单元的待核项。
+# 40 只给已经入库为「七年级下册 第4单元 Eat Well」的食物点占位，避免和七上第 6 单元抢编号。
 UNITS = {
-    (7, "上", 1): "My name's Gina",
-    (7, "上", 2): "This is my sister",
-    (7, "上", 3): "Is this your pencil",
-    (7, "上", 4): "Where's my schoolbag",
-    (7, "上", 5): "Do you have a soccer ball",
-    (7, "上", 6): "Do you like bananas",
-    (7, "上", 7): "How much are these socks",
-    (7, "上", 8): "When is your birthday",
-    (7, "上", 9): "My favorite subject is science",
+    (7, "上", 101): "Hello!",
+    (7, "上", 102): "Keep Tidy!",
+    (7, "上", 103): "Welcome!",
+    (7, "上", 1): "You and Me",
+    (7, "上", 2): "We're Family!",
+    (7, "上", 3): "My School",
+    (7, "上", 4): "My Favourite Subject",
+    (7, "上", 5): "Fun Clubs",
+    (7, "上", 6): "A Day in the Life",
+    (7, "上", 7): "Happy Birthday!",
+    (7, "上", 90): "待核",
+    (7, "下", 40): "Eat Well",
     (7, "下", 1): "Can you play the guitar",
     (7, "下", 2): "What time do you go to school",
     (7, "下", 3): "How do you get to school",
@@ -190,6 +197,14 @@ def dump(name, data):
 
 def chapter(grade, sem, unit):
     title = UNITS[(grade, sem, unit)]
+    if grade == 7 and sem == "上" and unit >= 101:
+        return "七年级上册 预备单元%d %s" % (unit - 100, title)
+    if grade == 7 and sem == "上" and unit == 90:
+        return "七年级上册 待核"
+    if grade == 7 and sem == "上":
+        return "七年级上册 第%d单元 %s" % (unit, title)
+    if (grade, sem, unit) == (7, "下", 40):
+        return "七年级下册 第4单元 Eat Well"
     return "%s年级%s册 第%d单元 %s" % (CN[grade], sem, unit, title)
 
 

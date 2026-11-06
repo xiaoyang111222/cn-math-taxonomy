@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 """八年级上册。人教版 Go for it! 通行目录，单元名与册次待核。"""
 from en_tx import V, P, G, F, R
+from enj_g7a import PENDING
 
 
 def q(prompt, answer, wrongs, expl):
     return ("c", prompt, answer, wrongs, expl)
 
 
-P("ph_link", "辅音与元音连读", 8, "上", 1,
-  "能判断辅音结尾的词和元音开头的词能否连读。", "link", [
+P("ph_link", "辅音与元音连读", 7, "上", 90,
+  "能判断辅音结尾的词和元音开头的词能否连读。" + PENDING, "link", [
     q("an apple 里，哪个音可以和后面的元音连读？", "n 和 a",
       ["a 和 n 拆开重读", "两个词都要停顿", "只连读 pple"],
       "an 以辅音 n 结尾，apple 以元音开头，n 可以连到后面。"),
@@ -118,8 +119,8 @@ R("rw_habit", "读锻炼调查", 8, "上", 2,
       "reads books every night。"),
 ])
 
-P("ph_plos", "不完全爆破", 8, "上", 3,
-  "能识别两个爆破音相邻时，前一个音不完全爆破。", "plosion", [
+P("ph_plos", "不完全爆破", 7, "上", 90,
+  "能识别两个爆破音相邻时，前一个音不完全爆破。" + PENDING, "plosion", [
     q("sit down 里，哪一个音常常不完全发出来？", "sit 里的 t",
       ["down 里的 n", "sit 里的 s", "down 里的 d"],
       "t 后面紧接爆破音 d，t 通常不完全爆破。"),

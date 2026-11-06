@@ -108,7 +108,7 @@
 - 义务教育英语的语用表、语言技能表大图没有打开。文字层大约在文件页 30、32 一带，没有当成页码。日常表达、读写共 16 条（一级二级 9 条，三级 7 条）`page_or_ref` 仍是「待核」。
 - 附录 2 语音项目、附录 3 词汇表、附录 4 语法项目的大图没有打开。不能把 magic e、连读、具体句型说成已经逐条对上。
 - 教育部官网的英语课标 PDF 这次没有另下到一份。用的是人教社电子书页图和人教社转载的高中 PDF。
-- Go for it! 七年级上册资源页 <https://www.pep.com.cn/zslth/yyptzy/czyy/7s/> 打得开，但单元是 Starter Unit 1 Hello!、Keep Tidy!、Welcome!、Unit 1 You and Me、We're Family!、My School、My Favourite Subject、Fun Clubs、A Day in the Life、Happy Birthday!。库存仍是 My name's Gina 等经典单元名，对不上，没有改知识点。
+- Go for it! 七年级上册资源页 <https://www.pep.com.cn/zslth/yyptzy/czyy/7s/> 打得开，但单元是 Starter Unit 1 Hello!、Keep Tidy!、Welcome!、Unit 1 You and Me、We're Family!、My School、My Favourite Subject、Fun Clubs、A Day in the Life、Happy Birthday!。库存仍是 My name's Gina 等经典单元名，对不上，没有改知识点。同日后续：七上单元映射见 `docs/g7a-english-units-2026-11-06.md`。上一句「没有改知识点」说的是这次页码核对，不是后面的目录对齐。
 - 九年级下册资源页 <https://www.pep.com.cn/zslth/yyptzy/czyy/9x/>：curl 的 HTTP 状态是 200，正文标题是「404错误页面」。新教材介绍 <https://www.pep.com.cn/xw/zt/hd/12/xjcjs/cz/202510/t20251024_2004130.html> 只写九年级下册 5 个正式单元加 2 个戏剧，没有单元标题。
 - 高中 2019 册次：<https://www.pep.com.cn/zslth/yyptzy/gzyy/> TLS 中断；<https://www.pep.com.cn/zslth/gzyy/bx1/> 404。没有官方单元目录。Welcome Unit、Teenage Life 仍待核。
 - 2025 年高中英语日常修订版的正文没有打开，不能用 2020 年 PDF 代替那一版的逐条重核。
@@ -117,7 +117,7 @@
 
 - PEP 三上到五下、六下，Go for it! 七下到九上的资源页，这次没有逐册打开。六上和七上是抽查。
 - 英语题目的教师逐题审核。
-- 没有把七上资源页的新单元名写进知识点。那是另一轮目录迁移，不是这次的页码核对。
+- 没有把七上资源页的新单元名写进知识点。那是另一轮目录迁移，不是这次的页码核对。同日后续的目录对齐见 `docs/g7a-english-units-2026-11-06.md`。
 
 ## 数学
 

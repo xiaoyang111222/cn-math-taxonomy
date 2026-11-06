@@ -9207,13 +9207,13 @@
     "topicId": "cne_j008",
     "prerequisiteId": "cne_j021",
     "strength": "soft",
-    "reason": "按人教版新版 Go for it!的单元顺序，先学「读房间描述」，再学「This is 与 These are」。"
+    "reason": "按人教版新版 Go for it!的单元顺序，先学「读房间描述」，再学「指示代词 this、that、these、those」。"
   },
   {
     "topicId": "cne_j009",
     "prerequisiteId": "cne_j008",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「This is 与 These are」，再学「名词复数」。"
+    "reason": "按 Go for it! 的常见教学顺序，先学「指示代词 this、that、these、those」，再学「名词复数」。"
   },
   {
     "topicId": "cne_j011",
@@ -9249,19 +9249,19 @@
     "topicId": "cne_j016",
     "prerequisiteId": "cne_j013",
     "strength": "soft",
-    "reason": "按人教版新版 Go for it!的单元顺序，先学「学习用品」，再学「认领失物」。"
+    "reason": "按人教版新版 Go for it!的单元顺序，先学「学习用品」，再学「确认物品是谁的」。"
   },
   {
     "topicId": "cne_j017",
     "prerequisiteId": "cne_j016",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「认领失物」，再学「读失物招领」。"
+    "reason": "按 Go for it! 的常见教学顺序，先学「确认物品是谁的」，再学「读物品归属」。"
   },
   {
     "topicId": "cne_j018",
     "prerequisiteId": "cne_j017",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「读失物招领」，再学「房间与家具」。"
+    "reason": "按 Go for it! 的常见教学顺序，先学「读物品归属」，再学「房间与家具」。"
   },
   {
     "topicId": "cne_j019",
@@ -9303,19 +9303,19 @@
     "topicId": "cne_j025",
     "prerequisiteId": "cne_j024",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「do 与 does」，再学「谈论运动」。"
+    "reason": "按 Go for it! 的常见教学顺序，先学「do 与 does」，再学「谈论社团运动」。"
   },
   {
     "topicId": "cne_j026",
     "prerequisiteId": "cne_j025",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「谈论运动」，再学「读运动短文」。"
+    "reason": "按 Go for it! 的常见教学顺序，先学「谈论社团运动」，再学「读体育社团短文」。"
   },
   {
     "topicId": "cne_j027",
     "prerequisiteId": "cne_j026",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「读运动短文」，再学「食物」。"
+    "reason": "按 Go for it! 的常见教学顺序，先学「读体育社团短文」，再学「食物」。"
   },
   {
     "topicId": "cne_j028",
@@ -9345,31 +9345,31 @@
     "topicId": "cne_j032",
     "prerequisiteId": "cne_j039",
     "strength": "soft",
-    "reason": "按人教版新版 Go for it!的单元顺序，先学「读活动安排」，再学「衣物与颜色」。"
+    "reason": "按人教版新版 Go for it!的单元顺序，先学「读生日安排」，再学「生日聚会」。"
   },
   {
     "topicId": "cne_j033",
     "prerequisiteId": "cne_j032",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「衣物与颜色」，再学「How much 问价格」。"
+    "reason": "按 Go for it! 的常见教学顺序，先学「生日聚会」，再学「How much 问价格」。"
   },
   {
     "topicId": "cne_j034",
     "prerequisiteId": "cne_j033",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「How much 问价格」，再学「购物用语」。"
+    "reason": "按 Go for it! 的常见教学顺序，先学「How much 问价格」，再学「为聚会询价」。"
   },
   {
     "topicId": "cne_j035",
     "prerequisiteId": "cne_j034",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「购物用语」，再学「读购物对话」。"
+    "reason": "按 Go for it! 的常见教学顺序，先学「为聚会询价」，再学「读聚会购物」。"
   },
   {
     "topicId": "cne_j036",
     "prerequisiteId": "cne_j056",
     "strength": "soft",
-    "reason": "按人教版新版 Go for it!的单元顺序，先学「读上学方式」，再学「月份与序数词」。"
+    "reason": "月份与序数词在七年级上册第7单元。出行方式没有核到本册某一单元，这条软边只保留原来的学习顺序。"
   },
   {
     "topicId": "cne_j037",
@@ -9387,13 +9387,13 @@
     "topicId": "cne_j039",
     "prerequisiteId": "cne_j038",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「谈论生日」，再学「读活动安排」。"
+    "reason": "按 Go for it! 的常见教学顺序，先学「谈论生日」，再学「读生日安排」。"
   },
   {
     "topicId": "cne_j040",
     "prerequisiteId": "cne_j098",
     "strength": "soft",
-    "reason": "按人教版新版 Go for it!的单元顺序，先学「辅音与元音连读」，再学「学科词汇」。"
+    "reason": "学科词汇在七年级上册第4单元。连读没有核到该单元，这条软边只保留原来的学习顺序。"
   },
   {
     "topicId": "cne_j041",
@@ -9525,7 +9525,7 @@
     "topicId": "cne_j062",
     "prerequisiteId": "cne_j035",
     "strength": "soft",
-    "reason": "按人教版新版 Go for it!的单元顺序，先学「读购物对话」，再学「动物」。"
+    "reason": "按人教版新版 Go for it!的单元顺序，先学「读聚会购物」，再学「动物」。"
   },
   {
     "topicId": "cne_j063",
@@ -9603,25 +9603,25 @@
     "topicId": "cne_j075",
     "prerequisiteId": "cne_j082",
     "strength": "soft",
-    "reason": "按人教版新版 Go for it!的单元顺序，先学「读人物外貌」，再学「场所」。"
+    "reason": "按人教版新版 Go for it!的单元顺序，先学「读人物外貌」，再学「学校场所」。"
   },
   {
     "topicId": "cne_j076",
     "prerequisiteId": "cne_j075",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「场所」，再学「There be 句型」。"
+    "reason": "按 Go for it! 的常见教学顺序，先学「学校场所」，再学「There be 句型」。"
   },
   {
     "topicId": "cne_j077",
     "prerequisiteId": "cne_j076",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「There be 句型」，再学「问路与指路」。"
+    "reason": "按 Go for it! 的常见教学顺序，先学「There be 句型」，再学「询问学校场所」。"
   },
   {
     "topicId": "cne_j078",
     "prerequisiteId": "cne_j077",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「问路与指路」，再学「读路线说明」。"
+    "reason": "按 Go for it! 的常见教学顺序，先学「询问学校场所」，再学「读学校位置」。"
   },
   {
     "topicId": "cne_j079",
@@ -9735,7 +9735,7 @@
     "topicId": "cne_j098",
     "prerequisiteId": "cne_j078",
     "strength": "soft",
-    "reason": "按人教版新版 Go for it!的单元顺序，先学「读路线说明」，再学「辅音与元音连读」。"
+    "reason": "连读没有核到七年级上册的某一单元，这条软边只保留原来的学习顺序。"
   },
   {
     "topicId": "cne_j099",
@@ -9789,7 +9789,7 @@
     "topicId": "cne_j107",
     "prerequisiteId": "cne_j043",
     "strength": "soft",
-    "reason": "按人教版新版 Go for it!的单元顺序，先学「读课程介绍」，再学「不完全爆破」。"
+    "reason": "不完全爆破没有核到 Fun Clubs，这条软边只保留原来的学习顺序。"
   },
   {
     "topicId": "cne_j108",
@@ -10647,7 +10647,7 @@
     "topicId": "cne_j008",
     "prerequisiteId": "cne_p014",
     "strength": "hard",
-    "reason": "This is 与 These are 承接小学的 This is。"
+    "reason": "指示代词 this、that、these、those 承接小学的 This is。"
   },
   {
     "topicId": "cne_j009",
