@@ -8,7 +8,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/test_engine.js && node tests/test_children.js && node tests/test_blindspots.js && node tests/test_home.js"
   },
   "repository": {
     "type": "git",
