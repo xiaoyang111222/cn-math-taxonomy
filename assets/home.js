@@ -220,7 +220,6 @@
   Promise.all([
     fetch('data/topics.json'),
     fetch('data/dependencies.json'),
-    fetch('data/questions.json'),
     fetch('data/cn-curriculum-standards.json')
   ]).then(function (responses) {
     responses.forEach(function (response, index) {
@@ -231,9 +230,8 @@
     var allTopics = data[0];
     var topics = data[0];
     var deps = data[1];
-    var questions = data[2];
-    var standards = data[3];
-    if (!Array.isArray(topics) || !Array.isArray(deps) || !Array.isArray(questions)) {
+    var standards = data[2];
+    if (!Array.isArray(topics) || !Array.isArray(deps)) {
       throw new Error('数据格式无法识别');
     }
     var items = standards && Array.isArray(standards.items) ? standards.items : [];
@@ -272,12 +270,23 @@
     var wantChemistry = subject === 'chemistry';
     topics = topics.filter(function (topic) { return (topic.subject || subjectOfId(topic.id)) === subject; });
     deps = deps.filter(function (edge) { return subjectOfId(edge.topicId) === subject; });
-    questions = questions.filter(function (question) { return subjectOfId(question.topicId) === subject; });
     items = items.filter(function (item) { return subjectOfStd(item.id) === subject; });
     setText('n-topics', String(topics.length));
     setText('n-edges', String(deps.length));
-    setText('n-questions', String(questions.length));
     setText('n-standards', String(items.length));
+
+    /* 题库较大，单独加载，不挡统计和年级入口；失败只把题目数显示成 — */
+    setText('n-questions', '…');
+    fetch('data/questions.json').then(function (response) {
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      return response.json();
+    }).then(function (questions) {
+      if (!Array.isArray(questions)) throw new Error('数据格式无法识别');
+      var count = questions.filter(function (question) { return subjectOfId(question.topicId) === subject; }).length;
+      setText('n-questions', String(count));
+    }).catch(function () {
+      setText('n-questions', '—');
+    });
 
     var grades = document.getElementById('grades');
     if (!grades) return;
