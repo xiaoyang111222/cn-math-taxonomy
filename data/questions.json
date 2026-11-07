@@ -171296,7 +171296,63 @@
     "topicId": "cnc_p124",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "「离离原上草」的下一句是哪一句？",
+    "prompt": "同学把水洒在你身上，你要提醒他，怎样说更合适？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "大声喊「你真笨」"
+      },
+      {
+        "key": "B",
+        "text": "什么都不说，下次再报复"
+      },
+      {
+        "key": "C",
+        "text": "用命令的口气说「赶紧给我擦掉」"
+      },
+      {
+        "key": "D",
+        "text": "小声说「请你小心一点」"
+      }
+    ],
+    "answer": "D",
+    "explanation": "提醒别人时，语气要让对方听得进去，不要当众责怪。",
+    "verify": "\"小声说「请你小心一点」\""
+  },
+  {
+    "id": "cnc_p124_q4",
+    "topicId": "cnc_p124",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "做错了事向别人道歉，下面哪一句语气更合适？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "看着对方说「对不起，我下次注意」"
+      },
+      {
+        "key": "B",
+        "text": "背过身小声嘀咕就算了"
+      },
+      {
+        "key": "C",
+        "text": "先怪别人没有躲开"
+      },
+      {
+        "key": "D",
+        "text": "用很大的声音说「我又不是故意的」"
+      }
+    ],
+    "answer": "A",
+    "explanation": "道歉要把话说清楚，态度诚恳。",
+    "verify": "\"看着对方说「对不起，我下次注意」\""
+  },
+  {
+    "id": "cnc_p494_q1",
+    "topicId": "cnc_p494",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "《赋得古原草送别》里，「离离原上草」后面接哪一句？",
     "choices": [
       {
         "key": "A",
@@ -171320,32 +171376,88 @@
     "verify": "\"一岁一枯荣\""
   },
   {
-    "id": "cnc_p124_q4",
-    "topicId": "cnc_p124",
-    "difficulty": "standard",
+    "id": "cnc_p494_q2",
+    "topicId": "cnc_p494",
+    "difficulty": "basic",
     "type": "choice",
-    "prompt": "「野火烧不尽」的下一句是哪一句？作者是谁？",
+    "prompt": "「野火烧不尽」的下一句是哪一句？",
     "choices": [
       {
         "key": "A",
-        "text": "春风吹又生。作者是白居易"
+        "text": "春风吹又生"
       },
       {
         "key": "B",
-        "text": "春风吹又生。作者是贺知章"
+        "text": "一岁一枯荣"
       },
       {
         "key": "C",
-        "text": "一岁一枯荣。作者是高鼎"
+        "text": "忙趁东风放纸鸢"
       },
       {
         "key": "D",
-        "text": "忙趁东风放纸鸢。作者是白居易"
+        "text": "二月春风似剪刀"
       }
     ],
     "answer": "A",
-    "explanation": "野火烧不尽，春风吹又生。这首是白居易的《赋得古原草送别》，不是《咏柳》。",
-    "verify": "\"春风吹又生。作者是白居易\""
+    "explanation": "野火烧不尽，春风吹又生。放纸鸢是《村居》里的句子。",
+    "verify": "\"春风吹又生\""
+  },
+  {
+    "id": "cnc_p494_q3",
+    "topicId": "cnc_p494",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "《赋得古原草送别》的作者是谁？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "高鼎"
+      },
+      {
+        "key": "B",
+        "text": "白居易"
+      },
+      {
+        "key": "C",
+        "text": "贺知章"
+      },
+      {
+        "key": "D",
+        "text": "李白"
+      }
+    ],
+    "answer": "B",
+    "explanation": "这首诗是白居易的。高鼎写的是《村居》，贺知章写的是《咏柳》。",
+    "verify": "\"白居易\""
+  },
+  {
+    "id": "cnc_p494_q4",
+    "topicId": "cnc_p494",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "哪一组句子都出自白居易《赋得古原草送别》？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "草长莺飞二月天，拂堤杨柳醉春烟"
+      },
+      {
+        "key": "B",
+        "text": "不知细叶谁裁出，二月春风似剪刀"
+      },
+      {
+        "key": "C",
+        "text": "离离原上草，一岁一枯荣"
+      },
+      {
+        "key": "D",
+        "text": "两个黄鹂鸣翠柳，一行白鹭上青天"
+      }
+    ],
+    "answer": "C",
+    "explanation": "离离原上草，一岁一枯荣是这首诗的开头。另外三组分别是《村居》《咏柳》和杜甫的《绝句》。",
+    "verify": "\"离离原上草，一岁一枯荣\""
   },
   {
     "id": "cnc_p125_q1",

@@ -37,6 +37,10 @@ ZH_CODES = {
 }
 CHAPTER_RE = re.compile(r"^([一二三四五六七八九])年级([上下全])册 (第\d+单元|预备单元\d) (.+)$")
 VOLUMES = ["1上", "1下", "2上", "2下", "3上", "3下", "4上", "4下", "5上", "5下", "6上", "6下"]
+# 2026-11-07 从 g2b_yd1 拆出的日积月累。固定编号，不占原顺序号，避免 cnc_p125 及以后改号。
+# 语文园地一口语交际和日积月累的纸面先后未核，不把它插进相邻软边。
+EXTRA_KEY = "g2b_cao"
+EXTRA_ID = "cnc_p494"
 
 
 def load(name):
@@ -65,15 +69,24 @@ def is_primary_zh_std(sid):
 
 
 def splice_where(original, pred, new_items):
-    """用 new_items 按原顺序替换 original 里 pred 为真的项。条数不同时才改接到末尾。"""
+    """用 new_items 替换 original 里 pred 为真的项，并留在原来的位置。
+
+    条数相同则逐项替换。条数不同但命中项连成一段时，整段换成 new_items。
+    命中项不连成一段时，才把新项改接到末尾。
+    """
     idxs = [i for i, x in enumerate(original) if pred(x)]
-    if len(idxs) != len(new_items):
-        kept = [x for x in original if not pred(x)]
-        return kept + list(new_items)
-    out = list(original)
-    for i, item in zip(idxs, new_items):
-        out[i] = item
-    return out
+    if not idxs:
+        return list(original) + list(new_items)
+    if len(idxs) == len(new_items):
+        out = list(original)
+        for i, item in zip(idxs, new_items):
+            out[i] = item
+        return out
+    if idxs[-1] - idxs[0] + 1 == len(idxs):
+        start, end = idxs[0], idxs[-1] + 1
+        return list(original[:start]) + list(new_items) + list(original[end:])
+    kept = [x for x in original if not pred(x)]
+    return kept + list(new_items)
 
 
 def reaches(adj, src, dst, hard_only):
@@ -232,9 +245,23 @@ def main():
     new_topics = []
     new_questions = []
     id_of = {}
-    for i, spec in enumerate(TOPICS, start=1):
-        tid = "cnc_p%03d" % i
+    seq_n = 0
+    for spec in TOPICS:
+        if spec["key"] == EXTRA_KEY:
+            tid = EXTRA_ID
+        else:
+            seq_n += 1
+            tid = "cnc_p%03d" % seq_n
+        if spec["key"] in id_of or tid in id_of.values():
+            print("语文 id 冲突：%s %s" % (spec["key"], tid), file=sys.stderr)
+            return 1
         id_of[spec["key"]] = tid
+    if seq_n != 493 or EXTRA_KEY not in id_of:
+        print("小学语文稳定编号异常：顺序号 %d" % seq_n, file=sys.stderr)
+        return 1
+    for spec in TOPICS:
+        tid = id_of[spec["key"]]
+        seq = int(tid[5:])
         if spec["std"] not in id_of_std:
             print("%s 课标 %s 不存在" % (spec["key"], spec["std"]), file=sys.stderr)
             return 1
@@ -244,7 +271,7 @@ def main():
         built = []
         diag_answer = None
         for n, item in enumerate(made, start=1):
-            q, shown = build_question(tid, n, item, slot=i + n)
+            q, shown = build_question(tid, n, item, slot=seq + n)
             built.append(q)
             if n == 1:
                 diag_answer = shown
@@ -279,6 +306,13 @@ def main():
     for i in range(1, len(TOPICS)):
         cur = TOPICS[i]["key"]
         prev = TOPICS[i - 1]["key"]
+        if cur == EXTRA_KEY:
+            continue
+        if prev == EXTRA_KEY:
+            if i < 2:
+                print("%s 不能放在知识点列表开头" % EXTRA_KEY, file=sys.stderr)
+                return 1
+            prev = TOPICS[i - 2]["key"]
         if (cur, prev) in hard_pairs:
             continue
         reason = "按统编教材的常见教学顺序，先学「%s」，再学「%s」。" % (names[prev], names[cur])

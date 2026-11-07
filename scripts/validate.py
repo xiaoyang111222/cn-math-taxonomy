@@ -1503,6 +1503,53 @@ def check_aliases(ids):
             err("别名 %s 缺少原名称 name" % key)
 
 
+def check_g2b_yard_split(ids, deps, questions):
+    """语文园地一的语气和《赋得古原草送别》必须分开，旧编号保持不变。"""
+    tone = ids.get("cnc_p124")
+    poem = ids.get("cnc_p494")
+    cun = ids.get("cnc_p120")
+    lei = ids.get("cnc_p125")
+    if not tone or tone.get("name") != "语文园地一·注意说话的语气":
+        err("cnc_p124 应仍是「语文园地一·注意说话的语气」")
+    elif "赋得" in (tone.get("description") or "") or "离离原上草" in (tone.get("description") or ""):
+        err("cnc_p124 的 description 仍混有《赋得古原草送别》")
+    if not poem or poem.get("name") != "语文园地一·日积月累《赋得古原草送别》":
+        err("缺少 cnc_p494「语文园地一·日积月累《赋得古原草送别》」")
+    elif poem.get("domain") != "古诗文积累" or poem.get("grade") != 2 or poem.get("semester") != "下":
+        err("cnc_p494 应是二年级下册古诗文积累")
+    if not cun or cun.get("name") != "古诗《村居》":
+        err("cnc_p120 应仍是古诗《村居》")
+    if not lei or lei.get("name") != "阅读《雷锋叔叔，你在哪里》":
+        err("cnc_p125 应仍是阅读《雷锋叔叔，你在哪里》")
+    poem_edges = [
+        e for e in deps
+        if e.get("prerequisiteId") == "cnc_p120" and "赋得古原草送别" in (e.get("reason") or "")
+    ]
+    if len(poem_edges) != 1 or poem_edges[0].get("topicId") != "cnc_p494" or poem_edges[0].get("strength") != "hard":
+        err("《村居》到《赋得古原草送别》的硬边应只挂在 cnc_p494")
+    if any(e.get("topicId") == "cnc_p124" and "赋得" in (e.get("reason") or "") for e in deps):
+        err("cnc_p124 上仍有以《赋得古原草送别》为内容的边")
+    if questions is None:
+        return
+    by = defaultdict(list)
+    for q in questions:
+        by[q.get("topicId")].append(q)
+    tone_qs = by.get("cnc_p124") or []
+    poem_qs = by.get("cnc_p494") or []
+    if len(tone_qs) < 4 or len(poem_qs) < 4:
+        err("cnc_p124 与 cnc_p494 都至少要有 4 题")
+    for q in tone_qs:
+        blob = (q.get("prompt") or "") + (q.get("explanation") or "")
+        if "离离原上草" in blob or "野火烧不尽" in blob or "赋得" in blob:
+            err("%s 仍在考《赋得古原草送别》" % q.get("id"))
+    if tone_qs and tone_qs[0].get("prompt") != "请别人帮忙时，语气怎样更合适？":
+        err("cnc_p124_q1 题干被改掉了")
+    if not any("离离原上草" in (q.get("prompt") or "") for q in poem_qs):
+        err("cnc_p494 没有考查「离离原上草」")
+    if not any("白居易" in ((q.get("prompt") or "") + (q.get("explanation") or "")) for q in poem_qs):
+        err("cnc_p494 没有考查作者白居易")
+
+
 def main():
     topics = load(TOPICS_PATH)
     deps = load(DEPS_PATH)
@@ -1518,6 +1565,8 @@ def main():
     print("教材版本对照（可选）：topic.mappings %d 个知识点；data/mappings %d 个文件、%d 条" % (
         n_topic_maps, n_map_files, n_map_entries))
     prereqs, dependents, n_hard, n_soft, n_en_hard, n_en_soft = check_deps(deps, ids)
+    qs_for_split = load(QUESTIONS_PATH) if os.path.exists(QUESTIONS_PATH) else None
+    check_g2b_yard_split(ids, deps, qs_for_split)
     check_graph(ids, prereqs, dependents)
     std_items = None
     if os.path.exists(STANDARDS_PATH):

@@ -55592,7 +55592,7 @@
     "semester": "下",
     "chapter": "二年级下册 第1单元 古诗·咏柳",
     "type": "procedural",
-    "description": "说话要看场合选用语气。日积月累背白居易《赋得古原草送别》前四句：离离原上草，一岁一枯荣。野火烧不尽，春风吹又生。",
+    "description": "说话要看场合选用语气。请求用商量的口气，道歉要诚恳，提醒要让对方听得进去。",
     "mastery_criteria": [
       "能按要求把话写完整",
       "能判断哪一句更符合题目"
@@ -55606,6 +55606,33 @@
     "standards": [
       {
         "id": "ccs-2022:1.XZ.01",
+        "confidence": "inferred",
+        "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_p494",
+    "name": "语文园地一·日积月累《赋得古原草送别》",
+    "domain": "古诗文积累",
+    "grade": 2,
+    "semester": "下",
+    "chapter": "二年级下册 第1单元 古诗·咏柳",
+    "type": "conceptual",
+    "description": "背白居易《赋得古原草送别》前四句：离离原上草，一岁一枯荣。野火烧不尽，春风吹又生。这是语文园地一的日积月累，和口语交际「注意说话的语气」不是同一个教学点。",
+    "mastery_criteria": [
+      "能背出本册要求积累的诗句",
+      "能分清作者和诗句，不把字句记错"
+    ],
+    "diagnostic_question": {
+      "question": "《赋得古原草送别》里，「离离原上草」后面接哪一句？",
+      "answer": "一岁一枯荣"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-2022:1.GS.01",
         "confidence": "inferred",
         "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
       }
