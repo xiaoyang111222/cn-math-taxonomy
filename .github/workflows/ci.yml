@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: 数据校验
+        run: python3 scripts/validate.py
+
+      - name: 课标映射严格模式（仅报告）
+        continue-on-error: true
+        env:
+          STRICT_STANDARDS: "1"
+        run: python3 scripts/validate.py
+
+      - name: 题库答案核验
+        run: python3 scripts/verify_questions.py --report /tmp/cn-math-taxonomy-verification-report.json
+
+      - name: 题目示意图检查
+        run: python3 scripts/check_figures.py
+
+      - name: CI 工作流测试
+        run: node tests/test_ci_workflow.js
+
+      - name: 诊断引擎测试
+        run: node tests/test_engine.js
+
+      - name: 盲区汇总测试
+        run: node tests/test_blindspots.js
+
+      - name: 档案备份恢复测试
+        run: node tests/test_children.js
+
+      - name: 题目 ID 格式测试
+        run: node tests/test_question_ids.js
