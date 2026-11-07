@@ -1764,5 +1764,209 @@ test('普通整章 / 单点诊断不受影响：不带 mode 的会话仍回溯�
   sum.roots.forEach((r) => assert.deepStrictEqual(r.outOfScopePrereqs, []));
 });
 
+console.log('筛查只沿 hard 先修推断掌握（#34）');
+
+function hardReachFrom(graph, directIds) {
+  const reach = new Set();
+  const walk = (id) => graph.prereqs[id].forEach((p) => {
+    if (p.strength === 'hard' && !reach.has(p.id)) { reach.add(p.id); walk(p.id); }
+  });
+  directIds.forEach(walk);
+  return reach;
+}
+
+function screenTrace(spec, student, limit, seed, confirm) {
+  let s = E.createSession(RGQ, spec.ids, {
+    mode: 'screen', limit: limit, seed: seed == null ? 'scr' : seed,
+    confirm: confirm == null ? E.DEFAULT_CONFIRM : confirm
+  });
+  const steps = [];
+  for (let guard = 0; guard < 2000; guard++) {
+    const q = E.nextQuestion(RGQ, s);
+    if (!q) break;
+    const attempt = (s.attempts[q] || []).length + 1;
+    s = E.applyAnswer(RGQ, s, q, student(q, attempt));
+    steps.push({ id: q, attempt: attempt, status: s.status[q] ? s.status[q].s : null });
+  }
+  return { s: s, steps: steps };
+}
+
+test('筛查：答对后只沿 hard 先修推断掌握，soft 先修保持未测', () => {
+  const scope = ['F', 'E', 'C', 'D', 'B', 'T'];
+  let s = E.createSession(G, scope, { mode: 'screen' });
+  assert.strictEqual(E.nextQuestion(G, s), 'T');
+  s = E.applyAnswer(G, s, 'T', 'correct');
+  assert.strictEqual(s.status.T.src, 'direct');
+  ['C', 'D', 'E', 'F', 'X'].forEach((id) => {
+    assert.strictEqual(E.statusOf(s, id), 'mastered', id);
+    assert.strictEqual(s.status[id].src, 'inferred', id);
+  });
+  assert.strictEqual(E.statusOf(s, 'B'), 'unknown');
+  assert.strictEqual(E.nextQuestion(G, s), 'B');
+});
+
+test('筛查：soft 先修答对后才推断它自己的 hard 祖先', () => {
+  let s = E.createSession(G, ['F', 'E', 'C', 'D', 'B', 'T'], { mode: 'screen' });
+  s = E.applyAnswer(G, s, 'T', 'correct');
+  s = E.applyAnswer(G, s, 'B', 'correct');
+  assert.strictEqual(s.status.B.src, 'direct');
+  assert.strictEqual(E.nextQuestion(G, s), null);
+  const sum = E.summarize(G, s);
+  assert.deepStrictEqual(sum.untested, []);
+});
+
+test('筛查多跳：soft 边切断其后的 hard 链；target 模式仍推断全部祖先', () => {
+  const topicsS = [mk('R'), mk('S'), mk('A')];
+  const depsS = [
+    { topicId: 'S', prerequisiteId: 'R', strength: 'hard' },
+    { topicId: 'A', prerequisiteId: 'S', strength: 'soft' }
+  ];
+  const GS = E.buildGraph(topicsS, depsS);
+  let scr = E.createSession(GS, ['R', 'S', 'A'], { mode: 'screen' });
+  scr = E.applyAnswer(GS, scr, 'A', 'correct');
+  assert.strictEqual(E.statusOf(scr, 'A'), 'mastered');
+  assert.strictEqual(E.statusOf(scr, 'S'), 'unknown');
+  assert.strictEqual(E.statusOf(scr, 'R'), 'unknown');
+  let tgt = E.createSession(GS, ['A']);
+  tgt = E.applyAnswer(GS, tgt, 'A', 'correct');
+  assert.strictEqual(E.statusOf(tgt, 'S'), 'mastered');
+  assert.strictEqual(E.statusOf(tgt, 'R'), 'mastered');
+  assert.strictEqual(tgt.status.R.src, 'inferred');
+  let scr2 = E.createSession(GS, ['R', 'S', 'A'], { mode: 'screen' });
+  scr2 = E.applyAnswer(GS, scr2, 'A', 'correct');
+  assert.deepStrictEqual(scr2.status, scr.status);
+});
+
+test('筛查 soft-only：只有 soft 先修的点答对后不推断任何祖先', () => {
+  const topicsS = [mk('P'), mk('Q'), mk('W')];
+  const depsS = [
+    { topicId: 'W', prerequisiteId: 'P', strength: 'soft' },
+    { topicId: 'W', prerequisiteId: 'Q', strength: 'soft' }
+  ];
+  const GS = E.buildGraph(topicsS, depsS);
+  let s = E.createSession(GS, ['P', 'Q', 'W'], { mode: 'screen' });
+  s = E.applyAnswer(GS, s, 'W', 'correct');
+  assert.deepStrictEqual(Object.keys(s.status), ['W']);
+  const asked = [];
+  for (let i = 0; i < 10; i++) {
+    const q = E.nextQuestion(GS, s);
+    if (!q) break;
+    asked.push(q);
+    s = E.applyAnswer(GS, s, q, 'correct');
+  }
+  assert.deepStrictEqual(sorted(asked), ['P', 'Q']);
+  assert.strictEqual(E.summarize(GS, s).untested.length, 0);
+});
+
+test('筛查 hard-soft 混合：hard 祖先推断、soft 旁支仍要问', () => {
+  const topicsS = [mk('H1'), mk('H2'), mk('S1'), mk('T')];
+  const depsS = [
+    { topicId: 'H2', prerequisiteId: 'H1', strength: 'hard' },
+    { topicId: 'T', prerequisiteId: 'H2', strength: 'hard' },
+    { topicId: 'T', prerequisiteId: 'S1', strength: 'soft' }
+  ];
+  const GS = E.buildGraph(topicsS, depsS);
+  let s = E.createSession(GS, ['H1', 'H2', 'S1', 'T'], { mode: 'screen' });
+  s = E.applyAnswer(GS, s, 'T', 'correct');
+  assert.strictEqual(E.statusOf(s, 'H2'), 'mastered');
+  assert.strictEqual(E.statusOf(s, 'H1'), 'mastered');
+  assert.strictEqual(s.status.H1.src, 'inferred');
+  assert.strictEqual(E.statusOf(s, 'S1'), 'unknown');
+  assert.strictEqual(E.nextQuestion(GS, s), 'S1');
+});
+
+test('筛查：推断掌握不覆盖直接判定', () => {
+  let s = E.createSession(G, ['F', 'E', 'C', 'D', 'B', 'T'], { mode: 'screen' });
+  s = E.applyAnswer(G, s, 'E', 'wrong');
+  s = E.applyAnswer(G, s, 'T', 'correct');
+  assert.strictEqual(E.statusOf(s, 'E'), 'weak');
+  assert.strictEqual(E.statusOf(s, 'C'), 'mastered');
+});
+
+test('筛查全对（历史七上，confirm=3，limit=40）：不是 3 题结束整册掌握', () => {
+  const g = E.gradeTargets(RGQ, '七上', 'history');
+  const { s, steps } = screenTrace(g, allRight, 40, 'h34', 3);
+  const sum = E.summarize(RGQ, s);
+  const unique = Array.from(new Set(steps.map((x) => x.id)));
+  assert.ok(sum.asked > 3, '全对只问了 ' + sum.asked + ' 题');
+  assert.ok(unique.length > 1, '全对只问了 1 个知识点 ' + unique.join(','));
+  assert.ok(sum.mastered.length < g.ids.length || sum.asked === 40,
+    '未到上限却把整册标掌握：asked=' + sum.asked + ' mastered=' + sum.mastered.length);
+  const afterFirstMaster = steps.find((x) => x.id === unique[0] && x.status === 'mastered');
+  assert.ok(afterFirstMaster);
+  const idx = steps.indexOf(afterFirstMaster);
+  assert.ok(idx >= 2, 'confirm=3 应在第 3 题才掌握，实际 index=' + idx);
+  // 第 3 题掌握后不得把远古点沿 soft 链推断掉
+  const s3 = E.replay(RGQ, g.ids, s.answers.slice(0, idx + 1), { mode: 'screen', limit: 40, seed: 'h34', confirm: 3 });
+  assert.strictEqual(E.statusOf(s3, unique[0]), 'mastered');
+  assert.strictEqual(E.statusOf(s3, 'cnh_j001'), 'unknown', '末点掌握不应沿 soft 推断到远古人类活动');
+  const direct = Object.keys(s.status).filter((id) => s.status[id].src === 'direct' && s.status[id].s === 'mastered');
+  const reach = hardReachFrom(RGQ, direct);
+  Object.keys(s.status).filter((id) => s.status[id].src === 'inferred').forEach((id) => {
+    assert.ok(reach.has(id), id + ' 被沿非 hard 路径推断掌握');
+  });
+});
+
+test('筛查首题错（历史七上）：确认题对则不稳，不因推断提前结束', () => {
+  const g = E.gradeTargets(RGQ, '七上', 'history');
+  const firstWrong = (id, attempt) => (attempt === 1 ? 'wrong' : 'correct');
+  const { s, steps } = screenTrace(g, firstWrong, 40, 'h34w', 3);
+  const sum = E.summarize(RGQ, s);
+  assert.strictEqual(steps[0].status, null, '第一题错时尚无结论');
+  assert.strictEqual(s.status[steps[0].id].s, 'shaky');
+  assert.ok(sum.asked > 3);
+  assert.ok(new Set(steps.map((x) => x.id)).size > 1);
+  assert.ok(sum.shaky.length >= 1);
+  const inferred = Object.keys(s.status).filter((id) => s.status[id].src === 'inferred');
+  const directM = Object.keys(s.status).filter((id) => s.status[id].src === 'direct' && s.status[id].s === 'mastered');
+  const reach = hardReachFrom(RGQ, directM);
+  inferred.forEach((id) => assert.ok(reach.has(id), id));
+});
+
+test('筛查混合（历史七上）：部分对部分错时，掌握点的推断仍只走 hard', () => {
+  const g = E.gradeTargets(RGQ, '七上', 'history');
+  // 末点 j021 全对；其 soft 先修 j020 全错。j020 一定会出现在下一题（hard 不推断它）。
+  const mixed = (id) => (id === 'cnh_j020' ? 'wrong' : 'correct');
+  const { s, steps } = screenTrace(g, mixed, 40, 'h34m', 3);
+  const sum = E.summarize(RGQ, s);
+  assert.ok(sum.asked > 3);
+  assert.ok(sum.weak.length + sum.shaky.length > 0 || steps.some((x) => x.status === 'weak' || x.status === 'shaky'));
+  const directM = Object.keys(s.status).filter((id) => s.status[id].src === 'direct' && s.status[id].s === 'mastered');
+  const reach = hardReachFrom(RGQ, directM);
+  Object.keys(s.status).filter((id) => s.status[id].src === 'inferred').forEach((id) => {
+    assert.ok(reach.has(id), id + ' 混合作答下仍被沿 soft 推断');
+  });
+  const inScope = new Set(g.ids);
+  s.answers.forEach((a) => assert.ok(inScope.has(a.id), '问到范围外 ' + a.id));
+});
+
+test('筛查跨册过滤：历史七上不问卷内以外的点', () => {
+  const g = E.gradeTargets(RGQ, '七上', 'history');
+  const inScope = new Set(g.ids);
+  [[allRight, 40], [allWrong, 40], [indexStudent, 40]].forEach(([stu, limit]) => {
+    const s = screenRun(g, stu, limit, 'h34x', 3);
+    s.answers.forEach((a) => assert.ok(inScope.has(a.id), a.id));
+    const sum = E.summarize(RGQ, s);
+    sum.mastered.concat(sum.shaky, sum.weak, sum.untested).forEach((id) => assert.ok(inScope.has(id)));
+  });
+  const g7 = E.gradeTargets(RGQ, '七年级', 'history');
+  assert.ok(g7.ids.length > g.ids.length);
+  const extra = g7.ids.filter((id) => !inScope.has(id));
+  const s = screenRun(g, allRight, 40, 'h34x2', 3);
+  extra.forEach((id) => assert.ok(!s.answers.some((a) => a.id === id), '问到了七下 ' + id));
+});
+
+test('筛查真实数据（历史七上 confirm=1）：推断点均可沿 hard 到达，且不是 1 题结束', () => {
+  const g = E.gradeTargets(RGQ, '七上', 'history');
+  const s = screenRun(g, allRight, 1000, 'scr', 1);
+  const direct = Object.keys(s.status).filter((id) => s.status[id].src === 'direct' && s.status[id].s === 'mastered');
+  const reach = hardReachFrom(RGQ, direct);
+  const inferred = Object.keys(s.status).filter((id) => s.status[id].src === 'inferred');
+  inferred.forEach((id) => assert.ok(reach.has(id), id + ' 不应沿 soft 先修推断'));
+  assert.ok(direct.length > 3, '只直接问了 ' + direct.length + ' 个点');
+  assert.strictEqual(E.summarize(RGQ, s).mastered.length, g.ids.length);
+  assert.ok(!inferred.includes('cnh_j001') || reach.has('cnh_j001'));
+});
+
 console.log('\n' + passed + ' passed, ' + failed + ' failed');
 process.exit(failed ? 1 : 0);

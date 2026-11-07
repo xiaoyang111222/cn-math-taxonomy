@@ -91,6 +91,24 @@
     return out;
   }
 
+  /** 只沿 hard 先修走的严格祖先（不含自身），带独立缓存。筛查模式的推断掌握用它。 */
+  function hardAncestorSet(graph, id) {
+    const memo = graph._hardAnc || (graph._hardAnc = Object.create(null));
+    if (memo[id]) return memo[id];
+    const visiting = graph._hardVisiting || (graph._hardVisiting = Object.create(null));
+    if (visiting[id]) throw new Error('先修图存在环：' + id);
+    visiting[id] = true;
+    const out = new Set();
+    graph.prereqs[id].forEach(function (p) {
+      if (p.strength !== 'hard') return;
+      out.add(p.id);
+      hardAncestorSet(graph, p.id).forEach(function (a) { out.add(a); });
+    });
+    visiting[id] = false;
+    memo[id] = out;
+    return out;
+  }
+
   function ancestors(graph, ids) {
     const list = Array.isArray(ids) ? ids : [ids];
     const out = new Set();
@@ -279,7 +297,7 @@
 
   /**
    * 记录一次作答（针对 nextItem 给出的那道题）。
-   *  - 连续答对满 needConfirm 题：该点及其所有尚未判定的祖先记为掌握（祖先为 inferred）；
+   *  - 连续答对满 needConfirm 题：该点及其尚未判定的祖先记为掌握（祖先为 inferred；筛查模式只沿 hard 先修推断，soft 不推断）；
    *  - 连续答对尚未满额：还没有结论，继续出同知识点下一题；
    *  - 中途 wrong/skip：还没有结论，再出一道确认题（没有可出的就直接判薄弱）；
    *  - 确认题 correct：不稳（shaky），不向先修回溯；
@@ -304,7 +322,7 @@
     if (result === 'correct') {
       if (fails === 0 && corrects >= need) {
         s.status[id] = { s: 'mastered', src: 'direct' };
-        ancestorSet(graph, id).forEach(function (a) {
+        (s.mode === 'screen' ? hardAncestorSet(graph, id) : ancestorSet(graph, id)).forEach(function (a) {
           if (!s.status[a]) s.status[a] = { s: 'mastered', src: 'inferred' };
         });
       } else if (fails > 0) {
