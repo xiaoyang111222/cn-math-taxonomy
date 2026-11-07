@@ -241,9 +241,16 @@
     return { limit: limit, screenLimit: screenLimit, confirm: confirm };
   }
   function setSetting(k, v) { const o = getSettings(); o[k] = v; lsSet(LS_SETTINGS, o); }
-  function seenList() { const v = lsGet(LS_SEEN); return Array.isArray(v) ? v : []; }
+  function seenList() {
+    const v = lsGet(LS_SEEN);
+    if (!Array.isArray(v)) return [];
+    if (!window.StemCompat) return v;
+    return v.filter(function (id) { return !window.StemCompat.isRetiredQid(id); });
+  }
   function markSeen(qid) {
     if (!qid || demo) return;
+    /* 这两个题号曾是古诗。已看过不能当成看过现在的语气题。 */
+    if (window.StemCompat && window.StemCompat.isRetiredQid(qid)) return;
     const v = seenList();
     if (v.indexOf(qid) < 0) { v.push(qid); lsSet(LS_SEEN, v); }
   }
@@ -373,12 +380,21 @@
   function saveToChild(sum) {
     const cur = CC.current();
     if (demo || !cur || !sum.asked) return;
-    CC.saveRecord(cur.id, {
+    const rec = {
       key: recordKey(), subject: subject, label: sessionMeta.label, mode: sum.mode, asked: sum.asked,
       targets: sum.mode === 'screen' || sum.targets.length > 6 ? null : sum.targets,
       counts: { weak: sum.weak.length, shaky: sum.shaky.length, mastered: sum.mastered.length, untested: sum.untested.length },
       weak: sum.weak, roots: sum.roots.map(function (r) { return r.id; }), shaky: sum.shaky, mastered: sum.mastered
-    });
+    };
+    if (window.StemCompat) {
+      const topic = window.StemCompat.TOPIC;
+      const lists = [rec.weak, rec.shaky, rec.mastered, rec.roots, rec.targets || []];
+      if (lists.some(function (ids) { return ids.indexOf(topic) >= 0; })) rec.stemRev = window.StemCompat.stamp();
+      if ((sessionMeta.excluded || []).some(function (a) { return a.id === topic; })) {
+        rec.needsRetest = [topic];
+      }
+    }
+    CC.saveRecord(cur.id, rec);
   }
   function noteBlind(sum) {
     if (demo || !sum || !sum.asked || !window.CnmBlind) return;
@@ -409,8 +425,11 @@
         return h('li', { class: 'blind-item' },
           h('span', { class: 'blind-name', text: nameOf(row.id) }),
           ' ',
-          h('span', { class: 'tag ' + (row.status === 'weak' ? 'weak' : 'shaky'), text: row.status === 'weak' ? (row.root ? '根因' : '薄弱') : '不稳' }),
-          row.wrongs ? h('span', { class: 'muted small', text: ' · 答错 ' + row.wrongs + ' 次' }) : null,
+          h('span', {
+            class: 'tag ' + (row.status === 'weak' ? 'weak' : row.status === 'retest' ? 'unknown' : 'shaky'),
+            text: row.status === 'weak' ? (row.root ? '根因' : '薄弱') : row.status === 'retest' ? '需重测' : '不稳'
+          }),
+          row.wrongs && row.status !== 'retest' ? h('span', { class: 'muted small', text: ' · 答错 ' + row.wrongs + ' 次' }) : null,
           ' ',
           h('a', { class: 'blind-retest', href: diagnoseHrefFor([row.id]), text: '再测' }));
       })),
@@ -443,6 +462,7 @@
     lsSet(sessionKey(), {
       v: 2, mode: session.mode, targets: session.targets, limit: session.limit, confirm: session.confirm,
       label: sessionMeta.label, answers: session.answers,
+      excluded: sessionMeta.excluded || [],
       seed: session.seed, avoid: session.avoid, savedAt: new Date().toISOString()
     });
   }
@@ -454,7 +474,7 @@
     session = E.createSession(D.graph, targets, {
       mode: mode, limit: limit || (screen ? st.screenLimit : st.limit), confirm: st.confirm, seed: newSeed(), avoid: seenList()
     });
-    sessionMeta = { label: label };
+    sessionMeta = { label: label, excluded: [] };
     resetUi();
     save();
     render();
@@ -462,10 +482,16 @@
 
   function restoreSession(saved) {
     try {
-      session = E.replay(D.graph, saved.targets, saved.answers, {
-        mode: saved.mode, limit: saved.limit, confirm: saved.confirm, seed: saved.seed, avoid: saved.avoid
+      const parts = window.StemCompat
+        ? window.StemCompat.restoreParts(saved)
+        : { answers: saved.answers, excluded: [], avoid: saved.avoid || [] };
+      session = E.replay(D.graph, saved.targets, parts.answers, {
+        mode: saved.mode, limit: saved.limit, confirm: saved.confirm, seed: saved.seed, avoid: parts.avoid
       });
-      sessionMeta = { label: saved.label || saved.targets.map(nameOf).join('、') };
+      sessionMeta = {
+        label: saved.label || saved.targets.map(nameOf).join('、'),
+        excluded: parts.excluded || []
+      };
       return true;
     } catch (e) { return false; }
   }
@@ -480,7 +506,7 @@
 
   function commit(result) {
     const item = E.nextItem(D.graph, session);
-    session = E.applyAnswer(D.graph, session, item.topicId, result, { text: ui.answer });
+    session = E.applyAnswer(D.graph, session, item.topicId, result, { text: ui.answer, prompt: item.question.prompt });
     markSeen(item.question.id);
     resetUi();
     save();
@@ -1131,6 +1157,8 @@
     saveToChild(sum);
     noteBlind(sum);
     page.append(childBar('result'));
+    const dropped = excludedNote();
+    if (dropped) page.append(dropped);
 
     const targetsMastered = session.targets.every(function (id) { return E.statusOf(session, id) === 'mastered'; });
     const chapters = screen ? E.chapterSummary(D.graph, session) : null;
@@ -1309,9 +1337,21 @@
       }) : h('p', { class: 'muted', text: '无。' }));
   }
 
+  function excludedNote() {
+    const xs = sessionMeta && sessionMeta.excluded || [];
+    if (!xs.length) return null;
+    return h('div', { class: 'card', id: 'stem-excluded' },
+      h('h2', { text: '有旧作答未计入' }),
+      h('p', null, '这些题号后来改成了别的题。旧作答没有能对上现行题干的快照，不显示成现在的语气题，也不计对错，没有改记到古诗。需要重测。'),
+      h('ul', null, xs.map(function (a) {
+        return h('li', null, (a.qid || '旧题') + '：' + (a.prompt || '题干未保存') + '（不计入语气）');
+      })));
+  }
+
   function logCard() {
     const rows = session.answers.map(function (a, i) {
       const q = E.questionById(D.graph, a.qid) || { prompt: '', answer: '' };
+      const shown = window.StemCompat ? window.StemCompat.displayPrompt(a, q) : q.prompt;
       const sel = h('select', {
         onchange: function (e) {
           const next = session.answers.map(function (x, j) { return j === i ? Object.assign({}, x, { result: e.target.value }) : x; });
@@ -1319,9 +1359,9 @@
         }
       }, ['correct', 'wrong', 'skip'].map(function (r) { return h('option', { value: r, selected: r === a.result }, RESULT_LABEL[r]); }));
       return h('tr', null, h('td', { text: String(i + 1) }),
-        h('td', null, nameOf(a.id), h('div', { class: 'muted small', text: q.prompt.length > 60 ? q.prompt.slice(0, 59) + '…' : q.prompt })),
-        h('td', { class: 'muted', text: a.text || '' }),
-        h('td', null, sel), h('td', { class: 'muted', text: q.answer }));
+        h('td', null, nameOf(a.id), h('div', { class: 'muted small', text: shown == null ? '这道旧作答对不上现在的题干，不计入。' : (shown.length > 60 ? shown.slice(0, 59) + '…' : shown) })),
+        h('td', { class: 'muted', text: shown == null ? '' : (a.text || '') }),
+        h('td', null, sel), h('td', { class: 'muted', text: shown == null ? '—' : q.answer }));
     });
     return h('div', { class: 'card', id: 'log' },
       h('h2', { text: '答题记录（可更正）' }),
@@ -1603,11 +1643,22 @@
       limit: session.limit, seed: session.seed, asked: sum.asked, finished: sum.finished, limitReached: sum.limitReached,
       answers: session.answers.map(function (a, i) {
         const q = E.questionById(D.graph, a.qid) || {};
+        const shown = window.StemCompat ? window.StemCompat.displayPrompt(a, q) : q.prompt;
+        if (shown == null) {
+          return {
+            order: i + 1, topicId: a.id, name: nameOf(a.id), questionId: a.qid,
+            prompt: a.prompt || null, userAnswer: null, result: null, excluded: true,
+            note: '题号已改写，旧作答不计入现行题干'
+          };
+        }
         return {
           order: i + 1, topicId: a.id, name: nameOf(a.id), questionId: a.qid, difficulty: q.difficulty, type: q.type,
-          prompt: q.prompt, userAnswer: a.text == null ? null : a.text, result: a.result,
+          prompt: shown, userAnswer: a.text == null ? null : a.text, result: a.result,
           referenceAnswer: q.answer, explanation: q.explanation || ''
         };
+      }),
+      excludedAnswers: (sessionMeta.excluded || []).map(function (a) {
+        return { topicId: a.id, questionId: a.qid, prompt: a.prompt || null, result: null, excluded: true, note: '不计入语气，需重测' };
       }),
       chapters: chapters ? chapters.map(function (c) {
         return {

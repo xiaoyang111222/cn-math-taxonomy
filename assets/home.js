@@ -194,8 +194,8 @@
       li.appendChild(name);
       var meta = document.createElement('span');
       meta.className = 'blind-home-meta';
-      var bits = [row.status === 'weak' ? (row.root ? '根因' : '薄弱') : '不稳'];
-      if (row.wrongs) bits.push('答错 ' + row.wrongs + ' 次');
+      var bits = [row.status === 'weak' ? (row.root ? '根因' : '薄弱') : (row.status === 'retest' ? '需重测' : '不稳')];
+      if (row.wrongs && row.status !== 'retest') bits.push('答错 ' + row.wrongs + ' 次');
       meta.textContent = bits.join(' · ');
       li.appendChild(meta);
       list.appendChild(li);

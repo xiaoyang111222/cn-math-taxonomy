@@ -1,6 +1,7 @@
 # 变更日志
 
 ## 2026-11-07（本地检查：数据、答案、图和 Node 测试）
+- 历史兼容：`cnc_p124_q3/q4` 同 ID 从古诗改成语气后，无题干快照的旧作答不计入现行语气，标需重测（`assets/stem-compat.js`，SW v10）。
 
 - 2026-11-07：`npm test` 不再是占位失败。它和 `.github/workflows/ci.yml` 跑同一组强制检查：已有的诊断引擎、盲区、孩子档案测试，新增的工作流测试和题目 ID 测试，以及 `validate.py`、`check_figures.py`、`verify_questions.py`。需要浏览器的 `test_children_browser.js` 仍不在这组里。答案核验的报告写到 `/tmp`，不改 `data/verification_report.json`。课标严格模式只在工作流里报告，不让构建失败。纠错模板的题目 ID 从 `q_cnm_xxx_n` 改成「知识点 id + `_q` + 题号」。没有推送，GitHub 上的 CI 没有跑。诊断页报错链接、首页题库异步、教材版本筛选没有改。详见 `docs/feedback-C-2026-11-07.md`。
 

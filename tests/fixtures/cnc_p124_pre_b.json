@@ -1,0 +1,119 @@
+{
+  "sourceRevision": "d3e2dac",
+  "sourceCommit": "43c1ea0^",
+  "note": "B 提交 43c1ea0 改写题干之前，data/questions.json 里 cnc_p124 的四道题。记录夹具只使用这些原文，不手写题干。",
+  "questions": [
+    {
+      "id": "cnc_p124_q1",
+      "topicId": "cnc_p124",
+      "difficulty": "basic",
+      "type": "choice",
+      "prompt": "请别人帮忙时，语气怎样更合适？",
+      "choices": [
+        {
+          "key": "A",
+          "text": "用命令的口气催别人快点"
+        },
+        {
+          "key": "B",
+          "text": "用商量的口气，把话说清楚"
+        },
+        {
+          "key": "C",
+          "text": "背过身去不说话"
+        },
+        {
+          "key": "D",
+          "text": "故意把声音压得谁也听不见"
+        }
+      ],
+      "answer": "B",
+      "explanation": "园地里的口语交际是注意说话的语气。请求别人，要用商量的口气。",
+      "verify": "\"用商量的口气，把话说清楚\""
+    },
+    {
+      "id": "cnc_p124_q2",
+      "topicId": "cnc_p124",
+      "difficulty": "basic",
+      "type": "choice",
+      "prompt": "请求、道歉和提醒，说话时要注意什么？",
+      "choices": [
+        {
+          "key": "A",
+          "text": "语气永远只能有一种"
+        },
+        {
+          "key": "B",
+          "text": "换了语气意思就一定相反"
+        },
+        {
+          "key": "C",
+          "text": "语气不一样，要让对方听着明白"
+        },
+        {
+          "key": "D",
+          "text": "语气只在唱歌时才有用"
+        }
+      ],
+      "answer": "C",
+      "explanation": "表扬、请求、道歉，说出来的轻重和态度不同，对方的感受也不同。",
+      "verify": "\"语气不一样，要让对方听着明白\""
+    },
+    {
+      "id": "cnc_p124_q3",
+      "topicId": "cnc_p124",
+      "difficulty": "standard",
+      "type": "choice",
+      "prompt": "「离离原上草」的下一句是哪一句？",
+      "choices": [
+        {
+          "key": "A",
+          "text": "春风吹又生"
+        },
+        {
+          "key": "B",
+          "text": "野火烧不尽"
+        },
+        {
+          "key": "C",
+          "text": "二月春风似剪刀"
+        },
+        {
+          "key": "D",
+          "text": "一岁一枯荣"
+        }
+      ],
+      "answer": "D",
+      "explanation": "原上的草每年都会枯一次、再荣一次。春风吹又生在更后面。",
+      "verify": "\"一岁一枯荣\""
+    },
+    {
+      "id": "cnc_p124_q4",
+      "topicId": "cnc_p124",
+      "difficulty": "standard",
+      "type": "choice",
+      "prompt": "「野火烧不尽」的下一句是哪一句？作者是谁？",
+      "choices": [
+        {
+          "key": "A",
+          "text": "春风吹又生。作者是白居易"
+        },
+        {
+          "key": "B",
+          "text": "春风吹又生。作者是贺知章"
+        },
+        {
+          "key": "C",
+          "text": "一岁一枯荣。作者是高鼎"
+        },
+        {
+          "key": "D",
+          "text": "忙趁东风放纸鸢。作者是白居易"
+        }
+      ],
+      "answer": "A",
+      "explanation": "野火烧不尽，春风吹又生。这首是白居易的《赋得古原草送别》，不是《咏柳》。",
+      "verify": "\"春风吹又生。作者是白居易\""
+    }
+  ]
+}

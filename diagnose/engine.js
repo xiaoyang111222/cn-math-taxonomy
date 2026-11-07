@@ -4,7 +4,8 @@
  *         createSession(graph, targets, {limit, seed, avoid}) -> session   （会话是可 JSON 序列化的纯数据）
  *         nextQuestion(graph, session) -> topicId | null     （下一个要考的知识点）
  *         nextItem(graph, session) -> {topicId, question, attempt} | null   （要出的具体题目；attempt 从 1 起）
- *         applyAnswer(graph, session, id, 'correct'|'wrong'|'skip', {text}) -> 新 session（不修改入参）
+ *         applyAnswer(graph, session, id, 'correct'|'wrong'|'skip', {text, prompt, pin, qid}) -> 新 session（不修改入参）
+ *           pin 且 qid 对得上题库时，按这个题号记，不再重选。题号对不上则这步不记分。
  *         summarize(graph, session) -> 结果（根因、学习路径、掌握/不稳/薄弱/未测）
  *         gradeTargets(graph, '一年级'|'七上'|'高一'|'选必二', subject?) -> {ids, volumes, label} | null
  *           默认 subject 为 math，不把英语卷进数学的整册；'english' 只取英语（含九全），'physics' 只取物理（八上、八下、九全），'all' 不限学科
@@ -310,9 +311,16 @@
     const s = cloneSession(session);
     if (s.status[id]) { delete s.status[id]; s.attempts[id] = []; } // 对已有结论的点重新作答 = 重新开始
     const prev = s.attempts[id] || [];
-    const q = pickQuestion(graph, s, id, prev.length + 1);
+    let q;
+    if (extra && extra.pin) {
+      q = extra.qid ? questionById(graph, extra.qid) : null;
+      if (!q || q.topicId !== id) return session;
+    } else {
+      q = pickQuestion(graph, s, id, prev.length + 1);
+    }
     const rec = { id: id, qid: q ? q.id : null, result: result };
     if (extra && extra.text != null && extra.text !== '') rec.text = String(extra.text);
+    if (extra && extra.prompt) rec.prompt = String(extra.prompt);
     s.answers.push(rec);
     s.attempts[id] = prev.concat([{ qid: rec.qid, result: result }]);
     const attempts = s.attempts[id];
@@ -360,10 +368,19 @@
     return q ? { topicId: id, question: q, attempt: attempt } : null;
   }
 
-  /** 由作答记录重建会话（用于刷新恢复、撤销、更正）。 */
+  /** 由作答记录重建会话（用于刷新恢复、撤销、更正）。
+   *  记录里若有 qid，就钉在该题上，避免删掉中间一题后把后面的结果套到另一道题。
+   *  exclude 的作答整段跳过，不记分。 */
   function replay(graph, targets, answers, opts) {
     let s = createSession(graph, targets, opts);
-    answers.forEach(function (a) { s = applyAnswer(graph, s, a.id, a.result, { text: a.text }); });
+    answers.forEach(function (a) {
+      if (!a || a.exclude) return;
+      const extra = {};
+      if (a.text != null && a.text !== '') extra.text = a.text;
+      if (a.prompt) extra.prompt = a.prompt;
+      if (a.qid) { extra.pin = true; extra.qid = a.qid; }
+      s = applyAnswer(graph, s, a.id, a.result, extra);
+    });
     return s;
   }
 

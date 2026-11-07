@@ -52,3 +52,6 @@ jobs:
 
       - name: 题目 ID 格式测试
         run: node tests/test_question_ids.js
+
+      - name: 题干改写历史兼容测试
+        run: node tests/test_stem_compat.js

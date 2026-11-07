@@ -129,20 +129,34 @@
     write(REC_KEY, all);
   }
 
+  function presentRecord(record) {
+    var compat = typeof window !== 'undefined' ? window.StemCompat : null;
+    return compat && compat.presentRecord ? compat.presentRecord(record) : record;
+  }
+
   /* 把某个孩子的全部记录合成「每个知识点现在的状态」：越新的记录越说了算。
-   * 返回 { byId: { id: { status, recKey, at, label, root } } } */
+   * 返回 { id: { status, recKey, at, label, root, subject, needsRetest } }。
+   * 没有现行题干戳的 cnc_p124 不记成语气的掌握 / 薄弱 / 不稳，只标需重测。 */
   function latestStatus(childId, subject) {
     var recs = recordsOf(childId).filter(function (r) { return !subject || r.subject === subject; }).reverse();
     var by = {};
     recs.forEach(function (r) {
+      var view = presentRecord(r);
       var roots = {};
-      (r.roots || []).forEach(function (id) { roots[id] = true; });
+      (view.roots || []).forEach(function (id) { roots[id] = true; });
       var put = function (ids, status) {
-        (ids || []).forEach(function (id) { by[id] = { status: status, recKey: r.key, at: r.savedAt, label: r.label, root: !!roots[id], subject: r.subject }; });
+        (ids || []).forEach(function (id) {
+          by[id] = { status: status, recKey: r.key, at: r.savedAt, label: r.label, root: !!roots[id], subject: r.subject, needsRetest: false };
+        });
       };
-      put(r.mastered, 'mastered');
-      put(r.shaky, 'shaky');
-      put(r.weak, 'weak');
+      put(view.mastered, 'mastered');
+      put(view.shaky, 'shaky');
+      put(view.weak, 'weak');
+      (view.needsRetest || []).forEach(function (id) {
+        if (!by[id] || by[id].status === 'retest') {
+          by[id] = { status: 'retest', recKey: r.key, at: r.savedAt, label: r.label, root: false, subject: r.subject, needsRetest: true };
+        }
+      });
     });
     return by;
   }
@@ -330,7 +344,7 @@
     list: list, get: get, current: current, setCurrent: setCurrent,
     add: add, update: update, remove: remove,
     recordsOf: recordsOf, saveRecord: saveRecord, hasRecord: hasRecord, moveRecord: moveRecord, removeRecord: removeRecord,
-    latestStatus: latestStatus, exportBackup: exportBackup,
+    presentRecord: presentRecord, latestStatus: latestStatus, exportBackup: exportBackup,
     MAX_BACKUP_BYTES: MAX_BACKUP_BYTES, parseBackup: parseBackup, previewImport: previewImport, importBackup: importBackup
   };
 })();
