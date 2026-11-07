@@ -220,3 +220,4 @@ table.log select { min-height: 44px; }
 .blind-item { padding: 8px 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
 .blind-name { font-weight: 700; }
 .blind-retest { font-weight: 700; white-space: nowrap; }
+.report-link { text-align: right; font-size: .85rem; margin: -4px 0 10px; }

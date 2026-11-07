@@ -873,10 +873,19 @@
     return q.answer;
   }
 
+  const ISSUE_NEW_URL = 'https://github.com/xiaoyang111222/cn-math-taxonomy/issues/new';
+
+  function reportUrl(q) {
+    return ISSUE_NEW_URL + '?template=question-fix.yml&title=' + encodeURIComponent('[题目] ' + q.id) +
+      '&question_id=' + encodeURIComponent(q.id);
+  }
+
   function feedbackBlock(q) {
     return h('div', { class: 'feedback' },
       h('div', { class: 'refans' }, h('b', null, '参考答案：'), answerText(q)),
-      q.explanation ? h('div', { class: 'explain', id: 'explain' }, h('b', null, '解析：'), q.explanation) : null);
+      q.explanation ? h('div', { class: 'explain', id: 'explain' }, h('b', null, '解析：'), q.explanation) : null,
+      q.id ? h('div', { class: 'report-link no-print' },
+        h('a', { id: 'report-q', href: reportUrl(q), target: '_blank', rel: 'noopener noreferrer' }, '这道题有错？报错')) : null);
   }
 
   function renderQuestion(item) {
