@@ -91,7 +91,7 @@
   } else if (subject === 'morality') {
     document.title = '道德与法治 · 中小学·高中知识图谱';
     var meye = document.querySelector('.eyebrow');
-    if (meye) meye.textContent = '道德与法治：小学与初中 · 统编版 · 只列出已录入册次（现有至七年级上册，初中尚未全部覆盖）';
+    if (meye) meye.textContent = '道德与法治：小学与初中 · 统编版 · 只列出已录入册次（初中现含七上、七下、八上；八下及九年级未录入）';
     var mprimary = document.querySelector('.hero-actions a.btn-primary');
     var mbrowse = document.querySelector('.hero-actions a.btn:not(.btn-primary)');
     if (mprimary) mprimary.setAttribute('href', 'diagnose/?subject=morality');

@@ -70,7 +70,9 @@ function loadHome(search) {
     const home = loadHome('?subject=morality');
     const topics = [
       { id: 'cnd_p001', subject: 'morality', grade: 1, semester: '上' },
-      { id: 'cnd_j001', subject: 'morality', grade: 7, semester: '上' }
+      { id: 'cnd_j701', subject: 'morality', grade: 7, semester: '上' },
+      { id: 'cnd_j702', subject: 'morality', grade: 7, semester: '下' },
+      { id: 'cnd_j801', subject: 'morality', grade: 8, semester: '上' }
     ];
     const byUrl = {};
     home.calls.forEach(function (call) { byUrl[call.url] = call; });
@@ -84,12 +86,18 @@ function loadHome(search) {
     const titles = home.ids.grades.children.map(function (card) {
       return card.children[1].textContent;
     });
-    assert.deepStrictEqual(titles, ['一年级', '七年级']);
+    assert.deepStrictEqual(titles, ['一年级', '七年级', '八年级']);
+    assert.ok(titles.indexOf('九年级') < 0);
+    const splits = home.ids.grades.children.map(function (card) {
+      return card.children[3].textContent;
+    });
+    assert.deepStrictEqual(splits, ['上 1', '上 1 · 下 1', '上 1']);
+    assert.ok(home.ids.grades.children[0].className.indexOf('is-primary') >= 0);
     assert.ok(home.ids.grades.children.every(function (card) { return card.className.indexOf('is-senior') < 0; }));
     assert.strictEqual(home.document.title, '道德与法治 · 中小学·高中知识图谱');
-    assert.ok(home.eyebrow.textContent.indexOf('初中') >= 0);
-    assert.ok(home.eyebrow.textContent.indexOf('七年级上册') >= 0);
-    assert.strictEqual(home.ids['n-topics'].textContent, '2');
+    assert.ok(home.eyebrow.textContent.indexOf('初中现含七上、七下、八上') >= 0);
+    assert.ok(home.eyebrow.textContent.indexOf('八下及九年级未录入') >= 0);
+    assert.strictEqual(home.ids['n-topics'].textContent, '4');
     assert.strictEqual(home.ids['n-standards'].textContent, '1');
   });
 
