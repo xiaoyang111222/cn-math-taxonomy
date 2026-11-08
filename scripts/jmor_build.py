@@ -226,13 +226,9 @@ def main():
         })
     used = {t["std"] for t in TOPICS}
     missing = [row[0] for row in STANDARD_ROWS if row[0] not in used]
-    vols_ready = all(os.path.isfile(os.path.join(os.path.dirname(os.path.abspath(__file__)), m + ".py"))
-                     for m in ("jmor_g7a", "jmor_g7b", "jmor_g8a", "jmor_g8b"))
-    if missing and vols_ready:
-        print("四册都在，五主题仍有未引用：%s" % "、".join(missing), file=sys.stderr)
-        return 1
+    # 第四学段五个主题不限于当前册。七、八年级未引用时只警告，不拒绝生成，也不为消警告去映射。
     if missing:
-        print("警告：本批尚未引用主题 %s（四册写齐前允许）" % "、".join(missing))
+        print("警告：第四学段五主题不限于当前册，未强行映射。尚未引用：%s" % "、".join(missing))
 
     new_topics = []
     new_questions = []
