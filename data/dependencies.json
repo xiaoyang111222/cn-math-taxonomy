@@ -29206,5 +29206,23 @@
     "prerequisiteId": "cnc_j158",
     "strength": "hard",
     "reason": "九上已有文天祥《过零丁洋》和张养浩《山坡羊·潼关怀古》。这里是《南安军》和《骊山怀古》，句子和题目都要分开。"
+  },
+  {
+    "topicId": "cnd_j003",
+    "prerequisiteId": "cnd_j002",
+    "strength": "soft",
+    "reason": "教学上宜先分清初中的学习方式和时间条件已经变了，再判断目标是否仍按旧条件来写。目标能否核对，概念上并不以适应变化的定义为前提。"
+  },
+  {
+    "topicId": "cnd_j005",
+    "prerequisiteId": "cnd_j004",
+    "strength": "soft",
+    "reason": "教学上宜先看清自己的具体事实，再决定发挥哪一项优势、先改哪一处短处。题目已经给出优势和短处时，并不以多渠道认识的定义为前提。"
+  },
+  {
+    "topicId": "cnd_j007",
+    "prerequisiteId": "cnd_j006",
+    "strength": "soft",
+    "reason": "教学上宜先知道梦想要靠当下的行动靠近，再看学习之后的反思有没有改到带来结果的方法。何谓有效反思，概念上不以梦想的定义为前提。"
   }
 ]

@@ -195,8 +195,8 @@
       if (volSel === '全') volSel = '';
     }
     if (subject === 'morality') {
-      document.title = '诊断 · 小学道德与法治';
-      if ('一二三四五六'.indexOf(gradeSel) < 0) gradeSel = '一';
+      document.title = '诊断 · 道德与法治';
+      if ('一二三四五六七八九'.indexOf(gradeSel) < 0) gradeSel = '一';
       if (volSel === '全') volSel = '';
     }
     if (subject === 'history') {
@@ -646,8 +646,8 @@
       h('div', { class: 'stage-tabs', role: 'tablist', 'aria-label': '学段' },
         subject === 'physics' ? [stageButton('', '全部'), stageButton('j', '初中'), stageButton('h', '高中')]
           : subject === 'history' || subject === 'geography' || subject === 'biology' || subject === 'chemistry' ? [stageButton('', '全部'), stageButton('j', '初中')]
-          : subject === 'chinese' ? [stageButton('', '全部'), stageButton('p', '小学'), stageButton('j', '初中')]
-          : subject === 'science' || subject === 'morality' ? [stageButton('', '全部'), stageButton('p', '小学')]
+          : subject === 'chinese' || subject === 'morality' ? [stageButton('', '全部'), stageButton('p', '小学'), stageButton('j', '初中')]
+          : subject === 'science' ? [stageButton('', '全部'), stageButton('p', '小学')]
           : [stageButton('', '全部'), stageButton('p', '小学'), stageButton('j', '初中'), stageButton('h', '高中')]),
       h('input', {
         type: 'search', class: 'search-lg', id: 'search',
@@ -727,8 +727,13 @@
           ? [['九', '九年级']]
           : subject === 'chinese'
           ? '一二三四五六七八九'.split('').map(function (x) { return [x, x + '年级']; })
-          : subject === 'science' || subject === 'morality'
+          : subject === 'science'
           ? '一二三四五六'.split('').map(function (x) { return [x, x + '年级']; })
+          : subject === 'morality'
+          ? '一二三四五六七八九'.split('').filter(function (x) {
+            var gnum = '一二三四五六七八九'.indexOf(x) + 1;
+            return D.topics.some(function (t) { return t.grade === gnum; });
+          }).map(function (x) { return [x, x + '年级']; })
           : GRADES.map(function (x) { return [x, x + '年级']; }).concat([
             ['高一', '高一'], ['高二', '高二'], ['选必一', '选必一'], ['选必二', '选必二'], ['选必三', '选必三']
           ]), gradeSel, function (v) {
@@ -745,6 +750,15 @@
             ? tabs('范围', [['全', '全一册']], '全', function () { volSel = '全'; })
           : (subject === 'english' && gradeSel === '九')
             ? tabs('范围', [['', '整年级'], ['上', '上册（新版）'], ['全', '全一册（旧版，九下暂用）']], volSel, function (v) { volSel = v; })
+          : subject === 'morality'
+            ? tabs('范围', [['', '整年级']].concat(['上', '下'].filter(function (sem) {
+              var gnum = '一二三四五六七八九'.indexOf(gradeSel) + 1;
+              return D.topics.some(function (t) { return t.grade === gnum && t.semester === sem; });
+            }).map(function (sem) { return [sem, sem + '册']; })), (function () {
+              var gnum = '一二三四五六七八九'.indexOf(gradeSel) + 1;
+              if (volSel && !D.topics.some(function (t) { return t.grade === gnum && t.semester === volSel; })) volSel = '';
+              return volSel;
+            })(), function (v) { volSel = v; })
             : tabs('范围', [['', '整年级'], ['上', '上册'], ['下', '下册']], volSel, function (v) { volSel = v; }),
         h('p', { class: 'muted', id: 'grade-info' }, g ? g.label + '：' + g.ids.length + ' 个知识点。' : '这个范围没有知识点。'),
         h('div', { class: 'row' },
@@ -1328,7 +1342,7 @@
         : subject === 'science'
         ? '目标与学习路径上的知识点对应的《义务教育科学课程标准（2022年版）》第一至第三学段学习内容的公开转述。'
         : subject === 'morality'
-        ? '目标与学习路径上的知识点对应的《义务教育道德与法治课程标准（2022年版）》第一至第三学段内容要求的公开转述。'
+        ? '目标与学习路径上的知识点对应的《义务教育道德与法治课程标准（2022年版）》第一至第三学段内容要求的公开转述；初中第四学段目前仅作主题推断，非逐字课标原文，页码待核。只覆盖已录入册次，初中尚未全部覆盖，不含高中。'
         : subject === 'history'
         ? '目标与学习路径上的知识点对应的《义务教育历史课程标准（2022年版）》第四学段内容要求的公开转述。'
         : subject === 'geography'

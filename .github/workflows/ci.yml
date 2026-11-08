@@ -38,6 +38,12 @@ jobs:
       - name: 题目示意图检查
         run: python3 scripts/check_figures.py
 
+      - name: 初中道法安全测试
+        run: python3 tests/test_jmor_safety.py
+
+      - name: 初中道法前端测试
+        run: node tests/test_jmor_frontend.js
+
       - name: CI 工作流测试
         run: node tests/test_ci_workflow.js
 

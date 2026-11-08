@@ -89,9 +89,9 @@
       sdemo.textContent = '先看一遍演示：一年级上册科学';
     }
   } else if (subject === 'morality') {
-    document.title = '小学道德与法治 · 中小学·高中知识图谱';
+    document.title = '道德与法治 · 中小学·高中知识图谱';
     var meye = document.querySelector('.eyebrow');
-    if (meye) meye.textContent = '道德与法治：小学一至六年级 · 统编版';
+    if (meye) meye.textContent = '道德与法治：小学与初中 · 统编版 · 只列出已录入册次（现有至七年级上册，初中尚未全部覆盖）';
     var mprimary = document.querySelector('.hero-actions a.btn-primary');
     var mbrowse = document.querySelector('.hero-actions a.btn:not(.btn-primary)');
     if (mprimary) mprimary.setAttribute('href', 'diagnose/?subject=morality');
@@ -295,7 +295,7 @@
     }
     var wantEnglish = subject === 'english';
     var wantPhysics = subject === 'physics';
-    var wantPrimary = subject === 'science' || subject === 'morality';
+    var wantPrimary = subject === 'science';
     var wantHistory = subject === 'history';
     var wantGeography = subject === 'geography';
     var wantBiology = subject === 'biology';
@@ -350,12 +350,19 @@
       var up = list.filter(function (topic) { return topic.semester === '上'; }).length;
       var down = list.filter(function (topic) { return topic.semester === '下'; }).length;
       var whole = list.filter(function (topic) { return topic.semester === '全'; }).length;
+      if (subject === 'morality' && !list.length) continue;
       var splitText = whole ? '全一册 ' + whole : '上 ' + up + ' · 下 ' + down;
+      if (subject === 'morality' && !whole) {
+        var morParts = [];
+        if (up) morParts.push('上 ' + up);
+        if (down) morParts.push('下 ' + down);
+        splitText = morParts.join(' · ');
+      }
       var href = subject !== 'math' ? 'explore/?subject=' + subject + '&grade=' + g : 'explore/?grade=' + g;
       addCard(g, g <= 6 ? '小学' : (wantPhysics ? '初中物理' : '初中'), CN[g] + '年级', g <= 6 ? 'is-primary' : 'is-junior', splitText, href);
     }
-    if (wantPrimary || subject === 'chinese') {
-      /* 语文到九年级（上下册），科学和道德与法治到六年级；都不加高中卡片 */
+    if (wantPrimary || subject === 'chinese' || subject === 'morality') {
+      /* 语文、道德与法治到九年级且无高中；科学只到六年级。道德与法治空年级不画卡片 */
     } else if (wantHistory) {
       /* 初中历史只到九年级 */
     } else if (wantGeography) {

@@ -8,7 +8,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "node tests/test_ci_workflow.js && node tests/test_engine.js && node tests/test_blindspots.js && node tests/test_children.js && node tests/test_question_ids.js && node tests/test_stem_compat.js && node tests/test_report_link.js && node tests/test_home.js && python3 scripts/validate.py && python3 scripts/check_figures.py && python3 scripts/verify_questions.py --report /tmp/cn-math-taxonomy-verification-report.json"
+    "test": "python3 tests/test_jmor_safety.py && node tests/test_jmor_frontend.js && node tests/test_ci_workflow.js && node tests/test_engine.js && node tests/test_blindspots.js && node tests/test_children.js && node tests/test_question_ids.js && node tests/test_stem_compat.js && node tests/test_report_link.js && node tests/test_home.js && python3 scripts/validate.py && python3 scripts/check_figures.py && python3 scripts/verify_questions.py --report /tmp/cn-math-taxonomy-verification-report.json"
   },
   "repository": {
     "type": "git",

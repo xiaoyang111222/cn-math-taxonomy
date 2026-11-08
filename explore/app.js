@@ -413,7 +413,7 @@
       box.replaceChildren(el('div', { class: 'detail-empty' },
         el('h1', { text: '选择一个知识点' }),
         el('p', { text: '可以搜索，也可以按年级、册、章展开。选中之后，中间只画它附近的先修，以及后面一层会用到它的知识点。' })));
-      document.title = subject === 'english' ? '知识图谱 · 英语' : subject === 'physics' ? '知识图谱 · 物理' : subject === 'chinese' ? '知识图谱 · 语文' : subject === 'science' ? '知识图谱 · 小学科学' : subject === 'morality' ? '知识图谱 · 小学道德与法治' : subject === 'history' ? '知识图谱 · 初中历史' : subject === 'geography' ? '知识图谱 · 初中地理' : subject === 'biology' ? '知识图谱 · 初中生物' : subject === 'chemistry' ? '知识图谱 · 初中化学' : '知识图谱 · 中小学·高中知识图谱';
+      document.title = subject === 'english' ? '知识图谱 · 英语' : subject === 'physics' ? '知识图谱 · 物理' : subject === 'chinese' ? '知识图谱 · 语文' : subject === 'science' ? '知识图谱 · 小学科学' : subject === 'morality' ? '知识图谱 · 道德与法治' : subject === 'history' ? '知识图谱 · 初中历史' : subject === 'geography' ? '知识图谱 · 初中地理' : subject === 'biology' ? '知识图谱 · 初中生物' : subject === 'chemistry' ? '知识图谱 · 初中化学' : '知识图谱 · 中小学·高中知识图谱';
       return;
     }
     var topic = byId.get(selected);
@@ -864,6 +864,28 @@
     $('graph-meta').textContent = '';
   }
 
+  function fillMoralityGrades() {
+    if (subject !== 'morality') return;
+    var morGrade = $('fGrade');
+    if (!morGrade) return;
+    var seen = {};
+    topics.forEach(function (topic) {
+      if (topic.grade >= 1 && topic.grade <= 9) seen[topic.grade] = true;
+    });
+    var keys = Object.keys(seen);
+    if (!keys.length) {
+      [1, 2, 3, 4, 5, 6, 7].forEach(function (g) { seen[g] = true; });
+    }
+    var prev = morGrade.value;
+    morGrade.replaceChildren();
+    morGrade.append(el('option', { value: '', text: '全部年级' }));
+    [1, 2, 3, 4, 5, 6, 7, 8, 9].forEach(function (g) {
+      if (!seen[g]) return;
+      morGrade.append(el('option', { value: String(g), text: CN[g] + '年级' }));
+    });
+    if (prev && seen[Number(prev)]) morGrade.value = prev;
+  }
+
   function fillDomain() {
     var seen = {};
     topics.forEach(function (topic) { if (topic.domain) seen[topic.domain] = true; });
@@ -987,18 +1009,12 @@
     }
     if (subject === 'morality') {
       document.querySelectorAll('#stage-tabs [data-stage]').forEach(function (button) {
-        var morStage = button.getAttribute('data-stage');
-        button.hidden = morStage === 'j' || morStage === 'h';
+        button.hidden = button.getAttribute('data-stage') === 'h';
       });
-      var morGrade = $('fGrade');
-      morGrade.replaceChildren();
-      morGrade.append(el('option', { value: '', text: '全部年级' }));
-      [1, 2, 3, 4, 5, 6].forEach(function (g) {
-        morGrade.append(el('option', { value: String(g), text: CN[g] + '年级' }));
-      });
+      fillMoralityGrades();
       var morSample = $('pick-sample');
       if (morSample) morSample.textContent = '先看看「我向国旗敬个礼」';
-      document.title = '知识图谱 · 小学道德与法治';
+      document.title = '知识图谱 · 道德与法治';
       return;
     }
     if (subject === 'history') {
@@ -1114,11 +1130,11 @@
   function applyQuery() {
     var params = new URLSearchParams(location.search);
     var gradeValue = params.get('grade') || '';
-    var gradeOk = subject === 'english' ? /^(?:[3-9]|1[0-6])$/ : subject === 'physics' ? /^(?:[89]|1[0-5])$/ : subject === 'history' ? /^[7-9]$/ : subject === 'geography' || subject === 'biology' ? /^[78]$/ : subject === 'chemistry' ? /^9$/ : subject === 'chinese' ? /^[1-9]$/ : subject === 'science' || subject === 'morality' ? /^[1-6]$/ : /^(?:[1-9]|1[0-4])$/;
+    var gradeOk = subject === 'english' ? /^(?:[3-9]|1[0-6])$/ : subject === 'physics' ? /^(?:[89]|1[0-5])$/ : subject === 'history' ? /^[7-9]$/ : subject === 'geography' || subject === 'biology' ? /^[78]$/ : subject === 'chemistry' ? /^9$/ : subject === 'chinese' || subject === 'morality' ? /^[1-9]$/ : subject === 'science' ? /^[1-6]$/ : /^(?:[1-9]|1[0-4])$/;
     if (gradeOk.test(gradeValue)) grade = gradeValue;
     var stageValue = params.get('stage') || '';
     if (stageValue === 'p' || stageValue === 'j' || stageValue === 'h') stage = stageValue;
-    if (subject === 'chinese' && stage === 'h') stage = '';
+    if ((subject === 'chinese' || subject === 'morality') && stage === 'h') stage = '';
     domain = params.get('domain') || '';
   }
 
@@ -1351,6 +1367,7 @@
   applyQuery();
   bind();
   load().then(function () { return loadQuestions(); }).then(function () {
+    fillMoralityGrades();
     fillDomain();
     syncControls();
     renderList();

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """把小学道德与法治草稿编译进 data/topics.json、dependencies.json、questions.json、课标文件。
 
-可以重复运行：先去掉已有的 cnd_ 知识点和 cds- 课标条目，再按脚本重新写入。
-不改数学、英语、物理、语文、科学的知识点、先修、题目和课标。先修边只对道德与法治边做传递约简。
+可以重复运行：先去掉已有的小学 cnd_p 知识点和第一至第三学段 cds-2022:1–3 课标条目，再按脚本重新写入。
+不删初中 cnd_j，也不删第四学段 cds-2022:4。那些由 scripts/jmor_build.py 维护。
+不改数学、英语、物理、语文、科学、历史、地理、生物、化学的知识点、先修、题目和课标。先修边只对小学道德与法治边做传递约简。
 
 用法：python3 scripts/mor_build.py
 """
@@ -52,7 +53,13 @@ def dump(name, data):
 
 
 def is_mor_topic_id(tid):
-    return str(tid).startswith("cnd_")
+    # 只认小学。cnd_j 是初中，不能在这里剥掉。
+    return str(tid).startswith("cnd_p")
+
+
+def is_primary_mor_std(sid):
+    s = str(sid)
+    return s.startswith("cds-2022:1.") or s.startswith("cds-2022:2.") or s.startswith("cds-2022:3.")
 
 
 def reaches(adj, src, dst, hard_only):
@@ -180,7 +187,7 @@ def main():
     base_topics = [t for t in topics if not is_mor_topic_id(t.get("id"))]
     base_deps = [e for e in deps if not is_mor_topic_id(e.get("topicId")) and not is_mor_topic_id(e.get("prerequisiteId"))]
     base_questions = [q for q in questions if not is_mor_topic_id(q.get("topicId"))]
-    base_items = [it for it in standards.get("items", []) if not str(it.get("id", "")).startswith("cds-")]
+    base_items = [it for it in standards.get("items", []) if not is_primary_mor_std(it.get("id"))]
     if any(is_mor_topic_id(t.get("id")) for t in base_topics):
         print("剥离道德与法治知识点失败", file=sys.stderr)
         return 1
@@ -313,6 +320,7 @@ def main():
     kept_std = {k: v for k, v in standards.items() if k != "items" and k != "morality"}
     standards_out = dict(standards)
     standards_out["items"] = list(base_items) + new_items
+    old_mo = standards.get("morality") if isinstance(standards.get("morality"), dict) else {}
     standards_out["morality"] = {
         "title": "义务教育道德与法治课程标准（2022年版）",
         "issuer": "中华人民共和国教育部",
@@ -320,6 +328,12 @@ def main():
         "stage": "第一至第三学段（1–2、3–4、5–6年级）",
         "note": "条目是对道德与法治课标学段内容要求的公开转述，不是逐页核对的原文。verbatim 为 false，page_or_ref 为「待核」。编号 cds-2022 是本图谱编的，不是教育部原编号。一上按2024秋修订统编目录，一下按2025春，二上按2025秋，二下按2026春，三上按2025秋，三下按2026春，四上/五上/六上按2026秋修订目录；四下、五下、六下修订版公开目录仍按现行统编版编排。",
     }
+    # 初中字段由 jmor_build.py 写入。重跑小学脚本时原样保留，避免把第四学段说明剥掉。
+    for k in ("junior_note", "notice_url", "pdf_url", "pdf_status", "coverage", "junior_stage"):
+        if k in old_mo:
+            standards_out["morality"][k] = old_mo[k]
+    if old_mo.get("junior_note"):
+        standards_out["morality"]["stage"] = "第一至第三学段（1–6年级）；第四学段（7–9年级）见 junior_note，由 scripts/jmor_build.py 维护"
     for k, v in kept_std.items():
         standards_out[k] = v
 
@@ -352,7 +366,7 @@ def main():
     again_topics = [t for t in again_t if not is_mor_topic_id(t.get("id"))]
     again_deps = [e for e in again_d if not is_mor_topic_id(e.get("topicId")) and not is_mor_topic_id(e.get("prerequisiteId"))]
     again_qs = [q for q in again_q if not is_mor_topic_id(q.get("topicId"))]
-    again_items = [it for it in again_s.get("items", []) if not str(it.get("id", "")).startswith("cds-")]
+    again_items = [it for it in again_s.get("items", []) if not is_primary_mor_std(it.get("id"))]
     if again_topics != base_topics or again_deps != base_deps or again_qs != base_questions or again_items != base_items:
         print("数学、英语或物理数据在写回后发生了变化", file=sys.stderr)
         return 1
