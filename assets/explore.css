@@ -17,6 +17,10 @@ body.page-explore .site-footer { flex: none; }
   grid-template-columns: minmax(250px, 320px) minmax(0, 1fr) minmax(270px, 380px);
   grid-template-rows: minmax(0, 1fr);
 }
+@media (min-width: 901px) {
+  .explore.side-collapsed { grid-template-columns: minmax(0, 1fr) minmax(270px, 380px); }
+  .explore.side-collapsed .side { display: none; }
+}
 .explore-mobile-bar { display: none; }
 
 .side, .detail, .graph-pane { min-width: 0; min-height: 0; }
@@ -207,6 +211,7 @@ body.page-explore .site-footer { flex: none; }
   .explore { display: flex; flex-direction: column; height: auto; }
   .explore-mobile-bar { display: block; padding: 10px 12px 0; }
   .list-toggle { width: 100%; }
+  .side-collapse { display: none; }
   .side { display: none; border-right: none; }
   .side.open { display: flex; max-height: 62vh; border-bottom: 1px solid var(--line); }
   .graph-stage { flex: none; min-height: 0; }

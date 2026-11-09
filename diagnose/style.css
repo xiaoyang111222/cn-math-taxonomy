@@ -53,6 +53,18 @@ label { font-weight: 700; }
 button.choice { text-align: left; width: 100%; min-height: 48px; padding: 12px 14px; font-size: 1.02rem; font-weight: 600; white-space: pre-wrap; border-radius: 12px; }
 button.choice.picked { border-color: var(--brand); background: var(--brand-soft); box-shadow: inset 0 0 0 2px var(--brand); }
 
+/* 提交/下一题所在操作栏固定在视口底部，看完解析不用再滚动 */
+.card .actions-sticky {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: var(--bg-elev);
+  border-top: 1px solid var(--line);
+}
+
 .tag { display: inline-block; font-size: 0.78rem; font-weight: 800; padding: 2px 8px; border-radius: 999px; margin-right: 4px; background: var(--bg-muted); color: var(--text); vertical-align: 1px; }
 .tag.weak { background: var(--bad-bg); color: var(--bad); }
 .tag.mastered { background: var(--ok-bg); color: var(--ok); }
