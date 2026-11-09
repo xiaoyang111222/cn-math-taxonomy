@@ -984,9 +984,9 @@
         h('div', { class: 'row actions-sticky' }, h('button', { class: 'primary', id: 'btn-next', onclick: function () { commit('skip'); } }, '下一题')));
     } else {
       card.append(
-        ui.answer ? h('div', { class: 'muted' }, '你的答案：' + ui.answer) : null,
+        ui.answer ? h('div', { class: 'muted' }, '你的答案：' + ui.answer) : '',
         q.type === 'self' ? h('div', { class: 'muted' }, '开放题：请对照参考答案自己判断。')
-          : (ui.verdict ? h('div', { class: 'muted' }, '这道题的答案无法被自动可靠地判定，请对照参考答案自己判断。') : null),
+          : (ui.verdict ? h('div', { class: 'muted' }, '这道题的答案无法被自动可靠地判定，请对照参考答案自己判断。') : ''),
         feedbackBlock(q),
         h('div', { class: 'row actions-sticky' },
           h('button', { class: 'good', id: 'btn-right', onclick: function () { commit('correct'); } }, '对（我做对了）'),
