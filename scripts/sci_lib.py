@@ -11,6 +11,8 @@ import re
 
 TOPICS = []
 HARD = []
+# SOFT 只登记 (topic, prereq, reason)，供编译脚本从官方课序软边链中拆出；本文件不生成边。
+SOFT = []
 MATH = []   # (key, cnm_id, reason)
 
 # (年级, 学期, 单元) -> (单元名, 领域, 默认课标符号)
@@ -109,6 +111,11 @@ def hard(topic, prereq, reason):
     HARD.append((topic, prereq, reason))
 
 
+def soft(topic, prereq, reason):
+    """先修软边登记。只追加到 SOFT，不在本文件生成边或改题目。"""
+    SOFT.append((topic, prereq, reason))
+
+
 def math(key, mid, reason):
     MATH.append((key, mid, reason))
 
@@ -120,8 +127,12 @@ def vol(grade, sem):
     _CUR["g"], _CUR["s"] = grade, sem
 
 
-def K(key, name, unit, typ, desc, qs, std=None, domain=None):
-    """登记一个知识点。qs 是 4 道选择题：(题干, 正确答案, [三个干扰项], 解析)，难度依次 basic、basic、standard、challenge。"""
+def K(key, name, unit, typ, desc, qs, std=None, domain=None, official=True):
+    """登记一个知识点。qs 是 4 道选择题：(题干, 正确答案, [三个干扰项], 解析)，难度依次 basic、basic、standard、challenge。
+
+    official=False：官方目录无同名独立课，作为单元内概念保留，供编译脚本从官方课序软边链中拆出。
+    不要把 official 写进对外 JSON 的 schema（本文件不写 JSON）。
+    """
     g, s = _CUR["g"], _CUR["s"]
     if (g, s, unit) not in UNITS:
         raise SystemExit("%s 单元未登记：%s%s 第%d单元" % (key, g, s, unit))
@@ -138,7 +149,8 @@ def K(key, name, unit, typ, desc, qs, std=None, domain=None):
     TOPICS.append({
         "key": key, "name": name, "domain": domain, "grade": g, "semester": s,
         "unit": unit, "type": typ, "description": desc,
-        "mastery_criteria": list(CRIT[domain]), "std": std or ustd, "conf": "inferred", "note": NOTE,
+        "mastery_criteria": list(CRIT[domain]), "std": std or ustd, "official": official,
+        "conf": "inferred", "note": NOTE,
         "items": [tuple(q) for q in qs],
     })
 

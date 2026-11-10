@@ -7,9 +7,9 @@
     "attachments": 0,
     "photo_urls": 0
   },
-  "scope": "官方价表版次（一至六年级上下册）加阶段一教辅线索（一上至三上，及三下磁极线索）。未打开智慧教育平台阅读器，无官方目录，无版权页原文。",
+  "scope": "官方价表版次（一至六年级上下册）；2026-11-10 续核国家中小学智慧教育平台电子教材：一下、二下、三上目录与相关课页已核，一上、二上核到第1单元目录，三下确认「磁极与方向」为辨别方向第4课。书号与价表一致。未整书下载。",
   "edition_note": "换版逐年分册进入省级价表，不是 2024 年一次齐套的 12 册修订套书。四至六下在北京 2026 春表仍为旧书号。",
-  "data_changes": "none",
+  "data_changes": "2026-11-10 依官方目录修正 Issue42：改 cns_p030/cns_p059 描述与错题，cns_p055/cns_p057 课名，删/改挂相关 hard 边，恢复观察云课序，新增 cns_p223「我们来钓鱼」，七个无同名课概念节点保留 ID 并移出官方 soft 课序链。未 push、未部署。SW VERSION 仍为 v14（SHELL/DATA 列表与数据结构未变）。",
   "volumes": [
     {
       "volume": "一上",
@@ -20,10 +20,11 @@
       "also_urls": [
         "https://www.esph.com.cn/docs/2026-08/d3e0396f6136410a90a3dadb574ff837.pdf"
       ],
-      "status": "official_edition_only",
+      "status": "official_toc",
       "page_start": null,
       "page_end": null,
-      "copyright_page": null
+      "copyright_page": "2024 年 7 月第 1 版　2024 年 7 月第 1 次印刷",
+      "toc_note": "电子教材目录已核第1单元「周围的植物」六课，无「植物的根、茎、叶」独立课。版权页原文：2024 年 7 月第 1 版　2024 年 7 月第 1 次印刷（不是 2026）。书号与价表一致。"
     },
     {
       "volume": "一下",
@@ -34,10 +35,12 @@
       "also_urls": [
         "https://www.esph.com.cn/docs/2025-01/9ea1b1ef6bb04acdb02de3b84f7b20c4.pdf"
       ],
-      "status": "official_edition_only",
+      "status": "official_toc",
       "page_start": null,
       "page_end": null,
-      "copyright_page": null
+      "copyright_page": null,
+      "toc_note": "电子教材目录已核（身边的物体、常见的动物）。动物联欢会为 U2 第6课，书页44、PDF51，课文是扮演/模拟联欢会，不是按环境或特征分类。书号与价表一致。未见版权页原文。",
+      "smartedu_url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=6747ab99-ffe6-4414-a4ba-e8de1e9a6b5f&catalogType=tchMaterial&subCatalog=tchMaterial"
     },
     {
       "volume": "二上",
@@ -49,10 +52,11 @@
         "https://www.esph.com.cn/docs/2024-09/adf7fb97d10c4db090c7a45a64deb384.pdf",
         "https://www.esph.com.cn/docs/2026-08/d3e0396f6136410a90a3dadb574ff837.pdf"
       ],
-      "status": "official_edition_only",
+      "status": "official_toc",
       "page_start": null,
       "page_end": null,
-      "copyright_page": null
+      "copyright_page": null,
+      "toc_note": "电子教材目录已核第1单元「造房子」六课，无「牢固的结构」独立课。书号与价表一致。未见版权页原文。"
     },
     {
       "volume": "二下",
@@ -63,10 +67,12 @@
       "also_urls": [
         "https://www.esph.com.cn/docs/2025-01/9ea1b1ef6bb04acdb02de3b84f7b20c4.pdf"
       ],
-      "status": "official_edition_only",
+      "status": "official_toc",
       "page_start": null,
       "page_end": null,
-      "copyright_page": null
+      "copyright_page": null,
+      "toc_note": "电子教材目录已核（探秘恐龙、玩磁铁）。玩磁铁官方课序：磁铁能吸引什么、比较力量的大小、让小车动起来（第3课，书页34、PDF41，开篇为多种方法让铁架四轮小车运动、先讲拉力；后页未逐页翻完，不断言有无同极相斥/异极相吸）、隔物吸铁、设计钓鱼玩具、我们来钓鱼。无「磁铁的两极」「磁铁在生活中的应用」独立课。书号与价表一致。未见版权页原文。",
+      "smartedu_url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=d1e7490c-c9e3-42cc-8235-858af14b4a20&catalogType=tchMaterial&subCatalog=tchMaterial"
     },
     {
       "volume": "三上",
@@ -78,10 +84,12 @@
         "https://www.esph.com.cn/docs/2024-09/adf7fb97d10c4db090c7a45a64deb384.pdf",
         "https://www.esph.com.cn/docs/2026-08/d3e0396f6136410a90a3dadb574ff837.pdf"
       ],
-      "status": "official_edition_only",
+      "status": "official_toc",
       "page_start": null,
       "page_end": null,
-      "copyright_page": null
+      "copyright_page": null,
+      "toc_note": "电子教材目录已核（天气、水）。观察云为 U1 第6课，书页17、PDF24；水珠从哪里来为 U2 第2课，书页33、PDF40。教材先观察云、后水珠。本轮不拆「天气预报与天气的影响」合并课。书号与价表一致。未见版权页原文。",
+      "smartedu_url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8959f5d-8cb6-4624-aebc-df78b612b332&catalogType=tchMaterial&subCatalog=tchMaterial"
     },
     {
       "volume": "三下",
@@ -92,10 +100,11 @@
       "also_urls": [
         "https://www.esph.com.cn/docs/2025-01/9ea1b1ef6bb04acdb02de3b84f7b20c4.pdf"
       ],
-      "status": "official_edition_only",
+      "status": "official_toc_partial",
       "page_start": null,
       "page_end": null,
-      "copyright_page": null
+      "copyright_page": null,
+      "toc_note": "电子教材已确认第1单元「辨别方向」第4课为「磁极与方向」（仓库已有 cns_p085）。未见本册完整目录转写与版权页原文。书号与价表一致。"
     },
     {
       "volume": "四上",
@@ -180,120 +189,118 @@
       "id": "cns_p007",
       "key": "g1a_genjing",
       "claim": "无独立课：植物的根、茎、叶（2017/2024目录均无对应课）",
-      "verdict": "教辅转写的一上U1课名中无此课。无同名课不等于概念错误，概念级拆分可保留，归属锚未核。无官方目录，不删不并。",
-      "action": "none",
-      "evidence_level": "pending_official_lesson_list",
+      "verdict": "官方一上U1目录无同名独立课。保留 ID、名称、题目和硬先修 cns_p002，作为单元内概念，已从官方 soft 课序链拆出。",
+      "action": "retain_concept_remove_from_official_soft_chain",
+      "evidence_level": "official_toc",
       "page": null
     },
     {
       "id": "cns_p023",
       "key": "g1b_cailiao",
       "claim": "无独立课：物体是用什么做的",
-      "verdict": "教辅知识清单未见该课名。材料概念可以独立存在，不能据此删除节点。归属锚待官方目录。",
-      "action": "none",
-      "evidence_level": "pending_official_lesson_list",
+      "verdict": "官方一下「身边的物体」目录无同名独立课。保留 ID、名称和题目，作为单元内概念，已从官方 soft 课序链拆出；无课文页码证据，未硬挂到某一课页码。",
+      "action": "retain_concept_remove_from_official_soft_chain",
+      "evidence_level": "official_toc",
       "page": null
     },
     {
       "id": "cns_p029",
       "key": "g1b_dongwutezheng",
       "claim": "无独立课：动物的身体特征",
-      "verdict": "阶段一未见到同名独立课。常识上动物有外部特征，不等于该版课本有此课锚。不删节点，不改其对 cns_p030 的硬边。",
-      "action": "none",
-      "evidence_level": "pending_official_lesson_list",
+      "verdict": "官方一下「常见的动物」目录无同名独立课。保留 ID、名称和题目，作为观察动物的概念拆分，已从官方 soft 课序链拆出，不再插成第7课。原 hard cns_p030<-cns_p029 已删。",
+      "action": "retain_concept_remove_from_official_soft_chain",
+      "evidence_level": "official_toc",
       "page": null
     },
     {
       "id": "cns_p037",
       "key": "g2a_jiegou",
       "claim": "无独立课：牢固的结构",
-      "verdict": "造房子单元教辅转写为6课，未见该课名。三角形结构的常识正确不等于二上课本锚已证实。不删不并。",
-      "action": "none",
-      "evidence_level": "pending_official_lesson_list",
+      "verdict": "官方二上「造房子」目录无同名独立课。保留 ID、名称、题目和硬边 cns_p208<-cns_p037，作为单元内概念，已从官方 soft 课序链拆出。",
+      "action": "retain_concept_remove_from_official_soft_chain",
+      "evidence_level": "official_toc",
       "page": null
     },
     {
       "id": "cns_p053",
       "key": "g2b_huashi",
       "claim": "无独立课：化石是怎样形成的（疑为课标条目自建）",
-      "verdict": "恐龙单元教辅课名中无此独立课。掩埋成化石出现在「挖掘恐龙化石」活动转述里，不能升为课名锚，也不能据此删除节点。",
-      "action": "none",
-      "evidence_level": "pending_official_lesson_list",
+      "verdict": "官方二下「探秘恐龙」目录无同名独立课。保留 ID、名称、题目和硬先修 cns_p047，作为单元内概念，已从官方 soft 课序链拆出。",
+      "action": "retain_concept_remove_from_official_soft_chain",
+      "evidence_level": "official_toc",
       "page": null
     },
     {
       "id": "cns_p058",
       "key": "g2b_jiechu",
       "claim": "无独立课：磁铁的两极是2017课名残留，2024已删并移到三下「磁极与方向」",
-      "verdict": "2017课名与2024删除、三下第4课均来自教辅，官方目录未见。不删 cns_p058，不改 cns_p085 归属，不宣布迁移完成。",
-      "action": "none",
-      "evidence_level": "pending_official_lesson_list",
+      "verdict": "官方二下「玩磁铁」目录无同名独立课。保留 ID、名称、题目和二下学期，不改挂三下（无课文证据说明二下已教或未教两极）。已移出官方课序链。保留 hard cns_p084<-cns_p058；cns_p085 的硬前置改挂到本节点。",
+      "action": "retain_concept_remove_from_official_soft_chain",
+      "evidence_level": "official_toc",
       "page": null
     },
     {
       "id": "cns_p060",
       "key": "g2b_yongchu",
       "claim": "无独立课：磁铁在生活中的应用是2017课名残留，2024已删",
-      "verdict": "旧教辅有此课，新教辅对照声称删除。两边都不是官方目录。不删节点。",
-      "action": "none",
-      "evidence_level": "pending_official_lesson_list",
+      "verdict": "官方二下「玩磁铁」目录无同名独立课。保留 ID、名称和题目，已移出官方课序链。",
+      "action": "retain_concept_remove_from_official_soft_chain",
+      "evidence_level": "official_toc",
       "page": null
     },
     {
       "id": "cns_p030",
       "key": "g1b_lianhuan",
       "claim": "描述不符：动物联欢会应为扮演活动（头饰/表演/交流），图谱写成按生活环境和身体特征分类；实拍p44-45",
-      "verdict": "课件活动类型与作者同向，只说明教辅如此转写。Issue无实拍附件。不改描述，不写页码。",
-      "action": "none",
-      "evidence_level": "pending_official_lesson_list",
-      "page": null
+      "verdict": "官方课文为模拟动物联欢会、每名同学扮演一种动物参加（U2第6课，书页44，PDF51），不是按环境或特征分类。已改描述与四道题；删除 hard cns_p030<-cns_p029；原 hard cns_p087<-cns_p030 改挂到 cns_p025。",
+      "action": "update_description_questions_and_edges",
+      "evidence_level": "official_toc",
+      "page": 44,
+      "pdf_page": 51
     },
     {
       "id": "cns_p059",
       "key": "g2b_xiaoche",
       "claim": "描述不符：让小车动起来在作者所称2024版是磁力隔空驱动及距离影响，图谱写成同极相斥、异极相吸",
-      "verdict": "教材解读转写与作者同向，原页未见。不改描述，不拆除对 cns_p058 的硬边。",
-      "action": "none",
-      "evidence_level": "pending_official_lesson_list",
-      "page": null
+      "verdict": "官方第3课，书页34、PDF41。已见开篇：多种方法让铁架四轮小车运动，先讲拉力。后页未逐页翻完，不断言有无同极相斥/异极相吸。已改描述与四道题，删除 hard cns_p059<-cns_p058；原 hard cns_p085<-cns_p059 改挂到 cns_p058。课序插入比较力量的大小之后、隔物吸铁之前。",
+      "action": "update_description_questions_edges_and_order",
+      "evidence_level": "official_toc",
+      "page": 34,
+      "pdf_page": 41,
+      "later_pages": "not_fully_checked"
     },
     {
       "id": "cns_p069",
       "key": "g3a_yun",
       "claim": "学序挪位：观察云硬边依赖 cns_p068 水珠从哪里来，与作者所称教材学序相反（观察云为U1-6印17-18，水珠印33）",
-      "verdict": "知识清单课序与作者同向：观察云在天气单元，水珠在后一单元。页码未核。无官方目录不得翻转硬边。常识上凝结与云有关，不等于该版印页已证实这条先修。",
-      "action": "none",
-      "evidence_level": "pending_official_lesson_list",
-      "page": null,
+      "verdict": "官方观察云在 U1第6课（书页17，PDF24），水珠从哪里来在 U2第2课（书页33，PDF40）。已删除 hard cns_p069<-cns_p068，未反向加 hard。soft 课序现为观测风→观察云→天气预报与天气的影响→水到哪里去了→水珠→水沸腾了。本轮不拆 cns_p066。描述与第4题改为云量/观察安全，不编造云的组成。",
+      "action": "remove_hard_edge_restore_official_soft_order",
+      "evidence_level": "official_toc",
+      "page": 17,
       "hard_edge": {
         "from": "cns_p068",
         "to": "cns_p069",
         "strength": "hard",
         "reason": "理解云的组成，要先知道水蒸气遇冷凝结。"
-      }
+      },
+      "pdf_page": 24
     }
   ],
   "magnet_unit_product_order_note": {
-    "graph_order": [
+    "official_order": [
       "cns_p054 磁铁能吸引什么",
-      "cns_p055 比较磁力的大小",
-      "cns_p056 隔物吸铁",
-      "cns_p057 设计和玩钓鱼玩具",
-      "cns_p058 磁铁的两极",
+      "cns_p055 比较力量的大小（课名已按官方目录改；原名比较磁力的大小）",
       "cns_p059 让小车动起来",
+      "cns_p056 隔物吸铁",
+      "cns_p057 设计钓鱼玩具（课名已按官方目录改；原名设计和玩钓鱼玩具）",
+      "cns_p223 我们来钓鱼（本轮新增）"
+    ],
+    "concepts_removed_from_official_chain": [
+      "cns_p058 磁铁的两极",
       "cns_p060 磁铁在生活中的应用"
     ],
-    "issue_claimed_2024_order": [
-      "磁铁能吸引什么",
-      "比较力量的大小",
-      "让小车动起来",
-      "隔物吸铁",
-      "设计钓鱼玩具",
-      "我们来钓鱼"
-    ],
-    "verdict": "教辅新旧对照与作者课序同向，不是官方目录。不重排。",
-    "action": "none",
-    "evidence_level": "pending_official_lesson_list",
-    "page": null
+    "verdict": "官方目录已核。课序与课名已按官方六课调整；p058、p060 保留 ID，移出官方 soft 课序链。让小车后页未逐页核完。",
+    "action": "reorder_rename_and_add_cns_p223",
+    "evidence_level": "official_toc"
   }
 }

@@ -24,7 +24,8 @@ import sci_g4  # noqa: E402,F401
 import sci_g5  # noqa: E402,F401
 import sci_g6  # noqa: E402,F401
 import sci_edges  # noqa: E402,F401
-from sci_lib import HARD, MATH, CODE_OF, STANDARD_ROWS, TOPICS, chapter, check_question, materialise_questions  # noqa: E402
+from sci_lib import HARD, MATH, SOFT, CODE_OF, STANDARD_ROWS, TOPICS, chapter, check_question, materialise_questions  # noqa: E402
+from sci_ids import KEY_IDS  # noqa: E402
 from verify_questions import verify_all  # noqa: E402
 from sci_figs import FIGS  # noqa: E402
 
@@ -226,9 +227,25 @@ def main():
     new_topics = []
     new_questions = []
     id_of = {}
+    id_owner = {}
+    for key, tid in KEY_IDS.items():
+        if tid in id_owner:
+            print("KEY_IDS 指向重复 ID：%s（%s、%s）" % (tid, id_owner[tid], key), file=sys.stderr)
+            return 1
+        id_owner[tid] = key
+    used_nums = {int(tid[5:]) for tid in KEY_IDS.values()}
+    next_num = max(used_nums) if used_nums else 0
     for i, spec in enumerate(TOPICS, start=1):
-        tid = "cns_p%03d" % i
-        id_of[spec["key"]] = tid
+        key = spec["key"]
+        if key in KEY_IDS:
+            tid = KEY_IDS[key]
+        else:
+            next_num += 1
+            while next_num in used_nums:
+                next_num += 1
+            tid = "cns_p%03d" % next_num
+            used_nums.add(next_num)
+        id_of[key] = tid
         if spec["std"] not in id_of_std:
             print("%s 课标 %s 不存在" % (spec["key"], spec["std"]), file=sys.stderr)
             return 1
@@ -237,8 +254,9 @@ def main():
             check_question(spec["key"], q)
         built = []
         diag_answer = None
+        slot_base = int(tid[5:])
         for n, item in enumerate(made, start=1):
-            q, shown = build_question(tid, n, item, slot=i + n)
+            q, shown = build_question(tid, n, item, slot=slot_base + n)
             fig = FIGS.get((spec["key"], n))
             if fig:
                 q["figure"] = fig
@@ -275,13 +293,16 @@ def main():
         new_questions.extend(built)
 
     raw = []
-    for i in range(1, len(TOPICS)):
-        cur = TOPICS[i]["key"]
-        prev = TOPICS[i - 1]["key"]
+    official_topics = [t for t in TOPICS if t.get("official") is not False]
+    for i in range(1, len(official_topics)):
+        cur = official_topics[i]["key"]
+        prev = official_topics[i - 1]["key"]
         if (cur, prev) in hard_pairs:
             continue
         reason = "按教科版科学的常见教学顺序，先学「%s」，再学「%s」。" % (names[prev], names[cur])
         raw.append((cur, prev, "soft", reason))
+    for src, dst, reason in SOFT:
+        raw.append((src, dst, "soft", reason))
     for src, dst, reason in HARD:
         raw.append((src, dst, "hard", reason))
 
