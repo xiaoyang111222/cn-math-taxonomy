@@ -1,0 +1,299 @@
+{
+  "verified_on": "2026-11-10",
+  "issue": {
+    "title": "科学子图节点教材锚定异常：7 幻点+2 描述失真+1 挪位（教科版 2024 版实拍取证）",
+    "created_at": "2026-11-07T03:09:39Z",
+    "comments": 0,
+    "attachments": 0,
+    "photo_urls": 0
+  },
+  "scope": "官方价表版次（一至六年级上下册）加阶段一教辅线索（一上至三上，及三下磁极线索）。未打开智慧教育平台阅读器，无官方目录，无版权页原文。",
+  "edition_note": "换版逐年分册进入省级价表，不是 2024 年一次齐套的 12 册修订套书。四至六下在北京 2026 春表仍为旧书号。",
+  "data_changes": "none",
+  "volumes": [
+    {
+      "volume": "一上",
+      "isbn": "978-7-5191-3978-0",
+      "signatures": 3.5,
+      "price_list_year": "北京2024秋起；北京2026秋仍为此号",
+      "url": "https://www.esph.com.cn/docs/2024-09/adf7fb97d10c4db090c7a45a64deb384.pdf",
+      "also_urls": [
+        "https://www.esph.com.cn/docs/2026-08/d3e0396f6136410a90a3dadb574ff837.pdf"
+      ],
+      "status": "official_edition_only",
+      "page_start": null,
+      "page_end": null,
+      "copyright_page": null
+    },
+    {
+      "volume": "一下",
+      "isbn": "978-7-5191-4193-6",
+      "signatures": 3.5,
+      "price_list_year": "北京2026春（相对2024春978-7-5191-1268-4/3印张）。湖北2025春印张3.5且该行备注2022课标修订，但该页未抽出书号",
+      "url": "https://www.esph.com.cn/docs/2026-02/f8f9fec2bc104ac1821fa2ac67892e12.pdf",
+      "also_urls": [
+        "https://www.esph.com.cn/docs/2025-01/9ea1b1ef6bb04acdb02de3b84f7b20c4.pdf"
+      ],
+      "status": "official_edition_only",
+      "page_start": null,
+      "page_end": null,
+      "copyright_page": null
+    },
+    {
+      "volume": "二上",
+      "isbn": "978-7-5191-4428-9",
+      "signatures": 3.5,
+      "price_list_year": "北京2025秋起；北京2026秋仍为此号。北京2024秋为978-7-5191-1572-2/3印张",
+      "url": "https://www.esph.com.cn/docs/2025-08/5e32c27d7e5046ac87677853220c89f6.pdf",
+      "also_urls": [
+        "https://www.esph.com.cn/docs/2024-09/adf7fb97d10c4db090c7a45a64deb384.pdf",
+        "https://www.esph.com.cn/docs/2026-08/d3e0396f6136410a90a3dadb574ff837.pdf"
+      ],
+      "status": "official_edition_only",
+      "page_start": null,
+      "page_end": null,
+      "copyright_page": null
+    },
+    {
+      "volume": "二下",
+      "isbn": "978-7-5191-4795-2",
+      "signatures": 3.5,
+      "price_list_year": "北京2026春（相对2024春978-7-5191-1742-9/3印张）。湖北2025春该行仍3印张且未见修订备注",
+      "url": "https://www.esph.com.cn/docs/2026-02/f8f9fec2bc104ac1821fa2ac67892e12.pdf",
+      "also_urls": [
+        "https://www.esph.com.cn/docs/2025-01/9ea1b1ef6bb04acdb02de3b84f7b20c4.pdf"
+      ],
+      "status": "official_edition_only",
+      "page_start": null,
+      "page_end": null,
+      "copyright_page": null
+    },
+    {
+      "volume": "三上",
+      "isbn": "978-7-5191-4429-6",
+      "signatures": 5.75,
+      "price_list_year": "北京2025秋起；北京2026秋仍为此号。北京2024秋为978-7-5191-1927-0/4印张",
+      "url": "https://www.esph.com.cn/docs/2025-08/5e32c27d7e5046ac87677853220c89f6.pdf",
+      "also_urls": [
+        "https://www.esph.com.cn/docs/2024-09/adf7fb97d10c4db090c7a45a64deb384.pdf",
+        "https://www.esph.com.cn/docs/2026-08/d3e0396f6136410a90a3dadb574ff837.pdf"
+      ],
+      "status": "official_edition_only",
+      "page_start": null,
+      "page_end": null,
+      "copyright_page": null
+    },
+    {
+      "volume": "三下",
+      "isbn": "978-7-5191-4796-9",
+      "signatures": 5.75,
+      "price_list_year": "北京2026春（相对2024春978-7-5191-2093-1/4印张）。湖北2025春该行仍4印张且未见修订备注",
+      "url": "https://www.esph.com.cn/docs/2026-02/f8f9fec2bc104ac1821fa2ac67892e12.pdf",
+      "also_urls": [
+        "https://www.esph.com.cn/docs/2025-01/9ea1b1ef6bb04acdb02de3b84f7b20c4.pdf"
+      ],
+      "status": "official_edition_only",
+      "page_start": null,
+      "page_end": null,
+      "copyright_page": null
+    },
+    {
+      "volume": "四上",
+      "isbn": "978-7-5191-5024-2",
+      "signatures": 5.75,
+      "price_list_year": "北京2026秋。至北京2025秋仍为978-7-5191-2232-4/4印张",
+      "url": "https://www.esph.com.cn/docs/2026-08/d3e0396f6136410a90a3dadb574ff837.pdf",
+      "also_urls": [
+        "https://www.esph.com.cn/docs/2024-09/adf7fb97d10c4db090c7a45a64deb384.pdf",
+        "https://www.esph.com.cn/docs/2025-08/5e32c27d7e5046ac87677853220c89f6.pdf"
+      ],
+      "status": "official_edition_only",
+      "page_start": null,
+      "page_end": null,
+      "copyright_page": null
+    },
+    {
+      "volume": "四下",
+      "isbn": "978-7-5191-2399-4",
+      "signatures": 4,
+      "price_list_year": "北京2026春仍为此旧书号",
+      "url": "https://www.esph.com.cn/docs/2026-02/f8f9fec2bc104ac1821fa2ac67892e12.pdf",
+      "also_urls": [],
+      "status": "official_edition_only",
+      "page_start": null,
+      "page_end": null,
+      "copyright_page": null
+    },
+    {
+      "volume": "五上",
+      "isbn": "978-7-5191-5025-9",
+      "signatures": 8.5,
+      "price_list_year": "北京2026秋。至2025秋仍为978-7-5191-2235-5/5印张",
+      "url": "https://www.esph.com.cn/docs/2026-08/d3e0396f6136410a90a3dadb574ff837.pdf",
+      "also_urls": [
+        "https://www.esph.com.cn/docs/2026-08/d5a201b89ce84843970cddf9284fc4af.pdf"
+      ],
+      "status": "official_edition_only",
+      "page_start": null,
+      "page_end": null,
+      "copyright_page": null
+    },
+    {
+      "volume": "五下",
+      "isbn": "978-7-5191-2413-7",
+      "signatures": 5,
+      "price_list_year": "北京2026春仍为此旧书号",
+      "url": "https://www.esph.com.cn/docs/2026-02/f8f9fec2bc104ac1821fa2ac67892e12.pdf",
+      "also_urls": [],
+      "status": "official_edition_only",
+      "page_start": null,
+      "page_end": null,
+      "copyright_page": null
+    },
+    {
+      "volume": "六上",
+      "isbn": "978-7-5191-5026-6",
+      "signatures": 8.5,
+      "price_list_year": "北京2026秋。至2025秋仍为978-7-5191-2237-9/5印张",
+      "url": "https://www.esph.com.cn/docs/2026-08/d3e0396f6136410a90a3dadb574ff837.pdf",
+      "also_urls": [],
+      "status": "official_edition_only",
+      "page_start": null,
+      "page_end": null,
+      "copyright_page": null
+    },
+    {
+      "volume": "六下",
+      "isbn": "978-7-5191-2437-3",
+      "signatures": 5,
+      "price_list_year": "北京2026春仍为此旧书号",
+      "url": "https://www.esph.com.cn/docs/2026-02/f8f9fec2bc104ac1821fa2ac67892e12.pdf",
+      "also_urls": [],
+      "status": "official_edition_only",
+      "page_start": null,
+      "page_end": null,
+      "copyright_page": null
+    }
+  ],
+  "items": [
+    {
+      "id": "cns_p007",
+      "key": "g1a_genjing",
+      "claim": "无独立课：植物的根、茎、叶（2017/2024目录均无对应课）",
+      "verdict": "教辅转写的一上U1课名中无此课。无同名课不等于概念错误，概念级拆分可保留，归属锚未核。无官方目录，不删不并。",
+      "action": "none",
+      "evidence_level": "pending_official_lesson_list",
+      "page": null
+    },
+    {
+      "id": "cns_p023",
+      "key": "g1b_cailiao",
+      "claim": "无独立课：物体是用什么做的",
+      "verdict": "教辅知识清单未见该课名。材料概念可以独立存在，不能据此删除节点。归属锚待官方目录。",
+      "action": "none",
+      "evidence_level": "pending_official_lesson_list",
+      "page": null
+    },
+    {
+      "id": "cns_p029",
+      "key": "g1b_dongwutezheng",
+      "claim": "无独立课：动物的身体特征",
+      "verdict": "阶段一未见到同名独立课。常识上动物有外部特征，不等于该版课本有此课锚。不删节点，不改其对 cns_p030 的硬边。",
+      "action": "none",
+      "evidence_level": "pending_official_lesson_list",
+      "page": null
+    },
+    {
+      "id": "cns_p037",
+      "key": "g2a_jiegou",
+      "claim": "无独立课：牢固的结构",
+      "verdict": "造房子单元教辅转写为6课，未见该课名。三角形结构的常识正确不等于二上课本锚已证实。不删不并。",
+      "action": "none",
+      "evidence_level": "pending_official_lesson_list",
+      "page": null
+    },
+    {
+      "id": "cns_p053",
+      "key": "g2b_huashi",
+      "claim": "无独立课：化石是怎样形成的（疑为课标条目自建）",
+      "verdict": "恐龙单元教辅课名中无此独立课。掩埋成化石出现在「挖掘恐龙化石」活动转述里，不能升为课名锚，也不能据此删除节点。",
+      "action": "none",
+      "evidence_level": "pending_official_lesson_list",
+      "page": null
+    },
+    {
+      "id": "cns_p058",
+      "key": "g2b_jiechu",
+      "claim": "无独立课：磁铁的两极是2017课名残留，2024已删并移到三下「磁极与方向」",
+      "verdict": "2017课名与2024删除、三下第4课均来自教辅，官方目录未见。不删 cns_p058，不改 cns_p085 归属，不宣布迁移完成。",
+      "action": "none",
+      "evidence_level": "pending_official_lesson_list",
+      "page": null
+    },
+    {
+      "id": "cns_p060",
+      "key": "g2b_yongchu",
+      "claim": "无独立课：磁铁在生活中的应用是2017课名残留，2024已删",
+      "verdict": "旧教辅有此课，新教辅对照声称删除。两边都不是官方目录。不删节点。",
+      "action": "none",
+      "evidence_level": "pending_official_lesson_list",
+      "page": null
+    },
+    {
+      "id": "cns_p030",
+      "key": "g1b_lianhuan",
+      "claim": "描述不符：动物联欢会应为扮演活动（头饰/表演/交流），图谱写成按生活环境和身体特征分类；实拍p44-45",
+      "verdict": "课件活动类型与作者同向，只说明教辅如此转写。Issue无实拍附件。不改描述，不写页码。",
+      "action": "none",
+      "evidence_level": "pending_official_lesson_list",
+      "page": null
+    },
+    {
+      "id": "cns_p059",
+      "key": "g2b_xiaoche",
+      "claim": "描述不符：让小车动起来在作者所称2024版是磁力隔空驱动及距离影响，图谱写成同极相斥、异极相吸",
+      "verdict": "教材解读转写与作者同向，原页未见。不改描述，不拆除对 cns_p058 的硬边。",
+      "action": "none",
+      "evidence_level": "pending_official_lesson_list",
+      "page": null
+    },
+    {
+      "id": "cns_p069",
+      "key": "g3a_yun",
+      "claim": "学序挪位：观察云硬边依赖 cns_p068 水珠从哪里来，与作者所称教材学序相反（观察云为U1-6印17-18，水珠印33）",
+      "verdict": "知识清单课序与作者同向：观察云在天气单元，水珠在后一单元。页码未核。无官方目录不得翻转硬边。常识上凝结与云有关，不等于该版印页已证实这条先修。",
+      "action": "none",
+      "evidence_level": "pending_official_lesson_list",
+      "page": null,
+      "hard_edge": {
+        "from": "cns_p068",
+        "to": "cns_p069",
+        "strength": "hard",
+        "reason": "理解云的组成，要先知道水蒸气遇冷凝结。"
+      }
+    }
+  ],
+  "magnet_unit_product_order_note": {
+    "graph_order": [
+      "cns_p054 磁铁能吸引什么",
+      "cns_p055 比较磁力的大小",
+      "cns_p056 隔物吸铁",
+      "cns_p057 设计和玩钓鱼玩具",
+      "cns_p058 磁铁的两极",
+      "cns_p059 让小车动起来",
+      "cns_p060 磁铁在生活中的应用"
+    ],
+    "issue_claimed_2024_order": [
+      "磁铁能吸引什么",
+      "比较力量的大小",
+      "让小车动起来",
+      "隔物吸铁",
+      "设计钓鱼玩具",
+      "我们来钓鱼"
+    ],
+    "verdict": "教辅新旧对照与作者课序同向，不是官方目录。不重排。",
+    "action": "none",
+    "evidence_level": "pending_official_lesson_list",
+    "page": null
+  }
+}
