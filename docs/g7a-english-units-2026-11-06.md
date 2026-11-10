@@ -1,5 +1,8 @@
 # 七年级上册英语单元映射（2026-11-06）
 
+2026-11-11 已用智慧教育平台官方阅读器复核七上目录，并改挂四个语音点；仍待核的 5 个点见 [english-g7-official-reader-20261111.md](english-g7-official-reader-20261111.md)。下文仍是 2026-11-06 资源页核对记录，未改写。
+
+
 查证：2026-11-07 00:20（Asia/Tokyo）。同一请求的 HTTP `Date` 是 `Fri, 06 Nov 2026 15:20:32 GMT`。打开 <https://www.pep.com.cn/zslth/yyptzy/czyy/7s/>，标题「七年级上册」。这是配套资源页（课文音频、词汇音频），不是纸质课本的语法表。
 
 | 资源页标题 | 图谱 `chapter` |

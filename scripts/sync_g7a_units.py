@@ -35,24 +35,28 @@ NAME_IN_REASON = [
     ("「读路线说明」", "「读学校位置」"),
 ]
 
-# 这些软边如果继续写「新版单元顺序」，会把待核项说成已经挂进某一课。
+# 软边理由：已按官方目录改挂的，改写成官方课序；仍待核的，避免说成已挂进某一课。
 REASON_OVERRIDE = {
     ("cne_j036", "cne_j056"): (
-        "月份与序数词在七年级上册第7单元。出行方式没有核到本册某一单元，"
-        "这条软边只保留原来的学习顺序。"
+        "月份与序数词在七年级上册第7单元。出行方式在七上、七下2022课标修订"
+        "官方目录中均无同名课，这条软边只保留原来的学习顺序。"
     ),
     ("cne_j040", "cne_j098"): (
-        "学科词汇在七年级上册第4单元。连读没有核到该单元，"
+        "辅音与元音连读和学科词汇都在七年级上册第4单元 My Favourite Subject。"
         "这条软边只保留原来的学习顺序。"
     ),
     ("cne_j098", "cne_j078"): (
-        "连读没有核到七年级上册的某一单元，这条软边只保留原来的学习顺序。"
+        "按人教版2022课标修订七上官方目录，先学第3单元 My School，再学第4单元的连读。"
     ),
     ("cne_j107", "cne_j043"): (
-        "不完全爆破没有核到 Fun Clubs，这条软边只保留原来的学习顺序。"
+        "按人教版2022课标修订七上官方目录，不完全爆破在第5单元 Fun Clubs，"
+        "前一单元是 My Favourite Subject。"
     ),
     ("cne_j008", "cne_p014"): "指示代词 this、that、these、those 承接小学的 This is。",
 }
+
+# 官方课序中连读早于句末升降调，删除与之相反的硬先修。
+DROP_HARD_EDGES = {("cne_j098", "cne_j002")}
 
 
 def load(name):
@@ -146,8 +150,14 @@ def main():
         changed_topics.append(tid)
 
     reason_n = 0
+    kept = []
+    drop_n = 0
     for e in deps:
         key = (e["topicId"], e["prerequisiteId"])
+        if key in DROP_HARD_EDGES:
+            drop_n += 1
+            continue
+        kept.append(e)
         if key in REASON_OVERRIDE:
             if e["reason"] != REASON_OVERRIDE[key]:
                 e["reason"] = REASON_OVERRIDE[key]
@@ -162,6 +172,7 @@ def main():
         if new != reason:
             e["reason"] = new
             reason_n += 1
+    deps = kept
 
     standards_after = {t["id"]: json.dumps(t.get("standards"), ensure_ascii=False, sort_keys=True) for t in topics}
     if standards_before != standards_after:
@@ -182,13 +193,14 @@ def main():
                 print("把 %s 写出了七上" % t["id"], file=sys.stderr)
                 return 1
 
-    if not changed_topics and reason_n == 0:
+    if not changed_topics and reason_n == 0 and drop_n == 0:
         print("没有差异")
         return 0
     dump("topics.json", topics)
-    dump("questions.json", questions)
+    if changed_q:
+        dump("questions.json", questions)
     dump("dependencies.json", deps)
-    print("topics %d questions %d reasons %d" % (len(changed_topics), changed_q, reason_n))
+    print("topics %d questions %d reasons %d dropped %d" % (len(changed_topics), changed_q, reason_n, drop_n))
     print(" ".join(changed_topics))
     return 0
 

@@ -2,11 +2,11 @@
 """七年级下册，以及已经挂在七年级上册新版单元上的点。
 
 才艺、作息改到七上 Unit 5、Unit 6。学校场所、家人外貌改到七上 Unit 3、Unit 2。
-出行方式改到七上「待核」（unit 90），不写进 A Day in the Life。
+出行方式仍在七上「待核」（unit 90）：2026-11-11 官方七上、七下目录均无同名课，不按旧版七下 How do you get to school 改挂。
 其余点仍是七年级下册旧编号，本轮不改题目。
 """
 from en_tx import V, P, G, F, R
-from enj_g7a import PENDING
+from enj_g7a import TRANS_PENDING
 
 
 def q(prompt, answer, wrongs, expl):
@@ -116,11 +116,11 @@ R("rw_day7", "读一天的安排", 7, "上", 6,
 ])
 
 V("vo_trans7", "交通方式", 7, "上", 90,
-  "认读 train、subway、bike 和 bus。" + PENDING,
+  "认读 train、subway、bike 和 bus。" + TRANS_PENDING,
   [("train", "火车"), ("subway", "地铁"), ("bike", "自行车"), ("bus", "公共汽车")], "vocab7")
 
 G("gr_howfar", "How 问交通", 7, "上", 90,
-  "能用 how、how long 和 how far 询问出行方式、时间和距离。" + PENDING, "question", [
+  "能用 how、how long 和 how far 询问出行方式、时间和距离。" + TRANS_PENDING, "question", [
     q("询问对方怎么去学校，哪一句正确？", "How do you get to school?",
       ["How does you get to school?", "How do you gets to school?", "How you get to school?"],
       "you 用 How do you get。"),
@@ -135,7 +135,7 @@ G("gr_howfar", "How 问交通", 7, "上", 90,
 ])
 
 F("fu_trans7", "谈论怎么上学", 7, "上", 90,
-  "能说明自己怎么上学、花多长时间。" + PENDING, "func_life", [
+  "能说明自己怎么上学、花多长时间。" + TRANS_PENDING, "func_life", [
     q("想说你乘地铁上学，哪一句合适？", "I take the subway to school.",
       ["I by the subway to school.", "I take the subway to school by.", "I takes the subway to school."],
       "I take the subway。"),
@@ -150,7 +150,7 @@ F("fu_trans7", "谈论怎么上学", 7, "上", 90,
 ])
 
 R("rw_trans7", "读上学方式", 7, "上", 90,
-  "读一段出行短文，找出方式和时间。" + PENDING, "read_detail", [
+  "读一段出行短文，找出方式和时间。" + TRANS_PENDING, "read_detail", [
     q("Lisa lives 5 kilometers from school. She rides her bike. It takes her 15 minutes. 她怎么上学？", "骑自行车",
       ["乘地铁", "乘火车", "步行"], "rides her bike 是骑自行车。"),
     q("Lisa lives 5 kilometers from school. She rides her bike. It takes her 15 minutes. 大约要多久？", "15 分钟",

@@ -9369,7 +9369,7 @@
     "topicId": "cne_j036",
     "prerequisiteId": "cne_j056",
     "strength": "soft",
-    "reason": "月份与序数词在七年级上册第7单元。出行方式没有核到本册某一单元，这条软边只保留原来的学习顺序。"
+    "reason": "月份与序数词在七年级上册第7单元。出行方式在七上、七下2022课标修订官方目录中均无同名课，这条软边只保留原来的学习顺序。"
   },
   {
     "topicId": "cne_j037",
@@ -9393,7 +9393,7 @@
     "topicId": "cne_j040",
     "prerequisiteId": "cne_j098",
     "strength": "soft",
-    "reason": "学科词汇在七年级上册第4单元。连读没有核到该单元，这条软边只保留原来的学习顺序。"
+    "reason": "辅音与元音连读和学科词汇都在七年级上册第4单元 My Favourite Subject。这条软边只保留原来的学习顺序。"
   },
   {
     "topicId": "cne_j041",
@@ -9735,7 +9735,7 @@
     "topicId": "cne_j098",
     "prerequisiteId": "cne_j078",
     "strength": "soft",
-    "reason": "连读没有核到七年级上册的某一单元，这条软边只保留原来的学习顺序。"
+    "reason": "按人教版2022课标修订七上官方目录，先学第3单元 My School，再学第4单元的连读。"
   },
   {
     "topicId": "cne_j099",
@@ -9789,7 +9789,7 @@
     "topicId": "cne_j107",
     "prerequisiteId": "cne_j043",
     "strength": "soft",
-    "reason": "不完全爆破没有核到 Fun Clubs，这条软边只保留原来的学习顺序。"
+    "reason": "按人教版2022课标修订七上官方目录，不完全爆破在第5单元 Fun Clubs，前一单元是 My Favourite Subject。"
   },
   {
     "topicId": "cne_j108",
@@ -10618,12 +10618,6 @@
     "prerequisiteId": "cne_j089",
     "strength": "hard",
     "reason": "先会规则动词过去式，再分辨 ed 的三种读音。"
-  },
-  {
-    "topicId": "cne_j098",
-    "prerequisiteId": "cne_j002",
-    "strength": "hard",
-    "reason": "连读是在句子语调之后的朗读技能。"
   },
   {
     "topicId": "cne_j107",
