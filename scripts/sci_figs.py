@@ -241,7 +241,7 @@ FIGS = {
     ("g4b_guoshi", 1): flower(),
     ("g4b_dengpao", 4): short_circuit(),
     ("g4b_jianyi", 4): series(),
-    ("g4b_lianjie", 2): parallel(),
+    ("g4b_zhaoming", 1): parallel(),
     ("g5a_xianweijing", 4): microscope_view(),
     ("g5a_ganggan", 4): lever(),
     ("g5a_xiemian", 2): ramps(),

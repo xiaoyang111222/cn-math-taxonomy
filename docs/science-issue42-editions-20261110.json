@@ -7,9 +7,9 @@
     "attachments": 0,
     "photo_urls": 0
   },
-  "scope": "官方价表版次（一至六年级上下册）；2026-11-10 续核国家中小学智慧教育平台电子教材：一下、二下、三上目录与相关课页已核，一上、二上核到第1单元目录，三下确认「磁极与方向」为辨别方向第4课。书号与价表一致。未整书下载。",
+  "scope": "官方价表版次（一至六年级上下册）；2026-11-10 核国家中小学智慧教育平台电子教材：一下、二下、三上目录与相关课页已核，一上、二上核到第1单元目录，三下确认「磁极与方向」为辨别方向第4课；同日续核四至六年级六册完整印刷目录（含阅读器页码对应），并补核「让小车动起来」后页至书页36。书号与价表一致。未整书下载。",
   "edition_note": "换版逐年分册进入省级价表，不是 2024 年一次齐套的 12 册修订套书。四至六下在北京 2026 春表仍为旧书号。",
-  "data_changes": "2026-11-10 依官方目录修正 Issue42：改 cns_p030/cns_p059 描述与错题，cns_p055/cns_p057 课名，删/改挂相关 hard 边，恢复观察云课序，新增 cns_p223「我们来钓鱼」，七个无同名课概念节点保留 ID 并移出官方 soft 课序链。未 push、未部署。SW VERSION 仍为 v14（SHELL/DATA 列表与数据结构未变）。",
+  "data_changes": "2026-11-10 依官方目录修正 Issue42 一至三年级节点后，同日续按已核四至六年级目录拆分合并课、补独立课、改课名与四下电路课序。新 ID 从 cns_p224 起；cns_p001–cns_p223 不变号（cns_p223=我们来钓鱼）。未 push、未部署。SW VERSION 仍为 v14。",
   "volumes": [
     {
       "volume": "一上",
@@ -116,10 +116,17 @@
         "https://www.esph.com.cn/docs/2024-09/adf7fb97d10c4db090c7a45a64deb384.pdf",
         "https://www.esph.com.cn/docs/2025-08/5e32c27d7e5046ac87677853220c89f6.pdf"
       ],
-      "status": "official_edition_only",
+      "status": "official_toc",
       "page_start": null,
       "page_end": null,
-      "copyright_page": null
+      "copyright_page": null,
+      "contentId": "de850b37-08a3-40d5-8aa7-7791f08179e0",
+      "smartedu_url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=de850b37-08a3-40d5-8aa7-7791f08179e0&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "cover_review_year": 2024,
+      "revision": "根据2022年版课程标准修订",
+      "reader_pages": 94,
+      "page_mapping": "目录印刷页1–2=PDF6–7；正文书页N=PDF N+7。未见版次/印次原文。",
+      "toc_note": "电子教材完整印刷目录已核（空气、呼吸与消化、声音），各单元8课，另有单元小结与科学阅读（不作为知识点）。含独立课自制打气筒、测量肺活量、乐器的声音变化、设计我们的乐器、改进我们的乐器。封面审核年份2024。书号与价表新号一致。未见版次/印次原文。"
     },
     {
       "volume": "四下",
@@ -128,10 +135,17 @@
       "price_list_year": "北京2026春仍为此旧书号",
       "url": "https://www.esph.com.cn/docs/2026-02/f8f9fec2bc104ac1821fa2ac67892e12.pdf",
       "also_urls": [],
-      "status": "official_edition_only",
+      "status": "official_toc",
       "page_start": null,
       "page_end": null,
-      "copyright_page": null
+      "copyright_page": null,
+      "contentId": "99186490-5b29-4767-aca5-b6386ec98960",
+      "smartedu_url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=99186490-5b29-4767-aca5-b6386ec98960&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "cover_review_year": 2019,
+      "revision": null,
+      "reader_pages": 65,
+      "page_mapping": "目录在PDF6；正文书页N=PDF N+6。全书止于书页59，无后记、无独立版权页。未见版次/印次原文。",
+      "toc_note": "平台仍只有2019年审核旧版，与北京2026春价表旧号一致。完整印刷目录已核：植物的生长变化、电路、岩石与土壤，各8课；目录无单元小结、科学阅读。电路官方课序为简易电路→电路出故障了→里面是怎样连接的→导体和绝缘体→电路中的开关→模拟安装照明电路。含种植凤仙花、岩石与土壤的故事、制作岩石和矿物标本，末课课名为岩石、土壤和我们。"
     },
     {
       "volume": "五上",
@@ -142,10 +156,17 @@
       "also_urls": [
         "https://www.esph.com.cn/docs/2026-08/d5a201b89ce84843970cddf9284fc4af.pdf"
       ],
-      "status": "official_edition_only",
+      "status": "official_toc",
       "page_start": null,
       "page_end": null,
-      "copyright_page": null
+      "copyright_page": null,
+      "contentId": "4f4b95e8-022c-4685-a126-cc3bded02620",
+      "smartedu_url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=4f4b95e8-022c-4685-a126-cc3bded02620&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "cover_review_year": 2024,
+      "revision": "根据2022年版课程标准修订",
+      "reader_pages": 138,
+      "page_mapping": "目录印刷页1–2=PDF6–7；正文书页N=PDF N+7。未见版次/印次原文。",
+      "toc_note": "电子教材完整印刷目录已核，4单元×7课=28课，另有单元小结与科学阅读（不作为知识点）。含用简易显微镜观察、用光学显微镜观察、制作独轮车、制作「月球小车」、评价「月球小车」、水对地表的作用、风对地表的作用。封面审核年份2024。书号与价表新号一致。"
     },
     {
       "volume": "五下",
@@ -154,10 +175,17 @@
       "price_list_year": "北京2026春仍为此旧书号",
       "url": "https://www.esph.com.cn/docs/2026-02/f8f9fec2bc104ac1821fa2ac67892e12.pdf",
       "also_urls": [],
-      "status": "official_edition_only",
+      "status": "official_toc",
       "page_start": null,
       "page_end": null,
-      "copyright_page": null
+      "copyright_page": null,
+      "contentId": "9a2bcf38-3f8e-4835-9466-341207f7d02c",
+      "smartedu_url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=9a2bcf38-3f8e-4835-9466-341207f7d02c&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "cover_review_year": 2019,
+      "revision": null,
+      "reader_pages": 81,
+      "page_mapping": "目录在PDF6；正文书页N=PDF N+6。全书止于书页75。未见版次/印次原文。",
+      "toc_note": "平台仍只有2019年审核旧版，与北京2026春价表旧号一致。完整印刷目录已核，4单元各7课=28课。目录无单元小结；仅生物与环境、船的研究列出科学阅读。船的研究末课拆为设计我们的小船、制作与测试我们的小船；环境与我们含合理利用能源、让资源再生、分析一个实际的环境问题；热单元末课为哪个传热快、做个保温杯。生物与环境七课课名已与官方一致。"
     },
     {
       "volume": "六上",
@@ -166,10 +194,17 @@
       "price_list_year": "北京2026秋。至2025秋仍为978-7-5191-2237-9/5印张",
       "url": "https://www.esph.com.cn/docs/2026-08/d3e0396f6136410a90a3dadb574ff837.pdf",
       "also_urls": [],
-      "status": "official_edition_only",
+      "status": "official_toc",
       "page_start": null,
       "page_end": null,
-      "copyright_page": null
+      "copyright_page": null,
+      "contentId": "89bce7a4-35e0-48a0-a29a-f9b97f14354d",
+      "smartedu_url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=89bce7a4-35e0-48a0-a29a-f9b97f14354d&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "cover_review_year": 2024,
+      "revision": "根据2022年版课程标准修订",
+      "reader_pages": 138,
+      "page_mapping": "目录印刷页1–2=PDF6–7；正文书页N=PDF N+7。未见版次/印次原文。",
+      "toc_note": "电子教材完整印刷目录已核，4单元×7课=28课，另有单元小结与科学阅读（不作为知识点）。含营养要均衡、睡眠要充足、管理我们的情绪、设计潜望镜、制作潜望镜、昼夜交替的解释、地球如何自转、地球的公转、四季变化、用水计量时间、做个水钟、改进水钟、机械摆钟、制作钟摆。封面审核年份2024。书号与价表新号一致。"
     },
     {
       "volume": "六下",
@@ -178,10 +213,17 @@
       "price_list_year": "北京2026春仍为此旧书号",
       "url": "https://www.esph.com.cn/docs/2026-02/f8f9fec2bc104ac1821fa2ac67892e12.pdf",
       "also_urls": [],
-      "status": "official_edition_only",
+      "status": "official_toc",
       "page_start": null,
       "page_end": null,
-      "copyright_page": null
+      "copyright_page": null,
+      "contentId": "2c4fe2cc-076f-47bf-9962-39816e866429",
+      "smartedu_url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=2c4fe2cc-076f-47bf-9962-39816e866429&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "cover_review_year": 2019,
+      "revision": null,
+      "reader_pages": 81,
+      "page_mapping": "目录在PDF5；正文书页N=PDF N+5。后记署「编者 2018年12月」，不是版次/印次。未见版次/印次原文。",
+      "toc_note": "平台仍只有2019年审核旧版，与北京2026春价表旧号一致。完整印刷目录已核，4单元各7课=28课；目录无单元小结、科学阅读。宇宙单元官方只有「日食」，无「月相」独立课。物质的变化末三课为地球家园的化学变化、生命体中的化学变化、美丽的化学变化。"
     }
   ],
   "items": [
@@ -262,12 +304,14 @@
       "id": "cns_p059",
       "key": "g2b_xiaoche",
       "claim": "描述不符：让小车动起来在作者所称2024版是磁力隔空驱动及距离影响，图谱写成同极相斥、异极相吸",
-      "verdict": "官方第3课，书页34、PDF41。已见开篇：多种方法让铁架四轮小车运动，先讲拉力。后页未逐页翻完，不断言有无同极相斥/异极相吸。已改描述与四道题，删除 hard cns_p059<-cns_p058；原 hard cns_p085<-cns_p059 改挂到 cns_p058。课序插入比较力量的大小之后、隔物吸铁之前。",
+      "verdict": "官方第3课，书页34、PDF41。开篇：多种方法让铁架四轮小车运动，先讲拉力。科学词汇：拉力。后页已补核至书页36（PDF42–43）：推力、「不接触小车也能动吗」，研讨问磁铁吸引力与拉力、推力有何不同，并见鹤蝶飞；未见「同极相斥」「异极相吸」或磁极、N/S。描述与四道题维持本轮已改的拉力/多种方法写法，不再改。已删除 hard cns_p059<-cns_p058；原 hard cns_p085<-cns_p059 改挂到 cns_p058。课序在比较力量的大小之后、隔物吸铁之前。",
       "action": "update_description_questions_edges_and_order",
       "evidence_level": "official_toc",
       "page": 34,
       "pdf_page": 41,
-      "later_pages": "not_fully_checked"
+      "later_pages": "checked_pp35-36",
+      "page_end": 36,
+      "pdf_page_end": 43
     },
     {
       "id": "cns_p069",
@@ -299,8 +343,27 @@
       "cns_p058 磁铁的两极",
       "cns_p060 磁铁在生活中的应用"
     ],
-    "verdict": "官方目录已核。课序与课名已按官方六课调整；p058、p060 保留 ID，移出官方 soft 课序链。让小车后页未逐页核完。",
+    "verdict": "官方目录已核。课序与课名已按官方六课调整；p058、p060 保留 ID，移出官方 soft 课序链。让小车后页已补核至书页36（PDF42–43），未见同极相斥/异极相吸、磁极、N/S；cns_p059 描述不再改。",
     "action": "reorder_rename_and_add_cns_p223",
     "evidence_level": "official_toc"
+  },
+  "g4_g6_alignment_20261110": {
+    "source": "国家中小学智慧教育平台电子教材，未登录，2026-11-10",
+    "upper_volumes": "根据2022年版课程标准修订，封面审核2024",
+    "lower_volumes": "平台仍只有2019年审核旧版，与北京2026春价表旧号一致",
+    "lesson_counts": {
+      "四上": 24,
+      "四下": 24,
+      "五上": 28,
+      "五下": 28,
+      "六上": 28,
+      "六下": 28
+    },
+    "new_ids": "cns_p224 起；cns_p001–cns_p223 不变号",
+    "not_added_as_topics": [
+      "单元小结",
+      "科学阅读"
+    ],
+    "no_moon_phase_node": "六下官方只有日食，未新增月相节点；g6b_rishi 改名为日食"
   }
 }

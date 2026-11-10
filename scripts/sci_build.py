@@ -169,8 +169,8 @@ def main():
     by_vol = Counter("%d%s" % (t["grade"], t["semester"]) for t in TOPICS)
     for k in VOLUMES:
         n = by_vol[k]
-        # 每册 15–25 个知识点。
-        lo, hi = (15, 25)
+        # 每册 15–30 个知识点。五、六年级官方每册 4 单元×7 课 = 28 课。
+        lo, hi = (15, 30)
         if n < lo or n > hi:
             print("%s 有 %d 个知识点，每册应为 %d–%d" % (k, n, lo, hi), file=sys.stderr)
             return 1

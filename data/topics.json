@@ -88653,7 +88653,7 @@
     "semester": "上",
     "chapter": "四年级上册 第1单元 空气",
     "type": "reasoning",
-    "description": "知道空气可以被压缩，压缩空气有弹性，打气筒利用了这一点。",
+    "description": "知道空气可以被压缩，压缩空气有弹性。",
     "mastery_criteria": [
       "能说出物体或现象的主要特征",
       "能用观察或实验的结果解释简单现象"
@@ -88787,6 +88787,33 @@
     ]
   },
   {
+    "id": "cns_p224",
+    "name": "自制打气筒",
+    "domain": "物质科学",
+    "grade": 4,
+    "semester": "上",
+    "chapter": "四年级上册 第1单元 空气",
+    "type": "modeling",
+    "description": "自己制作打气筒，体会它和压缩空气有关。",
+    "mastery_criteria": [
+      "能说出物体或现象的主要特征",
+      "能用观察或实验的结果解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "自己做一个打气筒，主要是为了什么？",
+      "answer": "把空气打进需要充气的东西里"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:2.WZ.01",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
     "id": "cns_p107",
     "name": "我们的呼吸与消化",
     "domain": "生命科学",
@@ -88842,13 +88869,13 @@
   },
   {
     "id": "cns_p109",
-    "name": "呼吸的变化与肺活量",
+    "name": "呼吸的变化",
     "domain": "生命科学",
     "grade": 4,
     "semester": "上",
     "chapter": "四年级上册 第2单元 呼吸与消化",
     "type": "procedural",
-    "description": "比较运动前后呼吸次数，学会测量肺活量。",
+    "description": "比较运动前后呼吸次数，认识呼吸快慢和深浅的变化。",
     "mastery_criteria": [
       "能说出生物的主要特征或生命活动",
       "能把特征和生活环境、功能联系起来"
@@ -88856,6 +88883,33 @@
     "diagnostic_question": {
       "question": "跑步后，呼吸会怎样？",
       "answer": "加快加深"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:2.SM.01",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p225",
+    "name": "测量肺活量",
+    "domain": "生命科学",
+    "grade": 4,
+    "semester": "上",
+    "chapter": "四年级上册 第2单元 呼吸与消化",
+    "type": "procedural",
+    "description": "知道肺活量是什么，并会记录测量结果。",
+    "mastery_criteria": [
+      "能说出生物的主要特征或生命活动",
+      "能把特征和生活环境、功能联系起来"
+    ],
+    "diagnostic_question": {
+      "question": "肺活量是指什么？",
+      "answer": "尽力吸气后，再尽力呼出的气体量"
     },
     "external": false,
     "subject": "science",
@@ -89057,14 +89111,41 @@
     ]
   },
   {
+    "id": "cns_p226",
+    "name": "乐器的声音变化",
+    "domain": "物质科学",
+    "grade": 4,
+    "semester": "上",
+    "chapter": "四年级上册 第3单元 声音",
+    "type": "reasoning",
+    "description": "知道乐器的音高、强弱会随长短、粗细、松紧和用力大小而变化。",
+    "mastery_criteria": [
+      "能说出物体或现象的主要特征",
+      "能用观察或实验的结果解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "吸管排箫里，哪根吸管吹出的音最高？",
+      "answer": "最短的"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:2.WZ.04",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
     "id": "cns_p117",
-    "name": "设计和改进我们的乐器",
+    "name": "设计我们的乐器",
     "domain": "物质科学",
     "grade": 4,
     "semester": "上",
     "chapter": "四年级上册 第3单元 声音",
     "type": "modeling",
-    "description": "利用声音高低强弱的规律设计、制作并改进简易乐器。",
+    "description": "利用声音高低强弱的规律，设计并制作一件简易乐器。",
     "mastery_criteria": [
       "能说出物体或现象的主要特征",
       "能用观察或实验的结果解释简单现象"
@@ -89072,6 +89153,33 @@
     "diagnostic_question": {
       "question": "想让自制的橡皮筋琴发出高低不同的音，可以怎么做？",
       "answer": "用粗细或松紧不同的橡皮筋"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:2.WZ.04",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p227",
+    "name": "改进我们的乐器",
+    "domain": "物质科学",
+    "grade": 4,
+    "semester": "上",
+    "chapter": "四年级上册 第3单元 声音",
+    "type": "modeling",
+    "description": "试奏自制乐器，针对声音太小或音不够清楚作出改进，并评价效果。",
+    "mastery_criteria": [
+      "能说出物体或现象的主要特征",
+      "能用观察或实验的结果解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "自制乐器声音太小，可以怎样改进？",
+      "answer": "加一个能共鸣的空盒子"
     },
     "external": false,
     "subject": "science",
@@ -89165,6 +89273,33 @@
     ]
   },
   {
+    "id": "cns_p228",
+    "name": "种植凤仙花",
+    "domain": "生命科学",
+    "grade": 4,
+    "semester": "下",
+    "chapter": "四年级下册 第1单元 植物的生长变化",
+    "type": "procedural",
+    "description": "种植凤仙花，知道为什么要种，以及浇水、光照和日常照顾要注意什么。",
+    "mastery_criteria": [
+      "能说出生物的主要特征或生命活动",
+      "能把特征和生活环境、功能联系起来"
+    ],
+    "diagnostic_question": {
+      "question": "科学课里种植凤仙花，主要是为了什么？",
+      "answer": "观察植物怎样生长变化"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:2.SM.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
     "id": "cns_p121",
     "name": "种子长出了根",
     "domain": "生命科学",
@@ -89220,13 +89355,13 @@
   },
   {
     "id": "cns_p123",
-    "name": "开花了",
+    "name": "凤仙花开花了",
     "domain": "生命科学",
     "grade": 4,
     "semester": "下",
     "chapter": "四年级下册 第1单元 植物的生长变化",
     "type": "conceptual",
-    "description": "认识花的结构，知道花是植物的繁殖器官。",
+    "description": "观察凤仙花开花，认识花的结构，知道花是植物的繁殖器官。",
     "mastery_criteria": [
       "能说出生物的主要特征或生命活动",
       "能把特征和生活环境、功能联系起来"
@@ -89301,13 +89436,13 @@
   },
   {
     "id": "cns_p126",
-    "name": "植物的一生",
+    "name": "凤仙花的一生",
     "domain": "生命科学",
     "grade": 4,
     "semester": "下",
     "chapter": "四年级下册 第1单元 植物的生长变化",
     "type": "reasoning",
-    "description": "通过种植凤仙花，知道植物一生经历种子萌发、生长、开花、结果、死亡。",
+    "description": "通过凤仙花认识植物一生：种子萌发、生长、开花、结果、死亡。",
     "mastery_criteria": [
       "能说出生物的主要特征或生命活动",
       "能把特征和生活环境、功能联系起来"
@@ -89382,20 +89517,20 @@
   },
   {
     "id": "cns_p129",
-    "name": "简易电路与开关",
+    "name": "简易电路",
     "domain": "物质科学",
     "grade": 4,
     "semester": "下",
     "chapter": "四年级下册 第2单元 电路",
     "type": "procedural",
-    "description": "用电池盒、灯座、开关组装简单电路，知道开关控制电路通断。",
+    "description": "用电池盒、灯座等组装简易电路，使小灯泡在闭合回路中发光。",
     "mastery_criteria": [
       "能说出物体或现象的主要特征",
       "能用观察或实验的结果解释简单现象"
     ],
     "diagnostic_question": {
-      "question": "开关在电路中的作用是什么？",
-      "answer": "控制电路的接通和断开"
+      "question": "组装简易电路时，电池盒、灯座和导线要怎样连接，小灯泡才会亮？",
+      "answer": "连成闭合回路"
     },
     "external": false,
     "subject": "science",
@@ -89435,6 +89570,33 @@
     ]
   },
   {
+    "id": "cns_p132",
+    "name": "里面是怎样连接的",
+    "domain": "物质科学",
+    "grade": 4,
+    "semester": "下",
+    "chapter": "四年级下册 第2单元 电路",
+    "type": "modeling",
+    "description": "推测盒子里的电路是怎样连接的。",
+    "mastery_criteria": [
+      "能说出物体或现象的主要特征",
+      "能用观察或实验的结果解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "一个盒子外有接线柱，用检测器连接 A、B 时灯亮，说明什么？",
+      "answer": "A、B 之间在盒内是连通的"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:2.WZ.04",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
     "id": "cns_p131",
     "name": "导体和绝缘体",
     "domain": "物质科学",
@@ -89462,21 +89624,21 @@
     ]
   },
   {
-    "id": "cns_p132",
-    "name": "里面是怎样连接的与安装照明电路",
+    "id": "cns_p229",
+    "name": "电路中的开关",
     "domain": "物质科学",
     "grade": 4,
     "semester": "下",
     "chapter": "四年级下册 第2单元 电路",
-    "type": "modeling",
-    "description": "推测盒子里的电路连接，并模拟安装能控制的照明电路。",
+    "type": "conceptual",
+    "description": "知道开关用来控制电路的接通和断开。",
     "mastery_criteria": [
       "能说出物体或现象的主要特征",
       "能用观察或实验的结果解释简单现象"
     ],
     "diagnostic_question": {
-      "question": "一个盒子外有接线柱，用检测器连接 A、B 时灯亮，说明什么？",
-      "answer": "A、B 之间在盒内是连通的"
+      "question": "开关在电路中的作用是什么？",
+      "answer": "控制电路的接通和断开"
     },
     "external": false,
     "subject": "science",
@@ -89489,14 +89651,68 @@
     ]
   },
   {
-    "id": "cns_p133",
-    "name": "认识常见的岩石",
+    "id": "cns_p230",
+    "name": "模拟安装照明电路",
+    "domain": "物质科学",
+    "grade": 4,
+    "semester": "下",
+    "chapter": "四年级下册 第2单元 电路",
+    "type": "modeling",
+    "description": "模拟安装照明电路，知道开关要接在所控制的灯那条电路上。",
+    "mastery_criteria": [
+      "能说出物体或现象的主要特征",
+      "能用观察或实验的结果解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "要让两个灯泡各由一个开关单独控制，应该怎样连接？（右图是一种连法）",
+      "answer": "并联，每条支路上各装一个开关"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:2.WZ.04",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p231",
+    "name": "岩石与土壤的故事",
     "domain": "地球与宇宙科学",
     "grade": 4,
     "semester": "下",
     "chapter": "四年级下册 第3单元 岩石与土壤",
     "type": "conceptual",
-    "description": "观察花岗岩、砂岩、页岩、大理岩等常见岩石的特征。",
+    "description": "了解岩石、土壤和我们的生活有怎样的联系。",
+    "mastery_criteria": [
+      "能描述地球或天体的基本特征和变化",
+      "能用模型或观测记录解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "「岩石与土壤的故事」主要想让我们了解什么？",
+      "answer": "岩石、土壤和我们的生活有怎样的联系"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:2.DQ.01",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p133",
+    "name": "认识几种常见的岩石",
+    "domain": "地球与宇宙科学",
+    "grade": 4,
+    "semester": "下",
+    "chapter": "四年级下册 第3单元 岩石与土壤",
+    "type": "conceptual",
+    "description": "观察花岗岩、砂岩、页岩、大理岩等几种常见岩石的特征。",
     "mastery_criteria": [
       "能描述地球或天体的基本特征和变化",
       "能用模型或观测记录解释简单现象"
@@ -89531,6 +89747,33 @@
     "diagnostic_question": {
       "question": "岩石是由什么组成的？",
       "answer": "一种或几种矿物"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:2.DQ.01",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p232",
+    "name": "制作岩石和矿物标本",
+    "domain": "地球与宇宙科学",
+    "grade": 4,
+    "semester": "下",
+    "chapter": "四年级下册 第3单元 岩石与土壤",
+    "type": "procedural",
+    "description": "分类收集岩石和矿物，贴上标签，做成便于观察和比较的标本。",
+    "mastery_criteria": [
+      "能描述地球或天体的基本特征和变化",
+      "能用模型或观测记录解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "制作岩石和矿物标本，主要是为了什么？",
+      "answer": "把收集到的岩石和矿物整理好，方便以后观察和比较"
     },
     "external": false,
     "subject": "science",
@@ -89598,13 +89841,13 @@
   },
   {
     "id": "cns_p137",
-    "name": "比较不同的土壤与保护土壤",
+    "name": "比较不同的土壤",
     "domain": "地球与宇宙科学",
     "grade": 4,
     "semester": "下",
     "chapter": "四年级下册 第3单元 岩石与土壤",
     "type": "reasoning",
-    "description": "比较沙质土、黏质土、壤土的不同，知道土壤与植物生长、保护土壤。",
+    "description": "比较沙质土、黏质土、壤土等不同土壤的颗粒、渗水和保水等特点。",
     "mastery_criteria": [
       "能描述地球或天体的基本特征和变化",
       "能用模型或观测记录解释简单现象"
@@ -89612,6 +89855,33 @@
     "diagnostic_question": {
       "question": "哪种土壤最适合大多数植物生长？",
       "answer": "壤土"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:2.DQ.01",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p233",
+    "name": "岩石、土壤和我们",
+    "domain": "地球与宇宙科学",
+    "grade": 4,
+    "semester": "下",
+    "chapter": "四年级下册 第3单元 岩石与土壤",
+    "type": "application",
+    "description": "知道岩石、土壤和人类生活的关系，并了解保护土壤的做法。",
+    "mastery_criteria": [
+      "能描述地球或天体的基本特征和变化",
+      "能用模型或观测记录解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "下面哪种做法能保护土壤？",
+      "answer": "植树种草，回收废电池"
     },
     "external": false,
     "subject": "science",
@@ -89678,14 +89948,41 @@
     ]
   },
   {
-    "id": "cns_p140",
-    "name": "用显微镜观察",
+    "id": "cns_p234",
+    "name": "用简易显微镜观察",
     "domain": "生命科学",
     "grade": 5,
     "semester": "上",
     "chapter": "五年级上册 第1单元 微小世界",
     "type": "procedural",
-    "description": "认识光学显微镜的结构，学会规范使用显微镜。",
+    "description": "知道简易显微镜用来观察微小物体，并会用它进行观察。",
+    "mastery_criteria": [
+      "能说出生物的主要特征或生命活动",
+      "能把特征和生活环境、功能联系起来"
+    ],
+    "diagnostic_question": {
+      "question": "简易显微镜主要用来观察什么？",
+      "answer": "肉眼看不清的微小物体"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.SM.01",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p140",
+    "name": "用光学显微镜观察",
+    "domain": "生命科学",
+    "grade": 5,
+    "semester": "上",
+    "chapter": "五年级上册 第1单元 微小世界",
+    "type": "procedural",
+    "description": "认识光学显微镜的结构，学会规范使用。",
     "mastery_criteria": [
       "能说出生物的主要特征或生命活动",
       "能把特征和生活环境、功能联系起来"
@@ -89814,7 +90111,7 @@
   },
   {
     "id": "cns_p145",
-    "name": "独轮车省力的秘密——杠杆",
+    "name": "独轮车省力的秘密",
     "domain": "技术与工程",
     "grade": 5,
     "semester": "上",
@@ -89828,6 +90125,33 @@
     "diagnostic_question": {
       "question": "杠杆上起支撑作用、固定不动的点叫什么？",
       "answer": "支点"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.JG.01",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p235",
+    "name": "制作独轮车",
+    "domain": "技术与工程",
+    "grade": 5,
+    "semester": "上",
+    "chapter": "五年级上册 第2单元 工具与技术",
+    "type": "modeling",
+    "description": "按省力的道理制作一辆独轮车，做完后试一试是否省力。",
+    "mastery_criteria": [
+      "能说出工具、结构或作品要解决的问题",
+      "能按设计、制作、测试、改进的顺序完成任务"
+    ],
+    "diagnostic_question": {
+      "question": "制作独轮车时，主要应依据什么来做？",
+      "answer": "省力的道理"
     },
     "external": false,
     "subject": "science",
@@ -89895,7 +90219,7 @@
   },
   {
     "id": "cns_p148",
-    "name": "给小车安装方向盘——轮轴",
+    "name": "给小车安装方向盘",
     "domain": "技术与工程",
     "grade": 5,
     "semester": "上",
@@ -89949,7 +90273,7 @@
   },
   {
     "id": "cns_p150",
-    "name": "拆解我们的小车模型",
+    "name": "拆解我的小车模型",
     "domain": "物质科学",
     "grade": 5,
     "semester": "上",
@@ -90084,13 +90408,13 @@
   },
   {
     "id": "cns_p155",
-    "name": "设计、制作和评价「月球小车」",
+    "name": "制作「月球小车」",
     "domain": "物质科学",
     "grade": 5,
     "semester": "上",
     "chapter": "五年级上册 第3单元 运动和力",
     "type": "modeling",
-    "description": "根据要求设计、制作、测试和评价能在月面模拟场地行驶的小车。",
+    "description": "根据要求制作能在月面模拟场地行驶的小车。",
     "mastery_criteria": [
       "能说出物体或现象的主要特征",
       "能用观察或实验的结果解释简单现象"
@@ -90098,6 +90422,33 @@
     "diagnostic_question": {
       "question": "设计「月球小车」时，最先要做的是什么？",
       "answer": "明确小车要完成的任务和限制条件"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.WZ.01",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p236",
+    "name": "评价「月球小车」",
+    "domain": "物质科学",
+    "grade": 5,
+    "semester": "上",
+    "chapter": "五年级上册 第3单元 运动和力",
+    "type": "application",
+    "description": "按事先确定的标准评价「月球小车」，并根据测试结果提出改进。",
+    "mastery_criteria": [
+      "能说出物体或现象的主要特征",
+      "能用观察或实验的结果解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "测试小车时，小车总在斜坡上打滑，可以怎样改进？",
+      "answer": "增大车轮的摩擦，如加花纹或换材料"
     },
     "external": false,
     "subject": "science",
@@ -90246,13 +90597,13 @@
   },
   {
     "id": "cns_p161",
-    "name": "水和风对地表的作用",
+    "name": "水对地表的作用",
     "domain": "地球与宇宙科学",
     "grade": 5,
     "semester": "上",
     "chapter": "五年级上册 第4单元 地球表面的变化",
     "type": "reasoning",
-    "description": "知道流水和风会侵蚀、搬运、沉积，改变地表。",
+    "description": "知道流水会侵蚀、搬运、沉积，改变地表。",
     "mastery_criteria": [
       "能描述地球或天体的基本特征和变化",
       "能用模型或观测记录解释简单现象"
@@ -90260,6 +90611,33 @@
     "diagnostic_question": {
       "question": "河流入海口常形成三角洲，主要是什么作用？",
       "answer": "流水沉积"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.DQ.01",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p237",
+    "name": "风对地表的作用",
+    "domain": "地球与宇宙科学",
+    "grade": 5,
+    "semester": "上",
+    "chapter": "五年级上册 第4单元 地球表面的变化",
+    "type": "reasoning",
+    "description": "知道风会侵蚀、搬运、沉积，改变地表。",
+    "mastery_criteria": [
+      "能描述地球或天体的基本特征和变化",
+      "能用模型或观测记录解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "沙漠里的蘑菇石主要是怎样形成的？",
+      "answer": "风沙侵蚀"
     },
     "external": false,
     "subject": "science",
@@ -90603,13 +90981,13 @@
   },
   {
     "id": "cns_p174",
-    "name": "设计、制作和测试我们的小船",
+    "name": "设计我们的小船",
     "domain": "技术与工程",
     "grade": 5,
     "semester": "下",
     "chapter": "五年级下册 第2单元 船的研究",
     "type": "modeling",
-    "description": "按要求设计、制作、测试和改进一艘小船。",
+    "description": "按要求设计小船，先明确任务并形成设计方案。",
     "mastery_criteria": [
       "能说出工具、结构或作品要解决的问题",
       "能按设计、制作、测试、改进的顺序完成任务"
@@ -90617,6 +90995,33 @@
     "diagnostic_question": {
       "question": "设计小船之前，最先要明确什么？",
       "answer": "小船要达到的要求（载重、速度、稳定等）"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.JG.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p238",
+    "name": "制作与测试我们的小船",
+    "domain": "技术与工程",
+    "grade": 5,
+    "semester": "下",
+    "chapter": "五年级下册 第2单元 船的研究",
+    "type": "modeling",
+    "description": "按设计方案制作小船，在相同条件下测试并改进。",
+    "mastery_criteria": [
+      "能说出工具、结构或作品要解决的问题",
+      "能按设计、制作、测试、改进的顺序完成任务"
+    ],
+    "diagnostic_question": {
+      "question": "制作小船时，主要依据什么？",
+      "answer": "事先确定的设计方案"
     },
     "external": false,
     "subject": "science",
@@ -90738,13 +91143,13 @@
   },
   {
     "id": "cns_p179",
-    "name": "合理利用能源与资源再生",
+    "name": "合理利用能源",
     "domain": "地球与宇宙科学",
     "grade": 5,
     "semester": "下",
     "chapter": "五年级下册 第3单元 环境与我们",
     "type": "application",
-    "description": "区分可再生与不可再生能源，知道资源回收利用的意义。",
+    "description": "区分可再生与不可再生能源，知道怎样节约能源。",
     "mastery_criteria": [
       "能描述地球或天体的基本特征和变化",
       "能用模型或观测记录解释简单现象"
@@ -90752,6 +91157,60 @@
     "diagnostic_question": {
       "question": "下面哪种是可再生能源？",
       "answer": "太阳能"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.DQ.03",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p239",
+    "name": "让资源再生",
+    "domain": "地球与宇宙科学",
+    "grade": 5,
+    "semester": "下",
+    "chapter": "五年级下册 第3单元 环境与我们",
+    "type": "application",
+    "description": "知道回收利用，让废物变成可以再用的资源。",
+    "mastery_criteria": [
+      "能描述地球或天体的基本特征和变化",
+      "能用模型或观测记录解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "废纸回收后可以做成什么？",
+      "answer": "再生纸"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.DQ.03",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p240",
+    "name": "分析一个实际的环境问题",
+    "domain": "地球与宇宙科学",
+    "grade": 5,
+    "semester": "下",
+    "chapter": "五年级下册 第3单元 环境与我们",
+    "type": "reasoning",
+    "description": "知道分析实际环境问题要先弄清问题、查找原因，再提出办法。",
+    "mastery_criteria": [
+      "能描述地球或天体的基本特征和变化",
+      "能用模型或观测记录解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "分析一个实际的环境问题，第一步通常要做什么？",
+      "answer": "弄清问题是什么、发生在哪里"
     },
     "external": false,
     "subject": "science",
@@ -90900,13 +91359,13 @@
   },
   {
     "id": "cns_p185",
-    "name": "哪个传热快与做个保温杯",
+    "name": "哪个传热快",
     "domain": "物质科学",
     "grade": 5,
     "semester": "下",
     "chapter": "五年级下册 第4单元 热",
     "type": "modeling",
-    "description": "比较不同材料的导热性能，设计制作保温杯。",
+    "description": "比较不同材料的导热性能，判断哪种材料传热更快。",
     "mastery_criteria": [
       "能说出物体或现象的主要特征",
       "能用观察或实验的结果解释简单现象"
@@ -90914,6 +91373,33 @@
     "diagnostic_question": {
       "question": "金属、塑料、木头中，传热最快的是哪个？",
       "answer": "金属"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.WZ.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p241",
+    "name": "做个保温杯",
+    "domain": "物质科学",
+    "grade": 5,
+    "semester": "下",
+    "chapter": "五年级下册 第4单元 热",
+    "type": "modeling",
+    "description": "做一个保温杯，用来减慢热量散失，并比较保温效果。",
+    "mastery_criteria": [
+      "能说出物体或现象的主要特征",
+      "能用观察或实验的结果解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "做保温杯时，杯子外面包一层棉布或泡沫，目的是什么？",
+      "answer": "减慢热量散失"
     },
     "external": false,
     "subject": "science",
@@ -90954,13 +91440,13 @@
   },
   {
     "id": "cns_p187",
-    "name": "食物中的营养与均衡膳食",
+    "name": "食物中的营养",
     "domain": "生命科学",
     "grade": 6,
     "semester": "上",
     "chapter": "六年级上册 第1单元 健康生活",
     "type": "conceptual",
-    "description": "知道食物中的六大营养素，懂得营养要均衡。",
+    "description": "知道食物中含有淀粉、蛋白质、脂肪和维生素等营养素。",
     "mastery_criteria": [
       "能说出生物的主要特征或生命活动",
       "能把特征和生活环境、功能联系起来"
@@ -90968,6 +91454,33 @@
     "diagnostic_question": {
       "question": "米饭、馒头主要提供哪种营养？",
       "answer": "淀粉（糖类）"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.SM.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p242",
+    "name": "营养要均衡",
+    "domain": "生命科学",
+    "grade": 6,
+    "semester": "上",
+    "chapter": "六年级上册 第1单元 健康生活",
+    "type": "application",
+    "description": "知道营养要均衡，各类食物都要适量吃，不要偏食。",
+    "mastery_criteria": [
+      "能说出生物的主要特征或生命活动",
+      "能把特征和生活环境、功能联系起来"
+    ],
+    "diagnostic_question": {
+      "question": "按「平衡膳食宝塔」，每天吃得最多的应该是哪类食物？",
+      "answer": "谷薯类"
     },
     "external": false,
     "subject": "science",
@@ -91008,13 +91521,13 @@
   },
   {
     "id": "cns_p189",
-    "name": "睡眠与情绪",
+    "name": "睡眠要充足",
     "domain": "生命科学",
     "grade": 6,
     "semester": "上",
     "chapter": "六年级上册 第1单元 健康生活",
     "type": "application",
-    "description": "知道充足睡眠和调节情绪对健康的重要性。",
+    "description": "知道充足睡眠对身体健康的重要性。",
     "mastery_criteria": [
       "能说出生物的主要特征或生命活动",
       "能把特征和生活环境、功能联系起来"
@@ -91022,6 +91535,33 @@
     "diagnostic_question": {
       "question": "小学生每天的睡眠时间建议大约是多少？",
       "answer": "约 10 小时"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.SM.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p243",
+    "name": "管理我们的情绪",
+    "domain": "生命科学",
+    "grade": 6,
+    "semester": "上",
+    "chapter": "六年级上册 第1单元 健康生活",
+    "type": "application",
+    "description": "知道要用合适的方式觉察和调节自己的情绪。",
+    "mastery_criteria": [
+      "能说出生物的主要特征或生命活动",
+      "能把特征和生活环境、功能联系起来"
+    ],
+    "diagnostic_question": {
+      "question": "生气时，下面哪种做法比较合适？",
+      "answer": "深呼吸、暂时离开，冷静后再说"
     },
     "external": false,
     "subject": "science",
@@ -91170,13 +91710,13 @@
   },
   {
     "id": "cns_p195",
-    "name": "设计和制作潜望镜",
+    "name": "设计潜望镜",
     "domain": "物质科学",
     "grade": 6,
     "semester": "上",
     "chapter": "六年级上册 第2单元 光",
     "type": "modeling",
-    "description": "利用平面镜反射原理设计、制作潜望镜。",
+    "description": "利用平面镜反射原理设计潜望镜。",
     "mastery_criteria": [
       "能说出物体或现象的主要特征",
       "能用观察或实验的结果解释简单现象"
@@ -91184,6 +91724,33 @@
     "diagnostic_question": {
       "question": "潜望镜里用到了几面平面镜？",
       "answer": "两面"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.WZ.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p244",
+    "name": "制作潜望镜",
+    "domain": "物质科学",
+    "grade": 6,
+    "semester": "上",
+    "chapter": "六年级上册 第2单元 光",
+    "type": "modeling",
+    "description": "按设计制作潜望镜，并调整到能看清景物。",
+    "mastery_criteria": [
+      "能说出物体或现象的主要特征",
+      "能用观察或实验的结果解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "自制潜望镜里只能看到一片模糊的亮光，最可能的原因是？",
+      "answer": "镜子的角度没调好"
     },
     "external": false,
     "subject": "science",
@@ -91251,13 +91818,13 @@
   },
   {
     "id": "cns_p198",
-    "name": "昼夜交替与地球自转",
+    "name": "昼夜交替的解释",
     "domain": "地球与宇宙科学",
     "grade": 6,
     "semester": "上",
     "chapter": "六年级上册 第3单元 地球的运动",
     "type": "reasoning",
-    "description": "知道地球自西向东自转，形成昼夜交替。",
+    "description": "知道昼夜交替可以用地球自转来解释。",
     "mastery_criteria": [
       "能描述地球或天体的基本特征和变化",
       "能用模型或观测记录解释简单现象"
@@ -91265,6 +91832,33 @@
     "diagnostic_question": {
       "question": "昼夜交替是由什么形成的？",
       "answer": "地球的自转"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.DQ.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p245",
+    "name": "地球如何自转",
+    "domain": "地球与宇宙科学",
+    "grade": 6,
+    "semester": "上",
+    "chapter": "六年级上册 第3单元 地球的运动",
+    "type": "reasoning",
+    "description": "知道地球自西向东自转，大约一天自转一周。",
+    "mastery_criteria": [
+      "能描述地球或天体的基本特征和变化",
+      "能用模型或观测记录解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "地球自转的方向是怎样的？",
+      "answer": "自西向东"
     },
     "external": false,
     "subject": "science",
@@ -91338,13 +91932,13 @@
   },
   {
     "id": "cns_p201",
-    "name": "地球的公转与四季",
+    "name": "地球的公转",
     "domain": "地球与宇宙科学",
     "grade": 6,
     "semester": "上",
     "chapter": "六年级上册 第3单元 地球的运动",
     "type": "reasoning",
-    "description": "知道地球公转一周约一年，地轴倾斜与公转形成四季。",
+    "description": "知道地球绕太阳公转，公转一周大约是一年。",
     "mastery_criteria": [
       "能描述地球或天体的基本特征和变化",
       "能用模型或观测记录解释简单现象"
@@ -91352,6 +91946,33 @@
     "diagnostic_question": {
       "question": "地球绕太阳公转一周大约需要多长时间？",
       "answer": "约一年（365 天）"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.DQ.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p246",
+    "name": "四季变化",
+    "domain": "地球与宇宙科学",
+    "grade": 6,
+    "semester": "上",
+    "chapter": "六年级上册 第3单元 地球的运动",
+    "type": "reasoning",
+    "description": "知道一年中有四季变化，南北半球的季节可以相反。",
+    "mastery_criteria": [
+      "能描述地球或天体的基本特征和变化",
+      "能用模型或观测记录解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "四季的形成和什么有关？",
+      "answer": "地球公转以及地轴倾斜"
     },
     "external": false,
     "subject": "science",
@@ -91392,13 +92013,13 @@
   },
   {
     "id": "cns_p203",
-    "name": "用水计量时间与制作水钟",
+    "name": "用水计量时间",
     "domain": "技术与工程",
     "grade": 6,
     "semester": "上",
     "chapter": "六年级上册 第4单元 计量时间",
     "type": "modeling",
-    "description": "知道水钟利用水流计时，制作并改进水钟。",
+    "description": "知道可以用比较均匀的水流（滴漏）来计量时间。",
     "mastery_criteria": [
       "能说出工具、结构或作品要解决的问题",
       "能按设计、制作、测试、改进的顺序完成任务"
@@ -91418,14 +92039,68 @@
     ]
   },
   {
+    "id": "cns_p247",
+    "name": "做个水钟",
+    "domain": "技术与工程",
+    "grade": 6,
+    "semester": "上",
+    "chapter": "六年级上册 第4单元 计量时间",
+    "type": "modeling",
+    "description": "做一个水钟，用流出的水量来估计经过的时间。",
+    "mastery_criteria": [
+      "能说出工具、结构或作品要解决的问题",
+      "能按设计、制作、测试、改进的顺序完成任务"
+    ],
+    "diagnostic_question": {
+      "question": "自制水钟 1 分钟收集到 30 毫升水，那么 10 分钟大约能收集多少？",
+      "answer": "300 毫升"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.JG.01",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p248",
+    "name": "改进水钟",
+    "domain": "技术与工程",
+    "grade": 6,
+    "semester": "上",
+    "chapter": "六年级上册 第4单元 计量时间",
+    "type": "modeling",
+    "description": "改进水钟，让水流更稳定，计时更准确。",
+    "mastery_criteria": [
+      "能说出工具、结构或作品要解决的问题",
+      "能按设计、制作、测试、改进的顺序完成任务"
+    ],
+    "diagnostic_question": {
+      "question": "要让水钟滴水速度保持稳定，可以怎么做？",
+      "answer": "让上方容器的水位保持不变"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.JG.01",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
     "id": "cns_p204",
-    "name": "机械摆钟与制作钟摆",
+    "name": "机械摆钟",
     "domain": "技术与工程",
     "grade": 6,
     "semester": "上",
     "chapter": "六年级上册 第4单元 计量时间",
     "type": "reasoning",
-    "description": "知道摆的等时性，摆长越长摆动越慢。",
+    "description": "知道摆的等时性：摆幅不太大时，摆一次的时间基本不变；摆长越长，摆得越慢。",
     "mastery_criteria": [
       "能说出工具、结构或作品要解决的问题",
       "能按设计、制作、测试、改进的顺序完成任务"
@@ -91447,6 +92122,33 @@
       {
         "id": "cnm_p061",
         "reason": "测量摆动周期要用到「秒的认识」。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p249",
+    "name": "制作钟摆",
+    "domain": "技术与工程",
+    "grade": 6,
+    "semester": "上",
+    "chapter": "六年级上册 第4单元 计量时间",
+    "type": "modeling",
+    "description": "制作一个钟摆，比较不同摆长的快慢，并记录摆动次数。",
+    "mastery_criteria": [
+      "能说出工具、结构或作品要解决的问题",
+      "能按设计、制作、测试、改进的顺序完成任务"
+    ],
+    "diagnostic_question": {
+      "question": "一个摆 15 秒内摆动 30 次，那么 1 分钟大约摆动多少次？",
+      "answer": "120 次"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.JG.01",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
       }
     ]
   },
@@ -91560,13 +92262,13 @@
   },
   {
     "id": "cns_p209",
-    "name": "设计、制作、测试和改进塔台模型",
+    "name": "设计塔台模型",
     "domain": "技术与工程",
     "grade": 6,
     "semester": "下",
     "chapter": "六年级下册 第1单元 小小工程师",
     "type": "modeling",
-    "description": "按要求设计、制作、测试并改进塔台模型。",
+    "description": "按要求设计塔台模型。",
     "mastery_criteria": [
       "能说出工具、结构或作品要解决的问题",
       "能按设计、制作、测试、改进的顺序完成任务"
@@ -91586,14 +92288,95 @@
     ]
   },
   {
+    "id": "cns_p250",
+    "name": "制作塔台模型",
+    "domain": "技术与工程",
+    "grade": 6,
+    "semester": "下",
+    "chapter": "六年级下册 第1单元 小小工程师",
+    "type": "modeling",
+    "description": "按设计制作塔台模型。",
+    "mastery_criteria": [
+      "能说出工具、结构或作品要解决的问题",
+      "能按设计、制作、测试、改进的顺序完成任务"
+    ],
+    "diagnostic_question": {
+      "question": "制作塔台模型时，主要应当怎样做？",
+      "answer": "按已经确定的设计来做"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.JG.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p251",
+    "name": "测试塔台模型",
+    "domain": "技术与工程",
+    "grade": 6,
+    "semester": "下",
+    "chapter": "六年级下册 第1单元 小小工程师",
+    "type": "modeling",
+    "description": "对做好的塔台模型进行测试。",
+    "mastery_criteria": [
+      "能说出工具、结构或作品要解决的问题",
+      "能按设计、制作、测试、改进的顺序完成任务"
+    ],
+    "diagnostic_question": {
+      "question": "测试塔台时，用风扇吹塔台是测试它的什么？",
+      "answer": "抗风能力（稳定性）"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.JG.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p252",
+    "name": "评估改进塔台模型",
+    "domain": "技术与工程",
+    "grade": 6,
+    "semester": "下",
+    "chapter": "六年级下册 第1单元 小小工程师",
+    "type": "modeling",
+    "description": "评估塔台模型，并按不足加以改进。",
+    "mastery_criteria": [
+      "能说出工具、结构或作品要解决的问题",
+      "能按设计、制作、测试、改进的顺序完成任务"
+    ],
+    "diagnostic_question": {
+      "question": "测试中塔台摇晃得很厉害，可以怎样改进？",
+      "answer": "加宽底座，增加斜撑"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.JG.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
     "id": "cns_p210",
-    "name": "校园生物大搜索与生物分布",
+    "name": "校园生物大搜索",
     "domain": "生命科学",
     "grade": 6,
     "semester": "下",
     "chapter": "六年级下册 第2单元 生物的多样性",
     "type": "procedural",
-    "description": "调查校园生物，绘制校园生物分布图。",
+    "description": "在校园里寻找并调查生物。",
     "mastery_criteria": [
       "能说出生物的主要特征或生命活动",
       "能把特征和生活环境、功能联系起来"
@@ -91601,6 +92384,33 @@
     "diagnostic_question": {
       "question": "调查校园生物时，下面哪种做法正确？",
       "answer": "观察记录，不伤害生物"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.SM.04",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p253",
+    "name": "制作校园生物分布图",
+    "domain": "生命科学",
+    "grade": 6,
+    "semester": "下",
+    "chapter": "六年级下册 第2单元 生物的多样性",
+    "type": "procedural",
+    "description": "把调查到的生物按所在位置做成校园分布图。",
+    "mastery_criteria": [
+      "能说出生物的主要特征或生命活动",
+      "能把特征和生活环境、功能联系起来"
+    ],
+    "diagnostic_question": {
+      "question": "校园生物分布图主要用来表示什么？",
+      "answer": "各种生物在校园里的分布位置"
     },
     "external": false,
     "subject": "science",
@@ -91695,13 +92505,13 @@
   },
   {
     "id": "cns_p214",
-    "name": "古代生物与保护生物多样性",
+    "name": "古代生物的多样性",
     "domain": "生命科学",
     "grade": 6,
     "semester": "下",
     "chapter": "六年级下册 第2单元 生物的多样性",
     "type": "application",
-    "description": "知道化石反映古代生物的多样性，懂得保护生物多样性。",
+    "description": "知道化石反映古代生物的多样性。",
     "mastery_criteria": [
       "能说出生物的主要特征或生命活动",
       "能把特征和生活环境、功能联系起来"
@@ -91721,14 +92531,41 @@
     ]
   },
   {
+    "id": "cns_p254",
+    "name": "保护生物多样性",
+    "domain": "生命科学",
+    "grade": 6,
+    "semester": "下",
+    "chapter": "六年级下册 第2单元 生物的多样性",
+    "type": "application",
+    "description": "知道要保护多种多样的生物，防止物种灭绝。",
+    "mastery_criteria": [
+      "能说出生物的主要特征或生命活动",
+      "能把特征和生活环境、功能联系起来"
+    ],
+    "diagnostic_question": {
+      "question": "下面哪种动物是我国特有的珍稀动物？",
+      "answer": "大熊猫"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.SM.04",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
     "id": "cns_p215",
-    "name": "太阳系大家庭与八颗行星",
+    "name": "太阳系大家庭",
     "domain": "地球与宇宙科学",
     "grade": 6,
     "semester": "下",
     "chapter": "六年级下册 第3单元 宇宙",
     "type": "conceptual",
-    "description": "知道太阳系由太阳、八大行星及卫星、小行星等组成。",
+    "description": "知道太阳系由太阳、行星、卫星和小行星等组成。",
     "mastery_criteria": [
       "能描述地球或天体的基本特征和变化",
       "能用模型或观测记录解释简单现象"
@@ -91748,8 +92585,35 @@
     ]
   },
   {
+    "id": "cns_p255",
+    "name": "八颗行星",
+    "domain": "地球与宇宙科学",
+    "grade": 6,
+    "semester": "下",
+    "chapter": "六年级下册 第3单元 宇宙",
+    "type": "conceptual",
+    "description": "认识太阳系的八颗行星。",
+    "mastery_criteria": [
+      "能描述地球或天体的基本特征和变化",
+      "能用模型或观测记录解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "太阳系八大行星中，有美丽光环、最容易看到环的是哪颗？",
+      "answer": "土星"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.DQ.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
     "id": "cns_p216",
-    "name": "日食与月相",
+    "name": "日食",
     "domain": "地球与宇宙科学",
     "grade": 6,
     "semester": "下",
@@ -91776,13 +92640,13 @@
   },
   {
     "id": "cns_p217",
-    "name": "认识星座与夏季星空",
+    "name": "认识星座",
     "domain": "地球与宇宙科学",
     "grade": 6,
     "semester": "下",
     "chapter": "六年级下册 第3单元 宇宙",
     "type": "procedural",
-    "description": "认识北斗七星、北极星和夏季星空中的星座。",
+    "description": "认识北斗七星、北极星等星座。",
     "mastery_criteria": [
       "能描述地球或天体的基本特征和变化",
       "能用模型或观测记录解释简单现象"
@@ -91802,14 +92666,41 @@
     ]
   },
   {
+    "id": "cns_p256",
+    "name": "夏季星空",
+    "domain": "地球与宇宙科学",
+    "grade": 6,
+    "semester": "下",
+    "chapter": "六年级下册 第3单元 宇宙",
+    "type": "procedural",
+    "description": "认识夏季夜空中常见的星座和亮星。",
+    "mastery_criteria": [
+      "能描述地球或天体的基本特征和变化",
+      "能用模型或观测记录解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "夏季夜空中，织女星、牛郎星、天津四组成的是什么？",
+      "answer": "夏季大三角"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.DQ.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
     "id": "cns_p218",
-    "name": "浩瀚的宇宙与探索宇宙",
+    "name": "浩瀚的宇宙",
     "domain": "地球与宇宙科学",
     "grade": 6,
     "semester": "下",
     "chapter": "六年级下册 第3单元 宇宙",
     "type": "conceptual",
-    "description": "知道宇宙非常广阔，了解人类探索宇宙的历程。",
+    "description": "知道宇宙非常广阔。",
     "mastery_criteria": [
       "能描述地球或天体的基本特征和变化",
       "能用模型或观测记录解释简单现象"
@@ -91817,6 +92708,33 @@
     "diagnostic_question": {
       "question": "太阳系所在的星系叫什么？",
       "answer": "银河系"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.DQ.02",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p257",
+    "name": "探索宇宙",
+    "domain": "地球与宇宙科学",
+    "grade": 6,
+    "semester": "下",
+    "chapter": "六年级下册 第3单元 宇宙",
+    "type": "conceptual",
+    "description": "知道人类在不断探索宇宙。",
+    "mastery_criteria": [
+      "能描述地球或天体的基本特征和变化",
+      "能用模型或观测记录解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "我国第一位进入太空的航天员是谁？",
+      "answer": "杨利伟"
     },
     "external": false,
     "subject": "science",
@@ -91884,13 +92802,13 @@
   },
   {
     "id": "cns_p221",
-    "name": "发现变化中的新物质与伴随现象",
+    "name": "发现变化中的新物质",
     "domain": "物质科学",
     "grade": 6,
     "semester": "下",
     "chapter": "六年级下册 第4单元 物质的变化",
     "type": "reasoning",
-    "description": "知道化学变化常伴随发光、发热、变色、产生气体或沉淀等现象。",
+    "description": "通过比较变化前后的物质，发现是否生成了新物质。",
     "mastery_criteria": [
       "能说出物体或现象的主要特征",
       "能用观察或实验的结果解释简单现象"
@@ -91910,14 +92828,68 @@
     ]
   },
   {
+    "id": "cns_p258",
+    "name": "变化中伴随的现象",
+    "domain": "物质科学",
+    "grade": 6,
+    "semester": "下",
+    "chapter": "六年级下册 第4单元 物质的变化",
+    "type": "reasoning",
+    "description": "认识变化中可能伴随的现象，知道发光发热不一定说明产生了新物质。",
+    "mastery_criteria": [
+      "能说出物体或现象的主要特征",
+      "能用观察或实验的结果解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "化学变化常伴随哪些现象？",
+      "answer": "发光发热、变色、产生气体"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.WZ.03",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
     "id": "cns_p222",
-    "name": "生活中的化学变化",
+    "name": "地球家园的化学变化",
     "domain": "物质科学",
     "grade": 6,
     "semester": "下",
     "chapter": "六年级下册 第4单元 物质的变化",
     "type": "application",
-    "description": "了解地球家园和生命体中的化学变化，认识它们对生活的利与弊。",
+    "description": "认识地球家园和自然环境中的化学变化，以及它们对生活环境的影响。",
+    "mastery_criteria": [
+      "能说出物体或现象的主要特征",
+      "能用观察或实验的结果解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "铁制品在潮湿空气中生锈，属于什么变化？",
+      "answer": "化学变化"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.WZ.03",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p259",
+    "name": "生命体中的化学变化",
+    "domain": "物质科学",
+    "grade": 6,
+    "semester": "下",
+    "chapter": "六年级下册 第4单元 物质的变化",
+    "type": "application",
+    "description": "认识消化、呼吸和光合作用等生命活动中的化学变化。",
     "mastery_criteria": [
       "能说出物体或现象的主要特征",
       "能用观察或实验的结果解释简单现象"
@@ -91925,6 +92897,33 @@
     "diagnostic_question": {
       "question": "下面哪个是生命体中的化学变化？",
       "answer": "食物在体内被消化分解"
+    },
+    "external": false,
+    "subject": "science",
+    "standards": [
+      {
+        "id": "css-2022:3.WZ.03",
+        "confidence": "inferred",
+        "note": "教科版该课的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+      }
+    ]
+  },
+  {
+    "id": "cns_p260",
+    "name": "美丽的化学变化",
+    "domain": "物质科学",
+    "grade": 6,
+    "semester": "下",
+    "chapter": "六年级下册 第4单元 物质的变化",
+    "type": "application",
+    "description": "知道有些化学变化会发光、变色，看起来很美丽。",
+    "mastery_criteria": [
+      "能说出物体或现象的主要特征",
+      "能用观察或实验的结果解释简单现象"
+    ],
+    "diagnostic_question": {
+      "question": "节日夜空中的烟花绽放，发出彩色的光，这主要是什么变化？",
+      "answer": "化学变化"
     },
     "external": false,
     "subject": "science",

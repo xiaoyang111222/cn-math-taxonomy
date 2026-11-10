@@ -224,4 +224,42 @@ KEY_IDS = {
     "g6b_qiti": "cns_p220",  # 产生气体的变化
     "g6b_xinwuzhi": "cns_p221",  # 发现变化中的新物质与伴随现象
     "g6b_huaxuebianhua": "cns_p222",  # 生活中的化学变化
+    "g2b_laidiaoyu": "cns_p223",  # 我们来钓鱼
+    "g4a_daqitong": "cns_p224",  # 自制打气筒
+    "g4a_feihuoliang": "cns_p225",  # 测量肺活量
+    "g4a_yueqibianhua": "cns_p226",  # 乐器的声音变化
+    "g4a_gaijinyueqi": "cns_p227",  # 改进我们的乐器
+    "g4b_zhongzhi": "cns_p228",  # 种植凤仙花
+    "g4b_kaiguan": "cns_p229",  # 电路中的开关
+    "g4b_zhaoming": "cns_p230",  # 模拟安装照明电路
+    "g4b_gushi": "cns_p231",  # 岩石与土壤的故事
+    "g4b_biaoben": "cns_p232",  # 制作岩石和矿物标本
+    "g4b_turangwomen": "cns_p233",  # 岩石、土壤和我们
+    "g5a_jianyixianwei": "cns_p234",  # 用简易显微镜观察
+    "g5a_zhizuodulun": "cns_p235",  # 制作独轮车
+    "g5a_pingjiayueqiu": "cns_p236",  # 评价「月球小车」
+    "g5a_fengdibiao": "cns_p237",  # 风对地表的作用
+    "g5b_zhizuoceshi": "cns_p238",  # 制作与测试我们的小船
+    "g5b_zaisheng": "cns_p239",  # 让资源再生
+    "g5b_fenxi": "cns_p240",  # 分析一个实际的环境问题
+    "g5b_baowenbei": "cns_p241",  # 做个保温杯
+    "g6a_junheng": "cns_p242",  # 营养要均衡
+    "g6a_qingxu": "cns_p243",  # 管理我们的情绪
+    "g6a_zhizuoqianwang": "cns_p244",  # 制作潜望镜
+    "g6a_zizhuan": "cns_p245",  # 地球如何自转
+    "g6a_siji": "cns_p246",  # 四季变化
+    "g6a_zuoshuizhong": "cns_p247",  # 做个水钟
+    "g6a_gaijinshuizhong": "cns_p248",  # 改进水钟
+    "g6a_zhongbai": "cns_p249",  # 制作钟摆
+    "g6b_tataizhizuo": "cns_p250",  # 制作塔台模型
+    "g6b_tataiceshi": "cns_p251",  # 测试塔台模型
+    "g6b_tataipinggu": "cns_p252",  # 评估改进塔台模型
+    "g6b_fenbutu": "cns_p253",  # 制作校园生物分布图
+    "g6b_baohuduo": "cns_p254",  # 保护生物多样性
+    "g6b_baxingxing": "cns_p255",  # 八颗行星
+    "g6b_xiajixingkong": "cns_p256",  # 夏季星空
+    "g6b_tansuo": "cns_p257",  # 探索宇宙
+    "g6b_bansuixianxiang": "cns_p258",  # 变化中伴随的现象
+    "g6b_shengminghuaxue": "cns_p259",  # 生命体中的化学变化
+    "g6b_meilihuaxue": "cns_p260",  # 美丽的化学变化
 }

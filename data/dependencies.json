@@ -27996,10 +27996,16 @@
     "reason": "按教科版科学的常见教学顺序，先学「空气流动有力量」，再学「我们来做「热气球」」。"
   },
   {
-    "topicId": "cns_p107",
+    "topicId": "cns_p224",
     "prerequisiteId": "cns_p106",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「风的成因」，再学「我们的呼吸与消化」。"
+    "reason": "按教科版科学的常见教学顺序，先学「风的成因」，再学「自制打气筒」。"
+  },
+  {
+    "topicId": "cns_p107",
+    "prerequisiteId": "cns_p224",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「自制打气筒」，再学「我们的呼吸与消化」。"
   },
   {
     "topicId": "cns_p108",
@@ -28011,13 +28017,19 @@
     "topicId": "cns_p109",
     "prerequisiteId": "cns_p108",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「认识呼吸器官」，再学「呼吸的变化与肺活量」。"
+    "reason": "按教科版科学的常见教学顺序，先学「认识呼吸器官」，再学「呼吸的变化」。"
+  },
+  {
+    "topicId": "cns_p225",
+    "prerequisiteId": "cns_p109",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「呼吸的变化」，再学「测量肺活量」。"
   },
   {
     "topicId": "cns_p110",
-    "prerequisiteId": "cns_p109",
+    "prerequisiteId": "cns_p225",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「呼吸的变化与肺活量」，再学「口腔里的消化」。"
+    "reason": "按教科版科学的常见教学顺序，先学「测量肺活量」，再学「口腔里的消化」。"
   },
   {
     "topicId": "cns_p111",
@@ -28044,10 +28056,22 @@
     "reason": "按教科版科学的常见教学顺序，先学「声音的强弱」，再学「声音的高低」。"
   },
   {
-    "topicId": "cns_p118",
-    "prerequisiteId": "cns_p117",
+    "topicId": "cns_p226",
+    "prerequisiteId": "cns_p116",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「设计和改进我们的乐器」，再学「声音的传播」。"
+    "reason": "按教科版科学的常见教学顺序，先学「声音的高低」，再学「乐器的声音变化」。"
+  },
+  {
+    "topicId": "cns_p117",
+    "prerequisiteId": "cns_p226",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「乐器的声音变化」，再学「设计我们的乐器」。"
+  },
+  {
+    "topicId": "cns_p118",
+    "prerequisiteId": "cns_p227",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「改进我们的乐器」，再学「声音的传播」。"
   },
   {
     "topicId": "cns_p119",
@@ -28062,10 +28086,16 @@
     "reason": "按教科版科学的常见教学顺序，先学「保护听力」，再学「种子里孕育着新生命」。"
   },
   {
-    "topicId": "cns_p121",
+    "topicId": "cns_p228",
     "prerequisiteId": "cns_p120",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「种子里孕育着新生命」，再学「种子长出了根」。"
+    "reason": "按教科版科学的常见教学顺序，先学「种子里孕育着新生命」，再学「种植凤仙花」。"
+  },
+  {
+    "topicId": "cns_p121",
+    "prerequisiteId": "cns_p228",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「种植凤仙花」，再学「种子长出了根」。"
   },
   {
     "topicId": "cns_p122",
@@ -28077,7 +28107,7 @@
     "topicId": "cns_p123",
     "prerequisiteId": "cns_p122",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「茎和叶」，再学「开花了」。"
+    "reason": "按教科版科学的常见教学顺序，先学「茎和叶」，再学「凤仙花开花了」。"
   },
   {
     "topicId": "cns_p125",
@@ -28089,13 +28119,13 @@
     "topicId": "cns_p126",
     "prerequisiteId": "cns_p125",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「种子的传播」，再学「植物的一生」。"
+    "reason": "按教科版科学的常见教学顺序，先学「种子的传播」，再学「凤仙花的一生」。"
   },
   {
     "topicId": "cns_p127",
     "prerequisiteId": "cns_p126",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「植物的一生」，再学「电和我们的生活」。"
+    "reason": "按教科版科学的常见教学顺序，先学「凤仙花的一生」，再学「电和我们的生活」。"
   },
   {
     "topicId": "cns_p128",
@@ -28105,27 +28135,51 @@
   },
   {
     "topicId": "cns_p131",
-    "prerequisiteId": "cns_p130",
+    "prerequisiteId": "cns_p132",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「电路出故障了」，再学「导体和绝缘体」。"
+    "reason": "按教科版科学的常见教学顺序，先学「里面是怎样连接的」，再学「导体和绝缘体」。"
+  },
+  {
+    "topicId": "cns_p229",
+    "prerequisiteId": "cns_p131",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「导体和绝缘体」，再学「电路中的开关」。"
+  },
+  {
+    "topicId": "cns_p231",
+    "prerequisiteId": "cns_p230",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「模拟安装照明电路」，再学「岩石与土壤的故事」。"
   },
   {
     "topicId": "cns_p133",
-    "prerequisiteId": "cns_p132",
+    "prerequisiteId": "cns_p231",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「里面是怎样连接的与安装照明电路」，再学「认识常见的岩石」。"
+    "reason": "按教科版科学的常见教学顺序，先学「岩石与土壤的故事」，再学「认识几种常见的岩石」。"
+  },
+  {
+    "topicId": "cns_p232",
+    "prerequisiteId": "cns_p134",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「岩石的组成」，再学「制作岩石和矿物标本」。"
   },
   {
     "topicId": "cns_p135",
-    "prerequisiteId": "cns_p134",
+    "prerequisiteId": "cns_p232",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「岩石的组成」，再学「岩石、沙和黏土」。"
+    "reason": "按教科版科学的常见教学顺序，先学「制作岩石和矿物标本」，再学「岩石、沙和黏土」。"
+  },
+  {
+    "topicId": "cns_p233",
+    "prerequisiteId": "cns_p137",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「比较不同的土壤」，再学「岩石、土壤和我们」。"
   },
   {
     "topicId": "cns_p138",
-    "prerequisiteId": "cns_p137",
+    "prerequisiteId": "cns_p233",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「比较不同的土壤与保护土壤」，再学「研究放大镜」。"
+    "reason": "按教科版科学的常见教学顺序，先学「岩石、土壤和我们」，再学「研究放大镜」。"
   },
   {
     "topicId": "cns_p139",
@@ -28152,10 +28206,16 @@
     "reason": "按教科版科学的常见教学顺序，先学「微生物与人类」，再学「各种各样的工具」。"
   },
   {
-    "topicId": "cns_p146",
+    "topicId": "cns_p235",
     "prerequisiteId": "cns_p145",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「独轮车省力的秘密——杠杆」，再学「巧用斜面」。"
+    "reason": "按教科版科学的常见教学顺序，先学「独轮车省力的秘密」，再学「制作独轮车」。"
+  },
+  {
+    "topicId": "cns_p146",
+    "prerequisiteId": "cns_p235",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「制作独轮车」，再学「巧用斜面」。"
   },
   {
     "topicId": "cns_p147",
@@ -28167,19 +28227,19 @@
     "topicId": "cns_p148",
     "prerequisiteId": "cns_p147",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「妙用滑轮」，再学「给小车安装方向盘——轮轴」。"
+    "reason": "按教科版科学的常见教学顺序，先学「妙用滑轮」，再学「给小车安装方向盘」。"
   },
   {
     "topicId": "cns_p149",
     "prerequisiteId": "cns_p148",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「给小车安装方向盘——轮轴」，再学「社会发展与工具和技术」。"
+    "reason": "按教科版科学的常见教学顺序，先学「给小车安装方向盘」，再学「社会发展与工具和技术」。"
   },
   {
     "topicId": "cns_p150",
     "prerequisiteId": "cns_p149",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「社会发展与工具和技术」，再学「拆解我们的小车模型」。"
+    "reason": "按教科版科学的常见教学顺序，先学「社会发展与工具和技术」，再学「拆解我的小车模型」。"
   },
   {
     "topicId": "cns_p152",
@@ -28189,9 +28249,9 @@
   },
   {
     "topicId": "cns_p156",
-    "prerequisiteId": "cns_p155",
+    "prerequisiteId": "cns_p236",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「设计、制作和评价「月球小车」」，再学「地球的表面」。"
+    "reason": "按教科版科学的常见教学顺序，先学「评价「月球小车」」，再学「地球的表面」。"
   },
   {
     "topicId": "cns_p158",
@@ -28209,13 +28269,19 @@
     "topicId": "cns_p161",
     "prerequisiteId": "cns_p160",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「岩石的类别与变化」，再学「水和风对地表的作用」。"
+    "reason": "按教科版科学的常见教学顺序，先学「岩石的类别与变化」，再学「水对地表的作用」。"
+  },
+  {
+    "topicId": "cns_p237",
+    "prerequisiteId": "cns_p161",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「水对地表的作用」，再学「风对地表的作用」。"
   },
   {
     "topicId": "cns_p162",
-    "prerequisiteId": "cns_p161",
+    "prerequisiteId": "cns_p237",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「水和风对地表的作用」，再学「种子发芽实验」。"
+    "reason": "按教科版科学的常见教学顺序，先学「风对地表的作用」，再学「种子发芽实验」。"
   },
   {
     "topicId": "cns_p163",
@@ -28261,9 +28327,9 @@
   },
   {
     "topicId": "cns_p175",
-    "prerequisiteId": "cns_p174",
+    "prerequisiteId": "cns_p238",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「设计、制作和测试我们的小船」，再学「地球——宇宙的奇迹」。"
+    "reason": "按教科版科学的常见教学顺序，先学「制作与测试我们的小船」，再学「地球——宇宙的奇迹」。"
   },
   {
     "topicId": "cns_p176",
@@ -28287,13 +28353,25 @@
     "topicId": "cns_p179",
     "prerequisiteId": "cns_p178",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「解决垃圾问题」，再学「合理利用能源与资源再生」。"
+    "reason": "按教科版科学的常见教学顺序，先学「解决垃圾问题」，再学「合理利用能源」。"
+  },
+  {
+    "topicId": "cns_p239",
+    "prerequisiteId": "cns_p179",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「合理利用能源」，再学「让资源再生」。"
+  },
+  {
+    "topicId": "cns_p240",
+    "prerequisiteId": "cns_p239",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「让资源再生」，再学「分析一个实际的环境问题」。"
   },
   {
     "topicId": "cns_p180",
-    "prerequisiteId": "cns_p179",
+    "prerequisiteId": "cns_p240",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「合理利用能源与资源再生」，再学「温度与水的变化」。"
+    "reason": "按教科版科学的常见教学顺序，先学「分析一个实际的环境问题」，再学「温度与水的变化」。"
   },
   {
     "topicId": "cns_p181",
@@ -28317,37 +28395,49 @@
     "topicId": "cns_p185",
     "prerequisiteId": "cns_p184",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「热在水中的传递」，再学「哪个传热快与做个保温杯」。"
+    "reason": "按教科版科学的常见教学顺序，先学「热在水中的传递」，再学「哪个传热快」。"
   },
   {
     "topicId": "cns_p186",
-    "prerequisiteId": "cns_p185",
+    "prerequisiteId": "cns_p241",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「哪个传热快与做个保温杯」，再学「生长发育的信息」。"
+    "reason": "按教科版科学的常见教学顺序，先学「做个保温杯」，再学「生长发育的信息」。"
   },
   {
     "topicId": "cns_p187",
     "prerequisiteId": "cns_p186",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「生长发育的信息」，再学「食物中的营养与均衡膳食」。"
+    "reason": "按教科版科学的常见教学顺序，先学「生长发育的信息」，再学「食物中的营养」。"
+  },
+  {
+    "topicId": "cns_p242",
+    "prerequisiteId": "cns_p187",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「食物中的营养」，再学「营养要均衡」。"
   },
   {
     "topicId": "cns_p188",
-    "prerequisiteId": "cns_p187",
+    "prerequisiteId": "cns_p242",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「食物中的营养与均衡膳食」，再学「身体的「总指挥」」。"
+    "reason": "按教科版科学的常见教学顺序，先学「营养要均衡」，再学「身体的「总指挥」」。"
   },
   {
     "topicId": "cns_p189",
     "prerequisiteId": "cns_p188",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「身体的「总指挥」」，再学「睡眠与情绪」。"
+    "reason": "按教科版科学的常见教学顺序，先学「身体的「总指挥」」，再学「睡眠要充足」。"
+  },
+  {
+    "topicId": "cns_p243",
+    "prerequisiteId": "cns_p189",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「睡眠要充足」，再学「管理我们的情绪」。"
   },
   {
     "topicId": "cns_p190",
-    "prerequisiteId": "cns_p189",
+    "prerequisiteId": "cns_p243",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「睡眠与情绪」，再学「制订健康生活计划」。"
+    "reason": "按教科版科学的常见教学顺序，先学「管理我们的情绪」，再学「制订健康生活计划」。"
   },
   {
     "topicId": "cns_p191",
@@ -28363,15 +28453,21 @@
   },
   {
     "topicId": "cns_p196",
-    "prerequisiteId": "cns_p195",
+    "prerequisiteId": "cns_p244",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「设计和制作潜望镜」，再学「制造彩虹」。"
+    "reason": "按教科版科学的常见教学顺序，先学「制作潜望镜」，再学「制造彩虹」。"
   },
   {
     "topicId": "cns_p197",
     "prerequisiteId": "cns_p196",
     "strength": "soft",
     "reason": "按教科版科学的常见教学顺序，先学「制造彩虹」，再学「利用地球模型来研究」。"
+  },
+  {
+    "topicId": "cns_p245",
+    "prerequisiteId": "cns_p198",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「昼夜交替的解释」，再学「地球如何自转」。"
   },
   {
     "topicId": "cns_p200",
@@ -28381,21 +28477,39 @@
   },
   {
     "topicId": "cns_p202",
-    "prerequisiteId": "cns_p201",
+    "prerequisiteId": "cns_p246",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「地球的公转与四季」，再学「时间在流逝」。"
+    "reason": "按教科版科学的常见教学顺序，先学「四季变化」，再学「时间在流逝」。"
   },
   {
     "topicId": "cns_p203",
     "prerequisiteId": "cns_p202",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「时间在流逝」，再学「用水计量时间与制作水钟」。"
+    "reason": "按教科版科学的常见教学顺序，先学「时间在流逝」，再学「用水计量时间」。"
+  },
+  {
+    "topicId": "cns_p247",
+    "prerequisiteId": "cns_p203",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「用水计量时间」，再学「做个水钟」。"
+  },
+  {
+    "topicId": "cns_p248",
+    "prerequisiteId": "cns_p247",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「做个水钟」，再学「改进水钟」。"
+  },
+  {
+    "topicId": "cns_p249",
+    "prerequisiteId": "cns_p204",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「机械摆钟」，再学「制作钟摆」。"
   },
   {
     "topicId": "cns_p205",
-    "prerequisiteId": "cns_p204",
+    "prerequisiteId": "cns_p249",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「机械摆钟与制作钟摆」，再学「时间与变化」。"
+    "reason": "按教科版科学的常见教学顺序，先学「制作钟摆」，再学「时间与变化」。"
   },
   {
     "topicId": "cns_p206",
@@ -28417,15 +28531,21 @@
   },
   {
     "topicId": "cns_p210",
-    "prerequisiteId": "cns_p209",
+    "prerequisiteId": "cns_p252",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「设计、制作、测试和改进塔台模型」，再学「校园生物大搜索与生物分布」。"
+    "reason": "按教科版科学的常见教学顺序，先学「评估改进塔台模型」，再学「校园生物大搜索」。"
+  },
+  {
+    "topicId": "cns_p253",
+    "prerequisiteId": "cns_p210",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「校园生物大搜索」，再学「制作校园生物分布图」。"
   },
   {
     "topicId": "cns_p211",
-    "prerequisiteId": "cns_p210",
+    "prerequisiteId": "cns_p253",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「校园生物大搜索与生物分布」，再学「形形色色的植物」。"
+    "reason": "按教科版科学的常见教学顺序，先学「制作校园生物分布图」，再学「形形色色的植物」。"
   },
   {
     "topicId": "cns_p212",
@@ -28443,43 +28563,91 @@
     "topicId": "cns_p214",
     "prerequisiteId": "cns_p213",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「相貌各异的我们」，再学「古代生物与保护生物多样性」。"
+    "reason": "按教科版科学的常见教学顺序，先学「相貌各异的我们」，再学「古代生物的多样性」。"
+  },
+  {
+    "topicId": "cns_p254",
+    "prerequisiteId": "cns_p214",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「古代生物的多样性」，再学「保护生物多样性」。"
   },
   {
     "topicId": "cns_p215",
-    "prerequisiteId": "cns_p214",
+    "prerequisiteId": "cns_p254",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「古代生物与保护生物多样性」，再学「太阳系大家庭与八颗行星」。"
+    "reason": "按教科版科学的常见教学顺序，先学「保护生物多样性」，再学「太阳系大家庭」。"
+  },
+  {
+    "topicId": "cns_p255",
+    "prerequisiteId": "cns_p215",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「太阳系大家庭」，再学「八颗行星」。"
   },
   {
     "topicId": "cns_p216",
-    "prerequisiteId": "cns_p215",
+    "prerequisiteId": "cns_p255",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「太阳系大家庭与八颗行星」，再学「日食与月相」。"
+    "reason": "按教科版科学的常见教学顺序，先学「八颗行星」，再学「日食」。"
   },
   {
     "topicId": "cns_p217",
     "prerequisiteId": "cns_p216",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「日食与月相」，再学「认识星座与夏季星空」。"
+    "reason": "按教科版科学的常见教学顺序，先学「日食」，再学「认识星座」。"
+  },
+  {
+    "topicId": "cns_p256",
+    "prerequisiteId": "cns_p217",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「认识星座」，再学「夏季星空」。"
   },
   {
     "topicId": "cns_p218",
-    "prerequisiteId": "cns_p217",
+    "prerequisiteId": "cns_p256",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「认识星座与夏季星空」，再学「浩瀚的宇宙与探索宇宙」。"
+    "reason": "按教科版科学的常见教学顺序，先学「夏季星空」，再学「浩瀚的宇宙」。"
+  },
+  {
+    "topicId": "cns_p257",
+    "prerequisiteId": "cns_p218",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「浩瀚的宇宙」，再学「探索宇宙」。"
   },
   {
     "topicId": "cns_p219",
-    "prerequisiteId": "cns_p218",
+    "prerequisiteId": "cns_p257",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「浩瀚的宇宙与探索宇宙」，再学「厨房里的物质与变化」。"
+    "reason": "按教科版科学的常见教学顺序，先学「探索宇宙」，再学「厨房里的物质与变化」。"
   },
   {
     "topicId": "cns_p221",
     "prerequisiteId": "cns_p220",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「产生气体的变化」，再学「发现变化中的新物质与伴随现象」。"
+    "reason": "按教科版科学的常见教学顺序，先学「产生气体的变化」，再学「发现变化中的新物质」。"
+  },
+  {
+    "topicId": "cns_p258",
+    "prerequisiteId": "cns_p221",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「发现变化中的新物质」，再学「变化中伴随的现象」。"
+  },
+  {
+    "topicId": "cns_p222",
+    "prerequisiteId": "cns_p258",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「变化中伴随的现象」，再学「地球家园的化学变化」。"
+  },
+  {
+    "topicId": "cns_p259",
+    "prerequisiteId": "cns_p222",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「地球家园的化学变化」，再学「生命体中的化学变化」。"
+  },
+  {
+    "topicId": "cns_p260",
+    "prerequisiteId": "cns_p259",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「生命体中的化学变化」，再学「美丽的化学变化」。"
   },
   {
     "topicId": "cns_p023",
@@ -28602,16 +28770,22 @@
     "reason": "概括植物的一生，要先知道果实和种子的形成。"
   },
   {
+    "topicId": "cns_p234",
+    "prerequisiteId": "cns_p139",
+    "strength": "hard",
+    "reason": "用简易显微镜观察，要先知道怎样放得更大。"
+  },
+  {
+    "topicId": "cns_p140",
+    "prerequisiteId": "cns_p234",
+    "strength": "hard",
+    "reason": "用光学显微镜观察之前，要先用简易显微镜观察过。"
+  },
+  {
     "topicId": "cns_p141",
     "prerequisiteId": "cns_p140",
     "strength": "hard",
     "reason": "观察细胞要先会使用显微镜。"
-  },
-  {
-    "topicId": "cns_p140",
-    "prerequisiteId": "cns_p139",
-    "strength": "hard",
-    "reason": "理解显微镜，要先知道两个凸透镜组合能放得更大。"
   },
   {
     "topicId": "cns_p142",
@@ -28800,7 +28974,13 @@
     "reason": "设计乐器要先懂得改变音高的方法。"
   },
   {
-    "topicId": "cns_p117",
+    "topicId": "cns_p227",
+    "prerequisiteId": "cns_p117",
+    "strength": "hard",
+    "reason": "改进乐器要先设计好。"
+  },
+  {
+    "topicId": "cns_p227",
     "prerequisiteId": "cns_p115",
     "strength": "hard",
     "reason": "改进乐器音量要先懂得声音强弱与振幅的关系。"
@@ -28809,7 +28989,7 @@
     "topicId": "cns_p129",
     "prerequisiteId": "cns_p128",
     "strength": "hard",
-    "reason": "组装带开关的电路，要先会点亮小灯泡。"
+    "reason": "组装简易电路，要先会点亮小灯泡。"
   },
   {
     "topicId": "cns_p130",
@@ -28819,15 +28999,27 @@
   },
   {
     "topicId": "cns_p132",
-    "prerequisiteId": "cns_p131",
-    "strength": "hard",
-    "reason": "推测盒内连接和安装照明电路，要先会区分导体和绝缘体。"
-  },
-  {
-    "topicId": "cns_p132",
     "prerequisiteId": "cns_p130",
     "strength": "hard",
     "reason": "用检测器推测盒内连接，要先会使用电路检测器。"
+  },
+  {
+    "topicId": "cns_p229",
+    "prerequisiteId": "cns_p129",
+    "strength": "hard",
+    "reason": "研究电路中的开关要先会组装简易电路。"
+  },
+  {
+    "topicId": "cns_p230",
+    "prerequisiteId": "cns_p229",
+    "strength": "hard",
+    "reason": "模拟安装照明电路要先认识开关。"
+  },
+  {
+    "topicId": "cns_p230",
+    "prerequisiteId": "cns_p131",
+    "strength": "hard",
+    "reason": "模拟安装照明电路要先区分导体和绝缘体。"
   },
   {
     "topicId": "cns_p145",
@@ -28866,6 +29058,12 @@
     "reason": "设计月球车轮子，要先懂得摩擦力的影响因素。"
   },
   {
+    "topicId": "cns_p236",
+    "prerequisiteId": "cns_p155",
+    "strength": "hard",
+    "reason": "评价「月球小车」，要先制作好。"
+  },
+  {
     "topicId": "cns_p170",
     "prerequisiteId": "cns_p169",
     "strength": "hard",
@@ -28894,6 +29092,12 @@
     "prerequisiteId": "cns_p173",
     "strength": "hard",
     "reason": "设计小船的动力，要先会给船装动力。"
+  },
+  {
+    "topicId": "cns_p238",
+    "prerequisiteId": "cns_p174",
+    "strength": "hard",
+    "reason": "制作与测试小船，要先设计好。"
   },
   {
     "topicId": "cns_p180",
@@ -28932,6 +29136,12 @@
     "reason": "比较不同材料传热快慢，要先认识热传导。"
   },
   {
+    "topicId": "cns_p241",
+    "prerequisiteId": "cns_p185",
+    "strength": "hard",
+    "reason": "做保温杯，要先知道哪种材料传热快、哪种传热慢。"
+  },
+  {
     "topicId": "cns_p192",
     "prerequisiteId": "cns_p191",
     "strength": "hard",
@@ -28956,6 +29166,12 @@
     "reason": "制作潜望镜要先懂得平面镜反射光。"
   },
   {
+    "topicId": "cns_p244",
+    "prerequisiteId": "cns_p195",
+    "strength": "hard",
+    "reason": "制作潜望镜要先设计好。"
+  },
+  {
     "topicId": "cns_p220",
     "prerequisiteId": "cns_p219",
     "strength": "hard",
@@ -28971,10 +29187,10 @@
     "topicId": "cns_p222",
     "prerequisiteId": "cns_p221",
     "strength": "hard",
-    "reason": "认识生活中的化学变化，要先会根据现象判断化学变化。"
+    "reason": "认识地球家园的化学变化，要先会判断化学变化。"
   },
   {
-    "topicId": "cns_p222",
+    "topicId": "cns_p259",
     "prerequisiteId": "cns_p122",
     "strength": "hard",
     "reason": "把光合作用看成化学变化，要先知道叶能制造养料。"
@@ -29079,13 +29295,25 @@
     "topicId": "cns_p161",
     "prerequisiteId": "cns_p156",
     "strength": "hard",
-    "reason": "研究流水和风改变地表，要先认识地形。"
+    "reason": "研究流水改变地表，要先认识地形。"
   },
   {
     "topicId": "cns_p161",
     "prerequisiteId": "cns_p135",
     "strength": "hard",
     "reason": "理解风化、侵蚀，要先知道岩石会破碎成沙和黏土。"
+  },
+  {
+    "topicId": "cns_p237",
+    "prerequisiteId": "cns_p156",
+    "strength": "hard",
+    "reason": "研究风对地表的作用，要先认识地球的表面。"
+  },
+  {
+    "topicId": "cns_p237",
+    "prerequisiteId": "cns_p135",
+    "strength": "hard",
+    "reason": "理解风的侵蚀，要先知道岩石会破碎成沙和黏土。"
   },
   {
     "topicId": "cns_p157",
@@ -29125,7 +29353,7 @@
   },
   {
     "topicId": "cns_p199",
-    "prerequisiteId": "cns_p198",
+    "prerequisiteId": "cns_p245",
     "strength": "hard",
     "reason": "判断哪里先迎来黎明，要先知道地球自西向东自转。"
   },
@@ -29142,6 +29370,12 @@
     "reason": "解释四季的形成，要先观察正午影长的四季变化。"
   },
   {
+    "topicId": "cns_p246",
+    "prerequisiteId": "cns_p201",
+    "strength": "hard",
+    "reason": "解释四季变化，要先知道地球的公转。"
+  },
+  {
     "topicId": "cns_p202",
     "prerequisiteId": "cns_p198",
     "strength": "hard",
@@ -29149,7 +29383,7 @@
   },
   {
     "topicId": "cns_p204",
-    "prerequisiteId": "cns_p203",
+    "prerequisiteId": "cns_p248",
     "strength": "hard",
     "reason": "研究摆钟之前，要先了解水钟等计时方法的不足。"
   },
@@ -29230,5 +29464,23 @@
     "prerequisiteId": "cns_p174",
     "strength": "hard",
     "reason": "完成塔台工程，要先经历过明确问题、设计、制作、测试、改进的工程过程。"
+  },
+  {
+    "topicId": "cns_p250",
+    "prerequisiteId": "cns_p209",
+    "strength": "hard",
+    "reason": "制作塔台模型要先设计好。"
+  },
+  {
+    "topicId": "cns_p251",
+    "prerequisiteId": "cns_p250",
+    "strength": "hard",
+    "reason": "测试塔台模型要先制作好。"
+  },
+  {
+    "topicId": "cns_p252",
+    "prerequisiteId": "cns_p251",
+    "strength": "hard",
+    "reason": "评估改进塔台模型要先测试过。"
   }
 ]
