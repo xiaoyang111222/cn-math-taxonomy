@@ -27474,36 +27474,6 @@
     "reason": "九上已有文天祥《过零丁洋》和张养浩《山坡羊·潼关怀古》。这里是《南安军》和《骊山怀古》，句子和题目都要分开。"
   },
   {
-    "topicId": "cnd_j003",
-    "prerequisiteId": "cnd_j002",
-    "strength": "soft",
-    "reason": "教学上宜先分清初中的学习方式和时间条件已经变了，再判断目标是否仍按旧条件来写。目标能否核对，概念上并不以适应变化的定义为前提。"
-  },
-  {
-    "topicId": "cnd_j005",
-    "prerequisiteId": "cnd_j004",
-    "strength": "soft",
-    "reason": "教学上宜先看清自己的具体事实，再决定发挥哪一项优势、先改哪一处短处。题目已经给出优势和短处时，并不以多渠道认识的定义为前提。"
-  },
-  {
-    "topicId": "cnd_j007",
-    "prerequisiteId": "cnd_j006",
-    "strength": "soft",
-    "reason": "教学上宜先知道梦想要靠当下的行动靠近，再看学习之后的反思有没有改到带来结果的方法。何谓有效反思，概念上不以梦想的定义为前提。"
-  },
-  {
-    "topicId": "cnd_j053",
-    "prerequisiteId": "cnd_j045",
-    "strength": "soft",
-    "reason": "教学上宜先见过行使自己的便利时不得损害他人合法权益，再判断外放、编造指责能否称作自由。掌握自由并不以背下权利界限定义为前提，这条 soft 不是掌握门槛。"
-  },
-  {
-    "topicId": "cnd_j056",
-    "prerequisiteId": "cnd_j050",
-    "strength": "soft",
-    "reason": "教学上宜先把道德倡议和法律规定的义务分开，再判断一次志愿邀请是不是违法、分内值日能否推掉。角色责任的场景可以单独判断，这条 soft 不是掌握门槛。"
-  },
-  {
     "topicId": "cns_p002",
     "prerequisiteId": "cns_p001",
     "strength": "soft",
@@ -29476,5 +29446,47 @@
     "prerequisiteId": "cns_p251",
     "strength": "hard",
     "reason": "评估改进塔台模型要先测试过。"
+  },
+  {
+    "topicId": "cnd_j003",
+    "prerequisiteId": "cnd_j002",
+    "strength": "soft",
+    "reason": "教学上宜先分清初中的学习方式和时间条件已经变了，再判断目标是否仍按旧条件来写。目标能否核对，概念上并不以适应变化的定义为前提。"
+  },
+  {
+    "topicId": "cnd_j005",
+    "prerequisiteId": "cnd_j004",
+    "strength": "soft",
+    "reason": "教学上宜先看清自己的具体事实，再决定发挥哪一项优势、先改哪一处短处。题目已经给出优势和短处时，并不以多渠道认识的定义为前提。"
+  },
+  {
+    "topicId": "cnd_j007",
+    "prerequisiteId": "cnd_j006",
+    "strength": "soft",
+    "reason": "教学上宜先知道梦想要靠当下的行动靠近，再看学习之后的反思有没有改到带来结果的方法。何谓有效反思，概念上不以梦想的定义为前提。"
+  },
+  {
+    "topicId": "cnd_j053",
+    "prerequisiteId": "cnd_j045",
+    "strength": "soft",
+    "reason": "教学上宜先见过行使自己的便利时不得损害他人合法权益，再判断外放、编造指责能否称作自由。掌握自由并不以背下权利界限定义为前提，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j056",
+    "prerequisiteId": "cnd_j050",
+    "strength": "soft",
+    "reason": "教学上宜先把道德倡议和法律规定的义务分开，再判断一次志愿邀请是不是违法、分内值日能否推掉。角色责任的场景可以单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j092",
+    "prerequisiteId": "cnd_j091",
+    "strength": "soft",
+    "reason": "教学上宜先辨清社会主要矛盾已经转化为美好生活需要和不平衡不充分的发展之间的矛盾，再理解进入新时代不等于问题已经消失。新时代的意义可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j103",
+    "prerequisiteId": "cnd_j101",
+    "strength": "soft",
+    "reason": "教学上宜先知道新发展理念是创新、协调、绿色、开放、共享，再判断高质量发展是不是只把速度降下来。高质量发展的题面可以单独判断，这条 soft 不是掌握门槛。"
   }
 ]

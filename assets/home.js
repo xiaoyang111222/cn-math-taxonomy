@@ -91,7 +91,7 @@
   } else if (subject === 'morality') {
     document.title = '道德与法治 · 中小学·高中知识图谱';
     var meye = document.querySelector('.eyebrow');
-    if (meye) meye.textContent = '道德与法治：小学与初中 · 统编版 · 只列出已录入册次（初中现含七上、七下、八上、八下；九年级未录入）';
+    if (meye) meye.textContent = '道德与法治：小学与初中 · 统编版 · 只列出已录入册次';
     var mprimary = document.querySelector('.hero-actions a.btn-primary');
     var mbrowse = document.querySelector('.hero-actions a.btn:not(.btn-primary)');
     if (mprimary) mprimary.setAttribute('href', 'diagnose/?subject=morality');
@@ -153,6 +153,30 @@
       cdemo.setAttribute('href', 'diagnose/?subject=chemistry&grade=' + encodeURIComponent('九上') + '&demo=1');
       cdemo.textContent = '先看一遍演示：九年级上册化学';
     }
+  }
+
+  function moralityJuniorEyebrow(topicList) {
+    var vols = [
+      [7, '上', '七上'], [7, '下', '七下'],
+      [8, '上', '八上'], [8, '下', '八下'],
+      [9, '上', '九上'], [9, '下', '九下']
+    ];
+    var has = {};
+    (topicList || []).forEach(function (topic) {
+      if (topic.grade >= 7 && topic.grade <= 9 && (topic.semester === '上' || topic.semester === '下')) {
+        has[String(topic.grade) + topic.semester] = true;
+      }
+    });
+    var present = [];
+    vols.forEach(function (row) {
+      if (has[String(row[0]) + row[1]]) present.push(row[2]);
+    });
+    var junior = present.length ? ('初中现含' + present.join('、')) : '初中册次尚未录入';
+    var g9note = '九年级未录入';
+    if (has['9上'] && has['9下']) g9note = '九年级上下册均已录入';
+    else if (has['9上']) g9note = '九下未录入';
+    else if (has['9下']) g9note = '九上未录入';
+    return '道德与法治：小学与初中 · 统编版 · 只列出已录入册次（' + junior + '；' + g9note + '）';
   }
 
   function setText(id, value) {
@@ -303,6 +327,10 @@
     topics = topics.filter(function (topic) { return (topic.subject || subjectOfId(topic.id)) === subject; });
     deps = deps.filter(function (edge) { return subjectOfId(edge.topicId) === subject; });
     items = items.filter(function (item) { return subjectOfStd(item.id) === subject; });
+    if (subject === 'morality') {
+      var loadedEye = document.querySelector('.eyebrow');
+      if (loadedEye) loadedEye.textContent = moralityJuniorEyebrow(topics);
+    }
     setText('n-topics', String(topics.length));
     setText('n-edges', String(deps.length));
     setText('n-questions', '…');

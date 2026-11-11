@@ -103,6 +103,37 @@ function loadHome(search) {
     assert.strictEqual(home.ids['n-standards'].textContent, '1');
   });
 
+  await test('首页道法有九上时写出九上、九下未录入', async function () {
+    const home = loadHome('?subject=morality');
+    const topics = [
+      { id: 'cnd_p001', subject: 'morality', grade: 1, semester: '上' },
+      { id: 'cnd_j701', subject: 'morality', grade: 7, semester: '上' },
+      { id: 'cnd_j702', subject: 'morality', grade: 7, semester: '下' },
+      { id: 'cnd_j801', subject: 'morality', grade: 8, semester: '上' },
+      { id: 'cnd_j802', subject: 'morality', grade: 8, semester: '下' },
+      { id: 'cnd_j901', subject: 'morality', grade: 9, semester: '上' }
+    ];
+    const byUrl = {};
+    home.calls.forEach(function (call) { byUrl[call.url] = call; });
+    byUrl['data/topics.json'].resolve({ ok: true, status: 200, json: function () { return Promise.resolve(topics); } });
+    byUrl['data/dependencies.json'].resolve({ ok: true, status: 200, json: function () { return Promise.resolve([]); } });
+    byUrl['data/cn-curriculum-standards.json'].resolve({
+      ok: true, status: 200, json: function () { return Promise.resolve({ items: [] }); }
+    });
+    for (let i = 0; i < 12; i++) await new Promise(function (r) { setImmediate(r); });
+    const titles = home.ids.grades.children.map(function (card) {
+      return card.children[1].textContent;
+    });
+    assert.deepStrictEqual(titles, ['一年级', '七年级', '八年级', '九年级']);
+    const g9 = home.ids.grades.children[3];
+    assert.strictEqual(g9.children[3].textContent, '上 1');
+    assert.ok(g9.children[3].textContent.indexOf('全') < 0);
+    assert.ok(home.eyebrow.textContent.indexOf('初中现含七上、七下、八上、八下、九上') >= 0);
+    assert.ok(home.eyebrow.textContent.indexOf('九下未录入') >= 0);
+    assert.ok(home.eyebrow.textContent.indexOf('九年级未录入') < 0);
+    assert.ok(home.eyebrow.textContent.indexOf('九全') < 0);
+  });
+
   await test('图谱年级含七至九且无高中学段', function () {
     const source = fs.readFileSync(path.join(root, 'explore/app.js'), 'utf8');
     assert.ok(source.indexOf('function fillMoralityGrades()') >= 0);
@@ -110,6 +141,13 @@ function loadHome(search) {
     assert.ok(source.indexOf("subject === 'chinese' || subject === 'morality'") >= 0);
     assert.ok(source.indexOf("button.hidden = button.getAttribute('data-stage') === 'h'") >= 0);
     assert.ok(source.indexOf('fillMoralityGrades();') >= 0);
+  });
+
+  await test('诊断道法说明写明九上已录入、九下未建', function () {
+    const source = fs.readFileSync(path.join(root, 'diagnose/app.js'), 'utf8');
+    assert.ok(source.indexOf('九上已按官方目录录入，九下未建') >= 0);
+    assert.ok(source.indexOf('初中尚未全部覆盖') < 0);
+    assert.ok(source.indexOf('全一册（旧版，九下暂用）') >= 0);
   });
 
   await test('诊断道法学段含小学和初中', function () {

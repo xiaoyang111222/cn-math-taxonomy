@@ -35,6 +35,16 @@ def test_coverage_does_not_claim_four_books():
     assert "七上" in text
     assert "这不是四册全覆盖" in text
     assert "七下" not in text and "八上" not in text
+    full = [
+        {"grade": 7, "semester": "上"},
+        {"grade": 7, "semester": "下"},
+        {"grade": 8, "semester": "上"},
+        {"grade": 8, "semester": "下"},
+        {"grade": 9, "semester": "上"},
+    ]
+    full_text = B.coverage_text(full)
+    assert "已有七上至九上，九下未建点，不是六册全覆盖" in full_text
+    assert "这不是四册全覆盖" in full_text
 
 
 def test_missing_module_does_not_write():
@@ -125,9 +135,54 @@ G8B_PUBLIC_CATALOG_LESSONS = {
 
 
 def _assert_pending_inferred(topic):
-    """与真实入库形状相同：catalog 待核，课标置信度为 inferred。"""
-    assert topic.get("catalog_status") == L.CATALOG_STATUS, topic["id"]
+    """七、八年级 catalog 待核；九上为官方目录。课标置信度都是 inferred。"""
+    if topic.get("grade") == 9 and topic.get("semester") == "上":
+        assert topic.get("catalog_status") == L.G9A_CATALOG_STATUS, topic["id"]
+    else:
+        assert topic.get("catalog_status") == L.CATALOG_STATUS, topic["id"]
     assert topic["standards"][0]["confidence"] == "inferred", topic["id"]
+
+
+# 九上官方阅读器目录的 10 课。不是课文正文逐字核对。
+G9A_OFFICIAL_LESSONS = {
+    "百年大党风华正茂",
+    "坚持以人民为中心",
+    "党是领导一切的",
+    "新的历史方位",
+    "新时代的思想旗帜",
+    "中国腾飞谱新篇",
+    "擘画宏伟蓝图",
+    "实现高质量发展",
+    "凝聚团结伟力",
+    "实现伟大梦想",
+}
+
+
+def test_g9a_official_toc_not_g9b():
+    """九上 10 课按官方目录，九下不建点；七、八年级目录状态仍待核。"""
+    rows = [
+        t for t in _data("topics.json")
+        if str(t.get("id", "")).startswith("cnd_j") and t.get("grade") == 9
+    ]
+    assert rows, "没有九年级道法点"
+    assert all(t.get("semester") == "上" for t in rows)
+    lessons = {t.get("lesson") for t in rows}
+    assert lessons == G9A_OFFICIAL_LESSONS, sorted(lessons ^ G9A_OFFICIAL_LESSONS)
+    assert all(t.get("catalog_status") == "official_toc" for t in rows)
+    blob = "\n".join((t.get("lesson") or "") + "\n" + (t.get("frames") or "") + "\n" + (t.get("name") or "") for t in rows)
+    assert "恢弘" not in blob
+    assert "书写恢宏史诗" in blob
+    assert "“两步走”战略" in blob
+    assert any(t.get("lesson") == "实现高质量发展" and "推动高质量发展" in (t.get("frames") or "") for t in rows)
+    assert any(t.get("lesson") == "实现伟大梦想" for t in rows)
+    assert all("单元思考与行动" not in (t.get("lesson") or "") for t in rows)
+    assert all("978-7-107-41303-2" in (t.get("standards") or [{}])[0].get("note", "") for t in rows)
+    assert all(t["standards"][0]["confidence"] == "inferred" for t in rows)
+    older = [
+        t for t in _data("topics.json")
+        if str(t.get("id", "")).startswith("cnd_j") and t.get("grade") in (7, 8)
+    ]
+    assert older and all(t.get("catalog_status") == L.CATALOG_STATUS for t in older)
 
 
 def test_g8b_public_catalog_lessons():
@@ -150,6 +205,30 @@ def test_g8b_public_catalog_lessons():
         _assert_pending_inferred(topic)
 
 
+def test_grade9_xia_and_quan_rejected():
+    saved_cur = dict(L._CUR)
+    try:
+        L.vol(9, "下")
+        try:
+            L.unit(1, "不应写入")
+        except SystemExit:
+            pass
+        else:
+            raise AssertionError("九下应当拒绝")
+        assert (9, "下", 1) not in L.UNITS
+        L.vol(9, "全")
+        try:
+            L.unit(1, "不应写入")
+        except SystemExit:
+            pass
+        else:
+            raise AssertionError("九全应当拒绝")
+        assert (9, "全", 1) not in L.UNITS
+    finally:
+        L._CUR.clear()
+        L._CUR.update(saved_cur)
+
+
 def test_independent_root_allowed():
     incoming = {src for src, _dst, _strength, _reason in L.EDGES}
     roots = [t for t in L.TOPICS if t["key"] not in incoming]
@@ -167,5 +246,7 @@ if __name__ == "__main__":
     test_missing_module_does_not_write()
     test_real_new_points_shape()
     test_g8b_public_catalog_lessons()
+    test_g9a_official_toc_not_g9b()
+    test_grade9_xia_and_quan_rejected()
     test_independent_root_allowed()
     print("test_jmor_safety ok")

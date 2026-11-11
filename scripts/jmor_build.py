@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""把初中道德与法治（七上至八下）编译进 data/。
+"""把初中道德与法治（七上至九上）编译进 data/。
 
 可以重复运行。只替换 cnd_j 知识点和 cds-2022:4 课标条目。
 保留小学 cnd_p、其他学科、以及第一至第三学段道法课标。
-不建九上、九下。不把第三方目录标成已核实。
+九上按官方阅读器目录入库。九下和九年级全一册不建点。
+七至八年级目录仍是待核，不把第三方目录标成已核实。
 
 用法：python3 scripts/jmor_build.py
 """
@@ -21,7 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import jmor_lib as L  # noqa: E402
 
-for _mod in ("jmor_g7a", "jmor_g7b", "jmor_g8a", "jmor_g8b"):
+for _mod in ("jmor_g7a", "jmor_g7b", "jmor_g8a", "jmor_g8b", "jmor_g9a"):
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)), _mod + ".py")
     if os.path.isfile(path):
         importlib.import_module(_mod)
@@ -107,11 +108,16 @@ def volume_labels(rows):
 def coverage_text(rows):
     labels = volume_labels(rows)
     listed = "、".join(labels) if labels else "无"
-    return (
+    text = (
         "本批已入库 %d 个知识点，册次只有 %s。"
-        "未出现的册次没有建点。这不是四册全覆盖，九上、九下也未建点。"
-        "课级目录仍待官方逐课核实。"
+        "未出现的册次没有建点。这不是四册全覆盖。"
     ) % (len(rows), listed)
+    vols = set(labels)
+    if {"七上", "七下", "八上", "八下", "九上"} <= vols and "九下" not in vols:
+        text += "已有七上至九上，九下未建点，不是六册全覆盖。"
+    elif "九下" not in vols:
+        text += "不是六册全覆盖。"
+    return text
 
 
 def build_question(tid, index, made, slot):
@@ -141,9 +147,13 @@ def main():
     if not TOPICS:
         print("没有初中道法知识点可写", file=sys.stderr)
         return 1
-    if any(t["grade"] == 9 for t in TOPICS):
-        print("九上九下不允许出现在本批", file=sys.stderr)
-        return 1
+    for t in TOPICS:
+        if t["grade"] == 9 and t["semester"] != "上":
+            print("九年级只允许上册，拒绝 %s（%s）" % (t["id"], t["semester"]), file=sys.stderr)
+            return 1
+        if t["semester"] == "全":
+            print("道法不建全一册：%s" % t["id"], file=sys.stderr)
+            return 1
     topics = load("topics.json")
     deps = load("dependencies.json")
     questions = load("questions.json")
@@ -233,8 +243,9 @@ def main():
     new_topics = []
     new_questions = []
     for i, spec in enumerate(TOPICS):
-        if spec["catalog_status"] != CATALOG_STATUS:
-            print("%s 目录状态不是待核" % spec["id"], file=sys.stderr)
+        want_status = L.G9A_CATALOG_STATUS if (spec["grade"] == 9 and spec["semester"] == "上") else CATALOG_STATUS
+        if spec["catalog_status"] != want_status:
+            print("%s 目录状态应为 %s，实际 %s" % (spec["id"], want_status, spec["catalog_status"]), file=sys.stderr)
             return 1
         made = materialise_questions(spec)
         for q in made:
@@ -261,7 +272,7 @@ def main():
             "external": False,
             "subject": "morality",
             "standards": [ref],
-            "catalog_status": CATALOG_STATUS,
+            "catalog_status": spec["catalog_status"],
             "lesson": spec["lesson"],
             "frames": spec["frames"],
         }
@@ -317,14 +328,20 @@ def main():
     mo["coverage"] = coverage_text(new_topics)
     mo["junior_note"] = (
         "cds-2022:4.* 只标第四学段五个学习主题的名称，confidence 为 inferred，verbatim 为 false，page_or_ref 为「待核」。"
-        "通知页 %s ，PDF %s 。教材目录字段 catalog_status=pending_official_lesson_list。"
+        "通知页 %s ，PDF %s 。"
+        "七至八年级教材目录字段 catalog_status=pending_official_lesson_list。"
+        "九上 catalog_status=official_toc，课名、框名和目录页码来自智慧教育平台官方阅读器，"
+        "ISBN 978-7-107-41303-2，contentId 03d41525-a373-4286-92c3-3f2d7cbe3b79，未逐字核对课文正文。"
+        "九下未建点。"
         "已入库 %d 个知识点（%s）。不把未入库册次写成已经完整覆盖。"
     ) % (NOTICE_URL, PDF_URL, len(new_topics), "、".join(labels))
     primary_stage = "第一至第三学段（1–6年级）"
     mo["stage"] = primary_stage + "；第四学段（7–9年级）仅主题推断。已入库册次：%s（%d 个知识点）" % (
         "、".join(labels), len(new_topics))
-    sentence = "初中道法由 scripts/jmor_build.py 写入：已入库%d个知识点（%s），目录待官方逐课核实，未出现的册次未建点。" % (
-        len(new_topics), "、".join(labels))
+    sentence = (
+        "初中道法由 scripts/jmor_build.py 写入：已入库%d个知识点（%s），"
+        "七至八年级目录待官方逐课核实，九上目录来自智慧教育平台官方阅读器，九下未建点，不是六册全覆盖。"
+    ) % (len(new_topics), "、".join(labels))
     note = mo.get("note") or ""
     note = re.sub(r"初中道法由 scripts/jmor_build.py 写入：[^。]*。", "", note)
     note = re.sub(r"初中七上至八下由 scripts/jmor_build.py 写入，目录待官方逐课核实，九上九下未建点。", "", note)
@@ -353,9 +370,14 @@ def main():
     if [t["id"] for t in junior] != [t["id"] for t in new_topics]:
         print("初中 id 顺序写回不一致", file=sys.stderr)
         return 1
-    if any(t.get("catalog_status") != CATALOG_STATUS for t in junior):
-        print("存在未标待核的初中点", file=sys.stderr)
-        return 1
+    for t in junior:
+        want_status = L.G9A_CATALOG_STATUS if (t.get("grade") == 9 and t.get("semester") == "上") else CATALOG_STATUS
+        if t.get("catalog_status") != want_status:
+            print("目录状态不符：%s 应为 %s" % (t["id"], want_status), file=sys.stderr)
+            return 1
+        if t.get("grade") in (7, 8) and t.get("catalog_status") != CATALOG_STATUS:
+            print("七至八年级目录状态被改动：%s" % t["id"], file=sys.stderr)
+            return 1
     if any(t.get("standards", [{}])[0].get("confidence") != "inferred" for t in junior):
         print("存在非 inferred 的初中对齐", file=sys.stderr)
         return 1
