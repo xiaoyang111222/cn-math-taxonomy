@@ -64,8 +64,8 @@ def rank_of(spec):
 
 
 def id_num(spec):
-    """cnd_jNNN 的数字部分。不改写 id 本身。"""
-    tail = str(spec["id"])[6:]
+    """cnd_jNNN 的数字部分。不改写 id 本身。'cnd_j' 为 5 个字符，避免三位数 id 被截成个位。"""
+    tail = str(spec["id"])[5:]
     if not tail.isdigit():
         raise SystemExit("无法按原 id 排序：%s" % spec["id"])
     return int(tail)

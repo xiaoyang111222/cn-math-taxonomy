@@ -233,11 +233,12 @@ G8A_OFFICIAL_LESSONS = {
     "社会生活讲道德", "提升法治素养", "追求自由平等", "维护公平正义",
     "积极奉献社会", "国家利益至上", "军强才能国安", "树立总体国家安全观",
 }
-UNBUILT_OFFICIAL_FRAMES = {
-    "在奉献中成就精彩人生",
-    "认识民法典",
-    "友善待人",
-    "国家行政机关的性质和职权",
+UNBUILT_OFFICIAL_FRAMES = set()
+BUILT_OFFICIAL_FRAMES = {
+    "cnd_j107": "在奉献中成就精彩人生",
+    "cnd_j108": "认识民法典",
+    "cnd_j109": "友善待人",
+    "cnd_j110": "国家行政机关的性质和职权",
 }
 WRAPPED_G8B_FRAMES = {
     "中国共产党领导的多党合作和政治协商制度",
@@ -256,7 +257,7 @@ def _junior_rows(grade=None, semester=None):
 
 
 def test_g78_official_toc_lessons_and_unbuilt_frames():
-    """七至八年级已确认点挂官方课名；未建框不塞进现有点；不建单元思考与行动。"""
+    """七至八年级已确认点挂官方课名；四个原空框已由新点覆盖；不建单元思考与行动。"""
     g7a = _junior_rows(7, "上")
     g7b = _junior_rows(7, "下")
     g8a = _junior_rows(8, "上")
@@ -280,6 +281,14 @@ def test_g78_official_toc_lessons_and_unbuilt_frames():
     assert "认识民法典" in (j040.get("standards") or [{}])[0].get("note", "")
     j077 = next(t for t in g8b if t["id"] == "cnd_j077")
     assert j077["frames"] == "依法行政，建设法治政府"
+    assert next(t for t in g7a if t["id"] == "cnd_j107")["frames"] == BUILT_OFFICIAL_FRAMES["cnd_j107"]
+    assert next(t for t in g7b if t["id"] == "cnd_j108")["frames"] == BUILT_OFFICIAL_FRAMES["cnd_j108"]
+    assert next(t for t in g8a if t["id"] == "cnd_j109")["frames"] == BUILT_OFFICIAL_FRAMES["cnd_j109"]
+    assert next(t for t in g8b if t["id"] == "cnd_j110")["frames"] == BUILT_OFFICIAL_FRAMES["cnd_j110"]
+    assert len(g7a) == 26
+    assert len(g7b) == 19
+    assert len(g8a) == 19
+    assert len(g8b) == 25
     j078 = next(t for t in g8b if t["id"] == "cnd_j078")
     j079 = next(t for t in g8b if t["id"] == "cnd_j079")
     assert j078["frames"] == "中央军事委员会的领导体制和职权"

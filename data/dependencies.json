@@ -29448,6 +29448,12 @@
     "reason": "评估改进塔台模型要先测试过。"
   },
   {
+    "topicId": "cne_j062",
+    "prerequisiteId": "cne_j010",
+    "strength": "soft",
+    "reason": "词尾 s 的读音和动物都在七年级下册第1单元 Animal Friends，先分辨名词复数词尾读音，再学动物词汇。"
+  },
+  {
     "topicId": "cnd_j003",
     "prerequisiteId": "cnd_j002",
     "strength": "soft",
@@ -29464,6 +29470,24 @@
     "prerequisiteId": "cnd_j006",
     "strength": "soft",
     "reason": "教学上宜先知道梦想要靠当下的行动靠近，再看学习之后的反思有没有改到带来结果的方法。何谓有效反思，概念上不以梦想的定义为前提。"
+  },
+  {
+    "topicId": "cnd_j107",
+    "prerequisiteId": "cnd_j025",
+    "strength": "soft",
+    "reason": "教学上宜先辨清人生价值要在实在的劳动里创造，再理解把小我融入祖国和人民、立足岗位作奉献。奉献可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j109",
+    "prerequisiteId": "cnd_j051",
+    "strength": "soft",
+    "reason": "教学上宜先辨清文明有礼要按场合尊重他人，再理解友善待人、有原则的宽容和助人为乐。友善可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j109",
+    "prerequisiteId": "cnd_j052",
+    "strength": "soft",
+    "reason": "教学上宜先辨清诚实守信是说清事实并履行正当承诺，再理解友善待人。友善可以凭题面单独判断，这条 soft 不是掌握门槛。"
   },
   {
     "topicId": "cnd_j053",
@@ -29488,11 +29512,5 @@
     "prerequisiteId": "cnd_j101",
     "strength": "soft",
     "reason": "教学上宜先知道新发展理念是创新、协调、绿色、开放、共享，再判断高质量发展是不是只把速度降下来。高质量发展的题面可以单独判断，这条 soft 不是掌握门槛。"
-  },
-  {
-    "topicId": "cne_j062",
-    "prerequisiteId": "cne_j010",
-    "strength": "soft",
-    "reason": "词尾 s 的读音和动物都在七年级下册第1单元 Animal Friends，先分辨名词复数词尾读音，再学动物词汇。"
   }
 ]
