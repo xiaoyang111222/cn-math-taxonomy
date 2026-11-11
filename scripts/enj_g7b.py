@@ -1,19 +1,27 @@
 # -*- coding: utf-8 -*-
 """七年级下册，以及已经挂在七年级上册新版单元上的点。
 
-七下已按 2026-11-11 官方目录改挂；出行仍在七上待核；周末活动/谈论上周末/读周末日记改挂七下待核；题目本轮不改。
+七下已按 2026-11-11 官方目录改挂；出行仍在七上待核；周末活动和谈论上周末按正文改挂第7单元，读周末日记仍待核；题目不改。
 才艺、作息改到七上 Unit 5、Unit 6。学校场所、家人外貌改到七上 Unit 3、Unit 2。
 """
 from en_tx import V, P, G, F, R
 from enj_g7a import TRANS_PENDING
 
-# 2026-11-11 已核七下官方目录，第8单元 Once upon a Time 是讲故事
-# （Retell a story / The Ugly Duckling / Simple past tense (2)），无「上周末」同名课。
-WKND_PENDING = (
+# 2026-11-11 已核七下官方阅读器正文：第7单元 Section A 有上周末活动听说；
+# Section B 日记是周五校园农场秋游，不是周末日记。第8单元仍是讲故事。
+WKND_OFFICIAL = (
     " 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级下册》"
-    "（ISBN 978-7-107-38255-0）官方目录：第8单元 Once upon a Time 是讲故事"
-    "（Retell a story / The Ugly Duckling / Simple past tense (2)），无「上周末」同名课。"
-    "不按旧版七下 What did you do last weekend 挂在第8单元。暂不挂到具体单元，待核。"
+    "（ISBN 978-7-107-38255-0）官方阅读器正文：第7单元 A Day to Remember Section A 书页50"
+    " 有 “Did you do any of these activities last weekend?” 以及"
+    " “How was Peter’s weekend?” / “How was Teng Fei’s weekend?” 的上周末活动听说练习。"
+    "据此改挂第7单元。第8单元 Once upon a Time 仍是讲故事，"
+    "不按旧版 What did you do last weekend 挂第8单元。"
+)
+WKND_DIARY_PENDING = (
+    " 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级下册》"
+    "（ISBN 978-7-107-38255-0）官方阅读器正文：第7单元 Section B 书页54 日记日期是"
+    " Friday 30 May，内容是学校农场秋游，不是周末日记。Reading Plus 第7单元是日食日记，"
+    "也不是周末日记。官方目录无「上周末」同名课，也不按旧版挂第8单元。暂不挂到具体单元，待核。"
 )
 
 
@@ -597,8 +605,8 @@ R("rw_diary", "读旅行日记", 7, "下", 7,
       "天气不好并且下了雨。这段没有写挤奶。"),
 ])
 
-V("vo_wknd", "周末活动", 7, "下", 90,
-  "认读 lake、beach、badminton 和 visitor。" + WKND_PENDING,
+V("vo_wknd", "周末活动", 7, "下", 7,
+  "认读 lake、beach、badminton 和 visitor。" + WKND_OFFICIAL,
   [("lake", "湖"), ("beach", "海滩"), ("badminton", "羽毛球"), ("visitor", "游客")], "vocab7")
 
 G("gr_did7", "Did 提问", 7, "下", 8,
@@ -630,8 +638,8 @@ G("gr_irr7", "不规则动词过去式", 7, "下", 8,
       "have 的过去式是 had。"),
 ])
 
-F("fu_wknd", "谈论上周末", 7, "下", 90,
-  "能询问和叙述上周末做的事。" + WKND_PENDING, "func_plan", [
+F("fu_wknd", "谈论上周末", 7, "下", 7,
+  "能询问和叙述上周末做的事。" + WKND_OFFICIAL, "func_plan", [
     q("想问对方上周末做了什么，哪一句合适？", "What did you do last weekend?",
       ["What did you did last weekend?", "What do you do last weekend?", "What did you last weekend?"],
       "What did you do。"),
@@ -646,7 +654,7 @@ F("fu_wknd", "谈论上周末", 7, "下", 90,
 ])
 
 R("rw_wknd", "读周末日记", 7, "下", 90,
-  "读一篇周末日记，找出活动和同伴。" + WKND_PENDING, "read_detail", [
+  "读一篇周末日记，找出活动和同伴。" + WKND_DIARY_PENDING, "read_detail", [
     q("On Saturday morning I went to the lake with my father. We went fishing. 星期六上午他和谁去的？", "他的爸爸",
       ["他的妈妈", "同学", "游客"], "with my father。"),
     q("On Saturday morning I went to the lake with my father. We went fishing. 他们做了什么？", "钓鱼",

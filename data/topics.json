@@ -30343,10 +30343,10 @@
     "name": "词尾 s 的读音",
     "domain": "语音",
     "grade": 7,
-    "semester": "上",
-    "chapter": "七年级上册 待核",
+    "semester": "下",
+    "chapter": "七年级下册 第1单元 Animal Friends",
     "type": "procedural",
-    "description": "能分辨词尾 -s、-es 读 /s/、/z/ 还是 /ɪz/。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级上册》（ISBN 978-7-107-38254-3）官方阅读器：Unit 6 书页61 与附录发音页（书页92–94）只有 /s/、/z/ 等音素和句子重音，未见词尾 -s/-es 读 /s/、/z/ 或 /ɪz/ 的规则。同日核《英语 七年级下册》（ISBN 978-7-107-38255-0）附录发音页（书页83–87；语法从书页88起）：第85页辅音字母表给 s 读 /s/（salt, skate, artist）、/z/（noise, always, yours），第86页辅音组合有 ds /dz/、ts /ts/，都不是词尾 -s/-es 规则，也未见 /ɪz/。Unit 1 发音练习有 “Listen and repeat. Notice the pronunciation of – (e) s.”及 sharks、lions、boxes 等例词，这是练习提示，不是规则说明，不据此改挂第1单元。七下官方目录无同名课。暂不挂到具体单元，待核。",
+    "description": "能分辨词尾 -s、-es 读 /s/、/z/ 还是 /ɪz/。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级下册》（ISBN 978-7-107-38255-0）官方阅读器：语法附录书页88「名词复数」给出名词复数词尾 -s/-es 读 /s/、/z/、/ɪz/ 的规则及读音表。本册第1单元官方语法含 Plurals，Unit 1 另有 “Listen and repeat. Notice the pronunciation of – (e) s.” 的练习提示。据此改挂第1单元 Animal Friends。同日核《英语 七年级上册》（ISBN 978-7-107-38254-3）语法附录书页95–105：书页95只写可数名词有复数形式（如 eight rabbits、some trees），没有词尾读音规则。书页96「名词所有格」和书页103第三人称单数动词有同类 /s/、/z/、/ɪz/ 读音，但都不是名词复数词尾规则，不据此改挂七上。七上附录发音页（书页92–94）和七下附录发音页（书页83–87）也没有这条复数词尾规则。",
     "mastery_criteria": [
       "能根据字母或读音选出正确的一项",
       "能把字母、发音和例词对上"
@@ -31371,7 +31371,7 @@
     "semester": "上",
     "chapter": "七年级上册 待核",
     "type": "conceptual",
-    "description": "认读 train、subway、bike 和 bus。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级上册》（ISBN 978-7-107-38254-3）和《英语 七年级下册》（ISBN 978-7-107-38255-0）官方目录：两册均无交通方式或怎么上学的同名课。不按旧版七下 How do you get to school 改挂。暂不挂到具体单元，待核。",
+    "description": "认读 train、subway、bike 和 bus。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级上册》（ISBN 978-7-107-38254-3）和《英语 七年级下册》（ISBN 978-7-107-38255-0）官方目录和正文：两册均无交通方式或怎么上学的同名课。不按旧版七下 How do you get to school 改挂。七下正文未见独立的交通方式或怎么上学课。七上 Reading Plus Unit 3 书页77「My Floating School」是关于孟加拉浮动学校的补充阅读，文中有 “So how do I go to school? It’s easy! The school comes to me!”，并写船既是校车又是教室，但不是交通方式词汇课，也不是谈论自己怎么上学的口语课；讨论题问的是浮动学校对学生的重要性和可能困难。不足以把交通四点改挂到第3单元或其它单元。七上第6单元书页64 “After breakfast, I walk to school. It’s only a 10-minute walk”只是作息短文里的偶发句。语法附录中的 at the bus stop、on the way to 也只是介词例句。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能选出单词的中文意思",
       "能根据中文选出英文单词"
@@ -31398,7 +31398,7 @@
     "semester": "上",
     "chapter": "七年级上册 待核",
     "type": "procedural",
-    "description": "能用 how、how long 和 how far 询问出行方式、时间和距离。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级上册》（ISBN 978-7-107-38254-3）和《英语 七年级下册》（ISBN 978-7-107-38255-0）官方目录：两册均无交通方式或怎么上学的同名课。不按旧版七下 How do you get to school 改挂。暂不挂到具体单元，待核。",
+    "description": "能用 how、how long 和 how far 询问出行方式、时间和距离。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级上册》（ISBN 978-7-107-38254-3）和《英语 七年级下册》（ISBN 978-7-107-38255-0）官方目录和正文：两册均无交通方式或怎么上学的同名课。不按旧版七下 How do you get to school 改挂。七下正文未见独立的交通方式或怎么上学课。七上 Reading Plus Unit 3 书页77「My Floating School」是关于孟加拉浮动学校的补充阅读，文中有 “So how do I go to school? It’s easy! The school comes to me!”，并写船既是校车又是教室，但不是交通方式词汇课，也不是谈论自己怎么上学的口语课；讨论题问的是浮动学校对学生的重要性和可能困难。不足以把交通四点改挂到第3单元或其它单元。七上第6单元书页64 “After breakfast, I walk to school. It’s only a 10-minute walk”只是作息短文里的偶发句。语法附录中的 at the bus stop、on the way to 也只是介词例句。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能选出语法正确的词或句子",
       "能在句子里用对这个句型"
@@ -31425,7 +31425,7 @@
     "semester": "上",
     "chapter": "七年级上册 待核",
     "type": "application",
-    "description": "能说明自己怎么上学、花多长时间。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级上册》（ISBN 978-7-107-38254-3）和《英语 七年级下册》（ISBN 978-7-107-38255-0）官方目录：两册均无交通方式或怎么上学的同名课。不按旧版七下 How do you get to school 改挂。暂不挂到具体单元，待核。",
+    "description": "能说明自己怎么上学、花多长时间。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级上册》（ISBN 978-7-107-38254-3）和《英语 七年级下册》（ISBN 978-7-107-38255-0）官方目录和正文：两册均无交通方式或怎么上学的同名课。不按旧版七下 How do you get to school 改挂。七下正文未见独立的交通方式或怎么上学课。七上 Reading Plus Unit 3 书页77「My Floating School」是关于孟加拉浮动学校的补充阅读，文中有 “So how do I go to school? It’s easy! The school comes to me!”，并写船既是校车又是教室，但不是交通方式词汇课，也不是谈论自己怎么上学的口语课；讨论题问的是浮动学校对学生的重要性和可能困难。不足以把交通四点改挂到第3单元或其它单元。七上第6单元书页64 “After breakfast, I walk to school. It’s only a 10-minute walk”只是作息短文里的偶发句。语法附录中的 at the bus stop、on the way to 也只是介词例句。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能选出符合情境的英文句子",
       "能读懂这个功能句在问什么或在说什么"
@@ -31452,7 +31452,7 @@
     "semester": "上",
     "chapter": "七年级上册 待核",
     "type": "application",
-    "description": "读一段出行短文，找出方式和时间。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级上册》（ISBN 978-7-107-38254-3）和《英语 七年级下册》（ISBN 978-7-107-38255-0）官方目录：两册均无交通方式或怎么上学的同名课。不按旧版七下 How do you get to school 改挂。暂不挂到具体单元，待核。",
+    "description": "读一段出行短文，找出方式和时间。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级上册》（ISBN 978-7-107-38254-3）和《英语 七年级下册》（ISBN 978-7-107-38255-0）官方目录和正文：两册均无交通方式或怎么上学的同名课。不按旧版七下 How do you get to school 改挂。七下正文未见独立的交通方式或怎么上学课。七上 Reading Plus Unit 3 书页77「My Floating School」是关于孟加拉浮动学校的补充阅读，文中有 “So how do I go to school? It’s easy! The school comes to me!”，并写船既是校车又是教室，但不是交通方式词汇课，也不是谈论自己怎么上学的口语课；讨论题问的是浮动学校对学生的重要性和可能困难。不足以把交通四点改挂到第3单元或其它单元。七上第6单元书页64 “After breakfast, I walk to school. It’s only a 10-minute walk”只是作息短文里的偶发句。语法附录中的 at the bus stop、on the way to 也只是介词例句。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能根据短文选出与文字一致的信息",
       "能选出和短文意思一致的句子"
@@ -32719,9 +32719,9 @@
     "domain": "词汇",
     "grade": 7,
     "semester": "下",
-    "chapter": "七年级下册 待核",
+    "chapter": "七年级下册 第7单元 A Day to Remember",
     "type": "conceptual",
-    "description": "认读 lake、beach、badminton 和 visitor。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级下册》（ISBN 978-7-107-38255-0）官方目录：第8单元 Once upon a Time 是讲故事（Retell a story / The Ugly Duckling / Simple past tense (2)），无「上周末」同名课。不按旧版七下 What did you do last weekend 挂在第8单元。暂不挂到具体单元，待核。",
+    "description": "认读 lake、beach、badminton 和 visitor。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级下册》（ISBN 978-7-107-38255-0）官方阅读器正文：第7单元 A Day to Remember Section A 书页50 有 “Did you do any of these activities last weekend?” 以及 “How was Peter’s weekend?” / “How was Teng Fei’s weekend?” 的上周末活动听说练习。据此改挂第7单元。第8单元 Once upon a Time 仍是讲故事，不按旧版 What did you do last weekend 挂第8单元。",
     "mastery_criteria": [
       "能选出单词的中文意思",
       "能根据中文选出英文单词"
@@ -32800,9 +32800,9 @@
     "domain": "日常表达",
     "grade": 7,
     "semester": "下",
-    "chapter": "七年级下册 待核",
+    "chapter": "七年级下册 第7单元 A Day to Remember",
     "type": "application",
-    "description": "能询问和叙述上周末做的事。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级下册》（ISBN 978-7-107-38255-0）官方目录：第8单元 Once upon a Time 是讲故事（Retell a story / The Ugly Duckling / Simple past tense (2)），无「上周末」同名课。不按旧版七下 What did you do last weekend 挂在第8单元。暂不挂到具体单元，待核。",
+    "description": "能询问和叙述上周末做的事。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级下册》（ISBN 978-7-107-38255-0）官方阅读器正文：第7单元 A Day to Remember Section A 书页50 有 “Did you do any of these activities last weekend?” 以及 “How was Peter’s weekend?” / “How was Teng Fei’s weekend?” 的上周末活动听说练习。据此改挂第7单元。第8单元 Once upon a Time 仍是讲故事，不按旧版 What did you do last weekend 挂第8单元。",
     "mastery_criteria": [
       "能选出符合情境的英文句子",
       "能读懂这个功能句在问什么或在说什么"
@@ -32829,7 +32829,7 @@
     "semester": "下",
     "chapter": "七年级下册 待核",
     "type": "application",
-    "description": "读一篇周末日记，找出活动和同伴。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级下册》（ISBN 978-7-107-38255-0）官方目录：第8单元 Once upon a Time 是讲故事（Retell a story / The Ugly Duckling / Simple past tense (2)），无「上周末」同名课。不按旧版七下 What did you do last weekend 挂在第8单元。暂不挂到具体单元，待核。",
+    "description": "读一篇周末日记，找出活动和同伴。 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级下册》（ISBN 978-7-107-38255-0）官方阅读器正文：第7单元 Section B 书页54 日记日期是 Friday 30 May，内容是学校农场秋游，不是周末日记。Reading Plus 第7单元是日食日记，也不是周末日记。官方目录无「上周末」同名课，也不按旧版挂第8单元。暂不挂到具体单元，待核。",
     "mastery_criteria": [
       "能根据短文选出与文字一致的信息",
       "能选出和短文意思一致的句子"

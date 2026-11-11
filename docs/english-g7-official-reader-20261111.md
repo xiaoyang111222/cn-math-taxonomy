@@ -82,3 +82,23 @@
 - 没有改题目，也没有升格课标原文标记。
 - 没有新增语音/语法知识点。官方发音行 Unstressed words、Stress patterns、Rhythm、Assimilation、Contractions in negative forms、Sentence stress (1)(2)、Intonation in alternative questions 先记下，本轮不建点。
 - 已核七下附录发音页（书页83–87），词尾 s 仍待核：附录没有 -s/-es 规则，也不把 Unit 1 的练习提示改挂为正式课。
+
+## 正文续核（2026-11-11 晚）
+
+在已按官方目录改挂之后，续核七上、七下官方阅读器的课文正文、Reading Plus 和语法附录。本轮 PDF.js 页码 = 印刷书页 + 9。没有下载教材。上面「仍待核」表是目录阶段结论，以下为正文续核后的当前挂接。
+
+### 已按正文改挂
+
+| id | 名称 | 当前挂接 | 依据 |
+| --- | --- | --- | --- |
+| `cne_j010` | 词尾 s 的读音 | 七年级下册 第1单元 Animal Friends（semester 由上改为下） | 七下语法附录书页88「名词复数」给出名词复数词尾 -s/-es 读 /s/、/z/、/ɪz/ 的规则及读音表。本册第1单元官方语法含 Plurals，Unit 1 另有 “Notice the pronunciation of – (e) s.” 的练习提示。七上语法附录书页95–105 没有这条复数词尾规则：书页95只写可数名词有复数形式，书页96「名词所有格」和书页103第三人称单数动词虽有同类读音，但都不是名词复数词尾规则，不据此改挂七上。七上发音页（书页92–94）和七下发音页（书页83–87）仍没有这条规则。点名和题目未改。`gr_plural7` 名词复数仍挂七上预备单元3 Welcome!，硬先修未改。 |
+| `cne_j093`、`cne_j096` | 周末活动、谈论上周末 | 七年级下册 第7单元 A Day to Remember | 第7单元 Section A 书页50 有 “Did you do any of these activities last weekend?” 以及 “How was Peter’s weekend?” / “How was Teng Fei’s weekend?” 的上周末活动听说练习。第8单元仍是讲故事，不按旧版挂第8单元。点名和题目未改。 |
+
+### 正文后仍待核
+
+| id | 名称 | 结论 |
+| --- | --- | --- |
+| `cne_j097` | 读周末日记 | 仍「七年级下册 待核」。第7单元 Section B 书页54 日记日期是 Friday 30 May，内容是学校农场秋游，不是周末日记。Reading Plus 第7单元是日食日记，也不是周末日记。不删除。 |
+| `cne_j053`–`cne_j056` | 交通方式、How 问交通、谈论怎么上学、读上学方式 | 仍「七年级上册 待核」。七下正文未见独立的交通方式或怎么上学课。七上 Reading Plus Unit 3 书页77「My Floating School」是孟加拉浮动学校的补充阅读，虽有 “So how do I go to school?” 以及船既是校车又是教室，但不是交通方式词汇课，也不是谈论自己怎么上学的口语课，讨论题问的是浮动学校的重要性和可能困难；不足以改挂第3单元。七上第6单元书页64 “I walk to school. It’s only a 10-minute walk” 是作息短文里的偶发句。语法附录中的 at the bus stop、on the way to 只是介词例句。不按旧版 How do you get to school 改挂，不删除。 |
+
+本轮未改题目、课标 `verbatim` 和 `standards.confidence`，未升 `sw.js`（仍为 v16）。硬先修未改。因词尾 s 改到七下，软先修「介绍家人」不再依赖「词尾 s 的读音」，改为依赖七上「名词复数」；并增加「动物」对「词尾 s 的读音」的软先修。未推送、未部署。截图仍在未跟踪目录 `.english-g7-research/`。

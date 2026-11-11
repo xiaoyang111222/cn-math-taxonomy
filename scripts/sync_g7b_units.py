@@ -27,7 +27,9 @@ import enj_build  # noqa: E402
 from en_lib import TOPICS  # noqa: E402
 from enj_build import chapter  # noqa: E402
 
-WKND_KEYS = {"vo_wknd", "fu_wknd", "rw_wknd"}
+WKND_PENDING_KEYS = {"rw_wknd"}
+WKND_REMOUNT_KEYS = {"vo_wknd", "fu_wknd"}
+WKND_KEYS = WKND_PENDING_KEYS | WKND_REMOUNT_KEYS
 REMOUNT_KEYS = {
     "vo_habit", "gr_howoften", "fu_habit", "rw_habit",
     "vo_story", "fu_story", "rw_story",
@@ -86,7 +88,7 @@ def nontarget_hash(topics, questions, deps, allowed):
     for t in topics:
         if t["id"] in allowed:
             skip = {"name", "description", "chapter"}
-            if t["id"] in {"cne_j093", "cne_j096", "cne_j097"}:
+            if t["id"] in {"cne_j010", "cne_j093", "cne_j096", "cne_j097"}:
                 skip |= {"grade", "semester"}
             rows.append(("t", t["id"], {k: t[k] for k in t if k not in skip}))
         else:
@@ -154,9 +156,16 @@ def main():
             print("拒绝覆盖 %s" % tid, file=sys.stderr)
             return 1
         ch = chapter(spec["grade"], spec["semester"], spec["unit"])
-        if spec["key"] in WKND_KEYS:
+        if spec["key"] in WKND_PENDING_KEYS:
             if ch != "七年级下册 待核":
                 print("%s chapter() 不是七下待核：%s" % (tid, ch), file=sys.stderr)
+                return 1
+            if topic.get("grade") != 7 or topic.get("semester") != "下":
+                topic["grade"] = 7
+                topic["semester"] = "下"
+        if spec["key"] in WKND_REMOUNT_KEYS:
+            if ch != "七年级下册 第7单元 A Day to Remember":
+                print("%s chapter() 不是七下第7单元：%s" % (tid, ch), file=sys.stderr)
                 return 1
             if topic.get("grade") != 7 or topic.get("semester") != "下":
                 topic["grade"] = 7

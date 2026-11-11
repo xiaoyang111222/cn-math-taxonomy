@@ -9217,9 +9217,9 @@
   },
   {
     "topicId": "cne_j011",
-    "prerequisiteId": "cne_j010",
+    "prerequisiteId": "cne_j009",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「词尾 s 的读音」，再学「介绍家人」。"
+    "reason": "介绍家人在七年级上册第2单元；名词复数在七年级上册预备单元3。词尾 s 的读音已按官方语法附录改挂七年级下册第1单元，不再作为介绍家人的先修。"
   },
   {
     "topicId": "cne_j012",
@@ -29488,5 +29488,11 @@
     "prerequisiteId": "cnd_j101",
     "strength": "soft",
     "reason": "教学上宜先知道新发展理念是创新、协调、绿色、开放、共享，再判断高质量发展是不是只把速度降下来。高质量发展的题面可以单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cne_j062",
+    "prerequisiteId": "cne_j010",
+    "strength": "soft",
+    "reason": "词尾 s 的读音和动物都在七年级下册第1单元 Animal Friends，先分辨名词复数词尾读音，再学动物词汇。"
   }
 ]
