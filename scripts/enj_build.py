@@ -26,6 +26,7 @@ en_lib.HARD = []
 
 import enj_topics  # noqa: E402
 from en_lib import HARD, TOPICS, check_question, materialise_questions  # noqa: E402
+from enj_pending import attach_pending  # noqa: E402
 from verify_questions import verify_all  # noqa: E402
 
 EN_CODES = {"PH": "语音", "VO": "词汇", "GR": "语法", "FU": "日常表达", "RW": "读写"}
@@ -458,6 +459,9 @@ def main():
             "subject": "english",
             "standards": [ref],
         }
+        # unit 90 的两类标记写在 enj_pending。当前库已有 cne_j，本脚本会拒绝写回；
+        # 这里仍把标记抄上，避免以后在空库上重跑时丢掉分类。
+        attach_pending(topic, spec)
         new_topics.append(topic)
         new_questions.extend(built)
 

@@ -102,3 +102,7 @@
 | `cne_j053`–`cne_j056` | 交通方式、How 问交通、谈论怎么上学、读上学方式 | 仍「七年级上册 待核」。七下正文未见独立的交通方式或怎么上学课。七上 Reading Plus Unit 3 书页77「My Floating School」是孟加拉浮动学校的补充阅读，虽有 “So how do I go to school?” 以及船既是校车又是教室，但不是交通方式词汇课，也不是谈论自己怎么上学的口语课，讨论题问的是浮动学校的重要性和可能困难；不足以改挂第3单元。七上第6单元书页64 “I walk to school. It’s only a 10-minute walk” 是作息短文里的偶发句。语法附录中的 at the bus stop、on the way to 只是介词例句。不按旧版 How do you get to school 改挂，不删除。 |
 
 本轮未改题目、课标 `verbatim` 和 `standards.confidence`，未升 `sw.js`（仍为 v16）。硬先修未改。因词尾 s 改到七下，软先修「介绍家人」不再依赖「词尾 s 的读音」，改为依赖七上「名词复数」；并增加「动物」对「词尾 s 的读音」的软先修。未推送、未部署。截图仍在未跟踪目录 `.english-g7-research/`。
+
+## 待核分类（2026-11-12）
+
+交通四点与读周末日记的两类标记见 [english-pending-classification-20261112.md](english-pending-classification-20261112.md)。上面的挂接结论不变，章节仍是「待核」。

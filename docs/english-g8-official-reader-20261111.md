@@ -147,3 +147,7 @@
 | `cne_j183` | 旧物与回忆 | 仍「八年级下册 待核」。第8单元是志愿服务。第3单元丢失的吉他、第7单元花园的 painful memory 都不是旧物主题课。 |
 | `cne_j185` | 谈论拥有多久 | 仍「八年级下册 待核」。第8单元书页75 采访练习有 “How long have you had your favourite toy / ...?”，是 for / since 的拥有例句，不是旧物课业。for / since 语法已留在第8单元。 |
 | `cne_j186` | 读旧物故事 | 仍「八年级下册 待核」。未见以旧物故事为课业的课文。 |
+
+## 待核分类（2026-11-12）
+
+八上 12 点与八下 11 点的两类标记见 [english-pending-classification-20261112.md](english-pending-classification-20261112.md)。八下逐点表仍是正文依据。章节仍是「待核」。`cne_j180` 不改挂到第7或第8单元。

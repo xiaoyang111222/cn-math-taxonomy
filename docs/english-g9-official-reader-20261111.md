@@ -156,3 +156,7 @@ U2、U6、U8 在 TOPICS 里没有应保留的旧点，只有上面这些 246 以
 - 七年级相关点的当前挂接见 `docs/english-g7-official-reader-20261111.md` 正文续核节。本文件目录阶段的七年级行不再作为当前挂接。
 
 本轮未改九上这些点的生成器挂接，未改题目，未升 `sw.js`。未推送、未部署。截图和笔记在未跟踪目录 `.english-g9-research/`。
+
+## 待核分类（2026-11-12）
+
+九上 37 点的两类标记见 [english-pending-classification-20261112.md](english-pending-classification-20261112.md)。上面「正文续核」的概括句不作为 37 点的批量结论。章节仍是「九年级上册 待核」。

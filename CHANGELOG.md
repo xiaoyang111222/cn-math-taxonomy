@@ -1,5 +1,9 @@
 # 变更日志
 
+## 2026-11-12（初中英语：65 个待核点分成两类）
+
+- 2026-11-12：仍挂「N年级X册 待核」的 65 个初中英语知识点保持原章节，按已有核对记录标了 `catalog_status`。`body_checked_no_lesson` 表示已核教材但未找到对应课业（22）：七上交通四点、七下读周末日记、八上 `cne_j134` 与 `cne_j136`、八下 11 点、九上 `cne_j188`、`cne_j201`、`cne_j204`、`cne_j206`。`evidence_insufficient` 表示证据仍不足（43）：八上其余 10 点、九上其余 33 点。八上 12 点和九上 37 点没有按官方文档的概括句批量归入第一类。`cne_j180` 的语法附录书页108已教 been 与 gone，单元归属未定，不改挂第7或第8单元，也不写成书里没教。不是 `official_toc`，也不是道法的 `pending_official_lesson_list`。点名、题目、先修、学期和章节字符串未改。前台仍只显示「待核」。因知识点增加了字段，`sw.js` 由 v17 改为 v18。详见 `docs/english-pending-classification-20261112.md`。仅本地变更，未推送、未部署。
+
 ## 2026-11-12（部署脚本：Wrangler 本地缓存目录）
 
 - 2026-11-12：`scripts/deploy-cf.sh` 改为设置 wrangler 4.86.0 实际读取的 `WRANGLER_CACHE_DIR` 到当前用户可写目录，避免 mkdir `/node_modules/.cache/wrangler` 失败。调用方已提供可写路径时沿用。上传临时目录仍在成功或失败后清理；失败退出码原样返回。未改数据、`sw.js` 或线上。未部署。
