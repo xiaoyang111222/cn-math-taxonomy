@@ -6,8 +6,20 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 DIST="${TMPDIR:-/tmp}/cn-math-pages-dist.$$"
 ACCOUNT_ID="${CLOUDFLARE_ACCOUNT_ID:-6799c67ce94928e7fc4136842327a18f}"
 export CLOUDFLARE_ACCOUNT_ID="$ACCOUNT_ID"
-export XDG_CACHE_HOME="${XDG_CACHE_HOME:-/tmp/xdg-cache}"
-mkdir -p "$XDG_CACHE_HOME" "$DIST/data"
+# wrangler 4.86.0 getCacheFolder() reads WRANGLER_CACHE_DIR, then falls back to
+# <nearest node_modules>/.cache/wrangler (here that is /node_modules/.cache/wrangler).
+# XDG_CACHE_HOME is not consulted for that path.
+if [[ -n "${WRANGLER_CACHE_DIR:-}" ]]; then
+  if ! mkdir -p "$WRANGLER_CACHE_DIR" 2>/dev/null || [[ ! -w "$WRANGLER_CACHE_DIR" ]]; then
+    WRANGLER_CACHE_DIR="${TMPDIR:-/tmp}/cn-math-wrangler-cache"
+    mkdir -p "$WRANGLER_CACHE_DIR"
+  fi
+else
+  WRANGLER_CACHE_DIR="${TMPDIR:-/tmp}/cn-math-wrangler-cache"
+  mkdir -p "$WRANGLER_CACHE_DIR"
+fi
+export WRANGLER_CACHE_DIR
+mkdir -p "$DIST/data"
 
 cp "$ROOT/index.html" "$ROOT/sw.js" "$ROOT/manifest.webmanifest" "$DIST/"
 [[ -f "$ROOT/.nojekyll" ]] && cp "$ROOT/.nojekyll" "$DIST/"

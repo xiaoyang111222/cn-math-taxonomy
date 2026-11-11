@@ -67,3 +67,6 @@ jobs:
 
       - name: 首页题库异步加载
         run: node tests/test_home.js
+
+      - name: 页面脚本缓存测试
+        run: node tests/test_pages_script_cache.js
