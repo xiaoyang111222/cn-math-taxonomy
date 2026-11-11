@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-"""八年级上册。人教版 Go for it! 通行目录，单元名与册次待核。
+"""八年级上册。人教版（根据2022年版课程标准修订），2026-11-11 官方阅读器已核。
 
-运动习惯等四点已按 2026-11-11 官方七下第3单元 Keep Fit 改挂；其余八上点本轮不动。
+正式单元 1–8 见 enj_build.UNITS。对不上官方课的点用 unit 90，章节为「八年级上册 待核」。
+连读、不完全爆破仍在七年级上册；运动习惯四点仍在七年级下册第3单元 Keep Fit。
 """
 from en_tx import V, P, G, F, R
 from enj_g7a import OFFICIAL_LINK, OFFICIAL_PLOS
@@ -200,7 +201,7 @@ R("rw_cmp", "读人物比较", 8, "上", 3,
       "哥哥或弟弟更 loud，也就是没有 Paul 安静。"),
 ])
 
-V("vo_town", "城镇设施", 8, "上", 4,
+V("vo_town", "城镇设施", 8, "上", 90,
   "认读 theater、screen、seat 和 service。",
   [("theater", "剧院"), ("screen", "屏幕"), ("seat", "座位"), ("service", "服务")], "vocab8")
 
@@ -219,7 +220,7 @@ G("gr_super", "形容词最高级", 8, "上", 4,
       "the best 是最高级。"),
 ])
 
-F("fu_best", "谈论最好的地方", 8, "上", 4,
+F("fu_best", "谈论最好的地方", 8, "上", 90,
   "能询问和回答某个地方是不是最好的。", "func_life", [
     q("想问哪家影院最舒服，哪一句合适？", "Which theater has the most comfortable seats?",
       ["Which theater has the comfortablest seats?", "Which theater has more comfortable seats of all?", "Which theater has the most comfortable seatest?"],
@@ -235,7 +236,7 @@ F("fu_best", "谈论最好的地方", 8, "上", 4,
       "bad 的最高级是 worst。"),
 ])
 
-R("rw_best", "读影院介绍", 8, "上", 4,
+R("rw_best", "读影院介绍", 8, "上", 90,
   "读一段城镇介绍，找出最好的设施。", "read_detail", [
     q("Town Cinema has the biggest screen. It has the most comfortable seats. 最大的屏幕在哪里？", "Town Cinema",
       ["学校", "家里", "短文没说"], "Town Cinema has the biggest screen。"),
@@ -248,11 +249,11 @@ R("rw_best", "读影院介绍", 8, "上", 4,
       "便宜，但是服务最差。"),
 ])
 
-V("vo_show", "电视节目", 8, "上", 5,
+V("vo_show", "电视节目", 8, "上", 90,
   "认读 sitcom、news、educational 和 cartoon。",
   [("sitcom", "情景喜剧"), ("news", "新闻"), ("educational", "有教育意义的"), ("cartoon", "动画片")], "vocab8")
 
-G("gr_to", "不定式作宾语", 8, "上", 5,
+G("gr_to", "不定式作宾语", 8, "上", 6,
   "能在 want、plan、hope 和 expect 后面使用 to 加动词原形。", "to_ing", [
     q("我想看新闻。哪一句正确？", "I want to watch the news.",
       ["I want watch the news.", "I want watching the news.", "I want to watching the news."],
@@ -268,7 +269,7 @@ G("gr_to", "不定式作宾语", 8, "上", 5,
       "expect to arrive。"),
 ])
 
-F("fu_show", "谈论想看的节目", 8, "上", 5,
+F("fu_show", "谈论想看的节目", 8, "上", 90,
   "能说出想看什么节目，并询问对方的看法。", "func_plan", [
     q("想约对方看情景喜剧，哪一句合适？", "Do you want to watch a sitcom?",
       ["Do you want watch a sitcom?", "Do you want to watching a sitcom?", "Are you want to watch a sitcom?"],
@@ -284,7 +285,7 @@ F("fu_show", "谈论想看的节目", 8, "上", 5,
       "can't stand 后面可以直接接 it。"),
 ])
 
-R("rw_show", "读节目选择", 8, "上", 5,
+R("rw_show", "读节目选择", 8, "上", 90,
   "读一段对话，找出谁想看什么。", "read_detail", [
     q("Lisa wants to watch a cartoon. Tom plans to watch the news. 谁想看动画片？", "Lisa",
       ["Tom", "两个人都想看新闻", "老师"], "Lisa wants to watch a cartoon。"),
@@ -395,11 +396,11 @@ R("rw_future", "读未来预测", 8, "上", 7,
       "cities will be more crowded。"),
 ])
 
-V("vo_cook", "烹饪用词", 8, "上", 8,
+V("vo_cook", "烹饪用词", 8, "上", 5,
   "认读 yogurt、honey、spoon 和 blender。",
   [("yogurt", "酸奶"), ("honey", "蜂蜜"), ("spoon", "勺子"), ("blender", "搅拌器")], "vocab8")
 
-G("gr_seq", "顺序词 first、next、then", 8, "上", 8,
+G("gr_seq", "顺序词 first、next、then", 8, "上", 5,
   "能用顺序词和祈使句说明步骤。", "sentence", [
     q("先把香蕉剥开。哪一句正确？", "First, peel the bananas.",
       ["First, peeling the bananas.", "First, to peel the bananas.", "First, peeled the bananas."],
@@ -415,7 +416,7 @@ G("gr_seq", "顺序词 first、next、then", 8, "上", 8,
       "祈使句用 pour，不加 s。"),
 ])
 
-F("fu_recipe", "说明做法", 8, "上", 8,
+F("fu_recipe", "说明做法", 8, "上", 5,
   "能询问食物怎么做，并按顺序回答。", "func_life", [
     q("想问香蕉奶昔怎么做，哪一句合适？", "How do you make a banana milk shake?",
       ["How do you makes a banana milk shake?", "How are you make a banana milk shake?", "How did you make a banana milk shake tomorrow?"],
@@ -431,7 +432,7 @@ F("fu_recipe", "说明做法", 8, "上", 8,
       "祈使句用动词原形。"),
 ])
 
-R("rw_recipe", "读食谱", 8, "上", 8,
+R("rw_recipe", "读食谱", 8, "上", 5,
   "读一份食谱，找出材料和顺序。", "read_detail", [
     q("First, peel two bananas. Next, put them into the blender. Then add honey. 第一步做什么？", "剥香蕉",
       ["加蜂蜜", "打开杯子", "倒奶昔"], "First, peel two bananas。"),
@@ -444,11 +445,11 @@ R("rw_recipe", "读食谱", 8, "上", 8,
       "Finally 是最后一步。"),
 ])
 
-V("vo_party", "聚会活动", 8, "上", 9,
+V("vo_party", "聚会活动", 8, "上", 90,
   "认读 invitation、preparation、concert 和 available。",
   [("invitation", "邀请"), ("preparation", "准备"), ("concert", "音乐会"), ("available", "有空的")], "vocab8")
 
-G("gr_invite", "用 can 发出邀请", 8, "上", 9,
+G("gr_invite", "用 can 发出邀请", 8, "上", 90,
   "能用 Can you 邀请别人，并用情态动词回答。", "modal", [
     q("邀请对方来聚会，哪一句正确？", "Can you come to my party?",
       ["Can you to come to my party?", "Do you can come to my party?", "Can you coming to my party?"],
@@ -464,7 +465,7 @@ G("gr_invite", "用 can 发出邀请", 8, "上", 9,
       "Can you come 常用来邀请。"),
 ])
 
-F("fu_invite", "接受或拒绝邀请", 8, "上", 9,
+F("fu_invite", "接受或拒绝邀请", 8, "上", 90,
   "能接受邀请，或说明为什么不能去。", "func_plan", [
     q("对方邀请你星期六来，你能来，应怎么说？", "Sure. I am available on Saturday.",
       ["Sure. I was available on Saturday tomorrow.", "Sure. I am available in Saturday.", "Sure. I available on Saturday."],
@@ -480,7 +481,7 @@ F("fu_invite", "接受或拒绝邀请", 8, "上", 9,
       "might have to 表示可能不得不。"),
 ])
 
-R("rw_invite", "读邀请函", 8, "上", 9,
+R("rw_invite", "读邀请函", 8, "上", 90,
   "读一封邀请，找出时间、地点和谁不能来。", "read_detail", [
     q("Please come to my party on Sunday at 7. It is at my house. 聚会在星期几？", "星期日",
       ["星期六", "星期一", "星期五"], "on Sunday。"),
@@ -493,7 +494,7 @@ R("rw_invite", "读邀请函", 8, "上", 9,
       "Jeff 要准备考试，不能来。"),
 ])
 
-P("ph_pause", "意群停顿", 8, "上", 10,
+P("ph_pause", "意群停顿", 8, "上", 2,
   "能按意群停顿，不把一个意思从中间拆开。", "pause", [
     q("I went to the park with my father. 哪一种停顿更好？", "I went to the park / with my father.",
       ["I went to / the park with my father.", "I / went to the park with my father only after every word", "went to the / park"],
@@ -509,11 +510,11 @@ P("ph_pause", "意群停顿", 8, "上", 10,
       "意群停顿帮助听的人理解句子。"),
 ])
 
-V("vo_advice", "建议用词", 8, "上", 10,
+V("vo_advice", "建议用词", 8, "上", 90,
   "认读 advice、organize、upset 和 careless。",
   [("advice", "建议"), ("organize", "组织"), ("upset", "心烦的"), ("careless", "粗心的")], "vocab8")
 
-G("gr_if", "if 条件状语从句", 8, "上", 10,
+G("gr_if", "if 条件状语从句", 8, "上", 8,
   "能用 if 引导条件从句，主句用 will，if 从句用一般现在时。", "clause_adv", [
     q("如果明天下雨，我就待在家里。哪一句正确？", "If it rains tomorrow, I will stay at home.",
       ["If it will rain tomorrow, I will stay at home.", "If it rains tomorrow, I stayed at home.", "If it rain tomorrow, I will stay at home."],
@@ -529,7 +530,7 @@ G("gr_if", "if 条件状语从句", 8, "上", 10,
       "he 后面用 comes，祈使句用 tell。"),
 ])
 
-F("fu_if", "用条件句给建议", 8, "上", 10,
+F("fu_if", "用条件句给建议", 8, "上", 8,
   "能用 if 提醒对方某种做法会带来什么结果。", "func_plan", [
     q("想劝对方别吃太多，否则会不舒服，哪一句合适？", "If you eat too much, you will feel sick.",
       ["If you will eat too much, you feel sick.", "If you eat too much, you felt sick tomorrow.", "If you eats too much, you will feel sick."],
@@ -545,7 +546,7 @@ F("fu_if", "用条件句给建议", 8, "上", 10,
       "leave 用一般现在时，结果用 will feel。"),
 ])
 
-R("rw_if", "读聚会建议", 8, "上", 10,
+R("rw_if", "读聚会建议", 8, "上", 90,
   "读一段建议，找出条件和结果。", "read_detail", [
     q("If you wear jeans, the teacher will not let you in. If you take a bus, you will be late. 穿牛仔裤会怎样？", "老师不让进",
       ["会很早到", "会得到礼物", "短文没说"], "will not let you in。"),

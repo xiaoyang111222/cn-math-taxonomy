@@ -465,11 +465,13 @@ R("rw_music", "读音乐偏好", 9, "全", 9,
       "能跟着跳舞的音乐。"),
 ])
 
-V("vo_custom", "社交习俗", 9, "全", 10,
+# 以下四点只改册次课号：社交习俗、说明该怎么做、读习俗说明在八年级下册第6单元；
+# be supposed to 挂「八年级下册 待核」。九年级 UNITS 和其余九全点不动。
+V("vo_custom", "社交习俗", 8, "下", 6,
   "认读 bow、kiss、greet 和 manner。",
   [("bow", "鞠躬"), ("kiss", "亲吻"), ("greet", "问候"), ("manner", "礼仪")], "vocab9")
 
-G("gr_supposed", "be supposed to", 9, "全", 10,
+G("gr_supposed", "be supposed to", 8, "下", 90,
   "能用 be supposed to 表示按习俗或规则应该做的事。", "modal", [
     q("你应该握手。哪一句正确？", "You are supposed to shake hands.",
       ["You are supposed shake hands.", "You are supposed to shaking hands.", "You supposed to shake hands."],
@@ -485,7 +487,7 @@ G("gr_supposed", "be supposed to", 9, "全", 10,
       "Are they supposed to bow。"),
 ])
 
-F("fu_custom", "说明该怎么做", 9, "全", 10,
+F("fu_custom", "说明该怎么做", 8, "下", 6,
   "能介绍一个地方见面时该怎么打招呼。", "func_view", [
     q("在中国，朋友见面常常握手。哪一句合适？", "In China, people are supposed to shake hands.",
       ["In China, people are supposed shake hands.", "In China, people supposed to shake hands.", "In China, people are supposed to shaking hands."],
@@ -501,7 +503,7 @@ F("fu_custom", "说明该怎么做", 9, "全", 10,
       "kissed when we met。"),
 ])
 
-R("rw_custom", "读习俗说明", 9, "全", 10,
+R("rw_custom", "读习俗说明", 8, "下", 6,
   "读一段习俗说明，找出该做和不该做的事。", "read_detail", [
     q("In this country, you are supposed to bow when you meet someone. You are not supposed to kiss. 见面应该做什么？", "鞠躬",
       ["亲吻", "握手以外没有写鞠躬", "什么都不做"], "supposed to bow。"),

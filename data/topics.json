@@ -33366,7 +33366,7 @@
     "domain": "词汇",
     "grade": 8,
     "semester": "上",
-    "chapter": "八年级上册 第4单元 Amazing Plants and Animals",
+    "chapter": "八年级上册 待核",
     "type": "conceptual",
     "description": "认读 theater、screen、seat 和 service。",
     "mastery_criteria": [
@@ -33420,7 +33420,7 @@
     "domain": "日常表达",
     "grade": 8,
     "semester": "上",
-    "chapter": "八年级上册 第4单元 Amazing Plants and Animals",
+    "chapter": "八年级上册 待核",
     "type": "application",
     "description": "能询问和回答某个地方是不是最好的。",
     "mastery_criteria": [
@@ -33447,7 +33447,7 @@
     "domain": "读写",
     "grade": 8,
     "semester": "上",
-    "chapter": "八年级上册 第4单元 Amazing Plants and Animals",
+    "chapter": "八年级上册 待核",
     "type": "application",
     "description": "读一段城镇介绍，找出最好的设施。",
     "mastery_criteria": [
@@ -33852,7 +33852,7 @@
     "domain": "词汇",
     "grade": 8,
     "semester": "上",
-    "chapter": "八年级上册 第8单元 Let's Communicate!",
+    "chapter": "八年级上册 待核",
     "type": "conceptual",
     "description": "认读 advice、organize、upset 和 careless。",
     "mastery_criteria": [
@@ -33933,7 +33933,7 @@
     "domain": "读写",
     "grade": 8,
     "semester": "上",
-    "chapter": "八年级上册 第8单元 Let's Communicate!",
+    "chapter": "八年级上册 待核",
     "type": "application",
     "description": "读一段建议，找出条件和结果。",
     "mastery_criteria": [
@@ -33960,7 +33960,7 @@
     "domain": "词汇",
     "grade": 8,
     "semester": "上",
-    "chapter": "八年级上册 第8单元 Let's Communicate!",
+    "chapter": "八年级上册 待核",
     "type": "conceptual",
     "description": "认读 invitation、preparation、concert 和 available。",
     "mastery_criteria": [
@@ -33987,7 +33987,7 @@
     "domain": "语法",
     "grade": 8,
     "semester": "上",
-    "chapter": "八年级上册 第8单元 Let's Communicate!",
+    "chapter": "八年级上册 待核",
     "type": "procedural",
     "description": "能用 Can you 邀请别人，并用情态动词回答。",
     "mastery_criteria": [
@@ -34014,7 +34014,7 @@
     "domain": "日常表达",
     "grade": 8,
     "semester": "上",
-    "chapter": "八年级上册 第8单元 Let's Communicate!",
+    "chapter": "八年级上册 待核",
     "type": "application",
     "description": "能接受邀请，或说明为什么不能去。",
     "mastery_criteria": [
@@ -34041,7 +34041,7 @@
     "domain": "读写",
     "grade": 8,
     "semester": "上",
-    "chapter": "八年级上册 第8单元 Let's Communicate!",
+    "chapter": "八年级上册 待核",
     "type": "application",
     "description": "读一封邀请，找出时间、地点和谁不能来。",
     "mastery_criteria": [
@@ -34067,8 +34067,8 @@
     "name": "电视节目",
     "domain": "词汇",
     "grade": 8,
-    "semester": "下",
-    "chapter": "八年级下册 第1单元 Time to Relax",
+    "semester": "上",
+    "chapter": "八年级上册 待核",
     "type": "conceptual",
     "description": "认读 sitcom、news、educational 和 cartoon。",
     "mastery_criteria": [
@@ -34121,8 +34121,8 @@
     "name": "谈论想看的节目",
     "domain": "日常表达",
     "grade": 8,
-    "semester": "下",
-    "chapter": "八年级下册 第1单元 Time to Relax",
+    "semester": "上",
+    "chapter": "八年级上册 待核",
     "type": "application",
     "description": "能说出想看什么节目，并询问对方的看法。",
     "mastery_criteria": [
@@ -34148,8 +34148,8 @@
     "name": "读节目选择",
     "domain": "读写",
     "grade": 8,
-    "semester": "下",
-    "chapter": "八年级下册 第1单元 Time to Relax",
+    "semester": "上",
+    "chapter": "八年级上册 待核",
     "type": "application",
     "description": "读一段对话，找出谁想看什么。",
     "mastery_criteria": [
@@ -34392,7 +34392,7 @@
     "domain": "日常表达",
     "grade": 8,
     "semester": "下",
-    "chapter": "八年级下册 第3单元 Growing Up",
+    "chapter": "八年级下册 待核",
     "type": "application",
     "description": "能用 Why don't you 或 Why not 建议别人怎么做。",
     "mastery_criteria": [
@@ -34419,7 +34419,7 @@
     "domain": "读写",
     "grade": 8,
     "semester": "下",
-    "chapter": "八年级下册 第3单元 Growing Up",
+    "chapter": "八年级下册 待核",
     "type": "application",
     "description": "读一封短信，找出问题和建议。",
     "mastery_criteria": [
@@ -34554,7 +34554,7 @@
     "domain": "读写",
     "grade": 8,
     "semester": "下",
-    "chapter": "八年级下册 第4单元 The Wonders of Nature",
+    "chapter": "八年级下册 待核",
     "type": "application",
     "description": "能根据上下文选择意思和语法都通顺的词。",
     "mastery_criteria": [
@@ -34770,7 +34770,7 @@
     "domain": "语法",
     "grade": 8,
     "semester": "下",
-    "chapter": "八年级下册 第6单元 Crossing Cultures",
+    "chapter": "八年级下册 待核",
     "type": "procedural",
     "description": "能用 be supposed to 表示按习俗或规则应该做的事。",
     "mastery_criteria": [
@@ -34986,7 +34986,7 @@
     "domain": "词汇",
     "grade": 8,
     "semester": "下",
-    "chapter": "八年级下册 第7单元 A Good Read",
+    "chapter": "八年级下册 待核",
     "type": "conceptual",
     "description": "认读 camera、progress、unusual 和 collect。",
     "mastery_criteria": [
@@ -35040,7 +35040,7 @@
     "domain": "语法",
     "grade": 8,
     "semester": "下",
-    "chapter": "八年级下册 第7单元 A Good Read",
+    "chapter": "八年级下册 待核",
     "type": "procedural",
     "description": "能区分 has been to（去过并已回来）和 has gone to（去了尚未回来）。",
     "mastery_criteria": [
@@ -35067,7 +35067,7 @@
     "domain": "日常表达",
     "grade": 8,
     "semester": "下",
-    "chapter": "八年级下册 第7单元 A Good Read",
+    "chapter": "八年级下册 待核",
     "type": "application",
     "description": "能询问别人的经历，并说出自己去过哪里。",
     "mastery_criteria": [
@@ -35094,7 +35094,7 @@
     "domain": "读写",
     "grade": 8,
     "semester": "下",
-    "chapter": "八年级下册 第7单元 A Good Read",
+    "chapter": "八年级下册 待核",
     "type": "application",
     "description": "读一段经历，区分去过和正在那里。",
     "mastery_criteria": [
@@ -35202,7 +35202,7 @@
     "domain": "词汇",
     "grade": 8,
     "semester": "下",
-    "chapter": "八年级下册 第8单元 Making a Difference",
+    "chapter": "八年级下册 待核",
     "type": "conceptual",
     "description": "认读 scarf、soft、yard 和 honest。",
     "mastery_criteria": [
@@ -35256,7 +35256,7 @@
     "domain": "日常表达",
     "grade": 8,
     "semester": "下",
-    "chapter": "八年级下册 第8单元 Making a Difference",
+    "chapter": "八年级下册 待核",
     "type": "application",
     "description": "能询问一件物品拥有了多久，并回答。",
     "mastery_criteria": [
@@ -35283,7 +35283,7 @@
     "domain": "读写",
     "grade": 8,
     "semester": "下",
-    "chapter": "八年级下册 第8单元 Making a Difference",
+    "chapter": "八年级下册 待核",
     "type": "application",
     "description": "读一段回忆，找出拥有的时间和原因。",
     "mastery_criteria": [

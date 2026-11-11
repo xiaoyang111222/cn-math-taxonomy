@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-"""八年级下册。人教版 Go for it! 通行目录，单元名与册次待核。"""
+"""八年级下册。人教版（根据2022年版课程标准修订），2026-11-11 官方阅读器已核。
+
+正式单元 1–8 见 enj_build.UNITS。对不上官方课的点用 unit 90，章节为「八年级下册 待核」。
+故事三点仍在七年级下册第8单元。家务四点在八年级上册第2单元 Home Sweet Home。
+"""
 from en_tx import V, P, G, F, R
 
 
@@ -7,11 +11,11 @@ def q(prompt, answer, wrongs, expl):
     return ("c", prompt, answer, wrongs, expl)
 
 
-V("vo_health", "身体不适", 8, "下", 1,
+V("vo_health", "身体不适", 8, "下", 2,
   "认读 headache、stomachache、fever 和 cough。",
   [("headache", "头痛"), ("stomachache", "胃痛"), ("fever", "发烧"), ("cough", "咳嗽")], "vocab8")
 
-G("gr_should8", "should 表示建议", 8, "下", 1,
+G("gr_should8", "should 表示建议", 8, "下", 2,
   "能用 should 或 shouldn't 提出建议。", "modal", [
     q("你应该去看医生。哪一句正确？", "You should see a doctor.",
       ["You should to see a doctor.", "You should sees a doctor.", "You should seeing a doctor."],
@@ -27,7 +31,7 @@ G("gr_should8", "should 表示建议", 8, "下", 1,
       "should 用来告诉别人宜做什么。"),
 ])
 
-F("fu_health", "关心身体", 8, "下", 1,
+F("fu_health", "关心身体", 8, "下", 2,
   "能询问别人怎么了，并给出简单建议。", "func_life", [
     q("看到同学不舒服，哪一句合适？", "What's the matter?",
       ["What's the matter yesterday happened?", "What the matter is you?", "How the matter are you?"],
@@ -43,7 +47,7 @@ F("fu_health", "关心身体", 8, "下", 1,
       "How long 问持续了多久。"),
 ])
 
-R("rw_health", "读健康建议", 8, "下", 1,
+R("rw_health", "读健康建议", 8, "下", 2,
   "读一段对话，找出症状和建议。", "read_detail", [
     q("Ben has a stomachache. The doctor says he should not eat cold food. 他怎么了？", "胃痛",
       ["头痛", "咳嗽", "牙疼"], "has a stomachache。"),
@@ -56,11 +60,11 @@ R("rw_health", "读健康建议", 8, "下", 1,
       "fever and a cough 都有。"),
 ])
 
-V("vo_vol", "志愿服务", 8, "下", 2,
+V("vo_vol", "志愿服务", 8, "下", 8,
   "认读 volunteer、lonely、sign 和 notice。",
   [("volunteer", "志愿者"), ("lonely", "孤独的"), ("sign", "标牌"), ("notice", "通知")], "vocab8")
 
-G("gr_purpose", "不定式表示目的", 8, "下", 2,
+G("gr_purpose", "不定式表示目的", 8, "下", 1,
   "能用 to 加动词原形说明做某事的目的。", "to_ing", [
     q("我去公园是为了做志愿者。哪一句正确？", "I went to the park to volunteer.",
       ["I went to the park for volunteer.", "I went to the park volunteering.", "I went to the park to volunteering."],
@@ -76,7 +80,7 @@ G("gr_purpose", "不定式表示目的", 8, "下", 2,
       "to help 是目的。"),
 ])
 
-F("fu_help", "主动提供帮助", 8, "下", 2,
+F("fu_help", "主动提供帮助", 8, "下", 8,
   "能提出帮忙，并说明能做什么。", "func_plan", [
     q("想说自己可以发食物，哪一句合适？", "I could give out food.",
       ["I could to give out food.", "I could giving out food.", "I could gave out food."],
@@ -92,7 +96,7 @@ F("fu_help", "主动提供帮助", 8, "下", 2,
       "I'll help to 表示愿意帮忙。"),
 ])
 
-R("rw_help", "读志愿活动", 8, "下", 2,
+R("rw_help", "读志愿活动", 8, "下", 8,
   "读一则通知，找出时间和需要做的事。", "read_detail", [
     q("We need volunteers to clean up the city park on Saturday. Please call Mr. Li. 需要志愿者做什么？", "打扫城市公园",
       ["建造医院", "卖票", "开车"], "clean up the city park。"),
@@ -105,11 +109,11 @@ R("rw_help", "读志愿活动", 8, "下", 2,
       "give out notices after school。"),
 ])
 
-V("vo_chore", "家务", 8, "下", 3,
+V("vo_chore", "家务", 8, "上", 2,
   "认读 chore、rubbish、fold 和 sweep。",
   [("chore", "家务"), ("rubbish", "垃圾"), ("fold", "折叠"), ("sweep", "清扫")], "vocab8")
 
-G("gr_could", "could 表示请求", 8, "下", 3,
+G("gr_could", "could 表示请求", 8, "上", 2,
   "能用 Could you please 礼貌地提出请求。", "modal", [
     q("请你打扫房间，好吗？哪一句正确？", "Could you please clean your room?",
       ["Could you please to clean your room?", "Could you please cleaning your room?", "Could you please cleaned your room?"],
@@ -125,7 +129,7 @@ G("gr_could", "could 表示请求", 8, "下", 3,
       "could 使请求更委婉。"),
 ])
 
-F("fu_chore", "礼貌提出请求", 8, "下", 3,
+F("fu_chore", "礼貌提出请求", 8, "上", 2,
   "能请求别人做家务，并礼貌应答。", "func_life", [
     q("想请弟弟叠衣服，哪一句合适？", "Could you please fold the clothes?",
       ["Could you please folds the clothes?", "Could you please to fold the clothes?", "Do you could fold the clothes?"],
@@ -141,7 +145,7 @@ F("fu_chore", "礼貌提出请求", 8, "下", 3,
       "同意后可以补上一句请稍后归还。"),
 ])
 
-R("rw_chore", "读家务对话", 8, "下", 3,
+R("rw_chore", "读家务对话", 8, "上", 2,
   "读一段对话，找出谁要做什么。", "read_detail", [
     q("Mom: Could you please sweep the floor? Peter: Sure. 妈妈请 Peter 做什么？", "扫地",
       ["倒垃圾", "叠衣服", "洗碗"], "sweep the floor。"),
@@ -154,11 +158,11 @@ R("rw_chore", "读家务对话", 8, "下", 3,
       "fold the clothes 是她要做的。"),
 ])
 
-V("vo_mood", "情绪与压力", 8, "下", 4,
+V("vo_mood", "情绪与压力", 8, "下", 3,
   "认读 pressure、argue、nervous 和 proper。",
   [("pressure", "压力"), ("argue", "争吵"), ("nervous", "紧张的"), ("proper", "合适的")], "vocab8")
 
-G("gr_although", "although 引导让步", 8, "下", 4,
+G("gr_although", "although 引导让步", 8, "下", 3,
   "能用 although 连接相反的两层意思，并且不和 but 同时使用。", "clause_adv", [
     q("虽然他很累，但是他做完了作业。哪一句正确？", "Although he was tired, he finished his homework.",
       ["Although he was tired, but he finished his homework.", "Although he was tired, so he finished his homework.", "Although he is tired, he finished his homework yesterday without a tense."],
@@ -174,7 +178,7 @@ G("gr_although", "although 引导让步", 8, "下", 4,
       "保留 although，去掉 but。"),
 ])
 
-F("fu_advice8", "用 Why don't you 提建议", 8, "下", 4,
+F("fu_advice8", "用 Why don't you 提建议", 8, "下", 90,
   "能用 Why don't you 或 Why not 建议别人怎么做。", "func_plan", [
     q("建议对方和父母谈谈，哪一句合适？", "Why don't you talk to your parents?",
       ["Why don't you to talk to your parents?", "Why not you talk to your parents?", "Why don't you talking to your parents?"],
@@ -190,7 +194,7 @@ F("fu_advice8", "用 Why don't you 提建议", 8, "下", 4,
       "pressure 这里不可数，用 too much。"),
 ])
 
-R("rw_letter8", "读建议信", 8, "下", 4,
+R("rw_letter8", "读建议信", 8, "下", 90,
   "读一封短信，找出问题和建议。", "read_detail", [
     q("Dear Linda, I argued with my parents. I feel nervous. What should I do? 写信人怎么了？", "和父母吵了架，感到紧张",
       ["考试得了满分", "去公园做志愿", "身体发烧"], "argued with my parents，feel nervous。"),
@@ -288,7 +292,7 @@ G("gr_unless", "unless 表示除非", 8, "下", 6,
       "unless you try 就是 if you do not try。"),
 ])
 
-G("gr_sothat", "so that 表示目的", 8, "下", 6,
+G("gr_sothat", "so that 表示目的", 8, "下", 3,
   "能用 so that 说明目的，从句里常用 can 或 could。", "clause_adv", [
     q("他早起是为了赶上公共汽车。哪一句正确？", "He got up early so that he could catch the bus.",
       ["He got up early so that he catch the bus.", "He got up early to that he could catch the bus.", "He got up early so that he can caught the bus."],
@@ -333,11 +337,11 @@ R("rw_story", "读神话故事", 7, "下", 8,
       "sent two gods to help。"),
 ])
 
-V("vo_geo", "地理名称", 8, "下", 7,
+V("vo_geo", "地理名称", 8, "下", 4,
   "认读 desert、ocean、ancient 和 protect。",
   [("desert", "沙漠"), ("ocean", "海洋"), ("ancient", "古代的"), ("protect", "保护")], "vocab8")
 
-G("gr_high", "比较级与最高级的选用", 8, "下", 7,
+G("gr_high", "比较级与最高级的选用", 8, "下", 4,
   "能根据是两者还是三者以上，选用比较级或最高级。", "compare", [
     q("珠穆朗玛峰是世界上最高的山。哪一句正确？", "Qomolangma is the highest mountain in the world.",
       ["Qomolangma is the higher mountain in the world.", "Qomolangma is highest mountain in the world.", "Qomolangma is the most high mountain in the world."],
@@ -353,7 +357,7 @@ G("gr_high", "比较级与最高级的选用", 8, "下", 7,
       "larger than 比较两个大洋。"),
 ])
 
-F("fu_fact", "陈述地理事实", 8, "下", 7,
+F("fu_fact", "陈述地理事实", 8, "下", 4,
   "能用事实句说出地理事物有多大、多高。", "func_view", [
     q("想说这片沙漠很大，哪一句合适？", "This desert is very large.",
       ["This desert is very larger.", "This desert is the larger.", "This desert are very large."],
@@ -369,7 +373,7 @@ F("fu_fact", "陈述地理事实", 8, "下", 7,
       "meters high 表示高度。"),
 ])
 
-R("rw_fact", "读地理短文", 8, "下", 7,
+R("rw_fact", "读地理短文", 8, "下", 4,
   "读一段地理短文，找出最高或最长的事物。", "read_detail", [
     q("Qomolangma is the highest mountain in the world. It is higher than any other mountain. 它是什么？", "世界上最高的山",
       ["一条河", "一片沙漠", "一个海洋"], "the highest mountain。"),
@@ -382,7 +386,7 @@ R("rw_fact", "读地理短文", 8, "下", 7,
       "Nile 是文中最长的河。"),
 ])
 
-R("rw_cloze8", "选词补全短文", 8, "下", 7,
+R("rw_cloze8", "选词补全短文", 8, "下", 90,
   "能根据上下文选择意思和语法都通顺的词。", "read_cloze", [
     q("Tom ___ to the library yesterday. He read an old book about the ocean. 横线处选哪一个？", "went",
       ["goes", "going", "will go"], "yesterday 要用过去式 went。"),
@@ -394,11 +398,11 @@ R("rw_cloze8", "选词补全短文", 8, "下", 7,
       ["protected", "protecting", "to protect"], "should 后面用动词原形 protect。"),
 ])
 
-V("vo_book", "书籍与阅读", 8, "下", 8,
+V("vo_book", "书籍与阅读", 8, "下", 7,
   "认读 treasure、island、classic 和 page。",
   [("treasure", "宝藏"), ("island", "岛"), ("classic", "名著"), ("page", "页")], "vocab8")
 
-G("gr_pp", "现在完成时", 8, "下", 8,
+G("gr_pp", "现在完成时", 8, "下", 7,
   "能用 have 或 has 加过去分词，表示到现在为止已经发生的事。", "perfect", [
     q("我已经读完了这本书。哪一句正确？", "I have already read this book.",
       ["I have already readed this book.", "I has already read this book.", "I have already reading this book."],
@@ -414,7 +418,7 @@ G("gr_pp", "现在完成时", 8, "下", 8,
       "have not found。"),
 ])
 
-G("gr_yet", "already 与 yet", 8, "下", 8,
+G("gr_yet", "already 与 yet", 8, "下", 7,
   "能在肯定句中用 already，在疑问句和否定句中用 yet。", "perfect", [
     q("我已经做完作业了。哪一句正确？", "I have already finished my homework.",
       ["I have yet finished my homework.", "I already have finished my homework yesterday.", "I have finished already my homework yet."],
@@ -430,7 +434,7 @@ G("gr_yet", "already 与 yet", 8, "下", 8,
       "already 常放在肯定的现在完成时里。"),
 ])
 
-F("fu_book", "谈论读过的书", 8, "下", 8,
+F("fu_book", "谈论读过的书", 8, "下", 7,
   "能询问别人是否已经读过某本书。", "func_plan", [
     q("想问对方是否已经读过这本名著，哪一句合适？", "Have you read this classic yet?",
       ["Did you have read this classic yet?", "Have you read this classic yesterday?", "Have you readed this classic yet?"],
@@ -446,7 +450,7 @@ F("fu_book", "谈论读过的书", 8, "下", 8,
       "have you read 问到目前为止读过的书。"),
 ])
 
-R("rw_book", "读阅读记录", 8, "下", 8,
+R("rw_book", "读阅读记录", 8, "下", 7,
   "读一段阅读记录，判断谁已经读完。", "read_detail", [
     q("Amy has already read Treasure Island. Pete has not finished it yet. 谁已经读完了？", "Amy",
       ["Pete", "两个人都读完了", "没有人"], "Amy has already read。"),
@@ -459,11 +463,11 @@ R("rw_book", "读阅读记录", 8, "下", 8,
       "not finished yet 说明还没读完。"),
 ])
 
-V("vo_museum", "场馆经历", 8, "下", 9,
+V("vo_museum", "场馆经历", 8, "下", 90,
   "认读 camera、progress、unusual 和 collect。",
   [("camera", "照相机"), ("progress", "进步"), ("unusual", "不寻常的"), ("collect", "收集")], "vocab8")
 
-G("gr_ever", "ever 与 never", 8, "下", 9,
+G("gr_ever", "ever 与 never", 8, "下", 7,
   "能用 ever 询问是否曾经做过，用 never 表示从未做过。", "perfect", [
     q("你曾经去过博物馆吗？哪一句正确？", "Have you ever been to a museum?",
       ["Have you never been to a museum as a yes-no with ever?", "Did you ever been to a museum?", "Have you ever went to a museum?"],
@@ -479,7 +483,7 @@ G("gr_ever", "ever 与 never", 8, "下", 9,
       "has never used。"),
 ])
 
-G("gr_been", "been 与 gone", 8, "下", 9,
+G("gr_been", "been 与 gone", 8, "下", 90,
   "能区分 has been to（去过并已回来）和 has gone to（去了尚未回来）。", "perfect", [
     q("她现在不在这里，去了图书馆。哪一句正确？", "She has gone to the library.",
       ["She has been to the library and is still there now.", "She has went to the library.", "She has gone the library."],
@@ -495,7 +499,7 @@ G("gr_been", "been 与 gone", 8, "下", 9,
       "have been to 表示经历，人已回来。"),
 ])
 
-F("fu_ever", "询问去过哪里", 8, "下", 9,
+F("fu_ever", "询问去过哪里", 8, "下", 90,
   "能询问别人的经历，并说出自己去过哪里。", "func_plan", [
     q("想问对方是否去过游乐园，哪一句合适？", "Have you ever been to an amusement park?",
       ["Have you ever gone to an amusement park and come back in the same word?", "Did you ever been to an amusement park?", "Have you ever be to an amusement park?"],
@@ -511,7 +515,7 @@ F("fu_ever", "询问去过哪里", 8, "下", 9,
       "an unusual experience。"),
 ])
 
-R("rw_museum", "读场馆经历", 8, "下", 9,
+R("rw_museum", "读场馆经历", 8, "下", 90,
   "读一段经历，区分去过和正在那里。", "read_detail", [
     q("Kate has been to the science museum. She took photos there last month. 她现在还在馆里吗？", "不在，她已经回来了",
       ["还在馆里", "从未去过", "短文没说她去过"], "has been to，并且上个月拍了照。"),
@@ -524,11 +528,11 @@ R("rw_museum", "读场馆经历", 8, "下", 9,
       "gone 说明他还没回来。"),
 ])
 
-V("vo_own", "旧物与回忆", 8, "下", 10,
+V("vo_own", "旧物与回忆", 8, "下", 90,
   "认读 scarf、soft、yard 和 honest。",
   [("scarf", "围巾"), ("soft", "柔软的"), ("yard", "院子"), ("honest", "诚实的")], "vocab8")
 
-G("gr_since", "for 与 since", 8, "下", 10,
+G("gr_since", "for 与 since", 8, "下", 8,
   "能用 for 加一段时间，用 since 加过去的起点。", "perfect", [
     q("这辆自行车我买了三年了。哪一句正确？", "I have had this bike for three years.",
       ["I have had this bike since three years.", "I have bought this bike for three years.", "I have had this bike for three years ago."],
@@ -544,7 +548,7 @@ G("gr_since", "for 与 since", 8, "下", 10,
       "since Monday 表示从星期一开始一直到现在。"),
 ])
 
-F("fu_since", "谈论拥有多久", 8, "下", 10,
+F("fu_since", "谈论拥有多久", 8, "下", 90,
   "能询问一件物品拥有了多久，并回答。", "func_plan", [
     q("想问对方拥有这条围巾多久了，哪一句合适？", "How long have you had this scarf?",
       ["How long have you bought this scarf?", "How long did you have this scarf next year?", "How long have you has this scarf?"],
@@ -560,7 +564,7 @@ F("fu_since", "谈论拥有多久", 8, "下", 10,
       "is soft and old。"),
 ])
 
-R("rw_since", "读旧物故事", 8, "下", 10,
+R("rw_since", "读旧物故事", 8, "下", 90,
   "读一段回忆，找出拥有的时间和原因。", "read_detail", [
     q("I have had this scarf for three years. My grandma made it. 围巾是谁做的？", "奶奶",
       ["妈妈", "同学", "售货员"], "My grandma made it。"),
