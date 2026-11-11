@@ -2,8 +2,7 @@
 """七年级上册。人教版 Go for it!（根据 2022 年版课程标准修订）。
 
 单元编号见 enj_build.UNITS：101–103 预备单元，1–7 正式单元，90 待核。
-食物四点改挂生成器编号 (7, 下, 40)，对应已入库的「七年级下册 第4单元 Eat Well」，
-题目不在本轮改写。
+食物四点按 2026-11-11 官方七下第4单元 Eat Well 改挂为 (7, 下, 4)，题目不在本轮改写。
 """
 from en_tx import V, P, G, F, R
 
@@ -22,8 +21,13 @@ OFFICIAL_TONE = (
 PH_S_PENDING = (
     " 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级上册》"
     "（ISBN 978-7-107-38254-3）官方阅读器：Unit 6 书页61 与附录发音页（书页92–94）"
-    "只有 /s/、/z/ 等音素和句子重音，未见词尾 -s/-es 读 /s/、/z/ 或 /ɪz/ 的规则；"
-    "七下官方目录无同名课，七下附录发音页尚未读。暂不挂到具体单元，待核。"
+    "只有 /s/、/z/ 等音素和句子重音，未见词尾 -s/-es 读 /s/、/z/ 或 /ɪz/ 的规则。"
+    "同日核《英语 七年级下册》（ISBN 978-7-107-38255-0）附录发音页（书页83–87；语法从书页88起）："
+    "第85页辅音字母表给 s 读 /s/（salt, skate, artist）、/z/（noise, always, yours），"
+    "第86页辅音组合有 ds /dz/、ts /ts/，都不是词尾 -s/-es 规则，也未见 /ɪz/。"
+    "Unit 1 发音练习有 “Listen and repeat. Notice the pronunciation of – (e) s.”"
+    "及 sharks、lions、boxes 等例词，这是练习提示，不是规则说明，不据此改挂第1单元。"
+    "七下官方目录无同名课。暂不挂到具体单元，待核。"
 )
 TRANS_PENDING = (
     " 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级上册》"
@@ -335,11 +339,11 @@ R("rw_ball", "读体育社团短文", 7, "上", 5,
       "Tom can play basketball，他不会网球。"),
 ])
 
-V("vo_food7", "食物", 7, "下", 40,
+V("vo_food7", "食物", 7, "下", 4,
   "认读 banana、hamburger、salad 和 ice-cream。",
   [("banana", "香蕉"), ("hamburger", "汉堡包"), ("salad", "沙拉"), ("ice-cream", "冰激凌")], "vocab7")
 
-G("gr_count", "可数与不可数名词", 7, "下", 40,
+G("gr_count", "可数与不可数名词", 7, "下", 4,
   "能区分可数名词和不可数名词，并选用 a、an 或 some。", "noun_pron", [
     q("banana 是可数名词。哪一句正确？", "I like bananas.",
       ["I like a bananaes.", "I like bananaes.", "I like an bananas."], "可数名词复数是 bananas。"),
@@ -365,7 +369,7 @@ G("gr_like7", "like 的句型", 7, "上", 4,
       ["No, I doesn't.", "No, I'm not.", "No, I don't like."], "Do you 的否定简答是 No, I don't。"),
 ])
 
-F("fu_food7", "谈论食物", 7, "下", 40,
+F("fu_food7", "谈论食物", 7, "下", 4,
   "能询问和表达对食物的喜好。", "func_life", [
     q("想问对方喜不喜欢沙拉，哪一句合适？", "Do you like salad?",
       ["Are you like salad?", "Does you like salad?", "Do you likes salad?"], "you 用 Do you like。"),
@@ -378,7 +382,7 @@ F("fu_food7", "谈论食物", 7, "下", 40,
       "Let's 后面用动词原形 have。"),
 ])
 
-R("rw_food7", "读饮食短文", 7, "下", 40,
+R("rw_food7", "读饮食短文", 7, "下", 4,
   "读一段饮食短文，找出人物的喜好。", "read_detail", [
     q("Gina likes bananas and milk. She doesn't like hamburgers. Gina 喜欢汉堡吗？", "不喜欢",
       ["喜欢", "只在学校喜欢", "短文没说"], "She doesn't like hamburgers。"),

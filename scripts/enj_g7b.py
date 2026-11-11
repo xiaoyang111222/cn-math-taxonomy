@@ -1,12 +1,20 @@
 # -*- coding: utf-8 -*-
 """七年级下册，以及已经挂在七年级上册新版单元上的点。
 
+七下已按 2026-11-11 官方目录改挂；出行仍在七上待核；周末活动/谈论上周末/读周末日记改挂七下待核；题目本轮不改。
 才艺、作息改到七上 Unit 5、Unit 6。学校场所、家人外貌改到七上 Unit 3、Unit 2。
-出行方式仍在七上「待核」（unit 90）：2026-11-11 官方七上、七下目录均无同名课，不按旧版七下 How do you get to school 改挂。
-其余点仍是七年级下册旧编号，本轮不改题目。
 """
 from en_tx import V, P, G, F, R
 from enj_g7a import TRANS_PENDING
+
+# 2026-11-11 已核七下官方目录，第8单元 Once upon a Time 是讲故事
+# （Retell a story / The Ugly Duckling / Simple past tense (2)），无「上周末」同名课。
+WKND_PENDING = (
+    " 2026-11-11 已在智慧教育平台核人教版2022课标修订《英语 七年级下册》"
+    "（ISBN 978-7-107-38255-0）官方目录：第8单元 Once upon a Time 是讲故事"
+    "（Retell a story / The Ugly Duckling / Simple past tense (2)），无「上周末」同名课。"
+    "不按旧版七下 What did you do last weekend 挂在第8单元。暂不挂到具体单元，待核。"
+)
 
 
 def q(prompt, answer, wrongs, expl):
@@ -73,7 +81,7 @@ G("gr_clock", "时刻表达", 7, "上", 6,
       ["你在哪里起床", "你为什么起床", "你和谁起床"], "What time 问时刻。"),
 ])
 
-G("gr_often", "频度副词", 7, "下", 2,
+G("gr_often", "频度副词", 7, "下", 3,
   "能按频率选用 always、usually、sometimes 和 never。", "present", [
     q("他每天都锻炼。哪一个词最合适？", "always",
       ["never", "sometimes", "seldom only once"], "每天都做用 always。"),
@@ -162,11 +170,11 @@ R("rw_trans7", "读上学方式", 7, "上", 90,
       "takes about 20 minutes 指乘车时间。"),
 ])
 
-V("vo_rule7", "校规词汇", 7, "下", 4,
+V("vo_rule7", "校规词汇", 7, "下", 2,
   "认读 rule、hallway、fight 和 uniform。",
   [("rule", "规则"), ("hallway", "走廊"), ("fight", "打架"), ("uniform", "校服")], "vocab7")
 
-G("gr_imp7", "祈使句", 7, "下", 4,
+G("gr_imp7", "祈使句", 7, "下", 2,
   "能用肯定和否定祈使句表达命令。", "sentence", [
     q("不要在课堂上吃东西。哪一句正确？", "Don't eat in class.",
       ["Not eat in class.", "Don't eating in class.", "Doesn't eat in class."],
@@ -181,7 +189,7 @@ G("gr_imp7", "祈使句", 7, "下", 4,
       ["请在走廊里跑", "她不在走廊里跑", "走廊里没有规则"], "Don't run 是否定命令。"),
 ])
 
-G("gr_must7", "must 与 have to", 7, "下", 4,
+G("gr_must7", "must 与 have to", 7, "下", 2,
   "能用 must 和 have to 表示必须，用 can't 表示不准。", "modal", [
     q("我们在图书馆必须保持安静。哪一句正确？", "We must be quiet in the library.",
       ["We must are quiet in the library.", "We must to be quiet in the library.", "We must quiet in the library."],
@@ -196,7 +204,7 @@ G("gr_must7", "must 与 have to", 7, "下", 4,
       ["可能", "过去常常", "正在"], "两者都表示必须做。"),
 ])
 
-F("fu_rule7", "说明规则", 7, "下", 4,
+F("fu_rule7", "说明规则", 7, "下", 2,
   "能说出学校里必须做和不能做的事。", "func_school", [
     q("想告诉新生不能在走廊打架，哪一句合适？", "Don't fight in the hallways.",
       ["Not fight in the hallways.", "Doesn't fight in the hallways.", "Fight don't in the hallways."],
@@ -210,7 +218,7 @@ F("fu_rule7", "说明规则", 7, "下", 4,
       ["我们可以迟到", "我们正在准时", "准时是一条建议，可做可不做"], "have to 表示必须。"),
 ])
 
-R("rw_rule7", "读校规", 7, "下", 4,
+R("rw_rule7", "读校规", 7, "下", 2,
   "读几条校规，判断能做和不能做的事。", "read_detail", [
     q("Rules: Don't arrive late. Don't run in the hallways. We must wear uniforms. 可以迟到吗？", "不可以",
       ["可以", "只在星期一可以", "短文没说"], "Don't arrive late 是不要迟到。"),
@@ -223,11 +231,11 @@ R("rw_rule7", "读校规", 7, "下", 4,
       "can't eat in class 就是课堂上不能吃。"),
 ])
 
-V("vo_animal7", "动物", 7, "下", 5,
+V("vo_animal7", "动物", 7, "下", 1,
   "认读 tiger、elephant、panda 和 koala。",
   [("tiger", "老虎"), ("elephant", "大象"), ("panda", "熊猫"), ("koala", "树袋熊")], "vocab7")
 
-G("gr_why7", "Why 与 because", 7, "下", 5,
+G("gr_why7", "Why 与 because", 7, "下", 1,
   "能用 Why 提问，并用 because 回答。", "clause_adv", [
     q("为什么你喜欢熊猫？哪一句正确？", "Why do you like pandas?",
       ["Why you like pandas?", "Why does you like pandas?", "Why do you likes pandas?"],
@@ -242,7 +250,7 @@ G("gr_why7", "Why 与 because", 7, "下", 5,
       "because they are smart。"),
 ])
 
-G("gr_desc", "描述性形容词", 7, "下", 5,
+G("gr_desc", "描述性形容词", 7, "下", 1,
   "能用形容词描述动物，并注意 be 动词。", "present", [
     q("熊猫是黑白相间的。哪一句正确？", "Pandas are black and white.",
       ["Pandas is black and white.", "Pandas are black white.", "Panda are black and white."],
@@ -257,7 +265,7 @@ G("gr_desc", "描述性形容词", 7, "下", 5,
       "kind of 表示有点，放在形容词前。"),
 ])
 
-F("fu_zoo", "谈论动物", 7, "下", 5,
+F("fu_zoo", "谈论动物", 7, "下", 1,
   "能询问来自哪里、喜欢什么动物并说明原因。", "func_life", [
     q("想问对方为什么喜欢大象，哪一句合适？", "Why do you like elephants?",
       ["Why are you like elephants?", "Why do you likes elephants?", "What do you like elephants?"],
@@ -272,7 +280,7 @@ F("fu_zoo", "谈论动物", 7, "下", 5,
       "are 加形容词 lazy。"),
 ])
 
-R("rw_zoo7", "读动物介绍", 7, "下", 5,
+R("rw_zoo7", "读动物介绍", 7, "下", 1,
   "读一段动物介绍，找出产地和特点。", "read_detail", [
     q("Pandas are from China. They are black and white. They are kind of shy. 熊猫来自哪里？", "中国",
       ["澳大利亚", "南非", "印度"], "from China。"),
@@ -285,11 +293,11 @@ R("rw_zoo7", "读动物介绍", 7, "下", 5,
       "sleep all day 是白天都在睡。"),
 ])
 
-V("vo_now", "正在进行的活动", 7, "下", 6,
+V("vo_now", "正在进行的活动", 7, "下", 5,
   "认读 newspaper、soup、movie 和 just。",
   [("newspaper", "报纸"), ("soup", "汤"), ("movie", "电影"), ("just", "正好；只是")], "vocab7")
 
-G("gr_ing7", "现在进行时的构成", 7, "下", 6,
+G("gr_ing7", "现在进行时的构成", 7, "下", 5,
   "能用 am、is、are 加动词 -ing 描述正在做的事。", "continuous", [
     q("他正在看电视。哪一句正确？", "He is watching TV.",
       ["He watching TV.", "He is watch TV.", "He are watching TV."],
@@ -304,7 +312,7 @@ G("gr_ing7", "现在进行时的构成", 7, "下", 6,
       ["swiming", "swimminging", "swim"], "重读闭音节、末尾单辅音要双写再加 ing。"),
 ])
 
-F("fu_now", "询问正在做什么", 7, "下", 6,
+F("fu_now", "询问正在做什么", 7, "下", 5,
   "能打电话询问对方正在做什么。", "func_life", [
     q("想问对方正在做什么，哪一句合适？", "What are you doing?",
       ["What do you doing?", "What are you do?", "What is you doing?"],
@@ -320,7 +328,7 @@ F("fu_now", "询问正在做什么", 7, "下", 6,
       "现在正在做用 am doing。"),
 ])
 
-R("rw_now7", "读正在发生的事", 7, "下", 6,
+R("rw_now7", "读正在发生的事", 7, "下", 5,
   "读一段现在进行时短文，找出每个人正在做什么。", "read_detail", [
     q("It is Sunday morning. Tom is reading a newspaper. His mother is making soup. Tom 正在做什么？", "读报纸",
       ["做汤", "看电影", "打电话"], "is reading a newspaper。"),
@@ -333,11 +341,11 @@ R("rw_now7", "读正在发生的事", 7, "下", 6,
       "talking on the phone 就是在打电话。"),
 ])
 
-V("vo_weather7", "天气", 7, "下", 7,
+V("vo_weather7", "天气", 7, "下", 6,
   "认读 rain、windy、cloudy 和 sunny。",
   [("rain", "雨；下雨"), ("windy", "有风的"), ("cloudy", "多云的"), ("sunny", "晴朗的")], "vocab7")
 
-G("gr_excl", "感叹句", 7, "下", 7,
+G("gr_excl", "感叹句", 8, "上", 5,
   "能用 What 和 How 构成感叹句。", "sentence", [
     q("多么冷的一天。哪一句正确？", "What a cold day it is!",
       ["What cold day it is!", "How a cold day it is!", "What a cold day is it?"],
@@ -351,7 +359,7 @@ G("gr_excl", "感叹句", 7, "下", 7,
       ["It is windy.", "Is it windy?", "It is not windy."], "How 加形容词加陈述语序是感叹句。"),
 ])
 
-F("fu_weather7", "谈论天气", 7, "下", 7,
+F("fu_weather7", "谈论天气", 7, "下", 6,
   "能询问天气，并描述正在下雨或出太阳。", "func_life", [
     q("想问北京的天气，哪一句合适？", "How is the weather in Beijing?",
       ["What is the weather in Beijing?", "How is the weather in Beijing is?", "What weather is it in Beijing does?"],
@@ -367,7 +375,7 @@ F("fu_weather7", "谈论天气", 7, "下", 7,
       "What's the weather like 和 How is the weather 同义。"),
 ])
 
-R("rw_weather7", "读天气消息", 7, "下", 7,
+R("rw_weather7", "读天气消息", 7, "下", 6,
   "读一段天气短文，找出各地天气。", "read_detail", [
     q("It is sunny in Shanghai. It is raining in Beijing. It is windy in Guangzhou. 北京的天气怎样？", "正在下雨",
       ["晴朗", "有风", "多云"], "raining in Beijing。"),
@@ -472,11 +480,11 @@ R("rw_look", "读人物外貌", 7, "上", 2,
       "姐姐个子矮。爷爷高，而且头发短。"),
 ])
 
-V("vo_noodle", "点餐食物", 7, "下", 10,
+V("vo_noodle", "点餐食物", 7, "下", 4,
   "认读 noodle、mutton、cabbage 和 dumpling。",
   [("noodle", "面条"), ("mutton", "羊肉"), ("cabbage", "卷心菜"), ("dumpling", "饺子")], "vocab7")
 
-G("gr_would7", "would like", 7, "下", 10,
+G("gr_would7", "would like", 7, "下", 4,
   "能用 would like 点餐，并区分 some 和 any。", "modal", [
     q("我想要一碗牛肉面。哪一句正确？", "I would like a bowl of beef noodles.",
       ["I would like a bowl of beef noodle.", "I would like to a bowl of beef noodles.", "I like would a bowl of beef noodles."],
@@ -491,7 +499,7 @@ G("gr_would7", "would like", 7, "下", 10,
       ["牛肉", "只有卷心菜、没有肉", "鱼肉"], "mutton cabbage 是羊肉白菜。"),
 ])
 
-F("fu_order", "点餐用语", 7, "下", 10,
+F("fu_order", "点餐用语", 7, "下", 4,
   "能在餐馆点餐并询问种类。", "func_life", [
     q("服务员问 May I take your order? 你想要面条，哪一句合适？", "I'd like beef noodles, please.",
       ["I like beef noodles every day.", "I would like to beef noodles.", "I'd like beef noodle, please."],
@@ -505,7 +513,7 @@ F("fu_order", "点餐用语", 7, "下", 10,
       ["请来一小碗", "不要碗", "碗在桌子底下"], "large bowl 是大碗。"),
 ])
 
-R("rw_order", "读点餐对话", 7, "下", 10,
+R("rw_order", "读点餐对话", 7, "下", 4,
   "读一段点餐对话，找出食物和碗的大小。", "read_detail", [
     q("Waiter: What would you like? Tom: I'd like a large bowl of mutton noodles. Tom 要什么面？", "羊肉面",
       ["牛肉面", "白菜面", "鸡蛋面"], "mutton noodles 是羊肉面。"),
@@ -518,11 +526,11 @@ R("rw_order", "读点餐对话", 7, "下", 10,
       "cabbage dumplings 是白菜饺子。"),
 ])
 
-V("vo_trip7", "旅行活动", 7, "下", 11,
+V("vo_trip7", "旅行活动", 7, "下", 7,
   "认读 museum、farm、fire 和 flower。",
   [("museum", "博物馆"), ("farm", "农场"), ("fire", "火；火灾"), ("flower", "花")], "vocab7")
 
-G("gr_was7", "was 与 were", 7, "下", 11,
+G("gr_was7", "was 与 were", 7, "下", 7,
   "能用 was 和 were 谈论过去。", "past", [
     q("昨天的郊游很棒。哪一句正确？", "The school trip was great.",
       ["The school trip were great.", "The school trip is great yesterday.", "The school trip was greated."],
@@ -536,7 +544,7 @@ G("gr_was7", "was 与 were", 7, "下", 11,
       ["Yes, there was.", "Yes, there are.", "Yes, they were cows yes."], "Were there 用 Yes, there were。"),
 ])
 
-G("gr_ed", "规则动词过去式", 7, "下", 11,
+G("gr_ed", "规则动词过去式", 7, "下", 7,
   "能写出规则动词的过去式。", "past", [
     q("play 的过去式是哪一个？", "played",
       ["plaied", "playd", "playing"], "一般直接加 ed。"),
@@ -549,7 +557,7 @@ G("gr_ed", "规则动词过去式", 7, "下", 11,
       "yesterday 和过去式 visited 一起用。"),
 ])
 
-P("ph_ed", "过去式 ed 的读音", 7, "下", 11,
+P("ph_ed", "过去式 ed 的读音", 7, "下", 7,
   "能分辨 -ed 读 /t/、/d/ 还是 /ɪd/。", "edsound", [
     q("哪个单词的 -ed 读 /ɪd/？", "visited",
       ["played", "stopped", "cleaned"], "visited 的 -ed 在 /t/ 后读 /ɪd/。"),
@@ -561,7 +569,7 @@ P("ph_ed", "过去式 ed 的读音", 7, "下", 11,
       ["/t/", "/d/", "不发音"], "needed 以 /d/ 结尾，-ed 读 /ɪd/。"),
 ])
 
-F("fu_trip7", "谈论一次旅行", 7, "下", 11,
+F("fu_trip7", "谈论一次旅行", 7, "下", 7,
   "能询问旅行怎么样，并说出做了什么。", "func_plan", [
     q("想问对方的郊游怎么样，哪一句合适？", "How was your school trip?",
       ["How is your school trip yesterday?", "How were your school trip?", "What was your school trip like did?"],
@@ -576,7 +584,7 @@ F("fu_trip7", "谈论一次旅行", 7, "下", 11,
       "milked 是过去式。"),
 ])
 
-R("rw_diary", "读旅行日记", 7, "下", 11,
+R("rw_diary", "读旅行日记", 7, "下", 7,
   "读一篇旅行日记，找出活动和感受。", "read_detail", [
     q("June 5th. The trip was great. We visited a farm. We milked a cow and saw many flowers. 他们去了哪里？", "农场",
       ["博物馆", "消防站", "学校"], "visited a farm。"),
@@ -589,11 +597,11 @@ R("rw_diary", "读旅行日记", 7, "下", 11,
       "天气不好并且下了雨。这段没有写挤奶。"),
 ])
 
-V("vo_wknd", "周末活动", 7, "下", 12,
-  "认读 lake、beach、badminton 和 visitor。",
+V("vo_wknd", "周末活动", 7, "下", 90,
+  "认读 lake、beach、badminton 和 visitor。" + WKND_PENDING,
   [("lake", "湖"), ("beach", "海滩"), ("badminton", "羽毛球"), ("visitor", "游客")], "vocab7")
 
-G("gr_did7", "Did 提问", 7, "下", 12,
+G("gr_did7", "Did 提问", 7, "下", 8,
   "能用 Did 询问过去的事，动词用原形。", "past", [
     q("你上周打羽毛球了吗？哪一句正确？", "Did you play badminton last weekend?",
       ["Did you played badminton last weekend?", "Do you played badminton last weekend?", "Did you played badminton last weekend now?"],
@@ -608,7 +616,7 @@ G("gr_did7", "Did 提问", 7, "下", 12,
       ["上周末你将做什么", "你周末通常做什么", "你正在做什么"], "did 加过去时间问已经做的事。"),
 ])
 
-G("gr_irr7", "不规则动词过去式", 7, "下", 12,
+G("gr_irr7", "不规则动词过去式", 7, "下", 8,
   "能写出 go、see、have、do 和 read 的过去式。", "past", [
     q("go 的过去式是哪一个？", "went",
       ["goed", "goes", "going"], "go 的过去式是 went。"),
@@ -622,8 +630,8 @@ G("gr_irr7", "不规则动词过去式", 7, "下", 12,
       "have 的过去式是 had。"),
 ])
 
-F("fu_wknd", "谈论上周末", 7, "下", 12,
-  "能询问和叙述上周末做的事。", "func_plan", [
+F("fu_wknd", "谈论上周末", 7, "下", 90,
+  "能询问和叙述上周末做的事。" + WKND_PENDING, "func_plan", [
     q("想问对方上周末做了什么，哪一句合适？", "What did you do last weekend?",
       ["What did you did last weekend?", "What do you do last weekend?", "What did you last weekend?"],
       "What did you do。"),
@@ -637,8 +645,8 @@ F("fu_wknd", "谈论上周末", 7, "下", 12,
       "played 是 play 的过去式。"),
 ])
 
-R("rw_wknd", "读周末日记", 7, "下", 12,
-  "读一篇周末日记，找出活动和同伴。", "read_detail", [
+R("rw_wknd", "读周末日记", 7, "下", 90,
+  "读一篇周末日记，找出活动和同伴。" + WKND_PENDING, "read_detail", [
     q("On Saturday morning I went to the lake with my father. We went fishing. 星期六上午他和谁去的？", "他的爸爸",
       ["他的妈妈", "同学", "游客"], "with my father。"),
     q("On Saturday morning I went to the lake with my father. We went fishing. 他们做了什么？", "钓鱼",

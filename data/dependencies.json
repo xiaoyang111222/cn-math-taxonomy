@@ -9705,31 +9705,31 @@
     "topicId": "cne_j093",
     "prerequisiteId": "cne_j092",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「读旅行日记」，再学「周末活动」。"
+    "reason": "旅行日记在七下第7单元 A Day to Remember；周末活动在官方七下目录无同名课（第8单元是讲故事），这条软边只保留原来的学习顺序。"
   },
   {
     "topicId": "cne_j094",
     "prerequisiteId": "cne_j093",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「周末活动」，再学「Did 提问」。"
+    "reason": "Did 提问在七下第8单元 Once upon a Time（Simple past tense (2)）；周末活动无同名课，软边只保留原来的学习顺序。"
   },
   {
     "topicId": "cne_j095",
     "prerequisiteId": "cne_j094",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「Did 提问」，再学「不规则动词过去式」。"
+    "reason": "Did 提问和不规则动词过去式都在七下第8单元 Once upon a Time（Simple past tense (2)）。"
   },
   {
     "topicId": "cne_j096",
     "prerequisiteId": "cne_j095",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「不规则动词过去式」，再学「谈论上周末」。"
+    "reason": "不规则动词过去式在第8单元；谈论上周末无同名课，软边只保留原来的学习顺序。"
   },
   {
     "topicId": "cne_j097",
     "prerequisiteId": "cne_j096",
     "strength": "soft",
-    "reason": "按 Go for it! 的常见教学顺序，先学「谈论上周末」，再学「读周末日记」。"
+    "reason": "谈论上周末和读周末日记在官方七下目录均无同名课，软边只保留原来的学习顺序。"
   },
   {
     "topicId": "cne_j098",
@@ -10113,7 +10113,7 @@
     "topicId": "cne_j163",
     "prerequisiteId": "cne_j097",
     "strength": "soft",
-    "reason": "按人教版新版 Go for it!的单元顺序，先学「读周末日记」，再学「故事用词」。"
+    "reason": "故事用词在七下第8单元 Once upon a Time；读周末日记无同名课，软边只保留原来的学习顺序。"
   },
   {
     "topicId": "cne_j164",

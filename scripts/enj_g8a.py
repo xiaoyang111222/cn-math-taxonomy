@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-"""八年级上册。人教版 Go for it! 通行目录，单元名与册次待核。"""
+"""八年级上册。人教版 Go for it! 通行目录，单元名与册次待核。
+
+运动习惯等四点已按 2026-11-11 官方七下第3单元 Keep Fit 改挂；其余八上点本轮不动。
+"""
 from en_tx import V, P, G, F, R
 from enj_g7a import OFFICIAL_LINK, OFFICIAL_PLOS
 
@@ -73,11 +76,11 @@ R("rw_vac", "读假期短文", 8, "上", 1,
       "他待在家里看书。"),
 ])
 
-V("vo_habit", "运动习惯", 8, "上", 2,
+V("vo_habit", "运动习惯", 7, "下", 3,
   "认读 exercise、hardly、twice 和 Internet。",
   [("exercise", "锻炼"), ("hardly", "几乎不"), ("twice", "两次"), ("Internet", "互联网")], "vocab8")
 
-G("gr_howoften", "How often 问频率", 8, "上", 2,
+G("gr_howoften", "How often 问频率", 7, "下", 3,
   "能用 How often 提问，并用 once、twice 或 hardly ever 回答。", "question", [
     q("想问对方多久锻炼一次，哪一句正确？", "How often do you exercise?",
       ["How often you exercise?", "How long do you exercise once?", "How far do you exercise?"],
@@ -91,7 +94,7 @@ G("gr_howoften", "How often 问频率", 8, "上", 2,
       ["她几乎不上网", "她一周上一次", "她昨天没上网"], "every day 是每天。"),
 ])
 
-F("fu_habit", "谈论锻炼频率", 8, "上", 2,
+F("fu_habit", "谈论锻炼频率", 7, "下", 3,
   "能询问别人的习惯，并说出自己的频率。", "func_life", [
     q("医生问你多久运动一次，哪一句是这个问题？", "How often do you exercise?",
       ["How old do you exercise?", "What time is exercise yesterday?", "How many exercise are you?"],
@@ -106,7 +109,7 @@ F("fu_habit", "谈论锻炼频率", 8, "上", 2,
       "should 后面用动词原形。"),
 ])
 
-R("rw_habit", "读锻炼调查", 8, "上", 2,
+R("rw_habit", "读锻炼调查", 7, "下", 3,
   "读一段调查，找出谁运动得多。", "read_detail", [
     q("Jack exercises every day. Mary exercises twice a week. Peter hardly ever exercises. 谁每天锻炼？", "Jack",
       ["Mary", "Peter", "没有人"], "Jack exercises every day。"),

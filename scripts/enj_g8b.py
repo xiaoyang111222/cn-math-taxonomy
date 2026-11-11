@@ -268,7 +268,7 @@ R("rw_storm", "读暴风雨故事", 8, "下", 5,
       "刮风期间灯灭了。"),
 ])
 
-V("vo_story", "故事用词", 8, "下", 6,
+V("vo_story", "故事用词", 7, "下", 8,
   "认读 emperor、stupid、stone 和 weak。",
   [("emperor", "皇帝"), ("stupid", "愚蠢的"), ("stone", "石头"), ("weak", "虚弱的")], "vocab8")
 
@@ -304,7 +304,7 @@ G("gr_sothat", "so that 表示目的", 8, "下", 6,
       "so that 后面接一个完整的目的从句。"),
 ])
 
-F("fu_story", "复述故事", 8, "下", 6,
+F("fu_story", "复述故事", 7, "下", 8,
   "能用简单过去时讲出故事里的人物和结果。", "func_life", [
     q("故事开头，哪一句合适？", "Once upon a time, there was an old man.",
       ["Once upon a time, there is an old man yesterday.", "Once upon a time, there were an old man.", "Once upon a time, there was a old man."],
@@ -320,7 +320,7 @@ F("fu_story", "复述故事", 8, "下", 6,
       "did not give up。"),
 ])
 
-R("rw_story", "读神话故事", 8, "下", 6,
+R("rw_story", "读神话故事", 7, "下", 8,
   "读一段故事，找出人物做了什么。", "read_detail", [
     q("An old man tried to move the mountains. His family kept working every day. 老人想做什么？", "移走大山",
       ["建造宫殿", "寻找皇帝", "离开村庄"], "move the mountains。"),

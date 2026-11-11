@@ -13,7 +13,20 @@
 
 七上官方目录（书页）与 2026-11-06 资源页标题一致：Starter Hello! 1、Keep Tidy! 7、Welcome! 13；Unit 1 You and Me 19；Unit 2 We're Family! 27（Word stress (1)）；Unit 3 My School 35（Word stress (2)）；Unit 4 My Favourite Subject 43（Linking）；Unit 5 Fun Clubs 51（Incomplete plosion）；Unit 6 A Day in the Life 59（Sentence stress）；Unit 7 Happy Birthday! 67（Intonation）；附录 Pronunciation 92、Grammar 95。
 
-七下官方目录（书页）：Unit 1 Animal Friends 1（Unstressed words）；Unit 2 No Rules, No Order 9（Sentence stress (1)）；Unit 3 Keep Fit 17（Stress patterns）；Unit 4 Eat Well 25（Intonation in alternative questions）；Unit 5 Here and Now 33（Sentence stress (2)）；Unit 6 Rain or Shine 41（Rhythm）；Unit 7 A Day to Remember 49（校园旅行，不是怎么上学）；Unit 8 Once upon a Time 57（Assimilation）；附录 Pronunciation 83。生成器里七下 UNITS 除已占位的 Eat Well 外，仍是旧版 Go for it! 标题，本轮不改写。
+七下官方目录（书页，2026-11-11 官方阅读器）：
+
+| 单元 | 书页 | Section A | Section B | 发音 | 语法 |
+| --- | --- | --- | --- | --- | --- |
+| Unit 1 Animal Friends | 1 | Why do you like animals? Listening/Speaking 动物 | How are animals part of our lives? Reading 最喜欢的动物（大象）；Writing；Project: Design a zoo | Unstressed words | Wh- questions; Adjectives; Plurals |
+| Unit 2 No Rules, No Order | 9 | What rules do we follow? 校规 | How can rules help us? | Sentence stress (1) | Imperatives; Modal verbs (can, have to, must) |
+| Unit 3 Keep Fit | 17 | How often do you do sport or exercise? | How is exercise good for us? | Stress patterns | Possessive pronouns; Adverbs of frequency |
+| Unit 4 Eat Well | 25 | What do we like to eat? Order food | How do we make healthy eating choices? | Intonation in alternative questions | Alternative questions; Countable and uncountable nouns |
+| Unit 5 Here and Now | 33 | What are you doing right now? | | Sentence stress (2) | Present continuous tense (1) |
+| Unit 6 Rain or Shine | 41 | What's the weather like? | | Rhythm | Present continuous tense (2) |
+| Unit 7 A Day to Remember | 49 | What was your special day like? Speaking: Talk about a school trip | Reading/Writing: school trip diary / farm | Contractions in negative forms | Simple past tense (1) |
+| Unit 8 Once upon a Time | 57 | What are your favourite stories? Speaking: Retell a story | Reading: The Ugly Duckling；Writing: ending for a story | Assimilation | Simple past tense (2) |
+
+附录：Reading Plus 65，Listening Scripts 74，Pronunciation 83–87，Grammar 88，词表等。先前有一处把语法误记为书页86，已按阅读器目录和页脚更正为88。第7单元是校园旅行 / special day，不是怎么上学；第8单元是讲故事，不是上周末。生成器 `UNITS` 和七下课号已按此目录改写。
 
 ## 已改挂
 
@@ -26,17 +39,46 @@
 
 官方课序是连读（第4单元）早于句末升降调（第7单元）。已删除与之相反的硬先修 `cne_j098`←`cne_j002`。不完全爆破对连读的硬先修与官方课序一致，保留。
 
+## 七下课序（本轮）
+
+生成器 `scripts/enj_build.py` 的七下 `UNITS` 已改成官方 1–8，并加 `(7, 下, 90)` 待核。`chapter()` 对七下 90 返回「七年级下册 待核」。八上及以后仍是旧版 Go for it! 课名，本轮不改。
+
+| id | 名称 | 本轮处理 |
+| --- | --- | --- |
+| `cne_j093`、`cne_j096`、`cne_j097` | 周末活动、谈论上周末、读周末日记 | 改挂「七年级下册 待核」。官方第8单元是讲故事（Retell a story / The Ugly Duckling / Simple past tense (2)），目录无「上周末」同名课，不按旧版 What did you do last weekend 挂在第8单元。 |
+| `cne_j094`、`cne_j095` | Did 提问、不规则动词过去式 | 仍挂「七年级下册 第8单元 Once upon a Time」（Grammar: Simple past tense (2)）。 |
+| `cne_j163`、`cne_j166`、`cne_j167` | 故事用词、复述故事、读神话故事 | 仍挂第8单元。故事阅读题仍用旧课文例子（愚公移山用词），题目未改。 |
+| `cne_j072` | 感叹句 | 数据已是「八年级上册 第5单元 What a Delicious Meal!」。只改生成器为 `(8, 上, 5)`，不用 `chapter()` 覆盖（八上 `UNITS` 仍是旧课名）。 |
+| `cne_j164` | unless | 数据已是「八年级下册 第6单元 Crossing Cultures」。故事三点改挂七下第8单元，`gr_unless` 保持 `(8, 下, 6)`，不用 `chapter()` 覆盖。 |
+
+原先已挂官方七下课名的点（动物、校规、Keep Fit、Eat Well、Here and Now、Rain or Shine、A Day to Remember 等）chapter 不变。
+
 ## 仍待核
 
 | id | 名称 | 结论 |
 | --- | --- | --- |
-| `cne_j010` | 词尾 s 的读音 | Unit 6 书页61 与附录发音页（书页92–94）只有 /s/、/z/ 等音素和句子重音，没有词尾 -s/-es 读 /s/、/z/ 或 /ɪz/ 的规则。七下官方目录无同名课，七下附录发音页尚未读。仍挂「七年级上册 待核」，不改挂到第6单元，不删除。 |
-| `cne_j053`–`cne_j056` | 交通方式、How 问交通、谈论怎么上学、读上学方式 | 七上、七下 2022 课标修订官方目录均无同名课。七下第7单元是校园旅行，不是怎么上学。不按旧版七下 How do you get to school 改挂，不删除。 |
+| `cne_j010` | 词尾 s 的读音 | 七上 Unit 6 书页61 与附录书页92–94 只有 /s/、/z/ 等音素和句子重音。七下附录发音页（书页83–87；语法从书页88起）第85页是字母 s 读 /s/、/z/，第86页是 ds /dz/、ts /ts/ 辅音组合，都不是词尾 -s/-es 规则，也未见 /ɪz/。Unit 1 有 “Notice the pronunciation of – (e) s.” 的练习提示和复数例词，不是规则说明，不据此改挂第1单元。七下官方目录无同名课。仍挂「七年级上册 待核」，不删除。 |
+| `cne_j053`–`cne_j056` | 交通方式、How 问交通、谈论怎么上学、读上学方式 | 七上、七下 2022 课标修订官方目录均无同名课。七下第7单元是校园旅行，不是怎么上学。不按旧版七下 How do you get to school 改挂，不删除。本章未改它们的 chapter。 |
+| `cne_j093`、`cne_j096`、`cne_j097` | 周末活动、谈论上周末、读周末日记 | 官方七下目录无「上周末」同名课。挂「七年级下册 待核」，不删除。 |
 
 截图保存在仓库未跟踪目录 `.english-g7-research/`，不纳入本提交。
+
+
+## 七下附录发音页（2026-11-11 续核）
+
+官方阅读器目录为 Pronunciation 书页83、Grammar 书页88。书页86、87 仍是发音页（页脚写 Pronunciation）。对应阅读器 PDF 页大约是 92–96，语法从 PDF 97 / 书页88 起。没有下载教材。
+
+- 书页83–84：字母及字母组合在重读、非重读音节中的读音归类。
+- 书页85：辅音字母读音归类。s 作 /s/（salt, skate, artist）和 /z/（noise, always, yours），是字母读音，不是词尾后缀规则。
+- 书页86：辅音字母组合读音归类，含 ds /dz/（beds, cards, sounds）、ts /ts/（bats, hats, habits）；随后「朗读基本知识」从弱读（Unstressed Words）开始。
+- 书页87：弱读续、音的同化（Assimilation）、节奏（Rhythm）。
+
+全书页83–87 未见复数、第三人称或其它词尾 -s/-es 读 /s/、/z/、/ɪz/ 的规则。
 
 ## 本轮未做
 
 - 没有推送、没有部署。
-- 没有重写七下及以后的单元目录。
+- 没有重写八年级及以后的 `UNITS` 标题。
 - 没有改题目，也没有升格课标原文标记。
+- 没有新增语音/语法知识点。官方发音行 Unstressed words、Stress patterns、Rhythm、Assimilation、Contractions in negative forms、Sentence stress (1)(2)、Intonation in alternative questions 先记下，本轮不建点。
+- 已核七下附录发音页（书页83–87），词尾 s 仍待核：附录没有 -s/-es 规则，也不把 Unit 1 的练习提示改挂为正式课。
