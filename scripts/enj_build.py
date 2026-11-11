@@ -117,14 +117,16 @@ NOTE = {
     "读写": "短文为诊断而写，考查阅读或书面表达要点。册次待核。",
 }
 
-# 七上、七下、八上、八下标题已按 2026-11-11 官方阅读器确认；九年级仍是旧版标题。
+# 七上、七下、八上、八下、九上标题已按 2026-11-11 官方阅读器确认。
 # 七上：https://www.pep.com.cn/zslth/yyptzy/czyy/7s/ 与智慧教育平台
 # 人教版2022课标修订官方阅读器（ISBN 978-7-107-38254-3）一致。
 # 七下：智慧教育平台人教版2022课标修订《英语 七年级下册》（ISBN 978-7-107-38255-0）。
 # 八上：智慧教育平台人教版2022课标修订《英语 八年级上册》（ISBN 978-7-107-38944-3）。
 # 八下：智慧教育平台人教版2022课标修订《英语 八年级下册》（阅读器未见印刷书号）。
-# 101–103 是七上 Starter Unit 1–3；正式单元七上到 7，七下、八上、八下到 8；
-# 90 是未挂到具体单元的待核项。九年级仍是旧版 1–14。
+# 九上：智慧教育平台人教版2022课标修订《英语 九年级上册》（阅读器未见印刷书号）。
+# 官方目录只有九上，没有九下。
+# 101–103 是七上 Starter Unit 1–3；正式单元七上到 7，七下、八上、八下、九上到 8；
+# 90 是未挂到具体单元的待核项。
 UNITS = {
     (7, "上", 101): "Hello!",
     (7, "上", 102): "Keep Tidy!",
@@ -164,20 +166,15 @@ UNITS = {
     (8, "下", 7): "A Good Read",
     (8, "下", 8): "Making a Difference",
     (8, "下", 90): "待核",
-    (9, "全", 1): "How can we become good learners",
-    (9, "全", 2): "I think that mooncakes are delicious",
-    (9, "全", 3): "Could you please tell me where the restrooms are",
-    (9, "全", 4): "I used to be afraid of the dark",
-    (9, "全", 5): "What are the shirts made of",
-    (9, "全", 6): "When was it invented",
-    (9, "全", 7): "Teenagers should be allowed to choose their own clothes",
-    (9, "全", 8): "It must belong to Carla",
-    (9, "全", 9): "I like music that I can dance to",
-    (9, "全", 10): "You're supposed to shake hands",
-    (9, "全", 11): "Sad movies make me cry",
-    (9, "全", 12): "Life is full of the unexpected",
-    (9, "全", 13): "We're trying to save the earth",
-    (9, "全", 14): "I remember meeting all of you in Grade 7",
+    (9, "上", 1): "The Changing World",
+    (9, "上", 2): "Inspiring People",
+    (9, "上", 3): "Smart Learning",
+    (9, "上", 4): "Our Memory",
+    (9, "上", 5): "Power of Ideas",
+    (9, "上", 6): "Beyond Earth",
+    (9, "上", 7): "Feel the Rhythm",
+    (9, "上", 8): "More than a Game",
+    (9, "上", 90): "待核",
 }
 
 
@@ -207,6 +204,8 @@ def chapter(grade, sem, unit):
         return "八年级上册 待核"
     if grade == 8 and sem == "下" and unit == 90:
         return "八年级下册 待核"
+    if grade == 9 and sem == "上" and unit == 90:
+        return "九年级上册 待核"
     return "%s年级%s册 第%d单元 %s" % (CN[grade], sem, unit, title)
 
 
@@ -418,8 +417,8 @@ def main():
         if spec["grade"] not in (7, 8, 9):
             print("%s 年级不是 7–9" % spec["key"], file=sys.stderr)
             return 1
-        if spec["grade"] == 9 and spec["semester"] != "全":
-            print("%s 九年级必须是全一册" % spec["key"], file=sys.stderr)
+        if spec["grade"] == 9 and spec["semester"] != "上":
+            print("%s 九年级必须是上册" % spec["key"], file=sys.stderr)
             return 1
         if spec["grade"] != 9 and spec["semester"] not in ("上", "下"):
             print("%s 学期非法" % spec["key"], file=sys.stderr)

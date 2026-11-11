@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""九年级全一册。人教版 Go for it! 通行目录，单元名与册次待核。"""
+"""九年级上册已按 2026-11-11 官方阅读器 8 单元改挂，对不上的点挂「九年级上册 待核」。"""
 from en_tx import V, P, G, F, R
 
 
@@ -7,11 +7,11 @@ def q(prompt, answer, wrongs, expl):
     return ("c", prompt, answer, wrongs, expl)
 
 
-V("vo_learn", "学习方法", 9, "全", 1,
+V("vo_learn", "学习方法", 9, "上", 3,
   "认读 pronunciation、expression、repeat 和 patient。",
   [("pronunciation", "发音"), ("expression", "表达方式"), ("repeat", "重复"), ("patient", "有耐心的")], "vocab9")
 
-G("gr_by", "by 加动名词", 9, "全", 1,
+G("gr_by", "by 加动名词", 9, "上", 90,
   "能用 by 加动词的 -ing 形式说明做事方式。", "to_ing", [
     q("我靠读课文学英语。哪一句正确？", "I study English by reading the text.",
       ["I study English by read the text.", "I study English by to read the text.", "I study English with reading the text for by."],
@@ -27,7 +27,7 @@ G("gr_by", "by 加动名词", 9, "全", 1,
       "by working。"),
 ])
 
-F("fu_learn", "交流学习方法", 9, "全", 1,
+F("fu_learn", "交流学习方法", 9, "上", 3,
   "能询问别人怎么学，并介绍自己的方法。", "func_school", [
     q("想问对方怎样学英语，哪一句合适？", "How do you study English?",
       ["How do you studies English?", "How are you study English?", "How you study English?"],
@@ -43,7 +43,7 @@ F("fu_learn", "交流学习方法", 9, "全", 1,
       "is patient。"),
 ])
 
-R("rw_learn", "读学习建议", 9, "全", 1,
+R("rw_learn", "读学习建议", 9, "上", 3,
   "读一段学习建议，找出方法和结果。", "read_detail", [
     q("Wei Fen studies English by reading aloud. She also learns new words by making word cards. 她怎样学英语？", "大声朗读",
       ["只靠看电视", "从不读书", "只在考试前睡觉"], "by reading aloud。"),
@@ -56,11 +56,11 @@ R("rw_learn", "读学习建议", 9, "全", 1,
       "现在的方法是 listening to tapes。"),
 ])
 
-V("vo_fest", "节日食物", 9, "全", 2,
+V("vo_fest", "节日食物", 9, "上", 90,
   "认读 mooncake、lantern、stranger 和 relative。",
   [("mooncake", "月饼"), ("lantern", "灯笼"), ("stranger", "陌生人"), ("relative", "亲属")], "vocab9")
 
-G("gr_that", "that 引导宾语从句", 9, "全", 2,
+G("gr_that", "that 引导宾语从句", 9, "上", 3,
   "能用 that 连接看法和后面的陈述句，that 可以省略。", "clause_obj", [
     q("我认为月饼很好吃。哪一句正确？", "I think that mooncakes are delicious.",
       ["I think that mooncakes is delicious.", "I think mooncakes are delicious that.", "I think that are mooncakes delicious."],
@@ -76,7 +76,7 @@ G("gr_that", "that 引导宾语从句", 9, "全", 2,
       "I know he likes lanterns 可以省略 that。"),
 ])
 
-G("gr_ifwhether", "if 与 whether 宾语从句", 9, "全", 2,
+G("gr_ifwhether", "if 与 whether 宾语从句", 9, "上", 3,
   "能用 if 或 whether 引导宾语从句，从句用陈述语序。", "clause_obj", [
     q("我不知道他会不会来。哪一句正确？", "I don't know if he will come.",
       ["I don't know if will he come.", "I don't know if he comes will.", "I don't know if does he come."],
@@ -92,7 +92,7 @@ G("gr_ifwhether", "if 与 whether 宾语从句", 9, "全", 2,
       "whether the story is true。"),
 ])
 
-F("fu_fest", "谈论节日", 9, "全", 2,
+F("fu_fest", "谈论节日", 9, "上", 90,
   "能说出节日吃什么、做什么。", "func_life", [
     q("想说中秋节人们赏月，哪一句合适？", "People admire the moon on Mid-Autumn Festival.",
       ["People admires the moon on Mid-Autumn Festival.", "People admire the moon in Mid-Autumn Festival.", "People admire moon the on festival."],
@@ -108,7 +108,7 @@ F("fu_fest", "谈论节日", 9, "全", 2,
       "relatives 用 get。"),
 ])
 
-R("rw_fest", "读中秋短文", 9, "全", 2,
+R("rw_fest", "读中秋短文", 9, "上", 90,
   "读一段节日短文，找出食物和活动。", "read_detail", [
     q("Li Mei thinks that mooncakes are delicious. Her family admires the moon at night. 她觉得月饼怎么样？", "很好吃",
       ["很难吃", "太咸", "短文没说"], "mooncakes are delicious。"),
@@ -122,11 +122,11 @@ R("rw_fest", "读中秋短文", 9, "全", 2,
       "晚上赏月。"),
 ])
 
-V("vo_polite", "公共场所", 9, "全", 3,
+V("vo_polite", "公共场所", 9, "上", 90,
   "认读 restroom、stamp、postcard 和 politely。",
   [("restroom", "洗手间"), ("stamp", "邮票"), ("postcard", "明信片"), ("politely", "礼貌地")], "vocab9")
 
-G("gr_whobj", "疑问词宾语从句", 9, "全", 3,
+G("gr_whobj", "疑问词宾语从句", 9, "上", 4,
   "能把特殊疑问句改成陈述语序，放进宾语从句。", "clause_obj", [
     q("请问洗手间在哪里。哪一句正确？", "Could you tell me where the restroom is?",
       ["Could you tell me where is the restroom?", "Could you tell me where the restroom is it?", "Could you tell me where does the restroom?"],
@@ -142,7 +142,7 @@ G("gr_whobj", "疑问词宾语从句", 9, "全", 3,
       "嵌入后主语仍在谓语前面。"),
 ])
 
-F("fu_polite", "礼貌问路", 9, "全", 3,
+F("fu_polite", "礼貌问路", 9, "上", 90,
   "能礼貌地问路，并听懂直接问句和间接问句。", "func_view", [
     q("想礼貌地问邮局在哪里，哪一句合适？", "Could you please tell me where the post office is?",
       ["Could you please tell me where is the post office?", "Tell me where is the post office now.", "Could you please tell me where the post office?"],
@@ -158,7 +158,7 @@ F("fu_polite", "礼貌问路", 9, "全", 3,
       "Excuse me 和 wonder if 都比较委婉。"),
 ])
 
-R("rw_polite", "读问路对话", 9, "全", 3,
+R("rw_polite", "读问路对话", 9, "上", 90,
   "读一段问路对话，找出地点。", "read_detail", [
     q("A: Could you tell me where the restroom is? B: Go along the hall and turn left. 问路人要去哪里？", "洗手间",
       ["邮局", "银行", "博物馆"], "where the restroom is。"),
@@ -171,11 +171,11 @@ R("rw_polite", "读问路对话", 9, "全", 3,
       "商店在图书馆旁边。"),
 ])
 
-V("vo_change9", "今昔变化", 9, "全", 4,
+V("vo_change9", "今昔变化", 9, "上", 1,
   "认读 humorous、silent、score 和 background。",
   [("humorous", "幽默的"), ("silent", "沉默的"), ("score", "分数"), ("background", "背景")], "vocab9")
 
-G("gr_used", "used to 表示过去习惯", 9, "全", 4,
+G("gr_used", "used to 表示过去习惯", 9, "上", 90,
   "能用 used to 加动词原形表示过去常常、现在不再如此。", "past", [
     q("我以前怕黑。哪一句正确？", "I used to be afraid of the dark.",
       ["I used to was afraid of the dark.", "I use to be afraid of the dark.", "I used to being afraid of the dark."],
@@ -191,7 +191,7 @@ G("gr_used", "used to 表示过去习惯", 9, "全", 4,
       "疑问句里用 Did you use to。"),
 ])
 
-F("fu_used", "比较过去和现在", 9, "全", 4,
+F("fu_used", "比较过去和现在", 9, "上", 1,
   "能说出自己或别人过去什么样、现在什么样。", "func_view", [
     q("想说以前怕黑，现在不怕了，哪一句合适？", "I used to be afraid of the dark, but I am not now.",
       ["I used to be afraid of the dark, but I am not now yesterday.", "I use to be afraid of the dark, but now I am not.", "I used to afraid of the dark, but I am not now."],
@@ -207,7 +207,7 @@ F("fu_used", "比较过去和现在", 9, "全", 4,
       "higher than it used to be。"),
 ])
 
-R("rw_used", "读变化短文", 9, "全", 4,
+R("rw_used", "读变化短文", 9, "上", 1,
   "读一段变化，对比过去和现在。", "read_detail", [
     q("Andy used to be silent. Now he is humorous and talks a lot. 他以前怎么样？", "很沉默",
       ["很幽默", "很吵", "分数很高"], "used to be silent。"),
@@ -220,11 +220,11 @@ R("rw_used", "读变化短文", 9, "全", 4,
       "used to hate tests。"),
 ])
 
-V("vo_material", "材料", 9, "全", 5,
+V("vo_material", "材料", 9, "上", 90,
   "认读 cotton、steel、produce 和 widely。",
   [("cotton", "棉"), ("steel", "钢"), ("produce", "生产"), ("widely", "广泛地")], "vocab9")
 
-G("gr_pass", "一般现在时被动语态", 9, "全", 5,
+G("gr_pass", "一般现在时被动语态", 9, "上", 5,
   "能用 am、is、are 加过去分词表示现在的被动。", "passive", [
     q("这件衬衫是棉做的。哪一句正确？", "This shirt is made of cotton.",
       ["This shirt is made from cotton as a visible cloth error.", "This shirt is make of cotton.", "This shirt made of cotton."],
@@ -240,7 +240,7 @@ G("gr_pass", "一般现在时被动语态", 9, "全", 5,
       "Are ... made of。"),
 ])
 
-F("fu_made", "询问由什么制成", 9, "全", 5,
+F("fu_made", "询问由什么制成", 9, "上", 90,
   "能询问物品的材料和产地。", "func_life", [
     q("想问衬衫是什么做的，哪一句合适？", "What is the shirt made of?",
       ["What is the shirt made from of?", "What does the shirt made of?", "What is the shirt make of?"],
@@ -256,7 +256,7 @@ F("fu_made", "询问由什么制成", 9, "全", 5,
       "is widely used。"),
 ])
 
-R("rw_made", "读产品介绍", 9, "全", 5,
+R("rw_made", "读产品介绍", 9, "上", 90,
   "读一段介绍，找出材料和产地。", "read_detail", [
     q("The shirt is made of cotton. It is produced in China. 衬衫是什么做的？", "棉",
       ["钢", "玻璃", "纸"], "made of cotton。"),
@@ -269,11 +269,11 @@ R("rw_made", "读产品介绍", 9, "全", 5,
       "forks are made of steel。"),
 ])
 
-V("vo_invent", "发明物", 9, "全", 6,
+V("vo_invent", "发明物", 9, "上", 5,
   "认读 inventor、mention、website 和 daily。",
   [("inventor", "发明家"), ("mention", "提到"), ("website", "网站"), ("daily", "每日的")], "vocab9")
 
-G("gr_passpast", "一般过去时被动语态", 9, "全", 6,
+G("gr_passpast", "一般过去时被动语态", 9, "上", 5,
   "能用 was 或 were 加过去分词表示过去的被动。", "passive", [
     q("电话是贝尔发明的。哪一句正确？", "The telephone was invented by Bell.",
       ["The telephone was invent by Bell.", "The telephone is invented by Bell in the past sentence.", "The telephone invented by Bell."],
@@ -289,7 +289,7 @@ G("gr_passpast", "一般过去时被动语态", 9, "全", 6,
       "was set up last year。"),
 ])
 
-F("fu_invent", "询问发明时间", 9, "全", 6,
+F("fu_invent", "询问发明时间", 9, "上", 5,
   "能询问某物是何时、被谁发明的。", "func_view", [
     q("想问拉链是何时发明的，哪一句合适？", "When was the zipper invented?",
       ["When was the zipper invent?", "When did the zipper invented?", "When was the zipper invented by time?"],
@@ -305,7 +305,7 @@ F("fu_invent", "询问发明时间", 9, "全", 6,
       "use it in daily life。"),
 ])
 
-R("rw_invent", "读发明介绍", 9, "全", 6,
+R("rw_invent", "读发明介绍", 9, "上", 5,
   "读一段发明介绍，找出发明者和用途。", "read_detail", [
     q("The telephone was invented by Bell. It is used for talking to people far away. 谁发明了电话？", "贝尔",
       ["爱迪生", "一位学生", "短文没说"], "invented by Bell。"),
@@ -318,11 +318,11 @@ R("rw_invent", "读发明介绍", 9, "全", 6,
       "by accident 就是偶然发明。"),
 ])
 
-V("vo_teen", "青少年规则", 9, "全", 7,
+V("vo_teen", "青少年规则", 9, "上", 90,
   "认读 license、safety、society 和 choice。",
   [("license", "执照"), ("safety", "安全"), ("society", "社会"), ("choice", "选择")], "vocab9")
 
-G("gr_allow", "be allowed to", 9, "全", 7,
+G("gr_allow", "be allowed to", 9, "上", 90,
   "能用 be allowed to 表示被允许做某事。", "passive", [
     q("青少年应该被允许选择自己的衣服。哪一句正确？", "Teenagers should be allowed to choose their own clothes.",
       ["Teenagers should be allowed choose their own clothes.", "Teenagers should be allowed to choosing their own clothes.", "Teenagers should allowed to choose their own clothes."],
@@ -338,7 +338,7 @@ G("gr_allow", "be allowed to", 9, "全", 7,
       "Are ... allowed to drive。"),
 ])
 
-F("fu_allow", "讨论是否允许", 9, "全", 7,
+F("fu_allow", "讨论是否允许", 9, "上", 90,
   "能对校规发表同意或不同意的看法。", "func_view", [
     q("你不同意十六岁开车，哪一句合适？", "I don't think sixteen-year-olds should be allowed to drive.",
       ["I don't think sixteen-year-olds should be allowed drive.", "I am not think they should be allowed to drive.", "I don't think they should allowed to drive."],
@@ -354,7 +354,7 @@ F("fu_allow", "讨论是否允许", 9, "全", 7,
       "agree with 表示同意。"),
 ])
 
-R("rw_allow", "读规则意见", 9, "全", 7,
+R("rw_allow", "读规则意见", 9, "上", 90,
   "读一段讨论，找出谁被允许做什么。", "read_detail", [
     q("Students are not allowed to use phones in class. They are allowed to use them after school. 课上可以用手机吗？", "不可以",
       ["可以", "只可以听歌", "短文没说"], "are not allowed to use phones in class。"),
@@ -367,11 +367,11 @@ R("rw_allow", "读规则意见", 9, "全", 7,
       "父亲不同意 Anna。"),
 ])
 
-V("vo_owner", "物品主人", 9, "全", 8,
+V("vo_owner", "物品主人", 9, "上", 90,
   "认读 whose、attend、valuable 和 picnic。",
   [("whose", "谁的"), ("attend", "参加"), ("valuable", "贵重的"), ("picnic", "野餐")], "vocab9")
 
-G("gr_mustbe", "must 表示推测", 9, "全", 8,
+G("gr_mustbe", "must 表示推测", 9, "上", 90,
   "能用 must 表示很有把握的肯定推测，用 can't 表示否定推测。", "modal", [
     q("吉他上面有 Carla 的名字，一定是她的。哪一句正确？", "The guitar must be Carla's.",
       ["The guitar must is Carla's.", "The guitar must be Carla.", "The guitar can be Carla's as a weak guess in this sure case."],
@@ -387,7 +387,7 @@ G("gr_mustbe", "must 表示推测", 9, "全", 8,
       "must belong to。"),
 ])
 
-F("fu_guess", "推测物品归属", 9, "全", 8,
+F("fu_guess", "推测物品归属", 9, "上", 90,
   "能根据线索推测东西是谁的。", "func_view", [
     q("想问这是谁的书包，哪一句合适？", "Whose backpack is this?",
       ["Who's backpack is this owner?", "Whose backpack this is?", "Who backpack is this?"],
@@ -403,7 +403,7 @@ F("fu_guess", "推测物品归属", 9, "全", 8,
       "must be attending。"),
 ])
 
-R("rw_guess", "读推测短文", 9, "全", 8,
+R("rw_guess", "读推测短文", 9, "上", 90,
   "读一段推理，找出物品的主人。", "read_detail", [
     q("The notebook has Anna's name on it. It must be hers. 笔记本是谁的？", "Anna 的",
       ["Tom 的", "老师的", "无人认领"], "Anna's name，must be hers。"),
@@ -416,11 +416,11 @@ R("rw_guess", "读推测短文", 9, "全", 8,
       "名字在笔记本上。"),
 ])
 
-V("vo_music", "音乐类型", 9, "全", 9,
+V("vo_music", "音乐类型", 9, "上", 7,
   "认读 prefer、lyrics、Australian 和 electronic。",
   [("prefer", "更喜欢"), ("lyrics", "歌词"), ("Australian", "澳大利亚的"), ("electronic", "电子的")], "vocab9")
 
-G("gr_attr", "定语从句", 9, "全", 9,
+G("gr_attr", "定语从句", 9, "上", 7,
   "能用 that、who 或 which 修饰前面的人或物。", "clause_attr", [
     q("我喜欢能跟着跳舞的音乐。哪一句正确？", "I like music that I can dance to.",
       ["I like music who I can dance to.", "I like music that I can dance to it.", "I like music which I can dance."],
@@ -436,7 +436,7 @@ G("gr_attr", "定语从句", 9, "全", 9,
       "who 指人。"),
 ])
 
-F("fu_music", "说明喜欢的音乐", 9, "全", 9,
+F("fu_music", "说明喜欢的音乐", 9, "上", 7,
   "能说出自己喜欢什么音乐，并说明原因。", "func_life", [
     q("想说你更喜欢歌词清楚的歌，哪一句合适？", "I prefer songs that have clear lyrics.",
       ["I prefer songs who have clear lyrics.", "I prefer songs that they have clear lyrics.", "I prefer songs which has clear lyrics."],
@@ -452,7 +452,7 @@ F("fu_music", "说明喜欢的音乐", 9, "全", 9,
       "Australian singers。"),
 ])
 
-R("rw_music", "读音乐偏好", 9, "全", 9,
+R("rw_music", "读音乐偏好", 9, "上", 7,
   "读一段偏好，找出谁喜欢什么音乐。", "read_detail", [
     q("Cindy likes music that she can dance to. She prefers songs with clear lyrics. 她喜欢什么样的音乐？", "可以跟着跳舞、歌词清楚的",
       ["没有歌词的", "只能安静听不能跳舞的古典", "短文没说"], "dance to，clear lyrics。"),
@@ -465,8 +465,8 @@ R("rw_music", "读音乐偏好", 9, "全", 9,
       "能跟着跳舞的音乐。"),
 ])
 
-# 以下四点只改册次课号：社交习俗、说明该怎么做、读习俗说明在八年级下册第6单元；
-# be supposed to 挂「八年级下册 待核」。九年级 UNITS 和其余九全点不动。
+# 以下四点是上一轮八年级改挂，本轮不改课号：社交习俗、说明该怎么做、读习俗说明
+# 在八年级下册第6单元；be supposed to 挂「八年级下册 待核」。
 V("vo_custom", "社交习俗", 8, "下", 6,
   "认读 bow、kiss、greet 和 manner。",
   [("bow", "鞠躬"), ("kiss", "亲吻"), ("greet", "问候"), ("manner", "礼仪")], "vocab9")
@@ -516,11 +516,11 @@ R("rw_custom", "读习俗说明", 8, "下", 6,
       "应该鞠躬。"),
 ])
 
-V("vo_emotion", "情绪反应", 9, "全", 11,
+V("vo_emotion", "情绪反应", 9, "上", 90,
   "认读 friendship、king、pale 和 queen。",
   [("friendship", "友谊"), ("king", "国王"), ("pale", "苍白的"), ("queen", "王后")], "vocab9")
 
-G("gr_make", "make 加宾语加动词原形", 9, "全", 11,
+G("gr_make", "make 加宾语加动词原形", 9, "上", 90,
   "能用 make somebody do 或 make somebody 加形容词。", "to_ing", [
     q("悲伤的电影让我哭。哪一句正确？", "Sad movies make me cry.",
       ["Sad movies make me to cry.", "Sad movies make me crying.", "Sad movies make me cried."],
@@ -536,7 +536,7 @@ G("gr_make", "make 加宾语加动词原形", 9, "全", 11,
       "made the queen pale。"),
 ])
 
-F("fu_feel9", "表达电影感受", 9, "全", 11,
+F("fu_feel9", "表达电影感受", 9, "上", 90,
   "能说出一部电影让自己有什么感受。", "func_view", [
     q("想说这部电影让你想哭，哪一句合适？", "The movie makes me want to cry.",
       ["The movie makes me to want to cry.", "The movie makes me wanting to cry.", "The movie makes me want cry."],
@@ -552,7 +552,7 @@ F("fu_feel9", "表达电影感受", 9, "全", 11,
       "looks pale。"),
 ])
 
-R("rw_movie", "读观后感", 9, "全", 11,
+R("rw_movie", "读观后感", 9, "上", 90,
   "读一段观后感，找出电影给人的感受。", "read_detail", [
     q("The sad movie made Amy cry. It also made her think about friendship. 电影让 Amy 怎样了？", "哭了，并想到友谊",
       ["睡着了", "离开了电影院而且没有哭", "开始笑个不停"], "made Amy cry，think about friendship。"),
@@ -565,11 +565,11 @@ R("rw_movie", "读观后感", 9, "全", 11,
       "made Ben sleepy。"),
 ])
 
-V("vo_unexp", "意外事件", 9, "全", 12,
+V("vo_unexp", "意外事件", 9, "上", 90,
   "认读 unexpected、backpack、block 和 burn。",
   [("unexpected", "出乎意料的"), ("backpack", "背包"), ("block", "街区"), ("burn", "燃烧")], "vocab9")
 
-G("gr_ppast", "过去完成时", 9, "全", 12,
+G("gr_ppast", "过去完成时", 9, "上", 90,
   "能用 had 加过去分词，表示在过去某一动作之前已经发生的事。", "pastperf", [
     q("我到达之前，火车已经离开了。哪一句正确？", "The train had left when I arrived.",
       ["The train has left when I arrived.", "The train had left when I arrive.", "The train left when I had arrived as the earlier event."],
@@ -585,7 +585,7 @@ G("gr_ppast", "过去完成时", 9, "全", 12,
       "burned 发生在 found 之前，用 had burned。"),
 ])
 
-F("fu_unexp", "叙述意外经过", 9, "全", 12,
+F("fu_unexp", "叙述意外经过", 9, "上", 90,
   "能按先后顺序说出一件意外。", "func_view", [
     q("想说你迟到是因为闹钟没响，哪一句合适？", "I was late because my alarm had not gone off.",
       ["I was late because my alarm has not gone off.", "I was late because my alarm had not went off.", "I was late because my alarm did not had gone off."],
@@ -601,7 +601,7 @@ F("fu_unexp", "叙述意外经过", 9, "全", 12,
       "had left 表示发现之前已经忘了。"),
 ])
 
-R("rw_unexp", "读意外故事", 9, "全", 12,
+R("rw_unexp", "读意外故事", 9, "上", 90,
   "读一段意外，判断哪件事发生得更早。", "read_detail", [
     q("By the time Carl woke up, the bus had already left. He had forgotten to set the alarm. 哪件事更早？", "他忘记设闹钟，公共汽车也先离开了",
       ["他先醒来然后车才离开", "车还在等他", "闹钟先响了"], "had forgotten，had already left，然后才 woke up。"),
@@ -614,11 +614,11 @@ R("rw_unexp", "读意外故事", 9, "全", 12,
       "unexpected 说明她没有料到。"),
 ])
 
-V("vo_earth", "环境保护", 9, "全", 13,
+V("vo_earth", "环境保护", 9, "上", 90,
   "认读 litter、bottom、coal 和 plastic。",
   [("litter", "垃圾"), ("bottom", "底部"), ("coal", "煤"), ("plastic", "塑料")], "vocab9")
 
-G("gr_review", "时态选择", 9, "全", 13,
+G("gr_review", "时态选择", 9, "上", 90,
   "能根据时间状语在现在、过去、将来、进行和完成时之间选择。", "tense", [
     q("我通常步行上学。哪一句正确？", "I usually walk to school.",
       ["I usually walked to school every present day.", "I am usually walk to school.", "I have walk to school every day."],
@@ -634,7 +634,7 @@ G("gr_review", "时态选择", 9, "全", 13,
       "by the end of last month 是过去的截止时间，用 had planted。"),
 ])
 
-F("fu_earth", "谈论环保做法", 9, "全", 13,
+F("fu_earth", "谈论环保做法", 9, "上", 90,
   "能说出为保护环境可以做的事。", "func_view", [
     q("想说不该乱扔垃圾，哪一句合适？", "We should not throw litter on the ground.",
       ["We should not to throw litter on the ground.", "We should not throwing litter on the ground.", "We not should throw litter on the ground."],
@@ -650,7 +650,7 @@ F("fu_earth", "谈论环保做法", 9, "全", 13,
       "was clean 和 now there is litter。"),
 ])
 
-R("rw_earth", "读环保倡议", 9, "全", 13,
+R("rw_earth", "读环保倡议", 9, "上", 90,
   "读一段倡议，找出问题和做法。", "read_detail", [
     q("Last year the river was clean. Now people throw plastic into it. 现在人们把什么扔进河里？", "塑料",
       ["煤块做成的船", "树", "短文没说"], "throw plastic into it。"),
@@ -663,7 +663,7 @@ R("rw_earth", "读环保倡议", 9, "全", 13,
       "pick up litter。"),
 ])
 
-R("rw_cloze9", "完形填空", 9, "全", 13,
+R("rw_cloze9", "完形填空", 9, "上", 90,
   "能根据上下文补全短文中的词。", "read_cloze", [
     q("The city ___ dirty ten years ago. People have planted trees since then. 横线处选哪一个？", "was",
       ["is", "were", "has"], "ten years ago 用 was。city 是单数。"),
@@ -675,11 +675,11 @@ R("rw_cloze9", "完形填空", 9, "全", 13,
       ["who", "for to", "which it"], "dance to music，关系词后保留 to。"),
 ])
 
-V("vo_memory", "毕业回忆", 9, "全", 14,
+V("vo_memory", "毕业回忆", 9, "上", 90,
   "认读 survey、standard、graduate 和 ceremony。",
   [("survey", "调查"), ("standard", "标准"), ("graduate", "毕业"), ("ceremony", "典礼")], "vocab9")
 
-G("gr_ger", "动名词与不定式", 9, "全", 14,
+G("gr_ger", "动名词与不定式", 9, "上", 90,
   "能区分动词后面接 to do 还是 doing。", "to_ing", [
     q("我记得见过你们。哪一句正确？", "I remember meeting all of you.",
       ["I remember to meeting all of you.", "I remember meet all of you.", "I remember meeting to all of you."],
@@ -695,7 +695,7 @@ G("gr_ger", "动名词与不定式", 9, "全", 14,
       "decide 后面用 to leave。"),
 ])
 
-G("gr_tag", "反意疑问句", 9, "全", 14,
+G("gr_tag", "反意疑问句", 9, "上", 90,
   "能在陈述句后加上意思相反的简短问句。", "sentence", [
     q("她是学生，不是吗？哪一句正确？", "She is a student, isn't she?",
       ["She is a student, isn't he?", "She is a student, is she?", "She is a student, doesn't she?"],
@@ -711,7 +711,7 @@ G("gr_tag", "反意疑问句", 9, "全", 14,
       "前肯后否，前否后肯。"),
 ])
 
-F("fu_memory", "回忆学校生活", 9, "全", 14,
+F("fu_memory", "回忆学校生活", 9, "上", 90,
   "能在毕业时回顾学校生活。", "func_school", [
     q("想说你记得第一次见面，哪一句合适？", "I remember meeting you on the first day.",
       ["I remember to meet you on the first day already done.", "I remember meet you on the first day.", "I remember meeting you tomorrow."],
@@ -727,7 +727,7 @@ F("fu_memory", "回忆学校生活", 9, "全", 14,
       "have already done。"),
 ])
 
-R("rw_write", "书面表达要点", 9, "全", 14,
+R("rw_write", "书面表达要点", 9, "上", 90,
   "能选出涵盖全部要点、人称和时态都正确的句子。", "write_point", [
     q("要点：你上周末去了公园，和同学放了风筝，天气晴朗。哪一句符合全部要点？",
       "Last weekend I went to the park with my classmates and flew a kite. It was sunny.",
