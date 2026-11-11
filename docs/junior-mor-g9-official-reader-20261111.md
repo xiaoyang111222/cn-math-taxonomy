@@ -83,7 +83,7 @@
 - 新增 21 个点、84 道题，`cnd_j086`–`cnd_j106`。每点 4 题。
 - 课次：第一课 2，第二课 1，第三课 2，第四课 2，第五课 1，第六课 5，第七课 2，第八课 3，第九课 2，第十课 1。
 - 第六课五个方面、第八课三个环节分开测。第二课、第五课、第十课各把两个框合在一个点里。不建「单元思考与行动」。
-- 九上 `catalog_status` 为 `official_toc`。七至八年级仍是 `pending_official_lesson_list`，说明文字没有改成已核实。
+- 九上 `catalog_status` 为 `official_toc`。七至八年级随后亦按官方阅读器改挂，见 [`junior-mor-g78-official-reader-20261111.md`](junior-mor-g78-official-reader-20261111.md)。
 - 领域以国情教育为主，第一课为革命传统教育。没有为了贴标签改用传统文化或生命安全。新增 2 条 soft，没有 hard。
 - 描述和题目以官方课名、框名为锚，并用公开常见表述。没有把未读课文写成教材原句。目录页码写在九上点的 note 里。
 - 九下未建点。2026-11-08 的 [`junior-mor-g9-verification-20261108.md`](junior-mor-g9-verification-20261108.md) 里「目录不够、不能生成」是当天的结论；九上目录以本文为准。

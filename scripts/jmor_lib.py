@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 """初中道德与法治（六三制，七上至九上）登记。由 scripts/jmor_build.py 调用。
 
-七上至八下的目录不是官方逐课核实：
-教师之家 / dzskb 的课名、框名只作公开转述。人教社公开文本多只核到单元名。
-这四册 catalog_status 固定为 pending_official_lesson_list，不得写成已核实。
+七上至九上 catalog_status 为 official_toc：课名、框名和目录印刷页码来自
+智慧教育平台官方阅读器。对不上官方课、框的点用 unit 90，章节为「N年级X册 待核」，
+catalog_status 为 pending_official_lesson_list。
 
-九上 catalog_status 为 official_toc：课名、框名和目录页码来自智慧教育平台官方阅读器。
 九下和九年级全一册不建点。
 
 课标五主题是公开解读的推断，verbatim 必须为 false，不编课标原文。
@@ -51,13 +50,41 @@ _CUR = {}
 
 NOTICE_URL = "https://www.moe.gov.cn/srcsite/A26/s8001/202204/t20220420_619921.html"
 PDF_URL = "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582343475848.pdf"
+PENDING_UNIT = 90
 CATALOG_STATUS = "pending_official_lesson_list"
+OFFICIAL_CATALOG_STATUS = "official_toc"
 CATALOG_NOTE = (
-    "课名和框名来自教师之家、dzskb 等公开转述；人教社公开文本通常只核到单元名。"
-    "教材目录待官方逐课核实，本条不是已核实的教材原文。"
+    "本点未能挂到该册官方阅读器目录中的具体课、框。"
+    "章节为「N年级X册 待核」，不是已核实的课挂接。"
 )
-# 只用于九年级上册。七至八年级仍用上面的待核说明，不要改写成已核实。
-G9A_CATALOG_STATUS = "official_toc"
+VOLUME_META = {
+    (7, "上"): {
+        "title": "（根据2022年版课程标准修订）义务教育教科书·道德与法治七年级上册",
+        "isbn": "978-7-107-38238-3",
+        "content_id": "11446212-4b7b-4094-afe3-bd5b4f2b3f0c",
+    },
+    (7, "下"): {
+        "title": "（根据2022年版课程标准修订）义务教育教科书·道德与法治七年级下册",
+        "isbn": "978-7-107-38239-0",
+        "content_id": "4e1a2a9e-1e62-451f-a52e-ef99cb4e8bf2",
+    },
+    (8, "上"): {
+        "title": "（根据2022年版课程标准修订）义务教育教科书·道德与法治八年级上册",
+        "isbn": "978-7-107-39650-2",
+        "content_id": "5a29b928-d6da-4131-a69e-4c54941f7651",
+    },
+    (8, "下"): {
+        "title": "（根据2022年版课程标准修订）义务教育教科书·道德与法治八年级下册",
+        "isbn": "978-7-107-40548-8",
+        "content_id": "f1db2a19-2513-4626-8e6c-275cf549bdf2",
+    },
+    (9, "上"): {
+        "title": "（根据2022年版课程标准修订）义务教育教科书·道德与法治九年级上册",
+        "isbn": "978-7-107-41303-2",
+        "content_id": "03d41525-a373-4286-92c3-3f2d7cbe3b79",
+    },
+}
+G9A_CATALOG_STATUS = OFFICIAL_CATALOG_STATUS
 G9A_CATALOG_NOTE = (
     "课名、框名和目录页码来自国家中小学智慧教育平台官方阅读器目录。"
     "书名为（根据2022年版课程标准修订）义务教育教科书·道德与法治九年级上册。"
@@ -66,6 +93,33 @@ G9A_CATALOG_NOTE = (
     "未逐字核对课文正文。"
     "课标仍是主题推断，verbatim 为 false。"
 )
+
+
+def volume_catalog_note(grade, sem):
+    if grade == 9 and sem == "上":
+        return G9A_CATALOG_NOTE
+    meta = VOLUME_META[(grade, sem)]
+    return (
+        "课名、框名和目录印刷页码来自国家中小学智慧教育平台官方阅读器目录。"
+        "书名为%s。"
+        "ISBN %s。"
+        "contentId %s。"
+        "未逐字核对课文正文。"
+        "课标仍是主题推断，verbatim 为 false。"
+    ) % (meta["title"], meta["isbn"], meta["content_id"])
+
+
+def pending_catalog_note(grade, sem):
+    cn = "零一二三四五六七八九"[grade]
+    return (
+        "本点未能挂到该册官方阅读器目录中的具体课、框，章节为「%s年级%s册 待核」。"
+        "catalog_status 为 pending_official_lesson_list，不是已核实的课挂接。"
+    ) % (cn, sem)
+
+
+def pending_chapter(grade, sem):
+    cn = "零一二三四五六七八九"[grade]
+    return "%s年级%s册 待核" % (cn, sem)
 
 _BANNED_START = re.compile(r"^(同一|上题|该题|同上)")
 _BANNED_META = re.compile(r"本知识点|课标|是否要求")
@@ -87,10 +141,17 @@ def unit(n, title):
             raise SystemExit("九年级只允许上册；九下和九全不建点")
     elif g not in (7, 8) or s not in ("上", "下"):
         raise SystemExit("册次只允许七上、七下、八上、八下、九上")
+    if n == PENDING_UNIT:
+        if title != "待核":
+            raise SystemExit("unit 90 的标题必须是「待核」")
+        if g not in (7, 8) or s not in ("上", "下"):
+            raise SystemExit("待核桶只允许七上、七下、八上、八下")
     UNITS[(g, s, n)] = title
 
 
 def chapter(grade, sem, unit_n):
+    if unit_n == PENDING_UNIT:
+        return pending_chapter(grade, sem)
     cn = "零一二三四五六七八九"[grade]
     return "%s年级%s册 第%d单元 %s" % (cn, sem, unit_n, UNITS[(grade, sem, unit_n)])
 
@@ -112,8 +173,8 @@ def soft(topic, prereq, reason):
 def K(tid, key, name, unit_n, typ, desc, criteria, qs, std, domain, lesson, frames, root_reason=None, frame_note="", note_only=""):
     """qs：4 道选择题 (题干, 正确答案, [三个干扰项], 解析)。难度 basic、basic、standard、challenge。
 
-    note_only 只写入课标对齐说明，不进入 description。九上用它记官方目录页码。
-    七、八年级不传 note_only，说明文字与原先一致。
+    note_only 只写入课标对齐说明，不进入 description。已确认点用它记官方目录印刷页码。
+    unit 90 是该册待核桶，章节为「N年级X册 待核」，不要拼成「第90单元 待核」。
     """
     g, s = _CUR["g"], _CUR["s"]
     if (g, s, unit_n) not in UNITS:
@@ -133,12 +194,15 @@ def K(tid, key, name, unit_n, typ, desc, criteria, qs, std, domain, lesson, fram
     if any(t["key"] == key or t["id"] == tid for t in TOPICS):
         raise SystemExit("知识点重复：%s / %s" % (tid, key))
     extra = (" " + frame_note) if frame_note else ""
-    if g == 9 and s == "上":
+    if unit_n == PENDING_UNIT:
+        base_note = pending_catalog_note(g, s)
+        status = CATALOG_STATUS
+    elif g == 9 and s == "上":
         base_note = G9A_CATALOG_NOTE
         status = G9A_CATALOG_STATUS
     else:
-        base_note = CATALOG_NOTE
-        status = CATALOG_STATUS
+        base_note = volume_catalog_note(g, s)
+        status = OFFICIAL_CATALOG_STATUS
     note_parts = [base_note]
     if note_only:
         note_parts.append(note_only.strip())

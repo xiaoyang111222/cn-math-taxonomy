@@ -1,6 +1,6 @@
 # 初中道德与法治阶段记录（2026-11-08）
 
-> **2026-11-11 当前计数：** 九上已按智慧教育平台官方阅读器目录入库，见 [`junior-mor-g9-official-reader-20261111.md`](junior-mor-g9-official-reader-20261111.md)。九上 21 点、84 题（`cnd_j086`–`cnd_j106`），`catalog_status` 为 `official_toc`。九下未建点。七至八年级仍是 85 点、340 题，`catalog_status` 仍为 `pending_official_lesson_list`。累计 106 点、424 题。下文各节是 2026-11-08 的阶段快照；其中「九年级 0 点」只描述那一天，不是当前库存。
+> **2026-11-11 当前计数：** 七至八年级已按智慧教育平台官方阅读器目录改挂，见 [`junior-mor-g78-official-reader-20261111.md`](junior-mor-g78-official-reader-20261111.md)。七至八年级 85 点、340 题（`cnd_j001`–`cnd_j085`），已确认点 `catalog_status` 为 `official_toc`。九上已按官方阅读器目录入库，见 [`junior-mor-g9-official-reader-20261111.md`](junior-mor-g9-official-reader-20261111.md)。九上 21 点、84 题（`cnd_j086`–`cnd_j106`），`catalog_status` 为 `official_toc`。九下未建点。累计 106 点、424 题。下文各节是 2026-11-08 的阶段快照；其中七至八年级 `pending_official_lesson_list` 和「九年级 0 点」只描述那一天，不是当前库存。
 
 记录性质：2026-11-08 续跑的真实阶段快照。范围只记当天已核对的事实。未写上线或 push。下面各节按时间保留：先是当日较早的七上、七下、八上，然后是八下已测，最后是当天做完的一次九年级短研究。当天九上、九下是 0 点、0 题。这个 0 不是 2026-11-11 以后的库存。
 

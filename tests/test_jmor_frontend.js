@@ -143,9 +143,9 @@ function loadHome(search) {
     assert.ok(source.indexOf('fillMoralityGrades();') >= 0);
   });
 
-  await test('诊断道法说明写明九上已录入、九下未建', function () {
+  await test('诊断道法说明写明七至九年级上册已录入、九下未建', function () {
     const source = fs.readFileSync(path.join(root, 'diagnose/app.js'), 'utf8');
-    assert.ok(source.indexOf('九上已按官方目录录入，九下未建') >= 0);
+    assert.ok(source.indexOf('七至九年级上册已按官方目录录入，九下未建') >= 0);
     assert.ok(source.indexOf('初中尚未全部覆盖') < 0);
     assert.ok(source.indexOf('全一册（旧版，九下暂用）') >= 0);
   });

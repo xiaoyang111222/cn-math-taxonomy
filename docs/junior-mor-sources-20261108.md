@@ -1,6 +1,6 @@
 # 初中道德与法治（六三制）来源核证
 
-> **本文保存来源研究及早期批次历史记录，正文中50点建议/9点首批等不是当前统计。** 2026-11-11 起，九上已按官方阅读器目录入库：21 点、84 题（`cnd_j086`–`cnd_j106`），九下仍未建点。见 [`junior-mor-g9-official-reader-20261111.md`](junior-mor-g9-official-reader-20261111.md)。七至八年级仍是七上 25/100、七下 18/72、八上 18/72、八下 24/96。阶段快照见 [`junior-mor-progress-20261108.md`](junior-mor-progress-20261108.md)。2026-11-08 的版本核验见 [`junior-mor-g9-verification-20261108.md`](junior-mor-g9-verification-20261108.md)，其中「九年级 0 点」只描述那天。
+> **本文保存来源研究及早期批次历史记录，正文中50点建议/9点首批等不是当前统计。** 2026-11-11 起，七至八年级已按官方阅读器目录改挂，见 [`junior-mor-g78-official-reader-20261111.md`](junior-mor-g78-official-reader-20261111.md)；九上已按官方阅读器目录入库：21 点、84 题（`cnd_j086`–`cnd_j106`），九下仍未建点。见 [`junior-mor-g9-official-reader-20261111.md`](junior-mor-g9-official-reader-20261111.md)。七至八年级仍是七上 25/100、七下 18/72、八上 18/72、八下 24/96，已确认点 `catalog_status` 为 `official_toc`，不再是 `pending_official_lesson_list`。阶段快照见 [`junior-mor-progress-20261108.md`](junior-mor-progress-20261108.md)，其中 2026-11-08 的待核状态只描述当天。2026-11-08 的版本核验见 [`junior-mor-g9-verification-20261108.md`](junior-mor-g9-verification-20261108.md)，其中「九年级 0 点」只描述那天。
 
 查证日期：2026-11-08（Asia/Shanghai）。文首及第 5 节「只研究、不写 `data/*`」是阶段 1 记录，不是当前库存；其后部分入库见第 6 节。基线提交 `b17bbe7`。未跟踪目录 `grok-phases/` 未读未改。
 
