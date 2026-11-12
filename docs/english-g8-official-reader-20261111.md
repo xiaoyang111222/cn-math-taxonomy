@@ -151,3 +151,5 @@
 ## 待核分类（2026-11-12）
 
 八上 12 点与八下 11 点的两类标记见 [english-pending-classification-20261112.md](english-pending-classification-20261112.md)。八下逐点表仍是正文依据。章节仍是「待核」。`cne_j180` 不改挂到第7或第8单元。
+
+2026-11-12 续核八上 `cne_j113`、`cne_j115`、`cne_j116`、`cne_j117`、`cne_j119`、`cne_j120`、`cne_j133`、`cne_j135`、`cne_j138`、`cne_j141`：已核教材正文但仍未见对应课业，章节仍是「八年级上册 待核」，近义句和偶发句不改挂。详见 [english-pending-classification-20261112.md](english-pending-classification-20261112.md)。

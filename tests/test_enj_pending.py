@@ -23,11 +23,25 @@ QUESTIONS_PATH = os.path.join(ROOT, "data", "questions.json")
 DEPS_PATH = os.path.join(ROOT, "data", "dependencies.json")
 BUILD_PATH = os.path.join(ROOT, "scripts", "enj_build.py")
 
-# 改分类之前锁定的题目、先修和道法 catalog_status。只含这 65 个 id 触及的对象。
+# 题目、先修和道法 catalog_status 在分类之前锁定。CORE_SHA 只含 id、点名、描述、年级、学期、章节、领域、题型，
+# 不含 catalog_status / catalog_note。只改这两项取值时 CORE_SHA 不变。
 QUESTION_SHA = "775f38979fc05bc292fc13872ced180aa24c5056dc8351414105be2b9c8761ad"
 EDGE_SHA = "7974e573d6e169951d1bc87666236bebd683e3f11048176cddbbede427b28c66"
 CORE_SHA = "c9b08b8b71d43e49a3d6a4f3b374466bcb23c05453251de7cd62ccf05702e962"
 MORALITY_SHA = "8b377550178306ebd1883671a85939c30ff9ae8a19f3952ad0b418fd0863d870"
+
+# 2026-11-12 从证据不足改为已核未见课业的八上 10 点。原先已是第一类的 22 点分类取值保持。
+G8A_RECLASS = (
+    "cne_j113", "cne_j115", "cne_j116", "cne_j117", "cne_j119", "cne_j120",
+    "cne_j133", "cne_j135", "cne_j138", "cne_j141",
+)
+BODY_CHECKED_KEPT = (
+    "cne_j053", "cne_j054", "cne_j055", "cne_j056", "cne_j097",
+    "cne_j134", "cne_j136",
+    "cne_j156", "cne_j157", "cne_j172", "cne_j178", "cne_j180",
+    "cne_j181", "cne_j182", "cne_j183", "cne_j185", "cne_j186", "cne_j225",
+    "cne_j188", "cne_j201", "cne_j204", "cne_j206",
+)
 
 VOL_CHAPTER = {
     "七年级上册": (7, "上", "七年级上册 待核"),
@@ -173,13 +187,24 @@ def test_doc_matches_spec():
         assert ("`%s`" % tid) in text
         assert label in text
     counts = P.count_by_volume()
-    assert sum(bucket[P.BODY_CHECKED_NO_LESSON] for bucket in counts.values()) == 22
-    assert sum(bucket[P.EVIDENCE_INSUFFICIENT] for bucket in counts.values()) == 43
-    assert counts["七年级上册"][P.BODY_CHECKED_NO_LESSON] == 4
-    assert counts["七年级下册"][P.BODY_CHECKED_NO_LESSON] == 1
-    assert counts["八年级上册"] == {P.BODY_CHECKED_NO_LESSON: 2, P.EVIDENCE_INSUFFICIENT: 10}
-    assert counts["八年级下册"][P.BODY_CHECKED_NO_LESSON] == 11
+    assert sum(bucket[P.BODY_CHECKED_NO_LESSON] for bucket in counts.values()) == 32
+    assert sum(bucket[P.EVIDENCE_INSUFFICIENT] for bucket in counts.values()) == 33
+    assert counts["七年级上册"] == {P.BODY_CHECKED_NO_LESSON: 4, P.EVIDENCE_INSUFFICIENT: 0}
+    assert counts["七年级下册"] == {P.BODY_CHECKED_NO_LESSON: 1, P.EVIDENCE_INSUFFICIENT: 0}
+    assert counts["八年级上册"] == {P.BODY_CHECKED_NO_LESSON: 12, P.EVIDENCE_INSUFFICIENT: 0}
+    assert counts["八年级下册"] == {P.BODY_CHECKED_NO_LESSON: 11, P.EVIDENCE_INSUFFICIENT: 0}
     assert counts["九年级上册"] == {P.BODY_CHECKED_NO_LESSON: 4, P.EVIDENCE_INSUFFICIENT: 33}
+    assert len(G8A_RECLASS) == 10
+    assert len(BODY_CHECKED_KEPT) == 22
+    for tid in G8A_RECLASS:
+        rec = P.BY_ID[tid]
+        assert rec["catalog_status"] == P.BODY_CHECKED_NO_LESSON
+        assert "不改挂" in rec["catalog_note"]
+        assert "g8a-evidence-20261112/notes.md" in rec["evidence"]
+        assert P._volume(tid) == "八年级上册"
+    for tid in BODY_CHECKED_KEPT:
+        assert P.BY_ID[tid]["catalog_status"] == P.BODY_CHECKED_NO_LESSON
+    assert P.BY_ID["cne_j191"]["catalog_status"] == P.EVIDENCE_INSUFFICIENT
 
 
 def main():

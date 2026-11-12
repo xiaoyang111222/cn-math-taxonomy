@@ -77,54 +77,75 @@ _ROWS = [
         "截图 g7b-u7-diary-p54-pdf63-20261111.png、g7b-reading-plus-u7-diary-p71-pdf80-20261111.png。",
     ),
     (
-        "vo_town", "cne_j113", "城镇设施", EVIDENCE_INSUFFICIENT,
-        "目录阶段只说明官方第4单元是动植物、不是影院。正文记录只有概括句"
-        "「影院在正文中也没有独立课」和「12点均未达到改挂标准」，没有城镇设施的书页摘录。"
-        "有影院听力截图，笔记未转写画面。查过目录和概括句，不足以排除对应课业。",
-        "docs/english-g8-official-reader-20261111.md「正文续核」概括句（不能批量认定）；"
-        ".english-g8-research/g8a-pending-body-check-20261111.md 核验结论。"
-        "未转写的截图：g8a-u7-p62-pdf71-cinema-listening.png、"
-        "g8a-listeningscripts-p99-pdf108-u7-cinema.png。缺的是该点的课文摘录。",
+        "vo_town", "cne_j113", "城镇设施", BODY_CHECKED_NO_LESSON,
+        "已核第4单元书页31–40，全程是动植物和最高级，不是城镇设施词表或设施课。"
+        "书页37 1f 只是广东小镇树木与鸟的人与自然例子，不是城镇设施课，不改挂。"
+        "第7单元书页70 Project 问未来城市或城镇会怎样、会不会有更多公园和博物馆，"
+        "是将来预测，不是现在的设施课，不改挂。在已核范围内未见可改挂课业。",
+        ".english-g8-research/g8a-evidence-20261112/notes.md A 节与第4单元书页31–40、书页37 1f、第7单元书页70；"
+        "截图 g8a-u4-p31-pdf40-opener.png、g8a-u4-p37-pdf46-bees-tasks-town.png、"
+        "g8a-u4-p40-pdf49-project-reflecting.png、g8a-u7-p70-pdf79-project-city-town.png、"
+        "g8a-u7-p70-pdf79-project-town-closeup.png。"
+        "既有转写 .english-g8-research/g8a-existing-screenshots-transcript-20261112.md"
+        "「影院 / 城镇设施 / 最好的地方」。",
     ),
     (
-        "fu_best", "cne_j115", "谈论最好的地方", EVIDENCE_INSUFFICIENT,
-        "笔记写第4单元最高级仍留在动植物课，这是不改挂最高级语法，不是「谈论最好的地方」的课文证据。"
-        "没有该口语课的书页摘录。概括句不足以排除对应课业。",
-        "docs/english-g8-official-reader-20261111.md 目录阶段 cne_j115 与「正文续核」概括句；"
-        ".english-g8-research/g8a-pending-body-check-20261111.md。"
-        "缺：最好的地方这一课业的正文页摘录。",
+        "fu_best", "cne_j115", "谈论最好的地方", BODY_CHECKED_NO_LESSON,
+        "第4单元书页31–40的最高级语法仍在动植物课，未见「谈论最好的地方」口语课。"
+        "第7单元书页70也不是 best place 课。这些近义内容不改挂。在已核范围内未见可改挂课业。",
+        ".english-g8-research/g8a-evidence-20261112/notes.md A 节书页31–40与书页70；"
+        "截图 g8a-u4-p32-pdf41-sectionA.png、g8a-u4-p35-pdf44-grammar-superlatives.png、"
+        "g8a-u7-p70-pdf79-project-town-closeup.png。"
+        "既有转写 .english-g8-research/g8a-existing-screenshots-transcript-20261112.md"
+        "「影院 / 城镇设施 / 最好的地方」。",
     ),
     (
-        "rw_best", "cne_j116", "读影院介绍", EVIDENCE_INSUFFICIENT,
-        "没有影院介绍课文的书页摘录。官方文档概括句说影院没有独立课，研究笔记未逐点引用影院页。"
-        "听力截图未被笔记转写，不能当成已排除课业。",
-        "同 cne_j113 的文档与未转写截图 g8a-u7-p62-pdf71-cinema-listening.png、"
-        "g8a-listeningscripts-p99-pdf108-u7-cinema.png。缺：影院介绍课文摘录。",
+        "rw_best", "cne_j116", "读影院介绍", BODY_CHECKED_NO_LESSON,
+        "影院出现在第7单元书页62 Section A 1b 听力填空：请人去看新科幻片，在 cinema 见面。"
+        "书页65语法有 Shall we go to see the sci-fi film?，并有 theatre 见面。"
+        "听力原文书页99是 Huaxia Cinema、网上订票、5:15 开映。"
+        "这是 will/shall 将来预测课里的邀请听力，不是影院介绍课文，不改挂。"
+        "在已核范围内未见可改挂课业。",
+        ".english-g8-research/g8a-evidence-20261112/notes.md A 节书页62、65、99；"
+        "截图 g8a-u7-p62-pdf71-1b-cinema-closeup.png、g8a-u7-p65-pdf74-3a-film-closeup.png、"
+        "g8a-u7-p65-pdf74-3b-theatre-closeup.png、g8a-scripts-p99-pdf108-u7-cinema-closeup.png。"
+        "既有转写 .english-g8-research/g8a-existing-screenshots-transcript-20261112.md"
+        "「影院 / 城镇设施 / 最好的地方」与书页62、99、65。",
     ),
     (
-        "vo_show", "cne_j117", "电视节目", EVIDENCE_INSUFFICIENT,
-        "笔记只写电视节目点不改挂到八年级下册第1单元。这是册次约束，不是已核课文。"
-        "没有电视节目课的书页摘录。",
-        ".english-g8-research/g8a-pending-body-check-20261111.md 末句「电视节目点不改挂到八下 U1」；"
-        "docs/english-g8-official-reader-20261111.md 概括句。"
-        "未转写截图 g8a-u1-p8-pdf17-watch-tv-vocab.png。缺：电视节目课文摘录。",
+        "vo_show", "cne_j117", "电视节目", BODY_CHECKED_NO_LESSON,
+        "第1单元书页8 Vocabulary in Use 2c 假期短文填空有 do nothing but relax, sleep, or watch TV，"
+        "是假期方式，不是电视节目课，不改挂。第1单元主题是假期。在已核范围内未见可改挂课业。",
+        ".english-g8-research/g8a-evidence-20261112/notes.md B 节与书页8；"
+        "截图 g8a-u1-p8-pdf17-vocab-watch-tv.png、g8a-u1-p8-pdf17-2c-watch-tv-closeup.png、"
+        "g8a-u1-p1-pdf10-opener.png。"
+        "既有转写 .english-g8-research/g8a-existing-screenshots-transcript-20261112.md「电视节目」。",
     ),
     (
-        "fu_show", "cne_j119", "谈论想看的节目", EVIDENCE_INSUFFICIENT,
-        "与 cne_j117 相同：记录只约束不要改挂到八下第1单元，没有谈论节目的听说页摘录。",
-        "同 cne_j117。缺：谈论想看的节目的课文或活动页摘录。",
+        "fu_show", "cne_j119", "谈论想看的节目", BODY_CHECKED_NO_LESSON,
+        "未见谈论想看的电视节目的听说课。第7单元看电影邀请不是本点，不改挂。"
+        "在已核范围内未见可改挂课业。",
+        ".english-g8-research/g8a-evidence-20261112/notes.md B 节；"
+        "截图 g8a-u1-p2-pdf11-sectionA.png、g8a-u7-p62-pdf71-sectionA-cinema.png。"
+        "既有转写 .english-g8-research/g8a-existing-screenshots-transcript-20261112.md「电视节目」。",
     ),
     (
-        "rw_show", "cne_j120", "读节目选择", EVIDENCE_INSUFFICIENT,
-        "与 cne_j117 相同：没有节目选择短文的书页摘录。不定式表示目的留在八下第1单元，不能代替本点。",
-        "同 cne_j117。缺：读节目选择的课文摘录。",
+        "rw_show", "cne_j120", "读节目选择", BODY_CHECKED_NO_LESSON,
+        "已核第1单元书页1–10，以及为其他点核过的第4、7、8单元正文，未见节目选择短文，不改挂。"
+        "在已核范围内未见可改挂课业。",
+        ".english-g8-research/g8a-evidence-20261112/notes.md B 节；"
+        "截图 g8a-u1-p6-pdf15-sectionB-reading.png、g8a-u1-p8-pdf17-2c-watch-tv-closeup.png。"
+        "既有转写 .english-g8-research/g8a-existing-screenshots-transcript-20261112.md「电视节目」。",
     ),
     (
-        "vo_party", "cne_j133", "聚会活动", EVIDENCE_INSUFFICIENT,
-        "发音附录书页102–103有偶发 You will go to the party, won't you?，笔记写明不是聚会课。"
-        "这只否定一条反意疑问例句，没有聚会活动课的单元正文摘录。",
-        ".english-g8-research/g8a-pending-body-check-20261111.md 发音附录段；"
-        "docs/english-g8-official-reader-20261111.md 概括句。缺：聚会活动课业的正文页。",
+        "vo_party", "cne_j133", "聚会活动", BODY_CHECKED_NO_LESSON,
+        "第8单元是沟通与条件句。书页74 2e 情境1是同学请你参加周末生日聚会，"
+        "用 If you can come, I’ll be very happy 等 if 句做角色扮演，只是三个情境之一，"
+        "不是聚会活动课，不改挂。在已核范围内未见可改挂课业。",
+        ".english-g8-research/g8a-evidence-20261112/notes.md C 节书页74；"
+        "截图 g8a-u8-p74-pdf83-situations-party.png、g8a-u8-p74-pdf83-2e-party-closeup.png。"
+        "既有转写 .english-g8-research/g8a-existing-screenshots-transcript-20261112.md"
+        "「聚会 / 邀请 / 建议」。",
     ),
     (
         "gr_invite", "cne_j134", "用 can 发出邀请", BODY_CHECKED_NO_LESSON,
@@ -136,11 +157,16 @@ _ROWS = [
         "docs/english-g8-official-reader-20261111.md 提到第2单元家务或许可，本点另有研究笔记的逐点依据。",
     ),
     (
-        "fu_invite", "cne_j135", "接受或拒绝邀请", EVIDENCE_INSUFFICIENT,
-        "第8单元书页79的邀请函记录属于读邀请函（cne_j136），笔记没有接受或拒绝邀请的对话页。"
-        "不能用邻点的邀请信代替本点。",
-        ".english-g8-research/g8a-pending-body-check-20261111.md 只对 cne_j136 写了书页79。"
-        "缺：接受或拒绝邀请的活动页摘录。",
+        "fu_invite", "cne_j135", "接受或拒绝邀请", BODY_CHECKED_NO_LESSON,
+        "书页74只有 if 句提示，没有印出的接受或拒绝邀请对话。"
+        "第7单元听力原文书页99的 Oh, I’d love to! 是看电影邀请，不是本点课业，不改挂。"
+        "书页79仍是请教授做沟通讲座的正式邀请函，已用于 cne_j136 的已核未见课业，不改挂。"
+        "在已核范围内未见可改挂课业。",
+        ".english-g8-research/g8a-evidence-20261112/notes.md C 节书页74、书页79与 A 节书页99；"
+        "截图 g8a-u8-p74-pdf83-2e-party-closeup.png、g8a-u8-p79-pdf88-invitation-writing.png、"
+        "g8a-scripts-p99-pdf108-u7-cinema-closeup.png。"
+        "既有转写 .english-g8-research/g8a-existing-screenshots-transcript-20261112.md"
+        "「聚会 / 邀请 / 建议」与书页99。",
     ),
     (
         "rw_invite", "cne_j136", "读邀请函", BODY_CHECKED_NO_LESSON,
@@ -151,16 +177,22 @@ _ROWS = [
         "docs/english-g8-official-reader-20261111.md「正文续核」对 cne_j136 的单独说明。",
     ),
     (
-        "vo_advice", "cne_j138", "建议用词", EVIDENCE_INSUFFICIENT,
-        "清单写不要因第8单元条件句给建议而改挂，但笔记没有建议用词课的书页摘录。"
-        "附录里 can/could 可以表示建议，例句未被记成这个词汇点的课业。",
-        ".english-g8-research/g8a-pending-body-check-20261111.md 清单「不要误挂」与概括结论。"
-        "缺：建议用词课业的正文页。",
+        "vo_advice", "cne_j138", "建议用词", BODY_CHECKED_NO_LESSON,
+        "书页74 2e 的 Expressions 是 if 条件句提示，含 I think you should，不是建议用词汇总课，不改挂。"
+        "if 条件句和用条件句给建议已挂在第8单元，不改挂。在已核范围内未见可改挂课业。",
+        ".english-g8-research/g8a-evidence-20261112/notes.md C 节书页74；"
+        "截图 g8a-u8-p74-pdf83-2e-party-closeup.png。"
+        "既有转写 .english-g8-research/g8a-existing-screenshots-transcript-20261112.md"
+        "「聚会 / 邀请 / 建议」。",
     ),
     (
-        "rw_if", "cne_j141", "读聚会建议", EVIDENCE_INSUFFICIENT,
-        "没有聚会建议课文的书页摘录。第8单元用条件句给建议的语法已留在该单元，不能代替本点。",
-        "同 cne_j138 的笔记范围。缺：聚会建议短文的书页摘录。",
+        "rw_if", "cne_j141", "读聚会建议", BODY_CHECKED_NO_LESSON,
+        "第8单元书页76–77 Section B 课文是 How to Make a Better Conversation，不是聚会建议短文，不改挂。"
+        "在已核范围内未见可改挂课业。",
+        ".english-g8-research/g8a-evidence-20261112/notes.md C 节书页76–77；"
+        "截图 g8a-u8-p76-pdf85-sectionB-conversation-guide.png、g8a-u8-p77-pdf86-reading-tasks.png。"
+        "既有转写 .english-g8-research/g8a-existing-screenshots-transcript-20261112.md "
+        "写明书页76–78此前不在旧截图中；本次续核笔记已补书页76–78。",
     ),
     (
         "fu_advice8", "cne_j156", "用 Why don't you 提建议", BODY_CHECKED_NO_LESSON,
@@ -550,9 +582,10 @@ def render_doc():
     a = lines.append
     a("# 初中英语待核点分类（2026-11-12）")
     a("")
-    a("65 个仍挂「N年级X册 待核」的初中英语知识点，按已有核对记录分成两类。")
+    a("65 个仍挂「N年级X册 待核」的初中英语知识点，按核对记录分成两类。")
     a("不删点，不改稳定 id、点名、题目、先修、学期、unit 90 和章节字符串，也不改挂到已确认单元。")
-    a("没有新开教材阅读器，没有把「未命中」写成「教材不存在」或「书里没教」。")
+    a("2026-11-12 续核把八上 10 个点从证据不足改为已核未见对应课业；近义句和偶发句不改挂。")
+    a("没有把「未命中」写成「教材不存在」或「书里没教」。")
     a("")
     a("## 字段")
     a("")
@@ -598,8 +631,16 @@ def render_doc():
     a("")
     a("`cne_j157`：第3单元书页29是感谢信。第6单元书页59是读求助邮件，并要求写一封建议邮件，不是读建议信。")
     a("")
-    a("八年级上册 12 点和九年级上册 37 点不按官方文档里的概括句批量归类。")
-    a("研究笔记里没有该点书页或课文摘录的，标为证据不足，并写明缺什么。")
+    a("八年级上册 12 点现全部是「已核教材但未找到对应课业」。")
+    a("2026-11-12 续核把 `cne_j113`、`cne_j115`、`cne_j116`、`cne_j117`、`cne_j119`、`cne_j120`、")
+    a("`cne_j133`、`cne_j135`、`cne_j138`、`cne_j141` 从证据不足改入这一类。")
+    a("依据是官方阅读器正文：第4单元书页31–40是动植物和最高级；书页37的小镇是人与自然例子；")
+    a("第7单元书页70是未来城镇预测；书页62、65和听力书页99是看电影邀请；")
+    a("第1单元书页8的 watch TV 是假期方式；第8单元书页74的生日聚会只是条件句角色扮演之一；")
+    a("书页76–77是 How to Make a Better Conversation；书页79的正式邀请函仍属于 `cne_j136`。")
+    a("这些近义句和偶发句都不改挂。`cne_j134`、`cne_j136` 的分类取值未改。")
+    a("")
+    a("九年级上册仍有 33 点证据不足。研究笔记里没有该点书页或课文摘录的，不按官方文档概括句批量归入第一类，并写明缺什么。")
     a("语法附录里没有某个标题，只说明附录这几页没有，不能写成全书无此课。")
     a("")
     a("## 分点")
@@ -627,9 +668,11 @@ def render_doc():
     a("`docs/english-g7-official-reader-20261111.md`、`docs/english-g8-official-reader-20261111.md`、")
     a("`docs/english-g9-official-reader-20261111.md`，以及未跟踪目录")
     a("`.english-g7-research/`、`.english-g8-research/`、`.english-g9-research/` 里的核对笔记。")
-    a("九上官方文档前半是目录阶段（当时第10页未渲染正文），后半「正文续核」只有概括，不作为 37 点的批量依据。")
+    a("八上这 10 点以 `.english-g8-research/g8a-evidence-20261112/notes.md` 和同目录截图为准，")
+    a("并对照 `.english-g8-research/g8a-existing-screenshots-transcript-20261112.md` 里已转写的对应节。")
+    a("九上官方文档前半是目录阶段（当时第10页未渲染正文），后半「正文续核」只有概括，不作为九上 33 个证据不足点的批量依据。")
     a("八下以「八下正文续核」逐点表和研究笔记 `g8b-body-20261111/notes.md` 为准。")
     a("")
-    a("未打开智慧教育平台，未下载教材，未把截图里笔记没有转写的画面写成新的课文。")
+    a("书页只引用上述笔记已经转写的句子。写入本文件时没有另开阅读器，也没有下载教材。")
     a("")
     return "\n".join(lines) + "\n"
