@@ -27540,16 +27540,10 @@
     "reason": "按教科版科学的常见教学顺序，先学「观察与比较」，再学「做个「时间胶囊」」。"
   },
   {
-    "topicId": "cns_p015",
+    "topicId": "cns_p016",
     "prerequisiteId": "cns_p014",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「做个「时间胶囊」」，再学「保护我们的感官」。"
-  },
-  {
-    "topicId": "cns_p016",
-    "prerequisiteId": "cns_p015",
-    "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「保护我们的感官」，再学「观察物体的特征」。"
+    "reason": "按教科版科学的常见教学顺序，先学「做个「时间胶囊」」，再学「观察物体的特征」。"
   },
   {
     "topicId": "cns_p017",
@@ -27684,16 +27678,10 @@
     "reason": "按教科版科学的常见教学顺序，先学「太阳与白天」，再学「夜晚的月亮」。"
   },
   {
-    "topicId": "cns_p045",
+    "topicId": "cns_p046",
     "prerequisiteId": "cns_p044",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「夜晚的月亮」，再学「记录天气日历」。"
-  },
-  {
-    "topicId": "cns_p046",
-    "prerequisiteId": "cns_p045",
-    "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「记录天气日历」，再学「恐龙的故事」。"
+    "reason": "按教科版科学的常见教学顺序，先学「夜晚的月亮」，再学「恐龙的故事」。"
   },
   {
     "topicId": "cns_p047",
@@ -27777,13 +27765,19 @@
     "topicId": "cns_p066",
     "prerequisiteId": "cns_p069",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「观察云」，再学「天气预报与天气的影响」。"
+    "reason": "按教科版科学的常见教学顺序，先学「观察云」，再学「天气预报」。"
+  },
+  {
+    "topicId": "cns_p261",
+    "prerequisiteId": "cns_p066",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「天气预报」，再学「天气的影响」。"
   },
   {
     "topicId": "cns_p067",
-    "prerequisiteId": "cns_p066",
+    "prerequisiteId": "cns_p261",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「天气预报与天气的影响」，再学「水到哪里去了」。"
+    "reason": "按教科版科学的常见教学顺序，先学「天气的影响」，再学「水到哪里去了」。"
   },
   {
     "topicId": "cns_p070",
@@ -27831,19 +27825,31 @@
     "topicId": "cns_p079",
     "prerequisiteId": "cns_p078",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「直线运动和曲线运动」，再学「比较运动的快慢」。"
+    "reason": "按教科版科学的常见教学顺序，先学「直线运动和曲线运动」，再学「相同距离比快慢」。"
+  },
+  {
+    "topicId": "cns_p262",
+    "prerequisiteId": "cns_p079",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「相同距离比快慢」，再学「相同时间比快慢」。"
   },
   {
     "topicId": "cns_p080",
-    "prerequisiteId": "cns_p079",
+    "prerequisiteId": "cns_p262",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「比较运动的快慢」，再学「运动和能量」。"
+    "reason": "按教科版科学的常见教学顺序，先学「相同时间比快慢」，再学「运动和能量」。"
+  },
+  {
+    "topicId": "cns_p263",
+    "prerequisiteId": "cns_p081",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「设计和制作“过山车”」，再学「测试“过山车”」。"
   },
   {
     "topicId": "cns_p082",
-    "prerequisiteId": "cns_p081",
+    "prerequisiteId": "cns_p263",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「设计和测试「过山车」」，再学「根据太阳辨别方向」。"
+    "reason": "按教科版科学的常见教学顺序，先学「测试“过山车”」，再学「根据太阳辨别方向」。"
   },
   {
     "topicId": "cns_p083",
@@ -27864,10 +27870,28 @@
     "reason": "按教科版科学的常见教学顺序，先学「利用磁铁辨别方向」，再学「磁极与方向」。"
   },
   {
-    "topicId": "cns_p087",
+    "topicId": "cns_p265",
+    "prerequisiteId": "cns_p264",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「制作小磁针」，再学「设计指南针」。"
+  },
+  {
+    "topicId": "cns_p086",
+    "prerequisiteId": "cns_p265",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「设计指南针」，再学「制作指南针」。"
+  },
+  {
+    "topicId": "cns_p266",
     "prerequisiteId": "cns_p086",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「制作和使用指南针」，再学「不同种类的动物」。"
+    "reason": "按教科版科学的常见教学顺序，先学「制作指南针」，再学「用指南针“寻宝”」。"
+  },
+  {
+    "topicId": "cns_p087",
+    "prerequisiteId": "cns_p266",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「用指南针“寻宝”」，再学「不同种类的动物」。"
   },
   {
     "topicId": "cns_p088",
@@ -27879,13 +27903,19 @@
     "topicId": "cns_p090",
     "prerequisiteId": "cns_p089",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「蚕的一生」，再学「幼蚕的生长」。"
+    "reason": "按教科版科学的常见教学顺序，先学「迎接蚕宝宝的到来」，再学「幼蚕在生长」。"
   },
   {
-    "topicId": "cns_p091",
+    "topicId": "cns_p267",
     "prerequisiteId": "cns_p090",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「幼蚕的生长」，再学「蚕蛾与昆虫的一生」。"
+    "reason": "按教科版科学的常见教学顺序，先学「幼蚕在生长」，再学「蚕变了新模样」。"
+  },
+  {
+    "topicId": "cns_p268",
+    "prerequisiteId": "cns_p267",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「蚕变了新模样」，再学「茧中钻出了蚕蛾」。"
   },
   {
     "topicId": "cns_p093",
@@ -27903,13 +27933,19 @@
     "topicId": "cns_p095",
     "prerequisiteId": "cns_p094",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「水的星球」，再学「地球的卫星——月球」。"
+    "reason": "按教科版科学的常见教学顺序，先学「水的星球」，再学「地球的卫星」。"
+  },
+  {
+    "topicId": "cns_p269",
+    "prerequisiteId": "cns_p095",
+    "strength": "soft",
+    "reason": "按教科版科学的常见教学顺序，先学「地球的卫星」，再学「我们来造“环形山”」。"
   },
   {
     "topicId": "cns_p096",
-    "prerequisiteId": "cns_p095",
+    "prerequisiteId": "cns_p269",
     "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「地球的卫星——月球」，再学「发光发热的太阳」。"
+    "reason": "按教科版科学的常见教学顺序，先学「我们来造“环形山”」，再学「发光发热的太阳」。"
   },
   {
     "topicId": "cns_p097",
@@ -28644,6 +28680,12 @@
     "reason": "说出生活中磁铁的应用，要先知道磁铁能吸引什么。"
   },
   {
+    "topicId": "cns_p015",
+    "prerequisiteId": "cns_p012",
+    "strength": "soft",
+    "reason": "知道要保护感官，要先会通过感官来发现周围世界。"
+  },
+  {
     "topicId": "cns_p007",
     "prerequisiteId": "cns_p002",
     "strength": "hard",
@@ -28683,13 +28725,13 @@
     "topicId": "cns_p089",
     "prerequisiteId": "cns_p088",
     "strength": "hard",
-    "reason": "认识蚕的一生之前，要先知道卵生等繁殖方式。"
+    "reason": "迎接蚕宝宝的到来之前，要先知道卵生等繁殖方式。"
   },
   {
     "topicId": "cns_p091",
-    "prerequisiteId": "cns_p089",
+    "prerequisiteId": "cns_p268",
     "strength": "hard",
-    "reason": "比较完全变态和不完全变态，要先知道蚕的四个阶段。"
+    "reason": "比较完全变态和不完全变态，要先看完蚕从茧中钻出蚕蛾。"
   },
   {
     "topicId": "cns_p092",
@@ -28869,13 +28911,13 @@
     "topicId": "cns_p079",
     "prerequisiteId": "cns_p076",
     "strength": "hard",
-    "reason": "比较运动快慢，要先会描述物体的位置和运动。"
+    "reason": "相同距离比快慢，要先会描述物体的位置和运动。"
   },
   {
     "topicId": "cns_p081",
     "prerequisiteId": "cns_p080",
     "strength": "hard",
-    "reason": "设计过山车要先知道运动和能量的关系。"
+    "reason": "设计和制作过山车要先知道运动和能量的关系。"
   },
   {
     "topicId": "cns_p084",
@@ -28888,6 +28930,12 @@
     "prerequisiteId": "cns_p058",
     "strength": "hard",
     "reason": "理解磁极与方向，要先知道磁铁有 N、S 两极。"
+  },
+  {
+    "topicId": "cns_p264",
+    "prerequisiteId": "cns_p085",
+    "strength": "hard",
+    "reason": "制作小磁针要先理解磁极与方向。"
   },
   {
     "topicId": "cns_p086",
@@ -29211,7 +29259,7 @@
     "topicId": "cns_p095",
     "prerequisiteId": "cns_p044",
     "strength": "hard",
-    "reason": "认识月球表面，要先观察过夜晚的月亮。"
+    "reason": "认识地球的卫星，要先观察过夜晚的月亮。"
   },
   {
     "topicId": "cns_p098",

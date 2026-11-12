@@ -303250,6 +303250,62 @@
     "topicId": "cns_p066",
     "difficulty": "standard",
     "type": "choice",
+    "prompt": "天气预报的符号里画着一个太阳，通常表示什么天气？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "大雨"
+      },
+      {
+        "key": "B",
+        "text": "晴"
+      },
+      {
+        "key": "C",
+        "text": "大雪"
+      },
+      {
+        "key": "D",
+        "text": "台风"
+      }
+    ],
+    "answer": "B",
+    "explanation": "太阳符号在天气预报里表示晴。",
+    "verify": "\"晴\""
+  },
+  {
+    "id": "cns_p066_q4",
+    "topicId": "cns_p066",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "天气预报写着「明天最低 6℃、最高 15℃」。从这句里能直接读出的是什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "明天一定会下暴雨"
+      },
+      {
+        "key": "B",
+        "text": "明年全年都是这个温度"
+      },
+      {
+        "key": "C",
+        "text": "明天预报的气温大约在 6℃到 15℃"
+      },
+      {
+        "key": "D",
+        "text": "今天已经结冰"
+      }
+    ],
+    "answer": "C",
+    "explanation": "预报里的最低、最高气温，是在说这一天预报有多冷、多热。",
+    "verify": "\"明天预报的气温大约在 6℃到 15℃\""
+  },
+  {
+    "id": "cns_p261_q1",
+    "topicId": "cns_p261",
+    "difficulty": "basic",
+    "type": "choice",
     "prompt": "下面哪种天气对出行最危险？",
     "choices": [
       {
@@ -303258,48 +303314,104 @@
       },
       {
         "key": "B",
-        "text": "大雾、暴雨或冰冻"
+        "text": "多云"
       },
       {
         "key": "C",
-        "text": "多云"
+        "text": "大雾、暴雨或冰冻"
       },
       {
         "key": "D",
         "text": "微风"
       }
     ],
-    "answer": "B",
+    "answer": "C",
     "explanation": "大雾、暴雨、冰冻会影响视线和路面安全。",
     "verify": "\"大雾、暴雨或冰冻\""
   },
   {
-    "id": "cns_p066_q4",
-    "topicId": "cns_p066",
-    "difficulty": "challenge",
+    "id": "cns_p261_q2",
+    "topicId": "cns_p261",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "外面正在下大雨，下面哪一件是天气给出行带来的影响？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "太阳变得更晒"
+      },
+      {
+        "key": "B",
+        "text": "空气马上没有了"
+      },
+      {
+        "key": "C",
+        "text": "季节立刻变成冬天"
+      },
+      {
+        "key": "D",
+        "text": "路滑、看不清，出门要更小心"
+      }
+    ],
+    "answer": "D",
+    "explanation": "大雨会让路面和视线变差，出行要更小心。",
+    "verify": "\"路滑、看不清，出门要更小心\""
+  },
+  {
+    "id": "cns_p261_q3",
+    "topicId": "cns_p261",
+    "difficulty": "standard",
     "type": "choice",
     "prompt": "连续多日干旱、不下雨，农民最担心什么？",
     "choices": [
       {
         "key": "A",
-        "text": "衣服晒不干"
+        "text": "庄稼缺水长不好"
       },
       {
         "key": "B",
-        "text": "河水泛滥"
+        "text": "衣服晒不干"
       },
       {
         "key": "C",
-        "text": "庄稼缺水长不好"
+        "text": "河水泛滥"
       },
       {
         "key": "D",
         "text": "积雪太厚"
       }
     ],
-    "answer": "C",
+    "answer": "A",
     "explanation": "干旱会让农作物缺水。",
     "verify": "\"庄稼缺水长不好\""
+  },
+  {
+    "id": "cns_p261_q4",
+    "topicId": "cns_p261",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "一次强降温到来之前，最需要提前防护的是谁？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "锁在柜子里的书本"
+      },
+      {
+        "key": "B",
+        "text": "怕冻的农作物和要出门的人"
+      },
+      {
+        "key": "C",
+        "text": "已经晒干的石块"
+      },
+      {
+        "key": "D",
+        "text": "关掉的电灯"
+      }
+    ],
+    "answer": "B",
+    "explanation": "强降温会影响怕冷的植物，人出门也要防冻。",
+    "verify": "\"怕冻的农作物和要出门的人\""
   },
   {
     "id": "cns_p067_q1",
@@ -304566,7 +304678,7 @@
     "topicId": "cns_p079",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "都跑 1 分钟，甲跑了 200 米，乙跑了 180 米，谁快？",
+    "prompt": "两辆小车都走完同样长的一段路，甲用 5 秒，乙用 8 秒，谁快？",
     "choices": [
       {
         "key": "A",
@@ -304586,7 +304698,7 @@
       }
     ],
     "answer": "B",
-    "explanation": "时间相同，跑得远的快。",
+    "explanation": "路程一样长，用时少的更快。",
     "verify": "\"甲\""
   },
   {
@@ -304594,39 +304706,67 @@
     "topicId": "cns_p079",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "比较两辆玩具车谁快，下面哪种方法不公平？",
+    "prompt": "比较谁先跑完同一条跑道，应该看什么？",
     "choices": [
       {
         "key": "A",
-        "text": "同一跑道比用时"
+        "text": "谁的衣服更鲜艳"
       },
       {
         "key": "B",
-        "text": "同样时间比距离"
+        "text": "谁出发前站得更直"
       },
       {
         "key": "C",
-        "text": "让两辆车在不同长度的跑道上各跑一次，只比时间"
+        "text": "谁用的时间少"
       },
       {
         "key": "D",
-        "text": "同时出发看谁先到终点"
+        "text": "谁的鞋子更大"
       }
     ],
     "answer": "C",
-    "explanation": "距离不同又只比时间，无法判断快慢。",
-    "verify": "\"让两辆车在不同长度的跑道上各跑一次，只比时间\""
+    "explanation": "同一条跑道距离相同，用时少的更快。",
+    "verify": "\"谁用的时间少\""
   },
   {
     "id": "cns_p079_q4",
     "topicId": "cns_p079",
     "difficulty": "challenge",
     "type": "choice",
-    "prompt": "汽车 2 小时行驶 120 千米，自行车 1 小时骑行 15 千米，谁快？",
+    "prompt": "小华和小李都跑 100 米。小华用 20 秒，小李用 16 秒。下面哪句对？",
     "choices": [
       {
         "key": "A",
-        "text": "自行车"
+        "text": "小华更快，因为用时更多"
+      },
+      {
+        "key": "B",
+        "text": "一样快，因为距离都是 100 米"
+      },
+      {
+        "key": "C",
+        "text": "无法比较，因为没有比谁的身体更重"
+      },
+      {
+        "key": "D",
+        "text": "小李更快，因为距离相同、用时更少"
+      }
+    ],
+    "answer": "D",
+    "explanation": "距离相同，比的是所用时间，用时少的更快。",
+    "verify": "\"小李更快，因为距离相同、用时更少\""
+  },
+  {
+    "id": "cns_p262_q1",
+    "topicId": "cns_p262",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "都跑 1 分钟，甲跑了 200 米，乙跑了 180 米，谁快？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "乙"
       },
       {
         "key": "B",
@@ -304638,12 +304778,96 @@
       },
       {
         "key": "D",
-        "text": "汽车"
+        "text": "甲"
       }
     ],
     "answer": "D",
-    "explanation": "汽车每小时 60 千米，比自行车每小时 15 千米快。",
-    "verify": "\"汽车\""
+    "explanation": "时间相同，跑得远的快。",
+    "verify": "\"甲\""
+  },
+  {
+    "id": "cns_p262_q2",
+    "topicId": "cns_p262",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "两只蚂蚁同时出发，爬了同样长的时间，甲爬得更远。谁更快？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "甲"
+      },
+      {
+        "key": "B",
+        "text": "乙"
+      },
+      {
+        "key": "C",
+        "text": "一样快"
+      },
+      {
+        "key": "D",
+        "text": "无法比较"
+      }
+    ],
+    "answer": "A",
+    "explanation": "时间相同，爬得远的更快。",
+    "verify": "\"甲\""
+  },
+  {
+    "id": "cns_p262_q3",
+    "topicId": "cns_p262",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "时间已经相同，要比谁更快，应该比较什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "谁的身体更重"
+      },
+      {
+        "key": "B",
+        "text": "在这段时间里谁通过的距离更远"
+      },
+      {
+        "key": "C",
+        "text": "谁的衣服颜色更深"
+      },
+      {
+        "key": "D",
+        "text": "谁站的位置更高"
+      }
+    ],
+    "answer": "B",
+    "explanation": "时间相同，距离远的更快。",
+    "verify": "\"在这段时间里谁通过的距离更远\""
+  },
+  {
+    "id": "cns_p262_q4",
+    "topicId": "cns_p262",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "在同样的 10 秒里，玩具车 A 走了 3 米，玩具车 B 走了 2 米。下面哪句对？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "B 更快，因为走得更近"
+      },
+      {
+        "key": "B",
+        "text": "一样快，因为时间都是 10 秒"
+      },
+      {
+        "key": "C",
+        "text": "A 更快，因为时间相同、走得更远"
+      },
+      {
+        "key": "D",
+        "text": "无法比较，因为没有称它们的重量"
+      }
+    ],
+    "answer": "C",
+    "explanation": "时间已经相同，比通过的距离，走得远的更快。",
+    "verify": "\"A 更快，因为时间相同、走得更远\""
   },
   {
     "id": "cns_p080_q1",
@@ -304818,6 +305042,62 @@
     "topicId": "cns_p081",
     "difficulty": "standard",
     "type": "choice",
+    "prompt": "设计和制作过山车时，轨道起点和后面的坡相比，应该怎样？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "起点更高，小球才有足够能量越过后面的坡"
+      },
+      {
+        "key": "B",
+        "text": "起点必须最低"
+      },
+      {
+        "key": "C",
+        "text": "后面的坡越高越好"
+      },
+      {
+        "key": "D",
+        "text": "起点和后面的坡一样高，小球就会停住不动"
+      }
+    ],
+    "answer": "A",
+    "explanation": "设计时把起点做高，制作时按这个高度来做。",
+    "verify": "\"起点更高，小球才有足够能量越过后面的坡\""
+  },
+  {
+    "id": "cns_p081_q4",
+    "topicId": "cns_p081",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "用纸槽做轨道之前，先定下起点高度、坡和弯道，这是在做什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只是把纸涂成红色"
+      },
+      {
+        "key": "B",
+        "text": "先把轨道怎样让小球跑完全程设计清楚"
+      },
+      {
+        "key": "C",
+        "text": "不准备让小球滚动"
+      },
+      {
+        "key": "D",
+        "text": "只写下过山车三个字"
+      }
+    ],
+    "answer": "B",
+    "explanation": "先设计坡和弯，再动手制作。",
+    "verify": "\"先把轨道怎样让小球跑完全程设计清楚\""
+  },
+  {
+    "id": "cns_p263_q1",
+    "topicId": "cns_p263",
+    "difficulty": "basic",
+    "type": "choice",
     "prompt": "测试过山车时，为什么要每次从同一位置放小球、测几次？",
     "choices": [
       {
@@ -304842,9 +305122,9 @@
     "verify": "\"让测试结果更可靠\""
   },
   {
-    "id": "cns_p081_q4",
-    "topicId": "cns_p081",
-    "difficulty": "challenge",
+    "id": "cns_p263_q2",
+    "topicId": "cns_p263",
+    "difficulty": "basic",
     "type": "choice",
     "prompt": "小球在弯道处总是飞出轨道，最合适的改进是？",
     "choices": [
@@ -304868,6 +305148,62 @@
     "answer": "B",
     "explanation": "加高外侧挡边，小球就不容易冲出去。",
     "verify": "\"把弯道外侧的边做高一些\""
+  },
+  {
+    "id": "cns_p263_q3",
+    "topicId": "cns_p263",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "测试时小球到不了终点，下面哪一种做法是在根据测试改进？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只试一次就说做好了"
+      },
+      {
+        "key": "B",
+        "text": "把小球拿走不再放"
+      },
+      {
+        "key": "C",
+        "text": "记下停住的位置，调整起点或坡后再试"
+      },
+      {
+        "key": "D",
+        "text": "只把纸换成另一种颜色"
+      }
+    ],
+    "answer": "C",
+    "explanation": "测试是为了发现问题，再改轨道重新试。",
+    "verify": "\"记下停住的位置，调整起点或坡后再试\""
+  },
+  {
+    "id": "cns_p263_q4",
+    "topicId": "cns_p263",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "一条过山车轨道测了两次：一次小球跑完，一次在半路停下。要判断它是否可靠，应该怎样？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只保留跑完的那一次"
+      },
+      {
+        "key": "B",
+        "text": "认为停下的那次不算"
+      },
+      {
+        "key": "C",
+        "text": "马上拆掉全部轨道"
+      },
+      {
+        "key": "D",
+        "text": "用相同方法再多测几次，看是不是都能跑完"
+      }
+    ],
+    "answer": "D",
+    "explanation": "重复测试，才能知道轨道是不是稳定可靠。",
+    "verify": "\"用相同方法再多测几次，看是不是都能跑完\""
   },
   {
     "id": "cns_p082_q1",
@@ -305319,8 +305655,8 @@
     "verify": "\"S 极\""
   },
   {
-    "id": "cns_p086_q1",
-    "topicId": "cns_p086",
+    "id": "cns_p264_q1",
+    "topicId": "cns_p264",
     "difficulty": "basic",
     "type": "choice",
     "prompt": "用磁铁的一端沿同一方向摩擦钢针多次，钢针会怎样？",
@@ -305331,20 +305667,244 @@
       },
       {
         "key": "B",
-        "text": "变长"
+        "text": "被磁化，有了磁性"
       },
       {
         "key": "C",
-        "text": "变成塑料"
+        "text": "变长"
       },
       {
         "key": "D",
-        "text": "被磁化，有了磁性"
+        "text": "变成塑料"
+      }
+    ],
+    "answer": "B",
+    "explanation": "钢针被磁化后能吸引铁屑。",
+    "verify": "\"被磁化，有了磁性\""
+  },
+  {
+    "id": "cns_p264_q2",
+    "topicId": "cns_p264",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "制作小磁针，要用磁铁去摩擦的是哪一种？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "塑料针"
+      },
+      {
+        "key": "B",
+        "text": "木针"
+      },
+      {
+        "key": "C",
+        "text": "钢针"
+      },
+      {
+        "key": "D",
+        "text": "棉线"
+      }
+    ],
+    "answer": "C",
+    "explanation": "钢针能被磁化，塑料、木头和棉线不能变成磁针。",
+    "verify": "\"钢针\""
+  },
+  {
+    "id": "cns_p264_q3",
+    "topicId": "cns_p264",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "怎样说明这枚钢针已经做成了小磁针？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "它变透明了"
+      },
+      {
+        "key": "B",
+        "text": "它会自己发光"
+      },
+      {
+        "key": "C",
+        "text": "它变成了一张纸"
+      },
+      {
+        "key": "D",
+        "text": "它能吸引小铁钉或铁屑"
       }
     ],
     "answer": "D",
-    "explanation": "钢针被磁化后能吸引铁屑。",
-    "verify": "\"被磁化，有了磁性\""
+    "explanation": "有了磁性的钢针能吸引铁。",
+    "verify": "\"它能吸引小铁钉或铁屑\""
+  },
+  {
+    "id": "cns_p264_q4",
+    "topicId": "cns_p264",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "做好的小磁针要能辨别方向，还需要怎样？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "能在水平方向自由转动"
+      },
+      {
+        "key": "B",
+        "text": "被胶水粘死不能动"
+      },
+      {
+        "key": "C",
+        "text": "竖直钉在铁板上"
+      },
+      {
+        "key": "D",
+        "text": "一直吸在大磁铁上"
+      }
+    ],
+    "answer": "A",
+    "explanation": "只有能自由转动，小磁针静止时才能指出南北。",
+    "verify": "\"能在水平方向自由转动\""
+  },
+  {
+    "id": "cns_p265_q1",
+    "topicId": "cns_p265",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "设计指南针，要解决的问题是什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "怎样测量气温"
+      },
+      {
+        "key": "B",
+        "text": "怎样比较谁跑得快"
+      },
+      {
+        "key": "C",
+        "text": "怎样做出能指示南北方向的工具"
+      },
+      {
+        "key": "D",
+        "text": "怎样饲养蚕"
+      }
+    ],
+    "answer": "C",
+    "explanation": "指南针是用来辨认方向的。",
+    "verify": "\"怎样做出能指示南北方向的工具\""
+  },
+  {
+    "id": "cns_p265_q2",
+    "topicId": "cns_p265",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "设计里，用来指示方向的部件应该是什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一根不能动的木棍"
+      },
+      {
+        "key": "B",
+        "text": "一张只画了花的纸"
+      },
+      {
+        "key": "C",
+        "text": "一块普通石头"
+      },
+      {
+        "key": "D",
+        "text": "能自由转动的磁针"
+      }
+    ],
+    "answer": "D",
+    "explanation": "磁针能指向南北，设计时要让它转得动。",
+    "verify": "\"能自由转动的磁针\""
+  },
+  {
+    "id": "cns_p265_q3",
+    "topicId": "cns_p265",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "指南针的设计为什么要标出东、南、西、北？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "磁针指出北方以后，才能读出其他方向"
+      },
+      {
+        "key": "B",
+        "text": "为了让底盘更好看"
+      },
+      {
+        "key": "C",
+        "text": "因为磁针自己会写出字"
+      },
+      {
+        "key": "D",
+        "text": "标了方向就不需要磁针"
+      }
+    ],
+    "answer": "A",
+    "explanation": "有了方位标记，才能把磁针指的北换成要找的方向。",
+    "verify": "\"磁针指出北方以后，才能读出其他方向\""
+  },
+  {
+    "id": "cns_p265_q4",
+    "topicId": "cns_p265",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "有人把磁针设计成固定死、完全不能转动。这个设计的问题是什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "磁针太轻"
+      },
+      {
+        "key": "B",
+        "text": "磁针不能转动，就无法自己指向南北"
+      },
+      {
+        "key": "C",
+        "text": "字写得太大"
+      },
+      {
+        "key": "D",
+        "text": "颜色不够鲜艳"
+      }
+    ],
+    "answer": "B",
+    "explanation": "不能转动的针无法指示方向。",
+    "verify": "\"磁针不能转动，就无法自己指向南北\""
+  },
+  {
+    "id": "cns_p086_q1",
+    "topicId": "cns_p086",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "制作指南针时，用来指示方向的磁针要怎样安装？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "用胶水粘死"
+      },
+      {
+        "key": "B",
+        "text": "竖直钉在铁板上"
+      },
+      {
+        "key": "C",
+        "text": "收在盒子里不装出来"
+      },
+      {
+        "key": "D",
+        "text": "让它能水平自由转动"
+      }
+    ],
+    "answer": "D",
+    "explanation": "磁针要转得动，做好后才能指南北。",
+    "verify": "\"让它能水平自由转动\""
   },
   {
     "id": "cns_p086_q2",
@@ -305379,6 +305939,62 @@
     "topicId": "cns_p086",
     "difficulty": "standard",
     "type": "choice",
+    "prompt": "按设计制作指南针，底盘上至少要标出什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只有一种颜色"
+      },
+      {
+        "key": "B",
+        "text": "东、南、西、北"
+      },
+      {
+        "key": "C",
+        "text": "气温的刻度"
+      },
+      {
+        "key": "D",
+        "text": "降水量的毫米数"
+      }
+    ],
+    "answer": "B",
+    "explanation": "有了四个方向，才能读出磁针指的方位。",
+    "verify": "\"东、南、西、北\""
+  },
+  {
+    "id": "cns_p086_q4",
+    "topicId": "cns_p086",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "和只有一枚小磁针相比，制作完成的指南针多了什么才方便读方向？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一块把磁针吸死的大铁块"
+      },
+      {
+        "key": "B",
+        "text": "一支气温计"
+      },
+      {
+        "key": "C",
+        "text": "标有东、南、西、北并且磁针能自由转动的底盘"
+      },
+      {
+        "key": "D",
+        "text": "一张天气日历"
+      }
+    ],
+    "answer": "C",
+    "explanation": "指南针把能转动的磁针和方位盘装在一起。",
+    "verify": "\"标有东、南、西、北并且磁针能自由转动的底盘\""
+  },
+  {
+    "id": "cns_p266_q1",
+    "topicId": "cns_p266",
+    "difficulty": "basic",
+    "type": "choice",
     "prompt": "用指南针辨认方向时，指南针不能靠近什么？",
     "choices": [
       {
@@ -305387,48 +306003,104 @@
       },
       {
         "key": "B",
-        "text": "铁制品或磁铁"
-      },
-      {
-        "key": "C",
         "text": "纸张"
       },
       {
-        "key": "D",
+        "key": "C",
         "text": "塑料尺"
+      },
+      {
+        "key": "D",
+        "text": "铁制品或磁铁"
       }
     ],
-    "answer": "B",
+    "answer": "D",
     "explanation": "铁和磁铁会干扰磁针。",
     "verify": "\"铁制品或磁铁\""
   },
   {
-    "id": "cns_p086_q4",
-    "topicId": "cns_p086",
-    "difficulty": "challenge",
+    "id": "cns_p266_q2",
+    "topicId": "cns_p266",
+    "difficulty": "basic",
     "type": "choice",
     "prompt": "「寻宝」游戏说宝藏在出发点北偏东方向，你先要怎样用指南针？",
     "choices": [
       {
         "key": "A",
-        "text": "拿着指南针随便转"
+        "text": "放平指南针，让磁针 N 端对准刻度盘的「北」，再找方向"
       },
       {
         "key": "B",
-        "text": "把指南针放在铁栏杆上"
+        "text": "拿着指南针随便转"
       },
       {
         "key": "C",
-        "text": "放平指南针，让磁针 N 端对准刻度盘的「北」，再找方向"
+        "text": "把指南针放在铁栏杆上"
       },
       {
         "key": "D",
         "text": "倒拿指南针"
       }
     ],
-    "answer": "C",
+    "answer": "A",
     "explanation": "先定好北，再按要求找方向。",
     "verify": "\"放平指南针，让磁针 N 端对准刻度盘的「北」，再找方向\""
+  },
+  {
+    "id": "cns_p266_q3",
+    "topicId": "cns_p266",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "寻宝时，指南针怎样放才好读方向？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "竖着插在土里"
+      },
+      {
+        "key": "B",
+        "text": "水平放平，等磁针停稳"
+      },
+      {
+        "key": "C",
+        "text": "拿在手里不停甩"
+      },
+      {
+        "key": "D",
+        "text": "放在口袋里不拿出来"
+      }
+    ],
+    "answer": "B",
+    "explanation": "放平并等磁针停下，读数才稳。",
+    "verify": "\"水平放平，等磁针停稳\""
+  },
+  {
+    "id": "cns_p266_q4",
+    "topicId": "cns_p266",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "磁针已经对准北方，任务是走向东方。应该朝哪边走？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "磁针 N 端所指的正北"
+      },
+      {
+        "key": "B",
+        "text": "面向北方时的背后"
+      },
+      {
+        "key": "C",
+        "text": "面向北方时的右手边"
+      },
+      {
+        "key": "D",
+        "text": "随便一个方向"
+      }
+    ],
+    "answer": "C",
+    "explanation": "面向北时，右边是东。",
+    "verify": "\"面向北方时的右手边\""
   },
   {
     "id": "cns_p087_q1",
@@ -305679,7 +306351,7 @@
       }
     ],
     "answer": "C",
-    "explanation": "蚕的一生从卵开始。",
+    "explanation": "蚕宝宝从蚕卵里孵出来。",
     "verify": "\"蚕卵\""
   },
   {
@@ -305715,56 +306387,56 @@
     "topicId": "cns_p089",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "蚕吐丝结茧后，在茧里变成了什么？",
+    "prompt": "迎接蚕宝宝到来，正确的开始是哪一种？",
     "choices": [
       {
         "key": "A",
-        "text": "蛹"
+        "text": "准备蚕卵，等小蚕孵出来再喂桑叶"
       },
       {
         "key": "B",
-        "text": "卵"
+        "text": "先养一只会飞的鸟"
       },
       {
         "key": "C",
-        "text": "蚂蚁"
+        "text": "先养一缸金鱼"
       },
       {
         "key": "D",
-        "text": "蝴蝶"
+        "text": "先把花种埋进土里"
       }
     ],
     "answer": "A",
-    "explanation": "蚕在茧中化蛹。",
-    "verify": "\"蛹\""
+    "explanation": "迎接的是从卵里孵出的蚕宝宝，并用桑叶开始饲养。",
+    "verify": "\"准备蚕卵，等小蚕孵出来再喂桑叶\""
   },
   {
     "id": "cns_p089_q4",
     "topicId": "cns_p089",
     "difficulty": "challenge",
     "type": "choice",
-    "prompt": "蚕的一生按顺序经过哪几个阶段？",
+    "prompt": "小蚕刚从卵里出来，开始饲养时要做的是什么？",
     "choices": [
       {
         "key": "A",
-        "text": "卵→蛹→幼虫→成虫"
+        "text": "给它们浇开水"
       },
       {
         "key": "B",
-        "text": "卵→幼虫→蛹→成虫"
+        "text": "喂干净的桑叶"
       },
       {
         "key": "C",
-        "text": "幼虫→卵→成虫→蛹"
+        "text": "把它们放进冰箱"
       },
       {
         "key": "D",
-        "text": "蛹→卵→幼虫→成虫"
+        "text": "让它们去游泳"
       }
     ],
     "answer": "B",
-    "explanation": "蚕是完全变态发育。",
-    "verify": "\"卵→幼虫→蛹→成虫\""
+    "explanation": "刚孵出的蚕宝宝要吃桑叶。",
+    "verify": "\"喂干净的桑叶\""
   },
   {
     "id": "cns_p090_q1",
@@ -305879,19 +306551,131 @@
     "verify": "\"蚕在不断长大\""
   },
   {
-    "id": "cns_p091_q1",
-    "topicId": "cns_p091",
+    "id": "cns_p267_q1",
+    "topicId": "cns_p267",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "幼蚕长大以后，会吐丝做成什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "茧"
+      },
+      {
+        "key": "B",
+        "text": "鸟巢"
+      },
+      {
+        "key": "C",
+        "text": "蜘蛛网"
+      },
+      {
+        "key": "D",
+        "text": "贝壳"
+      }
+    ],
+    "answer": "A",
+    "explanation": "幼蚕吐丝结成茧。",
+    "verify": "\"茧\""
+  },
+  {
+    "id": "cns_p267_q2",
+    "topicId": "cns_p267",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "蚕吐丝结茧后，在茧里变成了什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "卵"
+      },
+      {
+        "key": "B",
+        "text": "蛹"
+      },
+      {
+        "key": "C",
+        "text": "蚂蚁"
+      },
+      {
+        "key": "D",
+        "text": "蝴蝶"
+      }
+    ],
+    "answer": "B",
+    "explanation": "蚕在茧中化蛹。",
+    "verify": "\"蛹\""
+  },
+  {
+    "id": "cns_p267_q3",
+    "topicId": "cns_p267",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "「蚕变了新模样」主要是说正在吃桑叶的幼蚕后来怎样了？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "刚从卵里孵出来"
+      },
+      {
+        "key": "B",
+        "text": "还在不停吃桑叶、还没有结茧"
+      },
+      {
+        "key": "C",
+        "text": "吐丝结茧，并在茧里化成蛹"
+      },
+      {
+        "key": "D",
+        "text": "已经长出翅膀飞走了"
+      }
+    ],
+    "answer": "C",
+    "explanation": "新模样是指结茧和茧里的蛹。",
+    "verify": "\"吐丝结茧，并在茧里化成蛹\""
+  },
+  {
+    "id": "cns_p267_q4",
+    "topicId": "cns_p267",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "和正在吃桑叶的幼蚕相比，结茧以后的蚕有什么不同？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "它又变回了卵"
+      },
+      {
+        "key": "B",
+        "text": "它变成了蝗虫"
+      },
+      {
+        "key": "C",
+        "text": "它还在叶子上爬，只是颜色没变"
+      },
+      {
+        "key": "D",
+        "text": "它待在自己吐的茧里，变成了蛹"
+      }
+    ],
+    "answer": "D",
+    "explanation": "结茧化蛹以后，它不再是爬在叶上吃桑叶的幼蚕。",
+    "verify": "\"它待在自己吐的茧里，变成了蛹\""
+  },
+  {
+    "id": "cns_p268_q1",
+    "topicId": "cns_p268",
     "difficulty": "basic",
     "type": "choice",
     "prompt": "从茧里钻出来的是什么？",
     "choices": [
       {
         "key": "A",
-        "text": "蚕蛾"
+        "text": "蚕卵"
       },
       {
         "key": "B",
-        "text": "蚕卵"
+        "text": "蚕蛾"
       },
       {
         "key": "C",
@@ -305902,13 +306686,13 @@
         "text": "蜜蜂"
       }
     ],
-    "answer": "A",
-    "explanation": "蛹羽化成蚕蛾，从茧里钻出。",
+    "answer": "B",
+    "explanation": "蛹变成蚕蛾，从茧里钻出。",
     "verify": "\"蚕蛾\""
   },
   {
-    "id": "cns_p091_q2",
-    "topicId": "cns_p091",
+    "id": "cns_p268_q2",
+    "topicId": "cns_p268",
     "difficulty": "basic",
     "type": "choice",
     "prompt": "蚕蛾有几对翅、几条腿？",
@@ -305919,20 +306703,132 @@
       },
       {
         "key": "B",
-        "text": "两对翅，六条腿"
+        "text": "没有翅，八条腿"
       },
       {
         "key": "C",
-        "text": "没有翅，八条腿"
+        "text": "两对翅，六条腿"
       },
       {
         "key": "D",
         "text": "三对翅，十条腿"
       }
     ],
-    "answer": "B",
-    "explanation": "蚕蛾是昆虫，有两对翅、三对足。",
+    "answer": "C",
+    "explanation": "蚕蛾有两对翅、六条腿。",
     "verify": "\"两对翅，六条腿\""
+  },
+  {
+    "id": "cns_p268_q3",
+    "topicId": "cns_p268",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "茧里的蛹变成蚕蛾以后，接下来会怎样？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "再变回吃桑叶的幼蚕"
+      },
+      {
+        "key": "B",
+        "text": "一直待在茧里不出来"
+      },
+      {
+        "key": "C",
+        "text": "变成青蛙"
+      },
+      {
+        "key": "D",
+        "text": "从茧里钻出来"
+      }
+    ],
+    "answer": "D",
+    "explanation": "蚕蛾会钻出茧。",
+    "verify": "\"从茧里钻出来\""
+  },
+  {
+    "id": "cns_p268_q4",
+    "topicId": "cns_p268",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "钻出茧的蚕蛾，和还在茧里的蛹相比，最明显的不同是什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "蚕蛾有翅，并且已经钻出茧来"
+      },
+      {
+        "key": "B",
+        "text": "蚕蛾又变回了卵"
+      },
+      {
+        "key": "C",
+        "text": "蚕蛾没有身体"
+      },
+      {
+        "key": "D",
+        "text": "蚕蛾还在叶子上吃桑叶并蜕皮"
+      }
+    ],
+    "answer": "A",
+    "explanation": "钻出来的蚕蛾有翅，不再包在茧里。",
+    "verify": "\"蚕蛾有翅，并且已经钻出茧来\""
+  },
+  {
+    "id": "cns_p091_q1",
+    "topicId": "cns_p091",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "昆虫一生经过卵、幼虫、蛹、成虫四个阶段，这种发育叫什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "完全变态"
+      },
+      {
+        "key": "B",
+        "text": "不完全变态"
+      },
+      {
+        "key": "C",
+        "text": "不发育"
+      },
+      {
+        "key": "D",
+        "text": "胎生"
+      }
+    ],
+    "answer": "A",
+    "explanation": "有蛹期、四个阶段都经过，叫完全变态。",
+    "verify": "\"完全变态\""
+  },
+  {
+    "id": "cns_p091_q2",
+    "topicId": "cns_p091",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "不完全变态的昆虫，一生没有哪个阶段？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "卵"
+      },
+      {
+        "key": "B",
+        "text": "蛹"
+      },
+      {
+        "key": "C",
+        "text": "成虫"
+      },
+      {
+        "key": "D",
+        "text": "长大"
+      }
+    ],
+    "answer": "B",
+    "explanation": "不完全变态没有蛹期。",
+    "verify": "\"蛹\""
   },
   {
     "id": "cns_p091_q3",
@@ -305987,7 +306883,7 @@
       }
     ],
     "answer": "D",
-    "explanation": "蝴蝶是完全变态发育。",
+    "explanation": "蝴蝶要经过蛹期，是完全变态。",
     "verify": "\"蝴蝶\""
   },
   {
@@ -306415,6 +307311,34 @@
     "topicId": "cns_p095",
     "difficulty": "challenge",
     "type": "choice",
+    "prompt": "下面哪一句符合月球作为地球卫星的特点？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "它自己发光发热，是一颗恒星"
+      },
+      {
+        "key": "B",
+        "text": "它表面有大片液态水"
+      },
+      {
+        "key": "C",
+        "text": "它是太阳系里最大的行星"
+      },
+      {
+        "key": "D",
+        "text": "它绕着地球转，几乎没有空气，表面有环形山"
+      }
+    ],
+    "answer": "D",
+    "explanation": "月球是地球的卫星，几乎没有空气，表面有环形山。",
+    "verify": "\"它绕着地球转，几乎没有空气，表面有环形山\""
+  },
+  {
+    "id": "cns_p269_q1",
+    "topicId": "cns_p269",
+    "difficulty": "basic",
+    "type": "choice",
     "prompt": "用小石子从高处丢进面粉盘里，模拟的是什么？",
     "choices": [
       {
@@ -306427,16 +307351,100 @@
       },
       {
         "key": "C",
-        "text": "地震"
+        "text": "陨石撞击形成环形山"
       },
       {
         "key": "D",
-        "text": "陨石撞击形成环形山"
+        "text": "地震"
+      }
+    ],
+    "answer": "C",
+    "explanation": "石子落进面粉盘，模拟撞击形成环形山。",
+    "verify": "\"陨石撞击形成环形山\""
+  },
+  {
+    "id": "cns_p269_q2",
+    "topicId": "cns_p269",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "面粉盘里被石子砸出的圆形坑，用来表示月球上的什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "海洋"
+      },
+      {
+        "key": "B",
+        "text": "空气"
+      },
+      {
+        "key": "C",
+        "text": "云"
+      },
+      {
+        "key": "D",
+        "text": "环形山"
       }
     ],
     "answer": "D",
-    "explanation": "这个实验模拟环形山的形成。",
-    "verify": "\"陨石撞击形成环形山\""
+    "explanation": "盘里的坑对应月球表面的环形山。",
+    "verify": "\"环形山\""
+  },
+  {
+    "id": "cns_p269_q3",
+    "topicId": "cns_p269",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "做这个模拟时，落下的石子和接住它的面粉分别代表什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "石子代表撞击物，面粉代表月球表面"
+      },
+      {
+        "key": "B",
+        "text": "石子代表空气，面粉代表海水"
+      },
+      {
+        "key": "C",
+        "text": "石子代表太阳，面粉代表云"
+      },
+      {
+        "key": "D",
+        "text": "石子代表蚕，面粉代表桑叶"
+      }
+    ],
+    "answer": "A",
+    "explanation": "用石子砸面粉，模拟物体撞上月球表面。",
+    "verify": "\"石子代表撞击物，面粉代表月球表面\""
+  },
+  {
+    "id": "cns_p269_q4",
+    "topicId": "cns_p269",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "面粉盘里出现坑以后，这个模拟主要帮助我们理解什么？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "月球上的坑都是人挖的"
+      },
+      {
+        "key": "B",
+        "text": "环形山可以由撞击形成"
+      },
+      {
+        "key": "C",
+        "text": "面粉就是月球的空气"
+      },
+      {
+        "key": "D",
+        "text": "石子落下会让月球长出植物"
+      }
+    ],
+    "answer": "B",
+    "explanation": "盘里的坑是撞出来的，用来理解环形山的一种形成方式。",
+    "verify": "\"环形山可以由撞击形成\""
   },
   {
     "id": "cns_p096_q1",

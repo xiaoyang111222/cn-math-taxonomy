@@ -7,9 +7,9 @@
     "attachments": 0,
     "photo_urls": 0
   },
-  "scope": "官方价表版次（一至六年级上下册）；2026-11-10 核国家中小学智慧教育平台电子教材：一下、二下、三上目录与相关课页已核，一上、二上核到第1单元目录，三下确认「磁极与方向」为辨别方向第4课；同日续核四至六年级六册完整印刷目录（含阅读器页码对应），并补核「让小车动起来」后页至书页36。书号与价表一致。未整书下载。",
+  "scope": "官方价表版次（一至六年级上下册）；2026-11-10 核国家中小学智慧教育平台电子教材：一下、二下、三上目录与相关课页已核，一上、二上核到第1单元目录，三下确认「磁极与方向」为辨别方向第4课；同日续核四至六年级六册完整印刷目录（含阅读器页码对应），并补核「让小车动起来」后页至书页36。书号与价表一致。未整书下载。2026-11-12 续核一上第2单元、二上第2单元、三上与三下印刷目录，并拆补一至三年级遗留合并课（见 g123_split_20261112）。",
   "edition_note": "换版逐年分册进入省级价表，不是 2024 年一次齐套的 12 册修订套书。四至六下在北京 2026 春表仍为旧书号。",
-  "data_changes": "2026-11-10 依官方目录修正 Issue42 一至三年级节点后，同日续按已核四至六年级目录拆分合并课、补独立课、改课名与四下电路课序。新 ID 从 cns_p224 起；cns_p001–cns_p223 不变号（cns_p223=我们来钓鱼）。未 push、未部署。SW VERSION 仍为 v14。",
+  "data_changes": "2026-11-10 依官方目录修正 Issue42 一至三年级节点后，同日续按已核四至六年级目录拆分合并课、补独立课、改课名与四下电路课序。新 ID 从 cns_p224 起；cns_p001–cns_p223 不变号（cns_p223=我们来钓鱼）。2026-11-12 按印刷目录拆补一至三年级遗留合并课，新 ID cns_p261–cns_p269，cns_p001–cns_p260 不改号，不删点。未 push、未部署。SW VERSION 现为 v19。",
   "volumes": [
     {
       "volume": "一上",
@@ -24,7 +24,10 @@
       "page_start": null,
       "page_end": null,
       "copyright_page": "2024 年 7 月第 1 版　2024 年 7 月第 1 次印刷",
-      "toc_note": "电子教材目录已核第1单元「周围的植物」六课，无「植物的根、茎、叶」独立课。版权页原文：2024 年 7 月第 1 版　2024 年 7 月第 1 次印刷（不是 2026）。书号与价表一致。"
+      "copyright_isbn_confirmed": true,
+      "contentId": "5082db8c-82e3-4253-be5a-36a4cc7473a6",
+      "smartedu_url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=5082db8c-82e3-4253-be5a-36a4cc7473a6&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "toc_note": "2026-11-10 已核第1单元「周围的植物」六课，无「植物的根、茎、叶」独立课。版权页原文已见 ISBN 978-7-5191-3978-0，2024 年 7 月第 1 版　2024 年 7 月第 1 次印刷（不是 2026）。2026-11-12 续核第2单元「我们自己」七课（我们的身体、发现生长、游戏中的观察、气味告诉我们、通过感官来发现、观察与比较、做个“时间胶囊”；印刷页 26、29、32、35、38、41、44）。目录没有「保护我们的感官」。单元小结、科学阅读不建点。"
     },
     {
       "volume": "一下",
@@ -56,7 +59,12 @@
       "page_start": null,
       "page_end": null,
       "copyright_page": null,
-      "toc_note": "电子教材目录已核第1单元「造房子」六课，无「牢固的结构」独立课。书号与价表一致。未见版权页原文。"
+      "copyright_isbn_confirmed": false,
+      "contentId": "a27e1141-eb30-4030-a1df-0051cc737afc",
+      "smartedu_url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=a27e1141-eb30-4030-a1df-0051cc737afc&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "reader_file_isbn_param": "9787519144289",
+      "reader_file_isbn_note": "官方阅读器 PDF 文件参数可见 9787519144289，与价表书号数字一致，但不是版权页原文。2026-11-12 版权页未见可辨认 ISBN、版次、印次，不得写成已核版权页书号。",
+      "toc_note": "2026-11-10 已核第1单元「造房子」六课，无「牢固的结构」独立课。2026-11-12 续核第2单元「地球家园」七课（地球家园有什么、我们的校园、我们周围的空气、不同的天气、不同的季节、太阳与白天、夜晚的月亮；印刷页 26、29、32、35、38、41、44）。目录没有「记录天气日历」。单元小结、科学阅读不建点。价表书号 978-7-5191-4428-9 未从版权页确认。"
     },
     {
       "volume": "二下",
@@ -88,7 +96,11 @@
       "page_start": null,
       "page_end": null,
       "copyright_page": null,
-      "toc_note": "电子教材目录已核（天气、水）。观察云为 U1 第6课，书页17、PDF24；水珠从哪里来为 U2 第2课，书页33、PDF40。教材先观察云、后水珠。本轮不拆「天气预报与天气的影响」合并课。书号与价表一致。未见版权页原文。",
+      "copyright_isbn_confirmed": false,
+      "contentId": "c8959f5d-8cb6-4624-aebc-df78b612b332",
+      "reader_file_isbn_param": "9787519144296",
+      "reader_file_isbn_note": "官方阅读器 PDF 文件参数可见 9787519144296，与价表书号数字一致，但不是版权页原文。2026-11-12 版权页未看清 ISBN、版次、印次，不得写成已核版权页书号。",
+      "toc_note": "2026-11-10 已核观察云为 U1 第6课（书页17、PDF24）、水珠从哪里来为 U2 第2课（书页33、PDF40）。2026-11-12 印刷目录：第1单元天气八课，第7课天气预报（印刷页20）、第8课天气的影响（印刷页23），不是一条合并课。第3单元物体的运动八课：运动和位置、各种各样的运动、直线运动和曲线运动、相同距离比快慢、相同时间比快慢、运动和能量、设计和制作“过山车”、测试“过山车”（印刷页58、61、64、67、70、73、76、79）。价表书号 978-7-5191-4429-6 未从版权页确认。单元小结、科学阅读不建点。",
       "smartedu_url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=c8959f5d-8cb6-4624-aebc-df78b612b332&catalogType=tchMaterial&subCatalog=tchMaterial"
     },
     {
@@ -100,11 +112,15 @@
       "also_urls": [
         "https://www.esph.com.cn/docs/2025-01/9ea1b1ef6bb04acdb02de3b84f7b20c4.pdf"
       ],
-      "status": "official_toc_partial",
+      "status": "official_toc",
       "page_start": null,
       "page_end": null,
       "copyright_page": null,
-      "toc_note": "电子教材已确认第1单元「辨别方向」第4课为「磁极与方向」（仓库已有 cns_p085）。未见本册完整目录转写与版权页原文。书号与价表一致。"
+      "copyright_isbn_confirmed": false,
+      "contentId": "67a740b6-4ebe-4965-82cf-6d0e1772d14b",
+      "smartedu_url": "https://basic.smartedu.cn/tchMaterial/detail?contentType=assets_document&contentId=67a740b6-4ebe-4965-82cf-6d0e1772d14b&catalogType=tchMaterial&subCatalog=tchMaterial",
+      "isbn_note": "价表书号仍记 978-7-5191-4796-9。2026-11-12 未从本册版权页或封面确认该 ISBN。阅读器文件名 pdf_1772437165888.pdf，文件参数未见书号。平台条目是教科版、根据2022年版课程标准修订的科学三年级下册。",
+      "toc_note": "2026-11-12 三单元印刷目录已核。第1单元辨别方向八课：根据太阳辨别方向、利用自然物辨别方向、利用磁铁辨别方向、磁极与方向、制作小磁针、设计指南针、制作指南针、用指南针“寻宝”（印刷页2、5、8、11、14、17、20、23）。第2单元动物的一生八课：不同种类的动物、动物的繁殖、迎接蚕宝宝的到来、幼蚕在生长、蚕变了新模样、茧中钻出了蚕蛾、昆虫的一生、动物的生命周期（印刷页30、33、36、39、42、45、48、51）。第3单元只有一个地球八课：地球是我们的家园、水的星球、地球的卫星、我们来造“环形山”、发光发热的太阳、一天中影子的变化、地球的“兄弟姐妹”、制作地球科普海报（印刷页58、61、64、67、70、73、76、79）。目录没有「制作和使用指南针」「蚕的一生」。单元小结、科学阅读不建点。ISBN 未从版权页确认。"
     },
     {
       "volume": "四上",
@@ -365,5 +381,46 @@
       "科学阅读"
     ],
     "no_moon_phase_node": "六下官方只有日食，未新增月相节点；g6b_rishi 改名为日食"
+  },
+  "g123_split_20261112": {
+    "verified_on": "2026-11-12",
+    "source": "国家中小学智慧教育平台官方阅读器印刷目录，目视核对。未下载教材。印刷页码只写在本文档，不写入 topics 或 questions。",
+    "not_topics": ["单元小结", "科学阅读"],
+    "ids_unchanged": "cns_p001–cns_p260",
+    "new_ids": {
+      "cns_p261": "g3a_yingxiang 天气的影响",
+      "cns_p262": "g3a_tongshijian 相同时间比快慢",
+      "cns_p263": "g3a_ceshiguoshan 测试“过山车”",
+      "cns_p264": "g3b_xiaocizhen 制作小磁针",
+      "cns_p265": "g3b_shejizhinan 设计指南针",
+      "cns_p266": "g3b_xunbao 用指南针“寻宝”",
+      "cns_p267": "g3b_xinmoyang 蚕变了新模样",
+      "cns_p268": "g3b_caner 茧中钻出了蚕蛾",
+      "cns_p269": "g3b_huanxingshan 我们来造“环形山”"
+    },
+    "renames": {
+      "cns_p066": "天气预报与天气的影响 → 天气预报",
+      "cns_p079": "比较运动的快慢 → 相同距离比快慢",
+      "cns_p081": "设计和测试「过山车」 → 设计和制作“过山车”",
+      "cns_p086": "制作和使用指南针 → 制作指南针",
+      "cns_p089": "蚕的一生 → 迎接蚕宝宝的到来",
+      "cns_p090": "幼蚕的生长 → 幼蚕在生长",
+      "cns_p091": "蚕蛾与昆虫的一生 → 昆虫的一生",
+      "cns_p095": "地球的卫星——月球 → 地球的卫星"
+    },
+    "kept_off_official_chain": {
+      "cns_p015": "保护我们的感官。侧枝 soft ← 通过感官来发现。官方链：做个时间胶囊 → 观察物体的特征。",
+      "cns_p045": "记录天气日历。保留 hard ← 不同的天气。官方链：夜晚的月亮 → 恐龙的故事。"
+    },
+    "counts": {
+      "1上": 15,
+      "2上": 15,
+      "3上": 24,
+      "3下": 24,
+      "science_topics": 269
+    },
+    "sw": "v19",
+    "pushed": false,
+    "deployed": false
   }
 }

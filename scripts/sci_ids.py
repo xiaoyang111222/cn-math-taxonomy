@@ -67,7 +67,7 @@ KEY_IDS = {
     "g3a_celiang": "cns_p063",  # 测量气温
     "g3a_jiangshui": "cns_p064",  # 测量降水量
     "g3a_feng": "cns_p065",  # 观测风
-    "g3a_yubao": "cns_p066",  # 天气预报与天气的影响
+    "g3a_yubao": "cns_p066",  # 天气预报
     "g3a_zhengfa": "cns_p067",  # 水到哪里去了
     "g3a_ningjie": "cns_p068",  # 水珠从哪里来
     "g3a_yun": "cns_p069",  # 观察云
@@ -80,23 +80,23 @@ KEY_IDS = {
     "g3a_weizhi": "cns_p076",  # 运动和位置
     "g3a_yundong": "cns_p077",  # 各种各样的运动
     "g3a_zhixian": "cns_p078",  # 直线运动和曲线运动
-    "g3a_kuaiman": "cns_p079",  # 比较运动的快慢
+    "g3a_kuaiman": "cns_p079",  # 相同距离比快慢
     "g3a_nengliang": "cns_p080",  # 运动和能量
-    "g3a_guoshan": "cns_p081",  # 设计和测试「过山车」
+    "g3a_guoshan": "cns_p081",  # 设计和制作“过山车”
     "g3b_taiyang": "cns_p082",  # 根据太阳辨别方向
     "g3b_ziranwu": "cns_p083",  # 利用自然物辨别方向
     "g3b_cizhen": "cns_p084",  # 利用磁铁辨别方向
     "g3b_ciji": "cns_p085",  # 磁极与方向
-    "g3b_zhinanzhen": "cns_p086",  # 制作和使用指南针
+    "g3b_zhinanzhen": "cns_p086",  # 制作指南针
     "g3b_zhonglei": "cns_p087",  # 不同种类的动物
     "g3b_fanzhi": "cns_p088",  # 动物的繁殖
-    "g3b_can": "cns_p089",  # 蚕的一生
-    "g3b_youcan": "cns_p090",  # 幼蚕的生长
-    "g3b_cane": "cns_p091",  # 蚕蛾与昆虫的一生
+    "g3b_can": "cns_p089",  # 迎接蚕宝宝的到来
+    "g3b_youcan": "cns_p090",  # 幼蚕在生长
+    "g3b_cane": "cns_p091",  # 昆虫的一生
     "g3b_zhouqi": "cns_p092",  # 动物的生命周期
     "g3b_jiayuan": "cns_p093",  # 地球是我们的家园
     "g3b_shuixingqiu": "cns_p094",  # 水的星球
-    "g3b_yueqiu": "cns_p095",  # 地球的卫星——月球
+    "g3b_yueqiu": "cns_p095",  # 地球的卫星
     "g3b_fare": "cns_p096",  # 发光发热的太阳
     "g3b_yingzi": "cns_p097",  # 一天中影子的变化
     "g3b_xiongdi": "cns_p098",  # 地球的「兄弟姐妹」
@@ -262,4 +262,13 @@ KEY_IDS = {
     "g6b_bansuixianxiang": "cns_p258",  # 变化中伴随的现象
     "g6b_shengminghuaxue": "cns_p259",  # 生命体中的化学变化
     "g6b_meilihuaxue": "cns_p260",  # 美丽的化学变化
+    "g3a_yingxiang": "cns_p261",  # 天气的影响
+    "g3a_tongshijian": "cns_p262",  # 相同时间比快慢
+    "g3a_ceshiguoshan": "cns_p263",  # 测试“过山车”
+    "g3b_xiaocizhen": "cns_p264",  # 制作小磁针
+    "g3b_shejizhinan": "cns_p265",  # 设计指南针
+    "g3b_xunbao": "cns_p266",  # 用指南针“寻宝”
+    "g3b_xinmoyang": "cns_p267",  # 蚕变了新模样
+    "g3b_caner": "cns_p268",  # 茧中钻出了蚕蛾
+    "g3b_huanxingshan": "cns_p269",  # 我们来造“环形山”
 }
