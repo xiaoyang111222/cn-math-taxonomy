@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """把初中化学草稿编译进 data/topics.json、dependencies.json、questions.json、课标文件。
 
-可以重复运行：先去掉已有的 cnk_ 知识点和 cks- 课标条目，再按脚本重新写入。
+可以重复运行：先去掉已有的 cnk_j 知识点和 cks-2022 课标条目，再按脚本重新写入初中。
+不要碰 cnk_h、cks-hs-2017、chemistry_senior。高中化学由 scripts/chem_hs_build.py 单独编译。
 不改数学、英语、物理、语文、科学、道德与法治、历史、地理、生物的知识点、先修、题目和课标。
 先修边只对化学边做传递约简。登记过的示意图在编译题目时写入 figure。
 
@@ -50,7 +51,8 @@ def dump(name, data):
 
 
 def is_chem_topic_id(tid):
-    return str(tid).startswith("cnk_")
+    """初中构建可以替换的化学点。只认 cnk_j，cnk_h 留给高中构建。"""
+    return str(tid).startswith("cnk_j")
 
 
 def reaches(adj, src, dst, hard_only):
@@ -184,9 +186,10 @@ def main():
         return 1
 
     base_topics = [t for t in topics if not is_chem_topic_id(t.get("id"))]
-    base_deps = [e for e in deps if not is_chem_topic_id(e.get("topicId")) and not is_chem_topic_id(e.get("prerequisiteId"))]
+    # 只拆掉「后续点是初中」的边。高中点硬连 cnk_j 时 topicId 是 cnk_h，必须留着。
+    base_deps = [e for e in deps if not is_chem_topic_id(e.get("topicId"))]
     base_questions = [q for q in questions if not is_chem_topic_id(q.get("topicId"))]
-    base_items = [it for it in standards.get("items", []) if not str(it.get("id", "")).startswith("cks-")]
+    base_items = [it for it in standards.get("items", []) if not str(it.get("id", "")).startswith("cks-2022")]
 
     id_of_std, new_items = build_standards()
     used_std = {t["std"] for t in TOPICS}
@@ -383,9 +386,9 @@ def main():
     again_q = load("questions.json")
     again_s = load("cn-curriculum-standards.json")
     again_topics = [t for t in again_t if not is_chem_topic_id(t.get("id"))]
-    again_deps = [e for e in again_d if not is_chem_topic_id(e.get("topicId")) and not is_chem_topic_id(e.get("prerequisiteId"))]
+    again_deps = [e for e in again_d if not is_chem_topic_id(e.get("topicId"))]
     again_qs = [q for q in again_q if not is_chem_topic_id(q.get("topicId"))]
-    again_items = [it for it in again_s.get("items", []) if not str(it.get("id", "")).startswith("cks-")]
+    again_items = [it for it in again_s.get("items", []) if not str(it.get("id", "")).startswith("cks-2022")]
     if again_topics != base_topics or again_deps != base_deps or again_qs != base_questions or again_items != base_items:
         print("其他学科数据在写回后发生了变化", file=sys.stderr)
         return 1

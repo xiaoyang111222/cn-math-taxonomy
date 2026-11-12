@@ -124,7 +124,7 @@
     16: ['选必四', '选必四 · 选择性必修第四册']
   };
   function gradeWord(grade) {
-    if ((subject === 'english' || subject === 'physics') && EN_BOOK[grade]) return EN_BOOK[grade][0];
+    if ((subject === 'english' || subject === 'physics' || subject === 'chemistry') && EN_BOOK[grade]) return EN_BOOK[grade][0];
     if (grade === 10) return '高一';
     if (grade === 11) return '高二';
     if (grade === 12) return '选必一';
@@ -133,7 +133,7 @@
     return CN[grade] + '年级';
   }
   function gradeLabel(topic) {
-    if ((subject === 'english' || subject === 'physics') && EN_BOOK[topic.grade]) return EN_BOOK[topic.grade][1];
+    if ((subject === 'english' || subject === 'physics' || subject === 'chemistry') && EN_BOOK[topic.grade]) return EN_BOOK[topic.grade][1];
     if (topic.grade === 10) return '高一 · 必修第一册';
     if (topic.grade === 11) return '高二 · 必修第二册';
     if (topic.grade === 12) return '选必一 · 选择性必修第一册';
@@ -157,7 +157,8 @@
     var model = /^(高[一二]|选必[一二三]) (数学建模|数学探究) (\S+)$/.exec(text);
     if (model) return model[2] + ' ' + model[3];
     var junior = /^\S+\s+(第\S+章)\s+(.+)$/.exec(text);
-    if (junior) return junior[1] + ' ' + junior[2].replace(/\s+\d+(?:\.\d+)*$/, '');
+    if (junior) return junior[1] + ' ' + junior[2].replace(/\s+(?:\d+(?:\.\d+)*|整理与提升|实验活动\d+)$/, '');
+    if (/^必修[一二三]\s+绪言$/.test(text)) return '绪言';
     return text;
   }
 
@@ -434,7 +435,7 @@
       box.replaceChildren(el('div', { class: 'detail-empty' },
         el('h1', { text: '选择一个知识点' }),
         el('p', { text: '可以搜索，也可以按年级、册、章展开。选中之后，中间只画它附近的先修，以及后面一层会用到它的知识点。' })));
-      document.title = subject === 'english' ? '知识图谱 · 英语' : subject === 'physics' ? '知识图谱 · 物理' : subject === 'chinese' ? '知识图谱 · 语文' : subject === 'science' ? '知识图谱 · 小学科学' : subject === 'morality' ? '知识图谱 · 道德与法治' : subject === 'history' ? '知识图谱 · 初中历史' : subject === 'geography' ? '知识图谱 · 初中地理' : subject === 'biology' ? '知识图谱 · 初中生物' : subject === 'chemistry' ? '知识图谱 · 初中化学' : '知识图谱 · 中小学·高中知识图谱';
+      document.title = subject === 'english' ? '知识图谱 · 英语' : subject === 'physics' ? '知识图谱 · 物理' : subject === 'chinese' ? '知识图谱 · 语文' : subject === 'science' ? '知识图谱 · 小学科学' : subject === 'morality' ? '知识图谱 · 道德与法治' : subject === 'history' ? '知识图谱 · 初中历史' : subject === 'geography' ? '知识图谱 · 初中地理' : subject === 'biology' ? '知识图谱 · 初中生物' : subject === 'chemistry' ? '知识图谱 · 化学' : '知识图谱 · 中小学·高中知识图谱';
       return;
     }
     var topic = byId.get(selected);
@@ -1089,17 +1090,16 @@
     if (subject === 'chemistry') {
       document.querySelectorAll('#stage-tabs [data-stage]').forEach(function (button) {
         var chemStage = button.getAttribute('data-stage');
-        button.hidden = chemStage === 'p' || chemStage === 'h';
+        button.hidden = chemStage === 'p';
       });
       var chemGrade = $('fGrade');
       chemGrade.replaceChildren();
       chemGrade.append(el('option', { value: '', text: '全部年级' }));
-      [9].forEach(function (g) {
-        chemGrade.append(el('option', { value: String(g), text: CN[g] + '年级' }));
-      });
+      chemGrade.append(el('option', { value: '9', text: '九年级' }));
+      chemGrade.append(el('option', { value: '10', text: '必修第一册' }));
       var chemSample = $('pick-sample');
       if (chemSample) chemSample.textContent = '先看看「质量守恒定律」';
-      document.title = '知识图谱 · 初中化学';
+      document.title = '知识图谱 · 化学';
       return;
     }
     if (subject === 'chinese') {
@@ -1151,7 +1151,7 @@
   function applyQuery() {
     var params = new URLSearchParams(location.search);
     var gradeValue = params.get('grade') || '';
-    var gradeOk = subject === 'english' ? /^(?:[3-9]|1[0-6])$/ : subject === 'physics' ? /^(?:[89]|1[0-5])$/ : subject === 'history' ? /^[7-9]$/ : subject === 'geography' || subject === 'biology' ? /^[78]$/ : subject === 'chemistry' ? /^9$/ : subject === 'chinese' || subject === 'morality' ? /^[1-9]$/ : subject === 'science' ? /^[1-6]$/ : /^(?:[1-9]|1[0-4])$/;
+    var gradeOk = subject === 'english' ? /^(?:[3-9]|1[0-6])$/ : subject === 'physics' ? /^(?:[89]|1[0-5])$/ : subject === 'history' ? /^[7-9]$/ : subject === 'geography' || subject === 'biology' ? /^[78]$/ : subject === 'chemistry' ? /^(?:9|1[0-4])$/ : subject === 'chinese' || subject === 'morality' ? /^[1-9]$/ : subject === 'science' ? /^[1-6]$/ : /^(?:[1-9]|1[0-4])$/;
     if (gradeOk.test(gradeValue)) grade = gradeValue;
     var stageValue = params.get('stage') || '';
     if (stageValue === 'p' || stageValue === 'j' || stageValue === 'h') stage = stageValue;

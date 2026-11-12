@@ -29560,5 +29560,269 @@
     "prerequisiteId": "cnd_j101",
     "strength": "soft",
     "reason": "教学上宜先知道新发展理念是创新、协调、绿色、开放、共享，再判断高质量发展是不是只把速度降下来。高质量发展的题面可以单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnk_h002",
+    "prerequisiteId": "cnk_h001",
+    "strength": "soft",
+    "reason": "按人教版化学必修第一册的教学顺序，先学「绪言」，再学「物质的分类及转化」。"
+  },
+  {
+    "topicId": "cnk_h004",
+    "prerequisiteId": "cnk_h003",
+    "strength": "soft",
+    "reason": "按人教版化学必修第一册的教学顺序，先学「离子反应」，再学「氧化还原反应」。"
+  },
+  {
+    "topicId": "cnk_h006",
+    "prerequisiteId": "cnk_h005",
+    "strength": "soft",
+    "reason": "按人教版化学必修第一册的教学顺序，先学「整理与提升」，再学「钠及其化合物」。"
+  },
+  {
+    "topicId": "cnk_h007",
+    "prerequisiteId": "cnk_h006",
+    "strength": "soft",
+    "reason": "按人教版化学必修第一册的教学顺序，先学「钠及其化合物」，再学「氯及其化合物」。"
+  },
+  {
+    "topicId": "cnk_h008",
+    "prerequisiteId": "cnk_h007",
+    "strength": "soft",
+    "reason": "按人教版化学必修第一册的教学顺序，先学「氯及其化合物」，再学「物质的量」。"
+  },
+  {
+    "topicId": "cnk_h010",
+    "prerequisiteId": "cnk_h009",
+    "strength": "soft",
+    "reason": "按人教版化学必修第一册的教学顺序，先学「整理与提升」，再学「实验活动1 配制一定物质的量浓度的溶液」。"
+  },
+  {
+    "topicId": "cnk_h011",
+    "prerequisiteId": "cnk_h010",
+    "strength": "soft",
+    "reason": "按人教版化学必修第一册的教学顺序，先学「实验活动1 配制一定物质的量浓度的溶液」，再学「铁及其化合物」。"
+  },
+  {
+    "topicId": "cnk_h012",
+    "prerequisiteId": "cnk_h011",
+    "strength": "soft",
+    "reason": "按人教版化学必修第一册的教学顺序，先学「铁及其化合物」，再学「金属材料」。"
+  },
+  {
+    "topicId": "cnk_h014",
+    "prerequisiteId": "cnk_h013",
+    "strength": "soft",
+    "reason": "按人教版化学必修第一册的教学顺序，先学「整理与提升」，再学「实验活动2 铁及其化合物的性质」。"
+  },
+  {
+    "topicId": "cnk_h015",
+    "prerequisiteId": "cnk_h014",
+    "strength": "soft",
+    "reason": "按人教版化学必修第一册的教学顺序，先学「实验活动2 铁及其化合物的性质」，再学「原子结构与元素周期表」。"
+  },
+  {
+    "topicId": "cnk_h019",
+    "prerequisiteId": "cnk_h018",
+    "strength": "soft",
+    "reason": "按人教版化学必修第一册的教学顺序，先学「整理与提升」，再学「实验活动3 同周期、同主族元素性质的递变」。"
+  },
+  {
+    "topicId": "cnk_h001",
+    "prerequisiteId": "cnk_j001",
+    "strength": "hard",
+    "reason": "高中绪言讨论化学研究什么，要先具备初中对化学研究对象的认识。"
+  },
+  {
+    "topicId": "cnk_h002",
+    "prerequisiteId": "cnk_j014",
+    "strength": "hard",
+    "reason": "按组成分类要先会看化学式，知道元素和化合价怎样表示物质。"
+  },
+  {
+    "topicId": "cnk_h002",
+    "prerequisiteId": "cnk_j002",
+    "strength": "hard",
+    "reason": "讨论转化，要先会区分物理变化和化学变化、物理性质和化学性质。"
+  },
+  {
+    "topicId": "cnk_h003",
+    "prerequisiteId": "cnk_h002",
+    "strength": "hard",
+    "reason": "认识电解质和离子，要先会按组成给物质分类。"
+  },
+  {
+    "topicId": "cnk_h003",
+    "prerequisiteId": "cnk_j039",
+    "strength": "hard",
+    "reason": "酸在水中电离出的氢离子，是写酸参加的离子反应的基础。"
+  },
+  {
+    "topicId": "cnk_h003",
+    "prerequisiteId": "cnk_j040",
+    "strength": "hard",
+    "reason": "碱在水中电离出的氢氧根离子，是写碱参加的离子反应的基础。"
+  },
+  {
+    "topicId": "cnk_h003",
+    "prerequisiteId": "cnk_j042",
+    "strength": "hard",
+    "reason": "盐在水中电离出的阴阳离子，是写盐参加的离子反应的基础。"
+  },
+  {
+    "topicId": "cnk_h004",
+    "prerequisiteId": "cnk_h002",
+    "strength": "hard",
+    "reason": "判断化合价升降，要先知道物质怎样转化、反应前后各是什么物质。"
+  },
+  {
+    "topicId": "cnk_h005",
+    "prerequisiteId": "cnk_h003",
+    "strength": "hard",
+    "reason": "复习本章要先会离子反应。"
+  },
+  {
+    "topicId": "cnk_h005",
+    "prerequisiteId": "cnk_h004",
+    "strength": "hard",
+    "reason": "复习本章要先会氧化还原反应。"
+  },
+  {
+    "topicId": "cnk_h006",
+    "prerequisiteId": "cnk_h004",
+    "strength": "hard",
+    "reason": "钠与氧气、与水的反应都有化合价变化，要用氧化还原来认识。"
+  },
+  {
+    "topicId": "cnk_h006",
+    "prerequisiteId": "cnk_j030",
+    "strength": "hard",
+    "reason": "钠很活泼，比较它和别的金属时要用到金属活动性。"
+  },
+  {
+    "topicId": "cnk_h006",
+    "prerequisiteId": "cnk_j006",
+    "strength": "hard",
+    "reason": "钠在空气中燃烧要先知道氧气能支持燃烧、能与金属反应。"
+  },
+  {
+    "topicId": "cnk_h007",
+    "prerequisiteId": "cnk_h004",
+    "strength": "hard",
+    "reason": "氯气常作氧化剂，化合价从 0 降到 -1 或进入次氯酸盐，要用氧化还原认识。"
+  },
+  {
+    "topicId": "cnk_h008",
+    "prerequisiteId": "cnk_j015",
+    "strength": "hard",
+    "reason": "摩尔质量由相对分子质量换算而来，要先会根据化学式计算相对分子质量。"
+  },
+  {
+    "topicId": "cnk_h009",
+    "prerequisiteId": "cnk_h006",
+    "strength": "hard",
+    "reason": "复习本章要先会钠及其化合物。"
+  },
+  {
+    "topicId": "cnk_h009",
+    "prerequisiteId": "cnk_h007",
+    "strength": "hard",
+    "reason": "复习本章要先会氯及其化合物。"
+  },
+  {
+    "topicId": "cnk_h009",
+    "prerequisiteId": "cnk_h008",
+    "strength": "hard",
+    "reason": "复习本章要先会物质的量。"
+  },
+  {
+    "topicId": "cnk_h010",
+    "prerequisiteId": "cnk_h008",
+    "strength": "hard",
+    "reason": "配制一定物质的量浓度的溶液，要先会用 c＝n/V 和摩尔质量计算溶质的量。"
+  },
+  {
+    "topicId": "cnk_h010",
+    "prerequisiteId": "cnk_j036",
+    "strength": "hard",
+    "reason": "配制溶液的计算、称量和溶解，与初中配制一定质量分数溶液用的是同一类基本操作。"
+  },
+  {
+    "topicId": "cnk_h011",
+    "prerequisiteId": "cnk_h004",
+    "strength": "hard",
+    "reason": "铁在化合物中有 +2、+3 价，转化时常有化合价变化。"
+  },
+  {
+    "topicId": "cnk_h011",
+    "prerequisiteId": "cnk_j030",
+    "strength": "hard",
+    "reason": "铁能置换铜，是因为铁的金属活动性比铜强。"
+  },
+  {
+    "topicId": "cnk_h012",
+    "prerequisiteId": "cnk_j028",
+    "strength": "hard",
+    "reason": "高中讲金属材料，要先有初中对金属材料和合金的认识。"
+  },
+  {
+    "topicId": "cnk_h013",
+    "prerequisiteId": "cnk_h011",
+    "strength": "hard",
+    "reason": "复习本章要先会铁及其化合物。"
+  },
+  {
+    "topicId": "cnk_h013",
+    "prerequisiteId": "cnk_h012",
+    "strength": "hard",
+    "reason": "复习本章要先会金属材料。"
+  },
+  {
+    "topicId": "cnk_h014",
+    "prerequisiteId": "cnk_h011",
+    "strength": "hard",
+    "reason": "做铁及其化合物的实验，要先知道铁的典型性质和两种价态。"
+  },
+  {
+    "topicId": "cnk_h014",
+    "prerequisiteId": "cnk_j004",
+    "strength": "hard",
+    "reason": "取用药品、观察现象要先会化学实验的基本操作和安全规则。"
+  },
+  {
+    "topicId": "cnk_h015",
+    "prerequisiteId": "cnk_j010",
+    "strength": "hard",
+    "reason": "认识原子核、质子和核外电子，要先有初中的原子结构。"
+  },
+  {
+    "topicId": "cnk_h015",
+    "prerequisiteId": "cnk_j011",
+    "strength": "hard",
+    "reason": "元素是质子数相同的一类原子，周期表按这个质子数编排。"
+  },
+  {
+    "topicId": "cnk_h016",
+    "prerequisiteId": "cnk_h015",
+    "strength": "hard",
+    "reason": "元素周期律建立在原子结构和元素周期表之上。"
+  },
+  {
+    "topicId": "cnk_h017",
+    "prerequisiteId": "cnk_h016",
+    "strength": "hard",
+    "reason": "典型的离子化合物常由活泼金属和活泼非金属组成，这与元素在周期表中的位置有关。"
+  },
+  {
+    "topicId": "cnk_h018",
+    "prerequisiteId": "cnk_h017",
+    "strength": "hard",
+    "reason": "复习本章要先会化学键。"
+  },
+  {
+    "topicId": "cnk_h019",
+    "prerequisiteId": "cnk_h016",
+    "strength": "hard",
+    "reason": "比较同周期、同主族元素性质，要先知道周期律预期的递变方向。"
   }
 ]

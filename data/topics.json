@@ -94082,5 +94082,568 @@
     "lesson": "实现伟大梦想",
     "frames": "民族复兴梦；我们都是追梦人",
     "root_reason": "判断中国梦的本质以及追梦要落实为行动，可以凭题面单独成立，不必先掌握两步走的年份或统一方针。"
+  },
+  {
+    "id": "cnk_h001",
+    "name": "绪言",
+    "domain": "科学探究与化学实验",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 绪言",
+    "type": "conceptual",
+    "description": "化学在原子、分子层次上研究物质的组成、结构、性质、转化和应用。高中化学从这里接着往下学。",
+    "mastery_criteria": [
+      "能说出化学研究的对象和层次",
+      "能把生成新物质的变化和只改变位置、状态的变化区分开"
+    ],
+    "diagnostic_question": {
+      "question": "化学主要研究的是哪一类问题？",
+      "answer": "物质的组成、结构、性质、转化及其应用"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.EX.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h002",
+    "name": "物质的分类及转化",
+    "domain": "物质的组成与结构",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第一章 物质及其变化 1.1",
+    "type": "conceptual",
+    "description": "按组成把物质分成混合物与纯净物、单质与化合物、氧化物，并区分物理变化和化学变化。",
+    "mastery_criteria": [
+      "能按组成对常见物质分类",
+      "能判断一个变化有没有新物质生成"
+    ],
+    "diagnostic_question": {
+      "question": "下列物质属于纯净物的是？",
+      "answer": "蒸馏水"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.ST.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h003",
+    "name": "离子反应",
+    "domain": "物质的化学变化",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第一章 物质及其变化 1.2",
+    "type": "procedural",
+    "description": "电解质在水溶液中电离出离子。离子方程式表示同一类型离子反应的实质。",
+    "mastery_criteria": [
+      "能判断常见物质是不是电解质",
+      "能判断简单离子方程式是否符合客观事实和守恒"
+    ],
+    "diagnostic_question": {
+      "question": "下列物质属于电解质的是？",
+      "answer": "氯化钠"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.ST.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h004",
+    "name": "氧化还原反应",
+    "domain": "物质的化学变化",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第一章 物质及其变化 1.3",
+    "type": "reasoning",
+    "description": "氧化还原反应的特征是有元素化合价变化。化合价降低的物质是氧化剂，化合价升高的物质是还原剂。",
+    "mastery_criteria": [
+      "能用化合价变化判断氧化还原反应",
+      "能指出氧化剂和还原剂"
+    ],
+    "diagnostic_question": {
+      "question": "氧化还原反应最明显的特征是？",
+      "answer": "反应前后有元素的化合价发生变化"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.ST.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h005",
+    "name": "整理与提升",
+    "domain": "物质的化学变化",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第一章 物质及其变化 整理与提升",
+    "type": "reasoning",
+    "description": "综合第一章：物质分类与转化、离子反应、氧化还原反应。不提前使用钠、氯、物质的量或元素周期律。",
+    "mastery_criteria": [
+      "能把分类、离子反应和氧化还原放到一起判断",
+      "能指出哪一类反应有化合价变化"
+    ],
+    "diagnostic_question": {
+      "question": "下列变化既是化学变化，又是氧化还原反应的是？",
+      "answer": "碳在氧气中燃烧生成二氧化碳"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.ST.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.ST.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.ST.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h006",
+    "name": "钠及其化合物",
+    "domain": "物质的性质与应用",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第二章 海水中的重要元素——钠和氯 2.1",
+    "type": "conceptual",
+    "description": "钠是活泼金属。钠与氧气、与水反应，碳酸钠和碳酸氢钠是两种常见的钠的化合物。",
+    "mastery_criteria": [
+      "能说出钠与氧气、与水反应的主要现象和产物",
+      "能用性质区分碳酸钠和碳酸氢钠"
+    ],
+    "diagnostic_question": {
+      "question": "钠在空气中燃烧，生成的淡黄色固体主要是？",
+      "answer": "过氧化钠"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.IN.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h007",
+    "name": "氯及其化合物",
+    "domain": "物质的性质与应用",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第二章 海水中的重要元素——钠和氯 2.2",
+    "type": "conceptual",
+    "description": "氯气是黄绿色、有刺激性气味的气体。氯水的漂白与次氯酸有关，氯气与碱反应可得到次氯酸盐。",
+    "mastery_criteria": [
+      "能说出氯气和次氯酸的主要性质",
+      "能说明氯水漂白与久置失效的原因"
+    ],
+    "diagnostic_question": {
+      "question": "氯气通常是怎样的气体？",
+      "answer": "黄绿色、有刺激性气味"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.IN.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.IN.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h008",
+    "name": "物质的量",
+    "domain": "物质的组成与结构",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第二章 海水中的重要元素——钠和氯 2.3",
+    "type": "procedural",
+    "description": "物质的量把宏观质量、微粒数目和溶液组成联系起来。n＝m/M，溶液中 c＝n/V。",
+    "mastery_criteria": [
+      "能说出物质的量的符号和单位",
+      "能用整数相对原子质量完成 n＝m/M 或 c＝n/V 的简单计算"
+    ],
+    "diagnostic_question": {
+      "question": "物质的量的符号和常用单位，正确的是？",
+      "answer": "符号是 n，单位是摩尔"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.ST.04",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h009",
+    "name": "整理与提升",
+    "domain": "物质的性质与应用",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第二章 海水中的重要元素——钠和氯 整理与提升",
+    "type": "reasoning",
+    "description": "综合第二章：钠及其化合物、氯及其化合物、物质的量。不提前使用铁的价态或元素周期律。",
+    "mastery_criteria": [
+      "能把钠、氯的典型性质和物质的量放在一起判断",
+      "能完成与本章有关的简单物质的量计算"
+    ],
+    "diagnostic_question": {
+      "question": "下列关于钠和氯的说法，正确的是？",
+      "answer": "钠与水反应生成氢氧化钠和氢气，氯水的漂白主要靠次氯酸"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.IN.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.ST.04",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h010",
+    "name": "实验活动1 配制一定物质的量浓度的溶液",
+    "domain": "科学探究与化学实验",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第二章 海水中的重要元素——钠和氯 实验活动1",
+    "type": "procedural",
+    "description": "实验活动 1 要配出指定体积、指定物质的量浓度的溶液。固体先在烧杯中溶解，再转入容量瓶定容。",
+    "mastery_criteria": [
+      "能说出这个实验的目的和容量瓶的作用",
+      "能判断定容时俯视或仰视对浓度的影响"
+    ],
+    "diagnostic_question": {
+      "question": "实验活动「配制一定物质的量浓度的溶液」主要要完成的是？",
+      "answer": "配出体积和物质的量浓度都符合要求的溶液"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.EX.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.ST.04",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h011",
+    "name": "铁及其化合物",
+    "domain": "物质的性质与应用",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第三章 铁 金属材料 3.1",
+    "type": "conceptual",
+    "description": "铁是常见金属。铁能置换活动性比它弱的金属，铁的化合物里要区分 +2 价和 +3 价。",
+    "mastery_criteria": [
+      "能说出铁与铜盐溶液反应的产物",
+      "能用硫氰化钾检验三价铁"
+    ],
+    "diagnostic_question": {
+      "question": "把铁钉放入硫酸铜溶液，能观察到的主要变化是？",
+      "answer": "铁钉表面出现红色固体，溶液由蓝变浅"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.IN.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.IN.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h012",
+    "name": "金属材料",
+    "domain": "物质的性质与应用",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第三章 铁 金属材料 3.2",
+    "type": "application",
+    "description": "金属材料包括纯金属和合金。合金的硬度、熔点等性能往往与成分金属不同。生铁和钢都是铁的合金。",
+    "mastery_criteria": [
+      "能说出合金与纯金属的差别",
+      "能举出铁的合金在生活中的一类用途"
+    ],
+    "diagnostic_question": {
+      "question": "合金是？",
+      "answer": "一种金属与其他金属或非金属熔合而成的具有金属特性的物质"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.IN.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h013",
+    "name": "整理与提升",
+    "domain": "物质的性质与应用",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第三章 铁 金属材料 整理与提升",
+    "type": "reasoning",
+    "description": "综合第三章：铁及其化合物、金属材料。不提前使用元素周期律或化学键。",
+    "mastery_criteria": [
+      "能综合判断铁的价态变化和金属材料的用途",
+      "能把铁的化学性质与合金的用途区分开"
+    ],
+    "diagnostic_question": {
+      "question": "下列说法正确的是？",
+      "answer": "铁能从硫酸铜溶液中置换出铜，钢是铁的合金"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.IN.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.IN.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h014",
+    "name": "实验活动2 铁及其化合物的性质",
+    "domain": "科学探究与化学实验",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第三章 铁 金属材料 实验活动2",
+    "type": "procedural",
+    "description": "实验活动 2 通过铁与盐溶液、酸的反应以及离子检验，认识铁及其化合物的性质。取用药品要少量，废液按实验室要求处理。",
+    "mastery_criteria": [
+      "能说出这个实验要认识的性质",
+      "能根据现象判断铁的价态或活动性"
+    ],
+    "diagnostic_question": {
+      "question": "实验活动「铁及其化合物的性质」主要要认识的是？",
+      "answer": "铁单质和铁的化合物有哪些典型反应"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.EX.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.IN.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h015",
+    "name": "原子结构与元素周期表",
+    "domain": "物质的组成与结构",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第四章 物质结构 元素周期律 4.1",
+    "type": "conceptual",
+    "description": "原子由原子核和核外电子构成。原子序数等于质子数。元素周期表按原子序数排列，横行是周期，纵列是族。",
+    "mastery_criteria": [
+      "能说出原子序数与质子数、核外电子数的关系",
+      "能在周期表里区分周期和族"
+    ],
+    "diagnostic_question": {
+      "question": "决定元素种类的是原子中的？",
+      "answer": "质子数"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.ST.05",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h016",
+    "name": "元素周期律",
+    "domain": "物质的组成与结构",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第四章 物质结构 元素周期律 4.2",
+    "type": "reasoning",
+    "description": "元素性质随原子序数递增呈周期性变化。同周期从左到右金属性减弱，同主族从上到下金属性增强。",
+    "mastery_criteria": [
+      "能说出同周期、同主族元素性质的递变方向",
+      "能用最外层电子数解释碱金属和卤素的相似性"
+    ],
+    "diagnostic_question": {
+      "question": "元素周期律说的是？",
+      "answer": "元素性质随原子序数递增而呈周期性变化"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.ST.05",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h017",
+    "name": "化学键",
+    "domain": "物质的组成与结构",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第四章 物质结构 元素周期律 4.3",
+    "type": "conceptual",
+    "description": "离子键是阴阳离子通过静电作用形成的，例如氯化钠。共价键是原子间通过共用电子对形成的，例如氢气、氯化氢。",
+    "mastery_criteria": [
+      "能区分离子键和共价键",
+      "能判断氯化钠和氯化氢里的化学键类型"
+    ],
+    "diagnostic_question": {
+      "question": "离子键通常存在于？",
+      "answer": "阴阳离子之间，例如氯化钠"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.ST.06",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h018",
+    "name": "整理与提升",
+    "domain": "物质的组成与结构",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第四章 物质结构 元素周期律 整理与提升",
+    "type": "reasoning",
+    "description": "综合第四章：原子结构与元素周期表、元素周期律、化学键。",
+    "mastery_criteria": [
+      "能把原子结构、周期律和化学键放到一起判断",
+      "能根据位置比较同周期或同主族元素的金属性"
+    ],
+    "diagnostic_question": {
+      "question": "原子序数增大时，元素性质的变化特点是？",
+      "answer": "呈周期性变化，而不是一直朝同一个方向变"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.ST.05",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.ST.06",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h019",
+    "name": "实验活动3 同周期、同主族元素性质的递变",
+    "domain": "科学探究与化学实验",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修一 第四章 物质结构 元素周期律 实验活动3",
+    "type": "procedural",
+    "description": "实验活动 3 比较同周期、同主族元素性质的递变，例如钠、镁、铝与水或酸反应的剧烈程度。钠只用一小块，用镊子取用。",
+    "mastery_criteria": [
+      "能说出这个实验要比较的递变",
+      "能根据反应剧烈程度判断金属性强弱，并注意取用钠的安全"
+    ],
+    "diagnostic_question": {
+      "question": "实验活动「同周期、同主族元素性质的递变」要观察的是？",
+      "answer": "同一周期或同一主族里，元素性质怎样依次变化"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B1.EX.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.ST.05",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
   }
 ]

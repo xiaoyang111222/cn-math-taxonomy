@@ -584,8 +584,29 @@
     const hs = /^(高[一二]|选必[一二三]) (数学建模|数学探究) (\S+)$/.exec(s);
     if (hs) return { volume: hs[1], chapterNo: hs[2], chapterName: hs[3], section: '' };
     const m = /^(\S+) (第\S+章) (\S+?)(?: (\S+))?$/.exec(s);
-    if (!m) return { volume: '', chapterNo: '', chapterName: s, section: '' };
-    return { volume: m[1], chapterNo: m[2], chapterName: m[3], section: m[4] || '' };
+    if (m) return { volume: m[1], chapterNo: m[2], chapterName: m[3], section: m[4] || '' };
+    // 高中化学章名可以有多个词，例如「铁 金属材料」「物质结构 元素周期律」，绪言也没有「第×章」。
+    // 只在上面的通用格式对不上、且首词是必修一/二/三时使用，物理和数学已经对上的章节保持原样。
+    const book = /^(必修[一二三])(?:\s+(.+))?$/.exec(s);
+    if (book) {
+      const rest = book[2] || '';
+      if (!rest || rest === '绪言') {
+        return { volume: book[1], chapterNo: rest || '绪言', chapterName: '', section: '' };
+      }
+      const ch = /^(第\S+章)\s+(.+)$/.exec(rest);
+      if (ch) {
+        let body = ch[2];
+        let section = '';
+        const sec = /^(.*)\s(\d+(?:\.\d+)*|整理与提升|实验活动\d+)$/.exec(body);
+        if (sec && sec[1]) {
+          body = sec[1];
+          section = sec[2];
+        }
+        return { volume: book[1], chapterNo: ch[1], chapterName: body, section: section };
+      }
+      return { volume: book[1], chapterNo: rest, chapterName: '', section: '' };
+    }
+    return { volume: '', chapterNo: '', chapterName: s, section: '' };
   }
 
   /** 学科：显式 subject 优先，否则 cne_ 是英语、cnp_ 是物理、cnc_ 是语文、cns_ 是科学、cnd_ 是道德与法治、cnh_ 是历史、cng_ 是地理、cnb_ 是生物、cnk_ 是化学，其余算数学。 */
@@ -674,12 +695,13 @@
     graph.topics.forEach(function (t) {
       if (t.external || !inOrder.has(t.id)) return;
       const c = parseChapter(t.chapter);
-      const key = c.volume + ' ' + c.chapterNo + ' ' + c.chapterName;
+      const parts = [c.volume, c.chapterNo, c.chapterName].filter(Boolean);
+      const key = parts.join(' ');
       let ch = byKey[key];
       if (!ch) {
         ch = byKey[key] = {
           key: key, volume: c.volume, chapterNo: c.chapterNo, chapterName: c.chapterName,
-          label: (c.volume ? c.volume + ' ' : '') + c.chapterNo + ' ' + c.chapterName,
+          label: parts.join(' '),
           total: 0, mastered: 0, shaky: 0, weak: 0, untested: 0, weakIds: [], shakyIds: [], untestedIds: [], _i: list.length
         };
         list.push(ch);

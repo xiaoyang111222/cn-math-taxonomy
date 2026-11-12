@@ -143,7 +143,7 @@
   } else if (subject === 'chemistry') {
     document.title = '化学 · 中小学·高中知识图谱';
     var ceye = document.querySelector('.eyebrow');
-    if (ceye) ceye.textContent = '化学：初中九年级 · 人教版';
+    if (ceye) ceye.textContent = '化学：初中九年级 · 高中必修第一册 · 人教版';
     var cprimary = document.querySelector('.hero-actions a.btn-primary');
     var cbrowse = document.querySelector('.hero-actions a.btn:not(.btn-primary)');
     if (cprimary) cprimary.setAttribute('href', 'diagnose/?subject=chemistry');
@@ -398,7 +398,8 @@
     } else if (wantBiology) {
       /* 初中生物只到八年级，九年级没有生物课 */
     } else if (wantChemistry) {
-      /* 初中化学只开九年级，没有小学、七八年级和高中卡片 */
+      var chemHs = topics.filter(function (topic) { return topic.grade === 10; });
+      if (chemHs.length) addCard(10, '高中化学', '必修一', 'is-senior', '必修第一册', 'explore/?subject=chemistry&grade=10');
     } else if (wantPhysics) {
       addCard(10, '高中物理', '必修一', 'is-senior', '必修第一册', 'explore/?subject=physics&grade=10');
       addCard(11, '高中物理', '必修二', 'is-senior', '必修第二册', 'explore/?subject=physics&grade=11');

@@ -215,8 +215,8 @@
       if (volSel === '全') volSel = '';
     }
     if (subject === 'chemistry') {
-      document.title = '诊断 · 初中化学';
-      if (gradeSel !== '九') gradeSel = '九';
+      document.title = '诊断 · 化学';
+      if (gradeSel !== '九' && gradeSel !== '必修一') gradeSel = '九';
       if (volSel === '全') volSel = '';
     }
     if (subject === 'chinese') {
@@ -311,10 +311,11 @@
       if (t.external) return;
       const c = E.parseChapter(t.chapter);
       const v = vols[c.volume] || (vols[c.volume] = { chapters: [], byKey: {} });
-      const key = c.chapterNo + ' ' + c.chapterName;
+      const nameParts = [c.chapterNo, c.chapterName].filter(Boolean);
+      const key = nameParts.join(' ');
       let ch = v.byKey[key];
       if (!ch) {
-        ch = v.byKey[key] = { volume: c.volume, key: c.volume + ' ' + c.chapterNo, label: c.chapterNo + ' ' + c.chapterName, topics: [] };
+        ch = v.byKey[key] = { volume: c.volume, key: c.volume + ' ' + c.chapterNo, label: nameParts.join(' '), topics: [] };
         v.chapters.push(ch);
       }
       ch.topics.push({ t: t, section: c.section });
@@ -644,14 +645,14 @@
         ? '选一个想学会或想检查的化学知识点。' + confirmHelp
         : '选一个想学会或想检查的知识点。' + confirmHelp),
       h('div', { class: 'stage-tabs', role: 'tablist', 'aria-label': '学段' },
-        subject === 'physics' ? [stageButton('', '全部'), stageButton('j', '初中'), stageButton('h', '高中')]
-          : subject === 'history' || subject === 'geography' || subject === 'biology' || subject === 'chemistry' ? [stageButton('', '全部'), stageButton('j', '初中')]
+        subject === 'physics' || subject === 'chemistry' ? [stageButton('', '全部'), stageButton('j', '初中'), stageButton('h', '高中')]
+          : subject === 'history' || subject === 'geography' || subject === 'biology' ? [stageButton('', '全部'), stageButton('j', '初中')]
           : subject === 'chinese' || subject === 'morality' ? [stageButton('', '全部'), stageButton('p', '小学'), stageButton('j', '初中')]
           : subject === 'science' ? [stageButton('', '全部'), stageButton('p', '小学')]
           : [stageButton('', '全部'), stageButton('p', '小学'), stageButton('j', '初中'), stageButton('h', '高中')]),
       h('input', {
         type: 'search', class: 'search-lg', id: 'search',
-        placeholder: subject === 'physics' ? '搜索知识点，例如：欧姆定律、浮力、牛顿第二定律、楞次定律' : subject === 'english' ? '搜索知识点，例如：现在进行时、虚拟语气、there is' : subject === 'chinese' ? '搜索知识点，例如：声母、静夜思、春、岳阳楼记' : subject === 'science' ? '搜索知识点，例如：溶解、电路、昼夜交替' : subject === 'morality' ? '搜索知识点，例如：升国旗、排队、宪法、节约用水' : subject === 'history' ? '搜索知识点，例如：鸦片战争、丝绸之路、五四运动' : subject === 'geography' ? '搜索知识点，例如：经纬网、季风气候、长江' : subject === 'biology' ? '搜索知识点，例如：细胞、光合作用、基因' : subject === 'chemistry' ? '搜索知识点，例如：氧气、质量守恒定律、酸碱盐' : '搜索知识点，例如：配方法、20 以内加法、一次函数',
+        placeholder: subject === 'physics' ? '搜索知识点，例如：欧姆定律、浮力、牛顿第二定律、楞次定律' : subject === 'english' ? '搜索知识点，例如：现在进行时、虚拟语气、there is' : subject === 'chinese' ? '搜索知识点，例如：声母、静夜思、春、岳阳楼记' : subject === 'science' ? '搜索知识点，例如：溶解、电路、昼夜交替' : subject === 'morality' ? '搜索知识点，例如：升国旗、排队、宪法、节约用水' : subject === 'history' ? '搜索知识点，例如：鸦片战争、丝绸之路、五四运动' : subject === 'geography' ? '搜索知识点，例如：经纬网、季风气候、长江' : subject === 'biology' ? '搜索知识点，例如：细胞、光合作用、基因' : subject === 'chemistry' ? '搜索知识点，例如：氧气、质量守恒定律、物质的量、氧化还原' : '搜索知识点，例如：配方法、20 以内加法、一次函数',
         value: startQuery, autocomplete: 'off', 'aria-label': '搜索知识点',
         oninput: function (e) {
           startQuery = e.target.value;
@@ -724,7 +725,7 @@
           : subject === 'geography' || subject === 'biology'
           ? '七八'.split('').map(function (x) { return [x, x + '年级']; })
           : subject === 'chemistry'
-          ? [['九', '九年级']]
+          ? [['九', '九年级'], ['必修一', '必修一']]
           : subject === 'chinese'
           ? '一二三四五六七八九'.split('').map(function (x) { return [x, x + '年级']; })
           : subject === 'science'
@@ -800,7 +801,7 @@
       shown += count;
       const openVol = subject === 'physics' ? '八上' : subject === 'english' ? '三上' : subject === 'chemistry' ? '九上' : subject === 'history' || subject === 'geography' || subject === 'biology' ? '七上' : '一上';
       const juniorOpen = subject === 'chemistry' ? '九上' : '七上';
-      const seniorOpen = subject === 'english' || subject === 'physics' ? '必修一' : '高一';
+      const seniorOpen = subject === 'english' || subject === 'physics' || subject === 'chemistry' ? '必修一' : '高一';
       const det = h('details', { class: 'vol', open: !!q || (startStage === 'j' ? vv[0] === juniorOpen : startStage === 'h' ? vv[0] === seniorOpen : vv[0] === openVol) },
         h('summary', null, vv[1] + '（' + count + ' 个知识点）'));
       chapters.forEach(function (c) {
@@ -1364,7 +1365,7 @@
         : subject === 'biology'
         ? '目标与学习路径上的知识点对应的《义务教育生物学课程标准（2022年版）》第四学段内容要求的公开转述。'
         : subject === 'chemistry'
-        ? '目标与学习路径上的知识点对应的《义务教育化学课程标准（2022年版）》五个学习主题内容要求的公开转述。'
+        ? '目标与学习路径上的知识点对应的《义务教育化学课程标准（2022年版）》五个学习主题，以及《普通高中化学课程标准（2017年版）》必修第一册相关内容要求的公开转述。'
         : '目标与学习路径上的知识点对应的《义务教育数学课程标准（2022年版）》内容要求（第一至第四学段）。'),
       keys.length ? keys.map(function (k) {
         const item = D.stdById[k];
@@ -1419,6 +1420,7 @@
     }
     if (grade >= 1 && grade <= 9) return cn[grade] + '年级';
     if (subject === 'physics') return { 10: '必修一', 11: '必修二', 12: '必修三', 13: '选必一', 14: '选必二', 15: '选必三' }[grade] || ('册' + grade);
+    if (subject === 'chemistry') return { 10: '必修一', 11: '必修二', 12: '必修三', 13: '选必一', 14: '选必二' }[grade] || ('册' + grade);
     const math = { 10: '高一', 11: '高二', 12: '选必一', 13: '选必二', 14: '选必三' };
     return math[grade] || ('年级' + grade);
   }
@@ -1779,6 +1781,8 @@
             ? '高中英语不拆上下册：' + grade + ' / ' + volume + '（用 grade=必修一 或 grade=选必一）'
             : subject === 'physics'
             ? '高中物理不拆上下册：' + grade + ' / ' + volume + '（用 grade=必修一 或 grade=选必一）'
+            : subject === 'chemistry'
+            ? '高中化学不拆上下册：' + grade + ' / ' + volume + '（用 grade=必修一）'
             : '高中不拆上下册：' + grade + ' / ' + volume + '（用 grade=高一、grade=高二 或 grade=选必二）');
         }
         scope = seniorUrl[grade];
