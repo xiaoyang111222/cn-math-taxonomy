@@ -30,6 +30,23 @@ LABEL = {
 
 DOC_PATH = "docs/english-pending-classification-20261112.md"
 
+# 九上 2026-11-12 续核写入这 33 点 catalog_note 的共同检查范围。
+# 书页 5、22、35、46 用既有旧图，其余正文用同日新图。词表附录不纳入。
+_G9A_SCOPE = (
+    "已核第1–8单元正文印刷页 1–80（书页 5、22、35、46 用既有旧图 "
+    ".english-g9-research/g9-u1-grammar-focus-p5-pdf14.png、"
+    "g9-u3-sectionA-p22-pdf31.png、g9-u4-grammar-focus-p35-pdf44.png、"
+    "g9-u5-sectionB-p46-pdf55.png，其余用 2026-11-12 新图 "
+    ".english-g9-research/g9a-evidence-20261112/pNN_pdfXXX.png）、"
+    "Reading Plus（含 83、85、88、91、93）、听力原文 94–103、语法附录 104–106"
+    "（.english-g9-research/g9-grammar-p104-pdf113.png 至 g9-grammar-p106-pdf115.png）。"
+    "词表附录未纳入。"
+)
+_G9A_REVIEW = (
+    ".english-g9-research/g9a-evidence-20261112/"
+    "u1-u8-plus-appendix-pending-review-20261112.md"
+)
+
 # (key, id, name, status, note, evidence)
 # note 是写入知识点的 catalog_note。evidence 只进本文件和分类文档。
 _ROWS = [
@@ -279,37 +296,62 @@ _ROWS = [
         "docs/english-g9-official-reader-20261111.md「正文续核」只有概括句，不单独作为本点依据。",
     ),
     (
-        "vo_fest", "cne_j191", "节日食物", EVIDENCE_INSUFFICIENT,
-        "目录阶段写旧版节日单元、官方目录无此课。正文笔记只列了 8 条 Reading Plus 标题和语法附录三个标题，"
-        "并有一句「37点均未达到改挂标准」。没有节日食物的课文页摘录。不足以排除对应课业。",
-        ".english-g9-research/g9-pending-body-check-20261111.md 核验结论（概括）；"
-        "docs/english-g9-official-reader-20261111.md 前半是目录，后半「正文续核」不能批量认定。"
-        "缺：节日食物课文页。",
+        "vo_fest", "cne_j191", "节日食物", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是认读 mooncake、lantern、stranger、relative。"
+        "Reading Plus 书页91的《春节序曲》在音乐会语境，不问节日食物，不见月饼或灯笼词表课。"
+        "在已核范围内未见可改挂课业。不改挂。",
+        _G9A_REVIEW + " 节日食物行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p91_pdf100.png。",
     ),
     (
-        "fu_fest", "cne_j194", "谈论节日", EVIDENCE_INSUFFICIENT,
-        "与节日食物同一记录范围：没有谈论节日的听说页摘录。Reading Plus 标题清单不能代替该点的课文。",
-        "同 cne_j191。缺：谈论节日的活动页。",
+        "fu_fest", "cne_j194", "谈论节日", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是说出节日吃什么、做什么，例如中秋赏月、喜欢月饼。"
+        "书页91不问习俗。已核范围内未见谈论节日的听说课。"
+        "在已核范围内未见可改挂课业。不改挂。",
+        _G9A_REVIEW + " 谈论节日行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p91_pdf100.png。",
     ),
     (
-        "rw_fest", "cne_j195", "读中秋短文", EVIDENCE_INSUFFICIENT,
-        "没有中秋短文的书页摘录。目录无此课加上 37 点概括句，达不到已核到能排除对应课业。",
-        "同 cne_j191。缺：中秋短文页。",
+        "rw_fest", "cne_j195", "读中秋短文", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是读一段节日短文，找出食物和活动。未见中秋或月饼短文。"
+        "书页91的音乐会补充阅读不是本点课文。"
+        "在已核范围内未见可改挂课业。不改挂。",
+        _G9A_REVIEW + " 读中秋短文行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p91_pdf100.png。",
     ),
     (
-        "vo_polite", "cne_j196", "公共场所", EVIDENCE_INSUFFICIENT,
-        "目录阶段写旧版问路、官方第4单元是 memory。正文笔记没有公共场所或 restroom 课的书页摘录。",
-        "同九上概括结论。缺：公共场所课文页。",
+        "vo_polite", "cne_j196", "公共场所", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是认读 restroom、stamp、postcard、politely。"
+        "已见正文和听力未见公共场所词表课。"
+        "书页35的机场巴士句是宾语从句合并题，不是本点，不改挂。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 公共场所行；"
+        "旧图 .english-g9-research/g9-u4-grammar-focus-p35-pdf44.png。",
     ),
     (
-        "fu_polite", "cne_j198", "礼貌问路", EVIDENCE_INSUFFICIENT,
-        "没有礼貌问路活动的书页摘录。不能用第4单元「记忆方法」的单元主题代替本点。",
-        "同九上概括结论。缺：问路表达的课文页。",
+        "fu_polite", "cne_j198", "礼貌问路", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是礼貌问路并听懂直接问句和间接问句，例如 Could you please tell me where the post office is?。"
+        "旧图书页35 4b 第5题 Pardon me, where can I get a bus to the airport? Could you please show me? "
+        "是合并成宾语从句，已挂 cne_j197，不是问路功能课，不改挂。"
+        "语法附录书页105的 Do you know where he lives? 同理。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 礼貌问路行；"
+        "旧图 .english-g9-research/g9-u4-grammar-focus-p35-pdf44.png、"
+        ".english-g9-research/g9-grammar-p105-pdf114.png。",
     ),
     (
-        "rw_polite", "cne_j199", "读问路对话", EVIDENCE_INSUFFICIENT,
-        "没有问路对话课文的书页摘录。",
-        "同九上概括结论。缺：问路对话页。",
+        "rw_polite", "cne_j199", "读问路对话", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是读问路对话并找出地点，例如 restroom、turn left、买邮票。"
+        "已见页没有这类对话课文。听力原文 94–103 也没有问路脚本。"
+        "在已核范围内未见可改挂课业。不改挂。",
+        _G9A_REVIEW + " 读问路对话行；"
+        "听力截图 .english-g9-research/g9a-evidence-20261112/p94_pdf103.png 至 p103_pdf112.png。",
     ),
     (
         "gr_used", "cne_j201", "used to 表示过去习惯", BODY_CHECKED_NO_LESSON,
@@ -335,51 +377,102 @@ _ROWS = [
         "同 cne_j204 的研究笔记结论与语法附录书页104–106。",
     ),
     (
-        "rw_made", "cne_j207", "读产品介绍", EVIDENCE_INSUFFICIENT,
-        "发明课导入里的材料问句对不上「读产品介绍」。笔记没有产品介绍课文的书页摘录。",
-        "cne_j204 的那句引文不能用于本点。缺：产品介绍课文页。",
+        "rw_made", "cne_j207", "读产品介绍", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点按自身定义判断：读一段介绍，找出材料和产地。"
+        "旧图书页46在 What material are these things made of? 之后接蔡伦造纸，"
+        "是发明课导入和发明史阅读，已用于 cne_j204、cne_j206，并贴近已挂 cne_j211，不是读产品介绍并找出产地。"
+        "书页47比较古代书写材料与蔡伦用纸，不是产地。"
+        "书页49发明介绍写作不是读材料产地介绍：写作支架有 It was made of / from，没有产地或 produced in，不改挂。"
+        "书页50是自己发明的海报。书页43是发明用途和被动语态。"
+        "书页99产品听力不是阅读任务：Super See from Germany、Smart Cook from China 是发明展听力，"
+        "made by the 3D printer 是由打印机做出，不是由某材料制成并标产地，不改挂。"
+        "不因 made of/from 或 from China 改挂。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 第3.3节与读产品介绍行；"
+        "旧图 .english-g9-research/g9-u5-sectionB-p46-pdf55.png；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p47_pdf056.png、"
+        "p49_pdf058.png、p50_pdf059.png、p43_pdf052.png、p99_pdf108.png。",
     ),
     (
-        "vo_teen", "cne_j212", "青少年规则", EVIDENCE_INSUFFICIENT,
-        "目录无此课。正文笔记没有青少年规则课文页。37 点概括句不能排除对应课业。",
-        "同九上概括结论。缺：青少年规则课文页。",
+        "vo_teen", "cne_j212", "青少年规则", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是认读 license、safety、society、choice。"
+        "已见正文、Reading Plus 和听力未见青少年规则课。"
+        "在已核范围内未见可改挂课业。不改挂。",
+        _G9A_REVIEW + " 青少年规则行；"
+        "语法附录旧图 .english-g9-research/g9-grammar-p104-pdf113.png 至 g9-grammar-p106-pdf115.png。",
     ),
     (
-        "gr_allow", "cne_j213", "be allowed to", EVIDENCE_INSUFFICIENT,
-        "语法附录书页104–106的标题只有语态、宾语从句、关系从句，笔记写明没有 be allowed to。"
-        "没有该点的单元语法栏页摘录。附录未见标题，还不足以排除全书里的课业。",
-        ".english-g9-research/g9-pending-body-check-20261111.md 附录否定清单；"
-        "截图 g9-grammar-p104-pdf113.png 至 p106。缺：单元正文里的 be allowed to 页。",
+        "gr_allow", "cne_j213", "be allowed to", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是用 be allowed to 表示被允许做某事。"
+        "八个单元语法栏和语法附录书页104–106的标题只有语态、宾语从句、关系从句，没有 be allowed to。"
+        "已见的 allow 是用途或许可的零散句，不是该语法栏，不改挂。"
+        "附录这几页没有该标题，不能写成全书没有。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " be allowed to 行；"
+        "旧图 .english-g9-research/g9-grammar-p104-pdf113.png、"
+        "g9-grammar-p105-pdf114.png、g9-grammar-p106-pdf115.png。",
     ),
     (
-        "fu_allow", "cne_j214", "讨论是否允许", EVIDENCE_INSUFFICIENT,
-        "没有讨论是否允许的听说页摘录。",
-        "同九上概括结论。缺：该活动页。",
+        "fu_allow", "cne_j214", "讨论是否允许", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是对校规表示同意或不同意，例如不同意十六岁开车。"
+        "未见 should be allowed to drive 或 choose clothes 一类讨论校规的听说课。"
+        "在已核范围内未见可改挂课业。不改挂。",
+        _G9A_REVIEW + " 讨论是否允许行；"
+        "旧图 .english-g9-research/g9-grammar-p104-pdf113.png 至 g9-grammar-p106-pdf115.png。",
     ),
     (
-        "rw_allow", "cne_j215", "读规则意见", EVIDENCE_INSUFFICIENT,
-        "没有规则意见课文的书页摘录。",
-        "同九上概括结论。缺：规则意见短文页。",
+        "rw_allow", "cne_j215", "读规则意见", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是读一段讨论，找出谁被允许做什么。"
+        "未见这类规则意见短文。"
+        "在已核范围内未见可改挂课业。不改挂。",
+        _G9A_REVIEW + " 读规则意见行；"
+        "旧图 .english-g9-research/g9-grammar-p104-pdf113.png 至 g9-grammar-p106-pdf115.png。",
     ),
     (
-        "vo_owner", "cne_j216", "物品主人", EVIDENCE_INSUFFICIENT,
-        "目录无物品归属课。正文笔记没有 whose 或 belongs to 的课文页摘录。",
-        "同九上概括结论。缺：物品主人课文页。",
+        "vo_owner", "cne_j216", "物品主人", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是认读 whose、attend、valuable、picnic。"
+        "语法附录书页106的 whose 是关系代词名单，并写明重点是 that、which、who，"
+        "不是 Whose backpack is this? 课，不改挂。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 物品主人行；"
+        "旧图 .english-g9-research/g9-grammar-p106-pdf115.png。",
     ),
     (
-        "gr_mustbe", "cne_j217", "must 表示推测", EVIDENCE_INSUFFICIENT,
-        "语法附录书页104–106未见 must 表示推测。没有单元语法栏页摘录。附录否定不足以排除全书课业。",
-        "同 cne_j213 的附录范围。缺：单元正文页。",
+        "gr_mustbe", "cne_j217", "must 表示推测", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是用 must 表示很有把握的肯定推测，用 can't 表示否定推测，例如 The guitar must be Carla's。"
+        "八个单元语法栏和语法附录书页104–106未见该标题。"
+        "书页58对话里的 must 是语境用法，不是推测语法栏，不以偶发 must 改挂。"
+        "这只说明已核范围未见该课业，不是全书没有。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " must 表示推测行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p58_pdf067.png；"
+        "旧图 .english-g9-research/g9-grammar-p104-pdf113.png 至 g9-grammar-p106-pdf115.png。",
     ),
     (
-        "fu_guess", "cne_j218", "推测物品归属", EVIDENCE_INSUFFICIENT,
-        "没有推测物品归属的活动页摘录。",
-        "同九上概括结论。缺：该活动页。",
+        "fu_guess", "cne_j218", "推测物品归属", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是根据线索推测东西是谁的。"
+        "未见该活动。"
+        "在已核范围内未见可改挂课业。不改挂。",
+        _G9A_REVIEW + " 推测物品归属行；"
+        "旧图 .english-g9-research/g9-u4-grammar-focus-p35-pdf44.png、"
+        ".english-g9-research/g9-grammar-p106-pdf115.png。",
     ),
     (
-        "rw_guess", "cne_j219", "读推测短文", EVIDENCE_INSUFFICIENT,
-        "没有推测短文的书页摘录。",
-        "同九上概括结论。缺：推测短文页。",
+        "rw_guess", "cne_j219", "读推测短文", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是读一段推理，找出物品的主人。"
+        "书页35狐狸与葡萄是宾语从句选词，不是推测短文，不改挂。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 读推测短文行；"
+        "旧图 .english-g9-research/g9-u4-grammar-focus-p35-pdf44.png。",
     ),
     (
         "gr_supposed", "cne_j225", "be supposed to", BODY_CHECKED_NO_LESSON,
@@ -390,101 +483,190 @@ _ROWS = [
         ".english-g8-research/g8b-body-20261111/notes.md D 节与 H 节；截图 u6-p055.png、grammar-p105.png 起。",
     ),
     (
-        "vo_emotion", "cne_j228", "情绪反应", EVIDENCE_INSUFFICIENT,
-        "目录无电影课。正文笔记没有情绪或电影感受的课文页摘录。",
-        "同九上概括结论。缺：情绪反应课文页。",
+        "vo_emotion", "cne_j228", "情绪反应", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是认读 friendship、king、pale、queen。"
+        "音乐或人物阅读里若出现友谊等词，只是该课词汇，不是本点词表课，也不是电影情绪课，不改挂。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 情绪反应行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p91_pdf100.png。",
     ),
     (
-        "gr_make", "cne_j229", "make 加宾语加动词原形", EVIDENCE_INSUFFICIENT,
-        "语法附录书页104–106未见 make sb do。没有单元语法栏页摘录。附录否定不足以排除全书课业。",
-        "同 cne_j213 的附录范围。缺：单元正文页。",
+        "gr_make", "cne_j229", "make 加宾语加动词原形", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是 make somebody do 或 make somebody 加形容词，例如悲伤的电影让人哭。"
+        "书页65关系从句填空里的 makes them all stop to listen、makes them smile 是偶发结构，不是 make 语法栏，不改挂。"
+        "书页102的 Ms Gao made me the school photographer and reporter 是 make 加宾语加名词。"
+        "第2单元书页16题头 What makes people admirable? 是讨论题，不是该语法教学。"
+        "在已核范围内未见可改挂课业。这不是全书没有 make。",
+        _G9A_REVIEW + " make 加宾语加动词原形行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p65_pdf074.png、"
+        "p16_pdf025.png、p102_pdf111.png。",
     ),
     (
-        "fu_feel9", "cne_j230", "表达电影感受", EVIDENCE_INSUFFICIENT,
-        "没有表达电影感受的听说页摘录。",
-        "同九上概括结论。缺：该活动页。",
+        "fu_feel9", "cne_j230", "表达电影感受", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是说出一部电影让自己有什么感受。"
+        "书页91问 How did Chunjie Xuqu make the writer feel? 是音乐会补充阅读，不是表达电影感受。"
+        "未见电影听说课。在已核范围内未见可改挂课业。不改挂。",
+        _G9A_REVIEW + " 表达电影感受行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p91_pdf100.png。",
     ),
     (
-        "rw_movie", "cne_j231", "读观后感", EVIDENCE_INSUFFICIENT,
-        "没有观后感课文的书页摘录。",
-        "同九上概括结论。缺：观后感页。",
+        "rw_movie", "cne_j231", "读观后感", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是读一段观后感，找出电影给人的感受。"
+        "未见以观后感为课业的短文。中国音乐会、残奥会和作曲家阅读都不是本点，不改挂。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 读观后感行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p91_pdf100.png。",
     ),
     (
-        "vo_unexp", "cne_j232", "意外事件", EVIDENCE_INSUFFICIENT,
-        "目录无意外课。正文笔记没有意外事件课文页。",
-        "同九上概括结论。缺：意外课文页。",
+        "vo_unexp", "cne_j232", "意外事件", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是认读 unexpected、backpack、block、burn。"
+        "书页48的 an accident led to the invention of sticky notes 是便利贴发明故事，不是意外事件课，不改挂。"
+        "Reading Plus 书页87 Braille 的 as a result of an accident 是发明家小传。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 意外事件行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p48_pdf057.png；"
+        "既有 Reading Plus 图 .english-g9-research/g9-readingplus-u5-p87-pdf96.png。",
     ),
     (
-        "gr_ppast", "cne_j233", "过去完成时", EVIDENCE_INSUFFICIENT,
-        "语法附录书页104–106未见过去完成时。没有单元语法栏页摘录。附录否定不足以排除全书课业。",
-        "同 cne_j213 的附录范围。缺：单元正文页。",
+        "gr_ppast", "cne_j233", "过去完成时", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是用 had 加过去分词，表示在过去某一动作之前已经发生的事。"
+        "八个单元语法栏和语法附录书页104–106（表1只列一般现在、一般过去、一般将来的被动）未见 had 加过去分词专项。"
+        "这只说明已核范围未见该课业，不是全书没有。在已核范围内未见可改挂课业。不改挂。",
+        _G9A_REVIEW + " 过去完成时行；"
+        "旧图 .english-g9-research/g9-grammar-p104-pdf113.png 至 g9-grammar-p106-pdf115.png。",
     ),
     (
-        "fu_unexp", "cne_j234", "叙述意外经过", EVIDENCE_INSUFFICIENT,
-        "没有叙述意外经过的表达页摘录。",
-        "同九上概括结论。缺：该活动页。",
+        "fu_unexp", "cne_j234", "叙述意外经过", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是按先后顺序说出一件意外，例如闹钟没响。"
+        "未见这类表达课。"
+        "在已核范围内未见可改挂课业。不改挂。",
+        _G9A_REVIEW + " 叙述意外经过行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p48_pdf057.png。",
     ),
     (
-        "rw_unexp", "cne_j235", "读意外故事", EVIDENCE_INSUFFICIENT,
-        "没有意外故事课文的书页摘录。",
-        "同九上概括结论。缺：意外故事页。",
+        "rw_unexp", "cne_j235", "读意外故事", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是读一段意外，判断哪件事发生得更早。"
+        "未见以该任务为课业的意外故事。便利贴发明、Braille 小传和书页35的狐狸故事都不是，不改挂。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 读意外故事行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p48_pdf057.png；"
+        "既有图 .english-g9-research/g9-readingplus-u5-p87-pdf96.png、"
+        ".english-g9-research/g9-u4-grammar-focus-p35-pdf44.png。",
     ),
     (
-        "vo_earth", "cne_j236", "环境保护", EVIDENCE_INSUFFICIENT,
-        "目录无环保课。正文笔记没有环境保护课文页。",
-        "同九上概括结论。缺：环保课文页。",
+        "vo_earth", "cne_j236", "环境保护", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是认读 litter、bottom、coal、plastic。"
+        "书页8塞罕坝短文是中国环境成就，用 bush、sandstorm、sandy、soil，不是本点词表课。"
+        "听力书页94–95是沙地种树、沙尘暴变少，不是乱扔垃圾或煤、塑料的课，不改挂到第1单元。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 第3.4节与环境保护行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p08_pdf017.png、"
+        "p94_pdf103.png、p95_pdf104.png。",
     ),
     (
-        "gr_review", "cne_j237", "时态选择", EVIDENCE_INSUFFICIENT,
-        "没有以时态选择为课业的书页摘录。语法附录的三个标题也不含这项。"
-        "某课里偶尔选时态，笔记未逐页记录，不能当成已排除。",
-        "同九上概括结论与附录书页104–106。缺：时态选择课的正文页。",
+        "gr_review", "cne_j237", "时态选择", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是按时间状语在现在、过去、将来、进行和完成时之间选择。"
+        "书页5只比较一般过去时和现在完成时，已是第1单元语法，不能自动等同本点，不改挂。"
+        "这不是全书没有时态练习。在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 时态选择行；"
+        "旧图 .english-g9-research/g9-u1-grammar-focus-p5-pdf14.png。",
     ),
     (
-        "fu_earth", "cne_j238", "谈论环保做法", EVIDENCE_INSUFFICIENT,
-        "没有谈论环保做法的听说页摘录。",
-        "同九上概括结论。缺：该活动页。",
+        "fu_earth", "cne_j238", "谈论环保做法", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是说出为保护环境可以做的事，例如不乱扔垃圾、少用煤。"
+        "已见是种灌木防沙、环境变好（书页95），不是这些做法的听说课，不改挂。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 第3.4节与谈论环保做法行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p95_pdf104.png、p08_pdf017.png。",
     ),
     (
-        "rw_earth", "cne_j239", "读环保倡议", EVIDENCE_INSUFFICIENT,
-        "没有环保倡议课文的书页摘录。",
-        "同九上概括结论。缺：环保倡议页。",
+        "rw_earth", "cne_j239", "读环保倡议", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是读一段倡议，找出问题和做法，例如现在人们把塑料扔进河里。"
+        "书页8塞罕坝是环境成就填空，不是该倡议课文，不改挂。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 读环保倡议行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p08_pdf017.png。",
     ),
     (
-        "rw_cloze9", "cne_j240", "完形填空", EVIDENCE_INSUFFICIENT,
-        "清单写练习里出现完形不等于要改挂。结论没有摘录名为完形填空的书页，只有 37 点概括句。",
-        ".english-g9-research/g9-pending-body-check-20261111.md 清单与概括结论。"
-        "缺：完形栏目的书页摘录。",
+        "rw_cloze9", "cne_j240", "完形填空", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是根据上下文补全短文中的词。"
+        "各单元 Vocabulary in Use 的 Complete the passage（书页8、48、78）是单元词汇练习，"
+        "不是名为完形填空的独立课业，不因出现填空就改挂。"
+        "这不是书里没有填空练习。在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 完形填空行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p08_pdf017.png、"
+        "p48_pdf057.png、p78_pdf087.png。",
     ),
     (
-        "vo_memory", "cne_j241", "毕业回忆", EVIDENCE_INSUFFICIENT,
-        "目录和正文续核概括句说第4单元 Our Memory 是记忆方法，不是毕业主题。"
-        "没有毕业回忆课文的书页摘录。概括句不能排除对应课业。",
-        "docs/english-g9-official-reader-20261111.md「正文续核」一句；"
-        ".english-g9-research/g9-pending-body-check-20261111.md 清单已写 U4 不是毕业回忆，正文结论未摘录书页。"
-        "未转写截图 g9-u4-grammar-focus-p35-pdf44.png。缺：毕业回忆课文页。",
+        "vo_memory", "cne_j241", "毕业回忆", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是认读 survey、standard、graduate、ceremony。"
+        "书页9 Changes in My Life 不是毕业回忆：短文写小学与初中、家和住处的变化，"
+        "3c 是 Think back to when you were in primary school，不是毕业典礼，不改挂。"
+        "第4单元是记忆方法。第8单元听力书页102–103是运动会，不是 graduation 或 ceremony 课。"
+        "第2、第8单元里的 survey 是人物或赛事调查，不是本点词表课。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 第3.5节与毕业回忆行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p09_pdf018.png、"
+        "p102_pdf111.png、p103_pdf112.png。",
     ),
     (
-        "gr_ger", "cne_j242", "动名词与不定式", EVIDENCE_INSUFFICIENT,
-        "语法附录书页104–106未见动名词与不定式。没有单元语法栏页摘录。附录否定不足以排除全书课业。",
-        "同 cne_j213 的附录范围。缺：单元正文页。",
+        "gr_ger", "cne_j242", "动名词与不定式", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是区分动词后面接 to do 还是 doing，例如 remember doing 与 remember to do。"
+        "书页15的 It is adj. (for/of sb) to do 不是 remember doing / to do，不改挂；该课已挂 cne_j253。"
+        "书页15是 It was great of … to develop、It was difficult for … to do 这一语法栏。"
+        "语法附录书页104–106无此标题。"
+        "书页22的 I study by reviewing my notes 是 by 加动名词，已对照 cne_j188，也不是本点。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 第3.1节与动名词与不定式行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p15_pdf024.png；"
+        "旧图 .english-g9-research/g9-u3-sectionA-p22-pdf31.png、"
+        "g9-grammar-p104-pdf113.png 至 g9-grammar-p106-pdf115.png。",
     ),
     (
-        "gr_tag", "cne_j243", "反意疑问句", EVIDENCE_INSUFFICIENT,
-        "语法附录书页104–106未见反意疑问句。没有单元语法栏页摘录。"
-        "八年级上册发音附录里的 party 反意疑问例句是另一册的偶发句，不能用来排除九上，也不能改挂。",
-        "同 cne_j213 的附录范围。缺：九上单元正文页。",
+        "gr_tag", "cne_j243", "反意疑问句", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是在陈述句后加上意思相反的简短问句。"
+        "八个单元语法栏和语法附录书页104–106未见 question tag。"
+        "八年级上册偶发反意疑问例句不能用来处理九上，也不改挂。"
+        "这只说明已核范围未见该课业，不是全书没有。在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 反意疑问句行；"
+        "旧图 .english-g9-research/g9-grammar-p104-pdf113.png 至 g9-grammar-p106-pdf115.png。",
     ),
     (
-        "fu_memory", "cne_j244", "回忆学校生活", EVIDENCE_INSUFFICIENT,
-        "没有回忆学校生活的活动页摘录。第4单元「记忆方法」的概括不能代替本点。",
-        "同 cne_j241。缺：学校生活回忆的课文页。",
+        "fu_memory", "cne_j244", "回忆学校生活", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是在毕业时回顾学校生活，例如记得第一次见面、典礼在星期五、明年毕业。"
+        "书页9 Changes in My Life 是小学以来的生活变化，不是毕业时回顾学校生活，不改挂。"
+        "书页102–103是运动会报名和接力，也不是。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 第3.5节与回忆学校生活行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p09_pdf018.png、"
+        "p102_pdf111.png、p103_pdf112.png。",
     ),
     (
-        "rw_write", "cne_j245", "书面表达要点", EVIDENCE_INSUFFICIENT,
-        "目录无单独的书面表达要点课。笔记没有该课的书页摘录。单元里的写作练习不等于这个点。",
-        ".english-g9-research/g9-pending-body-check-20261111.md 清单与概括结论。"
-        "缺：书面表达要点课的书页。",
+        "rw_write", "cne_j245", "书面表达要点", BODY_CHECKED_NO_LESSON,
+        _G9A_SCOPE +
+        "本点是选出涵盖全部要点、人称和时态都正确的句子。"
+        "各单元 Writing（书页9、19、29、39、49、59、69、79）是单元写作任务，不是这种书面表达要点课，不改挂。"
+        "书页49的发明介绍写作也不是本点。这不是书里没有写作。"
+        "在已核范围内未见可改挂课业。",
+        _G9A_REVIEW + " 书面表达要点行；"
+        "截图 .english-g9-research/g9a-evidence-20261112/p09_pdf018.png、p49_pdf058.png。",
     ),
 ]
 
@@ -585,7 +767,8 @@ def render_doc():
     a("65 个仍挂「N年级X册 待核」的初中英语知识点，按核对记录分成两类。")
     a("不删点，不改稳定 id、点名、题目、先修、学期、unit 90 和章节字符串，也不改挂到已确认单元。")
     a("2026-11-12 续核把八上 10 个点从证据不足改为已核未见对应课业；近义句和偶发句不改挂。")
-    a("没有把「未命中」写成「教材不存在」或「书里没教」。")
+    a("同日续核再把九上 33 个点改为已核未见对应课业。65 点现全部是这一类，证据不足为 0。")
+    a("没有把「未命中」写成「教材不存在」「全书没有」或「教材都没教」。")
     a("")
     a("## 字段")
     a("")
@@ -640,7 +823,21 @@ def render_doc():
     a("书页76–77是 How to Make a Better Conversation；书页79的正式邀请函仍属于 `cne_j136`。")
     a("这些近义句和偶发句都不改挂。`cne_j134`、`cne_j136` 的分类取值未改。")
     a("")
-    a("九年级上册仍有 33 点证据不足。研究笔记里没有该点书页或课文摘录的，不按官方文档概括句批量归入第一类，并写明缺什么。")
+    a("九年级上册 37 点现全部是「已核教材但未找到对应课业」。")
+    a("2026-11-12 续核把 `cne_j191`、`cne_j194`、`cne_j195`、`cne_j196`、`cne_j198`、`cne_j199`、")
+    a("`cne_j207`、`cne_j212`、`cne_j213`、`cne_j214`、`cne_j215`、`cne_j216`、`cne_j217`、`cne_j218`、`cne_j219`、")
+    a("`cne_j228`、`cne_j229`、`cne_j230`、`cne_j231`、`cne_j232`、`cne_j233`、`cne_j234`、`cne_j235`、")
+    a("`cne_j236`、`cne_j237`、`cne_j238`、`cne_j239`、`cne_j240`、`cne_j241`、`cne_j242`、`cne_j243`、")
+    a("`cne_j244`、`cne_j245` 从证据不足改入这一类。")
+    a("检查范围是第1–8单元正文印刷页 1–80（书页 5、22、35、46 用既有旧图，其余用 2026-11-12 新图）、")
+    a("Reading Plus（含 83、85、88、91、93）、听力原文 94–103、语法附录 104–106。")
+    a("词表附录（Vocabulary in Each Unit 107 起、A–Z、小学词汇、不规则动词）未纳入。")
+    a("改挂按各点自身的阅读、听说或语法任务判断，不要求课文标题同名。零散例句和近义活动不改挂。")
+    a("书页 15 的 It is adj. (for/of sb) to do 已挂 `cne_j253`，不是 remember doing / to do，不改挂 `cne_j242`。")
+    a("书页 49 的发明介绍写作不是读材料产地介绍，书页 99 的产品听力不是阅读任务，不改挂 `cne_j207`。")
+    a("书页 9 的 Changes in My Life 不是毕业回忆，不改挂 `cne_j241`。")
+    a("`cne_j188`、`cne_j201`、`cne_j204`、`cne_j206` 的分类取值和理由未改。")
+    a("这 33 点的结论是在已核范围内未见可改挂课业，不是「教材都没教」。")
     a("语法附录里没有某个标题，只说明附录这几页没有，不能写成全书无此课。")
     a("")
     a("## 分点")
@@ -670,7 +867,15 @@ def render_doc():
     a("`.english-g7-research/`、`.english-g8-research/`、`.english-g9-research/` 里的核对笔记。")
     a("八上这 10 点以 `.english-g8-research/g8a-evidence-20261112/notes.md` 和同目录截图为准，")
     a("并对照 `.english-g8-research/g8a-existing-screenshots-transcript-20261112.md` 里已转写的对应节。")
-    a("九上官方文档前半是目录阶段（当时第10页未渲染正文），后半「正文续核」只有概括，不作为九上 33 个证据不足点的批量依据。")
+    a("九上这 33 点以 `.english-g9-research/g9a-evidence-20261112/u1-u8-plus-appendix-pending-review-20261112.md`")
+    a("和同目录截图、既有旧图为准。检查范围是第1–8单元正文印刷页 1–80")
+    a("（书页 5 用 `.english-g9-research/g9-u1-grammar-focus-p5-pdf14.png`，")
+    a("书页 22 用 `g9-u3-sectionA-p22-pdf31.png`，书页 35 用 `g9-u4-grammar-focus-p35-pdf44.png`，")
+    a("书页 46 用 `g9-u5-sectionB-p46-pdf55.png`，其余正文用 2026-11-12 新图）、")
+    a("Reading Plus（含 83、85、88、91、93；先前已有 81、82、84、86、87、89、90、92）、")
+    a("听力原文 94–103、语法附录 104–106（`g9-grammar-p104-pdf113.png` 至 `g9-grammar-p106-pdf115.png`）。")
+    a("词表附录未纳入。九上官方文档前半是目录阶段（当时第10页未渲染正文），后半「正文续核」只有概括，不作为这 33 点的批量依据。")
+    a("先前已是第一类的九上 4 点理由未改。")
     a("八下以「八下正文续核」逐点表和研究笔记 `g8b-body-20261111/notes.md` 为准。")
     a("")
     a("书页只引用上述笔记已经转写的句子。写入本文件时没有另开阅读器，也没有下载教材。")

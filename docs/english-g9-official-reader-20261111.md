@@ -159,4 +159,4 @@ U2、U6、U8 在 TOPICS 里没有应保留的旧点，只有上面这些 246 以
 
 ## 待核分类（2026-11-12）
 
-九上 37 点的两类标记见 [english-pending-classification-20261112.md](english-pending-classification-20261112.md)。上面「正文续核」的概括句不作为 37 点的批量结论。章节仍是「九年级上册 待核」。
+九上 37 点的两类标记见 [english-pending-classification-20261112.md](english-pending-classification-20261112.md)。上面「正文续核」的概括句不作为 37 点的批量结论。章节仍是「九年级上册 待核」。2026-11-12 续核范围：第1–8单元正文印刷页 1–80、Reading Plus（含 83、85、88、91、93）、听力原文 94–103、语法附录 104–106；词表附录未纳入；33 点改为已核未见课业，章节仍待核，不改挂。

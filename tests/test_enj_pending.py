@@ -30,10 +30,19 @@ EDGE_SHA = "7974e573d6e169951d1bc87666236bebd683e3f11048176cddbbede427b28c66"
 CORE_SHA = "c9b08b8b71d43e49a3d6a4f3b374466bcb23c05453251de7cd62ccf05702e962"
 MORALITY_SHA = "8b377550178306ebd1883671a85939c30ff9ae8a19f3952ad0b418fd0863d870"
 
-# 2026-11-12 从证据不足改为已核未见课业的八上 10 点。原先已是第一类的 22 点分类取值保持。
+# 2026-11-12 从证据不足改为已核未见课业的八上 10 点、九上 33 点。
+# 原先已是第一类的 22 点，加上八上这 10 点，分类取值保持。
 G8A_RECLASS = (
     "cne_j113", "cne_j115", "cne_j116", "cne_j117", "cne_j119", "cne_j120",
     "cne_j133", "cne_j135", "cne_j138", "cne_j141",
+)
+G9A_RECLASS = (
+    "cne_j191", "cne_j194", "cne_j195", "cne_j196", "cne_j198", "cne_j199",
+    "cne_j207", "cne_j212", "cne_j213", "cne_j214", "cne_j215", "cne_j216",
+    "cne_j217", "cne_j218", "cne_j219", "cne_j228", "cne_j229", "cne_j230",
+    "cne_j231", "cne_j232", "cne_j233", "cne_j234", "cne_j235", "cne_j236",
+    "cne_j237", "cne_j238", "cne_j239", "cne_j240", "cne_j241", "cne_j242",
+    "cne_j243", "cne_j244", "cne_j245",
 )
 BODY_CHECKED_KEPT = (
     "cne_j053", "cne_j054", "cne_j055", "cne_j056", "cne_j097",
@@ -187,15 +196,19 @@ def test_doc_matches_spec():
         assert ("`%s`" % tid) in text
         assert label in text
     counts = P.count_by_volume()
-    assert sum(bucket[P.BODY_CHECKED_NO_LESSON] for bucket in counts.values()) == 32
-    assert sum(bucket[P.EVIDENCE_INSUFFICIENT] for bucket in counts.values()) == 33
+    assert sum(bucket[P.BODY_CHECKED_NO_LESSON] for bucket in counts.values()) == 65
+    assert sum(bucket[P.EVIDENCE_INSUFFICIENT] for bucket in counts.values()) == 0
     assert counts["七年级上册"] == {P.BODY_CHECKED_NO_LESSON: 4, P.EVIDENCE_INSUFFICIENT: 0}
     assert counts["七年级下册"] == {P.BODY_CHECKED_NO_LESSON: 1, P.EVIDENCE_INSUFFICIENT: 0}
     assert counts["八年级上册"] == {P.BODY_CHECKED_NO_LESSON: 12, P.EVIDENCE_INSUFFICIENT: 0}
     assert counts["八年级下册"] == {P.BODY_CHECKED_NO_LESSON: 11, P.EVIDENCE_INSUFFICIENT: 0}
-    assert counts["九年级上册"] == {P.BODY_CHECKED_NO_LESSON: 4, P.EVIDENCE_INSUFFICIENT: 33}
+    assert counts["九年级上册"] == {P.BODY_CHECKED_NO_LESSON: 37, P.EVIDENCE_INSUFFICIENT: 0}
     assert len(G8A_RECLASS) == 10
+    assert len(G9A_RECLASS) == 33
     assert len(BODY_CHECKED_KEPT) == 22
+    assert set(G8A_RECLASS).isdisjoint(G9A_RECLASS)
+    assert set(BODY_CHECKED_KEPT).isdisjoint(G9A_RECLASS)
+    assert set(BODY_CHECKED_KEPT).isdisjoint(G8A_RECLASS)
     for tid in G8A_RECLASS:
         rec = P.BY_ID[tid]
         assert rec["catalog_status"] == P.BODY_CHECKED_NO_LESSON
@@ -204,7 +217,19 @@ def test_doc_matches_spec():
         assert P._volume(tid) == "八年级上册"
     for tid in BODY_CHECKED_KEPT:
         assert P.BY_ID[tid]["catalog_status"] == P.BODY_CHECKED_NO_LESSON
-    assert P.BY_ID["cne_j191"]["catalog_status"] == P.EVIDENCE_INSUFFICIENT
+    for tid in G9A_RECLASS:
+        rec = P.BY_ID[tid]
+        assert rec["catalog_status"] == P.BODY_CHECKED_NO_LESSON
+        assert "印刷页 1–80" in rec["catalog_note"] or "不改挂" in rec["catalog_note"]
+        assert "g9a-evidence-20261112" in rec["evidence"]
+        assert P._volume(tid) == "九年级上册"
+    assert "cne_j253" in P.BY_ID["cne_j242"]["catalog_note"]
+    assert "remember doing" in P.BY_ID["cne_j242"]["catalog_note"]
+    assert "不改挂" in P.BY_ID["cne_j242"]["catalog_note"]
+    assert "书页49发明介绍写作不是读材料产地介绍" in P.BY_ID["cne_j207"]["catalog_note"]
+    assert "书页99产品听力不是阅读任务" in P.BY_ID["cne_j207"]["catalog_note"]
+    assert "Changes in My Life 不是毕业回忆" in P.BY_ID["cne_j241"]["catalog_note"]
+    assert all(row["catalog_status"] == P.BODY_CHECKED_NO_LESSON for row in P.BY_ID.values())
 
 
 def main():

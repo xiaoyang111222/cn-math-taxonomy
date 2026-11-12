@@ -1,5 +1,9 @@
 # 变更日志
 
+## 2026-11-12（初中英语：九上 33 个待核点改为已核未见课业）
+
+- 2026-11-12：按官方阅读器正文续核，把九年级上册 `cne_j191`、`cne_j194`、`cne_j195`、`cne_j196`、`cne_j198`、`cne_j199`、`cne_j207`、`cne_j212`、`cne_j213`、`cne_j214`、`cne_j215`、`cne_j216`、`cne_j217`、`cne_j218`、`cne_j219`、`cne_j228`、`cne_j229`、`cne_j230`、`cne_j231`、`cne_j232`、`cne_j233`、`cne_j234`、`cne_j235`、`cne_j236`、`cne_j237`、`cne_j238`、`cne_j239`、`cne_j240`、`cne_j241`、`cne_j242`、`cne_j243`、`cne_j244`、`cne_j245` 的 `catalog_status` 从 `evidence_insufficient` 改为 `body_checked_no_lesson`。章节仍是「九年级上册 待核」。检查范围是第1–8单元正文印刷页 1–80（书页 5、22、35、46 用既有旧图，其余用 2026-11-12 新图）、Reading Plus（含 83、85、88、91、93）、听力原文 94–103、语法附录 104–106。词表附录未纳入。在已核范围内未见可改挂课业，不改挂。书页 15 的 It is adj. (for/of sb) to do 不是 remember doing / to do，不改挂 `cne_j242`（该课已挂 `cne_j253`）；书页 49 发明介绍写作不是读材料产地介绍；书页 99 产品听力不是阅读任务；书页 9 Changes in My Life 不是毕业回忆。65 个待核点仍在，全部是 `body_checked_no_lesson`，`evidence_insufficient` 为 0（七上 4/0、七下 1/0、八上 12/0、八下 11/0、九上 37/0）。原先已是第一类的 32 点分类取值未改。`cne_j180` 仍写明教材已教、单元归属未定，不改挂第7或第8单元，也不写成书里没教。点名、题目、先修、学期、unit 90 和章节字符串未改。前台仍只显示「待核」。只改已有 `catalog_status` / `catalog_note` 的取值，SHELL/DATA 列表和数据结构未变，`sw.js` 仍为 v18。详见 `docs/english-pending-classification-20261112.md`。仅本地变更，未推送、未部署。
+
 ## 2026-11-12（初中英语：八上 10 个待核点改为已核未见课业）
 
 - 2026-11-12：按官方阅读器正文续核，把八年级上册 `cne_j113`、`cne_j115`、`cne_j116`、`cne_j117`、`cne_j119`、`cne_j120`、`cne_j133`、`cne_j135`、`cne_j138`、`cne_j141` 的 `catalog_status` 从 `evidence_insufficient` 改为 `body_checked_no_lesson`。章节仍是「八年级上册 待核」。城镇设施、最好的地方、影院介绍、电视节目、节目选择、聚会活动、接受或拒绝邀请、建议用词和聚会建议的近义句、偶发句不改挂。65 个待核点仍在：已核未见课业 32（七上 4、七下 1、八上 12、八下 11、九上 4），证据不足 33（全在九上）。原先已是第一类的 22 点分类取值未改，九上 33 个证据不足点未改。点名、题目、先修、学期、unit 90 和章节字符串未改。前台仍只显示「待核」。只改已有 `catalog_status` / `catalog_note` 的取值，SHELL/DATA 列表和数据结构未变，`sw.js` 仍为 v18。详见 `docs/english-pending-classification-20261112.md`。仅本地变更，未推送、未部署。
