@@ -73,3 +73,6 @@ jobs:
 
       - name: 页面脚本缓存测试
         run: node tests/test_pages_script_cache.js
+
+      - name: Service Worker 导航回退测试
+        run: node tests/test_sw_navigation.js
