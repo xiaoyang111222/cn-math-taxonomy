@@ -725,7 +725,7 @@
           : subject === 'geography' || subject === 'biology'
           ? '七八'.split('').map(function (x) { return [x, x + '年级']; })
           : subject === 'chemistry'
-          ? [['九', '九年级'], ['必修一', '必修一'], ['必修二', '必修二']]
+          ? [['九', '九年级'], ['必修一', '必修一'], ['必修二', '必修二'], ['选必一', '选必一']]
           : subject === 'chinese'
           ? '一二三四五六七八九'.split('').map(function (x) { return [x, x + '年级']; })
           : subject === 'science'
@@ -1420,7 +1420,7 @@
     }
     if (grade >= 1 && grade <= 9) return cn[grade] + '年级';
     if (subject === 'physics') return { 10: '必修一', 11: '必修二', 12: '必修三', 13: '选必一', 14: '选必二', 15: '选必三' }[grade] || ('册' + grade);
-    if (subject === 'chemistry') return { 10: '必修一', 11: '必修二', 12: '必修三', 13: '选必一', 14: '选必二' }[grade] || ('册' + grade);
+    if (subject === 'chemistry') return { 10: '必修一', 11: '必修二', 12: '选必一', 13: '选必二', 14: '选必三' }[grade] || ('册' + grade);
     const math = { 10: '高一', 11: '高二', 12: '选必一', 13: '选必二', 14: '选必三' };
     return math[grade] || ('年级' + grade);
   }
@@ -1782,7 +1782,7 @@
             : subject === 'physics'
             ? '高中物理不拆上下册：' + grade + ' / ' + volume + '（用 grade=必修一 或 grade=选必一）'
             : subject === 'chemistry'
-            ? '高中化学不拆上下册：' + grade + ' / ' + volume + '（用 grade=必修一 或 grade=必修二）'
+            ? '高中化学不拆上下册：' + grade + ' / ' + volume + '（用 grade=必修一、grade=必修二 或 grade=选必一）'
             : '高中不拆上下册：' + grade + ' / ' + volume + '（用 grade=高一、grade=高二 或 grade=选必二）');
         }
         scope = seniorUrl[grade];

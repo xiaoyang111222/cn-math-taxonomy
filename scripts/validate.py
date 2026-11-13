@@ -102,15 +102,21 @@ CHEM_STD_CODES = {
     "SR": "物质的化学变化", "SS": "化学与社会·跨学科实践",
 }
 CHEM_STD_ID_RE = re.compile(r"^cks-2022:(SQ|SP|SC|SR|SS)\.(\d{2,})$")
-# 高中化学必修第一、二册。主题代码与 scripts/chem_hs_std.py 的 CODES 一致。
+# 高中化学必修第一、二册和选择性必修第一册。主题代码与 scripts/chem_hs_std.py 的 CODES 一致。
 CHEM_HS_STD_CODES = {
     "EX": "化学科学与实验探究",
     "IN": "常见的无机物及其应用",
     "ST": "物质结构基础与化学反应规律",
     "OR": "简单的有机化合物及其应用",
     "SO": "化学与社会发展",
+    "TH": "化学反应与热能",
+    "DR": "化学反应的方向、速率和限度",
+    "AQ": "水溶液中的离子反应与平衡",
+    "EL": "化学反应与电能",
 }
-CHEM_HS_STD_ID_RE = re.compile(r"^cks-hs-2017:B([12])\.(EX|IN|ST|OR|SO)\.(\d{2,})$")
+CHEM_HS_STD_ID_RE = re.compile(
+    r"^cks-hs-2017:(B[12]|S1)\.(EX|IN|ST|OR|SO|TH|DR|AQ|EL)\.(\d{2,})$"
+)
 ZH_STD_ID_RE = re.compile(r"^ccs-2022:([1234])\.(PY|SZ|CY|JZ|YD|GS|XZ|WY|MZ)\.(\d{2,})$")
 EN_PROMPT_START_RE = re.compile(r"^(同一|上题|该题|同上)")
 EN_PROMPT_BAN_RE = re.compile(r"本知识点|课标|是否要求")
@@ -118,7 +124,7 @@ CORE_FIELDS = ["id", "name", "domain", "grade", "semester", "chapter", "type",
                "description", "mastery_criteria", "diagnostic_question", "external"]
 EXT_FIELDS = ["id", "name", "domain", "grade", "description", "external"]
 # cnm_001 初中正式；cnm_p001 小学正式；cnm_h001 高中正式。cne_p001 小学英语，cne_j001 初中英语，cne_h001 高中英语。
-# cnp_001 初中物理；cnp_h001 高中物理（必修一至选必三，grade 10–15）。cnc_p001 小学语文，cnc_j001 初中语文；cns_p001 小学科学；cnd_p001 小学道德与法治，cnd_j001 初中道德与法治；cnh_j001 初中历史；cng_j001 初中地理；cnb_j001 初中生物；cnk_j001 初中化学；cnk_h001 高中化学（必修第一册起，grade 10–14）。
+# cnp_001 初中物理；cnp_h001 高中物理（必修一至选必三，grade 10–15）。cnc_p001 小学语文，cnc_j001 初中语文；cns_p001 小学科学；cnd_p001 小学道德与法治，cnd_j001 初中道德与法治；cnh_j001 初中历史；cng_j001 初中地理；cnb_j001 初中生物；cnk_j001 初中化学；cnk_h001 高中化学（grade 10 必修一、11 必修二、12 选必一，13/14 留给选必二、选必三）。
 ID_RE = re.compile(r"^(?:cnm_(?:p|h)?|cne_[pjh]|cnp_h?|cnc_[pj]|cns_p|cnd_[pj]|cnh_j|cng_j|cnb_j|cnk_[jh])\d{3,}$")
 # 10、11 是必修第一、二册；12、13、14 是选择性必修第一、二、三册，不是教学年份。
 GRADES = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
@@ -501,7 +507,7 @@ def check_topics(topics):
                     err("%s 初中化学 grade 必须是 9" % where)
             elif is_chemistry_senior_id(tid):
                 if g not in (10, 11, 12, 13, 14):
-                    err("%s 高中化学 grade 必须是 10–14（10 为必修第一册，11 为必修第二册）" % where)
+                    err("%s 高中化学 grade 必须是 10–14（10、11 是必修第一、二册；12、13、14 是选择性必修第一、二、三册）" % where)
             else:
                 err("%s 化学 id 必须是 cnk_j 或 cnk_h" % where)
         if subj == "chinese":
@@ -707,7 +713,7 @@ def report(ids, prereqs, dependents, n_hard, n_soft, n_en_hard, n_en_soft):
         if is_physics_senior_id(t.get("id")):
             return {10: "物必一", 11: "物必二", 12: "物必三", 13: "物选必一", 14: "物选必二", 15: "物选必三"}.get(t["grade"], str(t["grade"]))
         if is_chemistry_senior_id(t.get("id")):
-            return {10: "必修一", 11: "必修二", 12: "必修三", 13: "选必一", 14: "选必二"}.get(t["grade"], str(t["grade"]))
+            return {10: "必修一", 11: "必修二", 12: "选必一", 13: "选必二", 14: "选必三"}.get(t["grade"], str(t["grade"]))
         if is_english_id(t.get("id")) and isinstance(t.get("grade"), int) and t["grade"] >= 10:
             return {10: "必修一", 11: "必修二", 12: "必修三", 13: "选必一", 14: "选必二", 15: "选必三", 16: "选必四"}.get(t["grade"], str(t["grade"]))
         if t["grade"] == 10:
@@ -792,8 +798,8 @@ def report(ids, prereqs, dependents, n_hard, n_soft, n_en_hard, n_en_soft):
             print("  %-8s %d" % (k, v))
         print("化学按册：")
         cc = Counter(vol_label(t) for t in chem_core)
-        for k in ["九上", "九下", "必修一", "必修二", "必修三", "选必一", "选必二"]:
-            if cc.get(k, 0) or k in ("九上", "九下", "必修一", "必修二"):
+        for k in ["九上", "九下", "必修一", "必修二", "选必一", "选必二", "选必三"]:
+            if cc.get(k, 0) or k in ("九上", "九下", "必修一", "必修二", "选必一"):
                 print("  %-8s %d" % (k, cc.get(k, 0)))
         print("化学先修边 %d 条" % N_CHEM_EDGES)
     if en_core:
@@ -1098,7 +1104,7 @@ def check_standards_file(std):
             if it.get("page_or_ref") != "待核":
                 err("%s 高中化学课标 page_or_ref 必须是「待核」，不能编页码" % where)
         else:
-            err("%s id 格式不合法（应为 cms-2022:<学段>.<NA|GG|SP|IP>.<NN>、cms-2017:H.<PRE|FUN|GA|PS|MI>.<NN>、ces-2022:<1|2|3>.<PH|VO|GR|FU|RW>.<NN> 、ces-2017:H.<B|S>.<PH|VO|GR|FU|RW>.<NN> 、ccs-2022:<1|2|3|4>.<PY|SZ|CY|JZ|YD|GS|XZ|WY|MZ>.<NN> 、css-2022:<1|2|3>.<WZ|SM|DQ|JG>.<NN> 、cds-2022:<1|2|3>.<LS|XX|JT|SH|GM|ZR>.<NN> 或 cds-2022:4.<JK|FZ|WH|GY|GQ>.<NN> 、chs-2022:<CA|CN|CM|WA|WN|WM>.<NN> 、cgs-2022:<EM|WG|CG>.<NN> 、cbs-2022:<BS|BD|BE|BP|BH|BG|BX>.<NN> 、cks-2022:<SQ|SP|SC|SR|SS>.<NN> 、cks-hs-2017:B<1|2>.<EX|IN|ST|OR|SO>.<NN> 、cps-2022:<1-5>.<二级>.<序号> 或 cps-hs-2017:<B|S><1-3>.<1-4|X>.<序号>）" % where)
+            err("%s id 格式不合法（应为 cms-2022:<学段>.<NA|GG|SP|IP>.<NN>、cms-2017:H.<PRE|FUN|GA|PS|MI>.<NN>、ces-2022:<1|2|3>.<PH|VO|GR|FU|RW>.<NN> 、ces-2017:H.<B|S>.<PH|VO|GR|FU|RW>.<NN> 、ccs-2022:<1|2|3|4>.<PY|SZ|CY|JZ|YD|GS|XZ|WY|MZ>.<NN> 、css-2022:<1|2|3>.<WZ|SM|DQ|JG>.<NN> 、cds-2022:<1|2|3>.<LS|XX|JT|SH|GM|ZR>.<NN> 或 cds-2022:4.<JK|FZ|WH|GY|GQ>.<NN> 、chs-2022:<CA|CN|CM|WA|WN|WM>.<NN> 、cgs-2022:<EM|WG|CG>.<NN> 、cbs-2022:<BS|BD|BE|BP|BH|BG|BX>.<NN> 、cks-2022:<SQ|SP|SC|SR|SS>.<NN> 、cks-hs-2017:<B1|B2|S1>.<EX|IN|ST|OR|SO|TH|DR|AQ|EL>.<NN> 、cps-2022:<1-5>.<二级>.<序号> 或 cps-hs-2017:<B|S><1-3>.<1-4|X>.<序号>）" % where)
         for f in ("domain", "section", "text"):
             if not nonempty_str(it.get(f)):
                 err("%s 字段 %s 缺失或为空" % (where, f))

@@ -29718,6 +29718,78 @@
     "reason": "按人教版化学必修第二册的教学顺序，先学「自然资源的开发利用」，再学「化学品的合理使用」。"
   },
   {
+    "topicId": "cnk_h042",
+    "prerequisiteId": "cnk_h041",
+    "strength": "soft",
+    "reason": "按人教版化学课序，学完必修第二册的「整理与提升」后进入选择性必修第一册的「引言」。"
+  },
+  {
+    "topicId": "cnk_h046",
+    "prerequisiteId": "cnk_h045",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「整理与提升」，再学「化学反应速率」。"
+  },
+  {
+    "topicId": "cnk_h049",
+    "prerequisiteId": "cnk_h048",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「化学反应的方向」，再学「化学反应的调控」。"
+  },
+  {
+    "topicId": "cnk_h051",
+    "prerequisiteId": "cnk_h050",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「整理与提升」，再学「实验活动1 探究影响化学平衡移动的因素」。"
+  },
+  {
+    "topicId": "cnk_h052",
+    "prerequisiteId": "cnk_h051",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「实验活动1 探究影响化学平衡移动的因素」，再学「电离平衡」。"
+  },
+  {
+    "topicId": "cnk_h055",
+    "prerequisiteId": "cnk_h054",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「盐类的水解」，再学「沉淀溶解平衡」。"
+  },
+  {
+    "topicId": "cnk_h057",
+    "prerequisiteId": "cnk_h056",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「整理与提升」，再学「实验活动2 强酸与强碱的中和滴定」。"
+  },
+  {
+    "topicId": "cnk_h058",
+    "prerequisiteId": "cnk_h057",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「实验活动2 强酸与强碱的中和滴定」，再学「实验活动3 盐类水解的应用」。"
+  },
+  {
+    "topicId": "cnk_h059",
+    "prerequisiteId": "cnk_h058",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「实验活动3 盐类水解的应用」，再学「原电池」。"
+  },
+  {
+    "topicId": "cnk_h061",
+    "prerequisiteId": "cnk_h060",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「电解池」，再学「金属的腐蚀与防护」。"
+  },
+  {
+    "topicId": "cnk_h063",
+    "prerequisiteId": "cnk_h062",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「整理与提升」，再学「实验活动4 简单的电镀实验」。"
+  },
+  {
+    "topicId": "cnk_h064",
+    "prerequisiteId": "cnk_h063",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「实验活动4 简单的电镀实验」，再学「实验活动5 制作简单的燃料电池」。"
+  },
+  {
     "topicId": "cnk_h001",
     "prerequisiteId": "cnk_j001",
     "strength": "hard",
@@ -30142,5 +30214,197 @@
     "prerequisiteId": "cnk_h040",
     "strength": "hard",
     "reason": "复习本章要先会环境保护与绿色化学。"
+  },
+  {
+    "topicId": "cnk_h042",
+    "prerequisiteId": "cnk_h026",
+    "strength": "hard",
+    "reason": "本册讨论反应原理，要先认识化学反应伴随着能量变化。"
+  },
+  {
+    "topicId": "cnk_h043",
+    "prerequisiteId": "cnk_h042",
+    "strength": "hard",
+    "reason": "反应热是本册从引言进入的第一个定量主题。"
+  },
+  {
+    "topicId": "cnk_h044",
+    "prerequisiteId": "cnk_h043",
+    "strength": "hard",
+    "reason": "计算反应热要先会判断焓变的正负，并会读热化学方程式。"
+  },
+  {
+    "topicId": "cnk_h044",
+    "prerequisiteId": "cnk_h008",
+    "strength": "hard",
+    "reason": "按化学计量数换算热量时要用物质的量。"
+  },
+  {
+    "topicId": "cnk_h045",
+    "prerequisiteId": "cnk_h044",
+    "strength": "hard",
+    "reason": "复习本章要先会反应热的计算。"
+  },
+  {
+    "topicId": "cnk_h046",
+    "prerequisiteId": "cnk_h027",
+    "strength": "hard",
+    "reason": "本节把必修里的速率与限度展开成速率的定量描述。"
+  },
+  {
+    "topicId": "cnk_h047",
+    "prerequisiteId": "cnk_h046",
+    "strength": "hard",
+    "reason": "讨论平衡要先会比较正反应和逆反应的速率。"
+  },
+  {
+    "topicId": "cnk_h048",
+    "prerequisiteId": "cnk_h047",
+    "strength": "hard",
+    "reason": "讨论方向要先知道可逆反应有一个平衡限度，方向不是速率。"
+  },
+  {
+    "topicId": "cnk_h049",
+    "prerequisiteId": "cnk_h047",
+    "strength": "hard",
+    "reason": "调控平衡要先认识化学平衡和平衡移动。"
+  },
+  {
+    "topicId": "cnk_h050",
+    "prerequisiteId": "cnk_h048",
+    "strength": "hard",
+    "reason": "复习本章要先会化学反应的方向。"
+  },
+  {
+    "topicId": "cnk_h050",
+    "prerequisiteId": "cnk_h049",
+    "strength": "hard",
+    "reason": "复习本章要先会化学反应的调控。"
+  },
+  {
+    "topicId": "cnk_h051",
+    "prerequisiteId": "cnk_h049",
+    "strength": "hard",
+    "reason": "改变条件看平衡移动，要先知道调控的基本思路。"
+  },
+  {
+    "topicId": "cnk_h052",
+    "prerequisiteId": "cnk_h003",
+    "strength": "hard",
+    "reason": "电离平衡建立在电解质溶于水能电离、并能写离子反应的基础上。"
+  },
+  {
+    "topicId": "cnk_h052",
+    "prerequisiteId": "cnk_h047",
+    "strength": "hard",
+    "reason": "电离平衡是一种可逆平衡，要先有化学平衡的观念。"
+  },
+  {
+    "topicId": "cnk_h053",
+    "prerequisiteId": "cnk_h052",
+    "strength": "hard",
+    "reason": "水的电离是弱电解质电离的特例，要先会电离平衡。"
+  },
+  {
+    "topicId": "cnk_h053",
+    "prerequisiteId": "cnk_j038",
+    "strength": "hard",
+    "reason": "初中已经用 pH 判断酸碱性，这里要连上水的电离。"
+  },
+  {
+    "topicId": "cnk_h054",
+    "prerequisiteId": "cnk_h053",
+    "strength": "hard",
+    "reason": "判断盐溶液酸碱性要用 pH 和水的电离。"
+  },
+  {
+    "topicId": "cnk_h055",
+    "prerequisiteId": "cnk_h047",
+    "strength": "hard",
+    "reason": "沉淀溶解平衡是另一类平衡，要先认识化学平衡。"
+  },
+  {
+    "topicId": "cnk_h055",
+    "prerequisiteId": "cnk_h003",
+    "strength": "hard",
+    "reason": "沉淀的生成和溶解要写成离子反应。"
+  },
+  {
+    "topicId": "cnk_h056",
+    "prerequisiteId": "cnk_h054",
+    "strength": "hard",
+    "reason": "复习本章要先会盐类的水解。"
+  },
+  {
+    "topicId": "cnk_h056",
+    "prerequisiteId": "cnk_h055",
+    "strength": "hard",
+    "reason": "复习本章要先会沉淀溶解平衡。"
+  },
+  {
+    "topicId": "cnk_h057",
+    "prerequisiteId": "cnk_h053",
+    "strength": "hard",
+    "reason": "判断滴定终点附近的酸碱性，要先会 pH。"
+  },
+  {
+    "topicId": "cnk_h057",
+    "prerequisiteId": "cnk_j041",
+    "strength": "hard",
+    "reason": "滴定依据的是酸和碱的中和反应。"
+  },
+  {
+    "topicId": "cnk_h058",
+    "prerequisiteId": "cnk_h054",
+    "strength": "hard",
+    "reason": "实验应用的就是盐类水解，要先认识水解。"
+  },
+  {
+    "topicId": "cnk_h059",
+    "prerequisiteId": "cnk_h029",
+    "strength": "hard",
+    "reason": "必修实验已经把化学能转化成电能，本节把它讲成原电池。"
+  },
+  {
+    "topicId": "cnk_h060",
+    "prerequisiteId": "cnk_h059",
+    "strength": "hard",
+    "reason": "电解池和原电池都讨论电极反应，要先会原电池。"
+  },
+  {
+    "topicId": "cnk_h061",
+    "prerequisiteId": "cnk_h059",
+    "strength": "hard",
+    "reason": "电化学腐蚀可以看成许多微小的原电池。"
+  },
+  {
+    "topicId": "cnk_h061",
+    "prerequisiteId": "cnk_j031",
+    "strength": "hard",
+    "reason": "初中已经知道铁生锈需要空气和水，以及涂油、喷漆等防锈方法。"
+  },
+  {
+    "topicId": "cnk_h062",
+    "prerequisiteId": "cnk_h060",
+    "strength": "hard",
+    "reason": "复习本章要先会电解池。"
+  },
+  {
+    "topicId": "cnk_h062",
+    "prerequisiteId": "cnk_h061",
+    "strength": "hard",
+    "reason": "复习本章要先会金属的腐蚀与防护。"
+  },
+  {
+    "topicId": "cnk_h063",
+    "prerequisiteId": "cnk_h060",
+    "strength": "hard",
+    "reason": "电镀是电解池的一种应用，要先会电解池。"
+  },
+  {
+    "topicId": "cnk_h064",
+    "prerequisiteId": "cnk_h059",
+    "strength": "hard",
+    "reason": "燃料电池是一种持续供给反应物的原电池，要先会原电池。"
   }
 ]

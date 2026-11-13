@@ -95324,5 +95324,706 @@
         "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
       }
     ]
+  },
+  {
+    "id": "cnk_h042",
+    "name": "引言",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 引言",
+    "type": "conceptual",
+    "description": "本册从能量、速率与平衡、水溶液中的离子平衡和电能四个角度，继续研究化学反应。",
+    "mastery_criteria": [
+      "能说出本册要研究的是化学反应本身的原理",
+      "能把能量变化和反应是否发生区分开"
+    ],
+    "diagnostic_question": {
+      "question": "选择性必修第一册《化学反应原理》主要研究的是？",
+      "answer": "化学反应的能量、速率、平衡和电能转化"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.TH.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.DR.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h043",
+    "name": "反应热",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第一章 化学反应的热效应 1.1",
+    "type": "conceptual",
+    "description": "反应热表示恒温下反应放出或吸收的热量。放热反应焓变小于零，吸热反应焓变大于零。热化学方程式要注明状态。",
+    "mastery_criteria": [
+      "能根据焓变的正负判断放热或吸热",
+      "能指出热化学方程式必须写聚集状态"
+    ],
+    "diagnostic_question": {
+      "question": "一个反应的焓变小于零，这个反应是？",
+      "answer": "放热反应"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.TH.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h044",
+    "name": "反应热的计算",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第一章 化学反应的热效应 1.2",
+    "type": "procedural",
+    "description": "反应热只与始态和终态有关。可以用盖斯定律把已知反应的焓变相加减，也可以按热化学方程式的物质的量换算热量。",
+    "mastery_criteria": [
+      "能用盖斯定律由已知焓变求未知焓变",
+      "能按热化学方程式把物质的量换算成热量"
+    ],
+    "diagnostic_question": {
+      "question": "盖斯定律说的是？",
+      "answer": "反应热只取决于始态和终态，与途径无关"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.TH.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.TH.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h045",
+    "name": "整理与提升",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第一章 化学反应的热效应 整理与提升",
+    "type": "reasoning",
+    "description": "综合第一章：反应热的符号、热化学方程式和盖斯定律。不提前使用化学平衡常数或电解的新概念。",
+    "mastery_criteria": [
+      "能把放热吸热和焓变符号放在一起判断",
+      "能说明反应热与途径无关"
+    ],
+    "diagnostic_question": {
+      "question": "焓变大于零的反应是？",
+      "answer": "吸热反应"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.TH.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.TH.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h046",
+    "name": "化学反应速率",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第二章 化学反应速率与化学平衡 2.1",
+    "type": "reasoning",
+    "description": "化学反应速率常用单位时间内浓度的变化来表示。浓度、压强、温度、催化剂和固体接触面积都会影响速率。",
+    "mastery_criteria": [
+      "能用浓度变化除以时间表示平均速率",
+      "能指出升高温度、加入催化剂通常使反应加快"
+    ],
+    "diagnostic_question": {
+      "question": "其他条件不变，升高温度时，化学反应速率通常会？",
+      "answer": "加快"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.DR.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h047",
+    "name": "化学平衡",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第二章 化学反应速率与化学平衡 2.2",
+    "type": "reasoning",
+    "description": "可逆反应达到化学平衡时，正逆反应速率相等，各组分浓度不再改变，反应仍在进行。浓度商小于平衡常数时反应正向进行。平衡常数主要随温度改变。",
+    "mastery_criteria": [
+      "能说明化学平衡是动态的",
+      "能用浓度商与平衡常数比较反应进行的方向"
+    ],
+    "diagnostic_question": {
+      "question": "可逆反应达到化学平衡时，正确的是？",
+      "answer": "正反应速率等于逆反应速率，各组分浓度不再随时间改变"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.DR.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h048",
+    "name": "化学反应的方向",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第二章 化学反应速率与化学平衡 2.3",
+    "type": "reasoning",
+    "description": "反应能否自发进行，要同时看焓变和熵变。焓减且熵增的反应，自发趋势更明显。这里只做定性判断，不计算具体的自由能数值。",
+    "mastery_criteria": [
+      "能说明自发趋势要同时看焓变和熵变",
+      "能判断焓减且熵增的反应更倾向于自发"
+    ],
+    "diagnostic_question": {
+      "question": "判断化学反应的方向，不能只看？",
+      "answer": "反应是不是看起来很快"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.DR.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h049",
+    "name": "化学反应的调控",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第二章 化学反应速率与化学平衡 2.4",
+    "type": "application",
+    "description": "可以通过浓度、压强、温度和催化剂调控速率与平衡。加压使气体分子数减少的方向占优势；升温使吸热方向占优势；催化剂加快反应但不移动平衡。",
+    "mastery_criteria": [
+      "能根据条件变化说明平衡移动方向",
+      "能说明催化剂加快反应但不改变平衡限度"
+    ],
+    "diagnostic_question": {
+      "question": "可逆反应已达平衡。增大反应物浓度，在其他条件不变时，平衡通常？",
+      "answer": "向正反应方向移动"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.DR.04",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.DR.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h050",
+    "name": "整理与提升",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第二章 化学反应速率与化学平衡 整理与提升",
+    "type": "reasoning",
+    "description": "综合第二章：反应速率、化学平衡、反应方向和调控。不引入水溶液电离常数或电解池的新概念。",
+    "mastery_criteria": [
+      "能区分速率、平衡和方向",
+      "能判断改变条件后速率和平衡分别怎样变"
+    ],
+    "diagnostic_question": {
+      "question": "反应很快，是否等于一定进行到底？",
+      "answer": "不等于。快慢和限度是两回事"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.DR.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.DR.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.DR.04",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h051",
+    "name": "实验活动1 探究影响化学平衡移动的因素",
+    "domain": "科学探究与化学实验",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第二章 化学反应速率与化学平衡 实验活动1",
+    "type": "procedural",
+    "description": "实验活动 1 通过改变浓度、温度或压强，观察可逆体系的现象变化，判断平衡是否移动。每次尽量只改变一个条件。",
+    "mastery_criteria": [
+      "能说出这个实验要探究的是影响平衡移动的因素",
+      "能说明对照时要控制变量，并记录现象"
+    ],
+    "diagnostic_question": {
+      "question": "实验活动「探究影响化学平衡移动的因素」主要要弄清的是？",
+      "answer": "改变条件后，平衡向哪个方向移动"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.EX.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.EX.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.DR.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h052",
+    "name": "电离平衡",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第三章 水溶液中的离子反应与平衡 3.1",
+    "type": "conceptual",
+    "description": "强电解质在水中完全电离。弱电解质只部分电离，存在电离平衡。稀释弱酸时，电离程度通常增大。",
+    "mastery_criteria": [
+      "能区分强电解质和弱电解质",
+      "能说明弱电解质存在电离平衡"
+    ],
+    "diagnostic_question": {
+      "question": "盐酸在水中几乎完全电离，它属于？",
+      "answer": "强电解质"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.AQ.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h053",
+    "name": "水的电离和溶液的pH",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第三章 水溶液中的离子反应与平衡 3.2",
+    "type": "reasoning",
+    "description": "水能微弱电离。常温下中性溶液 pH 等于 7，酸性小于 7，碱性大于 7。稀强酸可按完全电离由氢离子浓度估计 pH。",
+    "mastery_criteria": [
+      "能根据 pH 判断常温下溶液的酸碱性",
+      "能由稀强酸的氢离子浓度说出 pH"
+    ],
+    "diagnostic_question": {
+      "question": "常温下，pH 小于 7 的溶液呈？",
+      "answer": "酸性"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.AQ.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h054",
+    "name": "盐类的水解",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第三章 水溶液中的离子反应与平衡 3.3",
+    "type": "reasoning",
+    "description": "盐类水解是弱离子与水结合，生成弱电解质。强酸弱碱盐溶液常显酸性，强碱弱酸盐溶液常显碱性，强酸强碱盐一般不水解。",
+    "mastery_criteria": [
+      "能判断常见盐溶液的酸碱性",
+      "能说明水解是弱离子与水的作用"
+    ],
+    "diagnostic_question": {
+      "question": "氯化铵溶液常显酸性，主要是因为？",
+      "answer": "铵根离子水解，使溶液中氢离子多于氢氧根"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.AQ.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h055",
+    "name": "沉淀溶解平衡",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第三章 水溶液中的离子反应与平衡 3.4",
+    "type": "reasoning",
+    "description": "难溶电解质在水中存在沉淀溶解平衡。离子浓度增大到超过限度时会析出沉淀；把构成沉淀的离子消耗掉，沉淀会溶解。",
+    "mastery_criteria": [
+      "能说明沉淀溶解是动态平衡",
+      "能定性判断离子浓度变化对沉淀生成或溶解的影响"
+    ],
+    "diagnostic_question": {
+      "question": "难溶电解质放在水中，达到沉淀溶解平衡时？",
+      "answer": "溶解和沉淀仍在进行，只是速率相等"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.AQ.04",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h056",
+    "name": "整理与提升",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第三章 水溶液中的离子反应与平衡 整理与提升",
+    "type": "reasoning",
+    "description": "综合第三章：电离平衡、水的电离和 pH、盐类水解、沉淀溶解平衡。不引入原电池和电解池。",
+    "mastery_criteria": [
+      "能把弱电解质、pH、水解和沉淀放在一起判断",
+      "能说明这些平衡都会因浓度变化而移动"
+    ],
+    "diagnostic_question": {
+      "question": "常温下 pH 大于 7，说明溶液？",
+      "answer": "显碱性"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.AQ.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.AQ.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.AQ.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h057",
+    "name": "实验活动2 强酸与强碱的中和滴定",
+    "domain": "科学探究与化学实验",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第三章 水溶液中的离子反应与平衡 实验活动2",
+    "type": "procedural",
+    "description": "实验活动 2 用已知浓度的强酸或强碱滴定未知浓度的另一方，靠指示剂判断终点，并用物质的量关系计算浓度。",
+    "mastery_criteria": [
+      "能说出中和滴定是为了测定浓度",
+      "能指出滴定要控制滴速并平视读数"
+    ],
+    "diagnostic_question": {
+      "question": "强酸与强碱的中和滴定，主要目的是？",
+      "answer": "测定未知酸或碱的浓度"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.EX.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.AQ.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h058",
+    "name": "实验活动3 盐类水解的应用",
+    "domain": "科学探究与化学实验",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第三章 水溶液中的离子反应与平衡 实验活动3",
+    "type": "application",
+    "description": "实验活动 3 利用盐类水解，例如观察盐溶液的酸碱性，或用加热促进水解来制备胶体、除去杂质。操作上要控制温度，不把溶液蒸干硬烤。",
+    "mastery_criteria": [
+      "能说出这个实验要用盐类水解解决问题",
+      "能指出加热常能促进水解，并注意安全"
+    ],
+    "diagnostic_question": {
+      "question": "实验活动「盐类水解的应用」主要依据的原理是？",
+      "answer": "盐电离出的弱离子与水作用，使平衡发生移动"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.EX.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.AQ.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h059",
+    "name": "原电池",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第四章 化学反应与电能 4.1",
+    "type": "conceptual",
+    "description": "原电池把化学能转化为电能。较活泼的电极作负极，发生氧化反应；正极发生还原反应。电子经导线由负极流向正极。",
+    "mastery_criteria": [
+      "能判断原电池的正负极",
+      "能说明电子在导线中的流向"
+    ],
+    "diagnostic_question": {
+      "question": "原电池工作时，能量转化主要是？",
+      "answer": "化学能转化为电能"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.EL.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h060",
+    "name": "电解池",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第四章 化学反应与电能 4.2",
+    "type": "conceptual",
+    "description": "电解池把电能转化为化学能。与电源正极相连的是阳极，发生氧化反应；阴极发生还原反应。",
+    "mastery_criteria": [
+      "能区分电解池的阴阳极",
+      "能说明电解是电能转化为化学能"
+    ],
+    "diagnostic_question": {
+      "question": "电解池工作时，能量转化主要是？",
+      "answer": "电能转化为化学能"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.EL.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h061",
+    "name": "金属的腐蚀与防护",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第四章 化学反应与电能 4.3",
+    "type": "application",
+    "description": "钢铁在潮湿空气中会发生电化学腐蚀。防护可以用涂覆、改变成分，或连接更活泼的金属作牺牲阳极。",
+    "mastery_criteria": [
+      "能说出电化学腐蚀需要水和氧气等条件",
+      "能举例说明牺牲阳极和覆盖层怎样保护金属"
+    ],
+    "diagnostic_question": {
+      "question": "铁在中性潮湿空气中腐蚀，通常需要？",
+      "answer": "水和氧气"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.EL.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h062",
+    "name": "整理与提升",
+    "domain": "物质的化学变化",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第四章 化学反应与电能 整理与提升",
+    "type": "reasoning",
+    "description": "综合第四章：原电池、电解池、金属的腐蚀与防护。不引入未建的选择性必修其他模块。",
+    "mastery_criteria": [
+      "能区分原电池和电解池的能量转化",
+      "能把电极反应和金属防护联系起来"
+    ],
+    "diagnostic_question": {
+      "question": "不接外加电源、靠自发反应产生电流的装置是？",
+      "answer": "原电池"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.EL.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.EL.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.EL.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h063",
+    "name": "实验活动4 简单的电镀实验",
+    "domain": "科学探究与化学实验",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第四章 化学反应与电能 实验活动4",
+    "type": "procedural",
+    "description": "实验活动 4 用直流电源把金属镀到工件表面。待镀件作阴极，镀层金属作阳极，电解液中含有该金属的离子。",
+    "mastery_criteria": [
+      "能说出电镀实验里工件应接阴极",
+      "能指出电极接反会得不到预期镀层"
+    ],
+    "diagnostic_question": {
+      "question": "简单电镀实验中，待镀工件应当连接？",
+      "answer": "电源负极，作阴极"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.EX.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.EL.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h064",
+    "name": "实验活动5 制作简单的燃料电池",
+    "domain": "科学探究与化学实验",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必一 第四章 化学反应与电能 实验活动5",
+    "type": "application",
+    "description": "实验活动 5 用燃料和氧化剂在两个电极上反应，把化学能转化成电能。氢氧燃料电池中，氢气在负极被氧化。氢气易燃，要远离明火。",
+    "mastery_criteria": [
+      "能说出燃料电池是在持续供给燃料时把化学能变成电能",
+      "能指出氢气易燃，实验要远离明火"
+    ],
+    "diagnostic_question": {
+      "question": "制作简单的燃料电池，能量转化主要是？",
+      "answer": "化学能转化为电能"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S1.EX.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S1.EL.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
   }
 ]
