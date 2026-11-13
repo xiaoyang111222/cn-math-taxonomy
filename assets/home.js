@@ -143,7 +143,7 @@
   } else if (subject === 'chemistry') {
     document.title = '化学 · 中小学·高中知识图谱';
     var ceye = document.querySelector('.eyebrow');
-    if (ceye) ceye.textContent = '化学：初中九年级 · 高中必修第一、二册和选择性必修第一、二册 · 人教版';
+    if (ceye) ceye.textContent = '化学：初中九年级 · 高中必修第一、二册和选择性必修第一、二、三册 · 人教版';
     var cprimary = document.querySelector('.hero-actions a.btn-primary');
     var cbrowse = document.querySelector('.hero-actions a.btn:not(.btn-primary)');
     if (cprimary) cprimary.setAttribute('href', 'diagnose/?subject=chemistry');
@@ -406,6 +406,8 @@
       if (chemHsS1.length) addCard(12, '高中化学', '选必一', 'is-senior', '选择性必修第一册', 'explore/?subject=chemistry&grade=12');
       var chemHsS2 = topics.filter(function (topic) { return topic.grade === 13; });
       if (chemHsS2.length) addCard(13, '高中化学', '选必二', 'is-senior', '选择性必修第二册', 'explore/?subject=chemistry&grade=13');
+      var chemHsS3 = topics.filter(function (topic) { return topic.grade === 14; });
+      if (chemHsS3.length) addCard(14, '高中化学', '选必三', 'is-senior', '选择性必修第三册', 'explore/?subject=chemistry&grade=14');
     } else if (wantPhysics) {
       addCard(10, '高中物理', '必修一', 'is-senior', '必修第一册', 'explore/?subject=physics&grade=10');
       addCard(11, '高中物理', '必修二', 'is-senior', '必修第二册', 'explore/?subject=physics&grade=11');

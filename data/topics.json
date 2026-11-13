@@ -96443,5 +96443,693 @@
         "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
       }
     ]
+  },
+  {
+    "id": "cnk_h079",
+    "name": "引言",
+    "domain": "物质的组成与结构",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 引言",
+    "type": "conceptual",
+    "description": "本册在必修有机化合物的基础上，继续研究有机物的结构、性质和转化。",
+    "mastery_criteria": [
+      "能说出本册研究的是有机化合物的结构与性质",
+      "能把碳骨架、官能团和性质对应起来"
+    ],
+    "diagnostic_question": {
+      "question": "选择性必修第三册《有机化学基础》主要研究的是？",
+      "answer": "有机化合物的结构、性质、转化及其应用"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.OS.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h080",
+    "name": "有机化合物的结构特点",
+    "domain": "物质的组成与结构",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第一章 有机化合物的结构特点与研究方法 1.1",
+    "type": "conceptual",
+    "description": "碳原子通常形成四个共价键。甲烷是正四面体。同分异构体分子式相同、结构不同；同系物组成相差若干个 CH2。",
+    "mastery_criteria": [
+      "能说明碳的成键特点和甲烷的空间构型",
+      "能区分同分异构体和同系物"
+    ],
+    "diagnostic_question": {
+      "question": "有机物分子中，碳原子最常见的成键特点是？",
+      "answer": "形成 4 个共价键"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.OS.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h081",
+    "name": "研究有机化合物的一般方法",
+    "domain": "科学探究与化学实验",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第一章 有机化合物的结构特点与研究方法 1.2",
+    "type": "procedural",
+    "description": "研究有机物通常先分离提纯，再测元素组成和相对分子质量，从而确定分子式，并用谱学信息帮助判断官能团。",
+    "mastery_criteria": [
+      "能说出研究有机物要先得到较纯的样品",
+      "能由燃烧产物推算分子中的碳、氢原子数"
+    ],
+    "diagnostic_question": {
+      "question": "研究一种未知有机化合物，通常首先要做的是？",
+      "answer": "分离提纯，得到较纯的样品"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.OS.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h082",
+    "name": "整理与提升",
+    "domain": "物质的组成与结构",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第一章 有机化合物的结构特点与研究方法 整理与提升",
+    "type": "reasoning",
+    "description": "综合第一章：碳的成键、同分异构与同系物、研究有机物的一般方法。不提前使用烷烃取代或烯烃加成的新反应。",
+    "mastery_criteria": [
+      "能把碳骨架、官能团和同分异构放在一起判断",
+      "能选择合适的分离思路"
+    ],
+    "diagnostic_question": {
+      "question": "有机物分子中，碳原子之间可以形成的共价键包括？",
+      "answer": "单键、双键或三键"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.OS.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S3.OS.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h083",
+    "name": "烷烃",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第二章 烃 2.1",
+    "type": "conceptual",
+    "description": "烷烃是饱和烃，碳原子之间只有单键，通式为 CnH2n+2。甲烷与氯气在光照下发生取代反应，不能发生加成。",
+    "mastery_criteria": [
+      "能写出烷烃的通式并判断饱和性",
+      "能说明光照下甲烷与氯气发生取代"
+    ],
+    "diagnostic_question": {
+      "question": "烷烃分子中，碳原子之间只含有？",
+      "answer": "碳碳单键"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.HY.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h084",
+    "name": "烯烃、炔烃",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第二章 烃 2.2",
+    "type": "conceptual",
+    "description": "烯烃含碳碳双键，通式常写作 CnH2n；炔烃含碳碳三键，通式常写作 CnH2n-2。它们能与溴发生加成，也能被酸性高锰酸钾氧化。乙烯还可以加聚。",
+    "mastery_criteria": [
+      "能指出烯烃、炔烃的官能团和通式",
+      "能说明加成与烷烃取代的差别"
+    ],
+    "diagnostic_question": {
+      "question": "乙烯分子中的官能团是？",
+      "answer": "碳碳双键"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.HY.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h085",
+    "name": "芳香烃",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第二章 烃 2.3",
+    "type": "conceptual",
+    "description": "苯的分子式是 C6H6。六个碳碳键等同，苯环比较稳定，通常发生取代而不是像烯烃那样加成。甲苯的侧链甲基可被酸性高锰酸钾氧化，苯本身通常不能。",
+    "mastery_criteria": [
+      "能写出苯的分子式并说明苯环的特殊性",
+      "能区分苯和甲苯对酸性高锰酸钾的表现"
+    ],
+    "diagnostic_question": {
+      "question": "苯的分子式是？",
+      "answer": "C6H6"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.HY.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h086",
+    "name": "整理与提升",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第二章 烃 整理与提升",
+    "type": "reasoning",
+    "description": "综合第二章：烷烃、烯烃、炔烃和芳香烃。不提前使用卤代烃水解或醇的氧化。",
+    "mastery_criteria": [
+      "能按饱和性和官能团区分三类烃",
+      "能把取代、加成和苯环的稳定性对应起来"
+    ],
+    "diagnostic_question": {
+      "question": "下列物质属于饱和烃的是？",
+      "answer": "乙烷"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.HY.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h087",
+    "name": "卤代烃",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第三章 烃的衍生物 3.1",
+    "type": "conceptual",
+    "description": "卤代烃含碳卤键。在氢氧化钠水溶液中加热主要发生取代，生成醇；在氢氧化钠醇溶液中加热主要发生消去，生成烯烃。",
+    "mastery_criteria": [
+      "能指出卤代烃的官能团",
+      "能按水溶液或醇溶液区分水解和消去"
+    ],
+    "diagnostic_question": {
+      "question": "卤代烃分子中的官能团是？",
+      "answer": "碳卤键"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.HY.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h088",
+    "name": "醇、酚",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第三章 烃的衍生物 3.2",
+    "type": "conceptual",
+    "description": "醇的羟基连在饱和碳上，酚的羟基直接连在苯环上。乙醇可被催化氧化成乙醛，也能与羧酸酯化。苯酚遇三氯化铁显紫色，酸性弱于碳酸、强于乙醇。",
+    "mastery_criteria": [
+      "能区分醇羟基和酚羟基的典型现象",
+      "能说明乙醇催化氧化和酸性顺序"
+    ],
+    "diagnostic_question": {
+      "question": "乙醇分子中的官能团是？",
+      "answer": "羟基"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.HY.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h089",
+    "name": "醛、酮",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第三章 烃的衍生物 3.3",
+    "type": "conceptual",
+    "description": "醛含醛基，能发生银镜反应，也能与新制氢氧化铜共热生成砖红色氧化亚铜。一般的酮不能发生银镜反应。醛加氢得到伯醇。",
+    "mastery_criteria": [
+      "能指出醛基并能描述银镜或氢氧化铜试验",
+      "能说明一般的酮不能发生银镜反应"
+    ],
+    "diagnostic_question": {
+      "question": "乙醛分子中的官能团是？",
+      "answer": "醛基"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.HY.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h090",
+    "name": "羧酸、羧酸衍生物",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第三章 烃的衍生物 3.4",
+    "type": "conceptual",
+    "description": "羧酸含羧基，有酸性。乙酸与乙醇在浓硫酸加热下发生酯化，生成乙酸乙酯和水。酯在碱溶液中水解，生成羧酸盐和醇。",
+    "mastery_criteria": [
+      "能指出羧基和酯化反应",
+      "能区分酸催化酯化与碱性水解的产物"
+    ],
+    "diagnostic_question": {
+      "question": "乙酸分子中的官能团是？",
+      "answer": "羧基"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.HY.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h091",
+    "name": "有机合成",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第三章 烃的衍生物 3.5",
+    "type": "reasoning",
+    "description": "有机合成要同时安排碳骨架和官能团转化。卤代烃水解得醇，醇氧化得醛或羧酸，羧酸与醇酯化得酯。消去和水解的条件不能混用。",
+    "mastery_criteria": [
+      "能按官能团转化选择合理路线",
+      "能区分水解与消去的条件"
+    ],
+    "diagnostic_question": {
+      "question": "设计有机合成路线时，要同时考虑的是？",
+      "answer": "碳骨架的构建和官能团的转化"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.HY.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h092",
+    "name": "整理与提升",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第三章 烃的衍生物 整理与提升",
+    "type": "reasoning",
+    "description": "综合第三章：卤代烃、醇、酚、醛、酮、羧酸、羧酸衍生物和有机合成。不提前使用糖类或高分子。",
+    "mastery_criteria": [
+      "能按官能团和条件判断反应类型",
+      "能把一条简单的官能团转化路线串起来"
+    ],
+    "diagnostic_question": {
+      "question": "下列官能团与名称对应正确的是？",
+      "answer": "—CHO 是醛基"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.HY.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S3.HY.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h093",
+    "name": "实验活动1 乙酸乙酯的制备与性质",
+    "domain": "科学探究与化学实验",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第三章 烃的衍生物 实验活动1",
+    "type": "procedural",
+    "description": "实验活动制备乙酸乙酯并观察其性质。乙酸与乙醇在浓硫酸催化下加热，用饱和碳酸钠溶液吸收乙酸、溶解乙醇，并降低酯的溶解度。浓硫酸有强腐蚀性。",
+    "mastery_criteria": [
+      "能说出本实验是为了制备并认识乙酸乙酯",
+      "能说明浓硫酸和饱和碳酸钠溶液的作用及安全要点"
+    ],
+    "diagnostic_question": {
+      "question": "实验活动「乙酸乙酯的制备与性质」的主要目的是？",
+      "answer": "制备乙酸乙酯，并观察它的主要性质"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.EX.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S3.EX.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h094",
+    "name": "实验活动2 有机化合物中常见官能团的检验",
+    "domain": "科学探究与化学实验",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第三章 烃的衍生物 实验活动2",
+    "type": "procedural",
+    "description": "官能团检验要看适用范围和干扰。银镜和新制氢氧化铜针对醛基等还原性基团；三氯化铁针对酚；溴水和酸性高锰酸钾都能与多种有机物作用，不能单独证明一定是碳碳双键。",
+    "mastery_criteria": [
+      "能根据现象推测可能的官能团",
+      "能说出常见检验的干扰，不把局部现象写成普遍结论"
+    ],
+    "diagnostic_question": {
+      "question": "实验活动「有机化合物中常见官能团的检验」主要目的是？",
+      "answer": "用特征现象判断样品中可能含有的官能团"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.EX.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S3.EX.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h095",
+    "name": "糖类",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第四章 生物大分子 4.1",
+    "type": "conceptual",
+    "description": "葡萄糖是单糖，分子式 C6H12O6，属于还原糖。蔗糖是二糖，本身不是还原糖，水解后生成的单糖才有还原性。淀粉遇碘变蓝。",
+    "mastery_criteria": [
+      "能区分还原糖和非还原糖的常见例子",
+      "能写出葡萄糖的分子式并说明淀粉与碘的现象"
+    ],
+    "diagnostic_question": {
+      "question": "葡萄糖的分子式是？",
+      "answer": "C6H12O6"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.BM.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h096",
+    "name": "蛋白质",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第四章 生物大分子 4.2",
+    "type": "conceptual",
+    "description": "氨基酸同时含氨基和羧基。氨基酸脱水形成肽键，蛋白质水解得到氨基酸。加热、强酸、强碱或重金属盐可使蛋白质变性，变性通常难以复原。",
+    "mastery_criteria": [
+      "能说出蛋白质的基本单位和肽键",
+      "能区分水解产物和变性"
+    ],
+    "diagnostic_question": {
+      "question": "蛋白质水解的最终产物主要是？",
+      "answer": "氨基酸"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.BM.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h097",
+    "name": "核酸",
+    "domain": "物质的组成与结构",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第四章 生物大分子 4.3",
+    "type": "conceptual",
+    "description": "核酸的基本单位是核苷酸，由磷酸、戊糖和碱基组成。DNA 含脱氧核糖和胸腺嘧啶，RNA 含核糖和尿嘧啶。核酸携带的信息与蛋白质的合成有关。",
+    "mastery_criteria": [
+      "能说出核苷酸的三个组成部分",
+      "能区分 DNA 与 RNA 的常见差别，且不和蛋白质混淆"
+    ],
+    "diagnostic_question": {
+      "question": "核酸的基本组成单位是？",
+      "answer": "核苷酸"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.BM.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h098",
+    "name": "整理与提升",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第四章 生物大分子 整理与提升",
+    "type": "reasoning",
+    "description": "综合第四章：糖类、蛋白质和核酸。不提前使用加聚、缩聚或塑料的分类。",
+    "mastery_criteria": [
+      "能区分三类生物大分子的基本单位",
+      "能判断还原糖、肽键和核苷酸"
+    ],
+    "diagnostic_question": {
+      "question": "下列物质属于糖类的是？",
+      "answer": "葡萄糖"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.BM.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S3.BM.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S3.BM.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h099",
+    "name": "实验活动3 糖类的性质",
+    "domain": "科学探究与化学实验",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第四章 生物大分子 实验活动3",
+    "type": "procedural",
+    "description": "实验活动观察糖类的性质。葡萄糖能与新制氢氧化铜生成砖红色沉淀。蔗糖本身通常不能发生银镜反应，酸催化水解后要先中和过量的酸，再做银镜。淀粉遇碘变蓝，水解后蓝色消失。",
+    "mastery_criteria": [
+      "能说出本实验要观察的糖类现象",
+      "能说明水解后做银镜前要先中和酸"
+    ],
+    "diagnostic_question": {
+      "question": "实验活动「糖类的性质」的主要目的是？",
+      "answer": "观察葡萄糖、蔗糖、淀粉等糖类的特征性质"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.EX.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S3.BM.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h100",
+    "name": "合成高分子的基本方法",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第五章 合成高分子 5.1",
+    "type": "conceptual",
+    "description": "加聚反应由含不饱和键的单体相互加成，不生成小分子。缩聚反应的单体通常有两个或多个可反应的官能团，同时生成水等小分子。聚合度表示链节重复的次数。",
+    "mastery_criteria": [
+      "能区分加聚和缩聚",
+      "能由聚合度估算高分子的相对分子质量"
+    ],
+    "diagnostic_question": {
+      "question": "乙烯生成聚乙烯的反应类型是？",
+      "answer": "加聚反应"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.PM.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h101",
+    "name": "高分子材料",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第五章 合成高分子 5.2",
+    "type": "application",
+    "description": "塑料、合成纤维和合成橡胶都是高分子材料。线型高分子常可反复加热软化，属于热塑性；交联后则不易反复成型。天然橡胶硫化是分子链之间发生交联。涤纶是聚酯，由缩聚得到。",
+    "mastery_criteria": [
+      "能举出三类合成高分子材料",
+      "能说明热塑性和硫化交联的差别"
+    ],
+    "diagnostic_question": {
+      "question": "聚乙烯属于？",
+      "answer": "塑料类高分子材料"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.PM.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h102",
+    "name": "整理与提升",
+    "domain": "物质的性质与应用",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必三 第五章 合成高分子 整理与提升",
+    "type": "reasoning",
+    "description": "综合第五章：加聚、缩聚和高分子材料。不把生物大分子的水解产物说成合成高分子的单体。",
+    "mastery_criteria": [
+      "能区分加聚和缩聚的单体特点",
+      "能把塑料、纤维、橡胶和热塑性放在一起判断"
+    ],
+    "diagnostic_question": {
+      "question": "由乙烯得到聚乙烯，反应类型是？",
+      "answer": "加聚反应"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:S3.PM.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:S3.PM.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
   }
 ]

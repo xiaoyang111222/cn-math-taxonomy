@@ -1110,6 +1110,7 @@
       chemGrade.append(el('option', { value: '11', text: '必修第二册' }));
       chemGrade.append(el('option', { value: '12', text: '选择性必修第一册' }));
       chemGrade.append(el('option', { value: '13', text: '选择性必修第二册' }));
+      chemGrade.append(el('option', { value: '14', text: '选择性必修第三册' }));
       var chemSample = $('pick-sample');
       if (chemSample) chemSample.textContent = '先看看「质量守恒定律」';
       document.title = '知识图谱 · 化学';

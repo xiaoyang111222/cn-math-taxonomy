@@ -29820,6 +29820,60 @@
     "reason": "按人教版化学选择性必修第二册的教学顺序，先学「整理与提升」，再学「实验活动 简单配合物的形成」。"
   },
   {
+    "topicId": "cnk_h079",
+    "prerequisiteId": "cnk_h078",
+    "strength": "soft",
+    "reason": "按人教版化学课序，学完选择性必修第二册的「实验活动 简单配合物的形成」后进入选择性必修第三册的「引言」。"
+  },
+  {
+    "topicId": "cnk_h083",
+    "prerequisiteId": "cnk_h082",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「整理与提升」，再学「烷烃」。"
+  },
+  {
+    "topicId": "cnk_h087",
+    "prerequisiteId": "cnk_h086",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「整理与提升」，再学「卤代烃」。"
+  },
+  {
+    "topicId": "cnk_h093",
+    "prerequisiteId": "cnk_h092",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「整理与提升」，再学「实验活动1 乙酸乙酯的制备与性质」。"
+  },
+  {
+    "topicId": "cnk_h094",
+    "prerequisiteId": "cnk_h093",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「实验活动1 乙酸乙酯的制备与性质」，再学「实验活动2 有机化合物中常见官能团的检验」。"
+  },
+  {
+    "topicId": "cnk_h095",
+    "prerequisiteId": "cnk_h094",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「实验活动2 有机化合物中常见官能团的检验」，再学「糖类」。"
+  },
+  {
+    "topicId": "cnk_h096",
+    "prerequisiteId": "cnk_h095",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「糖类」，再学「蛋白质」。"
+  },
+  {
+    "topicId": "cnk_h099",
+    "prerequisiteId": "cnk_h098",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「整理与提升」，再学「实验活动3 糖类的性质」。"
+  },
+  {
+    "topicId": "cnk_h100",
+    "prerequisiteId": "cnk_h099",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「实验活动3 糖类的性质」，再学「合成高分子的基本方法」。"
+  },
+  {
     "topicId": "cnk_h001",
     "prerequisiteId": "cnk_j001",
     "strength": "hard",
@@ -30538,5 +30592,203 @@
     "prerequisiteId": "cnk_h076",
     "strength": "hard",
     "reason": "观察简单配合物的形成，要先知道配合物和配体。"
+  },
+  {
+    "topicId": "cnk_h079",
+    "prerequisiteId": "cnk_h031",
+    "strength": "hard",
+    "reason": "本册从有机化合物继续深入，要先认识碳骨架和官能团。"
+  },
+  {
+    "topicId": "cnk_h079",
+    "prerequisiteId": "cnk_h069",
+    "strength": "hard",
+    "reason": "有机分子里的碳碳键、碳氢键是共价键，要先会共价键。"
+  },
+  {
+    "topicId": "cnk_h080",
+    "prerequisiteId": "cnk_h079",
+    "strength": "hard",
+    "reason": "讨论结构特点，是本册从引言进入的第一个主题。"
+  },
+  {
+    "topicId": "cnk_h080",
+    "prerequisiteId": "cnk_h070",
+    "strength": "hard",
+    "reason": "甲烷的正四面体构型，要用分子空间结构的知识来理解。"
+  },
+  {
+    "topicId": "cnk_h081",
+    "prerequisiteId": "cnk_h080",
+    "strength": "hard",
+    "reason": "确定分子式和官能团，要先知道有机物的结构特点。"
+  },
+  {
+    "topicId": "cnk_h082",
+    "prerequisiteId": "cnk_h081",
+    "strength": "hard",
+    "reason": "复习本章要先会研究有机化合物的一般方法。"
+  },
+  {
+    "topicId": "cnk_h083",
+    "prerequisiteId": "cnk_h080",
+    "strength": "hard",
+    "reason": "认识烷烃，要先会碳的四价和碳骨架。"
+  },
+  {
+    "topicId": "cnk_h084",
+    "prerequisiteId": "cnk_h083",
+    "strength": "hard",
+    "reason": "烯烃、炔烃要和烷烃比较饱和性与反应类型。"
+  },
+  {
+    "topicId": "cnk_h084",
+    "prerequisiteId": "cnk_h032",
+    "strength": "hard",
+    "reason": "乙烯的加成和加聚，是认识不饱和烃的基础。"
+  },
+  {
+    "topicId": "cnk_h085",
+    "prerequisiteId": "cnk_h084",
+    "strength": "hard",
+    "reason": "芳香烃要和不饱和链烃比较，苯环并不按烯烃那样加成。"
+  },
+  {
+    "topicId": "cnk_h086",
+    "prerequisiteId": "cnk_h085",
+    "strength": "hard",
+    "reason": "复习本章要先会芳香烃。"
+  },
+  {
+    "topicId": "cnk_h087",
+    "prerequisiteId": "cnk_h083",
+    "strength": "hard",
+    "reason": "许多卤代烃可以由烷烃的取代得到，要先会烷烃。"
+  },
+  {
+    "topicId": "cnk_h088",
+    "prerequisiteId": "cnk_h087",
+    "strength": "hard",
+    "reason": "醇可以由卤代烃水解得到，要先会卤代烃的取代。"
+  },
+  {
+    "topicId": "cnk_h088",
+    "prerequisiteId": "cnk_h033",
+    "strength": "hard",
+    "reason": "乙醇的氧化、与钠反应和酯化，建立在必修里对乙醇的认识之上。"
+  },
+  {
+    "topicId": "cnk_h089",
+    "prerequisiteId": "cnk_h088",
+    "strength": "hard",
+    "reason": "醛常由醇氧化得到，还原后又得到醇。"
+  },
+  {
+    "topicId": "cnk_h090",
+    "prerequisiteId": "cnk_h089",
+    "strength": "hard",
+    "reason": "羧酸可以由醛进一步氧化得到，要先会醛。"
+  },
+  {
+    "topicId": "cnk_h091",
+    "prerequisiteId": "cnk_h090",
+    "strength": "hard",
+    "reason": "合成里常用羧酸和酯，要先会羧酸、羧酸衍生物。"
+  },
+  {
+    "topicId": "cnk_h092",
+    "prerequisiteId": "cnk_h091",
+    "strength": "hard",
+    "reason": "复习本章要先会有机合成。"
+  },
+  {
+    "topicId": "cnk_h093",
+    "prerequisiteId": "cnk_h090",
+    "strength": "hard",
+    "reason": "乙酸是羧酸，酯化生成的乙酸乙酯是羧酸衍生物。"
+  },
+  {
+    "topicId": "cnk_h094",
+    "prerequisiteId": "cnk_h084",
+    "strength": "hard",
+    "reason": "溴水和酸性高锰酸钾也能与烯烃、炔烃作用，检验时要排除这种干扰。"
+  },
+  {
+    "topicId": "cnk_h094",
+    "prerequisiteId": "cnk_h090",
+    "strength": "hard",
+    "reason": "羧酸能与碳酸氢钠放出二氧化碳，可与酚区分。"
+  },
+  {
+    "topicId": "cnk_h095",
+    "prerequisiteId": "cnk_h034",
+    "strength": "hard",
+    "reason": "糖类是基本营养物质，本课在必修的认识上继续区分结构。"
+  },
+  {
+    "topicId": "cnk_h095",
+    "prerequisiteId": "cnk_h089",
+    "strength": "hard",
+    "reason": "葡萄糖含有能被弱氧化剂氧化的醛基，要先会醛的还原性。"
+  },
+  {
+    "topicId": "cnk_h096",
+    "prerequisiteId": "cnk_h034",
+    "strength": "hard",
+    "reason": "蛋白质是基本营养物质，水解产物是氨基酸。"
+  },
+  {
+    "topicId": "cnk_h096",
+    "prerequisiteId": "cnk_h090",
+    "strength": "hard",
+    "reason": "氨基酸含羧基，形成肽键时要用到羧基和氨基的脱水。"
+  },
+  {
+    "topicId": "cnk_h097",
+    "prerequisiteId": "cnk_h096",
+    "strength": "hard",
+    "reason": "核酸与蛋白质的合成有关，要先知道蛋白质由氨基酸组成。"
+  },
+  {
+    "topicId": "cnk_h097",
+    "prerequisiteId": "cnk_h095",
+    "strength": "hard",
+    "reason": "核苷酸中的戊糖是糖，要先会糖类的基本概念。"
+  },
+  {
+    "topicId": "cnk_h098",
+    "prerequisiteId": "cnk_h097",
+    "strength": "hard",
+    "reason": "复习本章要先会核酸。"
+  },
+  {
+    "topicId": "cnk_h099",
+    "prerequisiteId": "cnk_h095",
+    "strength": "hard",
+    "reason": "观察糖类的性质，要先会还原糖、蔗糖和淀粉的差别。"
+  },
+  {
+    "topicId": "cnk_h100",
+    "prerequisiteId": "cnk_h084",
+    "strength": "hard",
+    "reason": "加聚单体通常含碳碳双键，要先会烯烃。"
+  },
+  {
+    "topicId": "cnk_h100",
+    "prerequisiteId": "cnk_h091",
+    "strength": "hard",
+    "reason": "缩聚是官能团之间的转化，要先会有机合成里的官能团反应。"
+  },
+  {
+    "topicId": "cnk_h101",
+    "prerequisiteId": "cnk_h100",
+    "strength": "hard",
+    "reason": "认识高分子材料，要先会加聚和缩聚。"
+  },
+  {
+    "topicId": "cnk_h102",
+    "prerequisiteId": "cnk_h101",
+    "strength": "hard",
+    "reason": "复习本章要先会高分子材料。"
   }
 ]
