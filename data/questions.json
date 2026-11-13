@@ -345153,5 +345153,1537 @@
     "answer": "A",
     "explanation": "氢气与空气混合后遇明火可能燃烧。气路、电极和电源都要检查，不能用嘴吹导管。",
     "verify": "\"氢气易燃，装置要远离明火，并确认气路和电极连接正确\""
+  },
+  {
+    "id": "cnk_h065_q1",
+    "topicId": "cnk_h065",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "选择性必修第二册《物质结构与性质》主要研究的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只计算反应热和平衡常数"
+      },
+      {
+        "key": "B",
+        "text": "只配制一定浓度的溶液"
+      },
+      {
+        "key": "C",
+        "text": "原子、分子和晶体的结构及其与性质的关系"
+      },
+      {
+        "key": "D",
+        "text": "只测定矿石里金属的含量"
+      }
+    ],
+    "answer": "C",
+    "explanation": "这一册围绕原子结构、分子结构和晶体结构，用结构说明性质。",
+    "verify": "\"原子、分子和晶体的结构及其与性质的关系\""
+  },
+  {
+    "id": "cnk_h065_q2",
+    "topicId": "cnk_h065",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "认识物质为什么有不同的熔沸点、溶解性和导电性，本册强调从哪个角度入手？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只看包装上的商标"
+      },
+      {
+        "key": "B",
+        "text": "只比较实验室的面积"
+      },
+      {
+        "key": "C",
+        "text": "只记录当天的气温"
+      },
+      {
+        "key": "D",
+        "text": "组成和结构"
+      }
+    ],
+    "answer": "D",
+    "explanation": "组成和结构决定性质。商标、房间大小和气温说明不了化学性质的差异。",
+    "verify": "\"组成和结构\""
+  },
+  {
+    "id": "cnk_h065_q3",
+    "topicId": "cnk_h065",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "必修里已经学过原子结构和化学键。进入本册后要继续做的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把核外电子排布、分子构型和晶体类型与性质联系起来"
+      },
+      {
+        "key": "B",
+        "text": "把原子结构从化学里删掉"
+      },
+      {
+        "key": "C",
+        "text": "只背元素名称的笔画"
+      },
+      {
+        "key": "D",
+        "text": "不再区分离子键和共价键"
+      }
+    ],
+    "answer": "A",
+    "explanation": "本册是在必修原子结构、周期律和化学键的基础上，把结构讲得更细，并用来解释性质。",
+    "verify": "\"把核外电子排布、分子构型和晶体类型与性质联系起来\""
+  },
+  {
+    "id": "cnk_h065_q4",
+    "topicId": "cnk_h065",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "把「结构决定性质」用在本册，合理的理解是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "性质与结构无关，只能靠颜色判断"
+      },
+      {
+        "key": "B",
+        "text": "先弄清微粒怎样结合，再解释熔沸点、溶解性和导电等性质"
+      },
+      {
+        "key": "C",
+        "text": "只要会写化学式，就不必看空间构型"
+      },
+      {
+        "key": "D",
+        "text": "晶体类型与导电性没有关系"
+      }
+    ],
+    "answer": "B",
+    "explanation": "微粒如何排布、如何成键，会表现在熔沸点、溶解、导电等宏观性质上。",
+    "verify": "\"先弄清微粒怎样结合，再解释熔沸点、溶解性和导电等性质\""
+  },
+  {
+    "id": "cnk_h066_q1",
+    "topicId": "cnk_h066",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "原子核外电子按能层排布时，第一、二、三能层通常记作？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "α、β、γ"
+      },
+      {
+        "key": "B",
+        "text": "只按颜色分成红、黄、蓝"
+      },
+      {
+        "key": "C",
+        "text": "只按发现年代编号"
+      },
+      {
+        "key": "D",
+        "text": "K、L、M"
+      }
+    ],
+    "answer": "D",
+    "explanation": "由内向外，第一、二、三能层习惯记作 K、L、M。这与希腊字母或颜色无关。",
+    "verify": "\"K、L、M\""
+  },
+  {
+    "id": "cnk_h066_q2",
+    "topicId": "cnk_h066",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "在一个能层里，能量通常由低到高的能级顺序是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "s、p、d、f"
+      },
+      {
+        "key": "B",
+        "text": "f、d、p、s"
+      },
+      {
+        "key": "C",
+        "text": "只按元素名称的拼音排列"
+      },
+      {
+        "key": "D",
+        "text": "四个能级的能量一定完全相同"
+      }
+    ],
+    "answer": "A",
+    "explanation": "一个能层中 s 能级能量最低，然后是 p、d、f。",
+    "verify": "\"s、p、d、f\""
+  },
+  {
+    "id": "cnk_h066_q3",
+    "topicId": "cnk_h066",
+    "difficulty": "standard",
+    "type": "numeric",
+    "prompt": "第 n 能层最多容纳的电子数按 2n² 计算。n＝3 时，这一能层最多容纳多少个电子？",
+    "answer": "18",
+    "explanation": "2×3²＝18。第三能层最多 18 个电子。",
+    "verify": "2 * 3 ** 2"
+  },
+  {
+    "id": "cnk_h066_q4",
+    "topicId": "cnk_h066",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "基态钠原子（原子序数 11）的核外电子排布，正确的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "1s² 2s² 2p⁷"
+      },
+      {
+        "key": "B",
+        "text": "3s² 3p⁹"
+      },
+      {
+        "key": "C",
+        "text": "1s² 2s² 2p⁶ 3s¹"
+      },
+      {
+        "key": "D",
+        "text": "11 个电子全部挤在 1s 轨道"
+      }
+    ],
+    "answer": "C",
+    "explanation": "钠有 11 个电子。按能量由低到高排完 1s、2s、2p 后，最后一个电子在 3s。2p 最多 6 个电子。",
+    "verify": "\"1s² 2s² 2p⁶ 3s¹\""
+  },
+  {
+    "id": "cnk_h067_q1",
+    "topicId": "cnk_h067",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "第一电离能指的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "气态基态原子失去一个电子变成气态正离子所需的最低能量"
+      },
+      {
+        "key": "B",
+        "text": "把固体直接加热到沸腾所需的热量"
+      },
+      {
+        "key": "C",
+        "text": "中子变成质子放出的能量"
+      },
+      {
+        "key": "D",
+        "text": "溶液变色所需的光照时间"
+      }
+    ],
+    "answer": "A",
+    "explanation": "电离能讨论的是气态原子失去电子的难易，不是沸腾、核变化或光照。",
+    "verify": "\"气态基态原子失去一个电子变成气态正离子所需的最低能量\""
+  },
+  {
+    "id": "cnk_h067_q2",
+    "topicId": "cnk_h067",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "电负性较大的元素，在形成共价键时通常？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一定不能形成任何化学键"
+      },
+      {
+        "key": "B",
+        "text": "对共用电子对的吸引力更强"
+      },
+      {
+        "key": "C",
+        "text": "原子核一定会裂变"
+      },
+      {
+        "key": "D",
+        "text": "一定变成金属单质"
+      }
+    ],
+    "answer": "B",
+    "explanation": "电负性表示原子在化合物中吸引电子的能力。数值大，共用电子对更偏向它。",
+    "verify": "\"对共用电子对的吸引力更强\""
+  },
+  {
+    "id": "cnk_h067_q3",
+    "topicId": "cnk_h067",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "同周期从左到右（稀有气体除外），第一电离能的总趋势是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "逐渐减小到零"
+      },
+      {
+        "key": "B",
+        "text": "与原子序数无关"
+      },
+      {
+        "key": "C",
+        "text": "逐渐增大"
+      },
+      {
+        "key": "D",
+        "text": "一定先变成负值再变成颜色"
+      }
+    ],
+    "answer": "C",
+    "explanation": "核电荷数增加、原子半径减小，原子核对最外层电子的吸引增强，越来越难失去电子。",
+    "verify": "\"逐渐增大\""
+  },
+  {
+    "id": "cnk_h067_q4",
+    "topicId": "cnk_h067",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "氟的电负性在常见元素中很大。由此可以预期？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "氟原子一定最容易失去电子变成金属"
+      },
+      {
+        "key": "B",
+        "text": "氟不能与任何元素形成化学键"
+      },
+      {
+        "key": "C",
+        "text": "氟的第一电离能一定是零"
+      },
+      {
+        "key": "D",
+        "text": "氟原子在化合物中容易把电子对拉向自己"
+      }
+    ],
+    "answer": "D",
+    "explanation": "电负性大表示吸引电子的能力强。氟作为典型非金属，不容易失去电子。",
+    "verify": "\"氟原子在化合物中容易把电子对拉向自己\""
+  },
+  {
+    "id": "cnk_h068_q1",
+    "topicId": "cnk_h068",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "基态原子的核外电子优先占据的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "能量最高的轨道"
+      },
+      {
+        "key": "B",
+        "text": "能量较低的轨道"
+      },
+      {
+        "key": "C",
+        "text": "实验室里编号最大的烧杯"
+      },
+      {
+        "key": "D",
+        "text": "与能量无关的任意空隙"
+      }
+    ],
+    "answer": "B",
+    "explanation": "基态排布遵循能量最低。电子先进入能量较低的轨道。",
+    "verify": "\"能量较低的轨道\""
+  },
+  {
+    "id": "cnk_h068_q2",
+    "topicId": "cnk_h068",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "比较同主族从上到下的金属性，通常的变化是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "逐渐减弱到不能失电子"
+      },
+      {
+        "key": "B",
+        "text": "与电子层数无关"
+      },
+      {
+        "key": "C",
+        "text": "逐渐增强"
+      },
+      {
+        "key": "D",
+        "text": "一定变成稀有气体"
+      }
+    ],
+    "answer": "C",
+    "explanation": "同主族从上到下，电子层数增多，原子半径增大，越来越容易失去电子。",
+    "verify": "\"逐渐增强\""
+  },
+  {
+    "id": "cnk_h068_q3",
+    "topicId": "cnk_h068",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "钠比氖更容易失去一个电子，主要因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "钠的质子数比氖少"
+      },
+      {
+        "key": "B",
+        "text": "氖的相对原子质量一定更小"
+      },
+      {
+        "key": "C",
+        "text": "钠原子没有电子"
+      },
+      {
+        "key": "D",
+        "text": "钠的最外层只有 1 个电子，氖的最外层已经达到稳定排布"
+      }
+    ],
+    "answer": "D",
+    "explanation": "钠是 3s¹，失去一个电子后达到稳定排布。氖最外层已满，第一电离能很大。",
+    "verify": "\"钠的最外层只有 1 个电子，氖的最外层已经达到稳定排布\""
+  },
+  {
+    "id": "cnk_h068_q4",
+    "topicId": "cnk_h068",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列判断同时用上电子排布和电负性的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "氟最外层 7 个电子，电负性大，在化合物中容易吸引电子"
+      },
+      {
+        "key": "B",
+        "text": "电子排布只决定颜色，与电负性无关"
+      },
+      {
+        "key": "C",
+        "text": "电负性越大，原子越容易失去全部电子"
+      },
+      {
+        "key": "D",
+        "text": "电离能与核外电子没有关系"
+      }
+    ],
+    "answer": "A",
+    "explanation": "最外层电子数接近稳定结构、电负性又大的原子，倾向于得到或吸引电子，而不是失去全部电子。",
+    "verify": "\"氟最外层 7 个电子，电负性大，在化合物中容易吸引电子\""
+  },
+  {
+    "id": "cnk_h069_q1",
+    "topicId": "cnk_h069",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "共价键是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "阴阳离子完全得失电子后只靠重力吸引"
+      },
+      {
+        "key": "B",
+        "text": "原子核互相融合"
+      },
+      {
+        "key": "C",
+        "text": "原子之间通过共用电子对形成的化学键"
+      },
+      {
+        "key": "D",
+        "text": "中子在原子之间转移"
+      }
+    ],
+    "answer": "C",
+    "explanation": "共价键靠共用电子对把原子结合起来。电子完全得失形成的是离子键。",
+    "verify": "\"原子之间通过共用电子对形成的化学键\""
+  },
+  {
+    "id": "cnk_h069_q2",
+    "topicId": "cnk_h069",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "键长通常指？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "实验室走廊的长度"
+      },
+      {
+        "key": "B",
+        "text": "反应容器的壁厚"
+      },
+      {
+        "key": "C",
+        "text": "元素名称的字数"
+      },
+      {
+        "key": "D",
+        "text": "成键原子的核间距"
+      }
+    ],
+    "answer": "D",
+    "explanation": "键长是成键两原子核之间的距离，不是房间或容器的尺寸。",
+    "verify": "\"成键原子的核间距\""
+  },
+  {
+    "id": "cnk_h069_q3",
+    "topicId": "cnk_h069",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "一般说来，同类共价键中键长越短？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "键能越大，键越牢固"
+      },
+      {
+        "key": "B",
+        "text": "键能一定变成零"
+      },
+      {
+        "key": "C",
+        "text": "键一定更容易断开"
+      },
+      {
+        "key": "D",
+        "text": "键角一定消失"
+      }
+    ],
+    "answer": "A",
+    "explanation": "核间距较短时，电子云重叠更好，拆开这条键需要的能量更大。",
+    "verify": "\"键能越大，键越牢固\""
+  },
+  {
+    "id": "cnk_h069_q4",
+    "topicId": "cnk_h069",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "σ 键和 π 键的差别，合理的说法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "π 键只能存在于离子晶体中"
+      },
+      {
+        "key": "B",
+        "text": "σ 键沿键轴方向重叠，π 键是侧面重叠"
+      },
+      {
+        "key": "C",
+        "text": "σ 键是中子的转移"
+      },
+      {
+        "key": "D",
+        "text": "两种键都与电子云无关"
+      }
+    ],
+    "answer": "B",
+    "explanation": "单键一般是 σ 键。双键、三键中除 σ 键外还有 π 键，π 键由 p 轨道侧面重叠形成。",
+    "verify": "\"σ 键沿键轴方向重叠，π 键是侧面重叠\""
+  },
+  {
+    "id": "cnk_h070_q1",
+    "topicId": "cnk_h070",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "甲烷分子的空间构型是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "直线形"
+      },
+      {
+        "key": "B",
+        "text": "平面正方形"
+      },
+      {
+        "key": "C",
+        "text": "只有一个原子没有空间形状"
+      },
+      {
+        "key": "D",
+        "text": "正四面体"
+      }
+    ],
+    "answer": "D",
+    "explanation": "碳与四个氢形成四条共价键，四对成键电子尽可能远离，构成正四面体。",
+    "verify": "\"正四面体\""
+  },
+  {
+    "id": "cnk_h070_q2",
+    "topicId": "cnk_h070",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "二氧化碳分子是直线形，主要因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "中心碳原子周围的两个双键尽可能远离"
+      },
+      {
+        "key": "B",
+        "text": "碳原子上有两对孤对电子把分子压弯"
+      },
+      {
+        "key": "C",
+        "text": "两个氧原子带有金属键"
+      },
+      {
+        "key": "D",
+        "text": "分子里没有化学键"
+      }
+    ],
+    "answer": "A",
+    "explanation": "二氧化碳中碳与两个氧各以双键相连，没有孤对电子挤在碳上，两键夹角为 180°。",
+    "verify": "\"中心碳原子周围的两个双键尽可能远离\""
+  },
+  {
+    "id": "cnk_h070_q3",
+    "topicId": "cnk_h070",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "用水分子的价层电子对互斥模型判断，它的空间构型是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "直线形"
+      },
+      {
+        "key": "B",
+        "text": "V 形（弯曲形）"
+      },
+      {
+        "key": "C",
+        "text": "正四面体"
+      },
+      {
+        "key": "D",
+        "text": "平面正方形"
+      }
+    ],
+    "answer": "B",
+    "explanation": "氧原子有两对成键电子和两对孤对电子。孤对电子排斥更大，分子呈 V 形。",
+    "verify": "\"V 形（弯曲形）\""
+  },
+  {
+    "id": "cnk_h070_q4",
+    "topicId": "cnk_h070",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "氨分子是三角锥形而不是平面三角形，是因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "氮原子没有核外电子"
+      },
+      {
+        "key": "B",
+        "text": "三个氢原子之间形成了金属键"
+      },
+      {
+        "key": "C",
+        "text": "氮原子上还有一对孤对电子，对成键电子对的排斥更大"
+      },
+      {
+        "key": "D",
+        "text": "氨分子属于离子晶体所以必须是平面"
+      }
+    ],
+    "answer": "C",
+    "explanation": "氮有三对成键电子和一对孤对电子。孤对电子把三个 N—H 键压向一侧，形成三角锥。",
+    "verify": "\"氮原子上还有一对孤对电子，对成键电子对的排斥更大\""
+  },
+  {
+    "id": "cnk_h071_q1",
+    "topicId": "cnk_h071",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "极性分子的特点是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "正、负电荷中心不重合"
+      },
+      {
+        "key": "B",
+        "text": "分子里一定没有化学键"
+      },
+      {
+        "key": "C",
+        "text": "原子核一定互相融合"
+      },
+      {
+        "key": "D",
+        "text": "分子质量必须为零"
+      }
+    ],
+    "answer": "A",
+    "explanation": "键有极性且空间上不能抵消时，分子的正、负电荷中心分开，分子有极性。",
+    "verify": "\"正、负电荷中心不重合\""
+  },
+  {
+    "id": "cnk_h071_q2",
+    "topicId": "cnk_h071",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "「相似相溶」说的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "任何物质都只能溶于金属汞"
+      },
+      {
+        "key": "B",
+        "text": "极性溶质较易溶于极性溶剂"
+      },
+      {
+        "key": "C",
+        "text": "溶解与分子极性完全无关"
+      },
+      {
+        "key": "D",
+        "text": "只有非极性物质才能互相溶解"
+      }
+    ],
+    "answer": "B",
+    "explanation": "极性相近的物质更容易互相溶解。水是极性溶剂，较易溶解极性溶质。",
+    "verify": "\"极性溶质较易溶于极性溶剂\""
+  },
+  {
+    "id": "cnk_h071_q3",
+    "topicId": "cnk_h071",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "二氧化碳是直线形对称分子，所以它是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "极性分子，因为含有氧元素"
+      },
+      {
+        "key": "B",
+        "text": "离子化合物"
+      },
+      {
+        "key": "C",
+        "text": "非极性分子"
+      },
+      {
+        "key": "D",
+        "text": "金属晶体"
+      }
+    ],
+    "answer": "C",
+    "explanation": "C＝O 键有极性，但两个键对称地排在一条直线上，极性抵消，分子整体非极性。",
+    "verify": "\"非极性分子\""
+  },
+  {
+    "id": "cnk_h071_q4",
+    "topicId": "cnk_h071",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "水的沸点明显高于相对分子质量相近的甲烷，一个重要原因是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "甲烷分子之间的氢键更强"
+      },
+      {
+        "key": "B",
+        "text": "水分子没有极性"
+      },
+      {
+        "key": "C",
+        "text": "沸点只取决于容器的品牌"
+      },
+      {
+        "key": "D",
+        "text": "水分子之间能形成氢键"
+      }
+    ],
+    "answer": "D",
+    "explanation": "氧的电负性大，水分子之间可以形成氢键，需要更高温度才能分开。甲烷不能形成氢键。",
+    "verify": "\"水分子之间能形成氢键\""
+  },
+  {
+    "id": "cnk_h072_q1",
+    "topicId": "cnk_h072",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "拆开一条共价键需要吸收能量。键能越大，表示这条键？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "越容易自动断开"
+      },
+      {
+        "key": "B",
+        "text": "越牢固"
+      },
+      {
+        "key": "C",
+        "text": "一定不存在"
+      },
+      {
+        "key": "D",
+        "text": "与分子稳定性无关"
+      }
+    ],
+    "answer": "B",
+    "explanation": "键能是拆开 1 mol 该键所需的能量。数值越大，键越牢固。",
+    "verify": "\"越牢固\""
+  },
+  {
+    "id": "cnk_h072_q2",
+    "topicId": "cnk_h072",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "中心原子没有孤对电子、连有四个相同原子时，常见构型是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "直线形"
+      },
+      {
+        "key": "B",
+        "text": "只有两个原子挤在一起"
+      },
+      {
+        "key": "C",
+        "text": "正四面体"
+      },
+      {
+        "key": "D",
+        "text": "平面三角形"
+      }
+    ],
+    "answer": "C",
+    "explanation": "四对成键电子均匀指向四面体的四个顶点，例如甲烷。",
+    "verify": "\"正四面体\""
+  },
+  {
+    "id": "cnk_h072_q3",
+    "topicId": "cnk_h072",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "氯化氢分子有极性，四氯化碳分子可以看作非极性分子。溶解时更合理的预期是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "两者都只能溶于金属钠"
+      },
+      {
+        "key": "B",
+        "text": "极性与溶解无关"
+      },
+      {
+        "key": "C",
+        "text": "四氯化碳一定比水更易溶解食盐"
+      },
+      {
+        "key": "D",
+        "text": "氯化氢较易溶于水，四氯化碳较易溶于非极性溶剂"
+      }
+    ],
+    "answer": "D",
+    "explanation": "相似相溶。HCl 是极性分子，CCl4 整体非极性。食盐是离子化合物，更易溶于水。",
+    "verify": "\"氯化氢较易溶于水，四氯化碳较易溶于非极性溶剂\""
+  },
+  {
+    "id": "cnk_h072_q4",
+    "topicId": "cnk_h072",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列说法能同时用上键的极性、分子构型和氢键的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "水是 V 形极性分子，分子之间有氢键，所以常温下是液体"
+      },
+      {
+        "key": "B",
+        "text": "只要含氢，分子之间一定有氢键"
+      },
+      {
+        "key": "C",
+        "text": "直线形分子一定是极性分子"
+      },
+      {
+        "key": "D",
+        "text": "键能与分子能不能形成氢键是同一件事"
+      }
+    ],
+    "answer": "A",
+    "explanation": "水的 V 形使键的极性不能抵消。氢与氧相连才能形成氢键。直线形的二氧化碳是非极性分子。",
+    "verify": "\"水是 V 形极性分子，分子之间有氢键，所以常温下是液体\""
+  },
+  {
+    "id": "cnk_h073_q1",
+    "topicId": "cnk_h073",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "晶体与非晶体的一个重要差别是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "晶体一定没有固定组成"
+      },
+      {
+        "key": "B",
+        "text": "非晶体一定能导电"
+      },
+      {
+        "key": "C",
+        "text": "晶体内部微粒在三维空间做周期性有序排列"
+      },
+      {
+        "key": "D",
+        "text": "两者都不能形成固体"
+      }
+    ],
+    "answer": "C",
+    "explanation": "晶体有长程有序的点阵。玻璃等非晶体没有这种周期性排列。",
+    "verify": "\"晶体内部微粒在三维空间做周期性有序排列\""
+  },
+  {
+    "id": "cnk_h073_q2",
+    "topicId": "cnk_h073",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "晶胞指的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "实验室里最大的那只烧杯"
+      },
+      {
+        "key": "B",
+        "text": "元素周期表的表头"
+      },
+      {
+        "key": "C",
+        "text": "只存在于气体中的气泡"
+      },
+      {
+        "key": "D",
+        "text": "能代表晶体结构的最小重复单位"
+      }
+    ],
+    "answer": "D",
+    "explanation": "整个晶体可以看作晶胞在三维方向上的平移重复。",
+    "verify": "\"能代表晶体结构的最小重复单位\""
+  },
+  {
+    "id": "cnk_h073_q3",
+    "topicId": "cnk_h073",
+    "difficulty": "standard",
+    "type": "numeric",
+    "prompt": "简单立方晶胞有 8 个顶点，每个顶点原子被 8 个晶胞共用。该晶胞分摊到的顶角原子数是多少？",
+    "answer": "1",
+    "explanation": "每个顶点贡献 1/8 个原子，8×1/8＝1。",
+    "verify": "8 * 1 // 8"
+  },
+  {
+    "id": "cnk_h073_q4",
+    "topicId": "cnk_h073",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列关于晶体的说法合理的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一种元素只能有一种固体结构"
+      },
+      {
+        "key": "B",
+        "text": "同一种物质可以有不同的晶体结构，例如碳的金刚石和石墨"
+      },
+      {
+        "key": "C",
+        "text": "晶胞里的原子数必须等于相对原子质量"
+      },
+      {
+        "key": "D",
+        "text": "非晶体内部微粒一定按晶胞严格重复"
+      }
+    ],
+    "answer": "B",
+    "explanation": "碳可以形成金刚石和石墨等不同晶体。晶胞原子数由分摊规则决定，不是相对原子质量。",
+    "verify": "\"同一种物质可以有不同的晶体结构，例如碳的金刚石和石墨\""
+  },
+  {
+    "id": "cnk_h074_q1",
+    "topicId": "cnk_h074",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "干冰（固态二氧化碳）属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "共价晶体"
+      },
+      {
+        "key": "B",
+        "text": "金属晶体"
+      },
+      {
+        "key": "C",
+        "text": "离子晶体"
+      },
+      {
+        "key": "D",
+        "text": "分子晶体"
+      }
+    ],
+    "answer": "D",
+    "explanation": "干冰由二氧化碳分子构成，分子之间靠分子间作用力结合，是分子晶体。",
+    "verify": "\"分子晶体\""
+  },
+  {
+    "id": "cnk_h074_q2",
+    "topicId": "cnk_h074",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "金刚石属于共价晶体，是因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "碳原子之间以共价键形成空间网状结构"
+      },
+      {
+        "key": "B",
+        "text": "碳原子之间只靠分子间作用力疏松堆积"
+      },
+      {
+        "key": "C",
+        "text": "金刚石由钠离子和氯离子构成"
+      },
+      {
+        "key": "D",
+        "text": "金刚石能在常温下熔化成金属液"
+      }
+    ],
+    "answer": "A",
+    "explanation": "每个碳与四个碳形成共价键，连成三维网状，所以硬、熔点高。",
+    "verify": "\"碳原子之间以共价键形成空间网状结构\""
+  },
+  {
+    "id": "cnk_h074_q3",
+    "topicId": "cnk_h074",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "分子晶体的熔点通常较低，主要因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "分子晶体里一定没有分子"
+      },
+      {
+        "key": "B",
+        "text": "微粒之间主要靠分子间作用力结合，比共价键弱"
+      },
+      {
+        "key": "C",
+        "text": "分子间作用力比共价键更强"
+      },
+      {
+        "key": "D",
+        "text": "熔点只取决于烧杯的厚度"
+      }
+    ],
+    "answer": "B",
+    "explanation": "破坏分子晶体主要克服分子间作用力，一般远弱于拆开共价键。",
+    "verify": "\"微粒之间主要靠分子间作用力结合，比共价键弱\""
+  },
+  {
+    "id": "cnk_h074_q4",
+    "topicId": "cnk_h074",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "比较干冰和金刚石，正确的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "两者都是分子晶体，性质完全相同"
+      },
+      {
+        "key": "B",
+        "text": "金刚石靠分子间作用力结合所以很软"
+      },
+      {
+        "key": "C",
+        "text": "干冰易升华，金刚石硬度很大、熔点很高"
+      },
+      {
+        "key": "D",
+        "text": "干冰是共价晶体所以很难升华"
+      }
+    ],
+    "answer": "C",
+    "explanation": "干冰是分子晶体，分子间作用力弱，容易升华。金刚石是共价晶体，网状共价键使它又硬又难熔。",
+    "verify": "\"干冰易升华，金刚石硬度很大、熔点很高\""
+  },
+  {
+    "id": "cnk_h075_q1",
+    "topicId": "cnk_h075",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "金属晶体中，金属原子（或离子）靠什么结合？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "金属键"
+      },
+      {
+        "key": "B",
+        "text": "只有分子间作用力"
+      },
+      {
+        "key": "C",
+        "text": "只有氢键"
+      },
+      {
+        "key": "D",
+        "text": "原子核融合"
+      }
+    ],
+    "answer": "A",
+    "explanation": "金属键是金属原子（或离子）与自由电子之间的作用。金属单质属于金属晶体。",
+    "verify": "\"金属键\""
+  },
+  {
+    "id": "cnk_h075_q2",
+    "topicId": "cnk_h075",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "氯化钠晶体属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "分子晶体"
+      },
+      {
+        "key": "B",
+        "text": "离子晶体"
+      },
+      {
+        "key": "C",
+        "text": "共价晶体"
+      },
+      {
+        "key": "D",
+        "text": "金属晶体"
+      }
+    ],
+    "answer": "B",
+    "explanation": "氯化钠由钠离子和氯离子通过离子键结合，是典型的离子晶体。",
+    "verify": "\"离子晶体\""
+  },
+  {
+    "id": "cnk_h075_q3",
+    "topicId": "cnk_h075",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "离子晶体一般能在熔融或水溶液中导电，是因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "固态时离子就已经能在整块晶体里自由跑动"
+      },
+      {
+        "key": "B",
+        "text": "离子晶体靠金属键导电"
+      },
+      {
+        "key": "C",
+        "text": "这时出现了可以自由移动的离子"
+      },
+      {
+        "key": "D",
+        "text": "导电与带电微粒无关"
+      }
+    ],
+    "answer": "C",
+    "explanation": "固态时离子被固定在晶格中。熔化或溶解后离子能移动，才能导电。",
+    "verify": "\"这时出现了可以自由移动的离子\""
+  },
+  {
+    "id": "cnk_h075_q4",
+    "topicId": "cnk_h075",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "金属具有延展性和导电性，可以从结构上解释为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "金属晶体里没有电子"
+      },
+      {
+        "key": "B",
+        "text": "金属键一滑动就变成离子键"
+      },
+      {
+        "key": "C",
+        "text": "金属只能在水溶液里导电、固体中一定绝缘"
+      },
+      {
+        "key": "D",
+        "text": "电子在金属中可以流动，原子层也可以相对滑动而不破坏金属键的基本特征"
+      }
+    ],
+    "answer": "D",
+    "explanation": "自由电子使金属导电。原子层滑动时金属键仍然存在，所以可以锤打延展。",
+    "verify": "\"电子在金属中可以流动，原子层也可以相对滑动而不破坏金属键的基本特征\""
+  },
+  {
+    "id": "cnk_h076_q1",
+    "topicId": "cnk_h076",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "配合物中，中心原子（或离子）与配体之间主要通过？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "原子核融合"
+      },
+      {
+        "key": "B",
+        "text": "配位键结合"
+      },
+      {
+        "key": "C",
+        "text": "只有重力吸引"
+      },
+      {
+        "key": "D",
+        "text": "中子转移"
+      }
+    ],
+    "answer": "B",
+    "explanation": "配体提供孤对电子，中心原子提供空轨道，形成配位键。",
+    "verify": "\"配位键结合\""
+  },
+  {
+    "id": "cnk_h076_q2",
+    "topicId": "cnk_h076",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "配体通常是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "必须是稀有气体原子"
+      },
+      {
+        "key": "B",
+        "text": "必须是中子"
+      },
+      {
+        "key": "C",
+        "text": "能提供孤对电子的分子或离子"
+      },
+      {
+        "key": "D",
+        "text": "不能含有电子的空核"
+      }
+    ],
+    "answer": "C",
+    "explanation": "氨、水、氯离子等可以提供孤对电子，充当配体。",
+    "verify": "\"能提供孤对电子的分子或离子\""
+  },
+  {
+    "id": "cnk_h076_q3",
+    "topicId": "cnk_h076",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "[Cu(NH3)4]2+ 中，氨分子的角色是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "中心原子"
+      },
+      {
+        "key": "B",
+        "text": "只作溶剂、一定不参与结合"
+      },
+      {
+        "key": "C",
+        "text": "钠离子"
+      },
+      {
+        "key": "D",
+        "text": "配体"
+      }
+    ],
+    "answer": "D",
+    "explanation": "铜离子是中心离子，四个氨分子提供孤对电子作配体。",
+    "verify": "\"配体\""
+  },
+  {
+    "id": "cnk_h076_q4",
+    "topicId": "cnk_h076",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "超分子与普通小分子化合物相比，一个特点是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "靠分子间作用力等较弱相互作用组装，不一定靠新的共价键把整块连死"
+      },
+      {
+        "key": "B",
+        "text": "超分子必须是金属晶体"
+      },
+      {
+        "key": "C",
+        "text": "超分子里一定没有分子"
+      },
+      {
+        "key": "D",
+        "text": "超分子只能在原子核内部存在"
+      }
+    ],
+    "answer": "A",
+    "explanation": "超分子是分子层次上的组装体，靠氢键、范德华力等维持，不必把所有原子用共价键连成一块。",
+    "verify": "\"靠分子间作用力等较弱相互作用组装，不一定靠新的共价键把整块连死\""
+  },
+  {
+    "id": "cnk_h077_q1",
+    "topicId": "cnk_h077",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "下列物质属于离子晶体的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "干冰"
+      },
+      {
+        "key": "B",
+        "text": "金刚石"
+      },
+      {
+        "key": "C",
+        "text": "氯化钠"
+      },
+      {
+        "key": "D",
+        "text": "铜"
+      }
+    ],
+    "answer": "C",
+    "explanation": "氯化钠由阴阳离子构成。干冰是分子晶体，金刚石是共价晶体，铜是金属晶体。",
+    "verify": "\"氯化钠\""
+  },
+  {
+    "id": "cnk_h077_q2",
+    "topicId": "cnk_h077",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "下列物质属于金属晶体的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "氯化钠"
+      },
+      {
+        "key": "B",
+        "text": "干冰"
+      },
+      {
+        "key": "C",
+        "text": "金刚石"
+      },
+      {
+        "key": "D",
+        "text": "铜"
+      }
+    ],
+    "answer": "D",
+    "explanation": "铜由金属键结合。氯化钠是离子晶体，干冰是分子晶体，金刚石是共价晶体。",
+    "verify": "\"铜\""
+  },
+  {
+    "id": "cnk_h077_q3",
+    "topicId": "cnk_h077",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "要熔化金刚石通常比熔化干冰困难得多，主要因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "金刚石要拆开共价键，干冰只要克服分子间作用力"
+      },
+      {
+        "key": "B",
+        "text": "干冰是共价晶体所以更难熔"
+      },
+      {
+        "key": "C",
+        "text": "两者的作用力类型完全相同"
+      },
+      {
+        "key": "D",
+        "text": "熔点只取决于颜色"
+      }
+    ],
+    "answer": "A",
+    "explanation": "共价晶体的三维共价网比分子晶体的分子间作用力牢固得多。",
+    "verify": "\"金刚石要拆开共价键，干冰只要克服分子间作用力\""
+  },
+  {
+    "id": "cnk_h077_q4",
+    "topicId": "cnk_h077",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列判断同时用上晶体类型和配合物的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "所有晶体都是配合物"
+      },
+      {
+        "key": "B",
+        "text": "氯化钠是离子晶体；铜离子与氨形成配合物后，溶液颜色会与普通铜盐不同"
+      },
+      {
+        "key": "C",
+        "text": "配合物只能存在于金刚石中"
+      },
+      {
+        "key": "D",
+        "text": "金属晶体就是超分子"
+      }
+    ],
+    "answer": "B",
+    "explanation": "离子晶体、金属晶体、配合物是不同层次的概念。配合物的形成常常伴随颜色变化。",
+    "verify": "\"氯化钠是离子晶体；铜离子与氨形成配合物后，溶液颜色会与普通铜盐不同\""
+  },
+  {
+    "id": "cnk_h078_q1",
+    "topicId": "cnk_h078",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "实验活动「简单配合物的形成」的主要目的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "测定反应热的具体数值"
+      },
+      {
+        "key": "B",
+        "text": "配制一定物质的量浓度的标准溶液"
+      },
+      {
+        "key": "C",
+        "text": "搭建有机物的球棍模型"
+      },
+      {
+        "key": "D",
+        "text": "观察简单配合物的形成，并认识它与普通盐溶液的差别"
+      }
+    ],
+    "answer": "D",
+    "explanation": "本实验围绕配合物的生成和现象，不是量热、定容或有机模型。",
+    "verify": "\"观察简单配合物的形成，并认识它与普通盐溶液的差别\""
+  },
+  {
+    "id": "cnk_h078_q2",
+    "topicId": "cnk_h078",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "向硫酸铜溶液中加入过量氨水，常可观察到的现象是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "先出现沉淀，随后溶解得到深蓝色溶液"
+      },
+      {
+        "key": "B",
+        "text": "溶液立刻变成无色且一定放出氯气"
+      },
+      {
+        "key": "C",
+        "text": "析出金属钠"
+      },
+      {
+        "key": "D",
+        "text": "溶液沸腾后变成金刚石"
+      }
+    ],
+    "answer": "A",
+    "explanation": "开始生成氢氧化铜沉淀，氨过量后转化为深蓝色的铜氨配离子。",
+    "verify": "\"先出现沉淀，随后溶解得到深蓝色溶液\""
+  },
+  {
+    "id": "cnk_h078_q3",
+    "topicId": "cnk_h078",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "上述深蓝色溶液的形成，通常说明生成了？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "单质铜全部析出"
+      },
+      {
+        "key": "B",
+        "text": "铜氨配离子"
+      },
+      {
+        "key": "C",
+        "text": "氯化钠晶体"
+      },
+      {
+        "key": "D",
+        "text": "氢气和氧气"
+      }
+    ],
+    "answer": "B",
+    "explanation": "铜离子与氨分子结合成 [Cu(NH3)4]2+ 一类配离子，溶液呈深蓝色。",
+    "verify": "\"铜氨配离子\""
+  },
+  {
+    "id": "cnk_h078_q4",
+    "topicId": "cnk_h078",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "做这个实验时应注意的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "可以把氨水直接泼到脸上确认气味"
+      },
+      {
+        "key": "B",
+        "text": "用嘴去吸移液管里的氨水"
+      },
+      {
+        "key": "C",
+        "text": "氨水有刺激性，要在通风条件下取用，不要凑近去闻"
+      },
+      {
+        "key": "D",
+        "text": "现象与试剂用量无关，可以随意把药品倒进水槽"
+      }
+    ],
+    "answer": "C",
+    "explanation": "氨水有刺激性气味，应在通风处取用。不能用嘴吸，也不能把多余药品随意倒掉。",
+    "verify": "\"氨水有刺激性，要在通风条件下取用，不要凑近去闻\""
   }
 ]

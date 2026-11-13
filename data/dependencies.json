@@ -29790,6 +29790,36 @@
     "reason": "按人教版化学选择性必修第一册的教学顺序，先学「实验活动4 简单的电镀实验」，再学「实验活动5 制作简单的燃料电池」。"
   },
   {
+    "topicId": "cnk_h065",
+    "prerequisiteId": "cnk_h064",
+    "strength": "soft",
+    "reason": "按人教版化学课序，学完选择性必修第一册的「实验活动5 制作简单的燃料电池」后进入选择性必修第二册的「引言」。"
+  },
+  {
+    "topicId": "cnk_h069",
+    "prerequisiteId": "cnk_h068",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第二册的教学顺序，先学「整理与提升」，再学「共价键」。"
+  },
+  {
+    "topicId": "cnk_h073",
+    "prerequisiteId": "cnk_h072",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第二册的教学顺序，先学「整理与提升」，再学「物质的聚集状态与晶体的常识」。"
+  },
+  {
+    "topicId": "cnk_h075",
+    "prerequisiteId": "cnk_h074",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第二册的教学顺序，先学「分子晶体与共价晶体」，再学「金属晶体与离子晶体」。"
+  },
+  {
+    "topicId": "cnk_h078",
+    "prerequisiteId": "cnk_h077",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第二册的教学顺序，先学「整理与提升」，再学「实验活动 简单配合物的形成」。"
+  },
+  {
     "topicId": "cnk_h001",
     "prerequisiteId": "cnk_j001",
     "strength": "hard",
@@ -30406,5 +30436,107 @@
     "prerequisiteId": "cnk_h059",
     "strength": "hard",
     "reason": "燃料电池是一种持续供给反应物的原电池，要先会原电池。"
+  },
+  {
+    "topicId": "cnk_h065",
+    "prerequisiteId": "cnk_h015",
+    "strength": "hard",
+    "reason": "本册从结构角度认识物质，要先会必修里的原子结构与元素周期表。"
+  },
+  {
+    "topicId": "cnk_h066",
+    "prerequisiteId": "cnk_h065",
+    "strength": "hard",
+    "reason": "讨论原子结构，是本册从引言进入的第一个主题。"
+  },
+  {
+    "topicId": "cnk_h067",
+    "prerequisiteId": "cnk_h066",
+    "strength": "hard",
+    "reason": "用电离能和电负性比较元素，要先会核外电子排布。"
+  },
+  {
+    "topicId": "cnk_h067",
+    "prerequisiteId": "cnk_h016",
+    "strength": "hard",
+    "reason": "元素性质的递变建立在必修里的元素周期律之上。"
+  },
+  {
+    "topicId": "cnk_h068",
+    "prerequisiteId": "cnk_h067",
+    "strength": "hard",
+    "reason": "复习本章要先会原子结构与元素的性质。"
+  },
+  {
+    "topicId": "cnk_h069",
+    "prerequisiteId": "cnk_h017",
+    "strength": "hard",
+    "reason": "共价键建立在必修化学键的认识之上。"
+  },
+  {
+    "topicId": "cnk_h069",
+    "prerequisiteId": "cnk_h066",
+    "strength": "hard",
+    "reason": "共用电子对与核外电子排布有关。"
+  },
+  {
+    "topicId": "cnk_h070",
+    "prerequisiteId": "cnk_h069",
+    "strength": "hard",
+    "reason": "判断分子的空间结构，要先知道原子怎样用共价键结合。"
+  },
+  {
+    "topicId": "cnk_h071",
+    "prerequisiteId": "cnk_h070",
+    "strength": "hard",
+    "reason": "判断分子极性和相似相溶，要先知道分子的空间结构。"
+  },
+  {
+    "topicId": "cnk_h072",
+    "prerequisiteId": "cnk_h071",
+    "strength": "hard",
+    "reason": "复习本章要先会分子结构与物质的性质。"
+  },
+  {
+    "topicId": "cnk_h073",
+    "prerequisiteId": "cnk_h071",
+    "strength": "hard",
+    "reason": "讨论物质怎样聚集，要先知道分子结构和分子间作用。"
+  },
+  {
+    "topicId": "cnk_h074",
+    "prerequisiteId": "cnk_h073",
+    "strength": "hard",
+    "reason": "区分分子晶体和共价晶体，要先有晶体和晶胞的常识。"
+  },
+  {
+    "topicId": "cnk_h075",
+    "prerequisiteId": "cnk_h073",
+    "strength": "hard",
+    "reason": "讨论金属晶体和离子晶体，要先有晶体的常识。"
+  },
+  {
+    "topicId": "cnk_h076",
+    "prerequisiteId": "cnk_h075",
+    "strength": "hard",
+    "reason": "许多配合物的中心是金属离子，要先认识离子和金属。"
+  },
+  {
+    "topicId": "cnk_h077",
+    "prerequisiteId": "cnk_h074",
+    "strength": "hard",
+    "reason": "复习本章要先会分子晶体与共价晶体。"
+  },
+  {
+    "topicId": "cnk_h077",
+    "prerequisiteId": "cnk_h076",
+    "strength": "hard",
+    "reason": "复习本章要先会配合物与超分子。"
+  },
+  {
+    "topicId": "cnk_h078",
+    "prerequisiteId": "cnk_h076",
+    "strength": "hard",
+    "reason": "观察简单配合物的形成，要先知道配合物和配体。"
   }
 ]

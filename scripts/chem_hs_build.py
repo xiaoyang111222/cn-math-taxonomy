@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""把高中化学必修第一册、第二册和选择性必修第一册编译进 data/ 下的四个文件。
+"""把高中化学必修第一、二册和选择性必修第一、二册编译进 data/ 下的四个文件。
 
 只清除并重写 cnk_h、cks-hs-2017、chemistry_senior。
 保留初中化学 cnk_j、cks-2022、chemistry，以及其他学科。
@@ -19,18 +19,21 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import chem_hs_b1  # noqa: E402,F401
 import chem_hs_b2  # noqa: E402,F401
 import chem_hs_s1  # noqa: E402,F401
+import chem_hs_s2  # noqa: E402,F401
 import chem_hs_lib as L  # noqa: E402
 import chem_hs_plan as P  # noqa: E402
 import chem_hs_std as S  # noqa: E402
 from verify_questions import verify_all  # noqa: E402
 
 SENIOR_STD_PREFIX = "cks-hs-2017:"
-EXPECTED_PLAN = 64
+EXPECTED_PLAN = 78
 B1_COUNT = 19
 B2_COUNT = 22
 S1_COUNT = 23
+S2_COUNT = 14
 B1_EDGES = 44
 B2_EDGES = 53
+S1_EDGES = 44
 
 
 def load(name):
@@ -128,14 +131,19 @@ def std_items():
         if len(parts) != 3:
             raise SystemExit("课标尾部格式不对：%s" % tail)
         book, code_in_id, num_s = parts
-        if book not in ("B1", "B2", "S1") or code_in_id != code:
+        if book not in ("B1", "B2", "S1", "S2") or code_in_id != code:
             raise SystemExit("课标 id 与主题代码不一致：%s" % tail)
         num = int(num_s)
         key = (book, code)
         if num != seen.get(key, 0) + 1:
             raise SystemExit("课标编号不连续：%s" % tail)
         seen[key] = num
-        status = S.TEXT_STATUS if book in ("B1", "B2") else S.S1_TEXT_STATUS
+        if book in ("B1", "B2"):
+            status = S.TEXT_STATUS
+        elif book == "S1":
+            status = S.S1_TEXT_STATUS
+        else:
+            status = S.S2_TEXT_STATUS
         out.append({
             "id": SENIOR_STD_PREFIX + tail,
             "domain": S.CODES[code],
@@ -161,11 +169,16 @@ def soft_reason(prev_row, cur_row):
         return "按人教版化学必修第二册的教学顺序，先学「%s」，再学「%s」。" % (prev_name, cur_name)
     if prev_row["grade"] == 12 and cur_row["grade"] == 12:
         return "按人教版化学选择性必修第一册的教学顺序，先学「%s」，再学「%s」。" % (prev_name, cur_name)
+    if prev_row["grade"] == 13 and cur_row["grade"] == 13:
+        return "按人教版化学选择性必修第二册的教学顺序，先学「%s」，再学「%s」。" % (prev_name, cur_name)
     if prev_row["grade"] == 10 and cur_row["grade"] == 11:
         return "按人教版化学必修课序，学完必修第一册的「%s」后进入必修第二册的「%s」。" % (
             prev_name, cur_name)
     if prev_row["grade"] == 11 and cur_row["grade"] == 12:
         return "按人教版化学课序，学完必修第二册的「%s」后进入选择性必修第一册的「%s」。" % (
+            prev_name, cur_name)
+    if prev_row["grade"] == 12 and cur_row["grade"] == 13:
+        return "按人教版化学课序，学完选择性必修第一册的「%s」后进入选择性必修第二册的「%s」。" % (
             prev_name, cur_name)
     return "按人教版化学课序，先学「%s」，再学「%s」。" % (prev_name, cur_name)
 
@@ -187,6 +200,9 @@ def main():
         return 1
     if sum(1 for row in P.PLAN if row["grade"] == 12) != S1_COUNT:
         print("选择性必修第一册应为 %d 条" % S1_COUNT, file=sys.stderr)
+        return 1
+    if sum(1 for row in P.PLAN if row["grade"] == 13) != S2_COUNT:
+        print("选择性必修第二册应为 %d 条" % S2_COUNT, file=sys.stderr)
         return 1
     missing = [row["key"] for row in P.PLAN if row["key"] not in L.HS]
     extra = [key for key in L.HS if key not in P.PLAN_BY_KEY]
@@ -231,6 +247,25 @@ def main():
     if len(snap_b2_edges) != B2_EDGES:
         print("现有第二册先修边不是 %d 条，实际 %d" % (B2_EDGES, len(snap_b2_edges)), file=sys.stderr)
         return 1
+    s1_id_set = {
+        "cnk_h%03d" % i
+        for i in range(B1_COUNT + B2_COUNT + 1, B1_COUNT + B2_COUNT + S1_COUNT + 1)
+    }
+    snap_s1_topics = [
+        (t["id"], t["name"], t["chapter"], t["grade"], t["semester"], t.get("diagnostic_question"))
+        for t in topics if t.get("id") in s1_id_set
+    ]
+    snap_s1_questions = [q for q in questions if q.get("topicId") in s1_id_set]
+    snap_s1_edges = [
+        (e["topicId"], e["prerequisiteId"], e["strength"], e["reason"])
+        for e in deps if e.get("topicId") in s1_id_set
+    ]
+    if len(snap_s1_topics) != S1_COUNT or len(snap_s1_questions) != S1_COUNT * 4:
+        print("现有选必一数据不是 23 点 92 题，不能在此基础上增量编译", file=sys.stderr)
+        return 1
+    if len(snap_s1_edges) != S1_EDGES:
+        print("现有选必一先修边不是 %d 条，实际 %d" % (S1_EDGES, len(snap_s1_edges)), file=sys.stderr)
+        return 1
 
     id_of = {}
     for i, row in enumerate(P.PLAN, start=1):
@@ -250,7 +285,7 @@ def main():
         if row["chapter"].split()[0] != expected_book:
             print("%s 章节不是以%s开头：%s" % (key, expected_book, row["chapter"]), file=sys.stderr)
             return 1
-        if row["grade"] not in (10, 11, 12) or row["semester"] != "上":
+        if row["grade"] not in (10, 11, 12, 13) or row["semester"] != "上":
             print("%s 的 grade/semester 不合法：%s %s" % (key, row["grade"], row["semester"]), file=sys.stderr)
             return 1
         refs = []
@@ -334,6 +369,18 @@ def main():
     if not s1_hard_ok:
         print("cnk_h042 必须硬连至少一个必修或初中化学点", file=sys.stderr)
         return 1
+    first_s2 = next(row["key"] for row in P.PLAN if row["grade"] == 13)
+    s2_hard_ok = False
+    for ref, _r in L.HS[first_s2]["pre"]:
+        if ref.startswith("J:"):
+            s2_hard_ok = True
+            break
+        if ref in id_of and P.PLAN_BY_KEY[ref]["grade"] in (10, 11, 12):
+            s2_hard_ok = True
+            break
+    if not s2_hard_ok:
+        print("cnk_h065 必须硬连至少一个已有化学点", file=sys.stderr)
+        return 1
 
     unused = [tail for tail, _c, _s, _t in S.CLAUSES if tail not in cited]
     if unused:
@@ -416,18 +463,22 @@ def main():
         "title": "普通高中化学课程标准（2017年版）",
         "issuer": "中华人民共和国教育部",
         "year": 2017,
-        "stage": "普通高中（本阶段收录与必修第一册、必修第二册、选择性必修第一册相关的内容要求）",
+        "stage": "普通高中（本阶段收录与必修第一册、必修第二册、选择性必修第一册、选择性必修第二册相关的内容要求）",
         "note": (
-            "条目是对必修第一册、必修第二册和选择性必修第一册相关内容要求的公开转述，不是逐页核对的原文。"
+            "条目是对必修第一册、必修第二册、选择性必修第一册和选择性必修第二册相关内容要求的公开转述，不是逐页核对的原文。"
             "verbatim 为 false，page_or_ref 为「待核」。"
-            "编号 cks-hs-2017:B1.<主题>.<序号>、cks-hs-2017:B2.<主题>.<序号> 与 cks-hs-2017:S1.<主题>.<序号> 是本图谱编的，不是教育部原编号。"
+            "编号 cks-hs-2017:B1.<主题>.<序号>、cks-hs-2017:B2.<主题>.<序号>、cks-hs-2017:S1.<主题>.<序号> "
+            "与 cks-hs-2017:S2.<主题>.<序号> 是本图谱编的，不是教育部原编号。"
             "必修主题用 2017 年版必修课程的公开通称：化学科学与实验探究、常见的无机物及其应用、"
             "物质结构基础与化学反应规律、简单的有机化合物及其应用、化学与社会发展。"
             "选择性必修第一册主题用「化学反应原理」模块的公开通称：化学反应与热能，"
             "化学反应的方向、速率和限度，水溶液中的离子反应与平衡，化学反应与电能。"
+            "选择性必修第二册主题用「物质结构与性质」模块的公开通称：原子结构与性质，"
+            "分子结构与性质，聚集状态与晶体结构。"
             "后记可见的依据是教育部《普通高中化学课程标准（2017年版）》，2019 年经国家教材委员会专家委员会审核通过。"
             "封面与后记均未印「2020年修订」，不得写成 2020 修订本。"
-            "教材是普通高中教科书·化学必修第一册、必修第二册、选择性必修1 化学反应原理，人民教育出版社，"
+            "教材是普通高中教科书·化学必修第一册、必修第二册、选择性必修1 化学反应原理、"
+            "选择性必修2 物质结构与性质，人民教育出版社，"
             "课程教材研究所、化学课程教材研究开发中心编著。"
             "必修第一册总主编王晶、郑长龙；本册主编王晶、毕华林。"
             "ISBN 978-7-107-33574-7。contentId 5cd19072-e40d-4a73-8580-7b7ada5d4005。"
@@ -435,8 +486,10 @@ def main():
             "第二册版权页列有总主编、本册主编等，但核验时未见清晰姓名，不编造。"
             "选择性必修第一册总主编王晶、郑长龙；本册主编范楼珍、吴海建；副主编乔国才、周业虹。"
             "ISBN 978-7-107-34602-6。contentId 3502fe81-b23e-4f68-aa3d-7921e7932ec9。"
-            "三册版权页均未见版次、印次或出版年月，不编造。"
-            "印刷目录建 19+22+23 个知识点；附录、元素周期表、全章复习、综合专题和栏目索引不建点。"
+            "选择性必修第二册总主编王晶、郑长龙；本册主编吴国庆、李俊。"
+            "ISBN 978-7-107-34603-3。contentId b82cefe7-d631-4bde-baf9-352ca033cba4。"
+            "四册版权页均未见版次、印次或出版年月，不编造。"
+            "印刷目录建 19+22+23+14 个知识点；附录、元素周期表、全章复习、综合专题、高考复习和栏目索引不建点。"
             "未下载教材 PDF，印刷页码不写入知识点或题目。"
         ),
     }
@@ -462,6 +515,13 @@ def main():
         len(s1_reduced),
         sum(1 for e in s1_reduced if e["strength"] == "hard"),
         sum(1 for e in s1_reduced if e["strength"] == "soft"),
+    ))
+    s2_ids = {id_of[row["key"]] for row in P.PLAN if row["grade"] == 13}
+    s2_reduced = [e for e in reduced if e["topicId"] in s2_ids]
+    print("选必二边 %d（hard %d，soft %d）" % (
+        len(s2_reduced),
+        sum(1 for e in s2_reduced if e["strength"] == "hard"),
+        sum(1 for e in s2_reduced if e["strength"] == "soft"),
     ))
 
     dump("topics.json", base_topics + new_topics)
@@ -510,7 +570,10 @@ def main():
     b1_topics = [t for t in again_t if is_hs_topic(t.get("id")) and hs_n(t["id"]) <= B1_COUNT]
     b2_topics = [t for t in again_t if is_hs_topic(t.get("id"))
                  and B1_COUNT < hs_n(t["id"]) <= B1_COUNT + B2_COUNT]
-    s1_topics = [t for t in again_t if is_hs_topic(t.get("id")) and hs_n(t["id"]) > B1_COUNT + B2_COUNT]
+    s1_end = B1_COUNT + B2_COUNT + S1_COUNT
+    s1_topics = [t for t in again_t if is_hs_topic(t.get("id"))
+                 and B1_COUNT + B2_COUNT < hs_n(t["id"]) <= s1_end]
+    s2_topics = [t for t in again_t if is_hs_topic(t.get("id")) and hs_n(t["id"]) > s1_end]
     if len(b1_topics) != B1_COUNT or any(t["grade"] != 10 or t["chapter"].split()[0] != "必修一" for t in b1_topics):
         print("必修第一册点数或 grade/chapter 不对", file=sys.stderr)
         return 1
@@ -521,6 +584,11 @@ def main():
         t["grade"] != 12 or t["chapter"].split()[0] != "选必一" or t["semester"] != "上" for t in s1_topics
     ):
         print("选择性必修第一册点数或 grade/chapter/semester 不对", file=sys.stderr)
+        return 1
+    if len(s2_topics) != S2_COUNT or any(
+        t["grade"] != 13 or t["chapter"].split()[0] != "选必二" or t["semester"] != "上" for t in s2_topics
+    ):
+        print("选择性必修第二册点数或 grade/chapter/semester 不对", file=sys.stderr)
         return 1
     b1_edges_now = [
         (e["topicId"], e["prerequisiteId"], e["strength"], e["reason"])
@@ -556,14 +624,34 @@ def main():
     if b2_names_now != snap_b2_topics:
         print("第二册知识点 id/名称/chapter/grade/semester/诊断题被改动", file=sys.stderr)
         return 1
-    s1_id_set = {t["id"] for t in s1_topics}
-    s1_q = [q for q in again_q if q.get("topicId") in s1_id_set]
-    if len(s1_q) != S1_COUNT * 4:
-        print("选择性必修第一册题目不是 %d 道" % (S1_COUNT * 4), file=sys.stderr)
+    s1_edges_now = [
+        (e["topicId"], e["prerequisiteId"], e["strength"], e["reason"])
+        for e in again_d if e.get("topicId") in s1_id_set
+    ]
+    if s1_edges_now != snap_s1_edges:
+        print("选必一已有先修边被改动", file=sys.stderr)
         return 1
-    s1_edges = [e for e in again_d if e.get("topicId") in s1_id_set]
-    if not any(e["prerequisiteId"] == "cnk_h041" and e["topicId"] == "cnk_h042" for e in s1_edges):
-        print("缺少从必修第二册最后一点到本册引言的课序衔接", file=sys.stderr)
+    s1_q_now = [q for q in again_q if q.get("topicId") in s1_id_set]
+    if [(q["id"], q.get("prompt"), q.get("answer"), q.get("verify")) for q in s1_q_now] != [
+            (q["id"], q.get("prompt"), q.get("answer"), q.get("verify")) for q in snap_s1_questions]:
+        print("选必一已有题目被改动", file=sys.stderr)
+        return 1
+    s1_names_now = [(t["id"], t["name"], t["chapter"], t["grade"], t["semester"],
+                     t.get("diagnostic_question")) for t in s1_topics]
+    if s1_names_now != snap_s1_topics:
+        print("选必一知识点 id/名称/chapter/grade/semester/诊断题被改动", file=sys.stderr)
+        return 1
+    if not any(e[1] == "cnk_h041" and e[0] == "cnk_h042" for e in s1_edges_now):
+        print("缺少从必修第二册最后一点到选必一引言的课序衔接", file=sys.stderr)
+        return 1
+    s2_id_set = {t["id"] for t in s2_topics}
+    s2_q = [q for q in again_q if q.get("topicId") in s2_id_set]
+    if len(s2_q) != S2_COUNT * 4:
+        print("选择性必修第二册题目不是 %d 道" % (S2_COUNT * 4), file=sys.stderr)
+        return 1
+    s2_edges = [e for e in again_d if e.get("topicId") in s2_id_set]
+    if not any(e["prerequisiteId"] == "cnk_h064" and e["topicId"] == "cnk_h065" for e in s2_edges):
+        print("缺少从选必一最后一点到本册引言的课序衔接", file=sys.stderr)
         return 1
     # 初中点的名称仍能对上硬边理由里点到的对象，避免连错号。
     for e in reduced:

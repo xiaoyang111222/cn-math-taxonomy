@@ -598,7 +598,7 @@
       if (ch) {
         let body = ch[2];
         let section = '';
-        const sec = /^(.*)\s(\d+(?:\.\d+)*|整理与提升|实验活动\d+)$/.exec(body);
+        const sec = /^(.*)\s(\d+(?:\.\d+)*|整理与提升|实验活动\d*)$/.exec(body);
         if (sec && sec[1]) {
           body = sec[1];
           section = sec[2];

@@ -992,8 +992,8 @@ test('真实数据：章节名可解析', () => {
   formal.forEach((t) => {
     const c = E.parseChapter(t.chapter);
     assert.ok(c.volume && c.chapterNo, t.chapter);
-    // 必修一绪言、选必一引言没有「第×章」后面的章名。其余正式点仍要有章名。
-    if (t.chapter !== '必修一 绪言' && t.chapter !== '选必一 引言') assert.ok(c.chapterName, t.chapter);
+    // 必修一绪言、选必一/选必二引言没有「第×章」后面的章名。其余正式点仍要有章名。
+    if (t.chapter !== '必修一 绪言' && t.chapter !== '选必一 引言' && t.chapter !== '选必二 引言') assert.ok(c.chapterName, t.chapter);
   });
 });
 
@@ -1547,17 +1547,22 @@ test('gradeTargets：一年级 = 一上 + 一下，七上只含七上；写法�
   assert.ok(g9chemYear.ids.every((id) => id.startsWith('cnk_') && RGQ.byId[id].grade === 9));
   assert.strictEqual(E.subjectOf(RGQ.byId[g9chem.ids[0]]), 'chemistry');
   const chemHs = topics.filter((t) => /^cnk_h\d/.test(String(t.id)));
-  assert.strictEqual(chemHs.length, 64);
-  assert.deepStrictEqual(chemHs.map((t) => t.id), Array.from({ length: 64 }, (_, i) => 'cnk_h' + String(i + 1).padStart(3, '0')));
+  assert.strictEqual(chemHs.length, 78);
+  assert.deepStrictEqual(chemHs.map((t) => t.id), Array.from({ length: 78 }, (_, i) => 'cnk_h' + String(i + 1).padStart(3, '0')));
   const chemHsB1 = chemHs.filter((t) => Number(String(t.id).slice(5)) <= 19);
   const chemHsB2 = chemHs.filter((t) => {
     const n = Number(String(t.id).slice(5));
     return n >= 20 && n <= 41;
   });
-  const chemHsS1 = chemHs.filter((t) => Number(String(t.id).slice(5)) >= 42);
+  const chemHsS1 = chemHs.filter((t) => {
+    const n = Number(String(t.id).slice(5));
+    return n >= 42 && n <= 64;
+  });
+  const chemHsS2 = chemHs.filter((t) => Number(String(t.id).slice(5)) >= 65);
   assert.strictEqual(chemHsB1.length, 19);
   assert.strictEqual(chemHsB2.length, 22);
   assert.strictEqual(chemHsS1.length, 23);
+  assert.strictEqual(chemHsS2.length, 14);
   chemHsB1.forEach((t) => {
     assert.strictEqual(t.subject, 'chemistry');
     assert.strictEqual(t.grade, 10);
@@ -1578,6 +1583,13 @@ test('gradeTargets：一年级 = 一上 + 一下，七上只含七上；写法�
     assert.strictEqual(t.semester, '上');
     assert.strictEqual(t.external, false);
     assert.ok(String(t.chapter).indexOf('选必一') === 0, t.id);
+  });
+  chemHsS2.forEach((t) => {
+    assert.strictEqual(t.subject, 'chemistry');
+    assert.strictEqual(t.grade, 13);
+    assert.strictEqual(t.semester, '上');
+    assert.strictEqual(t.external, false);
+    assert.ok(String(t.chapter).indexOf('选必二') === 0, t.id);
   });
   const chemB1 = E.gradeTargets(RGQ, '必修一', 'chemistry');
   assert.strictEqual(chemB1.label, '必修一（必修第一册）');
@@ -1600,6 +1612,13 @@ test('gradeTargets：一年级 = 一上 + 一下，七上只含七上；写法�
     assert.ok(id.startsWith('cnk_h') && RGQ.byId[id].grade === 12, id);
   });
   assert.deepStrictEqual(E.gradeTargets(RGQ, '选择性必修第一册', 'chemistry').ids, chemS1.ids);
+  const chemS2 = E.gradeTargets(RGQ, '选必二', 'chemistry');
+  assert.strictEqual(chemS2.label, '选必二（选择性必修第二册）');
+  assert.deepStrictEqual(chemS2.ids, chemHsS2.map((t) => t.id));
+  chemS2.ids.forEach((id) => {
+    assert.ok(id.startsWith('cnk_h') && RGQ.byId[id].grade === 13, id);
+  });
+  assert.deepStrictEqual(E.gradeTargets(RGQ, '选择性必修第二册', 'chemistry').ids, chemS2.ids);
   assert.strictEqual(E.gradeTargets(RGQ, '必修一'), null);
   assert.strictEqual(E.gradeTargets(RGQ, '必修二'), null);
   assert.deepStrictEqual(E.parseChapter('必修一 绪言'), { volume: '必修一', chapterNo: '绪言', chapterName: '', section: '' });
@@ -1635,6 +1654,15 @@ test('gradeTargets：一年级 = 一上 + 一下，七上只含七上；写法�
   });
   assert.deepStrictEqual(E.parseChapter('选必一 第四章 化学反应与电能 实验活动5'), {
     volume: '选必一', chapterNo: '第四章', chapterName: '化学反应与电能', section: '实验活动5'
+  });
+  assert.deepStrictEqual(E.parseChapter('选必二 引言'), {
+    volume: '选必二', chapterNo: '引言', chapterName: '', section: ''
+  });
+  assert.deepStrictEqual(E.parseChapter('选必二 第一章 原子结构与性质 整理与提升'), {
+    volume: '选必二', chapterNo: '第一章', chapterName: '原子结构与性质', section: '整理与提升'
+  });
+  assert.deepStrictEqual(E.parseChapter('选必二 第三章 晶体结构与性质 实验活动'), {
+    volume: '选必二', chapterNo: '第三章', chapterName: '晶体结构与性质', section: '实验活动'
   });
   assert.deepStrictEqual(E.parseChapter('必修一 第一章 运动的描述 1.1'), {
     volume: '必修一', chapterNo: '第一章', chapterName: '运动的描述', section: '1.1'
