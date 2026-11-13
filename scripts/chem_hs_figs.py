@@ -878,7 +878,13 @@ def cu_ammine():
 
 def ether_ethanol():
     w, h = 540, 300
-    body = text(250, 52, "C₂H₆O", 15)
+    # 下标用普通数字，不用 U+2082/U+2086。Noto Sans CJK 常缺这些字形，预览会变成方框。
+    # 字宽按 Noto Sans CJK SC 粗体：字母 15px（C 9.8、H 11.4、O 11.6），数字 10px（各 5.9），中心仍在 x=250。
+    body = text(225.1, 52, "C", 15, "start")
+    body += text(235.9, 57, "2", 10, "start")
+    body += text(243.4, 52, "H", 15, "start")
+    body += text(255.8, 57, "6", 10, "start")
+    body += text(263.3, 52, "O", 15, "start")
     body += dot(50, 140, "C", 15, 12)
     body += stick((65, 140), (100, 140))
     body += dot(115, 140, "C", 15, 12)
@@ -1159,7 +1165,7 @@ def catalog():
     add("cnk_h075_q3", ionic_states(), "离子晶体一般能在熔融或水溶液中导电", must=("固态", "熔融", "?"))
     add("cnk_h076_q3", cu_ammine(), "[Cu(NH3)4]2+ 中，氨分子的角色", must=("Cu", "NH3", "?"))
 
-    add("cnk_h080_q4", ether_ethanol(), "乙醇和甲醚的分子式都是 C2H6O", must=("乙醇", "甲醚", "C₂H₆O", "?"))
+    add("cnk_h080_q4", ether_ethanol(), "乙醇和甲醚的分子式都是 C2H6O", must=("乙醇", "甲醚", ">2</text>", ">6</text>", "?"))
     add("cnk_h084_q2", ethylene_br(), "乙烯使溴的四氯化碳溶液褪色", must=("乙烯", "四氯化碳", "?"))
     add("cnk_h085_q2", benzene_ring(), "苯分子中六个碳碳键的关系是", must=("苯", "?"))
     add("cnk_h087_q3", bromoethane_cond(), "溴乙烷在氢氧化钠的醇溶液中加热", must=("溴乙烷", "氢氧化钠的醇溶液", "加热", "?"))
