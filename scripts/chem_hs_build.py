@@ -3,6 +3,7 @@
 
 只清除并重写 cnk_h、cks-hs-2017、chemistry_senior。
 保留初中化学 cnk_j、cks-2022、chemistry，以及其他学科。
+登记过的示意图在编译时写入 questions[].figure。
 
 用法：python3 scripts/chem_hs_build.py
 """
@@ -25,6 +26,7 @@ import chem_hs_lib as L  # noqa: E402
 import chem_hs_plan as P  # noqa: E402
 import chem_hs_std as S  # noqa: E402
 from verify_questions import verify_all  # noqa: E402
+from chem_hs_figs import figure_for  # noqa: E402
 
 SENIOR_STD_PREFIX = "cks-hs-2017:"
 EXPECTED_PLAN = 102
@@ -304,8 +306,9 @@ def main():
         for it in standards.get("items", [])
         if str(it.get("id", "")).startswith(SENIOR_STD_PREFIX)
     ]
-    if len(snap_hs_std) != 52:
-        print("现有高中化学课标不是 52 条，实际 %d" % len(snap_hs_std), file=sys.stderr)
+    # 选必三首次写入时文件里是前 52 条；其后重跑已经有 64 条，必须原样保留。
+    if len(snap_hs_std) not in (52, 64):
+        print("现有高中化学课标不是 52 或 64 条，实际 %d" % len(snap_hs_std), file=sys.stderr)
         return 1
 
     id_of = {}
@@ -340,6 +343,9 @@ def main():
         diag = None
         for n, q in enumerate(draft["qs"], start=1):
             obj, shown = build_question(tid, n, q, slot=i + n)
+            fig = figure_for(obj)
+            if fig:
+                obj["figure"] = fig
             built.append(obj)
             if n == 1:
                 diag = shown
@@ -762,13 +768,18 @@ def main():
         for it in again_s.get("items", [])
         if str(it.get("id", "")).startswith(SENIOR_STD_PREFIX)
     ]
-    if again_hs_std[:52] != snap_hs_std:
-        print("已有 52 条高中化学课标被改动", file=sys.stderr)
-        return 1
-    new_std = again_hs_std[52:]
-    if len(new_std) != 12 or any(not str(row[0]).startswith("cks-hs-2017:S3.") for row in new_std):
-        print("新增课标不是 12 条 S3，实际 %d" % len(new_std), file=sys.stderr)
-        return 1
+    if len(snap_hs_std) == 64:
+        if again_hs_std != snap_hs_std:
+            print("已有 64 条高中化学课标被改动", file=sys.stderr)
+            return 1
+    else:
+        if again_hs_std[:52] != snap_hs_std:
+            print("已有 52 条高中化学课标被改动", file=sys.stderr)
+            return 1
+        new_std = again_hs_std[52:]
+        if len(new_std) != 12 or any(not str(row[0]).startswith("cks-hs-2017:S3.") for row in new_std):
+            print("新增课标不是 12 条 S3，实际 %d" % len(new_std), file=sys.stderr)
+            return 1
     # 初中点的名称仍能对上硬边理由里点到的对象，避免连错号。
     for e in reduced:
         pid = e["prerequisiteId"]
