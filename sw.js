@@ -5,7 +5,7 @@
  * 缓存壳，再不行给一张内联的离线提示页，不拿首页内容顶替别的页面。 */
 'use strict';
 
-var VERSION = 'v20';
+var VERSION = 'v24';
 var CACHE = 'cnm-pwa-' + VERSION;
 var SCOPE = self.registration.scope;
 

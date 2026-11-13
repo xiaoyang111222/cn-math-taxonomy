@@ -585,19 +585,20 @@
     if (hs) return { volume: hs[1], chapterNo: hs[2], chapterName: hs[3], section: '' };
     const m = /^(\S+) (第\S+章) (\S+?)(?: (\S+))?$/.exec(s);
     if (m) return { volume: m[1], chapterNo: m[2], chapterName: m[3], section: m[4] || '' };
-    // 高中化学章名可以有多个词，例如「铁 金属材料」「物质结构 元素周期律」，绪言也没有「第×章」。
-    // 只在上面的通用格式对不上、且首词是必修一/二/三时使用，物理和数学已经对上的章节保持原样。
-    const book = /^(必修[一二三])(?:\s+(.+))?$/.exec(s);
+    // 高中化学章名可以有多个词，例如「铁 金属材料」「物质结构 元素周期律」，绪言/引言也没有「第×章」。
+    // 只在上面的通用格式对不上、且首词是必修一/二/三或选必一/二/三时使用。
+    // 数学、英语、物理已经对上的章节不会落到这里。
+    const book = /^(必修[一二三]|选必[一二三])(?:\s+(.+))?$/.exec(s);
     if (book) {
       const rest = book[2] || '';
-      if (!rest || rest === '绪言') {
+      if (!rest || rest === '绪言' || rest === '引言') {
         return { volume: book[1], chapterNo: rest || '绪言', chapterName: '', section: '' };
       }
       const ch = /^(第\S+章)\s+(.+)$/.exec(rest);
       if (ch) {
         let body = ch[2];
         let section = '';
-        const sec = /^(.*)\s(\d+(?:\.\d+)*|整理与提升|实验活动\d+)$/.exec(body);
+        const sec = /^(.*)\s(\d+(?:\.\d+)*|整理与提升|实验活动\d*)$/.exec(body);
         if (sec && sec[1]) {
           body = sec[1];
           section = sec[2];

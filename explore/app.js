@@ -123,8 +123,17 @@
     15: ['选必三', '选必三 · 选择性必修第三册'],
     16: ['选必四', '选必四 · 选择性必修第四册']
   };
+  // 化学沿用数学式分册：12 是选必一，不是英语/物理的必修三。
+  var CHEM_BOOK = {
+    10: ['必修一', '必修一 · 必修第一册'],
+    11: ['必修二', '必修二 · 必修第二册'],
+    12: ['选必一', '选必一 · 选择性必修第一册'],
+    13: ['选必二', '选必二 · 选择性必修第二册'],
+    14: ['选必三', '选必三 · 选择性必修第三册']
+  };
   function gradeWord(grade) {
-    if ((subject === 'english' || subject === 'physics' || subject === 'chemistry') && EN_BOOK[grade]) return EN_BOOK[grade][0];
+    if (subject === 'chemistry' && CHEM_BOOK[grade]) return CHEM_BOOK[grade][0];
+    if ((subject === 'english' || subject === 'physics') && EN_BOOK[grade]) return EN_BOOK[grade][0];
     if (grade === 10) return '高一';
     if (grade === 11) return '高二';
     if (grade === 12) return '选必一';
@@ -133,7 +142,8 @@
     return CN[grade] + '年级';
   }
   function gradeLabel(topic) {
-    if ((subject === 'english' || subject === 'physics' || subject === 'chemistry') && EN_BOOK[topic.grade]) return EN_BOOK[topic.grade][1];
+    if (subject === 'chemistry' && CHEM_BOOK[topic.grade]) return CHEM_BOOK[topic.grade][1];
+    if ((subject === 'english' || subject === 'physics') && EN_BOOK[topic.grade]) return EN_BOOK[topic.grade][1];
     if (topic.grade === 10) return '高一 · 必修第一册';
     if (topic.grade === 11) return '高二 · 必修第二册';
     if (topic.grade === 12) return '选必一 · 选择性必修第一册';
@@ -1097,6 +1107,10 @@
       chemGrade.append(el('option', { value: '', text: '全部年级' }));
       chemGrade.append(el('option', { value: '9', text: '九年级' }));
       chemGrade.append(el('option', { value: '10', text: '必修第一册' }));
+      chemGrade.append(el('option', { value: '11', text: '必修第二册' }));
+      chemGrade.append(el('option', { value: '12', text: '选择性必修第一册' }));
+      chemGrade.append(el('option', { value: '13', text: '选择性必修第二册' }));
+      chemGrade.append(el('option', { value: '14', text: '选择性必修第三册' }));
       var chemSample = $('pick-sample');
       if (chemSample) chemSample.textContent = '先看看「质量守恒定律」';
       document.title = '知识图谱 · 化学';

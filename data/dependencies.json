@@ -29628,6 +29628,252 @@
     "reason": "按人教版化学必修第一册的教学顺序，先学「整理与提升」，再学「实验活动3 同周期、同主族元素性质的递变」。"
   },
   {
+    "topicId": "cnk_h020",
+    "prerequisiteId": "cnk_h019",
+    "strength": "soft",
+    "reason": "按人教版化学必修课序，学完必修第一册的「实验活动3 同周期、同主族元素性质的递变」后进入必修第二册的「硫及其化合物」。"
+  },
+  {
+    "topicId": "cnk_h021",
+    "prerequisiteId": "cnk_h020",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「硫及其化合物」，再学「氮及其化合物」。"
+  },
+  {
+    "topicId": "cnk_h022",
+    "prerequisiteId": "cnk_h021",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「氮及其化合物」，再学「无机非金属材料」。"
+  },
+  {
+    "topicId": "cnk_h024",
+    "prerequisiteId": "cnk_h023",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「整理与提升」，再学「实验活动4 用化学沉淀法去除粗盐中的杂质离子」。"
+  },
+  {
+    "topicId": "cnk_h025",
+    "prerequisiteId": "cnk_h024",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「实验活动4 用化学沉淀法去除粗盐中的杂质离子」，再学「实验活动5 不同价态含硫物质的转化」。"
+  },
+  {
+    "topicId": "cnk_h026",
+    "prerequisiteId": "cnk_h025",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「实验活动5 不同价态含硫物质的转化」，再学「化学反应与能量变化」。"
+  },
+  {
+    "topicId": "cnk_h029",
+    "prerequisiteId": "cnk_h028",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「整理与提升」，再学「实验活动6 化学能转化成电能」。"
+  },
+  {
+    "topicId": "cnk_h030",
+    "prerequisiteId": "cnk_h029",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「实验活动6 化学能转化成电能」，再学「实验活动7 化学反应速率的影响因素」。"
+  },
+  {
+    "topicId": "cnk_h031",
+    "prerequisiteId": "cnk_h030",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「实验活动7 化学反应速率的影响因素」，再学「认识有机化合物」。"
+  },
+  {
+    "topicId": "cnk_h033",
+    "prerequisiteId": "cnk_h032",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「乙烯与有机高分子材料」，再学「乙醇与乙酸」。"
+  },
+  {
+    "topicId": "cnk_h034",
+    "prerequisiteId": "cnk_h033",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「乙醇与乙酸」，再学「基本营养物质」。"
+  },
+  {
+    "topicId": "cnk_h036",
+    "prerequisiteId": "cnk_h035",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「整理与提升」，再学「实验活动8 搭建球棍模型认识有机化合物分子结构的特点」。"
+  },
+  {
+    "topicId": "cnk_h037",
+    "prerequisiteId": "cnk_h036",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「实验活动8 搭建球棍模型认识有机化合物分子结构的特点」，再学「实验活动9 乙醇、乙酸的主要性质」。"
+  },
+  {
+    "topicId": "cnk_h038",
+    "prerequisiteId": "cnk_h037",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「实验活动9 乙醇、乙酸的主要性质」，再学「自然资源的开发利用」。"
+  },
+  {
+    "topicId": "cnk_h039",
+    "prerequisiteId": "cnk_h038",
+    "strength": "soft",
+    "reason": "按人教版化学必修第二册的教学顺序，先学「自然资源的开发利用」，再学「化学品的合理使用」。"
+  },
+  {
+    "topicId": "cnk_h042",
+    "prerequisiteId": "cnk_h041",
+    "strength": "soft",
+    "reason": "按人教版化学课序，学完必修第二册的「整理与提升」后进入选择性必修第一册的「引言」。"
+  },
+  {
+    "topicId": "cnk_h046",
+    "prerequisiteId": "cnk_h045",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「整理与提升」，再学「化学反应速率」。"
+  },
+  {
+    "topicId": "cnk_h049",
+    "prerequisiteId": "cnk_h048",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「化学反应的方向」，再学「化学反应的调控」。"
+  },
+  {
+    "topicId": "cnk_h051",
+    "prerequisiteId": "cnk_h050",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「整理与提升」，再学「实验活动1 探究影响化学平衡移动的因素」。"
+  },
+  {
+    "topicId": "cnk_h052",
+    "prerequisiteId": "cnk_h051",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「实验活动1 探究影响化学平衡移动的因素」，再学「电离平衡」。"
+  },
+  {
+    "topicId": "cnk_h055",
+    "prerequisiteId": "cnk_h054",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「盐类的水解」，再学「沉淀溶解平衡」。"
+  },
+  {
+    "topicId": "cnk_h057",
+    "prerequisiteId": "cnk_h056",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「整理与提升」，再学「实验活动2 强酸与强碱的中和滴定」。"
+  },
+  {
+    "topicId": "cnk_h058",
+    "prerequisiteId": "cnk_h057",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「实验活动2 强酸与强碱的中和滴定」，再学「实验活动3 盐类水解的应用」。"
+  },
+  {
+    "topicId": "cnk_h059",
+    "prerequisiteId": "cnk_h058",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「实验活动3 盐类水解的应用」，再学「原电池」。"
+  },
+  {
+    "topicId": "cnk_h061",
+    "prerequisiteId": "cnk_h060",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「电解池」，再学「金属的腐蚀与防护」。"
+  },
+  {
+    "topicId": "cnk_h063",
+    "prerequisiteId": "cnk_h062",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「整理与提升」，再学「实验活动4 简单的电镀实验」。"
+  },
+  {
+    "topicId": "cnk_h064",
+    "prerequisiteId": "cnk_h063",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第一册的教学顺序，先学「实验活动4 简单的电镀实验」，再学「实验活动5 制作简单的燃料电池」。"
+  },
+  {
+    "topicId": "cnk_h065",
+    "prerequisiteId": "cnk_h064",
+    "strength": "soft",
+    "reason": "按人教版化学课序，学完选择性必修第一册的「实验活动5 制作简单的燃料电池」后进入选择性必修第二册的「引言」。"
+  },
+  {
+    "topicId": "cnk_h069",
+    "prerequisiteId": "cnk_h068",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第二册的教学顺序，先学「整理与提升」，再学「共价键」。"
+  },
+  {
+    "topicId": "cnk_h073",
+    "prerequisiteId": "cnk_h072",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第二册的教学顺序，先学「整理与提升」，再学「物质的聚集状态与晶体的常识」。"
+  },
+  {
+    "topicId": "cnk_h075",
+    "prerequisiteId": "cnk_h074",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第二册的教学顺序，先学「分子晶体与共价晶体」，再学「金属晶体与离子晶体」。"
+  },
+  {
+    "topicId": "cnk_h078",
+    "prerequisiteId": "cnk_h077",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第二册的教学顺序，先学「整理与提升」，再学「实验活动 简单配合物的形成」。"
+  },
+  {
+    "topicId": "cnk_h079",
+    "prerequisiteId": "cnk_h078",
+    "strength": "soft",
+    "reason": "按人教版化学课序，学完选择性必修第二册的「实验活动 简单配合物的形成」后进入选择性必修第三册的「引言」。"
+  },
+  {
+    "topicId": "cnk_h083",
+    "prerequisiteId": "cnk_h082",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「整理与提升」，再学「烷烃」。"
+  },
+  {
+    "topicId": "cnk_h087",
+    "prerequisiteId": "cnk_h086",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「整理与提升」，再学「卤代烃」。"
+  },
+  {
+    "topicId": "cnk_h093",
+    "prerequisiteId": "cnk_h092",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「整理与提升」，再学「实验活动1 乙酸乙酯的制备与性质」。"
+  },
+  {
+    "topicId": "cnk_h094",
+    "prerequisiteId": "cnk_h093",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「实验活动1 乙酸乙酯的制备与性质」，再学「实验活动2 有机化合物中常见官能团的检验」。"
+  },
+  {
+    "topicId": "cnk_h095",
+    "prerequisiteId": "cnk_h094",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「实验活动2 有机化合物中常见官能团的检验」，再学「糖类」。"
+  },
+  {
+    "topicId": "cnk_h096",
+    "prerequisiteId": "cnk_h095",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「糖类」，再学「蛋白质」。"
+  },
+  {
+    "topicId": "cnk_h099",
+    "prerequisiteId": "cnk_h098",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「整理与提升」，再学「实验活动3 糖类的性质」。"
+  },
+  {
+    "topicId": "cnk_h100",
+    "prerequisiteId": "cnk_h099",
+    "strength": "soft",
+    "reason": "按人教版化学选择性必修第三册的教学顺序，先学「实验活动3 糖类的性质」，再学「合成高分子的基本方法」。"
+  },
+  {
     "topicId": "cnk_h001",
     "prerequisiteId": "cnk_j001",
     "strength": "hard",
@@ -29824,5 +30070,725 @@
     "prerequisiteId": "cnk_h016",
     "strength": "hard",
     "reason": "比较同周期、同主族元素性质，要先知道周期律预期的递变方向。"
+  },
+  {
+    "topicId": "cnk_h020",
+    "prerequisiteId": "cnk_h004",
+    "strength": "hard",
+    "reason": "硫有多种化合价，二氧化硫、三氧化硫和硫酸的转化要用氧化还原来认识。"
+  },
+  {
+    "topicId": "cnk_h020",
+    "prerequisiteId": "cnk_h016",
+    "strength": "hard",
+    "reason": "硫是常见非金属，比较它在周期表中的位置和性质递变要用到元素周期律。"
+  },
+  {
+    "topicId": "cnk_h021",
+    "prerequisiteId": "cnk_h004",
+    "strength": "hard",
+    "reason": "氨氧化制硝酸、氮氧化物的生成和转化都有化合价变化，要用氧化还原认识。"
+  },
+  {
+    "topicId": "cnk_h021",
+    "prerequisiteId": "cnk_h016",
+    "strength": "hard",
+    "reason": "氮是第二周期非金属，比较它和同主族、同周期元素要用周期律。"
+  },
+  {
+    "topicId": "cnk_h022",
+    "prerequisiteId": "cnk_h016",
+    "strength": "hard",
+    "reason": "硅在周期表中位于碳的下方，比较碳、硅的性质要用周期律。"
+  },
+  {
+    "topicId": "cnk_h022",
+    "prerequisiteId": "cnk_h002",
+    "strength": "hard",
+    "reason": "二氧化硅是氧化物，硅酸盐是含氧酸盐，要先会物质分类。"
+  },
+  {
+    "topicId": "cnk_h023",
+    "prerequisiteId": "cnk_h020",
+    "strength": "hard",
+    "reason": "复习本章要先会硫及其化合物。"
+  },
+  {
+    "topicId": "cnk_h023",
+    "prerequisiteId": "cnk_h021",
+    "strength": "hard",
+    "reason": "复习本章要先会氮及其化合物。"
+  },
+  {
+    "topicId": "cnk_h023",
+    "prerequisiteId": "cnk_h022",
+    "strength": "hard",
+    "reason": "复习本章要先会无机非金属材料。"
+  },
+  {
+    "topicId": "cnk_h024",
+    "prerequisiteId": "cnk_h003",
+    "strength": "hard",
+    "reason": "沉淀法除杂要先会离子反应，知道哪些离子能生成难溶物。"
+  },
+  {
+    "topicId": "cnk_h024",
+    "prerequisiteId": "cnk_j037",
+    "strength": "hard",
+    "reason": "初中已经做过除去粗盐中难溶性杂质，这里进一步除去可溶性杂质离子。"
+  },
+  {
+    "topicId": "cnk_h025",
+    "prerequisiteId": "cnk_h020",
+    "strength": "hard",
+    "reason": "转化的对象是含硫物质，要先认识硫及其化合物。"
+  },
+  {
+    "topicId": "cnk_h026",
+    "prerequisiteId": "cnk_h004",
+    "strength": "hard",
+    "reason": "原电池和许多燃烧、置换反应都有电子转移，要用氧化还原认识。"
+  },
+  {
+    "topicId": "cnk_h026",
+    "prerequisiteId": "cnk_j025",
+    "strength": "hard",
+    "reason": "燃料燃烧放热是最常见的化学能转化为热能的例子。"
+  },
+  {
+    "topicId": "cnk_h027",
+    "prerequisiteId": "cnk_h026",
+    "strength": "hard",
+    "reason": "讨论反应快慢和限度，要先知道反应伴随着能量变化，条件改变会影响过程。"
+  },
+  {
+    "topicId": "cnk_h027",
+    "prerequisiteId": "cnk_h008",
+    "strength": "hard",
+    "reason": "用浓度描述溶液组成时要用到物质的量浓度。"
+  },
+  {
+    "topicId": "cnk_h028",
+    "prerequisiteId": "cnk_h027",
+    "strength": "hard",
+    "reason": "复习本章要先会化学反应的速率与限度。"
+  },
+  {
+    "topicId": "cnk_h029",
+    "prerequisiteId": "cnk_h026",
+    "strength": "hard",
+    "reason": "原电池是化学能转化为电能的装置，要先认识反应与能量变化。"
+  },
+  {
+    "topicId": "cnk_h030",
+    "prerequisiteId": "cnk_h027",
+    "strength": "hard",
+    "reason": "实验观察的就是速率的影响因素，要先知道浓度、温度、催化剂和接触面积会改变快慢。"
+  },
+  {
+    "topicId": "cnk_h031",
+    "prerequisiteId": "cnk_h017",
+    "strength": "hard",
+    "reason": "有机分子里碳碳键、碳氢键都是共价键，要先认识化学键。"
+  },
+  {
+    "topicId": "cnk_h032",
+    "prerequisiteId": "cnk_h031",
+    "strength": "hard",
+    "reason": "乙烯是最简单的烯烃，要先认识有机化合物的碳骨架和官能团。"
+  },
+  {
+    "topicId": "cnk_h033",
+    "prerequisiteId": "cnk_h031",
+    "strength": "hard",
+    "reason": "乙醇和乙酸都是有官能团的有机物，要先会从碳骨架和官能团认识有机化合物。"
+  },
+  {
+    "topicId": "cnk_h034",
+    "prerequisiteId": "cnk_h031",
+    "strength": "hard",
+    "reason": "营养物质都是有机化合物，要先认识碳骨架和官能团。"
+  },
+  {
+    "topicId": "cnk_h034",
+    "prerequisiteId": "cnk_j044",
+    "strength": "hard",
+    "reason": "初中已经讨论化学与人体健康，这里进一步认识糖类、油脂和蛋白质。"
+  },
+  {
+    "topicId": "cnk_h035",
+    "prerequisiteId": "cnk_h032",
+    "strength": "hard",
+    "reason": "复习本章要先会乙烯与有机高分子材料。"
+  },
+  {
+    "topicId": "cnk_h035",
+    "prerequisiteId": "cnk_h033",
+    "strength": "hard",
+    "reason": "复习本章要先会乙醇与乙酸。"
+  },
+  {
+    "topicId": "cnk_h035",
+    "prerequisiteId": "cnk_h034",
+    "strength": "hard",
+    "reason": "复习本章要先会基本营养物质。"
+  },
+  {
+    "topicId": "cnk_h036",
+    "prerequisiteId": "cnk_h031",
+    "strength": "hard",
+    "reason": "搭建有机分子模型，要先知道碳骨架和官能团。"
+  },
+  {
+    "topicId": "cnk_h037",
+    "prerequisiteId": "cnk_h033",
+    "strength": "hard",
+    "reason": "实验验证的就是乙醇与乙酸的主要性质，要先认识这两种物质。"
+  },
+  {
+    "topicId": "cnk_h038",
+    "prerequisiteId": "cnk_j026",
+    "strength": "hard",
+    "reason": "化石能源的合理利用在初中已经讨论过，这里从高中化学继续认识资源开发。"
+  },
+  {
+    "topicId": "cnk_h038",
+    "prerequisiteId": "cnk_j012",
+    "strength": "hard",
+    "reason": "海水是重要的水资源和化学资源，初中已经讨论水资源及其利用。"
+  },
+  {
+    "topicId": "cnk_h038",
+    "prerequisiteId": "cnk_h032",
+    "strength": "hard",
+    "reason": "石油化工可以得到乙烯等基本有机原料。"
+  },
+  {
+    "topicId": "cnk_h039",
+    "prerequisiteId": "cnk_j044",
+    "strength": "hard",
+    "reason": "化学与人体健康要求合理使用药品，不过量、不滥用。"
+  },
+  {
+    "topicId": "cnk_h039",
+    "prerequisiteId": "cnk_h021",
+    "strength": "hard",
+    "reason": "氮肥的有效成分与氨、硝酸盐等含氮物质有关。"
+  },
+  {
+    "topicId": "cnk_h040",
+    "prerequisiteId": "cnk_j045",
+    "strength": "hard",
+    "reason": "初中已经讨论化学与可持续发展，这里进一步认识绿色化学。"
+  },
+  {
+    "topicId": "cnk_h040",
+    "prerequisiteId": "cnk_h038",
+    "strength": "hard",
+    "reason": "减少污染、提高资源利用率，要先认识自然资源怎样被开发利用。"
+  },
+  {
+    "topicId": "cnk_h040",
+    "prerequisiteId": "cnk_h039",
+    "strength": "hard",
+    "reason": "化学品用得其所，本身就是减少污染的一部分。"
+  },
+  {
+    "topicId": "cnk_h041",
+    "prerequisiteId": "cnk_h040",
+    "strength": "hard",
+    "reason": "复习本章要先会环境保护与绿色化学。"
+  },
+  {
+    "topicId": "cnk_h042",
+    "prerequisiteId": "cnk_h026",
+    "strength": "hard",
+    "reason": "本册讨论反应原理，要先认识化学反应伴随着能量变化。"
+  },
+  {
+    "topicId": "cnk_h043",
+    "prerequisiteId": "cnk_h042",
+    "strength": "hard",
+    "reason": "反应热是本册从引言进入的第一个定量主题。"
+  },
+  {
+    "topicId": "cnk_h044",
+    "prerequisiteId": "cnk_h043",
+    "strength": "hard",
+    "reason": "计算反应热要先会判断焓变的正负，并会读热化学方程式。"
+  },
+  {
+    "topicId": "cnk_h044",
+    "prerequisiteId": "cnk_h008",
+    "strength": "hard",
+    "reason": "按化学计量数换算热量时要用物质的量。"
+  },
+  {
+    "topicId": "cnk_h045",
+    "prerequisiteId": "cnk_h044",
+    "strength": "hard",
+    "reason": "复习本章要先会反应热的计算。"
+  },
+  {
+    "topicId": "cnk_h046",
+    "prerequisiteId": "cnk_h027",
+    "strength": "hard",
+    "reason": "本节把必修里的速率与限度展开成速率的定量描述。"
+  },
+  {
+    "topicId": "cnk_h047",
+    "prerequisiteId": "cnk_h046",
+    "strength": "hard",
+    "reason": "讨论平衡要先会比较正反应和逆反应的速率。"
+  },
+  {
+    "topicId": "cnk_h048",
+    "prerequisiteId": "cnk_h047",
+    "strength": "hard",
+    "reason": "讨论方向要先知道可逆反应有一个平衡限度，方向不是速率。"
+  },
+  {
+    "topicId": "cnk_h049",
+    "prerequisiteId": "cnk_h047",
+    "strength": "hard",
+    "reason": "调控平衡要先认识化学平衡和平衡移动。"
+  },
+  {
+    "topicId": "cnk_h050",
+    "prerequisiteId": "cnk_h048",
+    "strength": "hard",
+    "reason": "复习本章要先会化学反应的方向。"
+  },
+  {
+    "topicId": "cnk_h050",
+    "prerequisiteId": "cnk_h049",
+    "strength": "hard",
+    "reason": "复习本章要先会化学反应的调控。"
+  },
+  {
+    "topicId": "cnk_h051",
+    "prerequisiteId": "cnk_h049",
+    "strength": "hard",
+    "reason": "改变条件看平衡移动，要先知道调控的基本思路。"
+  },
+  {
+    "topicId": "cnk_h052",
+    "prerequisiteId": "cnk_h003",
+    "strength": "hard",
+    "reason": "电离平衡建立在电解质溶于水能电离、并能写离子反应的基础上。"
+  },
+  {
+    "topicId": "cnk_h052",
+    "prerequisiteId": "cnk_h047",
+    "strength": "hard",
+    "reason": "电离平衡是一种可逆平衡，要先有化学平衡的观念。"
+  },
+  {
+    "topicId": "cnk_h053",
+    "prerequisiteId": "cnk_h052",
+    "strength": "hard",
+    "reason": "水的电离是弱电解质电离的特例，要先会电离平衡。"
+  },
+  {
+    "topicId": "cnk_h053",
+    "prerequisiteId": "cnk_j038",
+    "strength": "hard",
+    "reason": "初中已经用 pH 判断酸碱性，这里要连上水的电离。"
+  },
+  {
+    "topicId": "cnk_h054",
+    "prerequisiteId": "cnk_h053",
+    "strength": "hard",
+    "reason": "判断盐溶液酸碱性要用 pH 和水的电离。"
+  },
+  {
+    "topicId": "cnk_h055",
+    "prerequisiteId": "cnk_h047",
+    "strength": "hard",
+    "reason": "沉淀溶解平衡是另一类平衡，要先认识化学平衡。"
+  },
+  {
+    "topicId": "cnk_h055",
+    "prerequisiteId": "cnk_h003",
+    "strength": "hard",
+    "reason": "沉淀的生成和溶解要写成离子反应。"
+  },
+  {
+    "topicId": "cnk_h056",
+    "prerequisiteId": "cnk_h054",
+    "strength": "hard",
+    "reason": "复习本章要先会盐类的水解。"
+  },
+  {
+    "topicId": "cnk_h056",
+    "prerequisiteId": "cnk_h055",
+    "strength": "hard",
+    "reason": "复习本章要先会沉淀溶解平衡。"
+  },
+  {
+    "topicId": "cnk_h057",
+    "prerequisiteId": "cnk_h053",
+    "strength": "hard",
+    "reason": "判断滴定终点附近的酸碱性，要先会 pH。"
+  },
+  {
+    "topicId": "cnk_h057",
+    "prerequisiteId": "cnk_j041",
+    "strength": "hard",
+    "reason": "滴定依据的是酸和碱的中和反应。"
+  },
+  {
+    "topicId": "cnk_h058",
+    "prerequisiteId": "cnk_h054",
+    "strength": "hard",
+    "reason": "实验应用的就是盐类水解，要先认识水解。"
+  },
+  {
+    "topicId": "cnk_h059",
+    "prerequisiteId": "cnk_h029",
+    "strength": "hard",
+    "reason": "必修实验已经把化学能转化成电能，本节把它讲成原电池。"
+  },
+  {
+    "topicId": "cnk_h060",
+    "prerequisiteId": "cnk_h059",
+    "strength": "hard",
+    "reason": "电解池和原电池都讨论电极反应，要先会原电池。"
+  },
+  {
+    "topicId": "cnk_h061",
+    "prerequisiteId": "cnk_h059",
+    "strength": "hard",
+    "reason": "电化学腐蚀可以看成许多微小的原电池。"
+  },
+  {
+    "topicId": "cnk_h061",
+    "prerequisiteId": "cnk_j031",
+    "strength": "hard",
+    "reason": "初中已经知道铁生锈需要空气和水，以及涂油、喷漆等防锈方法。"
+  },
+  {
+    "topicId": "cnk_h062",
+    "prerequisiteId": "cnk_h060",
+    "strength": "hard",
+    "reason": "复习本章要先会电解池。"
+  },
+  {
+    "topicId": "cnk_h062",
+    "prerequisiteId": "cnk_h061",
+    "strength": "hard",
+    "reason": "复习本章要先会金属的腐蚀与防护。"
+  },
+  {
+    "topicId": "cnk_h063",
+    "prerequisiteId": "cnk_h060",
+    "strength": "hard",
+    "reason": "电镀是电解池的一种应用，要先会电解池。"
+  },
+  {
+    "topicId": "cnk_h064",
+    "prerequisiteId": "cnk_h059",
+    "strength": "hard",
+    "reason": "燃料电池是一种持续供给反应物的原电池，要先会原电池。"
+  },
+  {
+    "topicId": "cnk_h065",
+    "prerequisiteId": "cnk_h015",
+    "strength": "hard",
+    "reason": "本册从结构角度认识物质，要先会必修里的原子结构与元素周期表。"
+  },
+  {
+    "topicId": "cnk_h066",
+    "prerequisiteId": "cnk_h065",
+    "strength": "hard",
+    "reason": "讨论原子结构，是本册从引言进入的第一个主题。"
+  },
+  {
+    "topicId": "cnk_h067",
+    "prerequisiteId": "cnk_h066",
+    "strength": "hard",
+    "reason": "用电离能和电负性比较元素，要先会核外电子排布。"
+  },
+  {
+    "topicId": "cnk_h067",
+    "prerequisiteId": "cnk_h016",
+    "strength": "hard",
+    "reason": "元素性质的递变建立在必修里的元素周期律之上。"
+  },
+  {
+    "topicId": "cnk_h068",
+    "prerequisiteId": "cnk_h067",
+    "strength": "hard",
+    "reason": "复习本章要先会原子结构与元素的性质。"
+  },
+  {
+    "topicId": "cnk_h069",
+    "prerequisiteId": "cnk_h017",
+    "strength": "hard",
+    "reason": "共价键建立在必修化学键的认识之上。"
+  },
+  {
+    "topicId": "cnk_h069",
+    "prerequisiteId": "cnk_h066",
+    "strength": "hard",
+    "reason": "共用电子对与核外电子排布有关。"
+  },
+  {
+    "topicId": "cnk_h070",
+    "prerequisiteId": "cnk_h069",
+    "strength": "hard",
+    "reason": "判断分子的空间结构，要先知道原子怎样用共价键结合。"
+  },
+  {
+    "topicId": "cnk_h071",
+    "prerequisiteId": "cnk_h070",
+    "strength": "hard",
+    "reason": "判断分子极性和相似相溶，要先知道分子的空间结构。"
+  },
+  {
+    "topicId": "cnk_h072",
+    "prerequisiteId": "cnk_h071",
+    "strength": "hard",
+    "reason": "复习本章要先会分子结构与物质的性质。"
+  },
+  {
+    "topicId": "cnk_h073",
+    "prerequisiteId": "cnk_h071",
+    "strength": "hard",
+    "reason": "讨论物质怎样聚集，要先知道分子结构和分子间作用。"
+  },
+  {
+    "topicId": "cnk_h074",
+    "prerequisiteId": "cnk_h073",
+    "strength": "hard",
+    "reason": "区分分子晶体和共价晶体，要先有晶体和晶胞的常识。"
+  },
+  {
+    "topicId": "cnk_h075",
+    "prerequisiteId": "cnk_h073",
+    "strength": "hard",
+    "reason": "讨论金属晶体和离子晶体，要先有晶体的常识。"
+  },
+  {
+    "topicId": "cnk_h076",
+    "prerequisiteId": "cnk_h075",
+    "strength": "hard",
+    "reason": "许多配合物的中心是金属离子，要先认识离子和金属。"
+  },
+  {
+    "topicId": "cnk_h077",
+    "prerequisiteId": "cnk_h074",
+    "strength": "hard",
+    "reason": "复习本章要先会分子晶体与共价晶体。"
+  },
+  {
+    "topicId": "cnk_h077",
+    "prerequisiteId": "cnk_h076",
+    "strength": "hard",
+    "reason": "复习本章要先会配合物与超分子。"
+  },
+  {
+    "topicId": "cnk_h078",
+    "prerequisiteId": "cnk_h076",
+    "strength": "hard",
+    "reason": "观察简单配合物的形成，要先知道配合物和配体。"
+  },
+  {
+    "topicId": "cnk_h079",
+    "prerequisiteId": "cnk_h031",
+    "strength": "hard",
+    "reason": "本册从有机化合物继续深入，要先认识碳骨架和官能团。"
+  },
+  {
+    "topicId": "cnk_h079",
+    "prerequisiteId": "cnk_h069",
+    "strength": "hard",
+    "reason": "有机分子里的碳碳键、碳氢键是共价键，要先会共价键。"
+  },
+  {
+    "topicId": "cnk_h080",
+    "prerequisiteId": "cnk_h079",
+    "strength": "hard",
+    "reason": "讨论结构特点，是本册从引言进入的第一个主题。"
+  },
+  {
+    "topicId": "cnk_h080",
+    "prerequisiteId": "cnk_h070",
+    "strength": "hard",
+    "reason": "甲烷的正四面体构型，要用分子空间结构的知识来理解。"
+  },
+  {
+    "topicId": "cnk_h081",
+    "prerequisiteId": "cnk_h080",
+    "strength": "hard",
+    "reason": "确定分子式和官能团，要先知道有机物的结构特点。"
+  },
+  {
+    "topicId": "cnk_h082",
+    "prerequisiteId": "cnk_h081",
+    "strength": "hard",
+    "reason": "复习本章要先会研究有机化合物的一般方法。"
+  },
+  {
+    "topicId": "cnk_h083",
+    "prerequisiteId": "cnk_h080",
+    "strength": "hard",
+    "reason": "认识烷烃，要先会碳的四价和碳骨架。"
+  },
+  {
+    "topicId": "cnk_h084",
+    "prerequisiteId": "cnk_h083",
+    "strength": "hard",
+    "reason": "烯烃、炔烃要和烷烃比较饱和性与反应类型。"
+  },
+  {
+    "topicId": "cnk_h084",
+    "prerequisiteId": "cnk_h032",
+    "strength": "hard",
+    "reason": "乙烯的加成和加聚，是认识不饱和烃的基础。"
+  },
+  {
+    "topicId": "cnk_h085",
+    "prerequisiteId": "cnk_h084",
+    "strength": "hard",
+    "reason": "芳香烃要和不饱和链烃比较，苯环并不按烯烃那样加成。"
+  },
+  {
+    "topicId": "cnk_h086",
+    "prerequisiteId": "cnk_h085",
+    "strength": "hard",
+    "reason": "复习本章要先会芳香烃。"
+  },
+  {
+    "topicId": "cnk_h087",
+    "prerequisiteId": "cnk_h083",
+    "strength": "hard",
+    "reason": "许多卤代烃可以由烷烃的取代得到，要先会烷烃。"
+  },
+  {
+    "topicId": "cnk_h088",
+    "prerequisiteId": "cnk_h087",
+    "strength": "hard",
+    "reason": "醇可以由卤代烃水解得到，要先会卤代烃的取代。"
+  },
+  {
+    "topicId": "cnk_h088",
+    "prerequisiteId": "cnk_h033",
+    "strength": "hard",
+    "reason": "乙醇的氧化、与钠反应和酯化，建立在必修里对乙醇的认识之上。"
+  },
+  {
+    "topicId": "cnk_h089",
+    "prerequisiteId": "cnk_h088",
+    "strength": "hard",
+    "reason": "醛常由醇氧化得到，还原后又得到醇。"
+  },
+  {
+    "topicId": "cnk_h090",
+    "prerequisiteId": "cnk_h089",
+    "strength": "hard",
+    "reason": "羧酸可以由醛进一步氧化得到，要先会醛。"
+  },
+  {
+    "topicId": "cnk_h091",
+    "prerequisiteId": "cnk_h090",
+    "strength": "hard",
+    "reason": "合成里常用羧酸和酯，要先会羧酸、羧酸衍生物。"
+  },
+  {
+    "topicId": "cnk_h092",
+    "prerequisiteId": "cnk_h091",
+    "strength": "hard",
+    "reason": "复习本章要先会有机合成。"
+  },
+  {
+    "topicId": "cnk_h093",
+    "prerequisiteId": "cnk_h090",
+    "strength": "hard",
+    "reason": "乙酸是羧酸，酯化生成的乙酸乙酯是羧酸衍生物。"
+  },
+  {
+    "topicId": "cnk_h094",
+    "prerequisiteId": "cnk_h084",
+    "strength": "hard",
+    "reason": "溴水和酸性高锰酸钾也能与烯烃、炔烃作用，检验时要排除这种干扰。"
+  },
+  {
+    "topicId": "cnk_h094",
+    "prerequisiteId": "cnk_h090",
+    "strength": "hard",
+    "reason": "羧酸能与碳酸氢钠放出二氧化碳，可与酚区分。"
+  },
+  {
+    "topicId": "cnk_h095",
+    "prerequisiteId": "cnk_h034",
+    "strength": "hard",
+    "reason": "糖类是基本营养物质，本课在必修的认识上继续区分结构。"
+  },
+  {
+    "topicId": "cnk_h095",
+    "prerequisiteId": "cnk_h089",
+    "strength": "hard",
+    "reason": "葡萄糖含有能被弱氧化剂氧化的醛基，要先会醛的还原性。"
+  },
+  {
+    "topicId": "cnk_h096",
+    "prerequisiteId": "cnk_h034",
+    "strength": "hard",
+    "reason": "蛋白质是基本营养物质，水解产物是氨基酸。"
+  },
+  {
+    "topicId": "cnk_h096",
+    "prerequisiteId": "cnk_h090",
+    "strength": "hard",
+    "reason": "氨基酸含羧基，形成肽键时要用到羧基和氨基的脱水。"
+  },
+  {
+    "topicId": "cnk_h097",
+    "prerequisiteId": "cnk_h096",
+    "strength": "hard",
+    "reason": "核酸与蛋白质的合成有关，要先知道蛋白质由氨基酸组成。"
+  },
+  {
+    "topicId": "cnk_h097",
+    "prerequisiteId": "cnk_h095",
+    "strength": "hard",
+    "reason": "核苷酸中的戊糖是糖，要先会糖类的基本概念。"
+  },
+  {
+    "topicId": "cnk_h098",
+    "prerequisiteId": "cnk_h097",
+    "strength": "hard",
+    "reason": "复习本章要先会核酸。"
+  },
+  {
+    "topicId": "cnk_h099",
+    "prerequisiteId": "cnk_h095",
+    "strength": "hard",
+    "reason": "观察糖类的性质，要先会还原糖、蔗糖和淀粉的差别。"
+  },
+  {
+    "topicId": "cnk_h100",
+    "prerequisiteId": "cnk_h084",
+    "strength": "hard",
+    "reason": "加聚单体通常含碳碳双键，要先会烯烃。"
+  },
+  {
+    "topicId": "cnk_h100",
+    "prerequisiteId": "cnk_h091",
+    "strength": "hard",
+    "reason": "缩聚是官能团之间的转化，要先会有机合成里的官能团反应。"
+  },
+  {
+    "topicId": "cnk_h101",
+    "prerequisiteId": "cnk_h100",
+    "strength": "hard",
+    "reason": "认识高分子材料，要先会加聚和缩聚。"
+  },
+  {
+    "topicId": "cnk_h102",
+    "prerequisiteId": "cnk_h101",
+    "strength": "hard",
+    "reason": "复习本章要先会高分子材料。"
   }
 ]
