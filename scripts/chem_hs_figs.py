@@ -363,8 +363,6 @@ def ethane_ethanol_models():
     body = dot(70, 140, "C", 16, 13)
     body += stick((86, 140), (124, 140))
     body += dot(140, 140, "C", 16, 13)
-    body += text(50, 100, "H", 12)
-    body += text(160, 100, "H", 12)
     body += text(105, 200, "乙烷", 15)
     body += dot(280, 140, "C", 16, 13)
     body += stick((296, 140), (334, 140))
@@ -636,21 +634,19 @@ def broken_plate():
 
 
 def plate_setup():
-    """工件与电源的连线不接死。"""
-    w, h = 520, 320
-    body = rect(40, 70, 110, 48, edge(1.8), 4)
-    body += text(70, 100, "−", 16)
-    body += text(120, 100, "+", 16)
-    body += text(95, 58, "电源", 14)
-    body += line((70, 118), (70, 160), hidden(1.5))
-    body += line((120, 118), (160, 160), hidden(1.5))
-    body += beaker(180, 140, 250, 120)
-    body += liquid(180, 140, 250, 120, 180)
-    body += text(305, 210, "电镀", 14)
-    body += rect(230, 110, 16, 110, edge(1.8), 2)
-    body += rect(360, 110, 16, 110, edge(1.8), 2)
-    body += text(238, 100, "工件", 14)
-    body += ask(140, 180)
+    """电源与镀槽分开。两极上下排列，不和电极左右对齐，也不画虚线接线。"""
+    w, h = 540, 360
+    body = beaker(36, 128, 250, 124)
+    body += liquid(36, 128, 250, 124, 172)
+    body += text(161, 210, "电镀", 15)
+    body += rect(96, 96, 14, 116, edge(1.8), 2)
+    body += rect(212, 96, 14, 116, edge(1.8), 2)
+    body += text(161, 292, "待镀工件和镀层金属", 14)
+    body += rect(372, 108, 108, 132, edge(1.8), 6)
+    body += text(426, 92, "电源", 14)
+    body += text(426, 156, "+", 20)
+    body += text(426, 208, "−", 20)
+    body += ask(324, 176)
     return F(w, h, body, "电镀槽")
 
 
@@ -823,13 +819,21 @@ def dryice_diamond():
     up = (408, 86)
     back = (352, 112)
     ext = (468, 64)
-    body += line(center, front_l, edge(1.7))
-    body += line(center, front_r, edge(1.7))
-    body += line(center, up, edge(1.7))
-    body += line(center, back, hidden(1.5))
-    body += line(up, ext, edge(1.6))
+    rC = 16
+
+    def bond(a, b, attrs):
+        dx, dy = b[0] - a[0], b[1] - a[1]
+        length = math.hypot(dx, dy) or 1.0
+        ux, uy = dx / length, dy / length
+        return line((a[0] + ux * rC, a[1] + uy * rC), (b[0] - ux * rC, b[1] - uy * rC), attrs)
+
+    body += bond(center, front_l, edge(1.7))
+    body += bond(center, front_r, edge(1.7))
+    body += bond(center, up, edge(1.7))
+    body += bond(center, back, hidden(1.5))
+    body += bond(up, ext, edge(1.6))
     for p in (center, front_l, front_r, up, back, ext):
-        body += dot(p[0], p[1], "C", 13, 12)
+        body += dot(p[0], p[1], "C", rC, 13)
     body += text(400, 258, "金刚石", 15)
     body += text(400, 282, "空间连接", 13)
     return F(w, h, body, "两种固体")
@@ -874,7 +878,7 @@ def cu_ammine():
 
 def ether_ethanol():
     w, h = 540, 300
-    body = text(250, 52, "C2H6O", 15)
+    body = text(250, 52, "C₂H₆O", 15)
     body += dot(50, 140, "C", 15, 12)
     body += stick((65, 140), (100, 140))
     body += dot(115, 140, "C", 15, 12)
@@ -894,18 +898,22 @@ def ether_ethanol():
 
 
 def ethylene_br():
-    w, h = 520, 290
-    body = dot(70, 130, "C", 16, 13)
-    body += dot(140, 130, "C", 16, 13)
-    body += stick((86, 130), (124, 130), 2)
-    body += text(70, 90, "H", 12)
-    body += text(140, 90, "H", 12)
-    body += text(105, 190, "乙烯", 14)
-    body += text(240, 130, "Br–Br", 16)
-    body += beaker(320, 90, 120, 110)
-    body += liquid(320, 90, 120, 110, 130)
-    body += text(380, 160, "四氯化碳", 12)
-    body += ask(250, 210)
+    """四个氢围着双键，和乙烯加氢那张同一画法。不写反应类型。"""
+    w, h = 540, 300
+    c1, c2 = (78, 124), (148, 124)
+    body = stick(c1, c2, 2)
+    body += dot(78, 124, "C", 16, 14)
+    body += dot(148, 124, "C", 16, 14)
+    body += text(46, 84, "H", 13)
+    body += text(46, 166, "H", 13)
+    body += text(180, 84, "H", 13)
+    body += text(180, 166, "H", 13)
+    body += text(113, 206, "乙烯", 14)
+    body += text(258, 128, "Br–Br", 16)
+    body += beaker(330, 78, 150, 124)
+    body += liquid(330, 78, 150, 124, 128)
+    body += text(405, 168, "四氯化碳", 13)
+    body += ask(258, 214)
     return F(w, h, body, "乙烯与溴")
 
 
@@ -976,19 +984,46 @@ def ester_scheme_s3():
 
 
 def ester_receiver():
-    """导管口停在饱和碳酸钠液面之上。"""
-    w, h = 540, 380
-    body = flask(110, 100, 100, 70)
-    body += text(110, 86, "蒸出", 14)
-    body += lamp_at(110, 308)
-    body += line((110, 100), (110, 62), edge(1.8))
-    body += line((110, 62), (360, 96), edge(1.8))
-    body += line((360, 96), (360, 168), edge(1.8))
-    body += text(230, 52, "乙酸乙酯", 14)
-    body += v_tube(328, 168, 64, 110)
-    body += liquid_tube(328, 168, 64, 110, 214)
-    body += text(300, 250, "饱和碳酸钠", 13, "end")
-    body += ask(470, 180)
+    """圆底烧瓶。导管口停在液面上方。接收液面接近水平，略凹。"""
+    w, h = 540, 400
+    cx, top = 118, 90
+    neck_w, neck_h = 24, 32
+    rx, ry = 56, 50
+    cy = top + neck_h + ry - 4
+    half = neck_w / 2.0
+    y_join = cy - ry * math.sqrt(1.0 - (half / rx) ** 2)
+    body = ell(cx, cy, rx, ry, edge(1.8))
+    body += line((cx - half, top), (cx - half, y_join), edge(1.8))
+    body += line((cx + half, top), (cx + half, y_join), edge(1.8))
+    body += line((cx - half, top), (cx + half, top), edge(1.8))
+    body += text(cx - half - 8, top + 16, "蒸出", 14, "end")
+    tube_y, mouth_x, tube_end = 58, 392, 176
+    body += line((cx, top), (cx, tube_y), edge(1.8))
+    body += line((cx, tube_y), (mouth_x, tube_y), edge(1.8))
+    body += line((mouth_x, tube_y), (mouth_x, tube_end), edge(1.8))
+    body += text(250, tube_y - 8, "乙酸乙酯", 14)
+    x0, y0, tw, th = 354, 148, 76, 128
+    rr = tw / 2.0
+    y_arc = y0 + th - rr
+    x1 = x0 + tw
+    body += path(
+        "M %g %g L %g %g A %g %g 0 0 0 %g %g L %g %g" % (x0, y0, x0, y_arc, rr, rr, x1, y_arc, x1, y0),
+        edge(1.8),
+    )
+    level = 214
+    inset = 4
+    xl, xr = x0 + inset, x1 - inset
+    mid = (xl + xr) / 2.0
+    r_in = (xr - xl) / 2.0
+    body += path(
+        "M %g %g L %g %g A %g %g 0 0 0 %g %g L %g %g Q %g %g %g %g Z" % (
+            xl, level, xl, y_arc, r_in, r_in, xr, y_arc, xr, level, mid, level + 5, xl, level),
+        face(0.1),
+    )
+    body += path("M %g %g Q %g %g %g %g" % (xl, level, mid, level + 5, xr, level), thin(1.3))
+    body += text(mouth_x, y0 + th + 34, "饱和碳酸钠", 14)
+    body += lamp_at(cx, 346)
+    body += ask(498, 200)
     return F(w, h, body, "蒸出后接收")
 
 
@@ -1124,7 +1159,7 @@ def catalog():
     add("cnk_h075_q3", ionic_states(), "离子晶体一般能在熔融或水溶液中导电", must=("固态", "熔融", "?"))
     add("cnk_h076_q3", cu_ammine(), "[Cu(NH3)4]2+ 中，氨分子的角色", must=("Cu", "NH3", "?"))
 
-    add("cnk_h080_q4", ether_ethanol(), "乙醇和甲醚的分子式都是 C2H6O", must=("乙醇", "甲醚", "C2H6O", "?"))
+    add("cnk_h080_q4", ether_ethanol(), "乙醇和甲醚的分子式都是 C2H6O", must=("乙醇", "甲醚", "C₂H₆O", "?"))
     add("cnk_h084_q2", ethylene_br(), "乙烯使溴的四氯化碳溶液褪色", must=("乙烯", "四氯化碳", "?"))
     add("cnk_h085_q2", benzene_ring(), "苯分子中六个碳碳键的关系是", must=("苯", "?"))
     add("cnk_h087_q3", bromoethane_cond(), "溴乙烷在氢氧化钠的醇溶液中加热", must=("溴乙烷", "氢氧化钠的醇溶液", "加热", "?"))
