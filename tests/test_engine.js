@@ -1097,6 +1097,32 @@ test('题库：初中化学有内联示意图', () => {
   });
 });
 
+test('题库：高中化学有内联示意图', () => {
+  const chem = questions.filter((q) => String(q.topicId || '').startsWith('cnk_h') && q.figure);
+  assert.ok(chem.length >= 40, '高中化学配图题数 ' + chem.length);
+  const bookOf = (id) => {
+    const n = Number(String(id).slice(5, 8));
+    if (n <= 19) return 'b1';
+    if (n <= 41) return 'b2';
+    if (n <= 64) return 's1';
+    if (n <= 78) return 's2';
+    return 's3';
+  };
+  const counts = { b1: 0, b2: 0, s1: 0, s2: 0, s3: 0 };
+  chem.forEach((q) => { counts[bookOf(q.id)] += 1; });
+  assert.ok(counts.b1 >= 8, '必修一配图 ' + counts.b1);
+  assert.ok(counts.b2 >= 8, '必修二配图 ' + counts.b2);
+  assert.ok(counts.s1 >= 10, '选必一配图 ' + counts.s1);
+  assert.ok(counts.s2 >= 8, '选必二配图 ' + counts.s2);
+  assert.ok(counts.s3 >= 8, '选必三配图 ' + counts.s3);
+  ['cnk_h010_q4', 'cnk_h026_q4', 'cnk_h059_q4', 'cnk_h070_q4', 'cnk_h073_q3', 'cnk_h093_q3'].forEach((id) => {
+    const q = questions.find((item) => item.id === id);
+    assert.ok(q && q.figure && q.figure.indexOf('currentColor') > 0, id);
+    assert.ok(q.figure.indexOf('viewBox=') > 0, id);
+    assert.ok(q.figure.indexOf('示意图，非比例') > 0, id);
+  });
+});
+
 test('题库：初中物理有内联示意图', () => {
   const phy = questions.filter((q) => /^cnp_\d/.test(String(q.id || '')) && q.figure);
   assert.ok(phy.length >= 48, '初中物理配图题数 ' + phy.length);
