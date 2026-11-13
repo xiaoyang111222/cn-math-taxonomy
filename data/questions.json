@@ -340221,5 +340221,2469 @@
     "answer": "D",
     "explanation": "钠与水反应剧烈。只用一小块，用镊子夹取。不能用手接触，也不能把沾水的钠放回原瓶。",
     "verify": "\"只用一小块钠，用镊子取用，不要用手直接接触\""
+  },
+  {
+    "id": "cnk_h020_q1",
+    "topicId": "cnk_h020",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "硫在空气中燃烧，主要产物是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "氮气"
+      },
+      {
+        "key": "B",
+        "text": "二氧化硫"
+      },
+      {
+        "key": "C",
+        "text": "氢气"
+      },
+      {
+        "key": "D",
+        "text": "碳酸钙"
+      }
+    ],
+    "answer": "B",
+    "explanation": "硫燃烧生成二氧化硫。氮气、氢气不是这个反应的产物，碳酸钙更不是。",
+    "verify": "\"二氧化硫\""
+  },
+  {
+    "id": "cnk_h020_q2",
+    "topicId": "cnk_h020",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "二氧化硫使品红溶液褪色，这种作用通常称为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "中和"
+      },
+      {
+        "key": "B",
+        "text": "电解"
+      },
+      {
+        "key": "C",
+        "text": "漂白"
+      },
+      {
+        "key": "D",
+        "text": "升华"
+      }
+    ],
+    "answer": "C",
+    "explanation": "二氧化硫能与有色物质结合而褪色，这是它的漂白作用。加热后又会恢复颜色，和次氯酸的氧化漂白不同。",
+    "verify": "\"漂白\""
+  },
+  {
+    "id": "cnk_h020_q3",
+    "topicId": "cnk_h020",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "浓硫酸敞口放置后质量增加，主要是因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "它不断放出氧气"
+      },
+      {
+        "key": "B",
+        "text": "它把空气中的氮气固定下来"
+      },
+      {
+        "key": "C",
+        "text": "它变成了单质硫"
+      },
+      {
+        "key": "D",
+        "text": "它有吸水性，吸收了空气中的水蒸气"
+      }
+    ],
+    "answer": "D",
+    "explanation": "浓硫酸能吸收水蒸气，常用作干燥剂。质量增加不是因为它放出氧气或变成硫。",
+    "verify": "\"它有吸水性，吸收了空气中的水蒸气\""
+  },
+  {
+    "id": "cnk_h020_q4",
+    "topicId": "cnk_h020",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列转化一定属于氧化还原反应的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "二氧化硫变成三氧化硫"
+      },
+      {
+        "key": "B",
+        "text": "三氧化硫溶于水变成硫酸"
+      },
+      {
+        "key": "C",
+        "text": "稀硫酸与氢氧化钠中和"
+      },
+      {
+        "key": "D",
+        "text": "硫酸稀释时放出热量"
+      }
+    ],
+    "answer": "A",
+    "explanation": "二氧化硫中硫为 +4 价，三氧化硫中硫为 +6 价，化合价升高。三氧化硫与水生成硫酸、中和和稀释都没有化合价变化。",
+    "verify": "\"二氧化硫变成三氧化硫\""
+  },
+  {
+    "id": "cnk_h021_q1",
+    "topicId": "cnk_h021",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "空气中含量最多、常温下很难直接参加反应的气体是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "氧气"
+      },
+      {
+        "key": "B",
+        "text": "二氧化碳"
+      },
+      {
+        "key": "C",
+        "text": "氮气"
+      },
+      {
+        "key": "D",
+        "text": "氢气"
+      }
+    ],
+    "answer": "C",
+    "explanation": "空气中约五分之四是氮气。氮分子有很强的三键，常温下化学性质不活泼。",
+    "verify": "\"氮气\""
+  },
+  {
+    "id": "cnk_h021_q2",
+    "topicId": "cnk_h021",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "氨水使红色石蕊试纸变蓝，说明氨水显？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "酸性"
+      },
+      {
+        "key": "B",
+        "text": "中性且没有任何离子"
+      },
+      {
+        "key": "C",
+        "text": "只有氧化性没有碱性"
+      },
+      {
+        "key": "D",
+        "text": "碱性"
+      }
+    ],
+    "answer": "D",
+    "explanation": "氨溶于水生成一水合氨，溶液中有氢氧根离子，显碱性，能使红色石蕊变蓝。",
+    "verify": "\"碱性\""
+  },
+  {
+    "id": "cnk_h021_q3",
+    "topicId": "cnk_h021",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "雷雨时空气中的氮气和氧气在放电条件下生成氮氧化物，再经变化进入土壤。这一过程属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "氮循环中把游离态氮转化为化合态氮"
+      },
+      {
+        "key": "B",
+        "text": "把硝酸全部变成氮气放回空气"
+      },
+      {
+        "key": "C",
+        "text": "只是物理混合，没有任何新物质"
+      },
+      {
+        "key": "D",
+        "text": "把蛋白质直接变成碳酸钙"
+      }
+    ],
+    "answer": "A",
+    "explanation": "放电使氮气变成氮氧化物，再形成硝酸盐进入土壤，是自然界固氮的一种途径。",
+    "verify": "\"氮循环中把游离态氮转化为化合态氮\""
+  },
+  {
+    "id": "cnk_h021_q4",
+    "topicId": "cnk_h021",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列关于硝酸的说法，正确的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "稀硝酸没有酸性，不能使紫色石蕊变红"
+      },
+      {
+        "key": "B",
+        "text": "浓硝酸见光易分解，常用棕色瓶保存"
+      },
+      {
+        "key": "C",
+        "text": "硝酸分子里氮元素化合价是 -3"
+      },
+      {
+        "key": "D",
+        "text": "硝酸不能与碱发生中和"
+      }
+    ],
+    "answer": "B",
+    "explanation": "浓硝酸不稳定，见光分解，要避光保存。硝酸有酸性，氮为 +5 价，也能与碱中和。",
+    "verify": "\"浓硝酸见光易分解，常用棕色瓶保存\""
+  },
+  {
+    "id": "cnk_h022_q1",
+    "topicId": "cnk_h022",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "普通玻璃、水泥、陶瓷都属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "合金"
+      },
+      {
+        "key": "B",
+        "text": "蛋白质"
+      },
+      {
+        "key": "C",
+        "text": "石油产品"
+      },
+      {
+        "key": "D",
+        "text": "无机非金属材料"
+      }
+    ],
+    "answer": "D",
+    "explanation": "它们的主要成分是硅酸盐或二氧化硅，属于无机非金属材料，不是金属合金或有机物。",
+    "verify": "\"无机非金属材料\""
+  },
+  {
+    "id": "cnk_h022_q2",
+    "topicId": "cnk_h022",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "石英的主要成分是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "二氧化硅"
+      },
+      {
+        "key": "B",
+        "text": "氯化钠"
+      },
+      {
+        "key": "C",
+        "text": "碳酸钙"
+      },
+      {
+        "key": "D",
+        "text": "铁"
+      }
+    ],
+    "answer": "A",
+    "explanation": "石英的主要成分是二氧化硅。氯化钠是食盐，碳酸钙是石灰石，铁是金属。",
+    "verify": "\"二氧化硅\""
+  },
+  {
+    "id": "cnk_h022_q3",
+    "topicId": "cnk_h022",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "普通水泥硬化后能把砂石粘结在一起，主要是因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "水泥变成了纯金属铁"
+      },
+      {
+        "key": "B",
+        "text": "水泥中的硅酸盐与水作用后生成有粘结性的物质"
+      },
+      {
+        "key": "C",
+        "text": "水泥全部挥发成氧气"
+      },
+      {
+        "key": "D",
+        "text": "水泥就是食盐晶体"
+      }
+    ],
+    "answer": "B",
+    "explanation": "水泥的主要成分是硅酸盐。加水后发生水化，生成有粘结性的固体，把骨料粘在一起。",
+    "verify": "\"水泥中的硅酸盐与水作用后生成有粘结性的物质\""
+  },
+  {
+    "id": "cnk_h022_q4",
+    "topicId": "cnk_h022",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列用途与二氧化硅性质相符的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "代替钢铁做承重梁，因为它是最坚韧的金属"
+      },
+      {
+        "key": "B",
+        "text": "作为蛋白质补充人体营养"
+      },
+      {
+        "key": "C",
+        "text": "做成光导纤维，用来传输光信号"
+      },
+      {
+        "key": "D",
+        "text": "直接当作盐酸使用"
+      }
+    ],
+    "answer": "C",
+    "explanation": "高纯二氧化硅可拉制成光导纤维。它不是金属，也不是营养物质或酸。",
+    "verify": "\"做成光导纤维，用来传输光信号\""
+  },
+  {
+    "id": "cnk_h023_q1",
+    "topicId": "cnk_h023",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "下列物质属于无机非金属材料的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "普通玻璃"
+      },
+      {
+        "key": "B",
+        "text": "聚乙烯塑料"
+      },
+      {
+        "key": "C",
+        "text": "黄铜"
+      },
+      {
+        "key": "D",
+        "text": "蔗糖"
+      }
+    ],
+    "answer": "A",
+    "explanation": "普通玻璃以硅酸盐为主要成分。聚乙烯是有机高分子，黄铜是合金，蔗糖是有机物。",
+    "verify": "\"普通玻璃\""
+  },
+  {
+    "id": "cnk_h023_q2",
+    "topicId": "cnk_h023",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "二氧化硫和二氧化氮都能造成？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "蛋白质合成加快"
+      },
+      {
+        "key": "B",
+        "text": "酸雨"
+      },
+      {
+        "key": "C",
+        "text": "玻璃自动变成黄金"
+      },
+      {
+        "key": "D",
+        "text": "空气中氮气消失"
+      }
+    ],
+    "answer": "B",
+    "explanation": "它们在空气中转化后形成酸性物质，是酸雨的重要来源。",
+    "verify": "\"酸雨\""
+  },
+  {
+    "id": "cnk_h023_q3",
+    "topicId": "cnk_h023",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "氨催化氧化可以得到一氧化氮，再进一步得到硝酸。这个过程里氮元素化合价？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "始终是 0"
+      },
+      {
+        "key": "B",
+        "text": "从 +5 降到 -3"
+      },
+      {
+        "key": "C",
+        "text": "从 -3 升高，氨作还原剂"
+      },
+      {
+        "key": "D",
+        "text": "没有变化，因为不是氧化还原"
+      }
+    ],
+    "answer": "C",
+    "explanation": "氨中氮为 -3 价，一氧化氮中氮为 +2 价，化合价升高，氨被氧化。",
+    "verify": "\"从 -3 升高，氨作还原剂\""
+  },
+  {
+    "id": "cnk_h023_q4",
+    "topicId": "cnk_h023",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "要区分二氧化硫和二氧化碳，比较合理的方法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "看谁能让澄清石灰水变浑浊，只有二氧化碳可以"
+      },
+      {
+        "key": "B",
+        "text": "闻气味，二氧化碳有强烈刺激性而二氧化硫没有"
+      },
+      {
+        "key": "C",
+        "text": "看颜色，二氧化硫一定是红棕色"
+      },
+      {
+        "key": "D",
+        "text": "通入品红溶液，能使品红褪色的是二氧化硫"
+      }
+    ],
+    "answer": "D",
+    "explanation": "二者都能使澄清石灰水变浑浊。二氧化硫有漂白品红的性质，二氧化碳没有。二氧化硫是无色、有刺激性气味的气体。",
+    "verify": "\"通入品红溶液，能使品红褪色的是二氧化硫\""
+  },
+  {
+    "id": "cnk_h024_q1",
+    "topicId": "cnk_h024",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "用化学沉淀法处理粗盐溶液，主要想除去的杂质离子通常包括？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只有氢气"
+      },
+      {
+        "key": "B",
+        "text": "钙离子、镁离子和硫酸根离子"
+      },
+      {
+        "key": "C",
+        "text": "只有氯离子，而且要除得一个不剩"
+      },
+      {
+        "key": "D",
+        "text": "蛋白质分子"
+      }
+    ],
+    "answer": "B",
+    "explanation": "粗盐里常见的可溶性杂质是钙盐、镁盐和硫酸盐。氯化钠本身的氯离子不是这个实验要除掉的对象。",
+    "verify": "\"钙离子、镁离子和硫酸根离子\""
+  },
+  {
+    "id": "cnk_h024_q2",
+    "topicId": "cnk_h024",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "除去溶液中的硫酸根离子，常用的试剂是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "稀盐酸"
+      },
+      {
+        "key": "B",
+        "text": "酒精"
+      },
+      {
+        "key": "C",
+        "text": "氯化钡溶液"
+      },
+      {
+        "key": "D",
+        "text": "蔗糖溶液"
+      }
+    ],
+    "answer": "C",
+    "explanation": "钡离子与硫酸根生成硫酸钡沉淀。盐酸、酒精和蔗糖不能担此任。",
+    "verify": "\"氯化钡溶液\""
+  },
+  {
+    "id": "cnk_h024_q3",
+    "topicId": "cnk_h024",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "碳酸钠溶液要在氯化钡溶液之后加入，主要是为了？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把氯化钠全部变成碳酸钠"
+      },
+      {
+        "key": "B",
+        "text": "防止硫酸钡溶解"
+      },
+      {
+        "key": "C",
+        "text": "让镁离子变成气体逸出"
+      },
+      {
+        "key": "D",
+        "text": "把过量的钡离子也沉淀下来"
+      }
+    ],
+    "answer": "D",
+    "explanation": "先加钡盐沉淀硫酸根，过量的钡离子再被碳酸根变成碳酸钡沉淀，避免引入新的杂质离子。",
+    "verify": "\"把过量的钡离子也沉淀下来\""
+  },
+  {
+    "id": "cnk_h024_q4",
+    "topicId": "cnk_h024",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "过滤之后还要加盐酸，主要目的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "除去过量的氢氧根离子和碳酸根离子"
+      },
+      {
+        "key": "B",
+        "text": "把氯化钠全部赶出溶液"
+      },
+      {
+        "key": "C",
+        "text": "把已经滤出的沉淀再溶解回去"
+      },
+      {
+        "key": "D",
+        "text": "把硫酸钡转化成金属钡"
+      }
+    ],
+    "answer": "A",
+    "explanation": "过量的碱和碳酸盐会留在滤液里。加入盐酸可以把它们转化成水和二氧化碳，得到较纯的氯化钠溶液。",
+    "verify": "\"除去过量的氢氧根离子和碳酸根离子\""
+  },
+  {
+    "id": "cnk_h025_q1",
+    "topicId": "cnk_h025",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "实验活动「不同价态含硫物质的转化」关注的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "怎样把食盐配成一定物质的量浓度的溶液"
+      },
+      {
+        "key": "B",
+        "text": "怎样比较钠、镁、铝的金属性"
+      },
+      {
+        "key": "C",
+        "text": "含硫物质怎样由一种化合价变成另一种化合价"
+      },
+      {
+        "key": "D",
+        "text": "怎样搭建乙烯的球棍模型"
+      }
+    ],
+    "answer": "C",
+    "explanation": "这个实验围绕硫的多种价态之间的转化，不是配溶液、比金属性或搭有机模型。",
+    "verify": "\"含硫物质怎样由一种化合价变成另一种化合价\""
+  },
+  {
+    "id": "cnk_h025_q2",
+    "topicId": "cnk_h025",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "硫单质变成二氧化硫时，硫元素的化合价？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "从 0 降低到 -2"
+      },
+      {
+        "key": "B",
+        "text": "始终是 +6"
+      },
+      {
+        "key": "C",
+        "text": "从 +6 降到 0"
+      },
+      {
+        "key": "D",
+        "text": "从 0 升高到 +4"
+      }
+    ],
+    "answer": "D",
+    "explanation": "单质硫为 0 价，二氧化硫中硫为 +4 价，化合价升高，硫被氧化。",
+    "verify": "\"从 0 升高到 +4\""
+  },
+  {
+    "id": "cnk_h025_q3",
+    "topicId": "cnk_h025",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "二氧化硫被氧化成硫酸根时，二氧化硫充当？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "还原剂"
+      },
+      {
+        "key": "B",
+        "text": "氧化剂"
+      },
+      {
+        "key": "C",
+        "text": "催化剂"
+      },
+      {
+        "key": "D",
+        "text": "沉淀剂"
+      }
+    ],
+    "answer": "A",
+    "explanation": "硫的化合价从 +4 升到 +6，二氧化硫失电子，是还原剂。",
+    "verify": "\"还原剂\""
+  },
+  {
+    "id": "cnk_h025_q4",
+    "topicId": "cnk_h025",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "做含硫物质转化实验时，比较合理的注意点是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把大量二氧化硫对着人脸吹，以便观察颜色"
+      },
+      {
+        "key": "B",
+        "text": "二氧化硫有刺激性，要在通风处进行，不要直接凑近闻"
+      },
+      {
+        "key": "C",
+        "text": "把废液直接倒进饮水杯"
+      },
+      {
+        "key": "D",
+        "text": "用嘴吹灭正在产生的有毒气体"
+      }
+    ],
+    "answer": "B",
+    "explanation": "二氧化硫有刺激性、有毒。实验要控制用量、注意通风，废液按实验室要求处理。",
+    "verify": "\"二氧化硫有刺激性，要在通风处进行，不要直接凑近闻\""
+  },
+  {
+    "id": "cnk_h026_q1",
+    "topicId": "cnk_h026",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "木炭在空气中燃烧时，周围温度升高。这个反应属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "吸热反应"
+      },
+      {
+        "key": "B",
+        "text": "只有物理变化"
+      },
+      {
+        "key": "C",
+        "text": "没有能量变化的反应"
+      },
+      {
+        "key": "D",
+        "text": "放热反应"
+      }
+    ],
+    "answer": "D",
+    "explanation": "燃烧把化学能转化成热能，体系向环境放热，是放热反应。",
+    "verify": "\"放热反应\""
+  },
+  {
+    "id": "cnk_h026_q2",
+    "topicId": "cnk_h026",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "原电池工作时，主要把什么形式的能转化成电能？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "化学能"
+      },
+      {
+        "key": "B",
+        "text": "只有声能"
+      },
+      {
+        "key": "C",
+        "text": "只有势能"
+      },
+      {
+        "key": "D",
+        "text": "只有光的颜色"
+      }
+    ],
+    "answer": "A",
+    "explanation": "原电池利用氧化还原反应，把化学能直接转化成电能。",
+    "verify": "\"化学能\""
+  },
+  {
+    "id": "cnk_h026_q3",
+    "topicId": "cnk_h026",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "碳酸钙受热分解需要持续加热，这个反应属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "放热反应，因为生成了气体"
+      },
+      {
+        "key": "B",
+        "text": "吸热反应"
+      },
+      {
+        "key": "C",
+        "text": "既不吸热也不放热"
+      },
+      {
+        "key": "D",
+        "text": "只改变物质状态的物理变化"
+      }
+    ],
+    "answer": "B",
+    "explanation": "分解反应要不断供热才能进行，体系从环境吸热，是吸热反应。有新物质生成，仍是化学变化。",
+    "verify": "\"吸热反应\""
+  },
+  {
+    "id": "cnk_h026_q4",
+    "topicId": "cnk_h026",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "锌片和铜片用导线连接后插入稀硫酸，锌片逐渐溶解并有电流。锌片上发生的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "还原反应，锌得电子"
+      },
+      {
+        "key": "B",
+        "text": "锌与铜直接化合成黄铜"
+      },
+      {
+        "key": "C",
+        "text": "氧化反应，锌失电子"
+      },
+      {
+        "key": "D",
+        "text": "只有水的蒸发"
+      }
+    ],
+    "answer": "C",
+    "explanation": "锌比铜活泼，失电子被氧化，电子经导线流向铜片，铜片上氢离子得电子生成氢气。",
+    "verify": "\"氧化反应，锌失电子\""
+  },
+  {
+    "id": "cnk_h027_q1",
+    "topicId": "cnk_h027",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "把块状大理石改成粉末再与稀盐酸反应，反应通常会？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "变快，因为接触面积增大"
+      },
+      {
+        "key": "B",
+        "text": "变慢，因为粉末不能反应"
+      },
+      {
+        "key": "C",
+        "text": "完全停止"
+      },
+      {
+        "key": "D",
+        "text": "速率与接触面积无关"
+      }
+    ],
+    "answer": "A",
+    "explanation": "固体颗粒变小，与酸的接触面增大，单位时间里更多微粒碰撞，反应加快。",
+    "verify": "\"变快，因为接触面积增大\""
+  },
+  {
+    "id": "cnk_h027_q2",
+    "topicId": "cnk_h027",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "加入催化剂后，化学反应速率一般会？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一定变成吸热反应"
+      },
+      {
+        "key": "B",
+        "text": "加快"
+      },
+      {
+        "key": "C",
+        "text": "反应物的种类全部改变"
+      },
+      {
+        "key": "D",
+        "text": "温度一定降到 0 度"
+      }
+    ],
+    "answer": "B",
+    "explanation": "催化剂能降低反应的活化能，加快正、逆反应速率，本身质量和化学性质在反应前后不变。",
+    "verify": "\"加快\""
+  },
+  {
+    "id": "cnk_h027_q3",
+    "topicId": "cnk_h027",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "可逆反应达到化学平衡时，正确的认识是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "反应已经彻底停止"
+      },
+      {
+        "key": "B",
+        "text": "反应物一定全部耗尽"
+      },
+      {
+        "key": "C",
+        "text": "正反应和逆反应仍在进行，只是速率相等"
+      },
+      {
+        "key": "D",
+        "text": "生成物一定全部变回反应物"
+      }
+    ],
+    "answer": "C",
+    "explanation": "平衡是动态限度：正、逆反应速率相等，各组成不再随时间改变，反应并没有停止。",
+    "verify": "\"正反应和逆反应仍在进行，只是速率相等\""
+  },
+  {
+    "id": "cnk_h027_q4",
+    "topicId": "cnk_h027",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "其他条件相同，升高温度通常使反应加快，主要是因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "反应物的质量一定增加了一倍"
+      },
+      {
+        "key": "B",
+        "text": "催化剂自动消失"
+      },
+      {
+        "key": "C",
+        "text": "可逆反应变成了物理变化"
+      },
+      {
+        "key": "D",
+        "text": "分子运动加快，能发生有效碰撞的分子比例增大"
+      }
+    ],
+    "answer": "D",
+    "explanation": "温度升高，分子能量提高，有效碰撞增多，速率加快。这与质量是否加倍、催化剂是否存在不是一回事。",
+    "verify": "\"分子运动加快，能发生有效碰撞的分子比例增大\""
+  },
+  {
+    "id": "cnk_h028_q1",
+    "topicId": "cnk_h028",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "下列变化主要把化学能转化成电能的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "水结成冰"
+      },
+      {
+        "key": "B",
+        "text": "原电池放电"
+      },
+      {
+        "key": "C",
+        "text": "食盐溶于水"
+      },
+      {
+        "key": "D",
+        "text": "用酒精灯加热烧杯外壁"
+      }
+    ],
+    "answer": "B",
+    "explanation": "原电池把氧化还原反应的化学能转化成电能。结冰、溶解和用灯加热不是原电池。",
+    "verify": "\"原电池放电\""
+  },
+  {
+    "id": "cnk_h028_q2",
+    "topicId": "cnk_h028",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "升高温度、增大反应物浓度、把固体研细，通常都会使反应？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一定停止"
+      },
+      {
+        "key": "B",
+        "text": "一定变成吸热"
+      },
+      {
+        "key": "C",
+        "text": "加快"
+      },
+      {
+        "key": "D",
+        "text": "一定没有新物质生成"
+      }
+    ],
+    "answer": "C",
+    "explanation": "这三种做法都增加有效碰撞的机会，反应速率增大。",
+    "verify": "\"加快\""
+  },
+  {
+    "id": "cnk_h028_q3",
+    "topicId": "cnk_h028",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "放热反应的特征是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "反应一定很慢"
+      },
+      {
+        "key": "B",
+        "text": "反应一定没有限度"
+      },
+      {
+        "key": "C",
+        "text": "反应一定是物理变化"
+      },
+      {
+        "key": "D",
+        "text": "反应过程中向环境放出热量"
+      }
+    ],
+    "answer": "D",
+    "explanation": "放热还是吸热看能量进出。快慢和是否可逆是另外的问题。",
+    "verify": "\"反应过程中向环境放出热量\""
+  },
+  {
+    "id": "cnk_h028_q4",
+    "topicId": "cnk_h028",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "某可逆反应已经达到平衡。加入催化剂后，正确的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "正、逆反应速率都加快，平衡组成不变"
+      },
+      {
+        "key": "B",
+        "text": "只有正反应加快，生成物一定越来越多"
+      },
+      {
+        "key": "C",
+        "text": "反应彻底停止"
+      },
+      {
+        "key": "D",
+        "text": "反应热的正负号一定颠倒"
+      }
+    ],
+    "answer": "A",
+    "explanation": "催化剂同等加快正、逆反应，不改变平衡限度，也不把放热变成吸热。",
+    "verify": "\"正、逆反应速率都加快，平衡组成不变\""
+  },
+  {
+    "id": "cnk_h029_q1",
+    "topicId": "cnk_h029",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "实验活动「化学能转化成电能」要做成的装置是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只加热的酒精灯"
+      },
+      {
+        "key": "B",
+        "text": "只过滤的漏斗"
+      },
+      {
+        "key": "C",
+        "text": "原电池"
+      },
+      {
+        "key": "D",
+        "text": "只干燥的干燥器"
+      }
+    ],
+    "answer": "C",
+    "explanation": "这个实验用原电池把化学能转化成电能，不是加热、过滤或干燥。",
+    "verify": "\"原电池\""
+  },
+  {
+    "id": "cnk_h029_q2",
+    "topicId": "cnk_h029",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "组成原电池时，两块金属电极通常需要？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "必须是同一种纯金"
+      },
+      {
+        "key": "B",
+        "text": "必须都不导电"
+      },
+      {
+        "key": "C",
+        "text": "必须都是塑料"
+      },
+      {
+        "key": "D",
+        "text": "活泼性不同"
+      }
+    ],
+    "answer": "D",
+    "explanation": "电极活泼性不同，才能形成电子的定向移动。电极本身要能导电。",
+    "verify": "\"活泼性不同\""
+  },
+  {
+    "id": "cnk_h029_q3",
+    "topicId": "cnk_h029",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "锌–铜原电池中，较活泼的锌片作为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "负极，发生氧化反应"
+      },
+      {
+        "key": "B",
+        "text": "正极，发生还原反应"
+      },
+      {
+        "key": "C",
+        "text": "只提供热量，不参加反应"
+      },
+      {
+        "key": "D",
+        "text": "盐桥本身"
+      }
+    ],
+    "answer": "A",
+    "explanation": "锌失电子被氧化，是负极。铜片上阳离子得电子，是正极。",
+    "verify": "\"负极，发生氧化反应\""
+  },
+  {
+    "id": "cnk_h029_q4",
+    "topicId": "cnk_h029",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "做这个实验时，比较合理的做法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把两块金属放在干燥的木桌上，不连导线也不接触溶液"
+      },
+      {
+        "key": "B",
+        "text": "电极插入电解质溶液，用导线连成闭合回路，观察电流或灯泡"
+      },
+      {
+        "key": "C",
+        "text": "用嘴去尝电解质溶液"
+      },
+      {
+        "key": "D",
+        "text": "把酸液直接泼到皮肤上观察发热"
+      }
+    ],
+    "answer": "B",
+    "explanation": "原电池需要电极、电解质溶液和闭合回路。溶液不能入口，酸液要规范取用。",
+    "verify": "\"电极插入电解质溶液，用导线连成闭合回路，观察电流或灯泡\""
+  },
+  {
+    "id": "cnk_h030_q1",
+    "topicId": "cnk_h030",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "实验活动「化学反应速率的影响因素」主要观察的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "原电池能不能把电能变成化学能"
+      },
+      {
+        "key": "B",
+        "text": "乙醇分子有几个碳原子"
+      },
+      {
+        "key": "C",
+        "text": "玻璃的主要成分是不是蛋白质"
+      },
+      {
+        "key": "D",
+        "text": "改变某个条件后，反应变快还是变慢"
+      }
+    ],
+    "answer": "D",
+    "explanation": "这个实验围绕速率的影响因素，不是原电池、有机结构或材料成分。",
+    "verify": "\"改变某个条件后，反应变快还是变慢\""
+  },
+  {
+    "id": "cnk_h030_q2",
+    "topicId": "cnk_h030",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "比较温度对速率的影响时，其他条件应当？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "尽量保持相同"
+      },
+      {
+        "key": "B",
+        "text": "同时把浓度、接触面积和催化剂全部改掉"
+      },
+      {
+        "key": "C",
+        "text": "不必记录现象"
+      },
+      {
+        "key": "D",
+        "text": "必须改用另一种反应物"
+      }
+    ],
+    "answer": "A",
+    "explanation": "对照实验要控制变量。只改变温度，才能判断温度的作用。",
+    "verify": "\"尽量保持相同\""
+  },
+  {
+    "id": "cnk_h030_q3",
+    "topicId": "cnk_h030",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "两份同样的锌粒，一份用稀盐酸，一份用更浓的盐酸，气泡产生更快的通常是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一定是较稀的那一份"
+      },
+      {
+        "key": "B",
+        "text": "较浓的盐酸那一份"
+      },
+      {
+        "key": "C",
+        "text": "两份一定完全一样"
+      },
+      {
+        "key": "D",
+        "text": "两份都不会反应"
+      }
+    ],
+    "answer": "B",
+    "explanation": "增大反应物浓度，单位体积里反应微粒增多，碰撞机会增加，速率加快。",
+    "verify": "\"较浓的盐酸那一份\""
+  },
+  {
+    "id": "cnk_h030_q4",
+    "topicId": "cnk_h030",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "用过氧化氢分解来看催化剂的作用，比较合理的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "两份都加相同的二氧化锰，却说这是在比较有无催化剂"
+      },
+      {
+        "key": "B",
+        "text": "用嘴去吸刚产生的气体"
+      },
+      {
+        "key": "C",
+        "text": "一份加二氧化锰，一份不加，比较产生气体的快慢"
+      },
+      {
+        "key": "D",
+        "text": "把二氧化锰当成可以随意入口的食盐"
+      }
+    ],
+    "answer": "C",
+    "explanation": "有无催化剂要做对照。二氧化锰是实验室常用的催化剂，不能入口，气体也不要去吸。",
+    "verify": "\"一份加二氧化锰，一份不加，比较产生气体的快慢\""
+  },
+  {
+    "id": "cnk_h031_q1",
+    "topicId": "cnk_h031",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "有机化合物在组成上最突出的特点是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一定含有碳元素"
+      },
+      {
+        "key": "B",
+        "text": "一定含有钠元素"
+      },
+      {
+        "key": "C",
+        "text": "一定是离子化合物"
+      },
+      {
+        "key": "D",
+        "text": "一定不含氢"
+      }
+    ],
+    "answer": "A",
+    "explanation": "有机化合物是碳的化合物（一氧化碳、二氧化碳、碳酸盐等习惯上不算有机物）。多数还含氢。",
+    "verify": "\"一定含有碳元素\""
+  },
+  {
+    "id": "cnk_h031_q2",
+    "topicId": "cnk_h031",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "认识一类有机物的性质，关键是看它的？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只看瓶子的颜色"
+      },
+      {
+        "key": "B",
+        "text": "官能团"
+      },
+      {
+        "key": "C",
+        "text": "只看是不是固体"
+      },
+      {
+        "key": "D",
+        "text": "只看谁先被发现"
+      }
+    ],
+    "answer": "B",
+    "explanation": "官能团决定有机物的特征反应。碳骨架说明碳原子怎样连接。",
+    "verify": "\"官能团\""
+  },
+  {
+    "id": "cnk_h031_q3",
+    "topicId": "cnk_h031",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "甲烷、乙烷、丙烷彼此相差一个或几个 CH2，它们互称为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "同素异形体"
+      },
+      {
+        "key": "B",
+        "text": "合金"
+      },
+      {
+        "key": "C",
+        "text": "同系物"
+      },
+      {
+        "key": "D",
+        "text": "同位素"
+      }
+    ],
+    "answer": "C",
+    "explanation": "结构相似、组成上相差若干个 CH2 的物质互为同系物。同素异形体是同一元素的不同单质。",
+    "verify": "\"同系物\""
+  },
+  {
+    "id": "cnk_h031_q4",
+    "topicId": "cnk_h031",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "分子式都是 C2H6O，一种是乙醇，一种是甲醚。它们属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "同一种物质，只是名称不同"
+      },
+      {
+        "key": "B",
+        "text": "同素异形体"
+      },
+      {
+        "key": "C",
+        "text": "金属单质"
+      },
+      {
+        "key": "D",
+        "text": "同分异构体"
+      }
+    ],
+    "answer": "D",
+    "explanation": "分子式相同、结构不同的化合物互为同分异构体。乙醇有羟基，甲醚有醚键，性质不同。",
+    "verify": "\"同分异构体\""
+  },
+  {
+    "id": "cnk_h032_q1",
+    "topicId": "cnk_h032",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "乙烯分子中的特征结构是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "碳碳三键"
+      },
+      {
+        "key": "B",
+        "text": "碳碳双键"
+      },
+      {
+        "key": "C",
+        "text": "离子键"
+      },
+      {
+        "key": "D",
+        "text": "金属键"
+      }
+    ],
+    "answer": "B",
+    "explanation": "乙烯是烯烃，官能团是碳碳双键。乙炔才有三键。",
+    "verify": "\"碳碳双键\""
+  },
+  {
+    "id": "cnk_h032_q2",
+    "topicId": "cnk_h032",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "乙烯与氢气在一定条件下反应，双键打开，每个碳上各结合一个氢原子。这种反应属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "中和反应"
+      },
+      {
+        "key": "B",
+        "text": "分解反应"
+      },
+      {
+        "key": "C",
+        "text": "加成反应"
+      },
+      {
+        "key": "D",
+        "text": "升华"
+      }
+    ],
+    "answer": "C",
+    "explanation": "不饱和键两端的原子与其他原子或原子团直接结合，是加成反应。",
+    "verify": "\"加成反应\""
+  },
+  {
+    "id": "cnk_h032_q3",
+    "topicId": "cnk_h032",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "大量乙烯分子打开双键彼此连接成长链，得到聚乙烯。这种反应属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "复分解反应"
+      },
+      {
+        "key": "B",
+        "text": "电离"
+      },
+      {
+        "key": "C",
+        "text": "风化作用"
+      },
+      {
+        "key": "D",
+        "text": "加聚反应"
+      }
+    ],
+    "answer": "D",
+    "explanation": "含双键的小分子通过加成聚合成高分子，叫加聚反应。聚乙烯就是这样得到的。",
+    "verify": "\"加聚反应\""
+  },
+  {
+    "id": "cnk_h032_q4",
+    "topicId": "cnk_h032",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "聚乙烯塑料袋很难在自然环境中很快分解，主要是因为？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "高分子链比较稳定，微生物不易利用"
+      },
+      {
+        "key": "B",
+        "text": "它是氯化钠晶体"
+      },
+      {
+        "key": "C",
+        "text": "它一遇空气就燃烧完"
+      },
+      {
+        "key": "D",
+        "text": "它的相对分子质量等于 28"
+      }
+    ],
+    "answer": "A",
+    "explanation": "聚乙烯是饱和的碳链高分子，化学性质较稳定，不易被微生物分解。乙烯单体的相对分子质量是 28，高分子要大得多。",
+    "verify": "\"高分子链比较稳定，微生物不易利用\""
+  },
+  {
+    "id": "cnk_h033_q1",
+    "topicId": "cnk_h033",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "乙醇分子中决定其主要化学性质的官能团是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "羧基"
+      },
+      {
+        "key": "B",
+        "text": "碳碳双键"
+      },
+      {
+        "key": "C",
+        "text": "羟基"
+      },
+      {
+        "key": "D",
+        "text": "醛基"
+      }
+    ],
+    "answer": "C",
+    "explanation": "乙醇是饱和一元醇，官能团是羟基。乙酸才有羧基，乙烯才有双键。",
+    "verify": "\"羟基\""
+  },
+  {
+    "id": "cnk_h033_q2",
+    "topicId": "cnk_h033",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "乙酸能使紫色石蕊溶液变红，说明乙酸？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "是强碱"
+      },
+      {
+        "key": "B",
+        "text": "不含氢"
+      },
+      {
+        "key": "C",
+        "text": "是单质"
+      },
+      {
+        "key": "D",
+        "text": "具有酸性"
+      }
+    ],
+    "answer": "D",
+    "explanation": "乙酸在水中能电离出氢离子，显酸性。官能团是羧基。",
+    "verify": "\"具有酸性\""
+  },
+  {
+    "id": "cnk_h033_q3",
+    "topicId": "cnk_h033",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "乙醇在铜或银作催化剂并加热的条件下被氧化，可以得到？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "乙醛"
+      },
+      {
+        "key": "B",
+        "text": "甲烷"
+      },
+      {
+        "key": "C",
+        "text": "氯化钠"
+      },
+      {
+        "key": "D",
+        "text": "二氧化硅"
+      }
+    ],
+    "answer": "A",
+    "explanation": "乙醇催化氧化生成乙醛，进一步氧化可以得到乙酸。不是变成无机盐或二氧化硅。",
+    "verify": "\"乙醛\""
+  },
+  {
+    "id": "cnk_h033_q4",
+    "topicId": "cnk_h033",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "乙醇与乙酸在浓硫酸加热条件下反应，生成有香味的酯和水。这个反应属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "加聚反应"
+      },
+      {
+        "key": "B",
+        "text": "酯化反应"
+      },
+      {
+        "key": "C",
+        "text": "中和成盐且没有有机物参加"
+      },
+      {
+        "key": "D",
+        "text": "电解水"
+      }
+    ],
+    "answer": "B",
+    "explanation": "酸与醇生成酯和水，是酯化。浓硫酸起催化剂和吸水剂的作用。",
+    "verify": "\"酯化反应\""
+  },
+  {
+    "id": "cnk_h034_q1",
+    "topicId": "cnk_h034",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "淀粉、葡萄糖都属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "金属单质"
+      },
+      {
+        "key": "B",
+        "text": "硅酸盐"
+      },
+      {
+        "key": "C",
+        "text": "稀有气体"
+      },
+      {
+        "key": "D",
+        "text": "糖类"
+      }
+    ],
+    "answer": "D",
+    "explanation": "淀粉是多糖，葡萄糖是单糖，都属于糖类营养物质。",
+    "verify": "\"糖类\""
+  },
+  {
+    "id": "cnk_h034_q2",
+    "topicId": "cnk_h034",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "蛋白质在人体内最终水解得到的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "氨基酸"
+      },
+      {
+        "key": "B",
+        "text": "氢气"
+      },
+      {
+        "key": "C",
+        "text": "二氧化硅"
+      },
+      {
+        "key": "D",
+        "text": "氯化钠晶体"
+      }
+    ],
+    "answer": "A",
+    "explanation": "蛋白质由氨基酸缩合而成，水解后又得到氨基酸。",
+    "verify": "\"氨基酸\""
+  },
+  {
+    "id": "cnk_h034_q3",
+    "topicId": "cnk_h034",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "植物油和动物脂肪都属于油脂。它们在碱性条件下水解，工业上用来？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "冶炼生铁"
+      },
+      {
+        "key": "B",
+        "text": "制肥皂"
+      },
+      {
+        "key": "C",
+        "text": "烧制水泥"
+      },
+      {
+        "key": "D",
+        "text": "提纯石英"
+      }
+    ],
+    "answer": "B",
+    "explanation": "油脂碱性水解（皂化）得到高级脂肪酸盐，就是肥皂的主要成分。",
+    "verify": "\"制肥皂\""
+  },
+  {
+    "id": "cnk_h034_q4",
+    "topicId": "cnk_h034",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "葡萄糖能使新制氢氧化铜悬浊液在加热时出现砖红色沉淀，说明葡萄糖分子中有？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只有碳碳三键"
+      },
+      {
+        "key": "B",
+        "text": "金属键"
+      },
+      {
+        "key": "C",
+        "text": "醛基"
+      },
+      {
+        "key": "D",
+        "text": "硅氧键"
+      }
+    ],
+    "answer": "C",
+    "explanation": "醛基能把新制氢氧化铜还原成氧化亚铜。这是检验葡萄糖还原性的常用方法。",
+    "verify": "\"醛基\""
+  },
+  {
+    "id": "cnk_h035_q1",
+    "topicId": "cnk_h035",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "下列物质属于有机高分子的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "聚乙烯"
+      },
+      {
+        "key": "B",
+        "text": "甲烷"
+      },
+      {
+        "key": "C",
+        "text": "乙醇"
+      },
+      {
+        "key": "D",
+        "text": "乙酸"
+      }
+    ],
+    "answer": "A",
+    "explanation": "聚乙烯由乙烯加聚得到，相对分子质量很大。甲烷、乙醇、乙酸都是小分子。",
+    "verify": "\"聚乙烯\""
+  },
+  {
+    "id": "cnk_h035_q2",
+    "topicId": "cnk_h035",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "乙醇和乙酸都能发生的反应是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "加聚成塑料"
+      },
+      {
+        "key": "B",
+        "text": "燃烧"
+      },
+      {
+        "key": "C",
+        "text": "使溴的四氯化碳溶液立刻加成褪色"
+      },
+      {
+        "key": "D",
+        "text": "电离出大量氢氧根"
+      }
+    ],
+    "answer": "B",
+    "explanation": "二者都能燃烧。乙醇没有碳碳双键，不能像乙烯那样加成；乙酸显酸性，不是碱。",
+    "verify": "\"燃烧\""
+  },
+  {
+    "id": "cnk_h035_q3",
+    "topicId": "cnk_h035",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "要说明乙烯含有不饱和键，比较合理的证据是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "乙烯的相对分子质量等于 16"
+      },
+      {
+        "key": "B",
+        "text": "乙烯是离子晶体"
+      },
+      {
+        "key": "C",
+        "text": "乙烯能使溴的四氯化碳溶液褪色"
+      },
+      {
+        "key": "D",
+        "text": "乙烯分子里一定有羧基"
+      }
+    ],
+    "answer": "C",
+    "explanation": "碳碳双键可与溴加成而褪色。乙烯相对分子质量是 28，不是离子晶体，也没有羧基。",
+    "verify": "\"乙烯能使溴的四氯化碳溶液褪色\""
+  },
+  {
+    "id": "cnk_h035_q4",
+    "topicId": "cnk_h035",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下列对应正确的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "淀粉是金属，蛋白质是硅酸盐，油脂是稀有气体"
+      },
+      {
+        "key": "B",
+        "text": "三类营养物质都是氯化钠的同素异形体"
+      },
+      {
+        "key": "C",
+        "text": "它们都只能发生加聚反应"
+      },
+      {
+        "key": "D",
+        "text": "淀粉属于糖类，蛋白质水解得到氨基酸，油脂可以皂化制肥皂"
+      }
+    ],
+    "answer": "D",
+    "explanation": "糖类、油脂、蛋白质是三类基本营养物质，各有特征转化，都不是无机盐或单质。",
+    "verify": "\"淀粉属于糖类，蛋白质水解得到氨基酸，油脂可以皂化制肥皂\""
+  },
+  {
+    "id": "cnk_h036_q1",
+    "topicId": "cnk_h036",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "球棍模型里，球通常表示？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "电流"
+      },
+      {
+        "key": "B",
+        "text": "原子"
+      },
+      {
+        "key": "C",
+        "text": "温度计的读数"
+      },
+      {
+        "key": "D",
+        "text": "催化剂本身"
+      }
+    ],
+    "answer": "B",
+    "explanation": "球代表原子，棍代表原子之间的化学键。颜色约定用来区分不同元素。",
+    "verify": "\"原子\""
+  },
+  {
+    "id": "cnk_h036_q2",
+    "topicId": "cnk_h036",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "甲烷分子的空间形状是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "直线形且只有两个原子"
+      },
+      {
+        "key": "B",
+        "text": "平面正方形且含双键"
+      },
+      {
+        "key": "C",
+        "text": "正四面体"
+      },
+      {
+        "key": "D",
+        "text": "没有空间结构的离子晶体"
+      }
+    ],
+    "answer": "C",
+    "explanation": "甲烷中碳原子位于中心，四个氢原子指向四面体的四个顶点。",
+    "verify": "\"正四面体\""
+  },
+  {
+    "id": "cnk_h036_q3",
+    "topicId": "cnk_h036",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "搭建乙烯模型时，两个碳原子之间应当用？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一根棍表示离子键"
+      },
+      {
+        "key": "B",
+        "text": "金属键的长条"
+      },
+      {
+        "key": "C",
+        "text": "不连接，让碳原子分开"
+      },
+      {
+        "key": "D",
+        "text": "两根棍表示碳碳双键"
+      }
+    ],
+    "answer": "D",
+    "explanation": "乙烯有碳碳双键，模型上用两根棍连接两个碳原子。碳氢键仍用单棍。",
+    "verify": "\"两根棍表示碳碳双键\""
+  },
+  {
+    "id": "cnk_h036_q4",
+    "topicId": "cnk_h036",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "用模型比较乙烷和乙醇时，主要差别在于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "乙醇比乙烷多一个氧原子，并以羟基连在碳上"
+      },
+      {
+        "key": "B",
+        "text": "乙醇没有碳原子"
+      },
+      {
+        "key": "C",
+        "text": "乙烷一定含有羧基"
+      },
+      {
+        "key": "D",
+        "text": "二者原子种类和连接方式完全相同"
+      }
+    ],
+    "answer": "A",
+    "explanation": "乙醇是在乙基上连羟基。模型能看出官能团，不只是数原子个数。",
+    "verify": "\"乙醇比乙烷多一个氧原子，并以羟基连在碳上\""
+  },
+  {
+    "id": "cnk_h037_q1",
+    "topicId": "cnk_h037",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "实验活动「乙醇、乙酸的主要性质」要观察的对象是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "硫在空气中燃烧的全部产物质量"
+      },
+      {
+        "key": "B",
+        "text": "原电池的电极材料是否必须是塑料"
+      },
+      {
+        "key": "C",
+        "text": "乙醇和乙酸各自的特征反应"
+      },
+      {
+        "key": "D",
+        "text": "水泥怎样水化"
+      }
+    ],
+    "answer": "C",
+    "explanation": "这个实验围绕乙醇和乙酸，不是硫、原电池或水泥。",
+    "verify": "\"乙醇和乙酸各自的特征反应\""
+  },
+  {
+    "id": "cnk_h037_q2",
+    "topicId": "cnk_h037",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "少量钠放入乙醇中，可以观察到？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "立刻生成二氧化硫的刺激性黄烟"
+      },
+      {
+        "key": "B",
+        "text": "溶液一定变成强碱性的浓氢氧化钠固体"
+      },
+      {
+        "key": "C",
+        "text": "钠不反应并沉到容器底变成铜"
+      },
+      {
+        "key": "D",
+        "text": "有气体放出"
+      }
+    ],
+    "answer": "D",
+    "explanation": "钠与乙醇的羟基反应放出氢气。反应比钠与水缓和。",
+    "verify": "\"有气体放出\""
+  },
+  {
+    "id": "cnk_h037_q3",
+    "topicId": "cnk_h037",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "乙酸与碳酸钠反应放出气体，说明乙酸？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "酸性比碳酸强"
+      },
+      {
+        "key": "B",
+        "text": "是碱"
+      },
+      {
+        "key": "C",
+        "text": "没有氢离子"
+      },
+      {
+        "key": "D",
+        "text": "是单质硫"
+      }
+    ],
+    "answer": "A",
+    "explanation": "能与碳酸盐反应放出二氧化碳的酸，酸性强于碳酸。乙酸可以做到这一点。",
+    "verify": "\"酸性比碳酸强\""
+  },
+  {
+    "id": "cnk_h037_q4",
+    "topicId": "cnk_h037",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "做乙醇与乙酸的酯化时，比较合理的注意点是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把浓硫酸直接泼到皮肤上观察发热"
+      },
+      {
+        "key": "B",
+        "text": "用浓硫酸作催化剂，加热时要控制温度，导管不要插入液面以下以免倒吸"
+      },
+      {
+        "key": "C",
+        "text": "用嘴去尝刚生成的酯"
+      },
+      {
+        "key": "D",
+        "text": "在密闭容器里用明火猛烈加热全部试剂"
+      }
+    ],
+    "answer": "B",
+    "explanation": "酯化要浓硫酸和加热，但浓硫酸有腐蚀性，酯不能尝，加热要防止暴沸和倒吸。",
+    "verify": "\"用浓硫酸作催化剂，加热时要控制温度，导管不要插入液面以下以免倒吸\""
+  },
+  {
+    "id": "cnk_h038_q1",
+    "topicId": "cnk_h038",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "煤、石油、天然气都属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "金属单质"
+      },
+      {
+        "key": "B",
+        "text": "蛋白质"
+      },
+      {
+        "key": "C",
+        "text": "稀有气体单质"
+      },
+      {
+        "key": "D",
+        "text": "化石能源"
+      }
+    ],
+    "answer": "D",
+    "explanation": "它们由古代生物经过漫长地质过程形成，是目前主要的化石能源和化工原料。",
+    "verify": "\"化石能源\""
+  },
+  {
+    "id": "cnk_h038_q2",
+    "topicId": "cnk_h038",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "从海水中可以得到的常见化学品是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "氯化钠"
+      },
+      {
+        "key": "B",
+        "text": "纯净的聚乙烯颗粒"
+      },
+      {
+        "key": "C",
+        "text": "金属钠单质直接浮在海面"
+      },
+      {
+        "key": "D",
+        "text": "石英砂变成的蛋白质"
+      }
+    ],
+    "answer": "A",
+    "explanation": "海水含大量氯化钠，是晒盐和氯碱工业的重要资源。",
+    "verify": "\"氯化钠\""
+  },
+  {
+    "id": "cnk_h038_q3",
+    "topicId": "cnk_h038",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "石油分馏可以得到汽油、柴油等馏分。这些馏分主要是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "纯净的二氧化硅"
+      },
+      {
+        "key": "B",
+        "text": "不同沸点范围的烃的混合物"
+      },
+      {
+        "key": "C",
+        "text": "只含钠离子的单质"
+      },
+      {
+        "key": "D",
+        "text": "水泥熟料"
+      }
+    ],
+    "answer": "B",
+    "explanation": "分馏按沸点把石油分成不同馏分，成分仍是多种烃的混合物，不是无机盐或硅酸盐。",
+    "verify": "\"不同沸点范围的烃的混合物\""
+  },
+  {
+    "id": "cnk_h038_q4",
+    "topicId": "cnk_h038",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "开发利用化石能源时，比较合理的做法是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把全部煤炭在居民区露天燃烧，不必处理烟气"
+      },
+      {
+        "key": "B",
+        "text": "认为化石能源用之不尽，不必节约"
+      },
+      {
+        "key": "C",
+        "text": "提高利用率，同时发展清洁能源，减少污染物排放"
+      },
+      {
+        "key": "D",
+        "text": "把海水直接当作汽油使用"
+      }
+    ],
+    "answer": "C",
+    "explanation": "化石能源不可再生，燃烧还会产生污染物。要节约使用并控制排放。",
+    "verify": "\"提高利用率，同时发展清洁能源，减少污染物排放\""
+  },
+  {
+    "id": "cnk_h039_q1",
+    "topicId": "cnk_h039",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "生病时按医嘱服用对症药物，这种做法属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "化学品的合理使用"
+      },
+      {
+        "key": "B",
+        "text": "把药品当零食随意加量"
+      },
+      {
+        "key": "C",
+        "text": "把过期药倒进饮用水源"
+      },
+      {
+        "key": "D",
+        "text": "用工业酒精代替医用酒精给伤口消毒且不必稀释"
+      }
+    ],
+    "answer": "A",
+    "explanation": "药品要按剂量、按适应证使用。随意加量、污染水源和误用工业酒精都不是合理使用。",
+    "verify": "\"化学品的合理使用\""
+  },
+  {
+    "id": "cnk_h039_q2",
+    "topicId": "cnk_h039",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "农作物生长需要氮、磷、钾等养分。施用化肥时应当？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "越多越好，把整袋肥料一次堆在根上"
+      },
+      {
+        "key": "B",
+        "text": "按作物需要和说明适量施用"
+      },
+      {
+        "key": "C",
+        "text": "完全不用，因为植物不需要矿质养分"
+      },
+      {
+        "key": "D",
+        "text": "把肥料直接当作人的主食"
+      }
+    ],
+    "answer": "B",
+    "explanation": "肥料能补充养分，但过量会造成浪费、污染水体，也可能烧苗。",
+    "verify": "\"按作物需要和说明适量施用\""
+  },
+  {
+    "id": "cnk_h039_q3",
+    "topicId": "cnk_h039",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "大量氮肥随雨水进入湖泊，可能引起？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "湖水自动变成纯净蒸馏水"
+      },
+      {
+        "key": "B",
+        "text": "湖底立刻变成玻璃"
+      },
+      {
+        "key": "C",
+        "text": "水体富营养化"
+      },
+      {
+        "key": "D",
+        "text": "空气中氮气全部消失"
+      }
+    ],
+    "answer": "C",
+    "explanation": "过量氮、磷使藻类大量繁殖，消耗水中溶解氧，破坏水生态，这就是富营养化。",
+    "verify": "\"水体富营养化\""
+  },
+  {
+    "id": "cnk_h039_q4",
+    "topicId": "cnk_h039",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "家用清洁剂、消毒剂使用时，比较合理的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把含氯消毒液和洁厕剂随意混合以增强效果"
+      },
+      {
+        "key": "B",
+        "text": "用饮料瓶分装农药并放到餐桌上"
+      },
+      {
+        "key": "C",
+        "text": "认为化学品越多越安全"
+      },
+      {
+        "key": "D",
+        "text": "看清成分和用法，不随意混合不同清洁剂"
+      }
+    ],
+    "answer": "D",
+    "explanation": "不同清洁剂混合可能放出有毒气体。化学品要原包装、远离食品，按说明使用。",
+    "verify": "\"看清成分和用法，不随意混合不同清洁剂\""
+  },
+  {
+    "id": "cnk_h040_q1",
+    "topicId": "cnk_h040",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "绿色化学更强调的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "先大量排污，再花钱把河水染成别的颜色"
+      },
+      {
+        "key": "B",
+        "text": "从源头减少污染，让反应尽量把原子都用到产物里"
+      },
+      {
+        "key": "C",
+        "text": "禁止一切化学研究和生产"
+      },
+      {
+        "key": "D",
+        "text": "只看产品价格，不问废物去向"
+      }
+    ],
+    "answer": "B",
+    "explanation": "绿色化学的核心是预防：选用更安全的原料和反应，提高原子利用率。",
+    "verify": "\"从源头减少污染，让反应尽量把原子都用到产物里\""
+  },
+  {
+    "id": "cnk_h040_q2",
+    "topicId": "cnk_h040",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "回收废旧塑料、金属和玻璃，主要好处是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "让化石能源立刻再生"
+      },
+      {
+        "key": "B",
+        "text": "把高分子变成氧气"
+      },
+      {
+        "key": "C",
+        "text": "节约资源并减少废弃物"
+      },
+      {
+        "key": "D",
+        "text": "使海水自动淡化"
+      }
+    ],
+    "answer": "C",
+    "explanation": "回收利用能减少对新资源的开采，也减少垃圾。化石能源并不能因此再生。",
+    "verify": "\"节约资源并减少废弃物\""
+  },
+  {
+    "id": "cnk_h040_q3",
+    "topicId": "cnk_h040",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "火力发电烧煤时加脱硫装置，主要是为了？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "把煤全部变成氮气"
+      },
+      {
+        "key": "B",
+        "text": "提高煤的含硫量"
+      },
+      {
+        "key": "C",
+        "text": "让煤不再放热"
+      },
+      {
+        "key": "D",
+        "text": "减少二氧化硫排放，减轻酸雨"
+      }
+    ],
+    "answer": "D",
+    "explanation": "煤中的硫燃烧生成二氧化硫。脱硫可以减少酸性气体进入大气。",
+    "verify": "\"减少二氧化硫排放，减轻酸雨\""
+  },
+  {
+    "id": "cnk_h040_q4",
+    "topicId": "cnk_h040",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "比较符合绿色化学思想的生产思路是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "选择转化率高、副产物少、溶剂更安全的路线"
+      },
+      {
+        "key": "B",
+        "text": "不管产生多少有毒副产物，只要主产品能卖出去"
+      },
+      {
+        "key": "C",
+        "text": "把未处理的废水直接排进河流"
+      },
+      {
+        "key": "D",
+        "text": "用最危险的试剂，因为看起来反应更快"
+      }
+    ],
+    "answer": "A",
+    "explanation": "评价一条路线，要看原料、原子利用率、溶剂和废物。不是只看反应快慢或能否卖出产品。",
+    "verify": "\"选择转化率高、副产物少、溶剂更安全的路线\""
+  },
+  {
+    "id": "cnk_h041_q1",
+    "topicId": "cnk_h041",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "石油既是能源，也是有机化工的原料。这种认识属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "否定一切化学工业"
+      },
+      {
+        "key": "B",
+        "text": "把石油当成蛋白质食用"
+      },
+      {
+        "key": "C",
+        "text": "自然资源的开发利用"
+      },
+      {
+        "key": "D",
+        "text": "认为石油是金属单质"
+      }
+    ],
+    "answer": "C",
+    "explanation": "石油可以燃烧供能，也可以分馏、裂解得到乙烯等化工原料。",
+    "verify": "\"自然资源的开发利用\""
+  },
+  {
+    "id": "cnk_h041_q2",
+    "topicId": "cnk_h041",
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "施肥、用药都要按量、按说明，这种要求属于？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "越多越好"
+      },
+      {
+        "key": "B",
+        "text": "可以和食品混放在同一开口容器里"
+      },
+      {
+        "key": "C",
+        "text": "过期药品应当兑入饮料"
+      },
+      {
+        "key": "D",
+        "text": "化学品的合理使用"
+      }
+    ],
+    "answer": "D",
+    "explanation": "化学品有用，但滥用会危害健康和环境。",
+    "verify": "\"化学品的合理使用\""
+  },
+  {
+    "id": "cnk_h041_q3",
+    "topicId": "cnk_h041",
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "下列做法最符合绿色化学的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "改进反应，使更多原料原子进入目标产物，少排废物"
+      },
+      {
+        "key": "B",
+        "text": "把废气未经处理排入大气"
+      },
+      {
+        "key": "C",
+        "text": "用饮用水瓶分装农药"
+      },
+      {
+        "key": "D",
+        "text": "认为治理污染只是把废水换个地方倒掉"
+      }
+    ],
+    "answer": "A",
+    "explanation": "提高原子利用率、减少废物，是绿色化学的基本要求。",
+    "verify": "\"改进反应，使更多原料原子进入目标产物，少排废物\""
+  },
+  {
+    "id": "cnk_h041_q4",
+    "topicId": "cnk_h041",
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "综合本章，可持续发展要求同时做到的是？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "只用完资源、不必考虑后代"
+      },
+      {
+        "key": "B",
+        "text": "节约资源、合理使用化学品，并从源头减少污染"
+      },
+      {
+        "key": "C",
+        "text": "先污染，把治理全部留给以后"
+      },
+      {
+        "key": "D",
+        "text": "停止一切农业生产和医疗用药"
+      }
+    ],
+    "answer": "B",
+    "explanation": "可持续发展不是停止生产，而是在满足需要的同时保护环境和资源。",
+    "verify": "\"节约资源、合理使用化学品，并从源头减少污染\""
   }
 ]

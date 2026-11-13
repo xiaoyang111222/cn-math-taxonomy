@@ -1097,6 +1097,7 @@
       chemGrade.append(el('option', { value: '', text: '全部年级' }));
       chemGrade.append(el('option', { value: '9', text: '九年级' }));
       chemGrade.append(el('option', { value: '10', text: '必修第一册' }));
+      chemGrade.append(el('option', { value: '11', text: '必修第二册' }));
       var chemSample = $('pick-sample');
       if (chemSample) chemSample.textContent = '先看看「质量守恒定律」';
       document.title = '知识图谱 · 化学';

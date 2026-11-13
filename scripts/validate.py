@@ -102,13 +102,15 @@ CHEM_STD_CODES = {
     "SR": "物质的化学变化", "SS": "化学与社会·跨学科实践",
 }
 CHEM_STD_ID_RE = re.compile(r"^cks-2022:(SQ|SP|SC|SR|SS)\.(\d{2,})$")
-# 高中化学必修第一册。主题代码与 scripts/chem_hs_std.py 的 CODES 一致。
+# 高中化学必修第一、二册。主题代码与 scripts/chem_hs_std.py 的 CODES 一致。
 CHEM_HS_STD_CODES = {
     "EX": "化学科学与实验探究",
     "IN": "常见的无机物及其应用",
     "ST": "物质结构基础与化学反应规律",
+    "OR": "简单的有机化合物及其应用",
+    "SO": "化学与社会发展",
 }
-CHEM_HS_STD_ID_RE = re.compile(r"^cks-hs-2017:B1\.(EX|IN|ST)\.(\d{2,})$")
+CHEM_HS_STD_ID_RE = re.compile(r"^cks-hs-2017:B([12])\.(EX|IN|ST|OR|SO)\.(\d{2,})$")
 ZH_STD_ID_RE = re.compile(r"^ccs-2022:([1234])\.(PY|SZ|CY|JZ|YD|GS|XZ|WY|MZ)\.(\d{2,})$")
 EN_PROMPT_START_RE = re.compile(r"^(同一|上题|该题|同上)")
 EN_PROMPT_BAN_RE = re.compile(r"本知识点|课标|是否要求")
@@ -499,7 +501,7 @@ def check_topics(topics):
                     err("%s 初中化学 grade 必须是 9" % where)
             elif is_chemistry_senior_id(tid):
                 if g not in (10, 11, 12, 13, 14):
-                    err("%s 高中化学 grade 必须是 10–14（10 为必修第一册）" % where)
+                    err("%s 高中化学 grade 必须是 10–14（10 为必修第一册，11 为必修第二册）" % where)
             else:
                 err("%s 化学 id 必须是 cnk_j 或 cnk_h" % where)
         if subj == "chinese":
@@ -791,7 +793,7 @@ def report(ids, prereqs, dependents, n_hard, n_soft, n_en_hard, n_en_soft):
         print("化学按册：")
         cc = Counter(vol_label(t) for t in chem_core)
         for k in ["九上", "九下", "必修一", "必修二", "必修三", "选必一", "选必二"]:
-            if cc.get(k, 0) or k in ("九上", "九下", "必修一"):
+            if cc.get(k, 0) or k in ("九上", "九下", "必修一", "必修二"):
                 print("  %-8s %d" % (k, cc.get(k, 0)))
         print("化学先修边 %d 条" % N_CHEM_EDGES)
     if en_core:
@@ -1084,10 +1086,10 @@ def check_standards_file(std):
                 err("%s 化学课标 page_or_ref 必须是「待核」，不能编页码" % where)
         elif chemmhs:
             saw_chemistry_senior = True
-            code, num = chemmhs.group(1), int(chemmhs.group(2))
+            book, code, num = chemmhs.group(1), chemmhs.group(2), int(chemmhs.group(3))
             if it.get("domain") != CHEM_HS_STD_CODES[code]:
                 err("%s domain 与 id 中的主题代码不一致：%r" % (where, it.get("domain")))
-            key = ("cks-hs", code)
+            key = ("cks-hs", book, code)
             if num != last.get(key, 0) + 1:
                 err("%s 编号在主题内不连续（上一条为 %02d）" % (where, last.get(key, 0)))
             last[key] = num
@@ -1096,7 +1098,7 @@ def check_standards_file(std):
             if it.get("page_or_ref") != "待核":
                 err("%s 高中化学课标 page_or_ref 必须是「待核」，不能编页码" % where)
         else:
-            err("%s id 格式不合法（应为 cms-2022:<学段>.<NA|GG|SP|IP>.<NN>、cms-2017:H.<PRE|FUN|GA|PS|MI>.<NN>、ces-2022:<1|2|3>.<PH|VO|GR|FU|RW>.<NN> 、ces-2017:H.<B|S>.<PH|VO|GR|FU|RW>.<NN> 、ccs-2022:<1|2|3|4>.<PY|SZ|CY|JZ|YD|GS|XZ|WY|MZ>.<NN> 、css-2022:<1|2|3>.<WZ|SM|DQ|JG>.<NN> 、cds-2022:<1|2|3>.<LS|XX|JT|SH|GM|ZR>.<NN> 或 cds-2022:4.<JK|FZ|WH|GY|GQ>.<NN> 、chs-2022:<CA|CN|CM|WA|WN|WM>.<NN> 、cgs-2022:<EM|WG|CG>.<NN> 、cbs-2022:<BS|BD|BE|BP|BH|BG|BX>.<NN> 、cks-2022:<SQ|SP|SC|SR|SS>.<NN> 、cks-hs-2017:B1.<EX|IN|ST>.<NN> 、cps-2022:<1-5>.<二级>.<序号> 或 cps-hs-2017:<B|S><1-3>.<1-4|X>.<序号>）" % where)
+            err("%s id 格式不合法（应为 cms-2022:<学段>.<NA|GG|SP|IP>.<NN>、cms-2017:H.<PRE|FUN|GA|PS|MI>.<NN>、ces-2022:<1|2|3>.<PH|VO|GR|FU|RW>.<NN> 、ces-2017:H.<B|S>.<PH|VO|GR|FU|RW>.<NN> 、ccs-2022:<1|2|3|4>.<PY|SZ|CY|JZ|YD|GS|XZ|WY|MZ>.<NN> 、css-2022:<1|2|3>.<WZ|SM|DQ|JG>.<NN> 、cds-2022:<1|2|3>.<LS|XX|JT|SH|GM|ZR>.<NN> 或 cds-2022:4.<JK|FZ|WH|GY|GQ>.<NN> 、chs-2022:<CA|CN|CM|WA|WN|WM>.<NN> 、cgs-2022:<EM|WG|CG>.<NN> 、cbs-2022:<BS|BD|BE|BP|BH|BG|BX>.<NN> 、cks-2022:<SQ|SP|SC|SR|SS>.<NN> 、cks-hs-2017:B<1|2>.<EX|IN|ST|OR|SO>.<NN> 、cps-2022:<1-5>.<二级>.<序号> 或 cps-hs-2017:<B|S><1-3>.<1-4|X>.<序号>）" % where)
         for f in ("domain", "section", "text"):
             if not nonempty_str(it.get(f)):
                 err("%s 字段 %s 缺失或为空" % (where, f))

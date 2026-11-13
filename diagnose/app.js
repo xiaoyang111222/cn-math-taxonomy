@@ -216,7 +216,7 @@
     }
     if (subject === 'chemistry') {
       document.title = '诊断 · 化学';
-      if (gradeSel !== '九' && gradeSel !== '必修一') gradeSel = '九';
+      if (gradeSel !== '九' && !/^必修[一二]/.test(gradeSel)) gradeSel = '九';
       if (volSel === '全') volSel = '';
     }
     if (subject === 'chinese') {
@@ -725,7 +725,7 @@
           : subject === 'geography' || subject === 'biology'
           ? '七八'.split('').map(function (x) { return [x, x + '年级']; })
           : subject === 'chemistry'
-          ? [['九', '九年级'], ['必修一', '必修一']]
+          ? [['九', '九年级'], ['必修一', '必修一'], ['必修二', '必修二']]
           : subject === 'chinese'
           ? '一二三四五六七八九'.split('').map(function (x) { return [x, x + '年级']; })
           : subject === 'science'
@@ -1365,7 +1365,7 @@
         : subject === 'biology'
         ? '目标与学习路径上的知识点对应的《义务教育生物学课程标准（2022年版）》第四学段内容要求的公开转述。'
         : subject === 'chemistry'
-        ? '目标与学习路径上的知识点对应的《义务教育化学课程标准（2022年版）》五个学习主题，以及《普通高中化学课程标准（2017年版）》必修第一册相关内容要求的公开转述。'
+        ? '目标与学习路径上的知识点对应的《义务教育化学课程标准（2022年版）》五个学习主题，以及《普通高中化学课程标准（2017年版）》必修第一册、必修第二册相关内容要求的公开转述。'
         : '目标与学习路径上的知识点对应的《义务教育数学课程标准（2022年版）》内容要求（第一至第四学段）。'),
       keys.length ? keys.map(function (k) {
         const item = D.stdById[k];
@@ -1782,7 +1782,7 @@
             : subject === 'physics'
             ? '高中物理不拆上下册：' + grade + ' / ' + volume + '（用 grade=必修一 或 grade=选必一）'
             : subject === 'chemistry'
-            ? '高中化学不拆上下册：' + grade + ' / ' + volume + '（用 grade=必修一）'
+            ? '高中化学不拆上下册：' + grade + ' / ' + volume + '（用 grade=必修一 或 grade=必修二）'
             : '高中不拆上下册：' + grade + ' / ' + volume + '（用 grade=高一、grade=高二 或 grade=选必二）');
         }
         scope = seniorUrl[grade];

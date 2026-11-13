@@ -1547,23 +1547,42 @@ test('gradeTargets：一年级 = 一上 + 一下，七上只含七上；写法�
   assert.ok(g9chemYear.ids.every((id) => id.startsWith('cnk_') && RGQ.byId[id].grade === 9));
   assert.strictEqual(E.subjectOf(RGQ.byId[g9chem.ids[0]]), 'chemistry');
   const chemHs = topics.filter((t) => /^cnk_h\d/.test(String(t.id)));
-  assert.strictEqual(chemHs.length, 19);
-  assert.deepStrictEqual(chemHs.map((t) => t.id), Array.from({ length: 19 }, (_, i) => 'cnk_h' + String(i + 1).padStart(3, '0')));
-  chemHs.forEach((t) => {
+  assert.strictEqual(chemHs.length, 41);
+  assert.deepStrictEqual(chemHs.map((t) => t.id), Array.from({ length: 41 }, (_, i) => 'cnk_h' + String(i + 1).padStart(3, '0')));
+  const chemHsB1 = chemHs.filter((t) => Number(String(t.id).slice(5)) <= 19);
+  const chemHsB2 = chemHs.filter((t) => Number(String(t.id).slice(5)) >= 20);
+  assert.strictEqual(chemHsB1.length, 19);
+  assert.strictEqual(chemHsB2.length, 22);
+  chemHsB1.forEach((t) => {
     assert.strictEqual(t.subject, 'chemistry');
     assert.strictEqual(t.grade, 10);
     assert.strictEqual(t.semester, '上');
     assert.strictEqual(t.external, false);
     assert.ok(String(t.chapter).indexOf('必修一') === 0, t.id);
   });
+  chemHsB2.forEach((t) => {
+    assert.strictEqual(t.subject, 'chemistry');
+    assert.strictEqual(t.grade, 11);
+    assert.strictEqual(t.semester, '上');
+    assert.strictEqual(t.external, false);
+    assert.ok(String(t.chapter).indexOf('必修二') === 0, t.id);
+  });
   const chemB1 = E.gradeTargets(RGQ, '必修一', 'chemistry');
   assert.strictEqual(chemB1.label, '必修一（必修第一册）');
-  assert.deepStrictEqual(chemB1.ids, chemHs.map((t) => t.id));
+  assert.deepStrictEqual(chemB1.ids, chemHsB1.map((t) => t.id));
   chemB1.ids.forEach((id) => {
     assert.ok(id.startsWith('cnk_h') && RGQ.byId[id].grade === 10, id);
   });
   assert.deepStrictEqual(E.gradeTargets(RGQ, '必修第一册', 'chemistry').ids, chemB1.ids);
+  const chemB2 = E.gradeTargets(RGQ, '必修二', 'chemistry');
+  assert.strictEqual(chemB2.label, '必修二（必修第二册）');
+  assert.deepStrictEqual(chemB2.ids, chemHsB2.map((t) => t.id));
+  chemB2.ids.forEach((id) => {
+    assert.ok(id.startsWith('cnk_h') && RGQ.byId[id].grade === 11, id);
+  });
+  assert.deepStrictEqual(E.gradeTargets(RGQ, '必修第二册', 'chemistry').ids, chemB2.ids);
   assert.strictEqual(E.gradeTargets(RGQ, '必修一'), null);
+  assert.strictEqual(E.gradeTargets(RGQ, '必修二'), null);
   assert.deepStrictEqual(E.parseChapter('必修一 绪言'), { volume: '必修一', chapterNo: '绪言', chapterName: '', section: '' });
   assert.deepStrictEqual(E.parseChapter('必修一 第三章 铁 金属材料 3.1'), {
     volume: '必修一', chapterNo: '第三章', chapterName: '铁 金属材料', section: '3.1'
@@ -1573,6 +1592,18 @@ test('gradeTargets：一年级 = 一上 + 一下，七上只含七上；写法�
   });
   assert.deepStrictEqual(E.parseChapter('必修一 第四章 物质结构 元素周期律 实验活动3'), {
     volume: '必修一', chapterNo: '第四章', chapterName: '物质结构 元素周期律', section: '实验活动3'
+  });
+  assert.deepStrictEqual(E.parseChapter('必修二 第五章 化工生产中的重要非金属元素 5.1'), {
+    volume: '必修二', chapterNo: '第五章', chapterName: '化工生产中的重要非金属元素', section: '5.1'
+  });
+  assert.deepStrictEqual(E.parseChapter('必修二 第五章 化工生产中的重要非金属元素 整理与提升'), {
+    volume: '必修二', chapterNo: '第五章', chapterName: '化工生产中的重要非金属元素', section: '整理与提升'
+  });
+  assert.deepStrictEqual(E.parseChapter('必修二 第五章 化工生产中的重要非金属元素 实验活动4'), {
+    volume: '必修二', chapterNo: '第五章', chapterName: '化工生产中的重要非金属元素', section: '实验活动4'
+  });
+  assert.deepStrictEqual(E.parseChapter('必修二 第七章 有机化合物 实验活动9'), {
+    volume: '必修二', chapterNo: '第七章', chapterName: '有机化合物', section: '实验活动9'
   });
   assert.deepStrictEqual(E.parseChapter('必修一 第一章 运动的描述 1.1'), {
     volume: '必修一', chapterNo: '第一章', chapterName: '运动的描述', section: '1.1'

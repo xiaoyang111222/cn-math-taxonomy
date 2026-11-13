@@ -94645,5 +94645,684 @@
         "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
       }
     ]
+  },
+  {
+    "id": "cnk_h020",
+    "name": "硫及其化合物",
+    "domain": "物质的性质与应用",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第五章 化工生产中的重要非金属元素 5.1",
+    "type": "conceptual",
+    "description": "硫及其氧化物、硫酸是化工生产里常见的含硫物质。二氧化硫能使品红褪色，浓硫酸有吸水性和脱水性。",
+    "mastery_criteria": [
+      "能说出硫、二氧化硫和硫酸的主要性质",
+      "能判断含硫物质之间的常见转化是不是氧化还原"
+    ],
+    "diagnostic_question": {
+      "question": "硫在空气中燃烧，主要产物是？",
+      "answer": "二氧化硫"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.IN.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.ST.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h021",
+    "name": "氮及其化合物",
+    "domain": "物质的性质与应用",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第五章 化工生产中的重要非金属元素 5.2",
+    "type": "conceptual",
+    "description": "氮气化学性质不活泼。氨易溶于水显碱性，硝酸有酸性和氧化性，氮氧化物与酸雨、氮循环有关。",
+    "mastery_criteria": [
+      "能说出氮气、氨和硝酸的主要性质",
+      "能说明氮在自然界循环中的常见转化"
+    ],
+    "diagnostic_question": {
+      "question": "空气中含量最多、常温下很难直接参加反应的气体是？",
+      "answer": "氮气"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.IN.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.ST.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h022",
+    "name": "无机非金属材料",
+    "domain": "物质的性质与应用",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第五章 化工生产中的重要非金属元素 5.3",
+    "type": "application",
+    "description": "硅是地壳中含量很高的元素。二氧化硅、硅酸盐是玻璃、陶瓷、水泥等无机非金属材料的主要成分。",
+    "mastery_criteria": [
+      "能说出二氧化硅和硅酸盐的主要用途",
+      "能把玻璃、陶瓷、水泥与硅及其化合物对应起来"
+    ],
+    "diagnostic_question": {
+      "question": "普通玻璃、水泥、陶瓷都属于？",
+      "answer": "无机非金属材料"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.IN.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h023",
+    "name": "整理与提升",
+    "domain": "物质的性质与应用",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第五章 化工生产中的重要非金属元素 整理与提升",
+    "type": "reasoning",
+    "description": "综合第五章：硫及其化合物、氮及其化合物、无机非金属材料。不提前使用反应热、有机物或绿色化学的新概念。",
+    "mastery_criteria": [
+      "能把硫、氮的典型性质和硅酸盐材料放在一起判断",
+      "能指出本章哪些转化有化合价变化"
+    ],
+    "diagnostic_question": {
+      "question": "下列物质属于无机非金属材料的是？",
+      "answer": "普通玻璃"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.IN.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B2.IN.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B2.IN.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h024",
+    "name": "实验活动4 用化学沉淀法去除粗盐中的杂质离子",
+    "domain": "科学探究与化学实验",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第五章 化工生产中的重要非金属元素 实验活动4",
+    "type": "procedural",
+    "description": "实验活动 4 用沉淀法除去粗盐溶液中的钙离子、镁离子和硫酸根离子。试剂加入顺序要保证过量钡离子也能被后面的碳酸根除去。",
+    "mastery_criteria": [
+      "能说出要除去的主要杂质离子和常用试剂",
+      "能说明碳酸钠要在氯化钡之后加入的原因"
+    ],
+    "diagnostic_question": {
+      "question": "用化学沉淀法处理粗盐溶液，主要想除去的杂质离子通常包括？",
+      "answer": "钙离子、镁离子和硫酸根离子"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.EX.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.ST.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h025",
+    "name": "实验活动5 不同价态含硫物质的转化",
+    "domain": "科学探究与化学实验",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第五章 化工生产中的重要非金属元素 实验活动5",
+    "type": "procedural",
+    "description": "实验活动 5 通过氧化还原把不同价态的含硫物质互相转化，例如硫、硫化氢、二氧化硫、硫酸根之间的变化。",
+    "mastery_criteria": [
+      "能说出这个实验要观察的是不同价态含硫物质的转化",
+      "能根据化合价升降判断氧化剂和还原剂"
+    ],
+    "diagnostic_question": {
+      "question": "实验活动「不同价态含硫物质的转化」关注的是？",
+      "answer": "含硫物质怎样由一种化合价变成另一种化合价"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.EX.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B2.IN.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h026",
+    "name": "化学反应与能量变化",
+    "domain": "物质的化学变化",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第六章 化学反应与能量 6.1",
+    "type": "conceptual",
+    "description": "化学反应伴随着能量变化。放出热量的是放热反应，吸收热量的是吸热反应。原电池把化学能转化成电能。",
+    "mastery_criteria": [
+      "能区分放热反应和吸热反应",
+      "能说明原电池是把化学能转化成电能的装置"
+    ],
+    "diagnostic_question": {
+      "question": "木炭在空气中燃烧时，周围温度升高。这个反应属于？",
+      "answer": "放热反应"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.ST.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.ST.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h027",
+    "name": "化学反应的速率与限度",
+    "domain": "物质的化学变化",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第六章 化学反应与能量 6.2",
+    "type": "reasoning",
+    "description": "化学反应有快有慢，也有一定限度。浓度、温度、催化剂和固体接触面积都会影响速率。可逆反应达到平衡时正逆反应仍在进行。",
+    "mastery_criteria": [
+      "能指出影响化学反应速率的常见因素",
+      "能说明可逆反应有限度、平衡是动态的"
+    ],
+    "diagnostic_question": {
+      "question": "把块状大理石改成粉末再与稀盐酸反应，反应通常会？",
+      "answer": "变快，因为接触面积增大"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.ST.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h028",
+    "name": "整理与提升",
+    "domain": "物质的化学变化",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第六章 化学反应与能量 整理与提升",
+    "type": "reasoning",
+    "description": "综合第六章：化学反应与能量变化、化学反应的速率与限度。不提前使用有机物或绿色化学的新概念。",
+    "mastery_criteria": [
+      "能把放热吸热、原电池和速率限度放在一起判断",
+      "能指出改变条件怎样影响速率"
+    ],
+    "diagnostic_question": {
+      "question": "下列变化主要把化学能转化成电能的是？",
+      "answer": "原电池放电"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.ST.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B2.ST.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h029",
+    "name": "实验活动6 化学能转化成电能",
+    "domain": "科学探究与化学实验",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第六章 化学反应与能量 实验活动6",
+    "type": "procedural",
+    "description": "实验活动 6 用金属、电解质溶液和导线组成原电池，观察电流或灯泡，认识化学能向电能的转化。",
+    "mastery_criteria": [
+      "能说出这个实验要把化学能转化成电能",
+      "能指出原电池需要活泼性不同的电极和电解质溶液"
+    ],
+    "diagnostic_question": {
+      "question": "实验活动「化学能转化成电能」要做成的装置是？",
+      "answer": "原电池"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.EX.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B2.ST.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h030",
+    "name": "实验活动7 化学反应速率的影响因素",
+    "domain": "科学探究与化学实验",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第六章 化学反应与能量 实验活动7",
+    "type": "procedural",
+    "description": "实验活动 7 通过对照实验观察浓度、温度、催化剂或接触面积对反应快慢的影响。每次最好只改变一个条件。",
+    "mastery_criteria": [
+      "能说出这个实验要探究的是影响速率的因素",
+      "能说明对照实验要控制变量"
+    ],
+    "diagnostic_question": {
+      "question": "实验活动「化学反应速率的影响因素」主要观察的是？",
+      "answer": "改变某个条件后，反应变快还是变慢"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.EX.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B2.ST.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h031",
+    "name": "认识有机化合物",
+    "domain": "物质的组成与结构",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第七章 有机化合物 7.1",
+    "type": "conceptual",
+    "description": "有机化合物主要含碳，并以碳骨架和官能团决定性质。同系物组成相差若干个 CH2，同分异构体分子式相同结构不同。",
+    "mastery_criteria": [
+      "能指出有机化合物以碳骨架和官能团为认识线索",
+      "能区分同系物和同分异构体"
+    ],
+    "diagnostic_question": {
+      "question": "有机化合物在组成上最突出的特点是？",
+      "answer": "一定含有碳元素"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.OR.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B1.ST.06",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h032",
+    "name": "乙烯与有机高分子材料",
+    "domain": "物质的性质与应用",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第七章 有机化合物 7.2",
+    "type": "conceptual",
+    "description": "乙烯分子含碳碳双键，能发生加成反应，也能加聚成聚乙烯。聚乙烯是常见的有机高分子材料。",
+    "mastery_criteria": [
+      "能说出乙烯含有碳碳双键、能加成和加聚",
+      "能说明聚乙烯由乙烯加聚得到"
+    ],
+    "diagnostic_question": {
+      "question": "乙烯分子中的特征结构是？",
+      "answer": "碳碳双键"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.OR.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h033",
+    "name": "乙醇与乙酸",
+    "domain": "物质的性质与应用",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第七章 有机化合物 7.3",
+    "type": "conceptual",
+    "description": "乙醇含羟基，能燃烧，能被氧化成乙醛或乙酸，也能与钠反应放出氢气。乙酸含羧基，有酸性，能与乙醇发生酯化。",
+    "mastery_criteria": [
+      "能说出乙醇和乙酸的主要官能团和典型性质",
+      "能说明乙醇氧化、乙酸酸性以及酯化的基本事实"
+    ],
+    "diagnostic_question": {
+      "question": "乙醇分子中决定其主要化学性质的官能团是？",
+      "answer": "羟基"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.OR.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h034",
+    "name": "基本营养物质",
+    "domain": "物质的性质与应用",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第七章 有机化合物 7.4",
+    "type": "application",
+    "description": "糖类、油脂和蛋白质是基本营养物质。淀粉、葡萄糖属于糖类，油脂水解得到脂肪酸和甘油，蛋白质水解得到氨基酸。",
+    "mastery_criteria": [
+      "能指出糖类、油脂、蛋白质三类基本营养物质",
+      "能说明它们水解或特征反应的基本事实"
+    ],
+    "diagnostic_question": {
+      "question": "淀粉、葡萄糖都属于？",
+      "answer": "糖类"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.OR.04",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h035",
+    "name": "整理与提升",
+    "domain": "物质的组成与结构",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第七章 有机化合物 整理与提升",
+    "type": "reasoning",
+    "description": "综合第七章：认识有机化合物、乙烯与有机高分子材料、乙醇与乙酸、基本营养物质。不提前使用选择性必修才出现的反应历程。",
+    "mastery_criteria": [
+      "能用碳骨架和官能团判断本章典型有机物",
+      "能把加成、加聚、氧化、酯化和营养物质水解对应起来"
+    ],
+    "diagnostic_question": {
+      "question": "下列物质属于有机高分子的是？",
+      "answer": "聚乙烯"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.OR.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B2.OR.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B2.OR.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h036",
+    "name": "实验活动8 搭建球棍模型认识有机化合物分子结构的特点",
+    "domain": "科学探究与化学实验",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第七章 有机化合物 实验活动8",
+    "type": "procedural",
+    "description": "实验活动 8 用球棍模型搭建甲烷、乙烯等分子，观察碳的四条键、双键的连接方式和分子的空间形状。",
+    "mastery_criteria": [
+      "能说出球棍模型用来表示原子和化学键",
+      "能根据模型指出甲烷是四面体、乙烯含双键"
+    ],
+    "diagnostic_question": {
+      "question": "球棍模型里，球通常表示？",
+      "answer": "原子"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.EX.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B2.OR.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h037",
+    "name": "实验活动9 乙醇、乙酸的主要性质",
+    "domain": "科学探究与化学实验",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第七章 有机化合物 实验活动9",
+    "type": "procedural",
+    "description": "实验活动 9 观察乙醇和乙酸的主要性质，例如乙醇燃烧、与钠反应，乙酸的酸性以及二者在浓硫酸加热下的酯化。",
+    "mastery_criteria": [
+      "能说出这个实验要验证乙醇和乙酸的主要性质",
+      "能指出酯化需要浓硫酸并注意加热安全"
+    ],
+    "diagnostic_question": {
+      "question": "实验活动「乙醇、乙酸的主要性质」要观察的对象是？",
+      "answer": "乙醇和乙酸各自的特征反应"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.EX.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B2.OR.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h038",
+    "name": "自然资源的开发利用",
+    "domain": "化学与社会·跨学科实践",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第八章 化学与可持续发展 8.1",
+    "type": "application",
+    "description": "煤、石油、天然气是重要化石能源，海水中有氯化钠等资源，金属矿物经冶炼得到金属。开发利用要节约并减少污染。",
+    "mastery_criteria": [
+      "能举例说明化石能源、海水和矿物的化学利用",
+      "能说明合理开发、节约使用的必要性"
+    ],
+    "diagnostic_question": {
+      "question": "煤、石油、天然气都属于？",
+      "answer": "化石能源"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.SO.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h039",
+    "name": "化学品的合理使用",
+    "domain": "化学与社会·跨学科实践",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第八章 化学与可持续发展 8.2",
+    "type": "application",
+    "description": "药品、肥料、农药等化学品能服务生产和生活，但要按量、按说明使用，避免滥用和残留危害。",
+    "mastery_criteria": [
+      "能举例说明药品和肥料的合理使用",
+      "能指出过量使用化学品可能带来的问题"
+    ],
+    "diagnostic_question": {
+      "question": "生病时按医嘱服用对症药物，这种做法属于？",
+      "answer": "化学品的合理使用"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.SO.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h040",
+    "name": "环境保护与绿色化学",
+    "domain": "化学与社会·跨学科实践",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第八章 化学与可持续发展 8.3",
+    "type": "application",
+    "description": "环境保护要求减少污染物排放。绿色化学强调从源头减少污染、提高原子利用率，而不是先污染再治理。",
+    "mastery_criteria": [
+      "能说出绿色化学的基本思想",
+      "能把环境保护与减少排放、合理利用资源联系起来"
+    ],
+    "diagnostic_question": {
+      "question": "绿色化学更强调的是？",
+      "answer": "从源头减少污染，让反应尽量把原子都用到产物里"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.SO.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
+  },
+  {
+    "id": "cnk_h041",
+    "name": "整理与提升",
+    "domain": "化学与社会·跨学科实践",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修二 第八章 化学与可持续发展 整理与提升",
+    "type": "reasoning",
+    "description": "综合第八章：自然资源的开发利用、化学品的合理使用、环境保护与绿色化学。不引入未建的选择性必修概念。",
+    "mastery_criteria": [
+      "能把资源利用、化学品使用和绿色化学放在一起判断",
+      "能指出不符合可持续发展的做法"
+    ],
+    "diagnostic_question": {
+      "question": "石油既是能源，也是有机化工的原料。这种认识属于？",
+      "answer": "自然资源的开发利用"
+    },
+    "external": false,
+    "subject": "chemistry",
+    "standards": [
+      {
+        "id": "cks-hs-2017:B2.SO.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B2.SO.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      },
+      {
+        "id": "cks-hs-2017:B2.SO.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部 PDF。"
+      }
+    ]
   }
 ]

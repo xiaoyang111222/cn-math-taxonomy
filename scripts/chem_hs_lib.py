@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""高中化学草稿的登记和题目检查。章节、名称从 chem_hs_plan.py 取。
+"""高中化学草稿的登记和题目检查。章节、名称从 chem_hs_plan.py 取（含必修一、二）。
 
 题目规则与初中化学一致：每点 4 题，难度 basic、basic、standard、challenge。
 q1 必须是 basic 选择题。禁用词与 chem_lib.check_question 相同。
