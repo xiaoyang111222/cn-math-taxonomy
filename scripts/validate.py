@@ -1107,9 +1107,19 @@ def check_standards_file(std):
                 err("%s 编号在主题内不连续（上一条为 %02d）" % (where, last.get(key, 0)))
             last[key] = num
             if it.get("verbatim") is not False:
-                err("%s 高中化学课标必须显式标 verbatim:false（原文未逐页核对）" % where)
-            if it.get("page_or_ref") != "待核":
-                err("%s 高中化学课标 page_or_ref 必须是「待核」，不能编页码" % where)
+                err("%s 高中化学课标必须显式标 verbatim:false（对照官方 PDF 页码后仍是转述，不是逐字原文）" % where)
+            ref = it.get("page_or_ref")
+            if (
+                not isinstance(ref, str)
+                or not ref.startswith("2017年版印刷第")
+                or "PDF第" not in ref
+                or "转述" not in ref
+                or ref == "待核"
+                or "2020" in ref
+                or "2018年8月15日" in ref
+                or "以此为准" in ref
+            ):
+                err("%s 高中化学课标 page_or_ref 必须以「2017年版印刷第」开头，并含「PDF第」和「转述」，不得为「待核」或编造其他版本名" % where)
         else:
             err("%s id 格式不合法（应为 cms-2022:<学段>.<NA|GG|SP|IP>.<NN>、cms-2017:H.<PRE|FUN|GA|PS|MI>.<NN>、ces-2022:<1|2|3>.<PH|VO|GR|FU|RW>.<NN> 、ces-2017:H.<B|S>.<PH|VO|GR|FU|RW>.<NN> 、ccs-2022:<1|2|3|4>.<PY|SZ|CY|JZ|YD|GS|XZ|WY|MZ>.<NN> 、css-2022:<1|2|3>.<WZ|SM|DQ|JG>.<NN> 、cds-2022:<1|2|3>.<LS|XX|JT|SH|GM|ZR>.<NN> 或 cds-2022:4.<JK|FZ|WH|GY|GQ>.<NN> 、chs-2022:<CA|CN|CM|WA|WN|WM>.<NN> 、cgs-2022:<EM|WG|CG>.<NN> 、cbs-2022:<BS|BD|BE|BP|BH|BG|BX>.<NN> 、cks-2022:<SQ|SP|SC|SR|SS>.<NN> 、cks-hs-2017:<B1|B2|S1|S2|S3>.<EX|IN|ST|OR|SO|TH|DR|AQ|EL|AT|MO|CR|OS|HY|BM|PM>.<NN> 、cps-2022:<1-5>.<二级>.<序号> 或 cps-hs-2017:<B|S><1-3>.<1-4|X>.<序号>）" % where)
         for f in ("domain", "section", "text"):

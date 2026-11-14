@@ -143,23 +143,17 @@ def std_items():
         if num != seen.get(key, 0) + 1:
             raise SystemExit("课标编号不连续：%s" % tail)
         seen[key] = num
-        if book in ("B1", "B2"):
-            status = S.TEXT_STATUS
-        elif book == "S1":
-            status = S.S1_TEXT_STATUS
-        elif book == "S2":
-            status = S.S2_TEXT_STATUS
-        else:
-            status = S.S3_TEXT_STATUS
+        if tail not in S.PAGE_OR_REF:
+            raise SystemExit("缺少课标页码：%s" % tail)
         out.append({
             "id": SENIOR_STD_PREFIX + tail,
             "domain": S.CODES[code],
             "section": section,
             "clause": "(%d)" % num,
             "text": text,
-            "page_or_ref": "待核",
+            "page_or_ref": S.PAGE_OR_REF[tail],
             "verbatim": False,
-            "text_status": status,
+            "text_status": S.text_status_for(tail),
         })
     return out
 
@@ -306,7 +300,7 @@ def main():
         for it in standards.get("items", [])
         if str(it.get("id", "")).startswith(SENIOR_STD_PREFIX)
     ]
-    # 选必三首次写入时文件里是前 52 条；其后重跑已经有 64 条，必须原样保留。
+    # 选必三首次写入时文件里是前 52 条；其后应为 64 条。写出的课标必须与 std_items() 一致。
     if len(snap_hs_std) not in (52, 64):
         print("现有高中化学课标不是 52 或 64 条，实际 %d" % len(snap_hs_std), file=sys.stderr)
         return 1
@@ -523,38 +517,7 @@ def main():
         "issuer": "中华人民共和国教育部",
         "year": 2017,
         "stage": "普通高中（本阶段收录与必修第一册、必修第二册、选择性必修第一册、选择性必修第二册、选择性必修第三册相关的内容要求）",
-        "note": (
-            "条目是对必修第一册、必修第二册、选择性必修第一册、选择性必修第二册和选择性必修第三册相关内容要求的公开转述，不是逐页核对的原文。"
-            "verbatim 为 false，page_or_ref 为「待核」。"
-            "编号 cks-hs-2017:B1.<主题>.<序号>、cks-hs-2017:B2.<主题>.<序号>、cks-hs-2017:S1.<主题>.<序号>、"
-            "cks-hs-2017:S2.<主题>.<序号> 与 cks-hs-2017:S3.<主题>.<序号> 是本图谱编的，不是教育部原编号。"
-            "必修主题用 2017 年版必修课程的公开通称：化学科学与实验探究、常见的无机物及其应用、"
-            "物质结构基础与化学反应规律、简单的有机化合物及其应用、化学与社会发展。"
-            "选择性必修第一册主题用「化学反应原理」模块的公开通称：化学反应与热能，"
-            "化学反应的方向、速率和限度，水溶液中的离子反应与平衡，化学反应与电能。"
-            "选择性必修第二册主题用「物质结构与性质」模块的公开通称：原子结构与性质，"
-            "分子结构与性质，聚集状态与晶体结构。"
-            "选择性必修第三册主题用「有机化学基础」模块的公开通称：有机化合物的组成与结构，"
-            "烃及其衍生物的性质与应用，生物大分子，合成高分子。"
-            "后记可见的依据是教育部《普通高中化学课程标准（2017年版）》，2019 年经国家教材委员会专家委员会审核通过。"
-            "封面与后记均未印「2020年修订」，不得写成 2020 修订本。"
-            "教材是普通高中教科书·化学必修第一册、必修第二册、选择性必修1 化学反应原理、"
-            "选择性必修2 物质结构与性质、选择性必修3 有机化学基础，人民教育出版社，"
-            "课程教材研究所、化学课程教材研究开发中心编著。"
-            "必修第一册总主编王晶、郑长龙；本册主编王晶、毕华林。"
-            "ISBN 978-7-107-33574-7。contentId 5cd19072-e40d-4a73-8580-7b7ada5d4005。"
-            "必修第二册 ISBN 978-7-107-33575-4。contentId 07f7d663-a867-4eb6-ad39-03b55dbd4a65。"
-            "第二册版权页列有总主编、本册主编等，但核验时未见清晰姓名，不编造。"
-            "选择性必修第一册总主编王晶、郑长龙；本册主编范楼珍、吴海建；副主编乔国才、周业虹。"
-            "ISBN 978-7-107-34602-6。contentId 3502fe81-b23e-4f68-aa3d-7921e7932ec9。"
-            "选择性必修第二册总主编王晶、郑长龙；本册主编吴国庆、李俊。"
-            "ISBN 978-7-107-34603-3。contentId b82cefe7-d631-4bde-baf9-352ca033cba4。"
-            "选择性必修第三册总主编王晶、郑长龙；本册主编杜宝山；副主编郭震。"
-            "ISBN 978-7-107-34604-0。contentId c561d8ee-7c06-4cb1-9a4d-e34036f02d53。"
-            "五册版权页均未见版次、印次或出版年月，不编造。"
-            "印刷目录建 19+22+23+14+24 个知识点；附录、元素周期表、全章复习、综合专题、高考复习和栏目索引不建点。"
-            "未下载教材 PDF，印刷页码不写入知识点或题目。"
-        ),
+        "note": S.SENIOR_NOTE,
     }
 
     n_hard = sum(1 for e in reduced if e["strength"] == "hard")
@@ -768,18 +731,14 @@ def main():
         for it in again_s.get("items", [])
         if str(it.get("id", "")).startswith(SENIOR_STD_PREFIX)
     ]
-    if len(snap_hs_std) == 64:
-        if again_hs_std != snap_hs_std:
-            print("已有 64 条高中化学课标被改动", file=sys.stderr)
-            return 1
-    else:
-        if again_hs_std[:52] != snap_hs_std:
-            print("已有 52 条高中化学课标被改动", file=sys.stderr)
-            return 1
-        new_std = again_hs_std[52:]
-        if len(new_std) != 12 or any(not str(row[0]).startswith("cks-hs-2017:S3.") for row in new_std):
-            print("新增课标不是 12 条 S3，实际 %d" % len(new_std), file=sys.stderr)
-            return 1
+    # 课标以当前 std_items() 为准。复跑编译会写回已核页码，不因这次有意修订而失败。
+    expected_hs_std = [
+        (it.get("id"), it.get("text"), it.get("text_status"), it.get("verbatim"), it.get("page_or_ref"))
+        for it in std_items()
+    ]
+    if again_hs_std != expected_hs_std:
+        print("高中化学课标与当前 std_items() 不一致", file=sys.stderr)
+        return 1
     # 初中点的名称仍能对上硬边理由里点到的对象，避免连错号。
     for e in reduced:
         pid = e["prerequisiteId"]
