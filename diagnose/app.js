@@ -397,6 +397,11 @@
     }
     CC.saveRecord(cur.id, rec);
   }
+  function wrongbookLink() {
+    if (!window.CnmWrong) return null;
+    const cur = CC.current();
+    return h('a', { class: 'btn', id: 'btn-wrongbook', href: '../wrongbook/', text: '错题本（' + window.CnmWrong.count(cur ? cur.id : 'guest') + '）' });
+  }
   function noteBlind(sum) {
     if (demo || !sum || !sum.asked || !window.CnmBlind) return;
     window.CnmBlind.noteResult({
@@ -505,8 +510,32 @@
     render();
   }
 
+  /* 错题本收集：只在真实用户点了「下一题 / 对 / 不对 / 不会」后进来（commit 的所有调用点都是按钮）。
+   * 演示模式的模拟学生走 runDemo -> E.applyAnswer，不经过这里；这里再用 demo 标志兜底。 */
+  function collectWrong(item, result) {
+    if (demo || result === 'correct' || !window.CnmWrong) return;
+    const q = item.question;
+    if (!q || !q.id) return;
+    const cur = CC.current();
+    const skipped = result === 'skip';
+    window.CnmWrong.record({
+      childId: cur ? cur.id : 'guest',
+      qid: q.id,
+      topicId: item.topicId,
+      topic: nameOf(item.topicId),
+      subject: subject,
+      prompt: q.prompt,
+      choices: q.type === 'choice' && q.choices ? q.choices.map(function (c) { return { key: c.key, text: c.text || '' }; }) : null,
+      answer: answerText(q),
+      explanation: q.explanation || '',
+      chosen: skipped ? '' : (q.type === 'choice' ? answerOfKey(q, ui.answer) : String(ui.answer || '').trim()),
+      kind: skipped ? 'skip' : 'wrong'
+    });
+  }
+
   function commit(result) {
     const item = E.nextItem(D.graph, session);
+    collectWrong(item, result);
     session = E.applyAnswer(D.graph, session, item.topicId, result, { text: ui.answer, prompt: item.question.prompt });
     markSeen(item.question.id);
     resetUi();
@@ -1232,6 +1261,7 @@
         h('button', { class: 'primary', id: 'btn-share', onclick: openShare }, '生成分享图'),
         h('button', { id: 'btn-export', onclick: exportJson }, '导出 JSON'),
         h('button', { id: 'btn-print', onclick: printPage }, '打印 / 另存为 PDF'),
+        wrongbookLink(),
         h('button', { onclick: function () { if (confirm('重新开始会清除当前进度，确定吗？')) restart(); } }, '重新开始'),
         session.answers.length ? h('button', { onclick: function () { rebuild(session.answers.slice(0, -1)); } }, '撤销上一题') : null));
     page.append(summaryCard);
