@@ -27,6 +27,8 @@ cp -a "$ROOT/assets" "$DIST/"
 cp -a "$ROOT/explore" "$DIST/"
 cp -a "$ROOT/diagnose" "$DIST/"
 cp -a "$ROOT/children" "$DIST/"
+cp -a "$ROOT/goods" "$DIST/"
+cp -a "$ROOT/wrongbook" "$DIST/"
 rm -f "$DIST/diagnose/README.md"
 cp "$ROOT/data/topics.json" \
    "$ROOT/data/dependencies.json" \

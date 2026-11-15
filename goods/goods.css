@@ -1,0 +1,16 @@
+/* 「学习好物」页样式：配色用站点变量（assets/site.css），版式对齐首页卡片。 */
+.goods-lede { max-width: 46em; }
+.goods-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; margin: 12px 0 8px; }
+.goods-item { background: var(--bg-elev, #fff); border: 1px solid var(--line, #e3e6ed); border-radius: var(--radius, 14px); padding: 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.goods-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.goods-title { font-size: 1.05rem; margin: 0; line-height: 1.35; }
+.goods-tag { font-size: .78rem; padding: 1px 7px; border-radius: 999px; background: var(--brand-soft, #e6f4f1); color: var(--brand-strong, #0c574e); white-space: nowrap; }
+.goods-desc { color: var(--muted, #5c6370); font-size: .92rem; margin: 8px 0 0; flex: 1; }
+.goods-meta { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+.goods-price { font-size: .85rem; color: var(--muted, #5c6370); }
+.goods-ad { font-size: .72rem; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--line, #e3e6ed); color: var(--muted, #5c6370); }
+.goods-row { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.goods-btn { display: inline-block; padding: 7px 16px; border-radius: 8px; font-weight: 600; font-size: .92rem; text-decoration: none; border: 1px solid var(--brand-strong, #0c574e); color: var(--brand-strong, #0c574e); background: #fff; }
+.goods-btn:hover { background: var(--brand-soft, #e6f4f1); }
+.goods-soon { font-size: .88rem; color: var(--muted, #5c6370); border: 1px dashed var(--line, #e3e6ed); padding: 6px 14px; border-radius: 8px; }
+.goods-note { color: var(--muted, #5c6370); font-size: .88rem; max-width: 46em; }
