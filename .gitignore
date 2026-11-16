@@ -1,4 +1,5 @@
 node_modules/
+kp-out/
 .DS_Store
 *.log
 claude*.log
