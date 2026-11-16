@@ -30,7 +30,11 @@ const REQUIRED = [
   './data/dependencies.json',
   './data/cn-curriculum-standards.json',
   './data/questions.json',
-  './data/id-aliases.json'
+  './data/id-aliases.json',
+  './kp/index.html',
+  './kp/cnm_p001.html',
+  './sitemap.xml',
+  './robots.txt'
 ];
 const FAKE_TOKEN = 'test-token-not-for-live';
 let passed = 0;
@@ -117,7 +121,7 @@ function runScript(extraEnv) {
   fs.mkdirSync(workTmp, { recursive: true });
   const env = {
     ...process.env,
-    PATH: stubDir + path.delimiter + '/usr/bin:/bin',
+    PATH: stubDir + path.delimiter + path.dirname(process.execPath) + path.delimiter + '/usr/bin:/bin',
     PAGES_STUB_LOG: log,
     PAGES_STUB_EXIT: '0',
     TMPDIR: workTmp,
