@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""根据 TOC 生成 mor_g1.py…mor_g6.py（含每课 4 道选择题）。"""
+"""根据 TOC 生成 mor_g1.py…mor_g6.py（含每课 4 道选择题）。
+
+注意：本脚本按课名关键词套用同一组模板题，曾造成 122 课题目完全相同（见 issue #46）。
+mor_g1.py…mor_g6.py 中的题目已逐课重写，重新运行本脚本会覆盖这些题目，不要再用它生成题目。
+"""
 from __future__ import annotations
 import json, os, re, textwrap
 
