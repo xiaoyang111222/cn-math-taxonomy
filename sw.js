@@ -3,7 +3,7 @@
  * 改了 SHELL 或 DATA 列表、或数据结构变了，就把 VERSION 加一。 */
 'use strict';
 
-var VERSION = 'v2';
+var VERSION = 'v3';
 var CACHE = 'cnm-pwa-' + VERSION;
 var SCOPE = self.registration.scope;
 
@@ -44,6 +44,9 @@ var DATA = [
   'data/topics.json',
   'data/dependencies.json',
   'data/cn-curriculum-standards.json',
+  'data/questions-math.json',
+  'data/questions-english.json',
+  'data/questions-physics.json',
   'data/questions.json',
   'data/id-aliases.json'
 ];

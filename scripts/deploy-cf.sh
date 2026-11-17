@@ -9,6 +9,9 @@ export CLOUDFLARE_ACCOUNT_ID="$ACCOUNT_ID"
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-/tmp/xdg-cache}"
 mkdir -p "$XDG_CACHE_HOME" "$DIST/data"
 
+# 题库学科分片：每次部署前从 questions.json 重新生成
+python3 "$ROOT/scripts/split_questions.py"
+
 cp "$ROOT/index.html" "$ROOT/sw.js" "$ROOT/manifest.webmanifest" "$DIST/"
 [[ -f "$ROOT/.nojekyll" ]] && cp "$ROOT/.nojekyll" "$DIST/"
 cp -a "$ROOT/assets" "$DIST/"
@@ -20,6 +23,9 @@ cp "$ROOT/data/topics.json" \
    "$ROOT/data/dependencies.json" \
    "$ROOT/data/cn-curriculum-standards.json" \
    "$ROOT/data/questions.json" \
+   "$ROOT/data/questions-math.json" \
+   "$ROOT/data/questions-english.json" \
+   "$ROOT/data/questions-physics.json" \
    "$ROOT/data/id-aliases.json" \
    "$DIST/data/"
 

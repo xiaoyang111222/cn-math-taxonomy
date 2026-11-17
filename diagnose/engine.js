@@ -4,7 +4,10 @@
  *         createSession(graph, targets, {limit, seed, avoid}) -> session   （会话是可 JSON 序列化的纯数据）
  *         nextQuestion(graph, session) -> topicId | null     （下一个要考的知识点）
  *         nextItem(graph, session) -> {topicId, question, attempt} | null   （要出的具体题目；attempt 为 1 或 2）
- *         applyAnswer(graph, session, id, 'correct'|'wrong'|'skip', {text}) -> 新 session（不修改入参）
+ *         applyAnswer(graph, session, id, 'correct'|'wrong'|'skip', {text, durationMs, hintsUsed, choice, errorTag}) -> 新 session（不修改入参）
+ *           durationMs：选择题第 1 题 2.5 秒内答对 -> 待复核，第 2 题优先 numeric 验证；hintsUsed>0 后答对 -> shaky；
+ *           choice/errorTag：选中干扰项的错因（concept/procedural/careless），两次都是 careless -> shaky 不回溯
+ *         summarize(...).circuitBroken / circuitBreakRootId：同一回溯分支连续 3 个点（6 题）weak -> 熔断，nextQuestion 返回 null
  *         summarize(graph, session) -> 结果（根因、学习路径、掌握/不稳/薄弱/未测）
  *         gradeTargets(graph, '一年级'|'七上'|'高一'|'选必二', subject?) -> {ids, volumes, label} | null
  *           默认 subject 为 math，不把英语卷进数学的整册；'english' 只取英语（含九全），'physics' 只取物理（八上、八下、九全），'all' 不限学科
@@ -142,6 +145,9 @@
   /* ------------------------------------------------------------------ 会话 */
 
   const RESULTS = { correct: 1, wrong: 1, skip: 1 };
+  const ERROR_TAGS = { concept: 1, procedural: 1, careless: 1 };
+  const GUESS_MS = 2500;      // 选择题第 1 题在这个时间内答对 = 待复核
+  const CIRCUIT_RUN = 3;      // 同一回溯分支连续这么多个点 weak（累计 6 题）就熔断
   const DEFAULT_LIMIT = 16;
   const SCREEN_LIMIT = 40;
 
@@ -163,7 +169,8 @@
       targets: ts, limit: limit, order: sub.nodes, status: {}, stack: stack, answers: [], attempts: {},
       mode: screen ? 'screen' : 'target', scope: screen ? ts.slice() : null,
       seed: opts.seed == null ? 'default' : String(opts.seed),
-      avoid: Array.from(new Set(opts.avoid || []))
+      avoid: Array.from(new Set(opts.avoid || [])),
+      circuitBreaker: opts.circuitBreaker !== false
     };
   }
 
@@ -173,7 +180,8 @@
     return {
       targets: s.targets.slice(), limit: s.limit, order: s.order, stack: s.stack.slice(),
       status: Object.assign({}, s.status), answers: s.answers.slice(), attempts: attempts,
-      seed: s.seed, avoid: s.avoid, mode: s.mode, scope: s.scope ? s.scope.slice() : null
+      seed: s.seed, avoid: s.avoid, mode: s.mode, scope: s.scope ? s.scope.slice() : null,
+      circuitBreaker: s.circuitBreaker !== false
     };
   }
 
@@ -224,6 +232,19 @@
       cand = freshFirst(pool);
       const nonAdv = cand.filter(function (q) { return rankOf(q) < 2; });
       if (nonAdv.length) cand = nonAdv;
+    } else if ((session.attempts[id] || [])[0] && session.attempts[id][0].review) {
+      // 第一题是秒答对的选择题（可能是猜的）：第二题用来复核，优先 numeric（猜不中），同级或更容易优先
+      const first = all.find(function (q) { return q.id === tried[0]; });
+      const r0 = first ? rankOf(first) : 1;
+      const num = pool.filter(function (q) { return q.type === 'numeric'; });
+      const tiers = [
+        num.filter(function (q) { return rankOf(q) <= r0; }),
+        num,
+        pool.filter(function (q) { return q.type !== 'choice' && rankOf(q) <= r0; }),
+        pool.filter(function (q) { return rankOf(q) <= r0; }),
+        pool
+      ];
+      cand = freshFirst(tiers.find(function (t) { return t.length; }));
     } else {
       const first = all.find(function (q) { return q.id === tried[0]; });
       const r0 = first ? rankOf(first) : 1;
@@ -254,28 +275,55 @@
   function applyAnswer(graph, session, id, result, extra) {
     if (!RESULTS[result]) throw new Error('作答结果必须是 correct / wrong / skip');
     if (!graph.byId[id]) throw new Error('未知知识点：' + id);
+    extra = extra || {};
     const s = cloneSession(session);
     if (s.status[id]) { delete s.status[id]; s.attempts[id] = []; } // 对已有结论的点重新作答 = 重新开始
     const prev = s.attempts[id] || [];
     const q = pickQuestion(graph, s, id, prev.length + 1);
     const rec = { id: id, qid: q ? q.id : null, result: result };
-    if (extra && extra.text != null && extra.text !== '') rec.text = String(extra.text);
+    if (extra.text != null && extra.text !== '') rec.text = String(extra.text);
+    const ms = Number(extra.durationMs);
+    if (extra.durationMs != null && isFinite(ms) && ms >= 0) rec.ms = Math.round(ms);
+    const hints = Math.max(0, Math.floor(Number(extra.hintsUsed) || 0));
+    if (hints) rec.hints = hints;
+    const tag = result === 'correct' ? null : errorTagOf(q, extra);
+    if (tag) rec.tag = tag;
     s.answers.push(rec);
-    s.attempts[id] = prev.concat([{ qid: rec.qid, result: result }]);
-    const nth = s.attempts[id].length;
-    if (result === 'correct') {
-      if (nth === 1) {
-        s.status[id] = { s: 'mastered', src: 'direct' };
-        ancestorSet(graph, id).forEach(function (a) {
-          if (!s.status[a]) s.status[a] = { s: 'mastered', src: 'inferred' };
-        });
-      } else {
-        s.status[id] = { s: 'shaky', src: 'direct' };
-      }
+    const att = { qid: rec.qid, result: result };
+    if (hints) att.hints = hints;
+    if (tag) att.tag = tag;
+    const nth = prev.length + 1;
+    const first = prev[0];
+    // 盲猜防护：第 1 题是选择题、不靠提示、在 GUESS_MS 内答对 -> 先不下结论（待复核），下一题优先出 numeric 验证
+    if (result === 'correct' && nth === 1 && !hints && q && q.type === 'choice' && rec.ms != null && rec.ms < GUESS_MS &&
+        pickQuestion(graph, Object.assign({}, s, { attempts: Object.assign({}, s.attempts, { [id]: [Object.assign({ review: true }, att)] }) }), id, 2)) {
+      att.review = true;
+    }
+    s.attempts[id] = prev.concat([att]);
+    const confirmMastery = function () {
+      s.status[id] = { s: 'mastered', src: 'direct' };
+      ancestorSet(graph, id).forEach(function (a) {
+        if (!s.status[a]) s.status[a] = { s: 'mastered', src: 'inferred' };
+      });
+    };
+    if (att.review) {
+      // 待复核：等第二题
+    } else if (result === 'correct') {
+      if (hints) s.status[id] = { s: 'shaky', src: 'direct', cause: 'hint' };       // 靠提示才做对：不稳，不推断祖先
+      else if (nth === 1) confirmMastery();
+      else if (first && first.review) confirmMastery();                              // 复核通过：确认掌握
+      else s.status[id] = { s: 'shaky', src: 'direct' };
+    } else if (first && first.review) {
+      s.status[id] = { s: 'shaky', src: 'direct', cause: 'guess' };                  // 秒答对、复核没过：多半是猜的
     } else if (nth === 1 && pickQuestion(graph, s, id, 2)) {
       // 第一题没过：等第二题再下结论
+    } else if (s.attempts[id].every(function (a) { return a.tag === 'careless'; })) {
+      // 错因分流：每次都错在“粗心”型干扰项上 -> 不稳，不向先修回溯
+      s.status[id] = { s: 'shaky', src: 'direct', cause: 'careless' };
     } else {
-      s.status[id] = { s: 'weak', src: 'direct' };
+      const tags = s.attempts[id].map(function (a) { return a.tag; });
+      const cause = tags.indexOf('concept') >= 0 ? 'concept' : tags.indexOf('procedural') >= 0 ? 'procedural' : null;
+      s.status[id] = cause ? { s: 'weak', src: 'direct', cause: cause } : { s: 'weak', src: 'direct' };
       const scope = s.scope ? new Set(s.scope) : null;
       const push = graph.prereqs[id]
         .map(function (p) { return p.id; })
@@ -288,6 +336,7 @@
 
   function nextQuestion(graph, session) {
     if (session.answers.length >= session.limit) return null;
+    if (session.circuitBreaker !== false && circuitState(graph, session).broken) return null;
     for (let i = 0; i < session.stack.length; i++) {
       const id = session.stack[i];
       if (!session.status[id] && isTestable(graph, id)) return id;
@@ -303,17 +352,56 @@
     return q ? { topicId: id, question: q, attempt: attempt } : null;
   }
 
-  /** 由作答记录重建会话（用于刷新恢复、撤销、更正）。 */
+  /** 由作答记录重建会话（用于刷新恢复、撤销、更正）。作答记录里的 ms / hints / tag 会一并重放。 */
   function replay(graph, targets, answers, opts) {
     let s = createSession(graph, targets, opts);
-    answers.forEach(function (a) { s = applyAnswer(graph, s, a.id, a.result, { text: a.text }); });
+    answers.forEach(function (a) {
+      s = applyAnswer(graph, s, a.id, a.result, { text: a.text, durationMs: a.ms, hintsUsed: a.hints, errorTag: a.tag });
+    });
     return s;
+  }
+
+  /** 选错项的错因：extra.errorTag 优先；否则按 extra.choice（选项 key）查 choices[].errorTag。 */
+  function errorTagOf(q, extra) {
+    if (extra && ERROR_TAGS[extra.errorTag]) return extra.errorTag;
+    if (!q || !Array.isArray(q.choices) || !extra || extra.choice == null) return null;
+    const c = q.choices.find(function (x) { return x.key === extra.choice; });
+    return c && ERROR_TAGS[c.errorTag] ? c.errorTag : null;
+  }
+
+  /**
+   * 连续受挫熔断：按作答顺序，连续 CIRCUIT_RUN 个知识点（每个都做满 2 题、都判 weak），
+   * 而且后一个是前一个的直接先修（同一条回溯分支一路往下），就熔断。
+   * rootId = 这条分支里最底层（最基础）的那个点，结果页建议从它补起。
+   */
+  function circuitState(graph, session) {
+    const runs = [];
+    session.answers.forEach(function (a) {
+      const last = runs[runs.length - 1];
+      if (last && last.id === a.id) last.n++;
+      else runs.push({ id: a.id, n: 1 });
+    });
+    const isWeak2 = function (r) {
+      const st = session.status[r.id];
+      return r.n >= 2 && st && st.s === 'weak' && st.src === 'direct';
+    };
+    let chain = [];
+    for (let i = 0; i < runs.length; i++) {
+      const r = runs[i];
+      if (!isWeak2(r)) { chain = []; continue; }
+      const prev = chain[chain.length - 1];
+      if (prev && graph.prereqs[prev].some(function (p) { return p.id === r.id; })) chain.push(r.id);
+      else chain = [r.id];
+      if (chain.length >= CIRCUIT_RUN) return { broken: true, rootId: r.id, chain: chain.slice() };
+    }
+    return { broken: false, rootId: null, chain: [] };
   }
 
   /** 状态：mastered / shaky / weak / unknown。只答错一题就遇到题量上限的点按 weak 算（见 isUnconfirmed）。 */
   function statusOf(session, id) {
     const st = session.status[id];
     if (st) return st.s;
+    if (isPendingReview(session, id)) return 'shaky';
     return isUnconfirmed(session, id) ? 'weak' : 'unknown';
   }
 
@@ -321,6 +409,12 @@
   function isUnconfirmed(session, id) {
     const a = session.attempts[id];
     return !session.status[id] && !!a && a.length === 1 && a[0].result !== 'correct';
+  }
+
+  /** 第一题秒答对、等待复核，但题量用完没来得及复核的点（按不稳算）。 */
+  function isPendingReview(session, id) {
+    const a = session.attempts[id];
+    return !session.status[id] && !!a && a.length === 1 && !!a[0].review;
   }
 
   /* ------------------------------------------------------------------ 结果 */
@@ -378,6 +472,11 @@
 
     const pending = session.stack.filter(function (id) { return !session.status[id] && isTestable(graph, id); });
     const next = nextQuestion(graph, session);
+    const circuit = session.circuitBreaker !== false ? circuitState(graph, session) : { broken: false, rootId: null, chain: [] };
+    // 错因：每个直接判定的点为什么是这个状态（hint 提示后才对 / guess 秒答复核没过 / careless / procedural / concept）
+    const causes = {};
+    nodes.forEach(function (id) { const x = session.status[id]; if (x && x.cause) causes[id] = x.cause; });
+    const pendingReview = nodes.filter(function (id) { return isPendingReview(session, id); });
     return {
       mode: session.mode || 'target',
       targets: session.targets.slice(),
@@ -386,7 +485,9 @@
       finished: next === null,
       limitReached: session.answers.length >= session.limit && pending.length > 0,
       mastered: mastered, shaky: shaky, weak: weak, unconfirmed: unconfirmed, untested: untested,
-      roots: roots, path: path
+      roots: roots, path: path,
+      causes: causes, pendingReview: pendingReview,
+      circuitBroken: circuit.broken, circuitBreakRootId: circuit.rootId, circuitChain: circuit.chain
     };
   }
 
@@ -955,6 +1056,10 @@
     pickQuestion: pickQuestion,
     nextItem: nextItem,
     isUnconfirmed: isUnconfirmed,
+    isPendingReview: isPendingReview,
+    circuitState: circuitState,
+    errorTagOf: errorTagOf,
+    GUESS_MS: GUESS_MS,
     mulberry32: mulberry32,
     judgeQuestion: judgeQuestion,
     ancestors: ancestors,

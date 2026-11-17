@@ -1181,7 +1181,8 @@ console.log('带题库的真实诊断');
 
 /** 学生：known 一次答对；flaky 第一题错第二题对；其余两题都错 */
 function simulateBank(targets, known, flaky, limit, seed) {
-  let s = E.createSession(RGQ, targets, { limit: limit, seed: seed == null ? 'sim' : seed });
+  // 这些模拟测的是“一路回溯到底”，关掉连续受挫熔断（熔断另有单测）
+  let s = E.createSession(RGQ, targets, { limit: limit, seed: seed == null ? 'sim' : seed, circuitBreaker: false });
   const asked = [];
   for (let guard = 0; guard < 2000; guard++) {
     const it = E.nextItem(RGQ, s);
@@ -1311,7 +1312,7 @@ test('带题库：种子固定 => 整个诊断的出题序列确定；换种子�
   const qs = new Set();
   for (let i = 0; i < 30; i++) qs.add(simulateBank(['cnm_232'], known, new Set(), 16, 'seed' + i).s.answers.map((x) => x.qid).join());
   assert.ok(qs.size > 3);
-  const r = E.replay(RGQ, ['cnm_232'], a.s.answers, { limit: 16, seed: 'fixed' });
+  const r = E.replay(RGQ, ['cnm_232'], a.s.answers, { limit: 16, seed: 'fixed', circuitBreaker: false });
   assert.deepStrictEqual(r, a.s);
 });
 
@@ -1339,7 +1340,7 @@ test('带题库：重测时避开已出过的题（avoid 里的题尽量不再�
 console.log('整年级 / 整册筛查');
 
 function screenRun(spec, student, limit, seed) {
-  let s = E.createSession(RGQ, spec.ids, { mode: 'screen', limit: limit, seed: seed == null ? 'scr' : seed });
+  let s = E.createSession(RGQ, spec.ids, { mode: 'screen', limit: limit, seed: seed == null ? 'scr' : seed, circuitBreaker: false });
   for (let guard = 0; guard < 2000; guard++) {
     const it = E.nextItem(RGQ, s);
     if (!it) break;
@@ -1512,7 +1513,7 @@ test('筛查：同一种子 => 出题序列完全相同；replay 重建一致；
   const a = screenRun(g, indexStudent, 40, 'fixed');
   const b = screenRun(g, indexStudent, 40, 'fixed');
   assert.deepStrictEqual(a.answers.map((x) => x.qid), b.answers.map((x) => x.qid));
-  const r = E.replay(RGQ, g.ids, a.answers, { mode: 'screen', limit: 40, seed: 'fixed' });
+  const r = E.replay(RGQ, g.ids, a.answers, { mode: 'screen', limit: 40, seed: 'fixed', circuitBreaker: false });
   assert.deepStrictEqual(r, a);
   const c = screenRun(g, indexStudent, 40, 'other');
   assert.notDeepStrictEqual(a.answers.map((x) => x.qid), c.answers.map((x) => x.qid));
@@ -1583,6 +1584,160 @@ test('普通整章 / 单点诊断不受影响：不带 mode 的会话仍回溯�
   const sum = E.summarize(RGQ, s);
   assert.strictEqual(sum.mode, 'target');
   sum.roots.forEach((r) => assert.deepStrictEqual(r.outOfScopePrereqs, []));
+});
+
+console.log('盲猜防护 / 错因分流 / 连续受挫熔断');
+
+/* 链状小图：A <- B <- C <- D <- T（T 依赖 D，D 依赖 C …），每个点 4 题：
+ *   q1 choice basic（B 选项 errorTag careless，C 选项 concept），q2 numeric basic，q3 choice standard，q4 numeric standard */
+function chainGraph() {
+  const ids = ['A', 'B', 'C', 'D', 'T'];
+  const topics = ids.map((id) => mk(id));
+  const deps = [];
+  for (let i = 1; i < ids.length; i++) deps.push({ topicId: ids[i], prerequisiteId: ids[i - 1], strength: 'hard' });
+  const qs = [];
+  ids.forEach((id) => {
+    const ch = [{ key: 'A', text: '对' }, { key: 'B', text: '粗心', errorTag: 'careless' }, { key: 'C', text: '概念', errorTag: 'concept' }];
+    qs.push({ id: id + '_q1', topicId: id, difficulty: 'basic', type: 'choice', prompt: '?', answer: 'A', choices: ch, hints: ['想一想'] });
+    qs.push({ id: id + '_q2', topicId: id, difficulty: 'basic', type: 'numeric', prompt: '?', answer: '1' });
+    qs.push({ id: id + '_q3', topicId: id, difficulty: 'standard', type: 'choice', prompt: '?', answer: 'A', choices: ch });
+    qs.push({ id: id + '_q4', topicId: id, difficulty: 'standard', type: 'numeric', prompt: '?', answer: '2' });
+  });
+  return E.buildGraph(topics, deps, qs);
+}
+const CG = chainGraph();
+// 让第一题一定是选择题：把同档里的 numeric 都放进 avoid 不行（avoid 只是“优先没出过”），所以直接找一个第一题是 choice 的种子
+function seedWithChoiceFirst(id) {
+  for (let i = 0; i < 200; i++) {
+    const s = E.createSession(CG, [id], { seed: 'g' + i });
+    const it = E.nextItem(CG, s);
+    if (it && it.question.type === 'choice') return 'g' + i;
+  }
+  throw new Error('找不到第一题是选择题的种子');
+}
+
+test('盲猜防护：选择题 2.5 秒内答对 -> 待复核，第 2 题出 numeric；复核对 -> 掌握并推断祖先', () => {
+  const seed = seedWithChoiceFirst('T');
+  let s = E.createSession(CG, ['T'], { seed: seed });
+  s = E.applyAnswer(CG, s, 'T', 'correct', { durationMs: 1200 });
+  assert.strictEqual(s.status.T, undefined, '还不能下结论');
+  assert.ok(s.attempts.T[0].review);
+  assert.deepStrictEqual(E.summarize(CG, s).pendingReview, ['T']);
+  assert.strictEqual(E.statusOf(s, 'T'), 'shaky', '题量用完时待复核按不稳算');
+  const it = E.nextItem(CG, s);
+  assert.strictEqual(it.topicId, 'T');
+  assert.strictEqual(it.attempt, 2);
+  assert.strictEqual(it.question.type, 'numeric', '复核题优先 numeric');
+  s = E.applyAnswer(CG, s, 'T', 'correct', { durationMs: 9000 });
+  assert.strictEqual(s.status.T.s, 'mastered');
+  assert.strictEqual(s.status.A.s, 'mastered');
+  assert.strictEqual(s.status.A.src, 'inferred');
+  assert.strictEqual(s.answers[0].ms, 1200);
+});
+
+test('盲猜防护：复核没过 -> 不稳（cause=guess），不回溯；慢慢答对 / numeric 秒答不触发', () => {
+  const seed = seedWithChoiceFirst('T');
+  let s = E.createSession(CG, ['T'], { seed: seed });
+  s = E.applyAnswer(CG, s, 'T', 'correct', { durationMs: 800 });
+  s = E.applyAnswer(CG, s, 'T', 'wrong');
+  assert.strictEqual(s.status.T.s, 'shaky');
+  assert.strictEqual(E.summarize(CG, s).causes.T, 'guess');
+  assert.strictEqual(E.nextQuestion(CG, s), null, '不向先修回溯');
+  let slow = E.applyAnswer(CG, E.createSession(CG, ['T'], { seed: seed }), 'T', 'correct', { durationMs: 2600 });
+  assert.strictEqual(slow.status.T.s, 'mastered');
+  // replay 带上 ms 能重建同一个会话
+  const r = E.replay(CG, ['T'], s.answers, { seed: seed });
+  assert.deepStrictEqual(r, s);
+  // 第一题是 numeric 时秒答也直接掌握
+  for (let i = 0; i < 200; i++) {
+    const s0 = E.createSession(CG, ['T'], { seed: 'n' + i });
+    if (E.nextItem(CG, s0).question.type !== 'numeric') continue;
+    assert.strictEqual(E.applyAnswer(CG, s0, 'T', 'correct', { durationMs: 300 }).status.T.s, 'mastered');
+    return;
+  }
+  throw new Error('找不到第一题是 numeric 的种子');
+});
+
+test('错因分流：用了提示才答对 -> shaky（cause=hint），不推断祖先', () => {
+  let s = E.createSession(CG, ['T'], { seed: 'h' });
+  s = E.applyAnswer(CG, s, 'T', 'correct', { hintsUsed: 1, durationMs: 1000 });
+  assert.strictEqual(s.status.T.s, 'shaky');
+  assert.strictEqual(s.status.D, undefined);
+  assert.strictEqual(E.summarize(CG, s).causes.T, 'hint');
+  assert.strictEqual(s.answers[0].hints, 1);
+  // 第二题靠提示做对也一样
+  let t = E.createSession(CG, ['T'], { seed: 'h' });
+  t = E.applyAnswer(CG, t, 'T', 'wrong');
+  t = E.applyAnswer(CG, t, 'T', 'correct', { hintsUsed: 2 });
+  assert.strictEqual(t.status.T.cause, 'hint');
+});
+
+test('错因分流：两次都选 careless 干扰项 -> shaky 不回溯；concept -> weak 回溯并记 cause', () => {
+  let s = E.createSession(CG, ['T'], { seed: 'c' });
+  s = E.applyAnswer(CG, s, 'T', 'wrong', { errorTag: 'careless' });
+  s = E.applyAnswer(CG, s, 'T', 'wrong', { errorTag: 'careless' });
+  assert.strictEqual(s.status.T.s, 'shaky');
+  assert.strictEqual(s.status.T.cause, 'careless');
+  assert.strictEqual(E.nextQuestion(CG, s), null);
+  // 按选项 key 查 errorTag
+  assert.strictEqual(E.errorTagOf(CG.bank.T[0], { choice: 'B' }), 'careless');
+  assert.strictEqual(E.errorTagOf(CG.bank.T[0], { choice: 'A' }), null);
+  assert.strictEqual(E.errorTagOf(CG.bank.T[0], { errorTag: 'bogus' }), null);
+  let w = E.createSession(CG, ['T'], { seed: 'c' });
+  w = E.applyAnswer(CG, w, 'T', 'wrong', { errorTag: 'careless' });
+  w = E.applyAnswer(CG, w, 'T', 'wrong', { errorTag: 'concept' });
+  assert.strictEqual(w.status.T.s, 'weak');
+  assert.strictEqual(w.status.T.cause, 'concept');
+  assert.strictEqual(E.nextQuestion(CG, w), 'D');
+  const r = E.replay(CG, ['T'], w.answers, { seed: 'c' });
+  assert.deepStrictEqual(r, w);
+  // 不带错因：和旧行为一致（weak，无 cause）
+  let o = E.createSession(CG, ['T'], { seed: 'c' });
+  o = E.applyAnswer(CG, E.applyAnswer(CG, o, 'T', 'wrong'), 'T', 'wrong');
+  assert.deepStrictEqual(o.status.T, { s: 'weak', src: 'direct' });
+});
+
+test('连续受挫熔断：同一分支连续 3 个点（6 题）weak -> circuitBroken，nextQuestion 提前终止', () => {
+  let s = E.createSession(CG, ['T'], { seed: 'x' });
+  for (let i = 0; i < 4; i++) {
+    const id = E.nextQuestion(CG, s);
+    assert.ok(id);
+    s = E.applyAnswer(CG, s, id, 'wrong');
+  }
+  assert.ok(!E.summarize(CG, s).circuitBroken, '2 个点还不熔断');
+  s = E.applyAnswer(CG, s, E.nextQuestion(CG, s), 'wrong');
+  s = E.applyAnswer(CG, s, 'C', 'wrong');
+  assert.strictEqual(s.answers.length, 6);
+  const sum = E.summarize(CG, s);
+  assert.strictEqual(sum.circuitBroken, true);
+  assert.strictEqual(sum.circuitBreakRootId, 'C', '最底层的那个点');
+  assert.deepStrictEqual(sum.circuitChain, ['T', 'D', 'C']);
+  assert.strictEqual(E.nextQuestion(CG, s), null);
+  assert.strictEqual(sum.finished, true);
+  // 关掉熔断就继续回溯
+  let off = E.createSession(CG, ['T'], { seed: 'x', circuitBreaker: false });
+  s.answers.forEach((a) => { off = E.applyAnswer(CG, off, a.id, a.result); });
+  assert.strictEqual(E.nextQuestion(CG, off), 'B');
+  assert.strictEqual(E.summarize(CG, off).circuitBroken, false);
+});
+
+test('连续受挫熔断：中间夹着一个不稳 / 掌握的点就不算连续', () => {
+  let s = E.createSession(CG, ['T'], { seed: 'y' });
+  s = E.applyAnswer(CG, s, 'T', 'wrong'); s = E.applyAnswer(CG, s, 'T', 'wrong');
+  s = E.applyAnswer(CG, s, 'D', 'wrong'); s = E.applyAnswer(CG, s, 'D', 'correct');   // D 不稳
+  assert.strictEqual(E.nextQuestion(CG, s), null, 'D 不稳不回溯，诊断自然结束');
+  assert.strictEqual(E.summarize(CG, s).circuitBroken, false);
+  // 真实题库下默认开启熔断：全错学生在 6 题内停下
+  let r = E.createSession(RGQ, ['cnm_232'], { limit: 40, seed: 'cb' });
+  for (let g = 0; g < 100; g++) {
+    const it = E.nextItem(RGQ, r);
+    if (!it) break;
+    r = E.applyAnswer(RGQ, r, it.topicId, 'wrong');
+  }
+  const sum = E.summarize(RGQ, r);
+  assert.ok(sum.circuitBroken);
+  assert.strictEqual(r.answers.length, 6);
+  assert.ok(RGQ.byId[sum.circuitBreakRootId]);
 });
 
 console.log('\n' + passed + ' passed, ' + failed + ' failed');

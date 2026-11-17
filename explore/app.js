@@ -1089,10 +1089,16 @@
   async function loadQuestions() {
     questionsByTopic = new Map();
     try {
-      var response = await fetch('../data/questions.json');
-      if (!response.ok) return;
-      var rows = await response.json();
-      if (!Array.isArray(rows)) return;
+      // 先读当前学科的分片，404 / 出错再回退到总文件
+      var rows = null;
+      var urls = ['../data/questions-' + subject + '.json', '../data/questions.json'];
+      for (var u = 0; u < urls.length && !rows; u++) {
+        try {
+          var response = await fetch(urls[u]);
+          if (response.ok) { var got = await response.json(); if (Array.isArray(got)) rows = got; }
+        } catch (e1) { /* 试下一个 */ }
+      }
+      if (!rows) return;
       rows.forEach(function (q) {
         if (!q || !q.topicId) return;
         var bucket = questionsByTopic.get(q.topicId);

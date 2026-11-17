@@ -775,7 +775,8 @@ def report_standards(ids, std_items, cited, empty_core):
 Q_DIFFICULTIES = ("basic", "standard", "advanced")
 Q_TYPES = ("numeric", "choice", "short", "self")
 Q_FIELDS = {"id", "topicId", "difficulty", "type", "prompt", "answer", "choices", "accept",
-            "explanation", "verify", "unordered", "fixed_from_source", "figure", "hideChoiceText", "percent"}
+            "explanation", "verify", "unordered", "fixed_from_source", "figure", "hideChoiceText", "percent", "hints"}
+ERROR_TAGS = ("concept", "procedural", "careless")
 Q_ID_RE = re.compile(r"^((?:cnm_(?:p|h)?|cne_[pjh]|cnp_h?)\d{3,})_q([1-9]\d*)$")
 NUM_RE = re.compile(r"^-?\d+(?:\.\d+)?(?:/\d+(?:\.\d+)?)?$")
 MIN_QUESTIONS_PER_TOPIC = 3
@@ -850,6 +851,9 @@ def question_errors(questions, topics_by_id, require_coverage=True):
             acc = q["accept"]
             if not (isinstance(acc, list) and all(nonempty_str(x) for x in acc)):
                 errs.append("%s accept 必须是非空字符串数组" % w)
+        if "hints" in q and not (isinstance(q["hints"], list) and 1 <= len(q["hints"]) <= 3
+                                 and all(nonempty_str(x) for x in q["hints"])):
+            errs.append("%s hints 必须是 1–3 条非空字符串" % w)
         if "verify" in q and not nonempty_str(q["verify"]):
             errs.append("%s verify 必须是非空字符串" % w)
         if "unordered" in q and not (q["unordered"] is True and typ == "numeric"):
@@ -868,8 +872,9 @@ def question_errors(questions, topics_by_id, require_coverage=True):
                 texts = []
                 for c in ch:
                     if not (isinstance(c, dict) and nonempty_str(c.get("key")) and nonempty_str(c.get("text"))
-                            and set(c) <= {"key", "text", "figure"}):
-                        errs.append("%s 选项必须形如 {key, text} 且非空，图示放在可选的 figure" % w)
+                            and set(c) <= {"key", "text", "figure", "errorTag"}
+                            and c.get("errorTag", "concept") in ERROR_TAGS):
+                        errs.append("%s 选项必须形如 {key, text} 且非空，图示放在可选的 figure，错因放在可选的 errorTag（concept/procedural/careless）" % w)
                         break
                     keys.append(c["key"])
                     texts.append(c["text"].strip())
@@ -973,6 +978,22 @@ def check_aliases(ids):
             err("别名 %s 缺少原名称 name" % key)
 
 
+SHARD_FILES = (("cnm_", "questions-math.json"), ("cne_", "questions-english.json"), ("cnp_", "questions-physics.json"))
+
+
+def check_question_shards(qs):
+    """学科分片（scripts/split_questions.py 生成）必须和 questions.json 一致；分片缺失只提示，不算错。"""
+    for prefix, name in SHARD_FILES:
+        path = os.path.join(ROOT, "data", name)
+        if not os.path.exists(path):
+            print("题库分片 %s 不存在（前端会回退到 questions.json）" % name)
+            continue
+        want = [q for q in qs if isinstance(q, dict) and str(q.get("topicId", "")).startswith(prefix)]
+        if load(path) != want:
+            err("题库分片 %s 与 questions.json 不一致，请运行 python3 scripts/split_questions.py" % name)
+    print("题库分片：%s 与 questions.json 一致" % "、".join(n for _, n in SHARD_FILES))
+
+
 def main():
     topics = load(TOPICS_PATH)
     deps = load(DEPS_PATH)
@@ -1007,6 +1028,7 @@ def main():
             if qstats["total"] and auto < MIN_AUTO_SHARE * qstats["total"]:
                 err("题库：numeric + choice 占比 %.1f%% < %d%%" % (100.0 * auto / qstats["total"], MIN_AUTO_SHARE * 100))
             report_questions(qstats, ids)
+            check_question_shards(qs)
     else:
         print("\n题库：未找到 data/questions.json，跳过")
     print()

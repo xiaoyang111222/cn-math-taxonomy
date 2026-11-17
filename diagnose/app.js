@@ -150,7 +150,8 @@
     if (v.indexOf(qid) < 0) { v.push(qid); lsSet(LS_SEEN, v); }
   }
   function newSeed() { return seedParam != null ? seedParam : Math.random().toString(36).slice(2, 10); }
-  function resetUi() { ui = { key: null, phase: 'ask', answer: '', verdict: null, picked: null }; }
+  function freshUi(key) { return { key: key, phase: 'ask', answer: '', verdict: null, picked: null, shownAt: Date.now(), durationMs: null, hintsUsed: 0 }; }
+  function resetUi() { ui = freshUi(null); }
   function clearRoot() { while (root.firstChild) root.removeChild(root.firstChild); }
   function teardownPath() {
     pathToken++;
@@ -184,11 +185,15 @@
     rs.forEach(function (r, i) { if (!r.ok) throw new Error(urls[i] + ' → HTTP ' + r.status); });
     const js = await Promise.all(rs.map(function (r) { return r.json(); }));
     // 题库可选：缺失（404）或损坏时回退到 topics.json 的 diagnostic_question
+    // 先读当前学科的分片（scripts/split_questions.py 生成），404 / 出错再回退到总文件
     let questions = null;
-    try {
-      const qr = await fetch('../data/questions.json');
-      if (qr.ok) questions = await qr.json();
-    } catch (e) { questions = null; }
+    for (const qurl of ['../data/questions-' + subject + '.json', '../data/questions.json']) {
+      try {
+        const qr = await fetch(qurl);
+        if (qr.ok) { questions = await qr.json(); if (Array.isArray(questions)) break; }
+      } catch (e) { /* 试下一个 */ }
+      questions = null;
+    }
     const topics = js[0].filter(function (t) { return E.subjectOf(t) === subject; });
     const allow = {};
     topics.forEach(function (t) { allow[t.id] = true; });
@@ -288,7 +293,7 @@
     if (demo || !session) return;
     lsSet(sessionKey(), {
       v: 2, mode: session.mode, targets: session.targets, limit: session.limit, label: sessionMeta.label, answers: session.answers,
-      seed: session.seed, avoid: session.avoid, savedAt: new Date().toISOString()
+      seed: session.seed, avoid: session.avoid, circuitBreaker: session.circuitBreaker, savedAt: new Date().toISOString()
     });
   }
 
@@ -306,7 +311,7 @@
 
   function restoreSession(saved) {
     try {
-      session = E.replay(D.graph, saved.targets, saved.answers, { mode: saved.mode, limit: saved.limit, seed: saved.seed, avoid: saved.avoid });
+      session = E.replay(D.graph, saved.targets, saved.answers, { mode: saved.mode, limit: saved.limit, seed: saved.seed, avoid: saved.avoid, circuitBreaker: saved.circuitBreaker });
       sessionMeta = { label: saved.label || saved.targets.map(nameOf).join('、') };
       return true;
     } catch (e) { return false; }
@@ -322,17 +327,20 @@
 
   function commit(result) {
     const item = E.nextItem(D.graph, session);
-    session = E.applyAnswer(D.graph, session, item.topicId, result, { text: ui.answer });
+    const extra = { text: ui.answer, durationMs: ui.durationMs, hintsUsed: ui.hintsUsed };
+    if (item.question.type === 'choice' && ui.picked) extra.choice = ui.picked;
+    session = E.applyAnswer(D.graph, session, item.topicId, result, extra);
     markSeen(item.question.id);
     resetUi();
     save();
     render();
   }
 
-  function rebuild(answers, limit) {
-    session = E.replay(D.graph, session.targets, answers, {
-      mode: session.mode, limit: limit == null ? session.limit : limit, seed: session.seed, avoid: session.avoid
-    });
+  function rebuild(answers, limit, opts) {
+    session = E.replay(D.graph, session.targets, answers, Object.assign({
+      mode: session.mode, limit: limit == null ? session.limit : limit, seed: session.seed, avoid: session.avoid,
+      circuitBreaker: session.circuitBreaker
+    }, opts || {}));
     resetUi();
     save();
     render();
@@ -608,6 +616,7 @@
     const val = ui.answer.trim();
     if (!val) { const el = document.getElementById('ans'); if (el) el.focus(); return; }
     const r = E.judgeQuestion(q, val);
+    if (ui.durationMs == null) ui.durationMs = Date.now() - ui.shownAt; // 只记第一次提交的用时（盲猜防护）
     ui.verdict = r;
     ui.phase = r.verdict === 'manual' ? 'self' : 'auto';
     renderQuestion(item);
@@ -632,7 +641,7 @@
     const q = item.question;
     const t = D.graph.byId[id];
     const key = id + '#' + item.attempt;
-    if (ui.key !== key) ui = { key: key, phase: 'ask', answer: '', verdict: null, picked: null };
+    if (ui.key !== key) ui = freshUi(key);
     const n = session.answers.length;
     const card = h('div', { class: 'card' });
     card.append(
@@ -684,7 +693,15 @@
       card.append(h('div', { class: 'row', style: 'margin-top:10px' },
         q.type === 'self' ? null : h('button', { class: 'primary', id: 'btn-submit', onclick: function () { judgeAndGo(item); } }, '提交答案'),
         q.type === 'choice' ? null : h('button', { id: 'btn-peek', onclick: function () { ui.phase = 'self'; ui.verdict = null; renderQuestion(item); } }, '看参考答案并自评'),
+        Array.isArray(q.hints) && ui.hintsUsed < q.hints.length
+          ? h('button', { id: 'btn-hint', onclick: function () { ui.hintsUsed++; renderQuestion(item); } }, ui.hintsUsed ? '再给一点提示' : '给点提示')
+          : null,
         h('button', { id: 'btn-skip', onclick: function () { ui.phase = 'skip'; renderQuestion(item); } }, '不会')));
+      if (ui.hintsUsed && Array.isArray(q.hints)) {
+        card.append(h('div', { class: 'hints', id: 'hints' },
+          q.hints.slice(0, ui.hintsUsed).map(function (x, i) { return h('p', { class: 'hint' }, h('b', null, '提示 ' + (i + 1) + '：'), x); }),
+          h('p', { class: 'muted small' }, '用了提示后答对，这个知识点会记为「不稳」，之后建议去巩固。')));
+      }
     } else if (ui.phase === 'auto') {
       const ok = ui.verdict.verdict === 'correct';
       card.append(
@@ -883,12 +900,16 @@
   }
 
   function tag(cls, text) { return h('span', { class: 'tag ' + cls, text: text }); }
+  const CAUSE_LABEL = { hint: '靠提示答对', guess: '疑似猜对', careless: '粗心型错误', procedural: '步骤 / 计算错误', concept: '概念错误' };
+  function practiceHref(id) { return '../practice/?target=' + encodeURIComponent(id) + (subject !== 'math' ? '&subject=' + subject : ''); }
   function statusTags(id, rootSet, targetSet) {
     const st = E.statusOf(session, id);
     const out = [];
     if (targetSet.has(id)) out.push(tag('target', '目标'));
     if (rootSet.has(id)) out.push(tag('root', '根因'));
     out.push(tag(st, STATUS_LABEL[st]));
+    const cause = session.status[id] && session.status[id].cause;
+    if (cause && CAUSE_LABEL[cause]) out.push(tag('cause cause-' + cause, CAUSE_LABEL[cause]));
     if (D.graph.byId[id].external) out.push(tag('ext', '小学'));
     return out;
   }
@@ -929,6 +950,13 @@
         stat('shaky', sum.shaky.length, '不稳'),
         stat('ok', sum.mastered.length, '已掌握'),
         stat('unk', sum.untested.length, '未测')),
+      sum.circuitBroken ? h('div', { class: 'notice gentle', id: 'circuit-break' },
+        h('b', null, '先停一停，休息一下吧。'),
+        ' 连续几个知识点都没做出来，再往下做只会更累。这说明需要从「' + nameOf(sum.circuitBreakRootId) + '」这样更基础的内容补起——这很正常，补上它，后面的会顺很多。',
+        h('div', { class: 'row no-print', style: 'margin-top:8px' },
+          h('a', { class: 'btn btn-primary', href: practiceHref(sum.circuitBreakRootId), text: '从「' + nameOf(sum.circuitBreakRootId) + '」开始巩固' }),
+          h('button', { onclick: function () { rebuild(session.answers, null, { circuitBreaker: false }); } }, '我还想继续往下测'))) : null,
+      sum.pendingReview.length ? h('p', { class: 'notice' }, '「' + sum.pendingReview.map(nameOf).join('」「') + '」第一题答得很快，还没来得及复核，暂按不稳处理。') : null,
       sum.unconfirmed.length ? h('p', { class: 'notice' }, '「' + sum.unconfirmed.map(nameOf).join('」「') + '」只答了第一题（答错）就到了题量上限，没来得及复测，暂按薄弱处理。') : null,
       sum.limitReached ? h('p', { class: 'notice' }, '已达到题量上限（' + sum.limit + '），剩余没测到的知识点标为「未测」。薄弱根因的先修里若有未测点，真正的根因可能更靠前。',
         session.limit >= 60 ? null : h('button', { class: 'no-print', style: 'margin-left:8px', onclick: function () { rebuild(session.answers, Math.min(session.limit + more, 60)); } }, '再多答 ' + Math.min(more, 60 - session.limit) + ' 题')) : null,
@@ -1014,13 +1042,25 @@
 
   function nameList(ids) { return ids.map(nameOf).join('、'); }
 
+  /** 筛查结果里范围外的先修 -> 一键以它们为目标做 target 模式诊断（跨册回溯）。 */
+  function crossVolumeButton(outOfScope) {
+    const ids = [];
+    outOfScope.forEach(function (r) { r.outOfScopePrereqs.forEach(function (p) { if (ids.indexOf(p) < 0) ids.push(p); }); });
+    if (!ids.length) return null;
+    return h('button', {
+      class: 'primary no-print', id: 'btn-cross-volume', style: 'margin-left:8px',
+      onclick: function () { startSession(ids, '跨册追查：' + ids.slice(0, 3).map(nameOf).join('、') + (ids.length > 3 ? ' 等 ' + ids.length + ' 个' : ''), null, 'target'); }
+    }, '一键跨册追查这 ' + ids.length + ' 个先修根因');
+  }
+
   function chaptersCard(chapters, outOfScope) {
     const seg = function (cls, n, total) { return n ? h('i', { class: cls, style: 'width:' + (n / total * 100) + '%' }) : null; };
     return h('div', { class: 'card', id: 'chapters' },
       h('h2', { text: '按章汇总' }),
       h('p', { class: 'muted small' }, '每章的知识点掌握情况，薄弱多的章排在前面；点开看具体是哪几个知识点。色条从左到右：掌握、不稳、薄弱、未测。'),
       outOfScope.length ? h('p', { class: 'notice', id: 'out-of-scope' }, '部分薄弱点的先修在所选范围之外，未检查（涉及 ' + outOfScope.length + ' 个薄弱点，如「' +
-        outOfScope.slice(0, 3).map(function (r) { return nameOf(r.id); }).join('」「') + '」）。可对这些知识点单独做诊断，沿先修继续往前查。') : null,
+        outOfScope.slice(0, 3).map(function (r) { return nameOf(r.id); }).join('」「') + '」）。可对这些知识点单独做诊断，沿先修继续往前查。',
+        crossVolumeButton(outOfScope)) : null,
       chapters.map(function (c) {
         return h('details', { class: 'topic chap-sum', open: c.weak > 0 || c.shaky > 0 },
           h('summary', null,
