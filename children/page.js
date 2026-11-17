@@ -141,4 +141,38 @@
 
   resetForm();
   render();
+  /* ---------------- 全班档案导出 / 导入 ---------------- */
+  (function archive() {
+    var exp = document.getElementById('btn-export-all');
+    var inp = document.getElementById('f-import');
+    var replace = document.getElementById('f-import-replace');
+    var msg = document.getElementById('archive-msg');
+    if (!exp || !inp) return;
+    exp.addEventListener('click', function () {
+      var blob = new Blob([JSON.stringify(CC.exportAll(), null, 2)], { type: 'application/json' });
+      var a = document.createElement('a');
+      var d = new Date();
+      a.href = URL.createObjectURL(blob);
+      a.download = 'class-archive-' + d.getFullYear() + ('0' + (d.getMonth() + 1)).slice(-2) + ('0' + d.getDate()).slice(-2) + '.json';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+      msg.textContent = '已导出 ' + CC.list().length + ' 个孩子的档案。';
+    });
+    inp.addEventListener('change', function () {
+      var f = inp.files && inp.files[0];
+      if (!f) return;
+      if (replace.checked && !confirm('整体替换会删除这台设备上现有的全部档案，确定吗？')) { inp.value = ''; return; }
+      var rd = new FileReader();
+      rd.onload = function () {
+        var r = CC.importAll(String(rd.result), replace.checked ? 'replace' : 'merge');
+        msg.textContent = r.ok
+          ? '导入完成：新增 ' + r.added + ' 个，合并 ' + r.merged + ' 个' + (r.skipped ? '，超出 ' + CC.MAX_CHILDREN + ' 人上限跳过 ' + r.skipped + ' 个' : '') + '。'
+          : r.error;
+        inp.value = '';
+        render();
+      };
+      rd.readAsText(f);
+    });
+  })();
 })();

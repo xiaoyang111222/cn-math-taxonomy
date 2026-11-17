@@ -31,6 +31,12 @@ cp "$ROOT/data/topics.json" \
    "$ROOT/data/question-templates.json" \
    "$DIST/data/"
 
+# 教材版本对照表（示例文件 *.example.json 前端不读，不部署）
+mkdir -p "$DIST/data/mappings"
+for f in "$ROOT"/data/mappings/*.json; do
+  [[ -e "$f" && "$f" != *.example.json ]] && cp "$f" "$DIST/data/mappings/"
+done
+
 echo "Deploying $(du -sh "$DIST" | awk '{print $1}') from $DIST ..."
 # Upload often succeeds even if wrangler then trips on a local cache path; check exit and pages.dev.
 set +e

@@ -1,6 +1,7 @@
 /* 巩固过关练习界面。规则全部在 engine.js（PracticeEngine），变式题在 variants.js（CnmVariants），
  * 判题沿用 diagnose/engine.js（DiagEngine.judgeQuestion）。这里只负责加载数据、渲染和本地存储。
- * URL：?target=<知识点 id>&subject=<math|english|physics>（subject 省略时按 id 前缀推断） */
+ * URL：?target=<知识点 id>&subject=<math|english|physics>（subject 省略时按 id 前缀推断）
+ *      ?mix=<id1,id2,id3>&subject=…：今日微巩固挑战（每个知识点 2 题，交错混编；见 runChallenge） */
 (function () {
   'use strict';
   const E = window.DiagEngine;
@@ -13,7 +14,8 @@
 
   const root = document.getElementById('root');
   const params = new URLSearchParams(location.search);
-  const target = (params.get('target') || '').trim();
+  const mixIds = (params.get('mix') || '').split(',').map(function (x) { return x.trim(); }).filter(Boolean).slice(0, 6);
+  const target = (params.get('target') || mixIds[0] || '').trim();
   const subject = (function () {
     const s = params.get('subject');
     if (s === 'math' || s === 'english' || s === 'physics') return s;
@@ -263,7 +265,7 @@
         h('button', { onclick: function () { passedEntry = null; begin(true); } }, '再练一轮')));
   }
 
-  function render() {
+  let render = function () {
     if (!state) return;
     const page = h('div');
     page.append(header());
@@ -274,7 +276,7 @@
     show(page);
     const inp = document.getElementById('ans');
     if (inp && (state.phase === 'ask' || state.phase === 'retry')) inp.focus();
-  }
+  };
 
   function renderMissing() {
     show(h('div', { class: 'card' },
@@ -286,7 +288,114 @@
         h('a', { class: 'btn', href: withSubject('../children/history.html'), text: '孩子档案' }))));
   }
 
+  /* ------------------------------------------------------------ 今日微巩固挑战 */
+  function today() { const d = new Date(); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
+  async function runChallenge() {
+    const topics = await fetchJson('../data/topics.json');
+    const byId = {};
+    topics.forEach(function (t) { byId[t.id] = t; });
+    const ids = mixIds.filter(function (id) { return byId[id]; });
+    const rows = await loadQuestions();
+    const banks = {};
+    rows.forEach(function (q) { if (ids.indexOf(q.topicId) >= 0) (banks[q.topicId] = banks[q.topicId] || []).push(q); });
+    const key = LS_PREFIX + 'mix:' + ids.join(',') + ':' + today();
+    let ch = lsGet(key);
+    if (!ch || !Array.isArray(ch.items)) {
+      ch = { items: P.buildChallenge(ids, banks, today() + '|' + ids.join(','), 2), idx: 0, attempt: 1, hints: 0, phase: 'ask', log: [], done: false };
+    }
+    let cui = { answer: '', picked: null, ws: null, wsIdx: -1 };
+    function persist() { lsSet(key, ch); }
+    function finish() {
+      ch.done = true;
+      const verdicts = P.challengeVerdicts(ch.log);
+      ch.verdicts = verdicts;
+      if (CC && CC.current()) {
+        Object.keys(verdicts).forEach(function (id) {
+          if (verdicts[id] === 'pass') CC.markPracticed(id, { subject: subject });
+          else CC.markShaky(id, { subject: subject });
+        });
+      }
+      persist();
+    }
+    function judge(ok) {
+      const it = ch.items[ch.idx];
+      if (ok || ch.attempt === 2) {
+        ch.log.push({ topicId: it.topicId, qid: it.question.id, correct: !!ok, firstTry: !!ok && ch.attempt === 1, hints: ch.hints });
+        ch.phase = ok ? 'correct' : 'reveal';
+      } else { ch.attempt = 2; ch.phase = 'retry'; cui.answer = ''; cui.picked = null; }
+      persist(); draw();
+    }
+    function submitMix() {
+      const q = ch.items[ch.idx].question;
+      const val = (q.type === 'choice' ? cui.picked || '' : cui.answer).trim();
+      if (!val) return;
+      const r = E.judgeQuestion(q, val);
+      if (r.verdict === 'manual') { if (confirm('这题没法自动判。参考答案：' + answerText(q) + '\n你做对了吗？')) judge(true); else judge(false); return; }
+      judge(r.verdict === 'correct');
+    }
+    function nextMix() {
+      ch.idx++; ch.attempt = 1; ch.hints = 0; ch.phase = 'ask'; cui = { answer: '', picked: null, ws: null, wsIdx: -1 };
+      if (ch.idx >= ch.items.length) finish();
+      persist(); draw();
+    }
+    function draw() {
+      const page = h('div');
+      page.append(h('div', { class: 'card' },
+        h('h2', null, '⚡ 今日微巩固挑战（' + ch.items.length + ' 题交错复习）'),
+        h('p', { class: 'muted small' }, '这次复习：' + ids.map(function (id) { return '「' + byId[id].name + '」'; }).join('') +
+          '。几个知识点的题混在一起出，比一个一个练更能记牢。每题第一次错可以再试一次。')));
+      if (!ch.items.length) { page.append(h('div', { class: 'card' }, h('p', null, '这些知识点暂时没有能自动判分的题。'))); show(page); return; }
+      if (ch.done) {
+        const v = ch.verdicts || P.challengeVerdicts(ch.log);
+        const right = ch.log.filter(function (e) { return e.firstTry && !e.hints; }).length;
+        page.append(h('div', { class: 'card passed', id: 'challenge-done' },
+          h('h2', null, '完成！一次做对 ' + right + ' / ' + ch.items.length + ' 题'),
+          h('ul', null, Object.keys(v).map(function (id) {
+            return h('li', null, byId[id].name + '：', v[id] === 'pass' ? h('b', { class: 'ok-text', text: '复习通过，下次复习间隔变长' }) : h('span', null, '还不太稳 — ', h('a', { href: withSubject('./?target=' + encodeURIComponent(id)), text: '去巩固过关（3连对）' })));
+          })),
+          CC && CC.current() ? h('p', { class: 'muted small', text: '结果已记入「' + CC.current().name + '」的档案。' }) : h('p', { class: 'muted small', text: '没有选孩子档案，结果没有保存。' }),
+          h('a', { class: 'btn btn-primary', href: withSubject('../children/history.html'), text: '回到档案' })));
+        show(page); return;
+      }
+      const it = ch.items[ch.idx];
+      const q = it.question;
+      const t = byId[it.topicId];
+      const hints = P.synthesizeHints(q, t);
+      const card = h('div', { class: 'card', id: 'practice-card' },
+        h('div', { class: 'row small' }, h('span', { class: 'tag', text: t.name }), h('span', { class: 'grow' }), h('span', { class: 'muted', text: '第 ' + (ch.idx + 1) + ' / ' + ch.items.length + ' 题' })),
+        h('div', { class: 'progress' }, h('i', { style: 'width:' + Math.round(ch.idx / ch.items.length * 100) + '%' })),
+        h('div', { class: 'q-text', id: 'q-text', text: q.prompt }), figureEl(q.figure));
+      if (ch.phase === 'ask' || ch.phase === 'retry') {
+        if (ch.phase === 'retry') card.append(h('p', { class: 'notice' }, '这次没做对，原地再试一次。'));
+        ui = cui; // answerArea 读写 ui
+        card.append(answerArea(q));
+        card.append(h('div', { class: 'row', style: 'margin-top:10px' },
+          h('button', { class: 'primary', id: 'btn-submit', onclick: submitMix }, '提交答案'),
+          ch.hints < hints.length ? h('button', { id: 'btn-hint', onclick: function () { ch.hints++; persist(); draw(); } }, '给点提示') : null));
+        if (ch.hints) card.append(h('div', { class: 'hints' }, hints.slice(0, ch.hints).map(function (x, i) { return h('p', { class: 'hint' }, h('b', null, '提示 ' + (i + 1) + '：'), x); })));
+        if (WS) { if (!cui.ws || cui.wsIdx !== ch.idx) { cui.ws = WS.mount(null, t); cui.wsIdx = ch.idx; } card.append(cui.ws); }
+      } else {
+        card.append(h('div', { class: 'verdict ' + (ch.phase === 'correct' ? 'ok' : 'no') }, ch.phase === 'correct' ? '✔ 做对了' : '两次都没做对，看看解析：'),
+          ch.phase === 'reveal' ? h('div', { class: 'refans' }, h('b', null, '参考答案：'), answerText(q)) : null,
+          q.explanation ? h('div', { class: 'explain' }, h('b', null, '解析：'), q.explanation) : null,
+          h('div', { class: 'row' }, h('button', { class: 'primary', id: 'btn-next', onclick: nextMix }, ch.idx + 1 >= ch.items.length ? '看结果' : '下一题')));
+      }
+      page.append(card);
+      show(page);
+    }
+    // answerArea 选选项后调用 render()，挑战模式下改成重画挑战
+    render = draw;
+    draw();
+  }
+
   applySubjectUi();
+  if (mixIds.length) {
+    document.title = '今日微巩固挑战';
+    runChallenge().catch(function (e) {
+      show(h('div', { class: 'card' }, h('p', { class: 'notice' }, '无法读取数据（' + (e && e.message || e) + '）。')));
+    });
+    return;
+  }
   load().then(function () {
     if (!topic) { renderMissing(); return; }
     document.title = '巩固 · ' + topic.name;

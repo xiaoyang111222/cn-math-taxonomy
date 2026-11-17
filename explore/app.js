@@ -142,6 +142,7 @@
   }
 
   function chapterOf(topic) {
+    if (topic._edition) return topic._edition.unit;
     var text = topic.chapter || '未分章';
     var primary = /^[一二三四五六七八九]年级[上下全]册\s+(.+)$/.exec(text);
     if (primary) return primary[1];
@@ -1116,6 +1117,13 @@
     });
     var json = await Promise.all(responses.map(function (response) { return response.json(); }));
     topics = json[0].filter(function (topic) { return topicSubject(topic) === subject; });
+    // 教材版本：有 data/mappings/<edition>.json（或 topic.mappings）时，章节和目录树按该版本显示（只用于数学）
+    if (subject === 'math' && window.CnmEditions) {
+      var edKey = window.CnmEditions.current();
+      var edFile = await window.CnmEditions.load('../', edKey);
+      topics = window.CnmEditions.applyEdition(topics, edKey, edFile);
+      window.CnmEditions.mountSelect(function () { location.reload(); });
+    }
     mathNames = {};
     if (subject === 'physics') {
       json[0].forEach(function (topic) { if (topicSubject(topic) === 'math') mathNames[topic.id] = topic.name; });

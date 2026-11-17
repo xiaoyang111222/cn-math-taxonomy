@@ -8,8 +8,8 @@
   var HOUR = 3600 * 1000;
   // 过关后的复习间隔：第 1 次过关 12 小时后复习，之后每次复习通过依次 3 天、7 天、14 天（之后保持 14 天）
   var REVIEW_INTERVALS = [12 * HOUR, 3 * 24 * HOUR, 7 * 24 * HOUR, 14 * 24 * HOUR];
-  var MAX_CHILDREN = 8;
-  var MAX_RECORDS = 40;
+  var MAX_CHILDREN = 30;   // 一个班
+  var MAX_RECORDS = 60;    // 每个孩子保留最近的诊断记录条数
   var GRADES = ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级', '七年级', '八年级', '九年级', '高一', '高二', '高三'];
   var TEXTBOOKS = ['人教版', '北师大版', '苏教版', '沪教版', '外研版', '译林版', '其他'];
 
@@ -217,8 +217,67 @@
     return by;
   }
 
+  /* ---------------- 全班档案导出 / 导入（JSON） ---------------- */
+  var EXPORT_FORMAT = 'cnm-class-archive';
+  function exportAll() {
+    return {
+      format: EXPORT_FORMAT, version: 1, exportedAt: new Date().toISOString(),
+      state: state(), records: records(), practice: practiceAll()
+    };
+  }
+  /* mode: 'merge'（默认，按昵称合并：同名孩子合并记录，新孩子追加，超出上限的跳过）/ 'replace'（整体替换）。
+   * 返回 { ok, error?, added, merged, skipped } */
+  function importAll(data, mode) {
+    if (typeof data === 'string') { try { data = JSON.parse(data); } catch (e) { return { ok: false, error: '不是有效的 JSON 文件。' }; } }
+    if (!data || data.format !== EXPORT_FORMAT || !data.state || !Array.isArray(data.state.children)) {
+      return { ok: false, error: '这不是本站导出的全班档案文件。' };
+    }
+    var inKids = data.state.children.filter(function (c) { return c && c.id && clean(c).name; });
+    var inRecs = data.records && typeof data.records === 'object' ? data.records : {};
+    var inPrac = data.practice && typeof data.practice === 'object' ? data.practice : {};
+    if (mode === 'replace') {
+      var kids = inKids.slice(0, MAX_CHILDREN).map(function (c) { return Object.assign({}, c, clean(c)); });
+      var keep = {};
+      kids.forEach(function (c) { keep[c.id] = true; });
+      var recs = {}; var prac = {};
+      Object.keys(inRecs).forEach(function (id) { if (keep[id] && Array.isArray(inRecs[id])) recs[id] = inRecs[id].slice(0, MAX_RECORDS); });
+      Object.keys(inPrac).forEach(function (id) { if (keep[id]) prac[id] = inPrac[id]; });
+      var cur = keep[data.state.current] ? data.state.current : (kids[0] ? kids[0].id : null);
+      var ok = write(KEY, { v: 1, current: cur, children: kids }) && write(REC_KEY, recs) && write(PRACTICE_KEY, prac);
+      return ok ? { ok: true, added: kids.length, merged: 0, skipped: inKids.length - kids.length } : { ok: false, error: '浏览器不允许保存数据。' };
+    }
+    var s = state(); var allRecs = records(); var allPrac = practiceAll();
+    var added = 0, merged = 0, skipped = 0;
+    inKids.forEach(function (c) {
+      var f = clean(c);
+      var same = s.children.filter(function (x) { return x.name === f.name; })[0];
+      var targetId;
+      if (same) { targetId = same.id; merged++; }
+      else if (s.children.length >= MAX_CHILDREN) { skipped++; return; }
+      else {
+        targetId = s.children.some(function (x) { return x.id === c.id; }) ? newId() : c.id;
+        s.children.push({ id: targetId, name: f.name, grade: f.grade, textbook: f.textbook, createdAt: c.createdAt || new Date().toISOString() });
+        added++;
+      }
+      var mine = Array.isArray(allRecs[targetId]) ? allRecs[targetId] : [];
+      (Array.isArray(inRecs[c.id]) ? inRecs[c.id] : []).forEach(function (r) {
+        if (r && r.key && !mine.some(function (x) { return x.key === r.key; })) mine.push(r);
+      });
+      mine.sort(function (a, b) { return String(b.savedAt).localeCompare(String(a.savedAt)); });
+      allRecs[targetId] = mine.slice(0, MAX_RECORDS);
+      var pm = allPrac[targetId] && typeof allPrac[targetId] === 'object' ? allPrac[targetId] : {};
+      var pin = inPrac[c.id] && typeof inPrac[c.id] === 'object' ? inPrac[c.id] : {};
+      Object.keys(pin).forEach(function (tid) { if (!pm[tid] || String(pin[tid].at) > String(pm[tid].at)) pm[tid] = pin[tid]; });
+      allPrac[targetId] = pm;
+    });
+    if (!s.current && s.children.length) s.current = s.children[0].id;
+    var ok2 = write(KEY, s) && write(REC_KEY, allRecs) && write(PRACTICE_KEY, allPrac);
+    return ok2 ? { ok: true, added: added, merged: merged, skipped: skipped } : { ok: false, error: '浏览器不允许保存数据。' };
+  }
+
   window.CnmChildren = {
-    GRADES: GRADES, TEXTBOOKS: TEXTBOOKS, MAX_CHILDREN: MAX_CHILDREN,
+    GRADES: GRADES, TEXTBOOKS: TEXTBOOKS, MAX_CHILDREN: MAX_CHILDREN, MAX_RECORDS: MAX_RECORDS,
+    exportAll: exportAll, importAll: importAll,
     list: list, get: get, current: current, setCurrent: setCurrent,
     add: add, update: update, remove: remove,
     recordsOf: recordsOf, saveRecord: saveRecord, hasRecord: hasRecord, moveRecord: moveRecord, removeRecord: removeRecord,

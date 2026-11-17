@@ -168,7 +168,60 @@
     return s;
   }
 
+  /* ------------------------------------------------------------ 今日微巩固挑战（交错复习） */
+
+  /** 从到期复习的点（dueIds，已按到期先后排）和不稳的点（shakyIds）里挑 n 个：到期的优先，同一天同一种子结果不变。 */
+  function pickChallengeTopics(dueIds, shakyIds, seed, n) {
+    n = n || 3;
+    const out = [];
+    const take = function (list, shuffle) {
+      let l = (list || []).filter(function (id) { return out.indexOf(id) < 0; });
+      if (shuffle) l = l.map(function (id) { return { id: id, r: rand01(seed, 'pick|' + id) }; }).sort(function (a, b) { return a.r - b.r; }).map(function (x) { return x.id; });
+      l.forEach(function (id) { if (out.length < n && out.indexOf(id) < 0) out.push(id); });
+    };
+    take(dueIds, false);
+    take(shakyIds, true);
+    return out;
+  }
+
+  /**
+   * 每个知识点抽 perTopic（默认 2）道可判分的题（basic / standard 优先），再交错混编：
+   * 打乱后尽量让相邻两题不是同一个知识点。返回 [{topicId, question}]。
+   */
+  function buildChallenge(topicIds, banksById, seed, perTopic) {
+    perTopic = perTopic || 2;
+    const items = [];
+    topicIds.forEach(function (id) {
+      const pool = practicable(banksById[id]).map(function (q) { return { q: q, r: rand01(seed, id + '|' + q.id) + (tierOf(q) >= 2 ? 1 : 0) }; })
+        .sort(function (a, b) { return a.r - b.r; }).slice(0, perTopic);
+      pool.forEach(function (x) { items.push({ topicId: id, question: x.q, r: rand01(seed, 'mix|' + x.q.id) }); });
+    });
+    items.sort(function (a, b) { return a.r - b.r; });
+    // 交错：相邻同一知识点时，往后找一个不同的换上来
+    for (let i = 1; i < items.length; i++) {
+      if (items[i].topicId !== items[i - 1].topicId) continue;
+      for (let j = i + 1; j < items.length; j++) {
+        if (items[j].topicId !== items[i - 1].topicId) { const t = items[i]; items[i] = items[j]; items[j] = t; break; }
+      }
+    }
+    return items.map(function (x) { return { topicId: x.topicId, question: x.question }; });
+  }
+
+  /** 挑战结束后每个知识点的结论：全部一次做对且没看提示 -> 'pass'（复习通过）；否则 'shaky'。 */
+  function challengeVerdicts(log) {
+    const by = {};
+    (log || []).forEach(function (e) {
+      const v = by[e.topicId] || (by[e.topicId] = { clean: 0, total: 0 });
+      v.total++;
+      if (e.firstTry && !e.hints) v.clean++;
+    });
+    const out = {};
+    Object.keys(by).forEach(function (id) { out[id] = by[id].clean === by[id].total ? 'pass' : 'shaky'; });
+    return out;
+  }
+
   return {
+    pickChallengeTopics: pickChallengeTopics, buildChallenge: buildChallenge, challengeVerdicts: challengeVerdicts,
     TIERS: TIERS, NEED: NEED, MAX_HINTS: MAX_HINTS,
     createPractice: createPractice, useHint: useHint, submit: submit, next: next,
     synthesizeHints: synthesizeHints, practicable: practicable, pickNext: pickNext

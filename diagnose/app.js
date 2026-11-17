@@ -194,7 +194,13 @@
       } catch (e) { /* 试下一个 */ }
       questions = null;
     }
-    const topics = js[0].filter(function (t) { return E.subjectOf(t) === subject; });
+    let topics = js[0].filter(function (t) { return E.subjectOf(t) === subject; });
+    // 教材版本：有对照表时，章节展示和选章目录按所选版本（人教 / 沪教 / 北师大 / 苏教）
+    if (subject === 'math' && window.CnmEditions) {
+      const edKey = window.CnmEditions.current();
+      topics = window.CnmEditions.applyEdition(topics, edKey, await window.CnmEditions.load('../', edKey));
+      window.CnmEditions.mountSelect(function () { location.reload(); });
+    }
     const allow = {};
     topics.forEach(function (t) { allow[t.id] = true; });
     const deps = js[1].filter(function (d) { return allow[d.topicId] && allow[d.prerequisiteId]; });
@@ -209,12 +215,14 @@
     const vols = {};
     topics.forEach(function (t) {
       if (t.external) return;
-      const c = E.parseChapter(t.chapter);
+      const c = t._edition
+        ? { volume: t._edition.volume, chapterNo: t._edition.unit, chapterName: '', section: t._edition.chapter }
+        : E.parseChapter(t.chapter);
       const v = vols[c.volume] || (vols[c.volume] = { chapters: [], byKey: {} });
       const key = c.chapterNo + ' ' + c.chapterName;
       let ch = v.byKey[key];
       if (!ch) {
-        ch = v.byKey[key] = { volume: c.volume, key: c.volume + ' ' + c.chapterNo, label: c.chapterNo + ' ' + c.chapterName, topics: [] };
+        ch = v.byKey[key] = { volume: c.volume, key: c.volume + ' ' + c.chapterNo, label: (c.chapterNo + ' ' + c.chapterName).trim(), topics: [] };
         v.chapters.push(ch);
       }
       ch.topics.push({ t: t, section: c.section });

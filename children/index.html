@@ -57,6 +57,18 @@
       </div>
     </form>
   </section>
+  <section class="kid-form" id="archive-card" aria-labelledby="archive-title">
+    <h2 id="archive-title">全班档案</h2>
+    <p class="muted small">老师可以在这里管理整个班（最多 30 个孩子），把全部档案、诊断记录和巩固进度导出成一个 JSON 文件备份，或者在另一台设备上导入。</p>
+    <div class="row">
+      <button type="button" id="btn-export-all">导出全班档案（JSON）</button>
+      <label class="btn" for="f-import">导入档案…</label>
+      <input type="file" id="f-import" accept="application/json,.json" hidden>
+      <label class="small"><input type="checkbox" id="f-import-replace"> 导入时整体替换（默认按昵称合并）</label>
+      <a class="btn" href="classroom.html">班级热力图</a>
+    </div>
+    <p class="muted small" id="archive-msg" role="status"></p>
+  </section>
   <p class="muted small kid-note">档案和诊断记录只保存在这台设备的浏览器里，不上传，也没有账号。清除浏览器数据，或者换一台设备，档案不会跟过去。</p>
 </main>
 <footer class="site-footer">

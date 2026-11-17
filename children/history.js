@@ -60,8 +60,39 @@
     li.appendChild(re);
     var pr = el('a', 'wk-retest wk-practice', '去巩固过关（3连对）');
     pr.href = practiceHref(id);
+    pr.addEventListener('click', function () { if (childId) CC.setCurrent(childId); }); // 过关结果记到正在看的这个孩子
     li.appendChild(pr);
     return li;
+  }
+
+  /* ⚡ 今日微巩固挑战：从到期复习的过关点和不稳的点里抽 3 个 × 各 2 题，交错混编（在 practice/?mix= 里做） */
+  function challengeSection(child) {
+    var PE = window.PracticeEngine;
+    if (!PE || !CC.dueReviews) return null;
+    var sec = el('section', 'kid-section kid-challenge');
+    sec.appendChild(el('h2', null, '⚡ 今日微巩固挑战（6题交错复习）'));
+    var by = CC.latestStatus(child.id, subjectSel || null);
+    var due = CC.dueReviews(child.id, { subject: subjectSel || null });
+    var shaky = Object.keys(by).filter(function (id) { return by[id].status === 'shaky'; });
+    // 一次挑战只用一个学科的题：选了学科就用它，否则用排在最前的候选所属学科
+    var first = due.concat(shaky)[0];
+    if (!first) {
+      sec.appendChild(el('p', 'kid-empty', '今天没有到期要复习、也没有不稳的知识点。练习过关的知识点会按 12 小时 → 3 天 → 7 天 → 14 天自动排进复习。'));
+      return sec;
+    }
+    var sub = subjectSel || subjectOfId(first);
+    var same = function (id) { return subjectOfId(id) === sub; };
+    var d = new Date();
+    var seed = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + '|' + child.id;
+    var picked = PE.pickChallengeTopics(due.filter(same), shaky.filter(same), seed, 3);
+    var p = el('p', null, '今天复习：' + picked.map(function (id) { return '「' + nameOf(id) + '」'; }).join('') +
+      '，每个 2 题，混在一起出。到期复习 ' + due.filter(same).length + ' 个，不稳 ' + shaky.filter(same).length + ' 个。');
+    sec.appendChild(p);
+    var go = el('a', 'btn btn-primary', '开始挑战');
+    go.href = '../practice/?mix=' + picked.map(encodeURIComponent).join(',') + (sub === 'math' ? '' : '&subject=' + sub);
+    go.addEventListener('click', function () { CC.setCurrent(child.id); });
+    sec.appendChild(go);
+    return sec;
   }
 
   function weakSection(child) {
@@ -219,6 +250,8 @@
     var head = el('p', 'kid-meta', child.name + ' · ' + child.grade + ' · ' + child.textbook);
     content.appendChild(head);
     content.appendChild(renderTabs());
+    var chal = challengeSection(child);
+    if (chal) content.appendChild(chal);
     content.appendChild(weakSection(child));
     content.appendChild(recordsSection(child));
   }

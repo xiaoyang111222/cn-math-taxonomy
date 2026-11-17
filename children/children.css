@@ -79,3 +79,28 @@ main.kids { width: min(760px, 100%); margin: 0 auto; padding: 20px 16px 56px; }
 .rec-topics a { color: var(--brand-strong); font-weight: 650; }
 .rec-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .wk-practice { margin-left: 14px; }
+
+/* 班级热力图 */
+.kids-wide { max-width: 1200px; }
+.cls-controls { gap: 12px; align-items: center; flex-wrap: wrap; margin: 8px 0; }
+.cls-anon { font-size: .92rem; }
+.cls-legend { display: flex; gap: 14px; list-style: none; padding: 0; margin: 4px 0 8px; font-size: .9rem; flex-wrap: wrap; }
+.cls-legend li { display: inline-flex; align-items: center; gap: 4px; }
+.cls-scroll { overflow: auto; max-height: 70vh; border: 1px solid var(--line, #d6e2df); border-radius: 10px; }
+.cls-table { border-collapse: separate; border-spacing: 0; font-size: .85rem; }
+.cls-table th, .cls-table td { padding: 2px; text-align: center; }
+.cls-table thead th { position: sticky; top: 0; background: var(--bg, #fff); z-index: 1; }
+.cls-col { vertical-align: bottom; height: 9em; }
+.cls-col a { writing-mode: vertical-rl; display: inline-block; max-height: 8.5em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: inherit; }
+.cls-name, .cls-corner { position: sticky; left: 0; background: var(--bg, #fff); text-align: left !important; padding: 2px 10px 2px 6px !important; white-space: nowrap; z-index: 2; }
+.cls-corner { z-index: 3; }
+.cls-cell { display: inline-block; width: 18px; height: 18px; border-radius: 4px; vertical-align: middle; }
+.cls-cell.mastered { background: #2ea44f; }
+.cls-cell.shaky { background: #e3b341; }
+.cls-cell.weak { background: #d1453b; }
+.cls-cell.unknown { background: rgba(128,128,128,.25); }
+.cls-top li { margin: 6px 0; }
+.cls-top-name { font-weight: 700; }
+.cls-top-links { display: inline-flex; gap: 6px; margin-left: 8px; }
+.btn-small { font-size: .85em; padding: 2px 10px; }
+.kid-challenge .btn { margin-top: 4px; }

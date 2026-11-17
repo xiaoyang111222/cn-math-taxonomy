@@ -1910,5 +1910,109 @@ test('孩子档案：练习过关 -> mastered + nextReviewAt，间隔 12 小时 
   assert.strictEqual(CC.markPracticed('cnm_010', { now: now }).stage, 0, '降级后间隔从头来');
 });
 
+console.log('全班档案 / 微巩固挑战 / 班级热力图 / 教材版本');
+const CL = require('../children/classroom.js');
+const ED = require('../assets/editions.js');
+
+test('孩子档案：上限 30 个孩子、每人 60 条记录；全班导出 -> 导入（合并 / 替换）', () => {
+  const { CC } = loadChildren();
+  assert.strictEqual(CC.MAX_CHILDREN, 30);
+  assert.strictEqual(CC.MAX_RECORDS, 60);
+  for (let i = 0; i < 30; i++) assert.ok(CC.add({ name: '学生' + i, grade: '七年级' }).ok);
+  assert.strictEqual(CC.add({ name: '学生30', grade: '七年级' }).ok, false);
+  const k0 = CC.list()[0].id;
+  for (let i = 0; i < 70; i++) CC.saveRecord(k0, { key: 'r' + i, subject: 'math', weak: [], shaky: [], mastered: [] });
+  assert.strictEqual(CC.recordsOf(k0).length, 60);
+  CC.markPracticed('cnm_010', { childId: k0, now: 1e12 });
+  const dump = JSON.parse(JSON.stringify(CC.exportAll()));
+  assert.strictEqual(dump.format, 'cnm-class-archive');
+  // 导入到另一台“设备”：合并
+  const other = loadChildren().CC;
+  other.add({ name: '学生0', grade: '七年级' });
+  other.add({ name: '别班的', grade: '八年级' });
+  const r = other.importAll(JSON.stringify(dump), 'merge');
+  assert.ok(r.ok, r.error);
+  assert.strictEqual(r.merged, 1);
+  assert.strictEqual(r.added, 28, '30 人上限：已有 2 人，合并 1 人，只能再加 28 人');
+  assert.strictEqual(r.skipped, 1);
+  const s0 = other.list().find((c) => c.name === '学生0');
+  assert.strictEqual(other.recordsOf(s0.id).length, 60);
+  assert.strictEqual(other.latestStatus(s0.id).cnm_010.status, 'mastered', '巩固进度一起合并');
+  // 替换
+  const third = loadChildren().CC;
+  third.add({ name: '会被替换', grade: '一年级' });
+  assert.ok(third.importAll(dump, 'replace').ok);
+  assert.strictEqual(third.list().length, 30);
+  assert.ok(!third.list().some((c) => c.name === '会被替换'));
+  assert.strictEqual(third.importAll('{"x":1}').ok, false);
+  assert.strictEqual(third.importAll('不是 json').ok, false);
+});
+
+test('微巩固挑战：到期优先、再抽不稳；3 个知识点 × 2 题交错；全对才算复习通过', () => {
+  assert.deepStrictEqual(P.pickChallengeTopics(['a', 'b'], ['c', 'd', 'e'], 's', 3).slice(0, 2), ['a', 'b']);
+  assert.strictEqual(P.pickChallengeTopics(['a', 'b'], ['c', 'd', 'e'], 's', 3).length, 3);
+  assert.deepStrictEqual(P.pickChallengeTopics(['a', 'b', 'c', 'd'], ['e'], 's', 3), ['a', 'b', 'c']);
+  assert.deepStrictEqual(P.pickChallengeTopics([], ['e', 'f'], 'x', 3), P.pickChallengeTopics([], ['e', 'f'], 'x', 3), '同种子可复现');
+  const banks = { A: pBank('A'), B: pBank('B'), C: pBank('C') };
+  const items = P.buildChallenge(['A', 'B', 'C'], banks, 'day1', 2);
+  assert.strictEqual(items.length, 6);
+  ['A', 'B', 'C'].forEach((id) => assert.strictEqual(items.filter((x) => x.topicId === id).length, 2));
+  for (let i = 1; i < items.length; i++) assert.notStrictEqual(items[i].topicId, items[i - 1].topicId, '交错：相邻两题不是同一个知识点');
+  assert.ok(items.every((x) => x.question.type !== 'self' && x.question.difficulty !== 'advanced'));
+  const v = P.challengeVerdicts([
+    { topicId: 'A', firstTry: true, hints: 0 }, { topicId: 'A', firstTry: true, hints: 0 },
+    { topicId: 'B', firstTry: true, hints: 1 }, { topicId: 'B', firstTry: true, hints: 0 },
+    { topicId: 'C', firstTry: false, hints: 0 }, { topicId: 'C', firstTry: true, hints: 0 }]);
+  assert.deepStrictEqual(v, { A: 'pass', B: 'shaky', C: 'shaky' });
+});
+
+test('班级热力图：匿名代号、按年级排列的列、全班高频薄弱根因 Top 5', () => {
+  assert.strictEqual(CL.anonName(0), '阿基米德 #1');
+  assert.strictEqual(CL.anonName(31), CL.MATHEMATICIANS[1] + ' #32');
+  const topicsById = { t1: { grade: 7 }, t2: { grade: 3 }, t3: { grade: 5 }, cne_p001: { grade: 3 } };
+  const students = [
+    { id: 's1', name: '甲', status: { t1: { status: 'weak', root: false }, t2: { status: 'weak', root: true }, cne_p001: { status: 'weak', root: true } } },
+    { id: 's2', name: '乙', status: { t2: { status: 'weak', root: true }, t3: { status: 'shaky' } } },
+    { id: 's3', name: '丙', status: { t1: { status: 'weak', root: true }, t3: { status: 'mastered' } } }
+  ];
+  const agg = CL.aggregate(students, topicsById, 'math');
+  assert.deepStrictEqual(agg.columns, ['t2', 't3', 't1'], '按年级；英语点被学科过滤掉');
+  assert.deepStrictEqual(agg.rows[0].cells, ['weak', 'unknown', 'weak']);
+  assert.deepStrictEqual(agg.rows[1].cells, ['weak', 'shaky', 'unknown']);
+  assert.strictEqual(agg.rows[2].mastered, 1);
+  assert.deepStrictEqual(agg.topRoots.map((r) => [r.id, r.rootCount, r.weakCount]), [['t2', 2, 2], ['t1', 1, 2]]);
+  assert.deepStrictEqual(agg.topRoots[0].students, ['甲', '乙']);
+});
+
+test('教材版本：URL > 导航栏 > 孩子的 textbook；有对照表时覆写 grade/term/unit/chapter，示例文件不读', () => {
+  assert.strictEqual(ED.choose({ textbook: '沪教版' }), 'hujiao_math');
+  assert.strictEqual(ED.choose({ stored: 'sujiao_math', textbook: '沪教版' }), 'sujiao_math');
+  assert.strictEqual(ED.choose({ stored: 'renjiao', textbook: '沪教版' }), '');
+  assert.strictEqual(ED.choose({ query: 'beishida_math', stored: 'sujiao_math' }), 'beishida_math');
+  assert.strictEqual(ED.choose({ query: 'bogus', textbook: '人教版' }), '');
+  assert.strictEqual(ED.choose({ textbook: '外研版' }), '');
+  const ts = [
+    { id: 'cnm_p158', grade: 5, semester: '下', chapter: '五年级下册 第3单元 长方体和正方体' },
+    { id: 'cnm_p001', grade: 1, semester: '上', chapter: '一年级上册 第1单元 1～5 的认识', mappings: { sujiao_math: { grade: 1, term: '上', unit: '第一单元 数一数' } } },
+    { id: 'cnm_221', grade: 9, semester: '上', chapter: '九上 第二十五章 一元二次方程 25.2' }
+  ];
+  const file = { edition: 'hujiao_math', status: 'draft', entries: [
+    { topicId: 'cnm_p158', grade: 6, term: '上', unit: '第三单元 立体图形', chapter: '长方体' },
+    { topicId: 'cnm_221', grade: 9, term: '全' }] };
+  const out = ED.applyEdition(ts, 'hujiao_math', file);
+  assert.strictEqual(out[0].grade, 6);
+  assert.strictEqual(out[0].semester, '上');
+  assert.strictEqual(out[0].chapter, '六年级上册 第三单元 立体图形 长方体');
+  assert.deepStrictEqual([out[0]._edition.volume, out[0]._edition.unit, out[0]._edition.chapter], ['六上', '第三单元 立体图形', '长方体']);
+  assert.strictEqual(out[1], ts[1], '没有对照的点原样保留');
+  assert.strictEqual(out[2]._edition.volume, '九全');
+  assert.strictEqual(ts[0].grade, 5, '不修改入参');
+  assert.strictEqual(ED.applyEdition(ts, 'hujiao_math', Object.assign({}, file, { status: 'example' }))[0], ts[0], '示例文件不读');
+  assert.strictEqual(ED.applyEdition(ts, 'sujiao_math', null)[1].chapter, '一年级上册 第一单元 数一数', 'topic.mappings 也能用');
+  assert.strictEqual(ED.applyEdition(ts, '', file), ts, '人教版不覆写');
+  // 覆写后的中文册名能被 explore 的 chapterOf 正则认出来
+  assert.ok(/^[一二三四五六七八九]年级[上下全]册\s+(.+)$/.test(out[0].chapter));
+});
+
 console.log('\n' + passed + ' passed, ' + failed + ' failed');
 process.exit(failed ? 1 : 0);

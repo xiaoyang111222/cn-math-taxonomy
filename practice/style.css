@@ -6,3 +6,4 @@
 .hints { margin-top: 10px; padding: 8px 12px; border-left: 3px solid var(--accent, #0f6e62); background: var(--ok-bg, rgba(15,110,98,.06)); border-radius: 6px; }
 .hints .hint { margin: 4px 0; }
 .explain { margin: 8px 0; white-space: pre-wrap; }
+.ok-text { color: var(--ok, #2e8b57); }

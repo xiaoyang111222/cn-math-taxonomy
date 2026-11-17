@@ -574,3 +574,7 @@ a.iq-card .iq-note { color: var(--muted); font-size: 0.82rem; font-weight: 650; 
   .stat-grid { grid-template-columns: 1fr 1fr; }
   .hero { padding: 22px 16px 18px; }
 }
+
+/* 导航栏里的教材版本选择（assets/editions.js） */
+.edition-switch { display: inline-flex; align-items: center; }
+.edition-select { font: inherit; font-size: .88rem; padding: 3px 6px; border-radius: 8px; border: 1px solid var(--line, #d6e2df); background: var(--bg, #fff); color: inherit; }
