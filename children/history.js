@@ -34,6 +34,10 @@
   function chapterOf(id) { return topics && topics[id] && topics[id].chapter ? topics[id].chapter : ''; }
   function tag(cls, text) { return el('span', 'kid-tag ' + cls, text); }
 
+  function practiceHref(id) {
+    var sub = subjectOfId(id);
+    return '../practice/?target=' + encodeURIComponent(id) + (sub === 'math' ? '' : '&subject=' + sub);
+  }
   function retestHref(ids) { return '../diagnose/?target=' + ids.map(encodeURIComponent).join(','); }
 
   function topicRow(id, info) {
@@ -49,11 +53,14 @@
     var meta = [];
     var ch = chapterOf(id);
     if (ch) meta.push(ch);
-    meta.push(fmt(info.at) + ' 诊断');
+    meta.push(fmt(info.at) + (info.practiced ? ' 巩固练习' : ' 诊断'));
     li.appendChild(el('p', 'wk-meta', meta.join(' · ')));
     var re = el('a', 'wk-retest', '再测一次');
     re.href = retestHref([id]);
     li.appendChild(re);
+    var pr = el('a', 'wk-retest wk-practice', '去巩固过关（3连对）');
+    pr.href = practiceHref(id);
+    li.appendChild(pr);
     return li;
   }
 

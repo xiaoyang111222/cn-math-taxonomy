@@ -729,6 +729,8 @@
           h('button', { id: 'btn-skip2', onclick: function () { commit('skip'); } }, '不会')));
     }
 
+    // 同一道题重画题卡（选选项、看提示）时沿用同一个工具抽屉，草稿不丢；换题才是新的
+    if (window.CnmWorkspace && ui.phase !== 'skip') { if (!ui.ws) ui.ws = window.CnmWorkspace.mount(null, t); card.append(ui.ws); }
     card.append(h('div', { class: 'notice' }, '提示：自动判题只是近似的（数字、分数、多个答案会做规范化后比较），一切以参考答案为准；判错了可以手动更正。'));
     card.append(h('div', { class: 'row no-print', style: 'margin-top:12px' },
       n > 0 ? h('button', { class: 'small', onclick: function () { rebuild(session.answers.slice(0, -1)); } }, '撤销上一题') : null,
@@ -901,6 +903,10 @@
 
   function tag(cls, text) { return h('span', { class: 'tag ' + cls, text: text }); }
   const CAUSE_LABEL = { hint: '靠提示答对', guess: '疑似猜对', careless: '粗心型错误', procedural: '步骤 / 计算错误', concept: '概念错误' };
+  function practiceButton(id) {
+    if (demo || !D.graph.bank[id] || !D.graph.bank[id].length) return null;
+    return h('a', { class: 'btn btn-small practice-link no-print', href: practiceHref(id), onclick: function (e) { e.stopPropagation(); } }, '去巩固过关（3连对）');
+  }
   function practiceHref(id) { return '../practice/?target=' + encodeURIComponent(id) + (subject !== 'math' ? '&subject=' + subject : ''); }
   function statusTags(id, rootSet, targetSet) {
     const st = E.statusOf(session, id);
@@ -978,13 +984,13 @@
         if (r.pendingPrereqs.length) notes.append(h('div', { class: 'notice', text: '它的先修「' + r.pendingPrereqs.map(nameOf).join('」「') + '」没来得及测（题量用完），真正的根因可能更靠前。' }));
         if (r.outOfScopePrereqs.length) notes.append(h('div', { class: 'notice', text: '它的先修「' + r.outOfScopePrereqs.map(nameOf).join('」「') + '」不在所选范围内，没有检查。' }));
         if (r.externalPrereqs.length) notes.append(h('div', { class: 'muted small', text: '小学先修（无诊断题，未测）：' + r.externalPrereqs.map(nameOf).join('、') }));
-        return topicItem(r.id, statusTags(r.id, rootSet, targetSet), notes);
+        return topicItem(r.id, statusTags(r.id, rootSet, targetSet).concat([practiceButton(r.id)]), notes);
       }) : h('p', { text: targetsMastered ? '没有。' : '暂未发现。' })));
 
     page.append(h('div', { class: 'card', id: 'shaky' },
       h('h2', { text: '不稳的知识点（' + sum.shaky.length + '）' }),
       h('p', { class: 'muted small' }, '第一题没答对，但第二题（同级或更容易）答对了：可能是粗心，也可能掌握得不牢。它们会出现在学习路径里需要巩固，但工具没有继续向它们的先修回溯（只有两题都错才回溯）。'),
-      sum.shaky.length ? sum.shaky.map(function (id) { return topicItem(id, statusTags(id, rootSet, targetSet)); }) : h('p', { text: '没有。' })));
+      sum.shaky.length ? sum.shaky.map(function (id) { return topicItem(id, statusTags(id, rootSet, targetSet).concat([practiceButton(id)])); }) : h('p', { text: '没有。' })));
 
     page.append(h('div', { class: 'card', id: 'path' },
       h('h2', { text: '推荐学习路径' }),

@@ -78,3 +78,4 @@ main.kids { width: min(760px, 100%); margin: 0 auto; padding: 20px 16px 56px; }
 .rec-topics li { margin: 2px 0; overflow-wrap: anywhere; }
 .rec-topics a { color: var(--brand-strong); font-weight: 650; }
 .rec-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.wk-practice { margin-left: 14px; }

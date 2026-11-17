@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "note": "练习页（practice/）的变式题模板，可选。practice/variants.js 读取；kind 取值见该文件头注释。没有模板的知识点会对原题做参数扰动。",
+  "templates": [
+    { "topicId": "cnm_p031", "kind": "arith", "op": "+", "range": [10, 60], "difficulty": "basic" },
+    { "topicId": "cnm_p032", "kind": "arith", "op": "-", "range": [10, 99], "difficulty": "basic" },
+    { "topicId": "cnm_p071", "kind": "arith", "op": "+", "range": [100, 499], "difficulty": "standard" },
+    { "topicId": "cnm_p072", "kind": "arith", "op": "-", "range": [100, 999], "difficulty": "standard" },
+    { "topicId": "cnm_p083", "kind": "arith", "op": "/", "range": [2, 9], "difficulty": "basic" },
+    { "topicId": "cnm_p125", "kind": "decimal", "op": "+", "places": 1, "range": [1, 99], "difficulty": "basic" },
+    { "topicId": "cnm_p125", "kind": "decimal", "op": "-", "places": 2, "range": [1, 99], "difficulty": "standard" },
+    { "topicId": "cnm_p132", "kind": "decimal", "op": "*", "places": 1, "range": [1, 20], "difficulty": "basic" },
+    { "topicId": "cnm_p080", "kind": "fraction", "op": "+", "sameDen": true, "maxDen": 9, "difficulty": "basic" },
+    { "topicId": "cnm_p173", "kind": "fraction", "op": "+", "maxDen": 12, "difficulty": "standard" },
+    { "topicId": "cnm_p173", "kind": "fraction", "op": "-", "maxDen": 12, "difficulty": "standard" },
+    { "topicId": "cnm_p178", "kind": "fraction", "op": "*", "maxDen": 10, "difficulty": "basic" },
+    { "topicId": "cnm_p183", "kind": "fraction", "op": "/", "maxDen": 10, "difficulty": "standard" },
+    { "topicId": "cnm_042", "kind": "linear", "difficulty": "basic" },
+    { "topicId": "cnm_222", "kind": "quadratic", "difficulty": "standard" },
+    { "topicId": "cnm_224", "kind": "quadratic", "difficulty": "standard" },
+    { "topicId": "cnm_p089", "kind": "polygon-area", "shapes": ["rect"], "difficulty": "basic" },
+    { "topicId": "cnm_p147", "kind": "polygon-area", "shapes": ["para"], "difficulty": "basic" },
+    { "topicId": "cnm_p148", "kind": "polygon-area", "shapes": ["tri"], "difficulty": "basic" },
+    { "topicId": "cnm_p149", "kind": "polygon-area", "shapes": ["trap"], "difficulty": "basic" },
+    { "topicId": "cnm_p150", "kind": "polygon-area", "difficulty": "standard" }
+  ]
+}

@@ -1,0 +1,8 @@
+/* 巩固过关页：在 diagnose/style.css 基础上的补充 */
+.streak { display: flex; align-items: center; gap: 6px; margin: 8px 0 4px; }
+.streak .dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--ok, #2e8b57); }
+.streak .dot.on { background: var(--ok, #2e8b57); }
+.card.passed { border: 2px solid var(--ok, #2e8b57); }
+.hints { margin-top: 10px; padding: 8px 12px; border-left: 3px solid var(--accent, #0f6e62); background: var(--ok-bg, rgba(15,110,98,.06)); border-radius: 6px; }
+.hints .hint { margin: 4px 0; }
+.explain { margin: 8px 0; white-space: pre-wrap; }

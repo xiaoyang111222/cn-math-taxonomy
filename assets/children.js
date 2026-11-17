@@ -4,6 +4,10 @@
   'use strict';
   var KEY = 'cnmChildren.v1';
   var REC_KEY = 'cnmChildren.records.v1';
+  var PRACTICE_KEY = 'cnmChildren.practice.v1';
+  var HOUR = 3600 * 1000;
+  // 过关后的复习间隔：第 1 次过关 12 小时后复习，之后每次复习通过依次 3 天、7 天、14 天（之后保持 14 天）
+  var REVIEW_INTERVALS = [12 * HOUR, 3 * 24 * HOUR, 7 * 24 * HOUR, 14 * 24 * HOUR];
   var MAX_CHILDREN = 8;
   var MAX_RECORDS = 40;
   var GRADES = ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级', '七年级', '八年级', '九年级', '高一', '高二', '高三'];
@@ -84,6 +88,9 @@
     var r = records();
     delete r[id];
     write(REC_KEY, r);
+    var p = practiceAll();
+    delete p[id];
+    write(PRACTICE_KEY, p);
   }
 
   function recordsOf(childId) {
@@ -126,6 +133,62 @@
     write(REC_KEY, all);
   }
 
+  /* ---------------- 巩固练习：过关 -> mastered + nextReviewAt（间隔复习） ---------------- */
+  function practiceAll() {
+    var r = read(PRACTICE_KEY, null);
+    return r && typeof r === 'object' && !Array.isArray(r) ? r : {};
+  }
+  function practiceOf(childId) {
+    var p = practiceAll()[childId];
+    return p && typeof p === 'object' ? p : {};
+  }
+  function reviewDelay(stage) { return REVIEW_INTERVALS[Math.min(Math.max(stage, 0), REVIEW_INTERVALS.length - 1)]; }
+  /* 练习过关：opts = { childId?（默认当前孩子）, subject?, now?（毫秒，测试用） }。返回写入的条目，没有孩子时返回 null。
+   * 同一知识点再次过关（到期复习通过）会进入下一级间隔。 */
+  function markPracticed(topicId, opts) {
+    opts = opts || {};
+    var childId = opts.childId || (current() && current().id);
+    if (!childId || !topicId) return null;
+    var all = practiceAll();
+    var mine = all[childId] && typeof all[childId] === 'object' ? all[childId] : {};
+    var prev = mine[topicId];
+    var now = opts.now != null ? opts.now : Date.now();
+    var stage = prev && prev.status === 'mastered' ? Math.min((prev.stage || 0) + 1, REVIEW_INTERVALS.length - 1) : 0;
+    var entry = {
+      status: 'mastered', stage: stage, subject: opts.subject || (prev && prev.subject) || subjectOfId(topicId),
+      at: new Date(now).toISOString(), nextReviewAt: new Date(now + reviewDelay(stage)).toISOString(),
+      passes: ((prev && prev.passes) || 0) + 1
+    };
+    mine[topicId] = entry;
+    all[childId] = mine;
+    return write(PRACTICE_KEY, all) ? entry : null;
+  }
+  /* 练习 / 复习没过：状态降为 shaky，并马上到期（nextReviewAt = now），间隔从头来。 */
+  function markShaky(topicId, opts) {
+    opts = opts || {};
+    var childId = opts.childId || (current() && current().id);
+    if (!childId || !topicId) return null;
+    var all = practiceAll();
+    var mine = all[childId] && typeof all[childId] === 'object' ? all[childId] : {};
+    var now = opts.now != null ? opts.now : Date.now();
+    var entry = { status: 'shaky', stage: 0, subject: opts.subject || subjectOfId(topicId), at: new Date(now).toISOString(), nextReviewAt: new Date(now).toISOString(),
+      passes: (mine[topicId] && mine[topicId].passes) || 0 };
+    mine[topicId] = entry;
+    all[childId] = mine;
+    return write(PRACTICE_KEY, all) ? entry : null;
+  }
+  function subjectOfId(id) { return /^cne_/.test(id) ? 'english' : /^cnp_/.test(id) ? 'physics' : 'math'; }
+  /* 到期要复习的知识点（过关后到了 nextReviewAt 的），按到期时间早的在前。 */
+  function dueReviews(childId, opts) {
+    opts = opts || {};
+    var now = opts.now != null ? opts.now : Date.now();
+    var p = practiceOf(childId);
+    return Object.keys(p).filter(function (id) {
+      var e = p[id];
+      return e && e.status === 'mastered' && (!opts.subject || e.subject === opts.subject) && Date.parse(e.nextReviewAt) <= now;
+    }).sort(function (a, b) { return Date.parse(p[a].nextReviewAt) - Date.parse(p[b].nextReviewAt); });
+  }
+
   /* 把某个孩子的全部记录合成「每个知识点现在的状态」：越新的记录越说了算。
    * 返回 { byId: { id: { status, recKey, at, label, root } } } */
   function latestStatus(childId, subject) {
@@ -141,6 +204,16 @@
       put(r.shaky, 'shaky');
       put(r.weak, 'weak');
     });
+    // 巩固练习的结果比它更早的诊断记录新，就覆盖（带上 nextReviewAt）
+    var p = practiceOf(childId);
+    Object.keys(p).forEach(function (id) {
+      var e = p[id];
+      if (!e || (subject && e.subject !== subject)) return;
+      var cur = by[id];
+      if (!cur || String(e.at) >= String(cur.at)) {
+        by[id] = { status: e.status, recKey: null, at: e.at, label: '巩固练习', root: false, subject: e.subject, nextReviewAt: e.nextReviewAt, practiced: true };
+      } else if (cur) cur.nextReviewAt = e.nextReviewAt;
+    });
     return by;
   }
 
@@ -149,6 +222,8 @@
     list: list, get: get, current: current, setCurrent: setCurrent,
     add: add, update: update, remove: remove,
     recordsOf: recordsOf, saveRecord: saveRecord, hasRecord: hasRecord, moveRecord: moveRecord, removeRecord: removeRecord,
-    latestStatus: latestStatus
+    latestStatus: latestStatus,
+    REVIEW_INTERVALS: REVIEW_INTERVALS,
+    markPracticed: markPracticed, markShaky: markShaky, practiceOf: practiceOf, dueReviews: dueReviews
   };
 })();

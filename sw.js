@@ -3,7 +3,7 @@
  * 改了 SHELL 或 DATA 列表、或数据结构变了，就把 VERSION 加一。 */
 'use strict';
 
-var VERSION = 'v3';
+var VERSION = 'v4';
 var CACHE = 'cnm-pwa-' + VERSION;
 var SCOPE = self.registration.scope;
 
@@ -17,6 +17,12 @@ var SHELL = [
   'diagnose/engine.js',
   'diagnose/share.js',
   'diagnose/style.css',
+  'practice/',
+  'practice/app.js',
+  'practice/engine.js',
+  'practice/variants.js',
+  'practice/style.css',
+  'assets/workspace-tools.js',
   'children/',
   'children/history.html',
   'children/children.css',
@@ -48,7 +54,8 @@ var DATA = [
   'data/questions-english.json',
   'data/questions-physics.json',
   'data/questions.json',
-  'data/id-aliases.json'
+  'data/id-aliases.json',
+  'data/question-templates.json'
 ];
 
 function abs(path) { return new URL(path, SCOPE).href; }

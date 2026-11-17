@@ -1740,5 +1740,175 @@ test('连续受挫熔断：中间夹着一个不稳 / 掌握的点就不算连�
   assert.ok(RGQ.byId[sum.circuitBreakRootId]);
 });
 
+console.log('巩固过关练习 / 变式题 / 复习间隔');
+const P = require('../practice/engine.js');
+const V = require('../practice/variants.js');
+const WS = require('../assets/workspace-tools.js');
+
+function pBank(id) {
+  return [
+    { id: id + '_q1', topicId: id, difficulty: 'basic', type: 'numeric', prompt: '计算：3＋4＝？', answer: '7', verify: '3+4' },
+    { id: id + '_q2', topicId: id, difficulty: 'basic', type: 'numeric', prompt: '计算：5＋6＝？', answer: '11', verify: '5+6' },
+    { id: id + '_q3', topicId: id, difficulty: 'standard', type: 'numeric', prompt: '计算：13＋9＝？', answer: '22', verify: '13+9' },
+    { id: id + '_q4', topicId: id, difficulty: 'advanced', type: 'numeric', prompt: '计算：27＋38＝？', answer: '65', verify: '27+38' },
+    { id: id + '_q5', topicId: id, difficulty: 'basic', type: 'self', prompt: '说说你的想法', answer: '略' }
+  ];
+}
+const PT = { id: 'P1', name: '加法', description: '把两个数合起来。要先对齐数位。', mastery_criteria: ['会口算', '会笔算进位'] };
+
+test('练习：basic -> standard -> advanced；无提示连对 3 题过关；self 题不进练习', () => {
+  const bank = pBank('P1');
+  let s = P.createPractice(PT, bank, { seed: 'a' });
+  assert.strictEqual(s.current.difficulty, 'basic');
+  s = P.next(P.submit(s, true), bank);
+  assert.strictEqual(s.streak, 1);
+  assert.strictEqual(s.current.difficulty, 'standard');
+  s = P.next(P.submit(s, true), bank);
+  assert.strictEqual(s.current.difficulty, 'advanced');
+  s = P.submit(s, true);
+  assert.strictEqual(s.phase, 'passed');
+  assert.strictEqual(s.passed, true);
+  assert.ok(s.served.every((id) => id !== 'P1_q5'));
+  assert.deepStrictEqual(JSON.parse(JSON.stringify(s)), s, '状态可 JSON 往返');
+});
+
+test('练习：首次答错原位重试同一题；重试对连对不变；第二次错公布解析并清零、回到 basic', () => {
+  const bank = pBank('P1');
+  let s = P.createPractice(PT, bank, { seed: 'b' });
+  s = P.next(P.submit(s, true), bank);           // 连对 1
+  const qid = s.current.id;
+  s = P.submit(s, false);
+  assert.strictEqual(s.phase, 'retry');
+  assert.strictEqual(s.current.id, qid, '原位重试同一道题');
+  assert.strictEqual(s.streak, 1);
+  s = P.submit(s, true);
+  assert.strictEqual(s.phase, 'correct');
+  assert.strictEqual(s.streak, 1, '重试答对：连对不变');
+  s = P.next(s, bank);
+  s = P.submit(P.submit(s, false), false);
+  assert.strictEqual(s.phase, 'reveal');
+  assert.strictEqual(s.streak, 0);
+  s = P.next(s, bank);
+  assert.strictEqual(s.current.difficulty, 'basic');
+});
+
+test('练习：用了提示答对不算连对（清零）；提示最多两级；缺 hints 时按 description / mastery_criteria 合成', () => {
+  const bank = pBank('P1');
+  let s = P.createPractice(PT, bank, { seed: 'c' });
+  s = P.next(P.submit(s, true), bank);
+  s = P.useHint(P.useHint(P.useHint(s)));
+  assert.strictEqual(s.hintsUsed, 2);
+  s = P.submit(s, true);
+  assert.strictEqual(s.streak, 0);
+  assert.strictEqual(s.log[s.log.length - 1].counted, false);
+  const hs = P.synthesizeHints(bank[0], PT);
+  assert.strictEqual(hs.length, 2);
+  assert.ok(hs[0].indexOf('把两个数合起来') >= 0);
+  assert.ok(hs[1].indexOf('会口算') >= 0);
+  assert.deepStrictEqual(P.synthesizeHints({ hints: ['甲', '乙', '丙'] }, PT), ['甲', '乙']);
+  assert.strictEqual(P.synthesizeHints({ type: 'choice' }, { name: 'x' }).length, 2, '什么都没有也给两级');
+});
+
+test('练习：题用完后用变式题；没有可判分的题 -> empty', () => {
+  const bank = pBank('P1');
+  let s = P.createPractice(PT, bank, { seed: 'd' });
+  const variant = (q, tid, seed) => V.generateVariant(q, tid, seed);
+  for (let i = 0; i < 6; i++) { s = P.submit(P.submit(s, false), false); s = P.next(s, bank, { variant: variant }); }
+  assert.ok(s.current.variantOf, '原题出完后出变式题');
+  assert.ok(/^计算：\d+＋\d+＝？$/.test(s.current.prompt));
+  assert.strictEqual(P.createPractice(PT, [bank[4]], {}).phase, 'empty');
+});
+
+test('变式题：有理数求值器与 verify 一致；扰动可复现、答案自洽、保持大小关系', () => {
+  assert.deepStrictEqual(V.evaluate('Fraction(1,2)+Fraction(1,3)'), { n: 5n, d: 6n });
+  assert.strictEqual(V.formatQ(V.evaluate('314*3*3*2/100')), '56.52');
+  assert.strictEqual(V.formatQ(V.evaluate('2**-2')), '0.25');
+  assert.strictEqual(V.evaluate('sqrt(4)'), null);
+  assert.strictEqual(V.evaluate('1/0'), null);
+  const qs = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'questions-math.json'), 'utf8'));
+  let n = 0;
+  qs.forEach((q) => {
+    if (q.type !== 'numeric' || !q.verify) return;
+    const v = V.evaluate(q.verify);
+    if (!v) return;
+    n++;
+    const ans = q.answer.replace('−', '-');
+    const num = /\//.test(ans) ? ans.split('/').reduce((a, b) => Number(a) / Number(b)) : Number(ans);
+    assert.ok(Math.abs(Number(v.n) / Number(v.d) - num) < 1e-9, q.id + ' 求值与答案不符');
+    const x = V.generateVariant(q, q.topicId, 's');
+    if (!x) return;
+    assert.deepStrictEqual(V.generateVariant(q, q.topicId, 's'), x, '同种子同结果');
+    assert.strictEqual(V.formatQ(V.evaluate(x.verify), /\//.test(q.answer)), x.answer, q.id + ' 变式答案自洽');
+    assert.notStrictEqual(x.answer, q.answer);
+    if (/^\d+$/.test(q.answer)) assert.ok(/^\d+$/.test(x.answer), q.id + ' 整数答案保持整数');
+  });
+  assert.ok(n > 1000, '大部分可求值的题都参与了检查');
+});
+
+test('变式题：模板覆盖算术、小数、分数、一次/二次方程、多边形面积，答案可验算', () => {
+  const tpl = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'question-templates.json'), 'utf8'));
+  const kinds = new Set(tpl.templates.map((t) => t.kind));
+  ['arith', 'decimal', 'fraction', 'linear', 'quadratic', 'polygon-area'].forEach((k) => assert.ok(kinds.has(k), '模板缺 ' + k));
+  tpl.templates.forEach((t) => {
+    assert.ok(RG.byId[t.topicId], '模板知识点不存在：' + t.topicId);
+    for (let i = 0; i < 20; i++) {
+      const x = V.generateVariant({ id: t.topicId + '_q1', difficulty: 'basic' }, t.topicId, 'k' + i, { templates: [t] });
+      assert.ok(x, t.kind + ' 生成失败');
+      if (t.kind === 'quadratic') {
+        const [a, b] = x.answer.split('，').map(Number);
+        const m = /x²(?: ([+−]) (\d*)x)?(?: ([+−]) (\d+))? = 0/.exec(x.prompt);
+        assert.ok(m, x.prompt);
+        const B = m[1] ? (m[1] === '−' ? -1 : 1) * (m[2] === '' ? 1 : Number(m[2])) : 0;
+        const C = m[3] ? (m[3] === '−' ? -1 : 1) * Number(m[4]) : 0;
+        assert.ok(a + b + B === 0 && a * b === C, x.prompt);
+        assert.strictEqual(E.judgeQuestion(x, b + ',' + a).verdict, 'correct', '两根顺序无关');
+      } else {
+        assert.strictEqual(V.formatQ(V.evaluate(x.verify), /\//.test(x.answer)), x.answer, x.prompt);
+        assert.strictEqual(E.judgeQuestion(x, x.answer).verdict, 'correct');
+      }
+    }
+  });
+});
+
+test('工具抽屉：按知识点选默认实验台', () => {
+  assert.strictEqual(WS.defaultTab({ name: '配方法', domain: '数与代数', description: '通过配方把方程化为…' }), 'balance');
+  assert.strictEqual(WS.defaultTab({ name: '异分母分数加减', domain: '数与代数' }), 'area');
+  assert.strictEqual(WS.defaultTab({ name: '三角形的面积', domain: '图形与几何' }), 'area');
+  assert.strictEqual(WS.defaultTab({ name: '有理数的加法法则', domain: '数与代数' }), 'line');
+});
+
+function loadChildren() {
+  const vm = require('vm');
+  const store = {};
+  const ctx = { window: {}, localStorage: {
+    getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); }, removeItem: (k) => { delete store[k]; } } };
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, '..', 'assets', 'children.js'), 'utf8'), ctx);
+  return { CC: ctx.window.CnmChildren, store: store };
+}
+
+test('孩子档案：练习过关 -> mastered + nextReviewAt，间隔 12 小时 -> 3 天 -> 7 天 -> 14 天', () => {
+  const { CC } = loadChildren();
+  const kid = CC.add({ name: '小明', grade: '七年级' }).child;
+  CC.saveRecord(kid.id, { key: 'k1', subject: 'math', weak: ['cnm_010'], roots: ['cnm_010'], shaky: [], mastered: [] });
+  const H = 3600e3;
+  const t0 = Date.parse('2030-01-01T00:00:00Z');
+  const steps = [12 * H, 72 * H, 168 * H, 336 * H, 336 * H];
+  let now = t0;
+  steps.forEach((gap, i) => {
+    const e = CC.markPracticed('cnm_010', { now: now });
+    assert.strictEqual(e.status, 'mastered');
+    assert.strictEqual(Date.parse(e.nextReviewAt) - now, gap, '第 ' + (i + 1) + ' 次过关的间隔');
+    now += gap;
+  });
+  const by = CC.latestStatus(kid.id, 'math');
+  assert.strictEqual(by.cnm_010.status, 'mastered', '练习结果覆盖更早的诊断记录');
+  assert.ok(by.cnm_010.nextReviewAt);
+  assert.deepStrictEqual(Array.from(CC.dueReviews(kid.id, { now: now + 1 })), ['cnm_010']);
+  assert.strictEqual(CC.dueReviews(kid.id, { now: t0 }).length, 0);
+  CC.markShaky('cnm_010', { now: now });
+  assert.strictEqual(CC.latestStatus(kid.id).cnm_010.status, 'shaky');
+  assert.strictEqual(CC.markPracticed('cnm_010', { now: now }).stage, 0, '降级后间隔从头来');
+});
+
 console.log('\n' + passed + ' passed, ' + failed + ' failed');
 process.exit(failed ? 1 : 0);

@@ -18,6 +18,7 @@ cp -a "$ROOT/assets" "$DIST/"
 cp -a "$ROOT/explore" "$DIST/"
 cp -a "$ROOT/diagnose" "$DIST/"
 cp -a "$ROOT/children" "$DIST/"
+cp -a "$ROOT/practice" "$DIST/"
 rm -f "$DIST/diagnose/README.md"
 cp "$ROOT/data/topics.json" \
    "$ROOT/data/dependencies.json" \
@@ -27,6 +28,7 @@ cp "$ROOT/data/topics.json" \
    "$ROOT/data/questions-english.json" \
    "$ROOT/data/questions-physics.json" \
    "$ROOT/data/id-aliases.json" \
+   "$ROOT/data/question-templates.json" \
    "$DIST/data/"
 
 echo "Deploying $(du -sh "$DIST" | awk '{print $1}') from $DIST ..."

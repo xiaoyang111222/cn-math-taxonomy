@@ -219,3 +219,4 @@ table.log select { min-height: 44px; }
 .hints .hint { margin: 4px 0; }
 .tag.cause { opacity: .85; font-weight: normal; }
 .notice.gentle { color: inherit; background: var(--ok-bg, rgba(46,164,79,.10)); border: 1px solid rgba(46,164,79,.35); }
+.btn-small, a.practice-link { font-size: .85em; padding: 2px 10px; margin-left: 6px; }
