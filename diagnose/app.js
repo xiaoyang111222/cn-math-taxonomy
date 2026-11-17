@@ -737,6 +737,8 @@
           h('button', { id: 'btn-skip2', onclick: function () { commit('skip'); } }, '不会')));
     }
 
+    // 审校模式（?review=1）：题目下方可以修正题干 / 解析，意见暂存在本机
+    if (window.CnmReview && window.CnmReview.enabled()) card.append(window.CnmReview.questionControls(q));
     // 同一道题重画题卡（选选项、看提示）时沿用同一个工具抽屉，草稿不丢；换题才是新的
     if (window.CnmWorkspace && ui.phase !== 'skip') { if (!ui.ws) ui.ws = window.CnmWorkspace.mount(null, t); card.append(ui.ws); }
     card.append(h('div', { class: 'notice' }, '提示：自动判题只是近似的（数字、分数、多个答案会做规范化后比较），一切以参考答案为准；判错了可以手动更正。'));
@@ -1572,5 +1574,6 @@
     if (narrow.addEventListener) narrow.addEventListener('change', relayout);
   }
 
+  if (window.CnmReview && window.CnmReview.enabled()) window.CnmReview.mountPanel();
   init();
 })();

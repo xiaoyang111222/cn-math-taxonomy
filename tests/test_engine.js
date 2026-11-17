@@ -2014,5 +2014,40 @@ test('教材版本：URL > 导航栏 > 孩子的 textbook；有对照表时覆�
   assert.ok(/^[一二三四五六七八九]年级[上下全]册\s+(.+)$/.test(out[0].chapter));
 });
 
+console.log('审校模式');
+const RV = require('../assets/review.js');
+
+test('审校：同一条边 / 同一题同一字段只留最新一条；改回原强度 = 撤销；导出 review-patch.json', () => {
+  let ps = [];
+  ps = RV.upsert(ps, { type: 'edge', topicId: 'cnm_221', prerequisiteId: 'cnm_150', action: 'soft', from: 'hard' });
+  ps = RV.upsert(ps, { type: 'edge', topicId: 'cnm_221', prerequisiteId: 'cnm_150', action: 'remove', from: 'hard' });
+  assert.strictEqual(ps.length, 1);
+  assert.strictEqual(ps[0].action, 'remove');
+  assert.ok(ps[0].at);
+  ps = RV.upsert(ps, { type: 'edge', topicId: 'cnm_221', prerequisiteId: 'cnm_150', action: 'hard', from: 'hard' });
+  assert.strictEqual(ps.length, 0, '改回原强度就撤销');
+  ps = RV.upsert(ps, { type: 'question', questionId: 'cnm_221_q1', field: 'prompt', from: '旧', to: '新' });
+  ps = RV.upsert(ps, { type: 'question', questionId: 'cnm_221_q1', field: 'explanation', from: '旧', to: '新解析' });
+  ps = RV.upsert(ps, { type: 'question', questionId: 'cnm_221_q1', field: 'prompt', from: '旧', to: '更新' });
+  assert.strictEqual(ps.length, 2);
+  assert.strictEqual(ps.find((p) => p.field === 'prompt').to, '更新');
+  assert.strictEqual(RV.upsert(ps, { type: 'question', questionId: 'x', field: 'prompt', from: 'a', to: 'a' }).length, 2, '没改动不记');
+  assert.strictEqual(RV.upsert(ps, { type: 'edge', topicId: 'a', prerequisiteId: 'b', action: 'bogus' }).length, 2, '非法动作不记');
+  assert.strictEqual(RV.remove(ps, 'question:cnm_221_q1:prompt').length, 1);
+  const out = RV.buildExport(ps);
+  assert.strictEqual(out.format, 'cnm-review-patch');
+  assert.deepStrictEqual(out.summary, { edges: 0, questions: 2 });
+  assert.strictEqual(out.patches.length, 2);
+});
+
+test('课标覆盖：正式知识点 standards 全部非空，inferred 都带 note', () => {
+  const missing = topics.filter((t) => !t.external && !(t.standards || []).length).map((t) => t.id);
+  assert.deepStrictEqual(missing, []);
+  ['cnm_130', 'cnm_192'].forEach((id) => {
+    const t = topics.find((x) => x.id === id);
+    assert.ok(t.standards.every((s) => s.confidence === 'inferred' && s.note));
+  });
+});
+
 console.log('\n' + passed + ' passed, ' + failed + ' failed');
 process.exit(failed ? 1 : 0);

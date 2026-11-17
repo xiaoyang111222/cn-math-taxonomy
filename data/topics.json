@@ -9954,7 +9954,18 @@
       "answer": "延长 AD 至 E 使 DE=AD，证 △ABD≌△ECD，再用三边关系"
     },
     "external": false,
-    "standards": []
+    "standards": [
+      {
+        "id": "cms-2022:4.GG.27",
+        "confidence": "inferred",
+        "note": "全等三角形的常见辅助线（倍长中线、截长补短等）和模型（一线三等角、手拉手）都是在构造全等三角形后用 SAS/ASA/AAS 证明，课标没有单列「辅助线与模型」，按全等判定的综合运用归入，待核。"
+      },
+      {
+        "id": "cms-2022:4.GG.28",
+        "confidence": "inferred",
+        "note": "同上：模型题多用 ASA/AAS 证全等，按全等判定的综合运用归入，待核。"
+      }
+    ]
   },
   {
     "id": "cnm_131",
@@ -11547,7 +11558,18 @@
       "answer": "AF=5，DF=4，CF=1"
     },
     "external": false,
-    "standards": []
+    "standards": [
+      {
+        "id": "cms-2022:4.GG.43",
+        "confidence": "inferred",
+        "note": "四边形中的折叠与动点问题是矩形、菱形、正方形性质的综合运用，课标没有单列，按特殊平行四边形的性质与判定归入，待核。"
+      },
+      {
+        "id": "cms-2022:4.GG.60",
+        "confidence": "inferred",
+        "note": "折叠即轴对称：折痕是对应点连线的垂直平分线，按轴对称的性质归入，待核。"
+      }
+    ]
   },
   {
     "id": "cnm_193",

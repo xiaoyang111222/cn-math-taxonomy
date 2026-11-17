@@ -394,6 +394,14 @@
     return el('div', { class: wide ? 'span-2' : '' }, el('dt', { text: label }), el('dd', { text: value || '—' }));
   }
 
+  var REVIEW = !!(window.CnmReview && window.CnmReview.enabled());
+  /** 审校模式下，在一条先修边（topicId 依赖 prereq.id）的按钮下方加审校按钮。 */
+  function reviewEdge(node, topicId, prereq) {
+    if (!REVIEW) return node;
+    var names = { topic: byId.has(topicId) ? byId.get(topicId).name : topicId, prerequisite: byId.has(prereq.id) ? byId.get(prereq.id).name : prereq.id };
+    return el('div', { class: 'rv-wrap' }, node, window.CnmReview.edgeControls(topicId, prereq.id, prereq.strength, names));
+  }
+
   function renderDetail() {
     var box = $('detail');
     if (!selected || !byId.has(selected)) {
@@ -471,13 +479,29 @@
     parts.push(el('section', null,
       el('h2', { text: '先修' }),
       el('p', { class: 'muted', text: '直接 ' + pres.length + ' 个，全部上游 ' + countReach(pre, topic.id) + ' 个。图上默认只画向上 2 层；选「全部」且超过 ' + FOLD_AT + ' 个时先按年级收起。' }),
-      pres.length ? pres.map(relButton) : el('p', { text: '这是起点，没有更早的先修。' })));
+      pres.length ? pres.map(function (p) { return reviewEdge(relButton(p), topic.id, p); }) : el('p', { text: '这是起点，没有更早的先修。' })));
 
     var posts = post.get(topic.id) || [];
     parts.push(el('section', null,
       el('h2', { text: '被哪些知识点依赖' }),
       el('p', { class: 'muted', text: '直接 ' + posts.length + ' 个，全部下游 ' + countReach(post, topic.id) + ' 个。图上只画向下 1 层。' }),
-      posts.length ? posts.map(relButton) : el('p', { text: '还没有后续知识点依赖它。' })));
+      posts.length ? posts.map(function (p) { return reviewEdge(relButton(p), p.id, { id: topic.id, strength: p.strength }); }) : el('p', { text: '还没有后续知识点依赖它。' })));
+
+    // 审校模式（?review=1）：列出这个知识点的全部题目，每题下方可以修正题干 / 解析
+    if (REVIEW) {
+      var qs = questionsByTopic.get(topic.id) || [];
+      parts.push(el('section', { id: 'review-questions' },
+        el('h2', { text: '题库（审校）' }),
+        el('p', { class: 'muted', text: '共 ' + qs.length + ' 道题。修正意见暂存在本机，右下角导出 review-patch.json 发给维护者。' }),
+        qs.map(function (q) {
+          return el('div', { class: 'std' },
+            el('div', { class: 'std-id' }, el('code', { text: q.id }), ' · ' + q.difficulty + ' · ' + q.type),
+            el('p', { text: q.prompt }),
+            q.choices ? el('p', { class: 'muted', text: q.choices.map(function (c) { return c.key + '. ' + c.text; }).join('　') }) : null,
+            el('p', { class: 'muted', text: '答案：' + q.answer + (q.explanation ? '　解析：' + q.explanation : '') }),
+            window.CnmReview.questionControls(q));
+        })));
+    }
 
     box.replaceChildren.apply(box, parts);
     document.title = topic.name + ' · 知识图谱';
@@ -1160,6 +1184,7 @@
   syncDepthButtons();
   applyQuery();
   bind();
+  if (REVIEW) window.CnmReview.mountPanel();
   load().then(function () { return loadQuestions(); }).then(function () {
     fillDomain();
     syncControls();
