@@ -16,6 +16,13 @@
     a.href = href;
     a.target = '_blank';
     a.rel = 'sponsored nofollow noopener';
+    a.addEventListener('click', function () {
+      try {
+        if (typeof window.cnmTrack === 'function') {
+          window.cnmTrack('goods_click', { path: '/goods/' + p.id + '/' + channel });
+        }
+      } catch (e) { /* 统计失败不影响跳转 */ }
+    });
     return a;
   }
 
