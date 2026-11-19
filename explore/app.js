@@ -11,9 +11,9 @@
   var DOMAIN_ORDER = ['数与代数', '图形与几何', '统计与概率', '综合与实践'];
   var SCI_DOMAIN_ORDER = ['物质科学', '生命科学', '地球与宇宙科学', '技术与工程'];
   var MOR_DOMAIN_ORDER = ['生活与安全', '学校生活', '家庭与亲情', '社会规则', '公民与国家', '自然与环境'];
-  var HIS_DOMAIN_ORDER = ['中国古代史', '中国近代史', '中国现代史', '世界古代史', '世界近代史', '世界现代史'];
-  var GEO_DOMAIN_ORDER = ['地球与地图', '世界地理', '中国地理'];
-  var BIO_DOMAIN_ORDER = ['生物体的结构层次', '生物的多样性', '生物与环境', '植物的生活', '人体生理与健康', '遗传与进化', '生物学与社会·跨学科实践'];
+  var HIS_DOMAIN_ORDER = ['中国古代史', '中国近代史', '中国现代史', '世界古代史', '世界近代史', '世界现代史', '国家制度与社会治理', '经济与社会生活', '文化交流与传播'];
+  var GEO_DOMAIN_ORDER = ['地球与地图', '世界地理', '中国地理', '自然地理基础', '人文地理基础', '区域发展', '资源环境与国家安全'];
+  var BIO_DOMAIN_ORDER = ['生物体的结构层次', '生物的多样性', '生物与环境', '植物的生活', '人体生理与健康', '遗传与进化', '生物学与社会·跨学科实践', '分子与细胞', '稳态与调节', '生物技术与工程'];
   var CHEM_DOMAIN_ORDER = ['科学探究与化学实验', '物质的性质与应用', '物质的组成与结构', '物质的化学变化', '化学与社会·跨学科实践'];
   var ZH_DOMAIN_ORDER = ['拼音', '识字写字', '词语', '句子', '阅读理解', '古诗文积累', '文言文阅读', '名著阅读', '习作基础'];
 
@@ -131,8 +131,31 @@
     13: ['选必二', '选必二 · 选择性必修第二册'],
     14: ['选必三', '选必三 · 选择性必修第三册']
   };
+  // 化学、历史、地理、生物按册编号：12 是选必一，不是英语/物理的必修三。
+  function bookBySubject() { return subject === 'chemistry' || subject === 'history' || subject === 'geography' || subject === 'biology'; }
+  var SENIOR_BOOK_TITLE = {
+    history: {
+      10: ['必修一', '必修一 · 中外历史纲要（上）'], 11: ['必修二', '必修二 · 中外历史纲要（下）'],
+      12: ['选必一', '选必一 · 选择性必修第一册 国家制度与社会治理'], 13: ['选必二', '选必二 · 选择性必修第二册 经济与社会生活'],
+      14: ['选必三', '选必三 · 选择性必修第三册 文化交流与传播']
+    },
+    geography: {
+      10: ['必修一', '必修一 · 必修第一册'], 11: ['必修二', '必修二 · 必修第二册'],
+      12: ['选必一', '选必一 · 选择性必修第一册 自然地理基础'], 13: ['选必二', '选必二 · 选择性必修第二册 区域发展'],
+      14: ['选必三', '选必三 · 选择性必修第三册 资源、环境与国家安全']
+    },
+    biology: {
+      10: ['必修一', '必修一 · 必修1 分子与细胞'], 11: ['必修二', '必修二 · 必修2 遗传与进化'],
+      12: ['选必一', '选必一 · 选择性必修1 稳态与调节'], 13: ['选必二', '选必二 · 选择性必修2 生物与环境'],
+      14: ['选必三', '选必三 · 选择性必修3 生物技术与工程']
+    }
+  };
+  function seniorBook(grade) {
+    if (subject === 'chemistry') return CHEM_BOOK[grade];
+    return (SENIOR_BOOK_TITLE[subject] || {})[grade];
+  }
   function gradeWord(grade) {
-    if (subject === 'chemistry' && CHEM_BOOK[grade]) return CHEM_BOOK[grade][0];
+    if (bookBySubject() && seniorBook(grade)) return seniorBook(grade)[0];
     if ((subject === 'english' || subject === 'physics') && EN_BOOK[grade]) return EN_BOOK[grade][0];
     if (grade === 10) return '高一';
     if (grade === 11) return '高二';
@@ -142,7 +165,7 @@
     return CN[grade] + '年级';
   }
   function gradeLabel(topic) {
-    if (subject === 'chemistry' && CHEM_BOOK[topic.grade]) return CHEM_BOOK[topic.grade][1];
+    if (bookBySubject() && seniorBook(topic.grade)) return seniorBook(topic.grade)[1];
     if ((subject === 'english' || subject === 'physics') && EN_BOOK[topic.grade]) return EN_BOOK[topic.grade][1];
     if (topic.grade === 10) return '高一 · 必修第一册';
     if (topic.grade === 11) return '高二 · 必修第二册';
@@ -445,7 +468,7 @@
       box.replaceChildren(el('div', { class: 'detail-empty' },
         el('h1', { text: '选择一个知识点' }),
         el('p', { text: '可以搜索，也可以按年级、册、章展开。选中之后，中间只画它附近的先修，以及后面一层会用到它的知识点。' })));
-      document.title = subject === 'english' ? '知识图谱 · 英语' : subject === 'physics' ? '知识图谱 · 物理' : subject === 'chinese' ? '知识图谱 · 语文' : subject === 'science' ? '知识图谱 · 小学科学' : subject === 'morality' ? '知识图谱 · 道德与法治' : subject === 'history' ? '知识图谱 · 初中历史' : subject === 'geography' ? '知识图谱 · 初中地理' : subject === 'biology' ? '知识图谱 · 初中生物' : subject === 'chemistry' ? '知识图谱 · 化学' : '知识图谱 · 中小学·高中知识图谱';
+      document.title = subject === 'english' ? '知识图谱 · 英语' : subject === 'physics' ? '知识图谱 · 物理' : subject === 'chinese' ? '知识图谱 · 语文' : subject === 'science' ? '知识图谱 · 小学科学' : subject === 'morality' ? '知识图谱 · 道德与法治' : subject === 'history' ? '知识图谱 · 历史' : subject === 'geography' ? '知识图谱 · 地理' : subject === 'biology' ? '知识图谱 · 生物' : subject === 'chemistry' ? '知识图谱 · 化学' : '知识图谱 · 中小学·高中知识图谱';
       return;
     }
     var topic = byId.get(selected);
@@ -1052,7 +1075,7 @@
     if (subject === 'history') {
       document.querySelectorAll('#stage-tabs [data-stage]').forEach(function (button) {
         var hisStage = button.getAttribute('data-stage');
-        button.hidden = hisStage === 'p' || hisStage === 'h';
+        button.hidden = hisStage === 'p';
       });
       var hisGrade = $('fGrade');
       hisGrade.replaceChildren();
@@ -1060,15 +1083,19 @@
       [7, 8, 9].forEach(function (g) {
         hisGrade.append(el('option', { value: String(g), text: CN[g] + '年级' }));
       });
+      [[10, '必修一 · 中外历史纲要（上）'], [11, '必修二 · 中外历史纲要（下）'], [12, '选必一 · 国家制度与社会治理'],
+        [13, '选必二 · 经济与社会生活'], [14, '选必三 · 文化交流与传播']].forEach(function (row) {
+        hisGrade.append(el('option', { value: String(row[0]), text: row[1] }));
+      });
       var hisSample = $('pick-sample');
       if (hisSample) hisSample.textContent = '先看看「远古时期的人类活动」';
-      document.title = '知识图谱 · 初中历史';
+      document.title = '知识图谱 · 历史';
       return;
     }
     if (subject === 'geography') {
       document.querySelectorAll('#stage-tabs [data-stage]').forEach(function (button) {
         var geoStage = button.getAttribute('data-stage');
-        button.hidden = geoStage === 'p' || geoStage === 'h';
+        button.hidden = geoStage === 'p';
       });
       var geoGrade = $('fGrade');
       geoGrade.replaceChildren();
@@ -1076,15 +1103,19 @@
       [7, 8].forEach(function (g) {
         geoGrade.append(el('option', { value: String(g), text: CN[g] + '年级' }));
       });
+      [[10, '必修第一册'], [11, '必修第二册'], [12, '选择性必修第一册 · 自然地理基础'],
+        [13, '选择性必修第二册 · 区域发展'], [14, '选择性必修第三册 · 资源、环境与国家安全']].forEach(function (row) {
+        geoGrade.append(el('option', { value: String(row[0]), text: row[1] }));
+      });
       var geoSample = $('pick-sample');
       if (geoSample) geoSample.textContent = '先看看「地球的宇宙环境」';
-      document.title = '知识图谱 · 初中地理';
+      document.title = '知识图谱 · 地理';
       return;
     }
     if (subject === 'biology') {
       document.querySelectorAll('#stage-tabs [data-stage]').forEach(function (button) {
         var bioStage = button.getAttribute('data-stage');
-        button.hidden = bioStage === 'p' || bioStage === 'h';
+        button.hidden = bioStage === 'p';
       });
       var bioGrade = $('fGrade');
       bioGrade.replaceChildren();
@@ -1092,9 +1123,13 @@
       [7, 8].forEach(function (g) {
         bioGrade.append(el('option', { value: String(g), text: CN[g] + '年级' }));
       });
+      [[10, '必修1 · 分子与细胞'], [11, '必修2 · 遗传与进化'], [12, '选择性必修1 · 稳态与调节'],
+        [13, '选择性必修2 · 生物与环境'], [14, '选择性必修3 · 生物技术与工程']].forEach(function (row) {
+        bioGrade.append(el('option', { value: String(row[0]), text: row[1] }));
+      });
       var bioSample = $('pick-sample');
       if (bioSample) bioSample.textContent = '先看看「观察周边环境中的生物」';
-      document.title = '知识图谱 · 初中生物';
+      document.title = '知识图谱 · 生物';
       return;
     }
     if (subject === 'chemistry') {
@@ -1165,7 +1200,7 @@
   function applyQuery() {
     var params = new URLSearchParams(location.search);
     var gradeValue = params.get('grade') || '';
-    var gradeOk = subject === 'english' ? /^(?:[3-9]|1[0-6])$/ : subject === 'physics' ? /^(?:[89]|1[0-5])$/ : subject === 'history' ? /^[7-9]$/ : subject === 'geography' || subject === 'biology' ? /^[78]$/ : subject === 'chemistry' ? /^(?:9|1[0-4])$/ : subject === 'chinese' || subject === 'morality' ? /^[1-9]$/ : subject === 'science' ? /^[1-6]$/ : /^(?:[1-9]|1[0-4])$/;
+    var gradeOk = subject === 'english' ? /^(?:[3-9]|1[0-6])$/ : subject === 'physics' ? /^(?:[89]|1[0-5])$/ : subject === 'history' ? /^(?:[7-9]|1[0-4])$/ : subject === 'geography' || subject === 'biology' ? /^(?:[78]|1[0-4])$/ : subject === 'chemistry' ? /^(?:9|1[0-4])$/ : subject === 'chinese' || subject === 'morality' ? /^[1-9]$/ : subject === 'science' ? /^[1-6]$/ : /^(?:[1-9]|1[0-4])$/;
     if (gradeOk.test(gradeValue)) grade = gradeValue;
     var stageValue = params.get('stage') || '';
     if (stageValue === 'p' || stageValue === 'j' || stageValue === 'h') stage = stageValue;

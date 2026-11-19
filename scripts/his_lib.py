@@ -14,6 +14,8 @@ import re
 
 TOPICS = []
 HARD = []
+# 补边：真实但与课序软边重叠、不会被传递约简保留的先修关系。编译时在约简之后写入，不参与约简。
+EXTRA = []
 
 # (年级, 学期, 单元) -> (单元名, 领域, 默认课标符号)
 UNITS = {
@@ -107,6 +109,10 @@ def chapter(grade, sem, unit):
 
 def hard(topic, prereq, reason):
     HARD.append((topic, prereq, reason))
+
+
+def extra(topic, prereq, strength, reason):
+    EXTRA.append((topic, prereq, strength, reason))
 
 
 def vol(grade, sem):

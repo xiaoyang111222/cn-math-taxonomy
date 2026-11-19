@@ -102,9 +102,9 @@
       mdemo.textContent = '先看一遍演示：一年级上册道德与法治';
     }
   } else if (subject === 'history') {
-    document.title = '初中历史 · 中小学·高中知识图谱';
+    document.title = '历史 · 中小学·高中知识图谱';
     var heye = document.querySelector('.eyebrow');
-    if (heye) heye.textContent = '历史：初中七至九年级 · 统编版';
+    if (heye) heye.textContent = '历史：初中七至九年级 · 高中必修（纲要上下）与选择性必修 · 统编版';
     var hprimary = document.querySelector('.hero-actions a.btn-primary');
     var hbrowse = document.querySelector('.hero-actions a.btn:not(.btn-primary)');
     if (hprimary) hprimary.setAttribute('href', 'diagnose/?subject=history');
@@ -115,9 +115,9 @@
       hdemo.textContent = '先看一遍演示：七年级上册历史';
     }
   } else if (subject === 'geography') {
-    document.title = '初中地理 · 中小学·高中知识图谱';
+    document.title = '地理 · 中小学·高中知识图谱';
     var geye = document.querySelector('.eyebrow');
-    if (geye) geye.textContent = '地理：初中七至八年级 · 人教版';
+    if (geye) geye.textContent = '地理：初中七至八年级 · 高中必修第一、二册和选择性必修第一、二、三册 · 人教版';
     var gprimary = document.querySelector('.hero-actions a.btn-primary');
     var gbrowse = document.querySelector('.hero-actions a.btn:not(.btn-primary)');
     if (gprimary) gprimary.setAttribute('href', 'diagnose/?subject=geography');
@@ -128,9 +128,9 @@
       gdemo.textContent = '先看一遍演示：七年级上册地理';
     }
   } else if (subject === 'biology') {
-    document.title = '初中生物 · 中小学·高中知识图谱';
+    document.title = '生物 · 中小学·高中知识图谱';
     var beye = document.querySelector('.eyebrow');
-    if (beye) beye.textContent = '生物：初中七至八年级 · 人教版';
+    if (beye) beye.textContent = '生物：初中七至八年级 · 高中必修1、2和选择性必修1、2、3 · 人教版';
     var bprimary = document.querySelector('.hero-actions a.btn-primary');
     var bbrowse = document.querySelector('.hero-actions a.btn:not(.btn-primary)');
     if (bprimary) bprimary.setAttribute('href', 'diagnose/?subject=biology');
@@ -391,12 +391,19 @@
     }
     if (wantPrimary || subject === 'chinese' || subject === 'morality') {
       /* 语文、道德与法治到九年级且无高中；科学只到六年级。道德与法治空年级不画卡片 */
-    } else if (wantHistory) {
-      /* 初中历史只到九年级 */
-    } else if (wantGeography) {
-      /* 初中地理只到八年级 */
-    } else if (wantBiology) {
-      /* 初中生物只到八年级，九年级没有生物课 */
+    } else if (wantHistory || wantGeography || wantBiology) {
+      var srName = wantHistory ? '高中历史' : wantGeography ? '高中地理' : '高中生物';
+      var srTitle = wantHistory
+        ? { 10: '中外历史纲要（上）', 11: '中外历史纲要（下）', 12: '选择性必修第一册', 13: '选择性必修第二册', 14: '选择性必修第三册' }
+        : wantGeography
+        ? { 10: '必修第一册', 11: '必修第二册', 12: '选择性必修第一册', 13: '选择性必修第二册', 14: '选择性必修第三册' }
+        : { 10: '必修1 分子与细胞', 11: '必修2 遗传与进化', 12: '选择性必修1 稳态与调节', 13: '选择性必修2 生物与环境', 14: '选择性必修3 生物技术与工程' };
+      var srWord = { 10: '必修一', 11: '必修二', 12: '选必一', 13: '选必二', 14: '选必三' };
+      [10, 11, 12, 13, 14].forEach(function (g) {
+        if (topics.some(function (topic) { return topic.grade === g; })) {
+          addCard(g, srName, srWord[g], 'is-senior', srTitle[g], 'explore/?subject=' + subject + '&grade=' + g);
+        }
+      });
     } else if (wantChemistry) {
       var chemHsB1 = topics.filter(function (topic) { return topic.grade === 10; });
       var chemHsB2 = topics.filter(function (topic) { return topic.grade === 11; });

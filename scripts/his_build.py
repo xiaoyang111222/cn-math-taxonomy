@@ -22,7 +22,7 @@ import his_g7  # noqa: E402,F401
 import his_g8  # noqa: E402,F401
 import his_g9  # noqa: E402,F401
 import his_edges  # noqa: E402,F401
-from his_lib import HARD, CODE_OF, STANDARD_ROWS, TOPICS, chapter, check_question, materialise_questions  # noqa: E402
+from his_lib import EXTRA, HARD, CODE_OF, STANDARD_ROWS, TOPICS, chapter, check_question, materialise_questions  # noqa: E402
 from his_figs import figure_for  # noqa: E402
 from verify_questions import verify_all  # noqa: E402
 
@@ -45,7 +45,7 @@ def dump(name, data):
 
 
 def is_his_topic_id(tid):
-    return str(tid).startswith("cnh_")
+    return str(tid).startswith("cnh_j")
 
 
 def reaches(adj, src, dst, hard_only):
@@ -132,12 +132,8 @@ def rank_of(spec):
     return spec["grade"] * 2 + (1 if spec["semester"] == "下" else 0)
 
 
-def main():
-    topics = load("topics.json")
-    deps = load("dependencies.json")
-    questions = load("questions.json")
-    standards = load("cn-curriculum-standards.json")
-
+def order_topics():
+    """按册、单元排序，再让硬先修排在后续点之前。就地改写 TOPICS；成功返回 0。id 按这个顺序编号。"""
     order = {t["key"]: i for i, t in enumerate(TOPICS)}
     TOPICS.sort(key=lambda t: (rank_of(t), t["unit"], order[t["key"]]))
     pre = defaultdict(set)
@@ -156,6 +152,18 @@ def main():
             print("硬先修成环", file=sys.stderr)
             return 1
     TOPICS[:] = out
+    return 0
+
+
+def main():
+    topics = load("topics.json")
+    deps = load("dependencies.json")
+    questions = load("questions.json")
+    standards = load("cn-curriculum-standards.json")
+
+    order = {t["key"]: i for i, t in enumerate(TOPICS)}
+    if order_topics() != 0:
+        return 1
     by_vol = Counter("%d%s" % (t["grade"], t["semester"]) for t in TOPICS)
     for k in VOLUMES:
         n = by_vol[k]
@@ -168,9 +176,9 @@ def main():
         return 1
 
     base_topics = [t for t in topics if not is_his_topic_id(t.get("id"))]
-    base_deps = [e for e in deps if not is_his_topic_id(e.get("topicId")) and not is_his_topic_id(e.get("prerequisiteId"))]
+    base_deps = [e for e in deps if not is_his_topic_id(e.get("topicId"))]
     base_questions = [q for q in questions if not is_his_topic_id(q.get("topicId"))]
-    base_items = [it for it in standards.get("items", []) if not str(it.get("id", "")).startswith("chs-")]
+    base_items = [it for it in standards.get("items", []) if not str(it.get("id", "")).startswith("chs-2022")]
 
     id_of_std, new_items = build_standards()
     used_std = {t["std"] for t in TOPICS}
@@ -279,6 +287,23 @@ def main():
         })
 
     merged_deps, dropped = reduce_history(base_deps + new_edges)
+    existing_pairs = {(e["topicId"], e["prerequisiteId"]) for e in merged_deps}
+    for src, dst, strength, reason in EXTRA:
+        if src not in id_of or dst not in id_of:
+            print("补边指向未登记的知识点：%s → %s" % (src, dst), file=sys.stderr)
+            return 1
+        if index[dst] >= index[src] or rank_of(by_key[dst]) > rank_of(by_key[src]):
+            print("补边先修不早于后续：%s 依赖 %s" % (src, dst), file=sys.stderr)
+            return 1
+        if strength not in ("hard", "soft") or not str(reason).strip():
+            print("补边强度或理由不合法：%s → %s" % (src, dst), file=sys.stderr)
+            return 1
+        pair = (id_of[src], id_of[dst])
+        if pair in existing_pairs:
+            print("补边与已有边重复：%s → %s" % pair, file=sys.stderr)
+            return 1
+        existing_pairs.add(pair)
+        merged_deps.append({"topicId": pair[0], "prerequisiteId": pair[1], "strength": strength, "reason": reason})
     his_edges_out = [e for e in merged_deps if is_his_topic_id(e["topicId"])]
     if any(not is_his_topic_id(e["prerequisiteId"]) for e in his_edges_out):
         print("历史边连到了其他学科", file=sys.stderr)
@@ -338,9 +363,9 @@ def main():
     again_q = load("questions.json")
     again_s = load("cn-curriculum-standards.json")
     again_topics = [t for t in again_t if not is_his_topic_id(t.get("id"))]
-    again_deps = [e for e in again_d if not is_his_topic_id(e.get("topicId")) and not is_his_topic_id(e.get("prerequisiteId"))]
+    again_deps = [e for e in again_d if not is_his_topic_id(e.get("topicId"))]
     again_qs = [q for q in again_q if not is_his_topic_id(q.get("topicId"))]
-    again_items = [it for it in again_s.get("items", []) if not str(it.get("id", "")).startswith("chs-")]
+    again_items = [it for it in again_s.get("items", []) if not str(it.get("id", "")).startswith("chs-2022")]
     if again_topics != base_topics or again_deps != base_deps or again_qs != base_questions or again_items != base_items:
         print("其他学科数据在写回后发生了变化", file=sys.stderr)
         return 1

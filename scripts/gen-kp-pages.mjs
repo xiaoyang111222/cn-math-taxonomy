@@ -68,15 +68,17 @@ function stageOf(t) {
   return '';
 }
 
-/* 年级文字：1–9 年级 + 上/下学期；10–12 高一至高三；13 及以上取教材章节首段（选必…）。 */
+/* 年级文字：1–9 年级 + 上/下学期；高中章节以「必修」「选必」开头的取该首词（必修一、选必二…），其余 10–12 高一至高三，13 及以上取章节首段。 */
 function gradeLabel(t) {
   const g = Number(t.grade);
   if (g >= 1 && g <= 9) {
     const sem = t.semester === '上' || t.semester === '下' ? t.semester + '学期' : '';
     return NUM_ZH[g] + '年级' + sem;
   }
+  const first = String(t.chapter || '').split(/\s+/)[0] || '';
+  if (g >= 10 && /^(必修|选必)/.test(first)) return first;
   if (g >= 10 && g <= 12) return '高' + NUM_ZH[g - 9];
-  if (g >= 13) return String(t.chapter || '').split(/\s+/)[0] || '';
+  if (g >= 13) return first;
   return '';
 }
 

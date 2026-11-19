@@ -51,7 +51,7 @@ def dump(name, data):
 
 
 def is_bio_topic_id(tid):
-    return str(tid).startswith("cnb_")
+    return str(tid).startswith("cnb_j")
 
 
 def reaches(adj, src, dst, hard_only):
@@ -174,9 +174,9 @@ def main():
         return 1
 
     base_topics = [t for t in topics if not is_bio_topic_id(t.get("id"))]
-    base_deps = [e for e in deps if not is_bio_topic_id(e.get("topicId")) and not is_bio_topic_id(e.get("prerequisiteId"))]
+    base_deps = [e for e in deps if not is_bio_topic_id(e.get("topicId"))]
     base_questions = [q for q in questions if not is_bio_topic_id(q.get("topicId"))]
-    base_items = [it for it in standards.get("items", []) if not str(it.get("id", "")).startswith("cbs-")]
+    base_items = [it for it in standards.get("items", []) if not str(it.get("id", "")).startswith("cbs-2022")]
 
     id_of_std, new_items = build_standards()
     used_std = {t["std"] for t in TOPICS}
@@ -369,9 +369,9 @@ def main():
     again_q = load("questions.json")
     again_s = load("cn-curriculum-standards.json")
     again_topics = [t for t in again_t if not is_bio_topic_id(t.get("id"))]
-    again_deps = [e for e in again_d if not is_bio_topic_id(e.get("topicId")) and not is_bio_topic_id(e.get("prerequisiteId"))]
+    again_deps = [e for e in again_d if not is_bio_topic_id(e.get("topicId"))]
     again_qs = [q for q in again_q if not is_bio_topic_id(q.get("topicId"))]
-    again_items = [it for it in again_s.get("items", []) if not str(it.get("id", "")).startswith("cbs-")]
+    again_items = [it for it in again_s.get("items", []) if not str(it.get("id", "")).startswith("cbs-2022")]
     if again_topics != base_topics or again_deps != base_deps or again_qs != base_questions or again_items != base_items:
         print("其他学科数据在写回后发生了变化", file=sys.stderr)
         return 1

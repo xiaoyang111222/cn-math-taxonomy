@@ -31972,5 +31972,5111 @@
     "prerequisiteId": "cnd_p049",
     "strength": "soft",
     "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「身心健康很重要」，再学「生命最宝贵」：懂得身心健康很重要，再认识生命最宝贵。"
+  },
+  {
+    "topicId": "cnh_j021",
+    "prerequisiteId": "cnh_j003",
+    "strength": "soft",
+    "reason": "「从考古发现看文明起源」是方法课，需要手里已有良渚等具体发现，才有东西可拿来分析。"
+  },
+  {
+    "topicId": "cnh_j007",
+    "prerequisiteId": "cnh_j005",
+    "strength": "soft",
+    "reason": "百家争鸣是诸子对礼崩乐坏的回应，春秋时期王室衰微、诸侯争霸是这场争鸣的出发点。"
+  },
+  {
+    "topicId": "cnh_j009",
+    "prerequisiteId": "cnh_j004",
+    "strength": "soft",
+    "reason": "把秦的郡县制同西周的分封制放在一起比较，才看得出统一后的新制度新在哪里。"
+  },
+  {
+    "topicId": "cnh_j012",
+    "prerequisiteId": "cnh_j009",
+    "strength": "soft",
+    "reason": "汉武帝加强中央集权，是在承袭秦朝郡县制和皇帝制度的基础上进一步巩固。"
+  },
+  {
+    "topicId": "cnh_j012",
+    "prerequisiteId": "cnh_j007",
+    "strength": "soft",
+    "reason": "「罢黜百家，独尊儒术」要拿儒家同其他各家的主张相比，才知道为什么选中儒学。"
+  },
+  {
+    "topicId": "cnh_j013",
+    "prerequisiteId": "cnh_j011",
+    "strength": "soft",
+    "reason": "光武帝建立东汉是重新恢复刘氏汉朝，需要先知道西汉怎样建立、怎样衰落。"
+  },
+  {
+    "topicId": "cnh_j015",
+    "prerequisiteId": "cnh_j013",
+    "strength": "soft",
+    "reason": "蔡伦改进造纸术、张仲景和华佗的医学成就大多出现在东汉，先有东汉的社会背景再学这些成就。"
+  },
+  {
+    "topicId": "cnh_j016",
+    "prerequisiteId": "cnh_j013",
+    "strength": "hard",
+    "reason": "三国鼎立直接出自东汉末年黄巾起义后的军阀混战，不知东汉怎样走向衰亡就接不上官渡之战。"
+  },
+  {
+    "topicId": "cnh_j019",
+    "prerequisiteId": "cnh_j017",
+    "strength": "hard",
+    "reason": "北魏统一北方、孝文帝改革推动民族交融，直接建立在北方各族内迁和十六国纷争的基础上。"
+  },
+  {
+    "topicId": "cnh_j022",
+    "prerequisiteId": "cnh_j019",
+    "strength": "hard",
+    "reason": "隋朝结束的是南北朝的长期分裂，杨坚出自北朝，要先弄清北朝与南朝并立的局面。"
+  },
+  {
+    "topicId": "cnh_j026",
+    "prerequisiteId": "cnh_j023",
+    "strength": "soft",
+    "reason": "文成公主入藏发生在唐太宗时期，唐朝的强盛和贞观年间的民族政策是这次和亲的背景。"
+  },
+  {
+    "topicId": "cnh_j027",
+    "prerequisiteId": "cnh_j014",
+    "strength": "soft",
+    "reason": "唐朝的中外交往沿着汉代开通的丝绸之路延伸，先知道丝路怎样开通，才懂这条通道的作用。"
+  },
+  {
+    "topicId": "cnh_j029",
+    "prerequisiteId": "cnh_j025",
+    "strength": "soft",
+    "reason": "北宋初年加强中央集权，针对的正是唐末藩镇割据和五代十国的混乱，先知道唐为何衰亡。"
+  },
+  {
+    "topicId": "cnh_j031",
+    "prerequisiteId": "cnh_j029",
+    "strength": "soft",
+    "reason": "北宋重文轻武、军队战斗力弱，是靖康之变中无力抵抗金军的重要原因。"
+  },
+  {
+    "topicId": "cnh_j033",
+    "prerequisiteId": "cnh_j018",
+    "strength": "soft",
+    "reason": "宋元时期南方经济超过北方，源头在东晋南朝以来江南的开发。"
+  },
+  {
+    "topicId": "cnh_j034",
+    "prerequisiteId": "cnh_j027",
+    "strength": "soft",
+    "reason": "宋元的海外贸易和港口是隋唐中外交流的继续，海上丝绸之路也由此兴起。"
+  },
+  {
+    "topicId": "cnh_j035",
+    "prerequisiteId": "cnh_j028",
+    "strength": "soft",
+    "reason": "毕昇的活字印刷是在隋唐雕版印刷的基础上改进而来，两者对照才知道改进了什么。"
+  },
+  {
+    "topicId": "cnh_j036",
+    "prerequisiteId": "cnh_j032",
+    "strength": "hard",
+    "reason": "明朝由朱元璋在推翻元朝统治的基础上建立，不先知道元末的统治和农民起义就接不上明的建立。"
+  },
+  {
+    "topicId": "cnh_j038",
+    "prerequisiteId": "cnh_j036",
+    "strength": "soft",
+    "reason": "明朝后期朝政腐败、君权高度集中后的弊端，是农民起义和明朝灭亡的前因。"
+  },
+  {
+    "topicId": "cnh_j039",
+    "prerequisiteId": "cnh_j032",
+    "strength": "soft",
+    "reason": "元朝行省制度和对西藏、台湾等地的管辖，是清朝治理边疆的历史基础。"
+  },
+  {
+    "topicId": "cnh_j040",
+    "prerequisiteId": "cnh_j036",
+    "strength": "soft",
+    "reason": "清朝设军机处、大兴文字狱，是明朝君主专制不断强化趋势的继续和推进。"
+  },
+  {
+    "topicId": "cnh_j041",
+    "prerequisiteId": "cnh_j033",
+    "strength": "soft",
+    "reason": "明清农业、手工业、商业的发展是在宋元经济繁荣的基础上展开的，比较才看得出新变化。"
+  },
+  {
+    "topicId": "cnh_j044",
+    "prerequisiteId": "cnh_j041",
+    "strength": "soft",
+    "reason": "清朝自给自足的小农经济抵制外来商品，是英国不满现状、走私鸦片的背景。"
+  },
+  {
+    "topicId": "cnh_j046",
+    "prerequisiteId": "cnh_j044",
+    "strength": "soft",
+    "reason": "鸦片战争后赔款转嫁到百姓身上，社会矛盾尖锐，洪秀全才得以聚起人心。"
+  },
+  {
+    "topicId": "cnh_j047",
+    "prerequisiteId": "cnh_j045",
+    "strength": "soft",
+    "reason": "两次鸦片战争中暴露的列强船坚炮利，是洋务派提出「师夷长技」的直接刺激。"
+  },
+  {
+    "topicId": "cnh_j049",
+    "prerequisiteId": "cnh_j047",
+    "strength": "soft",
+    "reason": "学「戊戌变法」前先知道「洋务运动」试图自强而未触及制度，才懂变法为什么要改制度。"
+  },
+  {
+    "topicId": "cnh_j049",
+    "prerequisiteId": "cnh_j040",
+    "strength": "soft",
+    "reason": "变法要把君主专制改为君主立宪，先认清清朝君主专制的强化，才懂改革的难处。"
+  },
+  {
+    "topicId": "cnh_j051",
+    "prerequisiteId": "cnh_j049",
+    "strength": "soft",
+    "reason": "维新变法失败，让人看到改良行不通，革命派主张推翻清朝的主张才有市场。"
+  },
+  {
+    "topicId": "cnh_j054",
+    "prerequisiteId": "cnh_j052",
+    "strength": "soft",
+    "reason": "辛亥革命后民主共和有名无实，才有新文化运动反思传统，这是五四运动的思想前奏。"
+  },
+  {
+    "topicId": "cnh_j056",
+    "prerequisiteId": "cnh_j051",
+    "strength": "soft",
+    "reason": "国民党一大对三民主义作了新解释，先知道同盟会时期的三民主义，才看得出新在哪里。"
+  },
+  {
+    "topicId": "cnh_j059",
+    "prerequisiteId": "cnh_j048",
+    "strength": "soft",
+    "reason": "日本自甲午战争就吞并台湾、窥视东北，九一八事变是其一贯侵华野心的延续。"
+  },
+  {
+    "topicId": "cnh_j061",
+    "prerequisiteId": "cnh_j058",
+    "strength": "soft",
+    "reason": "红军长征到达陕北，后来改编为八路军、新四军开赴敌后，这是敌后战场的力量来源。"
+  },
+  {
+    "topicId": "cnh_j065",
+    "prerequisiteId": "cnh_j057",
+    "strength": "soft",
+    "reason": "井冈山革命旧址是红色遗址的典型例子，先知道这段历史，才会读遗址里的信息。"
+  },
+  {
+    "topicId": "cnh_j065",
+    "prerequisiteId": "cnh_j058",
+    "strength": "soft",
+    "reason": "遵义会议会址、长征沿线的纪念地，是用文物认识红色历史的代表。"
+  },
+  {
+    "topicId": "cnh_j070",
+    "prerequisiteId": "cnh_j068",
+    "strength": "hard",
+    "reason": "社会主义建设道路的探索，以三大改造完成、社会主义制度确立为起点，不先知道这一点，就不知道探索探的是什么。"
+  },
+  {
+    "topicId": "cnh_j072",
+    "prerequisiteId": "cnh_j069",
+    "strength": "soft",
+    "reason": "20世纪70年代的外交突破，是在新中国多年独立自主和平外交的积累上取得的。"
+  },
+  {
+    "topicId": "cnh_j073",
+    "prerequisiteId": "cnh_j070",
+    "strength": "hard",
+    "reason": "十一届三中全会是对探索中的失误和文化大革命的纠正，不知失误是什么，就看不懂转折为什么伟大。"
+  },
+  {
+    "topicId": "cnh_j076",
+    "prerequisiteId": "cnh_j073",
+    "strength": "soft",
+    "reason": "社会主义初级阶段理论的提出，以十一届三中全会确立的解放思想、实事求是路线为基础。"
+  },
+  {
+    "topicId": "cnh_j080",
+    "prerequisiteId": "cnh_j077",
+    "strength": "soft",
+    "reason": "加入世贸组织是社会主义市场经济体制建立、对外开放扩大之后的重要一步。"
+  },
+  {
+    "topicId": "cnh_j084",
+    "prerequisiteId": "cnh_j080",
+    "strength": "soft",
+    "reason": "决胜全面建成小康社会，是在开始全面建设小康社会这个目标上的最后冲刺。"
+  },
+  {
+    "topicId": "cnh_j085",
+    "prerequisiteId": "cnh_j078",
+    "strength": "soft",
+    "reason": "祖国统一的方针中的一国两制，在香港、澳门回归中已有实践，先学回归再学统一方针。"
+  },
+  {
+    "topicId": "cnh_j085",
+    "prerequisiteId": "cnh_j062",
+    "strength": "soft",
+    "reason": "台湾光复让台湾重回祖国怀抱，是理解今天台湾问题和统一主张的历史前提。"
+  },
+  {
+    "topicId": "cnh_j086",
+    "prerequisiteId": "cnh_j069",
+    "strength": "soft",
+    "reason": "命运共同体的主张可追溯到和平共处五项原则，一脉相承的外交理念放在一起学。"
+  },
+  {
+    "topicId": "cnh_j087",
+    "prerequisiteId": "cnh_j084",
+    "strength": "hard",
+    "reason": "第一个百年奋斗目标——全面建成小康社会，是靠脱贫攻坚等决胜阶段的工作实现的。"
+  },
+  {
+    "topicId": "cnh_j087",
+    "prerequisiteId": "cnh_j055",
+    "strength": "soft",
+    "reason": "建党一百年的庆祝，要回到1921年中共一大，才明白一百年是从哪里数起的。"
+  },
+  {
+    "topicId": "cnh_j088",
+    "prerequisiteId": "cnh_j083",
+    "strength": "soft",
+    "reason": "新征程上的中国式现代化，是中国梦的具体落实，先知道中国梦的内涵。"
+  },
+  {
+    "topicId": "cnh_j089",
+    "prerequisiteId": "cnh_j074",
+    "strength": "soft",
+    "reason": "衣食住行的变化，起点是家庭联产承包和经济特区带来的城乡生活变化。"
+  },
+  {
+    "topicId": "cnh_j098",
+    "prerequisiteId": "cnh_j095",
+    "strength": "hard",
+    "reason": "拜占庭帝国即东罗马帝国，不先知道罗马帝国怎样分裂，就讲不清它的由来。"
+  },
+  {
+    "topicId": "cnh_j099",
+    "prerequisiteId": "cnh_j023",
+    "strength": "soft",
+    "reason": "大化改新仿照唐朝的律令和中央官制，先知道唐朝的制度，才看得出改在哪里。"
+  },
+  {
+    "topicId": "cnh_j102",
+    "prerequisiteId": "cnh_j095",
+    "strength": "soft",
+    "reason": "文艺复兴要「复兴」的就是古希腊罗马的文化，不先了解古典文化，就不懂复兴什么。"
+  },
+  {
+    "topicId": "cnh_j103",
+    "prerequisiteId": "cnh_j035",
+    "strength": "soft",
+    "reason": "指南针由中国传入欧洲，航海者才敢驶向远洋，是新航路开辟的技术条件之一。"
+  },
+  {
+    "topicId": "cnh_j104",
+    "prerequisiteId": "cnh_j101",
+    "strength": "soft",
+    "reason": "玛雅、阿兹特克、印加是早期殖民者征服和掠夺的对象，先知道这些古文明，才懂掠夺的代价。"
+  },
+  {
+    "topicId": "cnh_j106",
+    "prerequisiteId": "cnh_j104",
+    "strength": "soft",
+    "reason": "北美十三个殖民地正是早期殖民扩张的产物，先知道殖民过程，才懂独立战争为何发生。"
+  },
+  {
+    "topicId": "cnh_j108",
+    "prerequisiteId": "cnh_j105",
+    "strength": "soft",
+    "reason": "英国资产阶级革命确立了有利于工商业的政治环境，这是工业革命首先在英国发生的重要前提。"
+  },
+  {
+    "topicId": "cnh_j112",
+    "prerequisiteId": "cnh_j106",
+    "strength": "soft",
+    "reason": "拉丁美洲独立运动受到美国独立战争的鼓舞，可对照两场独立运动的相似与不同。"
+  },
+  {
+    "topicId": "cnh_j114",
+    "prerequisiteId": "cnh_j106",
+    "strength": "soft",
+    "reason": "美国内战的矛盾，可追溯到独立后1787年宪法对奴隶制问题的暂时妥协。"
+  },
+  {
+    "topicId": "cnh_j115",
+    "prerequisiteId": "cnh_j099",
+    "strength": "soft",
+    "reason": "明治维新终结的是日本的幕府统治，先知道幕府怎样统治日本。"
+  },
+  {
+    "topicId": "cnh_j116",
+    "prerequisiteId": "cnh_j108",
+    "strength": "soft",
+    "reason": "第二次工业革命的电力时代，要拿第一次工业革命的蒸汽时代作对照，才看出新在哪里。"
+  },
+  {
+    "topicId": "cnh_j120",
+    "prerequisiteId": "cnh_j109",
+    "strength": "soft",
+    "reason": "布尔什维克和列宁以马克思主义为指导发动十月革命，先知道马克思主义的基本主张。"
+  },
+  {
+    "topicId": "cnh_j121",
+    "prerequisiteId": "cnh_j119",
+    "strength": "hard",
+    "reason": "《凡尔赛条约》是对第一次世界大战的战后处理，不知道大战怎样打完，就不明白条约内容。"
+  },
+  {
+    "topicId": "cnh_j121",
+    "prerequisiteId": "cnh_j054",
+    "strength": "soft",
+    "reason": "巴黎和会上中国外交失败、山东权益被转让，五四运动已经学过，现在从会议全局看这个结局。"
+  },
+  {
+    "topicId": "cnh_j122",
+    "prerequisiteId": "cnh_j120",
+    "strength": "hard",
+    "reason": "苏联的成立和社会主义建设，直接承接十月革命后建立的苏维埃政权。"
+  },
+  {
+    "topicId": "cnh_j123",
+    "prerequisiteId": "cnh_j121",
+    "strength": "soft",
+    "reason": "凡尔赛—华盛顿体系无视殖民地人民的诉求，成为民族民主运动重新高涨的重要刺激。"
+  },
+  {
+    "topicId": "cnh_j125",
+    "prerequisiteId": "cnh_j121",
+    "strength": "soft",
+    "reason": "德国法西斯上台，利用了人民对《凡尔赛条约》的不满，先知道条约内容。"
+  },
+  {
+    "topicId": "cnh_j125",
+    "prerequisiteId": "cnh_j059",
+    "strength": "soft",
+    "reason": "日本在东方发动九一八事变，是法西斯国家扩张的开端之一，八年级已经学过它的经过。"
+  },
+  {
+    "topicId": "cnh_j126",
+    "prerequisiteId": "cnh_j060",
+    "strength": "soft",
+    "reason": "七七事变后中国全民族抗战，开辟了世界反法西斯战争的东方战场。"
+  },
+  {
+    "topicId": "cnh_j127",
+    "prerequisiteId": "cnh_j122",
+    "strength": "soft",
+    "reason": "冷战是美苏两种社会制度之间的对峙，先知道苏联社会主义制度的由来，才懂对峙的根源。"
+  },
+  {
+    "topicId": "cnh_j128",
+    "prerequisiteId": "cnh_j124",
+    "strength": "soft",
+    "reason": "二战后福利国家的出现，可追溯到罗斯福新政开创的国家干预经济的做法。"
+  },
+  {
+    "topicId": "cnh_j129",
+    "prerequisiteId": "cnh_j122",
+    "strength": "soft",
+    "reason": "东欧剧变和苏联解体，要回头看苏联模式的特点和长期积累的问题。"
+  },
+  {
+    "topicId": "cnh_j130",
+    "prerequisiteId": "cnh_j123",
+    "strength": "soft",
+    "reason": "印度独立承接的是此前甘地领导的非暴力不合作运动，民族运动是独立后发展的起点。"
+  },
+  {
+    "topicId": "cnh_j131",
+    "prerequisiteId": "cnh_j126",
+    "strength": "hard",
+    "reason": "联合国是在二战后期和战后为防止再次爆发世界大战而建立的，缺了二战的教训就讲不清它的宗旨。"
+  },
+  {
+    "topicId": "cnh_j132",
+    "prerequisiteId": "cnh_j129",
+    "strength": "hard",
+    "reason": "两极格局的终结，直接由东欧剧变和苏联解体造成。"
+  },
+  {
+    "topicId": "cng_h001",
+    "prerequisiteId": "cng_j001",
+    "strength": "hard",
+    "reason": "高中先把地球放进更大的天体系统来认识，不先知道地球是太阳系的一颗行星，就无从谈层次。"
+  },
+  {
+    "topicId": "cng_h002",
+    "prerequisiteId": "cng_h001",
+    "strength": "hard",
+    "reason": "分析地球的特殊性，要先知道八大行星的轨道位置，才能比较日地距离与其他行星有何不同。"
+  },
+  {
+    "topicId": "cng_h003",
+    "prerequisiteId": "cng_j001",
+    "strength": "hard",
+    "reason": "太阳辐射来自恒星太阳，要先知道太阳是自己发光发热的恒星。"
+  },
+  {
+    "topicId": "cng_h003",
+    "prerequisiteId": "cng_j011",
+    "strength": "soft",
+    "reason": "说明太阳辐射对地表温度的作用，要先知道气温的分布与变化，才能看出能量输入的意义。"
+  },
+  {
+    "topicId": "cng_h003",
+    "prerequisiteId": "cng_h002",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「地球上存在生命的条件」，再学「太阳辐射及其对地球的影响」。"
+  },
+  {
+    "topicId": "cng_h004",
+    "prerequisiteId": "cng_j001",
+    "strength": "hard",
+    "reason": "太阳活动是恒星太阳大气层中的现象，要先知道太阳是自身发光发热的恒星。"
+  },
+  {
+    "topicId": "cng_h004",
+    "prerequisiteId": "cng_h003",
+    "strength": "soft",
+    "reason": "太阳活动与太阳辐射是太阳向外释放能量的两种不同表现，先弄清太阳辐射才好区分二者。"
+  },
+  {
+    "topicId": "cng_h005",
+    "prerequisiteId": "cng_j009",
+    "strength": "hard",
+    "reason": "海陆变迁在初中已用高山上的海洋生物化石作证据，这里把化石进一步用来判断地层与古环境。"
+  },
+  {
+    "topicId": "cng_h005",
+    "prerequisiteId": "cng_h004",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「太阳活动及其对地球的影响」，再学「化石与地层」。"
+  },
+  {
+    "topicId": "cng_h006",
+    "prerequisiteId": "cng_h005",
+    "strength": "hard",
+    "reason": "地质年代是靠地层和化石建立的，先学会用化石判断地层先后才能看懂年代表。"
+  },
+  {
+    "topicId": "cng_h007",
+    "prerequisiteId": "cng_h006",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「地质年代与地球的演化」，再学「地球的内部圈层」。"
+  },
+  {
+    "topicId": "cng_h008",
+    "prerequisiteId": "cng_h007",
+    "strength": "hard",
+    "reason": "生物圈的范围要用到岩石圈的上部，先知道岩石圈是什么才能说清圈层如何交叠。"
+  },
+  {
+    "topicId": "cng_h009",
+    "prerequisiteId": "cng_j010",
+    "strength": "hard",
+    "reason": "说明水汽与杂质为什么是成云致雨的条件，要先对云、雨等天气现象有初中的认识。"
+  },
+  {
+    "topicId": "cng_h009",
+    "prerequisiteId": "cng_h008",
+    "strength": "soft",
+    "reason": "大气圈是外部圈层之一，先建立圈层概念再来看大气由什么组成。"
+  },
+  {
+    "topicId": "cng_h010",
+    "prerequisiteId": "cng_h009",
+    "strength": "hard",
+    "reason": "平流层气温随高度升高与臭氧吸收紫外线有关，要先知道臭氧的作用。"
+  },
+  {
+    "topicId": "cng_h010",
+    "prerequisiteId": "cng_j011",
+    "strength": "hard",
+    "reason": "对流层气温随海拔升高而降低，是初中气温知识的延伸，先熟悉海拔与气温的关系。"
+  },
+  {
+    "topicId": "cng_h011",
+    "prerequisiteId": "cng_h003",
+    "strength": "hard",
+    "reason": "大气受热过程的能量起点是太阳辐射，先要知道太阳辐射是短波辐射的能量来源。"
+  },
+  {
+    "topicId": "cng_h011",
+    "prerequisiteId": "cng_h010",
+    "strength": "hard",
+    "reason": "说明地面热量传给哪一层大气，要先知道对流层的位置与特点。"
+  },
+  {
+    "topicId": "cng_h012",
+    "prerequisiteId": "cng_h011",
+    "strength": "hard",
+    "reason": "地面冷热不均源于地面是大气直接热源，先理解大气受热过程才能说清热力环流的起因。"
+  },
+  {
+    "topicId": "cng_h013",
+    "prerequisiteId": "cng_h012",
+    "strength": "hard",
+    "reason": "水平气压梯度力来自同一水平面上的气压差，先理解气压差如何由热力差异产生。"
+  },
+  {
+    "topicId": "cng_h014",
+    "prerequisiteId": "cng_h008",
+    "strength": "hard",
+    "reason": "水循环发生在水圈、大气圈等圈层之间，先建立圈层的概念。"
+  },
+  {
+    "topicId": "cng_h014",
+    "prerequisiteId": "cng_h003",
+    "strength": "hard",
+    "reason": "水循环的能量来自太阳辐射（与重力），先弄清太阳辐射才能说明蒸发和水汽输送为何发生。"
+  },
+  {
+    "topicId": "cng_h014",
+    "prerequisiteId": "cng_j012",
+    "strength": "hard",
+    "reason": "降水是水循环的重要环节，先知道降水的形成与分布。"
+  },
+  {
+    "topicId": "cng_h014",
+    "prerequisiteId": "cng_h013",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「水平气压梯度力与风」，再学「水循环的类型与环节」。"
+  },
+  {
+    "topicId": "cng_h015",
+    "prerequisiteId": "cng_h014",
+    "strength": "hard",
+    "reason": "说明水循环的意义和人为影响，必须先认识各个环节。"
+  },
+  {
+    "topicId": "cng_h015",
+    "prerequisiteId": "cng_j036",
+    "strength": "soft",
+    "reason": "水循环塑造地表形态与河流径流关系紧密，先有河流的初中知识。"
+  },
+  {
+    "topicId": "cng_h016",
+    "prerequisiteId": "cng_j011",
+    "strength": "hard",
+    "reason": "海水温度的纬度分布与陆地气温分布规律一致，先熟悉气温分布。"
+  },
+  {
+    "topicId": "cng_h016",
+    "prerequisiteId": "cng_h003",
+    "strength": "hard",
+    "reason": "海水的热量主要来自太阳辐射，温度随纬度递减正是太阳辐射纬度分布的结果。"
+  },
+  {
+    "topicId": "cng_h016",
+    "prerequisiteId": "cng_h015",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「水循环的地理意义」，再学「海水的温度、盐度与密度」。"
+  },
+  {
+    "topicId": "cng_h017",
+    "prerequisiteId": "cng_h016",
+    "strength": "hard",
+    "reason": "利用海水的性质，必须先知道温度、盐度、密度的分布规律。"
+  },
+  {
+    "topicId": "cng_h017",
+    "prerequisiteId": "cng_j040",
+    "strength": "soft",
+    "reason": "晒盐、温差发电等是对海洋资源的开发利用，初中海洋资源知识是背景。"
+  },
+  {
+    "topicId": "cng_h018",
+    "prerequisiteId": "cng_j001",
+    "strength": "hard",
+    "reason": "潮汐由月球和太阳的引力引起，要先知道地月、日地关系。"
+  },
+  {
+    "topicId": "cng_h018",
+    "prerequisiteId": "cng_h017",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「海水性质的影响与利用」，再学「波浪与潮汐」。"
+  },
+  {
+    "topicId": "cng_h019",
+    "prerequisiteId": "cng_h016",
+    "strength": "hard",
+    "reason": "洋流分为暖流和寒流，是相对海水温度而言的，先掌握海水温度的分布。"
+  },
+  {
+    "topicId": "cng_h019",
+    "prerequisiteId": "cng_h018",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「波浪与潮汐」，再学「洋流及其影响」。"
+  },
+  {
+    "topicId": "cng_h020",
+    "prerequisiteId": "cng_j036",
+    "strength": "hard",
+    "reason": "流水地貌是河流侵蚀、搬运、堆积的结果，先具备河流水文的初中知识。"
+  },
+  {
+    "topicId": "cng_h020",
+    "prerequisiteId": "cng_h019",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「洋流及其影响」，再学「流水地貌」。"
+  },
+  {
+    "topicId": "cng_h021",
+    "prerequisiteId": "cng_h013",
+    "strength": "hard",
+    "reason": "风力地貌的侵蚀和堆积取决于风向和风速，先理解风的成因与方向。"
+  },
+  {
+    "topicId": "cng_h021",
+    "prerequisiteId": "cng_j055",
+    "strength": "soft",
+    "reason": "风成地貌多出现在西北干旱区，初中的西北地区自然特征是背景。"
+  },
+  {
+    "topicId": "cng_h021",
+    "prerequisiteId": "cng_h020",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「流水地貌」，再学「风成地貌」。"
+  },
+  {
+    "topicId": "cng_h022",
+    "prerequisiteId": "cng_h020",
+    "strength": "hard",
+    "reason": "喀斯特、海蚀、冰川都是外力对地表的塑造，先从流水侵蚀、堆积的基本思路入手。"
+  },
+  {
+    "topicId": "cng_h022",
+    "prerequisiteId": "cng_h021",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「风成地貌」，再学「喀斯特、海岸与冰川地貌」。"
+  },
+  {
+    "topicId": "cng_h023",
+    "prerequisiteId": "cng_h022",
+    "strength": "hard",
+    "reason": "观察时要能认出各类地貌，先学会流水、风成、喀斯特等常见地貌的形态特征。"
+  },
+  {
+    "topicId": "cng_h023",
+    "prerequisiteId": "cng_j005",
+    "strength": "hard",
+    "reason": "野外和读图观察地貌都离不开等高线地形图的判读。"
+  },
+  {
+    "topicId": "cng_h024",
+    "prerequisiteId": "cng_j013",
+    "strength": "hard",
+    "reason": "植被类型与气候类型密切对应，先熟悉世界气候类型及其水热特点。"
+  },
+  {
+    "topicId": "cng_h024",
+    "prerequisiteId": "cng_h023",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「地貌的观察」，再学「植被与环境的关系」。"
+  },
+  {
+    "topicId": "cng_h025",
+    "prerequisiteId": "cng_h024",
+    "strength": "hard",
+    "reason": "植被类型的划分依据水热条件，先理解植被与环境的关系。"
+  },
+  {
+    "topicId": "cng_h026",
+    "prerequisiteId": "cng_h024",
+    "strength": "hard",
+    "reason": "生物是土壤有机质的来源，先理解植被与环境的关系。"
+  },
+  {
+    "topicId": "cng_h026",
+    "prerequisiteId": "cng_h025",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「主要植被类型及其分布」，再学「土壤的形成因素」。"
+  },
+  {
+    "topicId": "cng_h027",
+    "prerequisiteId": "cng_h026",
+    "strength": "hard",
+    "reason": "保护土壤要知道它是怎样形成、哪些因素会破坏它。"
+  },
+  {
+    "topicId": "cng_h028",
+    "prerequisiteId": "cng_j044",
+    "strength": "hard",
+    "reason": "说明各类气象灾害的危害，要先具备对自然灾害的初中认识。"
+  },
+  {
+    "topicId": "cng_h028",
+    "prerequisiteId": "cng_h027",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「土壤的功能与保护」，再学「气象灾害」。"
+  },
+  {
+    "topicId": "cng_h029",
+    "prerequisiteId": "cng_h015",
+    "strength": "hard",
+    "reason": "洪涝与干旱的实质是径流与下渗、蒸发的失衡，先理解人类活动如何改变水循环环节。"
+  },
+  {
+    "topicId": "cng_h029",
+    "prerequisiteId": "cng_h028",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「气象灾害」，再学「洪涝与干旱」。"
+  },
+  {
+    "topicId": "cng_h030",
+    "prerequisiteId": "cng_h007",
+    "strength": "hard",
+    "reason": "说明地震释放的能量如何传播，要先知道地震波和地球内部结构。"
+  },
+  {
+    "topicId": "cng_h030",
+    "prerequisiteId": "cng_j009",
+    "strength": "hard",
+    "reason": "地震集中在板块交界地带，是初中板块知识的直接应用。"
+  },
+  {
+    "topicId": "cng_h030",
+    "prerequisiteId": "cng_h029",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「洪涝与干旱」，再学「地震灾害」。"
+  },
+  {
+    "topicId": "cng_h031",
+    "prerequisiteId": "cng_h020",
+    "strength": "hard",
+    "reason": "泥石流是含泥沙的流水，滑坡与流水侵蚀、搬运联系紧密，先理解流水对地表的作用。"
+  },
+  {
+    "topicId": "cng_h031",
+    "prerequisiteId": "cng_h030",
+    "strength": "soft",
+    "reason": "地震是诱发滑坡、泥石流的重要因素之一，先了解地震灾害。"
+  },
+  {
+    "topicId": "cng_h032",
+    "prerequisiteId": "cng_j044",
+    "strength": "hard",
+    "reason": "初中已学习自然灾害与防灾减灾，高中把它系统化为环节和措施分类。"
+  },
+  {
+    "topicId": "cng_h032",
+    "prerequisiteId": "cng_h031",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第一册的教学顺序，先学「滑坡与泥石流」，再学「防灾减灾」。"
+  },
+  {
+    "topicId": "cng_h033",
+    "prerequisiteId": "cng_h032",
+    "strength": "hard",
+    "reason": "地理信息技术是防灾减灾的手段，先理解防灾减灾的环节才知道技术用在何处。"
+  },
+  {
+    "topicId": "cng_h034",
+    "prerequisiteId": "cng_j014",
+    "strength": "hard",
+    "reason": "高中描述人口分布的特点，要先具备初中对世界人口数量、人口稠密与稀疏地区的认识。"
+  },
+  {
+    "topicId": "cng_h034",
+    "prerequisiteId": "cng_h033",
+    "strength": "soft",
+    "reason": "按人教版高中地理课序，学完必修第一册的「地理信息技术在防灾减灾中的应用」后进入必修第二册的「世界人口分布特点」。"
+  },
+  {
+    "topicId": "cng_h035",
+    "prerequisiteId": "cng_h034",
+    "strength": "hard",
+    "reason": "分析人口分布的影响因素，先掌握人口分布的基本特点，才知道要解释什么。"
+  },
+  {
+    "topicId": "cng_h036",
+    "prerequisiteId": "cng_h035",
+    "strength": "hard",
+    "reason": "迁移的推力与拉力，就是各地对人口吸引与排斥的差异，先理解影响人口分布的因素。"
+  },
+  {
+    "topicId": "cng_h037",
+    "prerequisiteId": "cng_h036",
+    "strength": "hard",
+    "reason": "分析迁移的影响，先弄清为什么迁、谁在迁。"
+  },
+  {
+    "topicId": "cng_h038",
+    "prerequisiteId": "cng_h035",
+    "strength": "hard",
+    "reason": "人口容量取决于资源环境所能承载的人口，先理解人口与自然、人文因素的关系。"
+  },
+  {
+    "topicId": "cng_h038",
+    "prerequisiteId": "cng_h037",
+    "strength": "soft",
+    "reason": "人口迁移改变各地人口与资源的对比，是讨论人口容量的现实背景。"
+  },
+  {
+    "topicId": "cng_h039",
+    "prerequisiteId": "cng_j015",
+    "strength": "hard",
+    "reason": "初中已区分城镇和乡村，高中进一步分析乡村聚落的空间形态与成因。"
+  },
+  {
+    "topicId": "cng_h039",
+    "prerequisiteId": "cng_h038",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第二册的教学顺序，先学「人口容量与合理人口」，再学「乡村聚落与空间结构」。"
+  },
+  {
+    "topicId": "cng_h040",
+    "prerequisiteId": "cng_j015",
+    "strength": "hard",
+    "reason": "城镇功能分区是对初中城镇认识的深化，先具备城镇的基本特征。"
+  },
+  {
+    "topicId": "cng_h040",
+    "prerequisiteId": "cng_h039",
+    "strength": "soft",
+    "reason": "对比乡村与城镇的内部空间结构，才能看出城镇的功能分区特色。"
+  },
+  {
+    "topicId": "cng_h041",
+    "prerequisiteId": "cng_h036",
+    "strength": "hard",
+    "reason": "城镇化的核心是人口由乡村向城镇迁移，先理解人口迁移的类型与原因。"
+  },
+  {
+    "topicId": "cng_h041",
+    "prerequisiteId": "cng_h040",
+    "strength": "soft",
+    "reason": "城镇规模扩大伴随功能区的形成，先了解城镇内部结构。"
+  },
+  {
+    "topicId": "cng_h042",
+    "prerequisiteId": "cng_h041",
+    "strength": "hard",
+    "reason": "分析城镇化的影响，先理解城镇化的过程。"
+  },
+  {
+    "topicId": "cng_h042",
+    "prerequisiteId": "cng_h012",
+    "strength": "hard",
+    "reason": "城市热岛环流是热力环流的典型实例，先学热力环流才能解释。"
+  },
+  {
+    "topicId": "cng_h042",
+    "prerequisiteId": "cng_h015",
+    "strength": "hard",
+    "reason": "地面硬化改变下渗与径流，要用到水循环的知识。"
+  },
+  {
+    "topicId": "cng_h043",
+    "prerequisiteId": "cng_j016",
+    "strength": "hard",
+    "reason": "初中已认识世界文化多样性，高中进一步看文化如何体现在城乡景观上。"
+  },
+  {
+    "topicId": "cng_h043",
+    "prerequisiteId": "cng_h042",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第二册的教学顺序，先学「城镇化的影响与问题」，再学「地域文化与城乡景观」。"
+  },
+  {
+    "topicId": "cng_h044",
+    "prerequisiteId": "cng_j041",
+    "strength": "hard",
+    "reason": "初中学过我国农业，高中把农业放在区位因素的框架里分析。"
+  },
+  {
+    "topicId": "cng_h044",
+    "prerequisiteId": "cng_h043",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第二册的教学顺序，先学「地域文化与城乡景观」，再学「农业区位因素」。"
+  },
+  {
+    "topicId": "cng_h045",
+    "prerequisiteId": "cng_h044",
+    "strength": "hard",
+    "reason": "区位变化和农业类型都建立在农业区位因素之上，先学农业区位因素。"
+  },
+  {
+    "topicId": "cng_h046",
+    "prerequisiteId": "cng_j042",
+    "strength": "hard",
+    "reason": "初中学过我国工业，高中把工业放进区位因素中分析。"
+  },
+  {
+    "topicId": "cng_h046",
+    "prerequisiteId": "cng_h045",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第二册的教学顺序，先学「农业区位变化与农业地域类型」，再学「工业区位因素」。"
+  },
+  {
+    "topicId": "cng_h047",
+    "prerequisiteId": "cng_h046",
+    "strength": "hard",
+    "reason": "工业区位的变化是各区位因素重要性的变化，先学各因素的作用。"
+  },
+  {
+    "topicId": "cng_h048",
+    "prerequisiteId": "cng_h040",
+    "strength": "hard",
+    "reason": "服务业布局与地租和付租能力有关，先理解城镇功能分区。"
+  },
+  {
+    "topicId": "cng_h048",
+    "prerequisiteId": "cng_h047",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第二册的教学顺序，先学「工业区位变化与工业集聚」，再学「服务业区位因素」。"
+  },
+  {
+    "topicId": "cng_h049",
+    "prerequisiteId": "cng_h048",
+    "strength": "hard",
+    "reason": "区位变化是在传统服务业区位因素基础上的新变化，先学传统因素。"
+  },
+  {
+    "topicId": "cng_h050",
+    "prerequisiteId": "cng_j043",
+    "strength": "hard",
+    "reason": "初中学过交通运输，高中分析区域发展如何影响交通布局，先具备交通运输的基础知识。"
+  },
+  {
+    "topicId": "cng_h050",
+    "prerequisiteId": "cng_h049",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第二册的教学顺序，先学「服务业区位变化」，再学「区域发展对交通运输布局的影响」。"
+  },
+  {
+    "topicId": "cng_h051",
+    "prerequisiteId": "cng_j043",
+    "strength": "hard",
+    "reason": "初中已学各种交通运输方式的名称与基本特点，高中在此基础上比较其优缺点并作选择。"
+  },
+  {
+    "topicId": "cng_h051",
+    "prerequisiteId": "cng_h050",
+    "strength": "soft",
+    "reason": "选择运输方式要结合区域的地形和交通网特点，先理解交通布局的影响因素。"
+  },
+  {
+    "topicId": "cng_h052",
+    "prerequisiteId": "cng_h050",
+    "strength": "hard",
+    "reason": "交通对区域发展的影响与区域对交通的影响是相互作用的，先学后者。"
+  },
+  {
+    "topicId": "cng_h052",
+    "prerequisiteId": "cng_h051",
+    "strength": "soft",
+    "reason": "交通方式的特点决定其对区域的影响方式。"
+  },
+  {
+    "topicId": "cng_h053",
+    "prerequisiteId": "cng_j045",
+    "strength": "hard",
+    "reason": "初中已学环境保护与发展，高中系统归纳主要环境问题及其成因。"
+  },
+  {
+    "topicId": "cng_h053",
+    "prerequisiteId": "cng_h009",
+    "strength": "hard",
+    "reason": "酸雨、臭氧层破坏、全球变暖都与大气成分变化有关，先掌握大气的组成与作用。"
+  },
+  {
+    "topicId": "cng_h053",
+    "prerequisiteId": "cng_h052",
+    "strength": "soft",
+    "reason": "按人教版高中地理必修第二册的教学顺序，先学「交通运输布局对区域发展的影响」，再学「人类面临的主要环境问题」。"
+  },
+  {
+    "topicId": "cng_h054",
+    "prerequisiteId": "cng_h053",
+    "strength": "hard",
+    "reason": "可持续发展是对环境问题的反思与回应，先了解主要环境问题。"
+  },
+  {
+    "topicId": "cng_h055",
+    "prerequisiteId": "cng_h054",
+    "strength": "hard",
+    "reason": "国家发展战略是可持续发展理念的具体落实，先理解可持续发展。"
+  },
+  {
+    "topicId": "cng_h055",
+    "prerequisiteId": "cng_j059",
+    "strength": "soft",
+    "reason": "初中已初步了解我国当前的发展成就，是认识这些战略的背景。"
+  },
+  {
+    "topicId": "cng_h056",
+    "prerequisiteId": "cng_j003",
+    "strength": "hard",
+    "reason": "初中已学自转的方向、周期与昼夜交替，高中在此基础上区分恒星日与太阳日、角速度与线速度。"
+  },
+  {
+    "topicId": "cng_h056",
+    "prerequisiteId": "cng_h055",
+    "strength": "soft",
+    "reason": "按人教版高中地理课序，学完必修第二册的「中国国家发展战略举例」后进入选择性必修第一册的「地球自转的特征」。"
+  },
+  {
+    "topicId": "cng_h057",
+    "prerequisiteId": "cng_j003",
+    "strength": "hard",
+    "reason": "初中已知道公转的方向与周期，高中在此基础上引入近日点、远日点与黄赤交角。"
+  },
+  {
+    "topicId": "cng_h057",
+    "prerequisiteId": "cng_h056",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「地球自转的特征」，再学「地球公转的特征」。"
+  },
+  {
+    "topicId": "cng_h058",
+    "prerequisiteId": "cng_h056",
+    "strength": "hard",
+    "reason": "晨昏线随自转扫过各地，地方时东早西晚也来自自转方向，必须先掌握自转。"
+  },
+  {
+    "topicId": "cng_h058",
+    "prerequisiteId": "cng_h057",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「地球公转的特征」，再学「昼夜交替与地方时」。"
+  },
+  {
+    "topicId": "cng_h059",
+    "prerequisiteId": "cng_h058",
+    "strength": "hard",
+    "reason": "区时就是中央经线的地方时，需先会算地方时。"
+  },
+  {
+    "topicId": "cng_h060",
+    "prerequisiteId": "cng_h056",
+    "strength": "hard",
+    "reason": "偏向力源自地球自转，需知道自转方向与各纬度的速度差异。"
+  },
+  {
+    "topicId": "cng_h060",
+    "prerequisiteId": "cng_h059",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「时区、区时与日界线」，再学「水平运动物体的方向偏转」。"
+  },
+  {
+    "topicId": "cng_h061",
+    "prerequisiteId": "cng_h057",
+    "strength": "hard",
+    "reason": "直射点的移动来自地轴倾斜与公转，必须先理解黄赤交角。"
+  },
+  {
+    "topicId": "cng_h061",
+    "prerequisiteId": "cng_h058",
+    "strength": "hard",
+    "reason": "昼长要由晨昏线分割纬线圈的情形来判断，需先会读晨昏线。"
+  },
+  {
+    "topicId": "cng_h061",
+    "prerequisiteId": "cng_h060",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「水平运动物体的方向偏转」，再学「昼夜长短与正午太阳高度」。"
+  },
+  {
+    "topicId": "cng_h062",
+    "prerequisiteId": "cng_h061",
+    "strength": "hard",
+    "reason": "四季是昼长和正午太阳高度年变化累积的结果，需先掌握这两项的规律。"
+  },
+  {
+    "topicId": "cng_h063",
+    "prerequisiteId": "cng_h007",
+    "strength": "hard",
+    "reason": "岩石圈、软流层等地球内部圈层是板块构造学说的前提。"
+  },
+  {
+    "topicId": "cng_h063",
+    "prerequisiteId": "cng_h062",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「四季更替与五带」，再学「内力作用与地表形态」。"
+  },
+  {
+    "topicId": "cng_h064",
+    "prerequisiteId": "cng_h063",
+    "strength": "hard",
+    "reason": "地表形态由内外力共同塑造，先知道内力造成高低起伏，才好理解外力为何趋于夷平。"
+  },
+  {
+    "topicId": "cng_h065",
+    "prerequisiteId": "cng_h063",
+    "strength": "hard",
+    "reason": "褶皱是水平挤压（内力作用）的结果，先要理解板块挤压与地壳运动。"
+  },
+  {
+    "topicId": "cng_h065",
+    "prerequisiteId": "cng_h064",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「外力作用与地表形态」，再学「褶皱与山地的形成」。"
+  },
+  {
+    "topicId": "cng_h066",
+    "prerequisiteId": "cng_h063",
+    "strength": "hard",
+    "reason": "断层源于板块的张裂或错动，需要先理解内力作用。"
+  },
+  {
+    "topicId": "cng_h066",
+    "prerequisiteId": "cng_h065",
+    "strength": "soft",
+    "reason": "断层与褶皱是岩层受力变形的两种方式，对比才能分清。"
+  },
+  {
+    "topicId": "cng_h067",
+    "prerequisiteId": "cng_h064",
+    "strength": "hard",
+    "reason": "河流作用是外力作用的典型，需先知道侵蚀、搬运、堆积的一般关系。"
+  },
+  {
+    "topicId": "cng_h067",
+    "prerequisiteId": "cng_h020",
+    "strength": "hard",
+    "reason": "必修一已学过流水地貌的类型，这里讲这些地貌背后的作用机制。"
+  },
+  {
+    "topicId": "cng_h067",
+    "prerequisiteId": "cng_h066",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「断层与其他构造地貌」，再学「河流的侵蚀、搬运与堆积」。"
+  },
+  {
+    "topicId": "cng_h068",
+    "prerequisiteId": "cng_h067",
+    "strength": "hard",
+    "reason": "河流地貌是侵蚀、搬运、堆积三种作用的结果，先要掌握它们与流速的关系。"
+  },
+  {
+    "topicId": "cng_h069",
+    "prerequisiteId": "cng_h012",
+    "strength": "hard",
+    "reason": "暖气团被抬升、冷却成云致雨，需要理解热力环流中的上升与下沉。"
+  },
+  {
+    "topicId": "cng_h069",
+    "prerequisiteId": "cng_h068",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「河流地貌的发育」，再学「锋面系统」。"
+  },
+  {
+    "topicId": "cng_h070",
+    "prerequisiteId": "cng_h013",
+    "strength": "hard",
+    "reason": "水平气压梯度力与地转偏向力决定风向，是气旋、反气旋气流旋转的基础。"
+  },
+  {
+    "topicId": "cng_h070",
+    "prerequisiteId": "cng_h060",
+    "strength": "hard",
+    "reason": "南北半球旋转方向的差异，来自地转偏向力在两半球相反的偏转。"
+  },
+  {
+    "topicId": "cng_h070",
+    "prerequisiteId": "cng_h069",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「锋面系统」，再学「气旋与反气旋」。"
+  },
+  {
+    "topicId": "cng_h071",
+    "prerequisiteId": "cng_h013",
+    "strength": "hard",
+    "reason": "风带风向由气压梯度力和地转偏向力共同决定。"
+  },
+  {
+    "topicId": "cng_h071",
+    "prerequisiteId": "cng_h060",
+    "strength": "hard",
+    "reason": "三圈环流的圈数和风带风向都取决于地转偏向力，需先知道偏向规律。"
+  },
+  {
+    "topicId": "cng_h071",
+    "prerequisiteId": "cng_h070",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「气旋与反气旋」，再学「三圈环流与气压带风带」。"
+  },
+  {
+    "topicId": "cng_h072",
+    "prerequisiteId": "cng_h071",
+    "strength": "hard",
+    "reason": "移动的是各气压带和风带，必须先知道它们的平均位置。"
+  },
+  {
+    "topicId": "cng_h072",
+    "prerequisiteId": "cng_h062",
+    "strength": "hard",
+    "reason": "移动的原因是太阳直射点的往返。"
+  },
+  {
+    "topicId": "cng_h073",
+    "prerequisiteId": "cng_h072",
+    "strength": "hard",
+    "reason": "南亚夏季风涉及风带越过赤道的偏转，要先理解气压带风带的移动。"
+  },
+  {
+    "topicId": "cng_h074",
+    "prerequisiteId": "cng_h073",
+    "strength": "hard",
+    "reason": "热带季风、亚热带季风气候的成因要用季风环流来解释。"
+  },
+  {
+    "topicId": "cng_h075",
+    "prerequisiteId": "cng_h074",
+    "strength": "soft",
+    "reason": "温带气候与热带、副热带气候共同组成气候类型体系，成因的分析方法一致。"
+  },
+  {
+    "topicId": "cng_h075",
+    "prerequisiteId": "cng_h071",
+    "strength": "hard",
+    "reason": "西风带是温带海洋性气候的主导风带。"
+  },
+  {
+    "topicId": "cng_h076",
+    "prerequisiteId": "cng_h014",
+    "strength": "hard",
+    "reason": "陆地水体的相互联系，是水循环在陆地环节的具体表现。"
+  },
+  {
+    "topicId": "cng_h076",
+    "prerequisiteId": "cng_h075",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「温带与亚寒带气候类型的成因」，再学「陆地水体类型及其相互关系」。"
+  },
+  {
+    "topicId": "cng_h077",
+    "prerequisiteId": "cng_h076",
+    "strength": "hard",
+    "reason": "补给类型是陆地水体相互补给关系的细化。"
+  },
+  {
+    "topicId": "cng_h078",
+    "prerequisiteId": "cng_h019",
+    "strength": "hard",
+    "reason": "必修一已认识主要洋流及其影响，这里追究它们的成因与分布规律。"
+  },
+  {
+    "topicId": "cng_h078",
+    "prerequisiteId": "cng_h071",
+    "strength": "hard",
+    "reason": "风海流由盛行风驱动，必须知道气压带风带的分布。"
+  },
+  {
+    "topicId": "cng_h078",
+    "prerequisiteId": "cng_h077",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「河流补给与水文特征」，再学「洋流的成因与分布」。"
+  },
+  {
+    "topicId": "cng_h079",
+    "prerequisiteId": "cng_h078",
+    "strength": "hard",
+    "reason": "洋流的影响要依据洋流的性质与分布来判断。"
+  },
+  {
+    "topicId": "cng_h080",
+    "prerequisiteId": "cng_h011",
+    "strength": "hard",
+    "reason": "海洋向大气传热，是大气受热过程在海面的延伸。"
+  },
+  {
+    "topicId": "cng_h080",
+    "prerequisiteId": "cng_h079",
+    "strength": "soft",
+    "reason": "洋流影响气候，是海—气相互作用的具体表现。"
+  },
+  {
+    "topicId": "cng_h081",
+    "prerequisiteId": "cng_h080",
+    "strength": "hard",
+    "reason": "厄尔尼诺与拉尼娜是海温与信风相互作用的结果。"
+  },
+  {
+    "topicId": "cng_h081",
+    "prerequisiteId": "cng_h078",
+    "strength": "hard",
+    "reason": "信风驱动赤道洋流、秘鲁沿岸上升流，是理解该现象的基础。"
+  },
+  {
+    "topicId": "cng_h082",
+    "prerequisiteId": "cng_h024",
+    "strength": "hard",
+    "reason": "必修一已学植被与环境的关系，是要素相互作用的典型事例。"
+  },
+  {
+    "topicId": "cng_h082",
+    "prerequisiteId": "cng_h081",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「厄尔尼诺与拉尼娜现象」，再学「自然要素的相互作用」。"
+  },
+  {
+    "topicId": "cng_h083",
+    "prerequisiteId": "cng_h082",
+    "strength": "hard",
+    "reason": "案例分析要用到整体性的基本原理。"
+  },
+  {
+    "topicId": "cng_h084",
+    "prerequisiteId": "cng_h025",
+    "strength": "hard",
+    "reason": "必修一已学主要植被类型及分布，这里讲分布背后的规律。"
+  },
+  {
+    "topicId": "cng_h084",
+    "prerequisiteId": "cng_h075",
+    "strength": "hard",
+    "reason": "自然带以气候类型的分布为基础。"
+  },
+  {
+    "topicId": "cng_h084",
+    "prerequisiteId": "cng_h083",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第一册的教学顺序，先学「整体性的表现与案例分析」，再学「纬度地带性与干湿度地带性」。"
+  },
+  {
+    "topicId": "cng_h085",
+    "prerequisiteId": "cng_h084",
+    "strength": "hard",
+    "reason": "垂直带谱的更替顺序，与水平地带性相似，是其山地版本。"
+  },
+  {
+    "topicId": "cng_h086",
+    "prerequisiteId": "cng_j046",
+    "strength": "hard",
+    "reason": "初中已用南方与北方、东部与西部等划分过区域，这里把区域概念系统化。"
+  },
+  {
+    "topicId": "cng_h086",
+    "prerequisiteId": "cng_h085",
+    "strength": "soft",
+    "reason": "按人教版高中地理课序，学完选择性必修第一册的「垂直地带性与非地带性」后进入选择性必修第二册的「区域的概念与尺度」。"
+  },
+  {
+    "topicId": "cng_h087",
+    "prerequisiteId": "cng_h086",
+    "strength": "hard",
+    "reason": "区域类型是按不同划分指标得出的，先要理解区域的含义和尺度。"
+  },
+  {
+    "topicId": "cng_h088",
+    "prerequisiteId": "cng_h082",
+    "strength": "hard",
+    "reason": "区域整体性是自然环境整体性在区域尺度上的体现。"
+  },
+  {
+    "topicId": "cng_h088",
+    "prerequisiteId": "cng_h087",
+    "strength": "hard",
+    "reason": "整体性分析以确定的区域为对象，要先弄清区域及其类型。"
+  },
+  {
+    "topicId": "cng_h089",
+    "prerequisiteId": "cng_h088",
+    "strength": "soft",
+    "reason": "整体性讲区域之内，关联性讲区域之间，二者对照才能把握区域系统的特征。"
+  },
+  {
+    "topicId": "cng_h089",
+    "prerequisiteId": "cng_h052",
+    "strength": "hard",
+    "reason": "交通运输布局对区域发展的影响，是区域联系的具体基础。"
+  },
+  {
+    "topicId": "cng_h090",
+    "prerequisiteId": "cng_h044",
+    "strength": "hard",
+    "reason": "自然条件如何影响农业区位，是讨论自然环境与区域发展的基础。"
+  },
+  {
+    "topicId": "cng_h090",
+    "prerequisiteId": "cng_h089",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第二册的教学顺序，先学「区域的关联性」，再学「自然环境对区域发展的影响」。"
+  },
+  {
+    "topicId": "cng_h091",
+    "prerequisiteId": "cng_h090",
+    "strength": "hard",
+    "reason": "资源是自然环境中最直接影响区域产业的部分，先要理解自然环境对区域发展的作用。"
+  },
+  {
+    "topicId": "cng_h092",
+    "prerequisiteId": "cng_h090",
+    "strength": "hard",
+    "reason": "生态脆弱是自然条件限制与人类活动叠加的结果。"
+  },
+  {
+    "topicId": "cng_h092",
+    "prerequisiteId": "cng_h082",
+    "strength": "hard",
+    "reason": "脆弱的实质是要素之间的链条易断，需要整体性的视角。"
+  },
+  {
+    "topicId": "cng_h092",
+    "prerequisiteId": "cng_h091",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第二册的教学顺序，先学「自然资源与区域发展」，再学「生态脆弱区的特征与成因」。"
+  },
+  {
+    "topicId": "cng_h093",
+    "prerequisiteId": "cng_h092",
+    "strength": "hard",
+    "reason": "只有弄清脆弱区的成因，才能对症采取治理措施。"
+  },
+  {
+    "topicId": "cng_h094",
+    "prerequisiteId": "cng_h091",
+    "strength": "hard",
+    "reason": "资源枯竭型城市是资源型区域发展问题的集中体现。"
+  },
+  {
+    "topicId": "cng_h094",
+    "prerequisiteId": "cng_h047",
+    "strength": "hard",
+    "reason": "传统工业衰退与工业区位变化，是转型的背景。"
+  },
+  {
+    "topicId": "cng_h094",
+    "prerequisiteId": "cng_h093",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第二册的教学顺序，先学「生态脆弱区的综合治理」，再学「资源枯竭型城市的转型发展」。"
+  },
+  {
+    "topicId": "cng_h095",
+    "prerequisiteId": "cng_h041",
+    "strength": "hard",
+    "reason": "辐射功能以城市的集聚和发展为前提，要先理解城镇化。"
+  },
+  {
+    "topicId": "cng_h095",
+    "prerequisiteId": "cng_h089",
+    "strength": "hard",
+    "reason": "辐射的本质是区域联系，是区域关联性的具体表现。"
+  },
+  {
+    "topicId": "cng_h095",
+    "prerequisiteId": "cng_h094",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第二册的教学顺序，先学「资源枯竭型城市的转型发展」，再学「城市的辐射功能」。"
+  },
+  {
+    "topicId": "cng_h096",
+    "prerequisiteId": "cng_h048",
+    "strength": "hard",
+    "reason": "区分三次产业、判断服务业的范围，需要先学过服务业的类型与区位因素。"
+  },
+  {
+    "topicId": "cng_h096",
+    "prerequisiteId": "cng_h095",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第二册的教学顺序，先学「城市的辐射功能」，再学「地区产业结构的变化」。"
+  },
+  {
+    "topicId": "cng_h097",
+    "prerequisiteId": "cng_h096",
+    "strength": "hard",
+    "reason": "案例分析以产业结构变化的一般规律为依据。"
+  },
+  {
+    "topicId": "cng_h098",
+    "prerequisiteId": "cng_h089",
+    "strength": "hard",
+    "reason": "流域内上下游的相互影响，是区域关联性的典型表现。"
+  },
+  {
+    "topicId": "cng_h098",
+    "prerequisiteId": "cng_h077",
+    "strength": "hard",
+    "reason": "河流的水文特征是流域综合开发的自然基础。"
+  },
+  {
+    "topicId": "cng_h098",
+    "prerequisiteId": "cng_h097",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第二册的教学顺序，先学「产业结构变化的区域案例」，再学「流域内协调发展」。"
+  },
+  {
+    "topicId": "cng_h099",
+    "prerequisiteId": "cng_h091",
+    "strength": "hard",
+    "reason": "调配的对象是资源，需要先理解资源与区域发展的关系。"
+  },
+  {
+    "topicId": "cng_h099",
+    "prerequisiteId": "cng_h098",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第二册的教学顺序，先学「流域内协调发展」，再学「资源跨区域调配」。"
+  },
+  {
+    "topicId": "cng_h100",
+    "prerequisiteId": "cng_h047",
+    "strength": "hard",
+    "reason": "产业转移是工业区位变化在区域之间的表现。"
+  },
+  {
+    "topicId": "cng_h100",
+    "prerequisiteId": "cng_h096",
+    "strength": "hard",
+    "reason": "转出与转入都是区域产业结构调整的一部分。"
+  },
+  {
+    "topicId": "cng_h100",
+    "prerequisiteId": "cng_h099",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第二册的教学顺序，先学「资源跨区域调配」，再学「产业转移」。"
+  },
+  {
+    "topicId": "cng_h101",
+    "prerequisiteId": "cng_h098",
+    "strength": "hard",
+    "reason": "跨国河流合作是流域协调发展在国际范围的延伸。"
+  },
+  {
+    "topicId": "cng_h101",
+    "prerequisiteId": "cng_j017",
+    "strength": "hard",
+    "reason": "初中已学国际合作的意义与形式，这里转入区域发展的层面。"
+  },
+  {
+    "topicId": "cng_h101",
+    "prerequisiteId": "cng_h100",
+    "strength": "soft",
+    "reason": "国际产业转移与合作紧密相关。"
+  },
+  {
+    "topicId": "cng_h102",
+    "prerequisiteId": "cng_h008",
+    "strength": "hard",
+    "reason": "大气圈、水圈、生物圈等外部圈层，是自然环境提供服务的载体。"
+  },
+  {
+    "topicId": "cng_h102",
+    "prerequisiteId": "cng_h101",
+    "strength": "soft",
+    "reason": "按人教版高中地理课序，学完选择性必修第二册的「区域发展中的国际合作」后进入选择性必修第三册的「自然环境的服务功能」。"
+  },
+  {
+    "topicId": "cng_h103",
+    "prerequisiteId": "cng_h102",
+    "strength": "hard",
+    "reason": "自然资源是环境供给服务的重要组成部分。"
+  },
+  {
+    "topicId": "cng_h104",
+    "prerequisiteId": "cng_h103",
+    "strength": "hard",
+    "reason": "资源利用的方式要依据资源的类型和特点来选择。"
+  },
+  {
+    "topicId": "cng_h104",
+    "prerequisiteId": "cng_h054",
+    "strength": "hard",
+    "reason": "可持续发展理念指导资源利用的方式。"
+  },
+  {
+    "topicId": "cng_h105",
+    "prerequisiteId": "cng_h053",
+    "strength": "hard",
+    "reason": "必修二已概述人类面临的主要环境问题，这里进一步分类并分析成因与危害。"
+  },
+  {
+    "topicId": "cng_h105",
+    "prerequisiteId": "cng_h104",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第三册的教学顺序，先学「自然资源的利用」，再学「环境问题及其危害」。"
+  },
+  {
+    "topicId": "cng_h106",
+    "prerequisiteId": "cng_h103",
+    "strength": "hard",
+    "reason": "资源安全讨论的对象是资源，需要先认识资源的类型与特点。"
+  },
+  {
+    "topicId": "cng_h106",
+    "prerequisiteId": "cng_h105",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第三册的教学顺序，先学「环境问题及其危害」，再学「资源安全对国家安全的影响」。"
+  },
+  {
+    "topicId": "cng_h107",
+    "prerequisiteId": "cng_h106",
+    "strength": "hard",
+    "reason": "能源安全是资源安全的核心内容。"
+  },
+  {
+    "topicId": "cng_h107",
+    "prerequisiteId": "cng_j039",
+    "strength": "hard",
+    "reason": "初中已学煤炭、石油等矿产的分布，是理解我国能源资源特点的基础。"
+  },
+  {
+    "topicId": "cng_h108",
+    "prerequisiteId": "cng_h107",
+    "strength": "hard",
+    "reason": "对策要针对我国能源的特点与薄弱环节来选择。"
+  },
+  {
+    "topicId": "cng_h109",
+    "prerequisiteId": "cng_j037",
+    "strength": "hard",
+    "reason": "初中已学我国土地资源的构成与特点，是分析耕地问题的基础。"
+  },
+  {
+    "topicId": "cng_h109",
+    "prerequisiteId": "cng_h106",
+    "strength": "hard",
+    "reason": "耕地是最重要的资源之一，先建立资源安全的含义与分析思路，才好讨论耕地安全。"
+  },
+  {
+    "topicId": "cng_h109",
+    "prerequisiteId": "cng_h108",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第三册的教学顺序，先学「保障能源安全的途径」，再学「中国的耕地资源」。"
+  },
+  {
+    "topicId": "cng_h110",
+    "prerequisiteId": "cng_h109",
+    "strength": "hard",
+    "reason": "耕地是粮食生产的基础，粮食安全以耕地保护为前提。"
+  },
+  {
+    "topicId": "cng_h111",
+    "prerequisiteId": "cng_j040",
+    "strength": "hard",
+    "reason": "初中已学我国的海洋资源与海洋权益，是本点的基础。"
+  },
+  {
+    "topicId": "cng_h111",
+    "prerequisiteId": "cng_h106",
+    "strength": "hard",
+    "reason": "海上通道、海洋资源与资源安全直接相关。"
+  },
+  {
+    "topicId": "cng_h111",
+    "prerequisiteId": "cng_h110",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第三册的教学顺序，先学「粮食安全及其保障」，再学「海洋空间资源开发与国家安全」。"
+  },
+  {
+    "topicId": "cng_h112",
+    "prerequisiteId": "cng_h105",
+    "strength": "hard",
+    "reason": "环境安全是在认识环境问题及其危害的基础上，从国家安全角度的进一步讨论。"
+  },
+  {
+    "topicId": "cng_h112",
+    "prerequisiteId": "cng_h111",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第三册的教学顺序，先学「海洋空间资源开发与国家安全」，再学「环境安全对国家安全的影响」。"
+  },
+  {
+    "topicId": "cng_h113",
+    "prerequisiteId": "cng_h112",
+    "strength": "hard",
+    "reason": "污染问题是环境安全议题的主要内容之一。"
+  },
+  {
+    "topicId": "cng_h114",
+    "prerequisiteId": "cng_h112",
+    "strength": "hard",
+    "reason": "生态安全是环境安全的重要方面。"
+  },
+  {
+    "topicId": "cng_h114",
+    "prerequisiteId": "cng_h113",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第三册的教学顺序，先学「环境污染与国家安全」，再学「生态保护与国家安全」。"
+  },
+  {
+    "topicId": "cng_h115",
+    "prerequisiteId": "cng_h011",
+    "strength": "hard",
+    "reason": "温室效应来自大气受热过程中的大气逆辐射。"
+  },
+  {
+    "topicId": "cng_h115",
+    "prerequisiteId": "cng_h112",
+    "strength": "hard",
+    "reason": "气候变化是环境安全的重要议题。"
+  },
+  {
+    "topicId": "cng_h115",
+    "prerequisiteId": "cng_h114",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第三册的教学顺序，先学「生态保护与国家安全」，再学「全球气候变化及其影响」。"
+  },
+  {
+    "topicId": "cng_h116",
+    "prerequisiteId": "cng_h115",
+    "strength": "hard",
+    "reason": "应对措施以认识气候变化的成因与影响为基础。"
+  },
+  {
+    "topicId": "cng_h116",
+    "prerequisiteId": "cng_h108",
+    "strength": "hard",
+    "reason": "能源结构优化与能效提高，是实现减排的主要途径。"
+  },
+  {
+    "topicId": "cng_h117",
+    "prerequisiteId": "cng_h054",
+    "strength": "hard",
+    "reason": "生态文明是对可持续发展、人地协调思想的深化。"
+  },
+  {
+    "topicId": "cng_h117",
+    "prerequisiteId": "cng_h105",
+    "strength": "hard",
+    "reason": "认识环境问题及其危害，是走向生态文明的起点。"
+  },
+  {
+    "topicId": "cng_h117",
+    "prerequisiteId": "cng_h116",
+    "strength": "soft",
+    "reason": "按人教版高中地理选择性必修第三册的教学顺序，先学「碳排放与应对气候变化」，再学「走向生态文明」。"
+  },
+  {
+    "topicId": "cng_h118",
+    "prerequisiteId": "cng_h117",
+    "strength": "hard",
+    "reason": "各项战略与政策，都以生态文明的理念为指导。"
+  },
+  {
+    "topicId": "cng_h119",
+    "prerequisiteId": "cng_h116",
+    "strength": "hard",
+    "reason": "气候变化合作是资源环境国际合作的典型议题。"
+  },
+  {
+    "topicId": "cng_h119",
+    "prerequisiteId": "cng_h118",
+    "strength": "soft",
+    "reason": "国际合作与国内战略相互配合。"
+  },
+  {
+    "topicId": "cnh_h001",
+    "prerequisiteId": "cnh_j003",
+    "strength": "hard",
+    "reason": "理解早期国家的形成，要先知道新石器时代各地文化与文明起源的基本情况。"
+  },
+  {
+    "topicId": "cnh_h001",
+    "prerequisiteId": "cnh_j004",
+    "strength": "hard",
+    "reason": "夏商西周的政权更替是本课的主线，要先熟悉三代王朝的先后与重大事件。"
+  },
+  {
+    "topicId": "cnh_h002",
+    "prerequisiteId": "cnh_h001",
+    "strength": "hard",
+    "reason": "春秋战国的变革是对西周分封制、井田制与世卿世禄的冲击，要先知道西周的制度与秩序。"
+  },
+  {
+    "topicId": "cnh_h002",
+    "prerequisiteId": "cnh_j006",
+    "strength": "hard",
+    "reason": "战国变法运动的基本史实已在初中学过，高中在此基础上深入分析背景与作用。"
+  },
+  {
+    "topicId": "cnh_h003",
+    "prerequisiteId": "cnh_h002",
+    "strength": "hard",
+    "reason": "诸子学说是对春秋战国社会大变动的回应，要先知道这一时期的社会变革。"
+  },
+  {
+    "topicId": "cnh_h003",
+    "prerequisiteId": "cnh_j007",
+    "strength": "hard",
+    "reason": "百家争鸣的基本人物与主张在初中已学过，高中进一步分析背景与影响。"
+  },
+  {
+    "topicId": "cnh_h004",
+    "prerequisiteId": "cnh_h002",
+    "strength": "hard",
+    "reason": "秦能统一六国，与商鞅变法使秦国富强、县制与军功爵制已经建立密切相关。"
+  },
+  {
+    "topicId": "cnh_h004",
+    "prerequisiteId": "cnh_j009",
+    "strength": "hard",
+    "reason": "秦统一的基本史实与措施在初中已学，高中据此分析制度创新。"
+  },
+  {
+    "topicId": "cnh_h004",
+    "prerequisiteId": "cnh_h003",
+    "strength": "soft",
+    "reason": "法家思想是秦朝政治的重要理论来源。"
+  },
+  {
+    "topicId": "cnh_h005",
+    "prerequisiteId": "cnh_h004",
+    "strength": "hard",
+    "reason": "秦末农民战争是对秦朝暴政的反抗，要先了解秦朝的统一措施与统治特点。"
+  },
+  {
+    "topicId": "cnh_h005",
+    "prerequisiteId": "cnh_j010",
+    "strength": "hard",
+    "reason": "秦末农民大起义的基本史实已在初中学过。"
+  },
+  {
+    "topicId": "cnh_h005",
+    "prerequisiteId": "cnh_j011",
+    "strength": "soft",
+    "reason": "西汉建立与文景之治的基本史实是本课后半部分的基础。"
+  },
+  {
+    "topicId": "cnh_h006",
+    "prerequisiteId": "cnh_h005",
+    "strength": "hard",
+    "reason": "汉武帝是在汉初休养生息、郡国并行的基础上巩固大一统的，要先知道西汉的建立与初期政策。"
+  },
+  {
+    "topicId": "cnh_h006",
+    "prerequisiteId": "cnh_j012",
+    "strength": "hard",
+    "reason": "汉武帝巩固大一统与东汉兴衰的基本史实在初中已学过。"
+  },
+  {
+    "topicId": "cnh_h006",
+    "prerequisiteId": "cnh_j014",
+    "strength": "soft",
+    "reason": "张骞通西域与丝绸之路是汉武帝对外经略的重要内容。"
+  },
+  {
+    "topicId": "cnh_h007",
+    "prerequisiteId": "cnh_h006",
+    "strength": "hard",
+    "reason": "三国鼎立源于东汉后期政治腐败与军阀割据，要先知道两汉衰亡的过程。"
+  },
+  {
+    "topicId": "cnh_h007",
+    "prerequisiteId": "cnh_j016",
+    "strength": "hard",
+    "reason": "三国鼎立的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h007",
+    "prerequisiteId": "cnh_j017",
+    "strength": "hard",
+    "reason": "西晋统一及北方各族内迁是本课后半段的基础。"
+  },
+  {
+    "topicId": "cnh_h008",
+    "prerequisiteId": "cnh_h007",
+    "strength": "hard",
+    "reason": "民族交融与江南开发都发生在三国两晋南北朝的政权更迭之中，要先知道这一时期的政治格局。"
+  },
+  {
+    "topicId": "cnh_h008",
+    "prerequisiteId": "cnh_j019",
+    "strength": "hard",
+    "reason": "北朝政治和北方民族大交融的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h008",
+    "prerequisiteId": "cnh_j018",
+    "strength": "hard",
+    "reason": "东晋南朝政治与江南开发是本课后半部分的基础。"
+  },
+  {
+    "topicId": "cnh_h009",
+    "prerequisiteId": "cnh_h008",
+    "strength": "hard",
+    "reason": "隋朝的统一，是南北长期对峙、民族交融与江南开发的结果，要先知道这一时期的发展趋势。"
+  },
+  {
+    "topicId": "cnh_h009",
+    "prerequisiteId": "cnh_j022",
+    "strength": "hard",
+    "reason": "隋朝统一与灭亡的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h009",
+    "prerequisiteId": "cnh_j023",
+    "strength": "hard",
+    "reason": "贞观之治的基本史实是理解唐朝强盛的基础。"
+  },
+  {
+    "topicId": "cnh_h009",
+    "prerequisiteId": "cnh_j024",
+    "strength": "soft",
+    "reason": "开元盛世的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h010",
+    "prerequisiteId": "cnh_h009",
+    "strength": "hard",
+    "reason": "唐朝的衰亡是盛世之后的转折，要先知道唐朝前期的统一与鼎盛。"
+  },
+  {
+    "topicId": "cnh_h010",
+    "prerequisiteId": "cnh_j025",
+    "strength": "hard",
+    "reason": "安史之乱与唐朝衰亡的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h011",
+    "prerequisiteId": "cnh_h009",
+    "strength": "hard",
+    "reason": "隋唐制度创新的背景是统一国家的建立与盛世的出现，要先知道隋唐的基本历史。"
+  },
+  {
+    "topicId": "cnh_h011",
+    "prerequisiteId": "cnh_h010",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（上）》的教学顺序，先学「安史之乱、藩镇割据与五代十国」，再学「隋唐制度的变化与创新」。"
+  },
+  {
+    "topicId": "cnh_h012",
+    "prerequisiteId": "cnh_j020",
+    "strength": "hard",
+    "reason": "三国两晋南北朝的科技与文化成就在初中已学，是本课的基础。"
+  },
+  {
+    "topicId": "cnh_h012",
+    "prerequisiteId": "cnh_j028",
+    "strength": "hard",
+    "reason": "隋唐时期的科技与文化成就在初中已学，是本课的基础。"
+  },
+  {
+    "topicId": "cnh_h012",
+    "prerequisiteId": "cnh_h011",
+    "strength": "soft",
+    "reason": "科举制与统一国家的出现，是隋唐文化繁荣的重要条件。"
+  },
+  {
+    "topicId": "cnh_h013",
+    "prerequisiteId": "cnh_h010",
+    "strength": "hard",
+    "reason": "宋初强化中央集权，针对的是唐末五代藩镇割据、武人专权的教训，要先知道这一历史背景。"
+  },
+  {
+    "topicId": "cnh_h013",
+    "prerequisiteId": "cnh_j029",
+    "strength": "hard",
+    "reason": "北宋政治与王安石变法的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h013",
+    "prerequisiteId": "cnh_j031",
+    "strength": "soft",
+    "reason": "金与南宋对峙是本课后半部分的基础。"
+  },
+  {
+    "topicId": "cnh_h013",
+    "prerequisiteId": "cnh_h012",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（上）》的教学顺序，先学「三国至隋唐的文化」，再学「两宋的政治和军事」。"
+  },
+  {
+    "topicId": "cnh_h014",
+    "prerequisiteId": "cnh_h013",
+    "strength": "hard",
+    "reason": "辽宋夏金并立的格局，是以北宋、南宋的政治军事形势为基础的，要先知道宋朝的政治与对外关系。"
+  },
+  {
+    "topicId": "cnh_h014",
+    "prerequisiteId": "cnh_j030",
+    "strength": "hard",
+    "reason": "辽、西夏与北宋并立的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h014",
+    "prerequisiteId": "cnh_j032",
+    "strength": "hard",
+    "reason": "元朝建立与统一的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h015",
+    "prerequisiteId": "cnh_h014",
+    "strength": "hard",
+    "reason": "宋元经济文化的发展跨越辽宋夏金元多个政权，要先知道元朝统一与各政权并立的格局。"
+  },
+  {
+    "topicId": "cnh_h015",
+    "prerequisiteId": "cnh_j033",
+    "strength": "hard",
+    "reason": "辽宋夏金元经济繁荣的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h015",
+    "prerequisiteId": "cnh_j035",
+    "strength": "hard",
+    "reason": "辽宋夏金元的科技与文化成就在初中已学。"
+  },
+  {
+    "topicId": "cnh_h016",
+    "prerequisiteId": "cnh_h014",
+    "strength": "hard",
+    "reason": "明朝的建立是推翻元朝统治的结果，要先知道元朝的统治特点与行省制度。"
+  },
+  {
+    "topicId": "cnh_h016",
+    "prerequisiteId": "cnh_j036",
+    "strength": "hard",
+    "reason": "明朝统治的基本措施在初中已学。"
+  },
+  {
+    "topicId": "cnh_h016",
+    "prerequisiteId": "cnh_j038",
+    "strength": "hard",
+    "reason": "明朝灭亡和清朝建立的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h016",
+    "prerequisiteId": "cnh_h015",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（上）》的教学顺序，先学「辽宋夏金元的经济、社会与文化」，再学「从明朝建立到清军入关」。"
+  },
+  {
+    "topicId": "cnh_h017",
+    "prerequisiteId": "cnh_h016",
+    "strength": "hard",
+    "reason": "清朝沿袭并发展了明朝的君主专制，要先知道明朝制度与清朝建立的背景。"
+  },
+  {
+    "topicId": "cnh_h017",
+    "prerequisiteId": "cnh_j039",
+    "strength": "hard",
+    "reason": "清朝边疆治理的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h017",
+    "prerequisiteId": "cnh_j040",
+    "strength": "hard",
+    "reason": "清朝君主专制强化的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h018",
+    "prerequisiteId": "cnh_h016",
+    "strength": "hard",
+    "reason": "明清经济的发展以明朝建立后的统治政策与赋役制度为背景。"
+  },
+  {
+    "topicId": "cnh_h018",
+    "prerequisiteId": "cnh_j041",
+    "strength": "hard",
+    "reason": "明清社会经济的发展在初中已学。"
+  },
+  {
+    "topicId": "cnh_h018",
+    "prerequisiteId": "cnh_j042",
+    "strength": "hard",
+    "reason": "明清科技与文化成就在初中已学。"
+  },
+  {
+    "topicId": "cnh_h018",
+    "prerequisiteId": "cnh_h017",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（上）》的教学顺序，先学「清朝前中期的鼎盛与危机」，再学「明至清中叶的经济与文化」。"
+  },
+  {
+    "topicId": "cnh_h019",
+    "prerequisiteId": "cnh_h017",
+    "strength": "hard",
+    "reason": "鸦片战争是在清朝闭关锁国、统治由盛转衰的背景下发生的，要先知道清朝前中期的统治状况。"
+  },
+  {
+    "topicId": "cnh_h019",
+    "prerequisiteId": "cnh_h018",
+    "strength": "soft",
+    "reason": "理解英国为何觊觎中国市场，要先了解明清时期商品经济的发展与对外贸易状况。"
+  },
+  {
+    "topicId": "cnh_h019",
+    "prerequisiteId": "cnh_j045",
+    "strength": "hard",
+    "reason": "第二次鸦片战争的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h020",
+    "prerequisiteId": "cnh_h019",
+    "strength": "hard",
+    "reason": "太平天国运动与洋务运动都是鸦片战争后民族危机与社会矛盾加深的产物，要先知道两次鸦片战争的影响。"
+  },
+  {
+    "topicId": "cnh_h020",
+    "prerequisiteId": "cnh_j046",
+    "strength": "hard",
+    "reason": "太平天国运动的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h020",
+    "prerequisiteId": "cnh_j047",
+    "strength": "hard",
+    "reason": "洋务运动的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h021",
+    "prerequisiteId": "cnh_h020",
+    "strength": "hard",
+    "reason": "甲午战争检验了洋务运动的成效，北洋海军正是洋务运动的产物，要先知道洋务运动的内容与局限。"
+  },
+  {
+    "topicId": "cnh_h021",
+    "prerequisiteId": "cnh_j048",
+    "strength": "hard",
+    "reason": "甲午战争与瓜分狂潮的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h022",
+    "prerequisiteId": "cnh_h021",
+    "strength": "hard",
+    "reason": "维新变法与义和团运动，都是瓜分危机加深背景下的救亡图存活动，要先知道甲午战后的民族危机。"
+  },
+  {
+    "topicId": "cnh_h022",
+    "prerequisiteId": "cnh_j049",
+    "strength": "hard",
+    "reason": "戊戌变法的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h022",
+    "prerequisiteId": "cnh_j050",
+    "strength": "hard",
+    "reason": "义和团运动和八国联军侵华的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h023",
+    "prerequisiteId": "cnh_h022",
+    "strength": "hard",
+    "reason": "资产阶级革命派的兴起，是维新失败、清廷腐败后探索救国新路的结果，要先知道戊戌变法与《辛丑条约》。"
+  },
+  {
+    "topicId": "cnh_h023",
+    "prerequisiteId": "cnh_j052",
+    "strength": "hard",
+    "reason": "辛亥革命的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h024",
+    "prerequisiteId": "cnh_h023",
+    "strength": "hard",
+    "reason": "北洋军阀统治是辛亥革命成果被窃取后的政治局面，要先知道辛亥革命的成果与局限。"
+  },
+  {
+    "topicId": "cnh_h024",
+    "prerequisiteId": "cnh_j053",
+    "strength": "hard",
+    "reason": "帝制复辟与军阀割据的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h025",
+    "prerequisiteId": "cnh_h024",
+    "strength": "hard",
+    "reason": "五四运动是北洋政府统治与新文化运动背景下的爱国运动，要先知道新文化运动与民初政局。"
+  },
+  {
+    "topicId": "cnh_h025",
+    "prerequisiteId": "cnh_j055",
+    "strength": "hard",
+    "reason": "中国共产党诞生的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h026",
+    "prerequisiteId": "cnh_h025",
+    "strength": "hard",
+    "reason": "国共合作是在中国共产党成立、工人运动兴起的基础上实现的，要先知道党的成立与初期工作。"
+  },
+  {
+    "topicId": "cnh_h026",
+    "prerequisiteId": "cnh_j056",
+    "strength": "hard",
+    "reason": "国共合作与北伐战争的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h027",
+    "prerequisiteId": "cnh_h026",
+    "strength": "hard",
+    "reason": "南京国民政府是国共合作破裂、大革命失败的产物，要先知道北伐与大革命失败的过程。"
+  },
+  {
+    "topicId": "cnh_h028",
+    "prerequisiteId": "cnh_h027",
+    "strength": "hard",
+    "reason": "党开辟新道路，是为了应对国民党一党专政和大革命失败后的白色恐怖，要先知道国民政府的统治。"
+  },
+  {
+    "topicId": "cnh_h028",
+    "prerequisiteId": "cnh_j058",
+    "strength": "hard",
+    "reason": "红军长征与遵义会议的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h029",
+    "prerequisiteId": "cnh_h027",
+    "strength": "hard",
+    "reason": "九一八事变时南京国民政府采取不抵抗政策，要先知道国民政府的内外政策。"
+  },
+  {
+    "topicId": "cnh_h029",
+    "prerequisiteId": "cnh_h028",
+    "strength": "soft",
+    "reason": "西安事变与统一战线的形成，与红军长征到达陕北后的局势相关。"
+  },
+  {
+    "topicId": "cnh_h029",
+    "prerequisiteId": "cnh_j060",
+    "strength": "hard",
+    "reason": "七七事变与全民族抗战的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h030",
+    "prerequisiteId": "cnh_h029",
+    "strength": "hard",
+    "reason": "抗战胜利是全民族抗战的结果，要先知道抗战的爆发与统一战线的形成。"
+  },
+  {
+    "topicId": "cnh_h030",
+    "prerequisiteId": "cnh_j061",
+    "strength": "hard",
+    "reason": "正面战场与敌后战场的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h030",
+    "prerequisiteId": "cnh_j062",
+    "strength": "hard",
+    "reason": "抗日战争胜利的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h031",
+    "prerequisiteId": "cnh_h030",
+    "strength": "hard",
+    "reason": "解放战争爆发于抗战胜利之后，要先知道抗战胜利后的国内形势。"
+  },
+  {
+    "topicId": "cnh_h031",
+    "prerequisiteId": "cnh_j064",
+    "strength": "hard",
+    "reason": "人民解放战争胜利的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h032",
+    "prerequisiteId": "cnh_h031",
+    "strength": "hard",
+    "reason": "新中国的成立是人民解放战争胜利的直接结果，要先知道解放战争的进程与结局。"
+  },
+  {
+    "topicId": "cnh_h032",
+    "prerequisiteId": "cnh_j067",
+    "strength": "hard",
+    "reason": "巩固人民民主政权的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h032",
+    "prerequisiteId": "cnh_j068",
+    "strength": "hard",
+    "reason": "社会主义制度建立的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h033",
+    "prerequisiteId": "cnh_h032",
+    "strength": "hard",
+    "reason": "探索社会主义建设道路，是在社会主义基本制度确立后展开的，要先知道三大改造与第一个五年计划。"
+  },
+  {
+    "topicId": "cnh_h033",
+    "prerequisiteId": "cnh_j070",
+    "strength": "hard",
+    "reason": "艰辛探索与曲折发展的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h033",
+    "prerequisiteId": "cnh_j071",
+    "strength": "hard",
+    "reason": "社会主义建设的巨大成就在初中已学。"
+  },
+  {
+    "topicId": "cnh_h033",
+    "prerequisiteId": "cnh_j072",
+    "strength": "soft",
+    "reason": "国防现代化起步和外交新突破在初中已学。"
+  },
+  {
+    "topicId": "cnh_h034",
+    "prerequisiteId": "cnh_h033",
+    "strength": "hard",
+    "reason": "改革开放是在总结社会主义建设正反两方面经验的基础上提出的，要先知道建设中的成就与曲折。"
+  },
+  {
+    "topicId": "cnh_h034",
+    "prerequisiteId": "cnh_j074",
+    "strength": "hard",
+    "reason": "改革开放起步的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h034",
+    "prerequisiteId": "cnh_j077",
+    "strength": "soft",
+    "reason": "加快改革开放步伐与市场经济目标的确立，初中已有基础。"
+  },
+  {
+    "topicId": "cnh_h035",
+    "prerequisiteId": "cnh_h034",
+    "strength": "hard",
+    "reason": "改革开放以来的经济成就，源自改革开放政策与市场经济体制的逐步确立。"
+  },
+  {
+    "topicId": "cnh_h035",
+    "prerequisiteId": "cnh_j078",
+    "strength": "hard",
+    "reason": "中国特色社会主义事业新成就在初中已学。"
+  },
+  {
+    "topicId": "cnh_h036",
+    "prerequisiteId": "cnh_h034",
+    "strength": "hard",
+    "reason": "改革开放以来的政治文明和外交成就，是在改革开放大背景下取得的。"
+  },
+  {
+    "topicId": "cnh_h036",
+    "prerequisiteId": "cnh_j079",
+    "strength": "hard",
+    "reason": "国防和外交工作新局面的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h036",
+    "prerequisiteId": "cnh_h035",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（上）》的教学顺序，先学「改革开放以来的经济与社会成就」，再学「改革开放以来的政治文明与国际地位」。"
+  },
+  {
+    "topicId": "cnh_h037",
+    "prerequisiteId": "cnh_h035",
+    "strength": "hard",
+    "reason": "新时代是改革开放以来经济社会发展成就积累的结果，要先知道改革开放以来的主要成就。"
+  },
+  {
+    "topicId": "cnh_h037",
+    "prerequisiteId": "cnh_j083",
+    "strength": "hard",
+    "reason": "擘画中国梦宏伟蓝图的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h037",
+    "prerequisiteId": "cnh_h036",
+    "strength": "soft",
+    "reason": "新时代全面依法治国与国际地位的提升，延续了改革开放以来的政治文明建设。"
+  },
+  {
+    "topicId": "cnh_h038",
+    "prerequisiteId": "cnh_h037",
+    "strength": "hard",
+    "reason": "新时代的成就是在中国梦与新时代战略布局引领下取得的，要先知道新时代的开启与主要布局。"
+  },
+  {
+    "topicId": "cnh_h038",
+    "prerequisiteId": "cnh_j087",
+    "strength": "hard",
+    "reason": "实现第一个百年奋斗目标的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h039",
+    "prerequisiteId": "cnh_j091",
+    "strength": "hard",
+    "reason": "古代两河流域的楔形文字与法典是本课的基础。"
+  },
+  {
+    "topicId": "cnh_h039",
+    "prerequisiteId": "cnh_j092",
+    "strength": "hard",
+    "reason": "古代埃及的法老与金字塔是理解东方专制王权的基础。"
+  },
+  {
+    "topicId": "cnh_h039",
+    "prerequisiteId": "cnh_j093",
+    "strength": "soft",
+    "reason": "古代印度的种姓制度与宗教是本课的内容基础。"
+  },
+  {
+    "topicId": "cnh_h039",
+    "prerequisiteId": "cnh_h038",
+    "strength": "soft",
+    "reason": "按统编版高中历史课序，学完《中外历史纲要（上）》的「新时代中国特色社会主义的伟大成就」后进入《中外历史纲要（下）》的「古代东方文明的产生与早期发展」。"
+  },
+  {
+    "topicId": "cnh_h040",
+    "prerequisiteId": "cnh_j094",
+    "strength": "hard",
+    "reason": "古代希腊城邦与雅典民主政治的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h040",
+    "prerequisiteId": "cnh_j095",
+    "strength": "hard",
+    "reason": "古代罗马的发展与罗马法的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h040",
+    "prerequisiteId": "cnh_h039",
+    "strength": "soft",
+    "reason": "与东方君主专制对照，才能看出希腊城邦民主的特点。"
+  },
+  {
+    "topicId": "cnh_h041",
+    "prerequisiteId": "cnh_h040",
+    "strength": "hard",
+    "reason": "亚历山大东征与罗马帝国都以希腊罗马文明为基础，要先知道这一文明的发展。"
+  },
+  {
+    "topicId": "cnh_h041",
+    "prerequisiteId": "cnh_h039",
+    "strength": "hard",
+    "reason": "波斯帝国整合了两河流域、埃及等古代东方文明，要先知道这些早期文明。"
+  },
+  {
+    "topicId": "cnh_h042",
+    "prerequisiteId": "cnh_h040",
+    "strength": "hard",
+    "reason": "西欧封建社会产生于西罗马帝国灭亡之后，要先知道罗马的兴衰与基督教的发展。"
+  },
+  {
+    "topicId": "cnh_h042",
+    "prerequisiteId": "cnh_j096",
+    "strength": "hard",
+    "reason": "法兰克王国和西欧封建制度的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h042",
+    "prerequisiteId": "cnh_j097",
+    "strength": "hard",
+    "reason": "西欧的城市和大学的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h042",
+    "prerequisiteId": "cnh_j098",
+    "strength": "hard",
+    "reason": "拜占庭帝国的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h042",
+    "prerequisiteId": "cnh_h041",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（下）》的教学顺序，先学「古代世界的帝国与文明的交流」，再学「中古时期的欧洲」。"
+  },
+  {
+    "topicId": "cnh_h043",
+    "prerequisiteId": "cnh_j100",
+    "strength": "hard",
+    "reason": "阿拉伯帝国的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h043",
+    "prerequisiteId": "cnh_j099",
+    "strength": "hard",
+    "reason": "封建时代日本的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h043",
+    "prerequisiteId": "cnh_h042",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（下）》的教学顺序，先学「中古时期的欧洲」，再学「中古时期的亚洲」。"
+  },
+  {
+    "topicId": "cnh_h044",
+    "prerequisiteId": "cnh_j101",
+    "strength": "hard",
+    "reason": "中古时期非洲和美洲的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h044",
+    "prerequisiteId": "cnh_h043",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（下）》的教学顺序，先学「中古时期的亚洲」，再学「古代非洲与美洲」。"
+  },
+  {
+    "topicId": "cnh_h045",
+    "prerequisiteId": "cnh_h042",
+    "strength": "hard",
+    "reason": "新航路开辟源于西欧封建社会内部商品经济的发展与城市兴起，要先知道中古时期的西欧。"
+  },
+  {
+    "topicId": "cnh_h045",
+    "prerequisiteId": "cnh_j102",
+    "strength": "hard",
+    "reason": "西欧经济社会发展与文艺复兴是新航路开辟的重要背景。"
+  },
+  {
+    "topicId": "cnh_h045",
+    "prerequisiteId": "cnh_j103",
+    "strength": "hard",
+    "reason": "探寻新航路的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h045",
+    "prerequisiteId": "cnh_h044",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（下）》的教学顺序，先学「古代非洲与美洲」，再学「全球航路的开辟」。"
+  },
+  {
+    "topicId": "cnh_h046",
+    "prerequisiteId": "cnh_h045",
+    "strength": "hard",
+    "reason": "全球联系的初步建立是新航路开辟的直接结果，要先知道新航路的开辟过程。"
+  },
+  {
+    "topicId": "cnh_h046",
+    "prerequisiteId": "cnh_j104",
+    "strength": "hard",
+    "reason": "早期殖民掠夺的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h047",
+    "prerequisiteId": "cnh_h042",
+    "strength": "hard",
+    "reason": "文艺复兴与宗教改革针对的是中世纪教会神权与封建秩序，要先知道西欧封建社会与教会的情况。"
+  },
+  {
+    "topicId": "cnh_h047",
+    "prerequisiteId": "cnh_j102",
+    "strength": "hard",
+    "reason": "文艺复兴的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h047",
+    "prerequisiteId": "cnh_h046",
+    "strength": "soft",
+    "reason": "商品经济发展与资产阶级壮大是思想解放运动的社会基础。"
+  },
+  {
+    "topicId": "cnh_h048",
+    "prerequisiteId": "cnh_h047",
+    "strength": "hard",
+    "reason": "英美革命的指导思想来自启蒙思想与人文主义，要先知道思想解放运动的内容。"
+  },
+  {
+    "topicId": "cnh_h048",
+    "prerequisiteId": "cnh_j105",
+    "strength": "hard",
+    "reason": "英国资产阶级革命的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h048",
+    "prerequisiteId": "cnh_j106",
+    "strength": "hard",
+    "reason": "美国独立战争的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h049",
+    "prerequisiteId": "cnh_h048",
+    "strength": "hard",
+    "reason": "法国大革命发生在英美革命之后，要先知道资产阶级革命的先例与启蒙思想的实践。"
+  },
+  {
+    "topicId": "cnh_h049",
+    "prerequisiteId": "cnh_j107",
+    "strength": "hard",
+    "reason": "法国大革命和拿破仑帝国的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h049",
+    "prerequisiteId": "cnh_j115",
+    "strength": "soft",
+    "reason": "日本明治维新是资本主义制度扩展的例子，初中已有基础。"
+  },
+  {
+    "topicId": "cnh_h050",
+    "prerequisiteId": "cnh_j108",
+    "strength": "hard",
+    "reason": "第一次工业革命的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h050",
+    "prerequisiteId": "cnh_j116",
+    "strength": "hard",
+    "reason": "第二次工业革命的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h050",
+    "prerequisiteId": "cnh_j117",
+    "strength": "soft",
+    "reason": "工业化国家的社会变化在初中已学。"
+  },
+  {
+    "topicId": "cnh_h050",
+    "prerequisiteId": "cnh_h049",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（下）》的教学顺序，先学「法国大革命与资本主义制度的扩展」，再学「影响世界的工业革命」。"
+  },
+  {
+    "topicId": "cnh_h051",
+    "prerequisiteId": "cnh_h050",
+    "strength": "hard",
+    "reason": "马克思主义诞生于工业革命使无产阶级壮大的背景之下，要先知道工业革命带来的社会变化。"
+  },
+  {
+    "topicId": "cnh_h051",
+    "prerequisiteId": "cnh_j109",
+    "strength": "hard",
+    "reason": "马克思主义诞生的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h052",
+    "prerequisiteId": "cnh_h050",
+    "strength": "hard",
+    "reason": "殖民体系的形成与第二次工业革命推动资本主义进入帝国主义阶段密切相关。"
+  },
+  {
+    "topicId": "cnh_h052",
+    "prerequisiteId": "cnh_h046",
+    "strength": "hard",
+    "reason": "19世纪的殖民体系是早期殖民扩张的延续与扩大，要先知道早期殖民的特点。"
+  },
+  {
+    "topicId": "cnh_h052",
+    "prerequisiteId": "cnh_h051",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（下）》的教学顺序，先学「马克思主义的诞生与传播」，再学「资本主义世界殖民体系的形成」。"
+  },
+  {
+    "topicId": "cnh_h053",
+    "prerequisiteId": "cnh_h052",
+    "strength": "hard",
+    "reason": "亚非拉民族独立运动是对殖民体系形成的反抗，要先知道列强的殖民扩张与殖民统治。"
+  },
+  {
+    "topicId": "cnh_h053",
+    "prerequisiteId": "cnh_j112",
+    "strength": "hard",
+    "reason": "殖民地人民的反抗斗争的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h054",
+    "prerequisiteId": "cnh_h052",
+    "strength": "hard",
+    "reason": "一战源于列强争夺殖民地和势力范围的矛盾，要先知道殖民体系形成后的世界格局。"
+  },
+  {
+    "topicId": "cnh_h054",
+    "prerequisiteId": "cnh_j121",
+    "strength": "hard",
+    "reason": "《凡尔赛条约》和《九国公约》的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h054",
+    "prerequisiteId": "cnh_h053",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（下）》的教学顺序，先学「亚非拉民族独立运动」，再学「第一次世界大战与战后国际秩序」。"
+  },
+  {
+    "topicId": "cnh_h055",
+    "prerequisiteId": "cnh_h051",
+    "strength": "hard",
+    "reason": "十月革命是马克思主义指导的无产阶级革命实践，要先知道马克思主义的基本内容。"
+  },
+  {
+    "topicId": "cnh_h055",
+    "prerequisiteId": "cnh_h054",
+    "strength": "hard",
+    "reason": "俄国革命是一战背景下爆发的，要先知道一战对俄国的影响。"
+  },
+  {
+    "topicId": "cnh_h055",
+    "prerequisiteId": "cnh_j122",
+    "strength": "hard",
+    "reason": "苏联社会主义建设的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h056",
+    "prerequisiteId": "cnh_h053",
+    "strength": "hard",
+    "reason": "战后民族民主运动是近代民族独立运动的发展，要先知道近代亚非拉的独立斗争。"
+  },
+  {
+    "topicId": "cnh_h056",
+    "prerequisiteId": "cnh_h054",
+    "strength": "hard",
+    "reason": "战争削弱殖民宗主国，是运动高涨的重要条件。"
+  },
+  {
+    "topicId": "cnh_h056",
+    "prerequisiteId": "cnh_j123",
+    "strength": "hard",
+    "reason": "亚非拉民族民主运动高涨的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h056",
+    "prerequisiteId": "cnh_h055",
+    "strength": "soft",
+    "reason": "十月革命的影响推动了殖民地的民族解放斗争。"
+  },
+  {
+    "topicId": "cnh_h057",
+    "prerequisiteId": "cnh_h054",
+    "strength": "hard",
+    "reason": "二战源于一战后凡尔赛—华盛顿体系的矛盾，要先知道一战及战后秩序。"
+  },
+  {
+    "topicId": "cnh_h057",
+    "prerequisiteId": "cnh_j126",
+    "strength": "hard",
+    "reason": "第二次世界大战的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h057",
+    "prerequisiteId": "cnh_h056",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（下）》的教学顺序，先学「亚非拉民族民主运动的高涨」，再学「第二次世界大战与战后国际秩序的形成」。"
+  },
+  {
+    "topicId": "cnh_h058",
+    "prerequisiteId": "cnh_h057",
+    "strength": "hard",
+    "reason": "冷战格局由二战后美苏力量对比和雅尔塔体系决定，要先知道二战及战后秩序。"
+  },
+  {
+    "topicId": "cnh_h058",
+    "prerequisiteId": "cnh_j127",
+    "strength": "hard",
+    "reason": "冷战的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h058",
+    "prerequisiteId": "cnh_j132",
+    "strength": "soft",
+    "reason": "冷战后的世界格局在初中已有基础。"
+  },
+  {
+    "topicId": "cnh_h059",
+    "prerequisiteId": "cnh_h057",
+    "strength": "hard",
+    "reason": "战后资本主义的新变化，是在二战结束与美国经济地位上升的背景下出现的，要先知道二战及罗斯福新政的影响。"
+  },
+  {
+    "topicId": "cnh_h059",
+    "prerequisiteId": "cnh_j128",
+    "strength": "hard",
+    "reason": "二战后资本主义的新变化的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h059",
+    "prerequisiteId": "cnh_h058",
+    "strength": "soft",
+    "reason": "西欧一体化与美国的冷战战略有关，要先知道冷战的背景。"
+  },
+  {
+    "topicId": "cnh_h060",
+    "prerequisiteId": "cnh_h055",
+    "strength": "hard",
+    "reason": "苏联解体与改革源于其高度集中的体制，要先知道十月革命和苏联模式的形成。"
+  },
+  {
+    "topicId": "cnh_h060",
+    "prerequisiteId": "cnh_h058",
+    "strength": "hard",
+    "reason": "东欧剧变与苏联解体发生在冷战末期，要先知道冷战的进程。"
+  },
+  {
+    "topicId": "cnh_h060",
+    "prerequisiteId": "cnh_j129",
+    "strength": "hard",
+    "reason": "社会主义的发展与挫折的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h060",
+    "prerequisiteId": "cnh_h059",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（下）》的教学顺序，先学「资本主义国家的新变化」，再学「社会主义国家的发展与变化」。"
+  },
+  {
+    "topicId": "cnh_h061",
+    "prerequisiteId": "cnh_h056",
+    "strength": "hard",
+    "reason": "战后殖民体系瓦解是战前民族民主运动的延续，要先知道一战后亚非拉的民族运动。"
+  },
+  {
+    "topicId": "cnh_h061",
+    "prerequisiteId": "cnh_h057",
+    "strength": "hard",
+    "reason": "二战削弱了殖民宗主国，是殖民体系瓦解的重要条件。"
+  },
+  {
+    "topicId": "cnh_h061",
+    "prerequisiteId": "cnh_j130",
+    "strength": "hard",
+    "reason": "亚非拉国家的新发展的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h061",
+    "prerequisiteId": "cnh_h060",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（下）》的教学顺序，先学「社会主义国家的发展与变化」，再学「世界殖民体系的瓦解与新兴国家的发展」。"
+  },
+  {
+    "topicId": "cnh_h062",
+    "prerequisiteId": "cnh_h058",
+    "strength": "hard",
+    "reason": "多极化趋势出现在冷战结束、两极格局终结之后，要先知道冷战的结束。"
+  },
+  {
+    "topicId": "cnh_h062",
+    "prerequisiteId": "cnh_h059",
+    "strength": "hard",
+    "reason": "欧盟、跨国公司等是战后资本主义国家新变化的延续，要先知道战后资本主义的发展。"
+  },
+  {
+    "topicId": "cnh_h062",
+    "prerequisiteId": "cnh_j131",
+    "strength": "hard",
+    "reason": "联合国与世界贸易组织的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h062",
+    "prerequisiteId": "cnh_j132",
+    "strength": "hard",
+    "reason": "冷战后世界格局的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h062",
+    "prerequisiteId": "cnh_h061",
+    "strength": "soft",
+    "reason": "按统编版高中历史《中外历史纲要（下）》的教学顺序，先学「世界殖民体系的瓦解与新兴国家的发展」，再学「世界多极化与经济全球化」。"
+  },
+  {
+    "topicId": "cnh_h063",
+    "prerequisiteId": "cnh_h062",
+    "strength": "hard",
+    "reason": "和平发展合作共赢是在多极化与经济全球化背景下的主要趋势，要先知道当代世界格局。"
+  },
+  {
+    "topicId": "cnh_h063",
+    "prerequisiteId": "cnh_j133",
+    "strength": "hard",
+    "reason": "不断发展的现代社会的基本史实在初中已学。"
+  },
+  {
+    "topicId": "cnh_h063",
+    "prerequisiteId": "cnh_j086",
+    "strength": "hard",
+    "reason": "构建人类命运共同体与中国特色大国外交，在初中已有基础。"
+  },
+  {
+    "topicId": "cnh_h064",
+    "prerequisiteId": "cnh_h004",
+    "strength": "hard",
+    "reason": "郡县制、皇帝制度和三公九卿是秦统一后创立的，必须先掌握秦朝的建立过程。"
+  },
+  {
+    "topicId": "cnh_h064",
+    "prerequisiteId": "cnh_h063",
+    "strength": "soft",
+    "reason": "按统编版高中历史课序，学完《中外历史纲要（下）》的「和平发展合作共赢的历史潮流」后进入选择性必修1《国家制度与社会治理》的「从分封制到中央集权制度的确立」。"
+  },
+  {
+    "topicId": "cnh_h065",
+    "prerequisiteId": "cnh_h064",
+    "strength": "hard",
+    "reason": "要先理解秦汉中央集权与皇帝制度，才能看清后世制度调整的方向。"
+  },
+  {
+    "topicId": "cnh_h065",
+    "prerequisiteId": "cnh_h011",
+    "strength": "hard",
+    "reason": "三省六部制是隋唐制度创新的核心内容。"
+  },
+  {
+    "topicId": "cnh_h066",
+    "prerequisiteId": "cnh_h040",
+    "strength": "hard",
+    "reason": "雅典民主与罗马共和是古代希腊罗马文明的政治成就，须先了解两地的城邦与国家形态。"
+  },
+  {
+    "topicId": "cnh_h066",
+    "prerequisiteId": "cnh_h065",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「中国古代中央集权与君主专制的发展」，再学「古代希腊罗马的民主与共和」。"
+  },
+  {
+    "topicId": "cnh_h067",
+    "prerequisiteId": "cnh_h048",
+    "strength": "hard",
+    "reason": "英国君主立宪制与美国联邦制都是资产阶级革命的成果。"
+  },
+  {
+    "topicId": "cnh_h067",
+    "prerequisiteId": "cnh_h066",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「古代希腊罗马的民主与共和」，再学「近代西方的代议制与分权制衡」。"
+  },
+  {
+    "topicId": "cnh_h068",
+    "prerequisiteId": "cnh_h032",
+    "strength": "hard",
+    "reason": "当代政治制度建立在新中国成立和政权巩固的基础上。"
+  },
+  {
+    "topicId": "cnh_h068",
+    "prerequisiteId": "cnh_h067",
+    "strength": "soft",
+    "reason": "民国初年的分权设计借鉴了西方代议制的思想。"
+  },
+  {
+    "topicId": "cnh_h069",
+    "prerequisiteId": "cnh_h013",
+    "strength": "hard",
+    "reason": "王安石变法是为解决北宋积贫积弱而推行的。"
+  },
+  {
+    "topicId": "cnh_h069",
+    "prerequisiteId": "cnh_h068",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「中国近代至当代政治制度的演变」，再学「中国历代变法和改革」。"
+  },
+  {
+    "topicId": "cnh_h070",
+    "prerequisiteId": "cnh_h011",
+    "strength": "hard",
+    "reason": "科举制是隋唐制度创新的重要内容。"
+  },
+  {
+    "topicId": "cnh_h070",
+    "prerequisiteId": "cnh_h069",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「中国历代变法和改革」，再学「中国古代官员的选拔与管理」。"
+  },
+  {
+    "topicId": "cnh_h071",
+    "prerequisiteId": "cnh_h067",
+    "strength": "hard",
+    "reason": "文官制度是在议会政治和政党轮替的背景下产生的。"
+  },
+  {
+    "topicId": "cnh_h071",
+    "prerequisiteId": "cnh_h070",
+    "strength": "soft",
+    "reason": "可与中国古代科举制比较考试选官的异同。"
+  },
+  {
+    "topicId": "cnh_h072",
+    "prerequisiteId": "cnh_h070",
+    "strength": "hard",
+    "reason": "只有了解科举制的内容与作用，才能理解废除科举的意义。"
+  },
+  {
+    "topicId": "cnh_h072",
+    "prerequisiteId": "cnh_h071",
+    "strength": "soft",
+    "reason": "近代中国的文官考试制度受西方文官制度影响。"
+  },
+  {
+    "topicId": "cnh_h073",
+    "prerequisiteId": "cnh_h003",
+    "strength": "hard",
+    "reason": "法家与儒家的主张是古代法律和教化的思想来源。"
+  },
+  {
+    "topicId": "cnh_h073",
+    "prerequisiteId": "cnh_h006",
+    "strength": "hard",
+    "reason": "独尊儒术使儒家伦理成为法律与教化的指导思想。"
+  },
+  {
+    "topicId": "cnh_h073",
+    "prerequisiteId": "cnh_h072",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「近代以来中国的官员选拔与管理」，再学「中国古代的法治与教化」。"
+  },
+  {
+    "topicId": "cnh_h074",
+    "prerequisiteId": "cnh_h047",
+    "strength": "hard",
+    "reason": "近代西方法律观念以启蒙思想为理论基础。"
+  },
+  {
+    "topicId": "cnh_h074",
+    "prerequisiteId": "cnh_h073",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「中国古代的法治与教化」，再学「近代西方的法律与教化」。"
+  },
+  {
+    "topicId": "cnh_h075",
+    "prerequisiteId": "cnh_h068",
+    "strength": "hard",
+    "reason": "法治建设以当代政治制度和宪法为基础。"
+  },
+  {
+    "topicId": "cnh_h075",
+    "prerequisiteId": "cnh_h036",
+    "strength": "hard",
+    "reason": "改革开放以来的政治文明建设包含法治建设的主要进展。"
+  },
+  {
+    "topicId": "cnh_h075",
+    "prerequisiteId": "cnh_h074",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「近代西方的法律与教化」，再学「当代中国的法治与精神文明建设」。"
+  },
+  {
+    "topicId": "cnh_h076",
+    "prerequisiteId": "cnh_h017",
+    "strength": "hard",
+    "reason": "清朝前中期形成了多项边疆治理制度。"
+  },
+  {
+    "topicId": "cnh_h076",
+    "prerequisiteId": "cnh_h075",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「当代中国的法治与精神文明建设」，再学「中国古代的民族关系与对外交往」。"
+  },
+  {
+    "topicId": "cnh_h077",
+    "prerequisiteId": "cnh_h049",
+    "strength": "hard",
+    "reason": "法国大革命推动了民族主义和民族国家观念的传播。"
+  },
+  {
+    "topicId": "cnh_h077",
+    "prerequisiteId": "cnh_h076",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「中国古代的民族关系与对外交往」，再学「近代西方民族国家与国际法的发展」。"
+  },
+  {
+    "topicId": "cnh_h078",
+    "prerequisiteId": "cnh_h068",
+    "strength": "hard",
+    "reason": "民族区域自治制度属于当代基本政治制度之一。"
+  },
+  {
+    "topicId": "cnh_h078",
+    "prerequisiteId": "cnh_h077",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「近代西方民族国家与国际法的发展」，再学「当代中国的民族政策」。"
+  },
+  {
+    "topicId": "cnh_h079",
+    "prerequisiteId": "cnh_h032",
+    "strength": "hard",
+    "reason": "新中国初期的外交方针与国家的成立直接相连。"
+  },
+  {
+    "topicId": "cnh_h079",
+    "prerequisiteId": "cnh_h058",
+    "strength": "hard",
+    "reason": "新中国外交活动处在冷战的国际格局之中。"
+  },
+  {
+    "topicId": "cnh_h079",
+    "prerequisiteId": "cnh_h078",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「当代中国的民族政策」，再学「当代中国的外交」。"
+  },
+  {
+    "topicId": "cnh_h080",
+    "prerequisiteId": "cnh_h015",
+    "strength": "hard",
+    "reason": "交子等纸币出现在宋元商品经济繁荣的背景下。"
+  },
+  {
+    "topicId": "cnh_h080",
+    "prerequisiteId": "cnh_h079",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「当代中国的外交」，再学「货币的使用与演变」。"
+  },
+  {
+    "topicId": "cnh_h081",
+    "prerequisiteId": "cnh_h080",
+    "strength": "soft",
+    "reason": "理解货币本位与国际货币体系，需要先了解货币的职能与演变。"
+  },
+  {
+    "topicId": "cnh_h081",
+    "prerequisiteId": "cnh_h057",
+    "strength": "hard",
+    "reason": "布雷顿森林体系是二战后国际秩序建立的一部分。"
+  },
+  {
+    "topicId": "cnh_h082",
+    "prerequisiteId": "cnh_h011",
+    "strength": "hard",
+    "reason": "租庸调制与均田制是隋唐制度的重要内容。"
+  },
+  {
+    "topicId": "cnh_h082",
+    "prerequisiteId": "cnh_h080",
+    "strength": "hard",
+    "reason": "赋役折银以货币尤其是白银的广泛流通为条件。"
+  },
+  {
+    "topicId": "cnh_h082",
+    "prerequisiteId": "cnh_h081",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「世界货币体系的形成」，再学「中国赋税制度的演变」。"
+  },
+  {
+    "topicId": "cnh_h083",
+    "prerequisiteId": "cnh_h016",
+    "strength": "hard",
+    "reason": "黄册与里甲制是明朝初年建立的户籍和基层管理制度。"
+  },
+  {
+    "topicId": "cnh_h083",
+    "prerequisiteId": "cnh_h082",
+    "strength": "soft",
+    "reason": "户籍制度服务于赋役征收，与赋税制度互相依存。"
+  },
+  {
+    "topicId": "cnh_h084",
+    "prerequisiteId": "cnh_h067",
+    "strength": "hard",
+    "reason": "地方自治与近代议会政治和分权思想相联系。"
+  },
+  {
+    "topicId": "cnh_h084",
+    "prerequisiteId": "cnh_h083",
+    "strength": "soft",
+    "reason": "可与中国古代的户籍与基层管理相比较。"
+  },
+  {
+    "topicId": "cnh_h085",
+    "prerequisiteId": "cnh_h059",
+    "strength": "hard",
+    "reason": "福利国家是战后资本主义国家新变化的重要表现。"
+  },
+  {
+    "topicId": "cnh_h085",
+    "prerequisiteId": "cnh_h084",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修1《国家制度与社会治理》的教学顺序，先学「世界主要国家的基层治理」，再学「世界主要国家的社会保障」。"
+  },
+  {
+    "topicId": "cnh_h086",
+    "prerequisiteId": "cnh_j002",
+    "strength": "hard",
+    "reason": "初中讲过原始农业与史前社会，是认识食物生产的直接铺垫。"
+  },
+  {
+    "topicId": "cnh_h086",
+    "prerequisiteId": "cnh_h085",
+    "strength": "soft",
+    "reason": "按统编版高中历史课序，学完选择性必修1《国家制度与社会治理》的「世界主要国家的社会保障」后进入选择性必修2《经济与社会生活》的「从食物采集到食物生产」。"
+  },
+  {
+    "topicId": "cnh_h087",
+    "prerequisiteId": "cnh_h045",
+    "strength": "hard",
+    "reason": "物种大交换以新航路开辟、美洲与旧大陆的联系为前提。"
+  },
+  {
+    "topicId": "cnh_h087",
+    "prerequisiteId": "cnh_h086",
+    "strength": "soft",
+    "reason": "理解作物传播的影响，需要先知道食物生产对社会的基本意义。"
+  },
+  {
+    "topicId": "cnh_h088",
+    "prerequisiteId": "cnh_h050",
+    "strength": "hard",
+    "reason": "化肥、机械和冷藏技术都建立在工业革命以来的技术进步之上。"
+  },
+  {
+    "topicId": "cnh_h088",
+    "prerequisiteId": "cnh_h087",
+    "strength": "soft",
+    "reason": "现代粮食产量的提高是对此前作物交流和品种改良的延续。"
+  },
+  {
+    "topicId": "cnh_h089",
+    "prerequisiteId": "cnh_h002",
+    "strength": "hard",
+    "reason": "铁器和牛耕出现于春秋战国，是当时社会变革的经济基础。"
+  },
+  {
+    "topicId": "cnh_h089",
+    "prerequisiteId": "cnh_h086",
+    "strength": "hard",
+    "reason": "古代生产工具的改进服务于农业生产的发展。"
+  },
+  {
+    "topicId": "cnh_h089",
+    "prerequisiteId": "cnh_h088",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修2《经济与社会生活》的教学顺序，先学「现代食物的生产、储备与食品安全」，再学「古代的生产工具与劳作」。"
+  },
+  {
+    "topicId": "cnh_h090",
+    "prerequisiteId": "cnh_h050",
+    "strength": "hard",
+    "reason": "工业革命的背景、过程与影响是理解技术变革的前提。"
+  },
+  {
+    "topicId": "cnh_h090",
+    "prerequisiteId": "cnh_h089",
+    "strength": "soft",
+    "reason": "与古代工具对比，才能看出机器和新动力带来的变化。"
+  },
+  {
+    "topicId": "cnh_h091",
+    "prerequisiteId": "cnh_h090",
+    "strength": "hard",
+    "reason": "工厂制度是机器与新动力广泛应用的结果。"
+  },
+  {
+    "topicId": "cnh_h092",
+    "prerequisiteId": "cnh_h090",
+    "strength": "hard",
+    "reason": "现代科技进步是工业革命以来技术发展的继续。"
+  },
+  {
+    "topicId": "cnh_h092",
+    "prerequisiteId": "cnh_h091",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修2《经济与社会生活》的教学顺序，先学「工厂制度与劳作方式的变化」，再学「现代科技进步与人类社会发展」。"
+  },
+  {
+    "topicId": "cnh_h093",
+    "prerequisiteId": "cnh_h015",
+    "strength": "hard",
+    "reason": "宋代商业的新变化是理解古代商业贸易转折的关键。"
+  },
+  {
+    "topicId": "cnh_h093",
+    "prerequisiteId": "cnh_h092",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修2《经济与社会生活》的教学顺序，先学「现代科技进步与人类社会发展」，再学「古代的商业贸易」。"
+  },
+  {
+    "topicId": "cnh_h094",
+    "prerequisiteId": "cnh_h046",
+    "strength": "hard",
+    "reason": "世界市场的初步形成是全球联系建立的重要内容。"
+  },
+  {
+    "topicId": "cnh_h094",
+    "prerequisiteId": "cnh_h050",
+    "strength": "hard",
+    "reason": "工业革命使世界市场最终形成。"
+  },
+  {
+    "topicId": "cnh_h094",
+    "prerequisiteId": "cnh_h093",
+    "strength": "soft",
+    "reason": "可与古代区域性贸易相比，认识世界市场的特点。"
+  },
+  {
+    "topicId": "cnh_h095",
+    "prerequisiteId": "cnh_h094",
+    "strength": "hard",
+    "reason": "近代商业制度与消费生活的变化以世界市场的形成为背景。"
+  },
+  {
+    "topicId": "cnh_h096",
+    "prerequisiteId": "cnh_j124",
+    "strength": "hard",
+    "reason": "初中讲过罗斯福新政，是理解国家干预经济的基本史实。"
+  },
+  {
+    "topicId": "cnh_h096",
+    "prerequisiteId": "cnh_h095",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修2《经济与社会生活》的教学顺序，先学「近代商业制度与消费生活的变化」，再学「20世纪以来的经济危机与国家干预」。"
+  },
+  {
+    "topicId": "cnh_h097",
+    "prerequisiteId": "cnh_h062",
+    "strength": "hard",
+    "reason": "经济全球化是当代世界发展的重要趋势。"
+  },
+  {
+    "topicId": "cnh_h097",
+    "prerequisiteId": "cnh_h096",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修2《经济与社会生活》的教学顺序，先学「20世纪以来的经济危机与国家干预」，再学「战后经济全球化与生活方式的变迁」。"
+  },
+  {
+    "topicId": "cnh_h098",
+    "prerequisiteId": "cnh_h093",
+    "strength": "hard",
+    "reason": "古代集镇和城市的兴衰与商业贸易的发展密切相关。"
+  },
+  {
+    "topicId": "cnh_h098",
+    "prerequisiteId": "cnh_h097",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修2《经济与社会生活》的教学顺序，先学「战后经济全球化与生活方式的变迁」，再学「古代的村落、集镇和城市」。"
+  },
+  {
+    "topicId": "cnh_h099",
+    "prerequisiteId": "cnh_h050",
+    "strength": "hard",
+    "reason": "近代城市的兴起是工业革命带来的重要社会后果。"
+  },
+  {
+    "topicId": "cnh_h099",
+    "prerequisiteId": "cnh_h098",
+    "strength": "soft",
+    "reason": "与古代城市对比，才能看出近代工业城市的新变化。"
+  },
+  {
+    "topicId": "cnh_h100",
+    "prerequisiteId": "cnh_h099",
+    "strength": "hard",
+    "reason": "现代城市化是近代城市兴起的延续，必须先了解近代城市的形成。"
+  },
+  {
+    "topicId": "cnh_h101",
+    "prerequisiteId": "cnh_h050",
+    "strength": "hard",
+    "reason": "铁路和轮船的发明来自工业革命的技术成就。"
+  },
+  {
+    "topicId": "cnh_h101",
+    "prerequisiteId": "cnh_h009",
+    "strength": "hard",
+    "reason": "隋朝大运河的开通与隋唐统一国家的建设联系紧密。"
+  },
+  {
+    "topicId": "cnh_h101",
+    "prerequisiteId": "cnh_h100",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修2《经济与社会生活》的教学顺序，先学「现代城市化进程与城市问题」，再学「水陆交通的变迁」。"
+  },
+  {
+    "topicId": "cnh_h102",
+    "prerequisiteId": "cnh_h101",
+    "strength": "hard",
+    "reason": "现代交通是在近代铁路和轮船基础上的进一步发展。"
+  },
+  {
+    "topicId": "cnh_h103",
+    "prerequisiteId": "cnh_h042",
+    "strength": "hard",
+    "reason": "黑死病发生在中世纪后期的欧洲，是理解疫病影响的重要背景。"
+  },
+  {
+    "topicId": "cnh_h103",
+    "prerequisiteId": "cnh_h102",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修2《经济与社会生活》的教学顺序，先学「现代交通运输的新变化」，再学「历史上的疫病与医学成就」。"
+  },
+  {
+    "topicId": "cnh_h104",
+    "prerequisiteId": "cnh_h103",
+    "strength": "hard",
+    "reason": "现代医疗卫生体系是应对历史上疫病的成果，须先了解疫病与医学成就。"
+  },
+  {
+    "topicId": "cnh_h105",
+    "prerequisiteId": "cnh_h003",
+    "strength": "hard",
+    "reason": "诸子百家学说奠定了中华文化的思想基础。"
+  },
+  {
+    "topicId": "cnh_h105",
+    "prerequisiteId": "cnh_h104",
+    "strength": "soft",
+    "reason": "按统编版高中历史课序，学完选择性必修2《经济与社会生活》的「现代医疗卫生体系与社会生活」后进入选择性必修3《文化交流与传播》的「中华优秀传统文化的内涵与特点」。"
+  },
+  {
+    "topicId": "cnh_h106",
+    "prerequisiteId": "cnh_h105",
+    "strength": "hard",
+    "reason": "只有先了解中华文化的内涵，才能理解它的世界意义。"
+  },
+  {
+    "topicId": "cnh_h106",
+    "prerequisiteId": "cnh_h015",
+    "strength": "hard",
+    "reason": "四大发明在宋元时期的发展成熟与西传是重要内容。"
+  },
+  {
+    "topicId": "cnh_h107",
+    "prerequisiteId": "cnh_h039",
+    "strength": "hard",
+    "reason": "古代两河流域与埃及是东方文明的代表。"
+  },
+  {
+    "topicId": "cnh_h107",
+    "prerequisiteId": "cnh_h043",
+    "strength": "hard",
+    "reason": "阿拉伯文化形成于中古时期亚洲的变化之中。"
+  },
+  {
+    "topicId": "cnh_h107",
+    "prerequisiteId": "cnh_h106",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修3《文化交流与传播》的教学顺序，先学「中华文化的世界意义」，再学「古代西亚、非洲文化」。"
+  },
+  {
+    "topicId": "cnh_h108",
+    "prerequisiteId": "cnh_h047",
+    "strength": "hard",
+    "reason": "文艺复兴、宗教改革和启蒙运动是近代欧洲文化的主干。"
+  },
+  {
+    "topicId": "cnh_h108",
+    "prerequisiteId": "cnh_h107",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修3《文化交流与传播》的教学顺序，先学「古代西亚、非洲文化」，再学「欧洲文化的形成」。"
+  },
+  {
+    "topicId": "cnh_h109",
+    "prerequisiteId": "cnh_h039",
+    "strength": "hard",
+    "reason": "古印度是古代东方文明之一，是认识南亚文化的起点。"
+  },
+  {
+    "topicId": "cnh_h109",
+    "prerequisiteId": "cnh_h108",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修3《文化交流与传播》的教学顺序，先学「欧洲文化的形成」，再学「南亚与东亚的文化」。"
+  },
+  {
+    "topicId": "cnh_h110",
+    "prerequisiteId": "cnh_h044",
+    "strength": "hard",
+    "reason": "古代美洲文明是此前对美洲历史的学习内容。"
+  },
+  {
+    "topicId": "cnh_h110",
+    "prerequisiteId": "cnh_h109",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修3《文化交流与传播》的教学顺序，先学「南亚与东亚的文化」，再学「古代美洲的文化」。"
+  },
+  {
+    "topicId": "cnh_h111",
+    "prerequisiteId": "cnh_h008",
+    "strength": "hard",
+    "reason": "魏晋南北朝的民族交融是古代人口迁徙的典型。"
+  },
+  {
+    "topicId": "cnh_h111",
+    "prerequisiteId": "cnh_h042",
+    "strength": "hard",
+    "reason": "日耳曼人迁徙与西欧封建社会的形成有直接联系。"
+  },
+  {
+    "topicId": "cnh_h111",
+    "prerequisiteId": "cnh_h110",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修3《文化交流与传播》的教学顺序，先学「古代美洲的文化」，再学「古代人类的迁徙和区域文化的形成」。"
+  },
+  {
+    "topicId": "cnh_h112",
+    "prerequisiteId": "cnh_h052",
+    "strength": "hard",
+    "reason": "近代殖民活动与人口转移是资本主义世界殖民体系形成的一部分。"
+  },
+  {
+    "topicId": "cnh_h112",
+    "prerequisiteId": "cnh_h111",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修3《文化交流与传播》的教学顺序，先学「古代人类的迁徙和区域文化的形成」，再学「近代殖民活动和人口的跨地域转移」。"
+  },
+  {
+    "topicId": "cnh_h113",
+    "prerequisiteId": "cnh_h112",
+    "strength": "hard",
+    "reason": "现代移民社会的形成是近代人口迁移的延续。"
+  },
+  {
+    "topicId": "cnh_h114",
+    "prerequisiteId": "cnh_h006",
+    "strength": "hard",
+    "reason": "张骞通西域是丝绸之路开通的起点。"
+  },
+  {
+    "topicId": "cnh_h114",
+    "prerequisiteId": "cnh_h113",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修3《文化交流与传播》的教学顺序，先学「现代社会的移民和多元文化」，再学「古代的商路、贸易与文化交流」。"
+  },
+  {
+    "topicId": "cnh_h115",
+    "prerequisiteId": "cnh_h114",
+    "strength": "hard",
+    "reason": "近代的世界贸易是古代商路和海路交流的扩展。"
+  },
+  {
+    "topicId": "cnh_h115",
+    "prerequisiteId": "cnh_h094",
+    "strength": "hard",
+    "reason": "世界市场的形成是近代文化交流扩展的经济背景。"
+  },
+  {
+    "topicId": "cnh_h116",
+    "prerequisiteId": "cnh_h041",
+    "strength": "hard",
+    "reason": "亚历山大帝国等古代帝国的扩张是战争与文化交锋的背景。"
+  },
+  {
+    "topicId": "cnh_h116",
+    "prerequisiteId": "cnh_h042",
+    "strength": "hard",
+    "reason": "十字军东征与中世纪欧洲基督教世界的扩张相联系。"
+  },
+  {
+    "topicId": "cnh_h116",
+    "prerequisiteId": "cnh_h115",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修3《文化交流与传播》的教学顺序，先学「近代以来的世界贸易与文化交流的扩展」，再学「古代战争与地域文化的演变」。"
+  },
+  {
+    "topicId": "cnh_h117",
+    "prerequisiteId": "cnh_h052",
+    "strength": "hard",
+    "reason": "西方文化的扩张与资本主义世界殖民体系的形成同步。"
+  },
+  {
+    "topicId": "cnh_h117",
+    "prerequisiteId": "cnh_h116",
+    "strength": "soft",
+    "reason": "可与古代战争引发的文化交流相比较。"
+  },
+  {
+    "topicId": "cnh_h118",
+    "prerequisiteId": "cnh_h057",
+    "strength": "hard",
+    "reason": "战后国际文化合作机构是在二战后国际秩序重建中成立的。"
+  },
+  {
+    "topicId": "cnh_h118",
+    "prerequisiteId": "cnh_h117",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修3《文化交流与传播》的教学顺序，先学「近代战争与西方文化的扩张」，再学「现代战争与不同文化的碰撞和交流」。"
+  },
+  {
+    "topicId": "cnh_h119",
+    "prerequisiteId": "cnh_h015",
+    "strength": "hard",
+    "reason": "活字印刷术的发明属于宋元科技成就。"
+  },
+  {
+    "topicId": "cnh_h119",
+    "prerequisiteId": "cnh_h118",
+    "strength": "soft",
+    "reason": "按统编版高中历史选择性必修3《文化交流与传播》的教学顺序，先学「现代战争与不同文化的碰撞和交流」，再学「文化传承的多种载体及其发展」。"
+  },
+  {
+    "topicId": "cnh_h120",
+    "prerequisiteId": "cnh_h119",
+    "strength": "hard",
+    "reason": "文化遗产是文化传承载体的重要组成部分。"
+  },
+  {
+    "topicId": "cnb_h001",
+    "prerequisiteId": "cnb_j005",
+    "strength": "hard",
+    "reason": "理解动物也由细胞构成这一结论，要先知道动物细胞有哪些结构。"
+  },
+  {
+    "topicId": "cnb_h002",
+    "prerequisiteId": "cnb_h001",
+    "strength": "hard",
+    "reason": "把细胞看作最基本的生命系统，是从细胞学说关于细胞是生命活动基本单位的认识得来的。"
+  },
+  {
+    "topicId": "cnb_h002",
+    "prerequisiteId": "cnb_j008",
+    "strength": "hard",
+    "reason": "生命系统的细胞、组织、器官、系统、个体这几个层次，在动物体的结构层次中已经学过。"
+  },
+  {
+    "topicId": "cnb_h002",
+    "prerequisiteId": "cnb_j009",
+    "strength": "hard",
+    "reason": "植物体没有系统层次，要先知道植物体由细胞、组织、器官构成。"
+  },
+  {
+    "topicId": "cnb_h002",
+    "prerequisiteId": "cnb_j050",
+    "strength": "soft",
+    "reason": "种群、群落和生态系统层次的划分，建立在对生态系统概念的初步认识上。"
+  },
+  {
+    "topicId": "cnb_h003",
+    "prerequisiteId": "cnb_j018",
+    "strength": "hard",
+    "reason": "原核细胞以细菌为代表，要先知道细菌没有成形的细胞核等基本结构特点。"
+  },
+  {
+    "topicId": "cnb_h003",
+    "prerequisiteId": "cnb_j004",
+    "strength": "hard",
+    "reason": "与原核细胞对比，需要先知道植物细胞（真核细胞）有细胞核、叶绿体等结构。"
+  },
+  {
+    "topicId": "cnb_h003",
+    "prerequisiteId": "cnb_h002",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修1《分子与细胞》的教学顺序，先学「生命系统的结构层次」，再学「原核细胞与真核细胞的多样性和统一性」。"
+  },
+  {
+    "topicId": "cnb_h004",
+    "prerequisiteId": "cnb_h003",
+    "strength": "soft",
+    "reason": "了解各种细胞的组成，要先知道细胞的基本结构类型。"
+  },
+  {
+    "topicId": "cnb_h005",
+    "prerequisiteId": "cnb_h004",
+    "strength": "hard",
+    "reason": "这些实验检测的是细胞中的糖类、脂肪和蛋白质，要先知道细胞中有这些化合物。"
+  },
+  {
+    "topicId": "cnb_h006",
+    "prerequisiteId": "cnb_h004",
+    "strength": "hard",
+    "reason": "水和无机盐是细胞中含量最多的化合物和主要的无机物，要先掌握细胞的元素与化合物组成。"
+  },
+  {
+    "topicId": "cnb_h006",
+    "prerequisiteId": "cnb_h005",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修1《分子与细胞》的教学顺序，先学「检测生物组织中的糖类、脂肪和蛋白质」，再学「细胞中的水和无机盐」。"
+  },
+  {
+    "topicId": "cnb_h007",
+    "prerequisiteId": "cnb_h004",
+    "strength": "hard",
+    "reason": "糖类由 C、H、O 三种元素组成，要先知道细胞中的元素和化合物。"
+  },
+  {
+    "topicId": "cnb_h007",
+    "prerequisiteId": "cnb_h006",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修1《分子与细胞》的教学顺序，先学「细胞中的水和无机盐」，再学「细胞中的糖类」。"
+  },
+  {
+    "topicId": "cnb_h008",
+    "prerequisiteId": "cnb_h007",
+    "strength": "hard",
+    "reason": "比较脂肪与糖类的储能和转化，要先掌握糖类的种类与功能。"
+  },
+  {
+    "topicId": "cnb_h009",
+    "prerequisiteId": "cnb_h004",
+    "strength": "hard",
+    "reason": "蛋白质主要由 C、H、O、N 组成，氨基酸含 N，要先知道细胞的元素组成。"
+  },
+  {
+    "topicId": "cnb_h009",
+    "prerequisiteId": "cnb_h008",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修1《分子与细胞》的教学顺序，先学「细胞中的脂质」，再学「氨基酸与蛋白质的形成」。"
+  },
+  {
+    "topicId": "cnb_h010",
+    "prerequisiteId": "cnb_h009",
+    "strength": "hard",
+    "reason": "蛋白质是由氨基酸脱水缩合而成的，要先掌握氨基酸与肽链的形成。"
+  },
+  {
+    "topicId": "cnb_h011",
+    "prerequisiteId": "cnb_h009",
+    "strength": "hard",
+    "reason": "生物大分子由单体脱水缩合成多聚体，是从氨基酸形成蛋白质的过程延伸而来的。"
+  },
+  {
+    "topicId": "cnb_h011",
+    "prerequisiteId": "cnb_h007",
+    "strength": "hard",
+    "reason": "核酸中的核糖和脱氧核糖是五碳糖，需要先认识单糖。"
+  },
+  {
+    "topicId": "cnb_h011",
+    "prerequisiteId": "cnb_j056",
+    "strength": "soft",
+    "reason": "初中已知道基因控制性状、基因位于 DNA 上，是认识核酸功能的起点。"
+  },
+  {
+    "topicId": "cnb_h011",
+    "prerequisiteId": "cnb_h010",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修1《分子与细胞》的教学顺序，先学「蛋白质的结构多样性与功能」，再学「核酸的组成与功能和生物大分子」。"
+  },
+  {
+    "topicId": "cnb_h012",
+    "prerequisiteId": "cnb_h008",
+    "strength": "hard",
+    "reason": "磷脂双分子层的形成，要先知道磷脂分子亲水头部、疏水尾部的特点。"
+  },
+  {
+    "topicId": "cnb_h012",
+    "prerequisiteId": "cnb_h010",
+    "strength": "hard",
+    "reason": "膜上的蛋白质有多种功能，需要先了解蛋白质的结构与功能。"
+  },
+  {
+    "topicId": "cnb_h012",
+    "prerequisiteId": "cnb_h011",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修1《分子与细胞》的教学顺序，先学「核酸的组成与功能和生物大分子」，再学「细胞膜的结构」。"
+  },
+  {
+    "topicId": "cnb_h013",
+    "prerequisiteId": "cnb_h012",
+    "strength": "hard",
+    "reason": "细胞膜的功能是由它的结构（磷脂双分子层和膜蛋白）决定的，要先学结构。"
+  },
+  {
+    "topicId": "cnb_h014",
+    "prerequisiteId": "cnb_h003",
+    "strength": "hard",
+    "reason": "细胞器是真核细胞的结构，要先区分原核与真核细胞，才知道哪些细胞才有这些细胞器。"
+  },
+  {
+    "topicId": "cnb_h014",
+    "prerequisiteId": "cnb_h012",
+    "strength": "hard",
+    "reason": "细胞器的膜结构以磷脂双分子层为基础，要先学细胞膜的结构。"
+  },
+  {
+    "topicId": "cnb_h014",
+    "prerequisiteId": "cnb_j006",
+    "strength": "hard",
+    "reason": "初中已学过叶绿体和线粒体是细胞中的能量转换器，是学习各细胞器的起点。"
+  },
+  {
+    "topicId": "cnb_h014",
+    "prerequisiteId": "cnb_h013",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修1《分子与细胞》的教学顺序，先学「细胞膜的功能」，再学「细胞器的结构与功能」。"
+  },
+  {
+    "topicId": "cnb_h015",
+    "prerequisiteId": "cnb_h014",
+    "strength": "hard",
+    "reason": "分泌蛋白的合成与运输涉及核糖体、内质网、高尔基体和线粒体，要先知道各细胞器的功能。"
+  },
+  {
+    "topicId": "cnb_h016",
+    "prerequisiteId": "cnb_h011",
+    "strength": "hard",
+    "reason": "染色质的主要成分之一是 DNA，细胞核储存遗传信息，要先知道核酸的功能。"
+  },
+  {
+    "topicId": "cnb_h016",
+    "prerequisiteId": "cnb_h015",
+    "strength": "soft",
+    "reason": "核膜与内质网膜相连，是生物膜系统的一部分。"
+  },
+  {
+    "topicId": "cnb_h016",
+    "prerequisiteId": "cnb_j057",
+    "strength": "soft",
+    "reason": "初中已知道染色体由 DNA 和蛋白质组成、基因在染色体上，是认识染色质的基础。"
+  },
+  {
+    "topicId": "cnb_h017",
+    "prerequisiteId": "cnb_h013",
+    "strength": "hard",
+    "reason": "细胞膜控制物质进出，是细胞吸水、失水的结构基础。"
+  },
+  {
+    "topicId": "cnb_h017",
+    "prerequisiteId": "cnb_j004",
+    "strength": "hard",
+    "reason": "质壁分离涉及细胞壁和液泡，要先认识植物细胞的结构。"
+  },
+  {
+    "topicId": "cnb_h017",
+    "prerequisiteId": "cnb_h016",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修1《分子与细胞》的教学顺序，先学「细胞核的结构和功能」，再学「水进出细胞的原理」。"
+  },
+  {
+    "topicId": "cnb_h018",
+    "prerequisiteId": "cnb_h017",
+    "strength": "hard",
+    "reason": "水的跨膜运输是被动运输的典型例子，要先掌握渗透作用。"
+  },
+  {
+    "topicId": "cnb_h019",
+    "prerequisiteId": "cnb_h018",
+    "strength": "hard",
+    "reason": "主动运输要与被动运输对比，才能理解逆浓度梯度和耗能的特点。"
+  },
+  {
+    "topicId": "cnb_h020",
+    "prerequisiteId": "cnb_h015",
+    "strength": "hard",
+    "reason": "胞吐释放分泌蛋白涉及囊泡与细胞膜融合，要先学分泌蛋白的运输。"
+  },
+  {
+    "topicId": "cnb_h020",
+    "prerequisiteId": "cnb_h019",
+    "strength": "soft",
+    "reason": "对比主动运输，才能理解胞吞胞吐不需要转运蛋白但同样耗能。"
+  },
+  {
+    "topicId": "cnb_h021",
+    "prerequisiteId": "cnb_h010",
+    "strength": "hard",
+    "reason": "绝大多数酶是蛋白质，要先知道蛋白质的结构与功能，才能理解酶的性质。"
+  },
+  {
+    "topicId": "cnb_h021",
+    "prerequisiteId": "cnb_h020",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修1《分子与细胞》的教学顺序，先学「胞吞与胞吐」，再学「酶的作用和本质」。"
+  },
+  {
+    "topicId": "cnb_h022",
+    "prerequisiteId": "cnb_h021",
+    "strength": "hard",
+    "reason": "酶的特性是在认识酶的本质和作用的基础上进一步学习的。"
+  },
+  {
+    "topicId": "cnb_h023",
+    "prerequisiteId": "cnb_h022",
+    "strength": "hard",
+    "reason": "酶的作用条件较温和，是酶特性的延伸，要先学酶的特性。"
+  },
+  {
+    "topicId": "cnb_h024",
+    "prerequisiteId": "cnb_h023",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修1《分子与细胞》的教学顺序，先学「影响酶活性的条件」，再学「ATP的结构与能量供应」。"
+  },
+  {
+    "topicId": "cnb_h025",
+    "prerequisiteId": "cnb_j028",
+    "strength": "hard",
+    "reason": "初中已知道呼吸作用消耗氧气、产生二氧化碳，是设计本实验的基础。"
+  },
+  {
+    "topicId": "cnb_h025",
+    "prerequisiteId": "cnb_h024",
+    "strength": "soft",
+    "reason": "探究呼吸方式，目的是认识细胞怎样分解有机物、释放能量并生成 ATP。"
+  },
+  {
+    "topicId": "cnb_h026",
+    "prerequisiteId": "cnb_h025",
+    "strength": "hard",
+    "reason": "有氧呼吸的概念来自对酵母菌呼吸方式的探究，要先知道有氧条件下的产物。"
+  },
+  {
+    "topicId": "cnb_h026",
+    "prerequisiteId": "cnb_h014",
+    "strength": "hard",
+    "reason": "第二、三阶段发生在线粒体中，要先知道线粒体的结构和功能。"
+  },
+  {
+    "topicId": "cnb_h026",
+    "prerequisiteId": "cnb_h024",
+    "strength": "hard",
+    "reason": "有氧呼吸释放的能量一部分用于合成 ATP，要先知道 ATP 的作用。"
+  },
+  {
+    "topicId": "cnb_h027",
+    "prerequisiteId": "cnb_h026",
+    "strength": "hard",
+    "reason": "无氧呼吸第一阶段与有氧呼吸相同，要先掌握有氧呼吸的过程。"
+  },
+  {
+    "topicId": "cnb_h028",
+    "prerequisiteId": "cnb_h014",
+    "strength": "hard",
+    "reason": "色素分布在叶绿体中，要先知道叶绿体的结构。"
+  },
+  {
+    "topicId": "cnb_h028",
+    "prerequisiteId": "cnb_j027",
+    "strength": "hard",
+    "reason": "初中已知道叶片的绿色与光合作用有关，叶绿素是光合作用的关键色素。"
+  },
+  {
+    "topicId": "cnb_h028",
+    "prerequisiteId": "cnb_h027",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修1《分子与细胞》的教学顺序，先学「无氧呼吸及细胞呼吸原理的应用」，再学「绿叶中色素的提取和分离」。"
+  },
+  {
+    "topicId": "cnb_h029",
+    "prerequisiteId": "cnb_h028",
+    "strength": "hard",
+    "reason": "光反应从色素吸收光能开始，要先知道叶绿体中色素的种类和作用。"
+  },
+  {
+    "topicId": "cnb_h029",
+    "prerequisiteId": "cnb_h024",
+    "strength": "hard",
+    "reason": "光反应合成 ATP，暗反应消耗 ATP，要先知道 ATP 的作用。"
+  },
+  {
+    "topicId": "cnb_h030",
+    "prerequisiteId": "cnb_h029",
+    "strength": "hard",
+    "reason": "分析影响因素，要先掌握光反应、暗反应各需要哪些条件。"
+  },
+  {
+    "topicId": "cnb_h030",
+    "prerequisiteId": "cnb_h026",
+    "strength": "hard",
+    "reason": "净光合速率要扣除呼吸作用消耗，需要掌握呼吸作用的物质变化。"
+  },
+  {
+    "topicId": "cnb_h031",
+    "prerequisiteId": "cnb_j007",
+    "strength": "hard",
+    "reason": "初中已学过细胞通过分裂产生新细胞，是理解细胞周期的起点。"
+  },
+  {
+    "topicId": "cnb_h031",
+    "prerequisiteId": "cnb_h016",
+    "strength": "hard",
+    "reason": "细胞核控制范围有限，间期 DNA 在细胞核中复制，要先学细胞核的结构和功能。"
+  },
+  {
+    "topicId": "cnb_h031",
+    "prerequisiteId": "cnb_h030",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修1《分子与细胞》的教学顺序，先学「影响光合作用的因素及其应用」，再学「细胞不能无限长大与细胞周期」。"
+  },
+  {
+    "topicId": "cnb_h032",
+    "prerequisiteId": "cnb_h031",
+    "strength": "hard",
+    "reason": "有丝分裂是细胞周期中分裂期的主要内容，要先知道细胞周期。"
+  },
+  {
+    "topicId": "cnb_h033",
+    "prerequisiteId": "cnb_h032",
+    "strength": "hard",
+    "reason": "分化的细胞来自细胞增殖，要先学有丝分裂才能区分增殖与分化。"
+  },
+  {
+    "topicId": "cnb_h033",
+    "prerequisiteId": "cnb_j008",
+    "strength": "hard",
+    "reason": "动物体的组织是细胞分化形成的，初中已学过细胞、组织、器官的结构层次。"
+  },
+  {
+    "topicId": "cnb_h034",
+    "prerequisiteId": "cnb_h016",
+    "strength": "hard",
+    "reason": "衰老细胞的核体积增大、染色质收缩，端粒位于染色体两端，要先学细胞核与染色体。"
+  },
+  {
+    "topicId": "cnb_h034",
+    "prerequisiteId": "cnb_h033",
+    "strength": "soft",
+    "reason": "细胞分化后细胞走向衰老，要先学细胞的分化。"
+  },
+  {
+    "topicId": "cnb_h035",
+    "prerequisiteId": "cnb_h034",
+    "strength": "hard",
+    "reason": "细胞凋亡与衰老、死亡是细胞生命历程的连续阶段，要先学细胞的衰老。"
+  },
+  {
+    "topicId": "cnb_h036",
+    "prerequisiteId": "cnb_j058",
+    "strength": "hard",
+    "reason": "孟德尔实验中的显性性状、隐性性状，初中已经学过基因的显性和隐性。"
+  },
+  {
+    "topicId": "cnb_h036",
+    "prerequisiteId": "cnb_h035",
+    "strength": "soft",
+    "reason": "按人教版高中生物课序，学完必修1《分子与细胞》的「细胞的死亡」后进入必修2《遗传与进化》的「一对相对性状的杂交实验」。"
+  },
+  {
+    "topicId": "cnb_h037",
+    "prerequisiteId": "cnb_h036",
+    "strength": "hard",
+    "reason": "分离定律是对一对相对性状杂交结果的解释，要先知道杂交实验的现象。"
+  },
+  {
+    "topicId": "cnb_h038",
+    "prerequisiteId": "cnb_h037",
+    "strength": "hard",
+    "reason": "F2 中每一对性状仍遵循分离定律，要先掌握分离定律。"
+  },
+  {
+    "topicId": "cnb_h039",
+    "prerequisiteId": "cnb_h038",
+    "strength": "hard",
+    "reason": "自由组合定律是对 9∶3∶3∶1 实验结果的概括，要先掌握两对相对性状的杂交实验。"
+  },
+  {
+    "topicId": "cnb_h040",
+    "prerequisiteId": "cnb_h032",
+    "strength": "hard",
+    "reason": "减数分裂与有丝分裂有很多相似环节，对比学习要先掌握有丝分裂过程。"
+  },
+  {
+    "topicId": "cnb_h040",
+    "prerequisiteId": "cnb_h039",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修2《遗传与进化》的教学顺序，先学「自由组合定律及其应用」，再学「减数分裂的过程」。"
+  },
+  {
+    "topicId": "cnb_h041",
+    "prerequisiteId": "cnb_h040",
+    "strength": "hard",
+    "reason": "配子的形成就是减数分裂的具体过程，要先掌握减数分裂各时期的变化。"
+  },
+  {
+    "topicId": "cnb_h041",
+    "prerequisiteId": "cnb_j055",
+    "strength": "hard",
+    "reason": "受精过程在初中已学过有性生殖，是理解受精作用的基础。"
+  },
+  {
+    "topicId": "cnb_h042",
+    "prerequisiteId": "cnb_h037",
+    "strength": "hard",
+    "reason": "基因在染色体上的证据要对应分离定律中成对遗传因子的行为。"
+  },
+  {
+    "topicId": "cnb_h042",
+    "prerequisiteId": "cnb_h040",
+    "strength": "hard",
+    "reason": "基因与染色体的平行关系体现在减数分裂中染色体的行为，要先掌握减数分裂。"
+  },
+  {
+    "topicId": "cnb_h042",
+    "prerequisiteId": "cnb_h041",
+    "strength": "soft",
+    "reason": "平行关系中“一个来自父方、一个来自母方”要依据受精作用。"
+  },
+  {
+    "topicId": "cnb_h043",
+    "prerequisiteId": "cnb_h042",
+    "strength": "hard",
+    "reason": "伴性遗传是基因位于性染色体上的情形，要先知道基因在染色体上的证据。"
+  },
+  {
+    "topicId": "cnb_h043",
+    "prerequisiteId": "cnb_j059",
+    "strength": "hard",
+    "reason": "伴性遗传与性别相关联，要先知道人的性别决定方式（XY 型）。"
+  },
+  {
+    "topicId": "cnb_h044",
+    "prerequisiteId": "cnb_h011",
+    "strength": "hard",
+    "reason": "实验的结论是 DNA 而不是蛋白质，要先知道核酸与蛋白质的组成差别。"
+  },
+  {
+    "topicId": "cnb_h044",
+    "prerequisiteId": "cnb_h043",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修2《遗传与进化》的教学顺序，先学「伴性遗传」，再学「肺炎链球菌的转化实验」。"
+  },
+  {
+    "topicId": "cnb_h045",
+    "prerequisiteId": "cnb_h044",
+    "strength": "hard",
+    "reason": "噬菌体实验与肺炎链球菌转化实验目的相同、方法互补，要先知道转化实验的结论。"
+  },
+  {
+    "topicId": "cnb_h045",
+    "prerequisiteId": "cnb_j020",
+    "strength": "hard",
+    "reason": "实验材料噬菌体是病毒，要先知道病毒没有细胞结构，只能寄生在活细胞内。"
+  },
+  {
+    "topicId": "cnb_h046",
+    "prerequisiteId": "cnb_h011",
+    "strength": "hard",
+    "reason": "DNA 是由脱氧核苷酸连接成的长链，要先知道核酸的基本单位和组成。"
+  },
+  {
+    "topicId": "cnb_h046",
+    "prerequisiteId": "cnb_h045",
+    "strength": "soft",
+    "reason": "DNA 是遗传物质，才有必要进一步研究它的结构。"
+  },
+  {
+    "topicId": "cnb_h047",
+    "prerequisiteId": "cnb_h046",
+    "strength": "hard",
+    "reason": "复制以 DNA 的两条链为模板，靠碱基互补配对，要先掌握 DNA 的双螺旋结构。"
+  },
+  {
+    "topicId": "cnb_h047",
+    "prerequisiteId": "cnb_h031",
+    "strength": "hard",
+    "reason": "DNA 复制发生在细胞周期的间期，要先知道细胞周期。"
+  },
+  {
+    "topicId": "cnb_h048",
+    "prerequisiteId": "cnb_h046",
+    "strength": "hard",
+    "reason": "基因是 DNA 片段，要先知道 DNA 的结构与碱基排列。"
+  },
+  {
+    "topicId": "cnb_h048",
+    "prerequisiteId": "cnb_h042",
+    "strength": "hard",
+    "reason": "基因、DNA、染色体三者关系的梳理，建立在基因在染色体上的基础上。"
+  },
+  {
+    "topicId": "cnb_h048",
+    "prerequisiteId": "cnb_h047",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修2《遗传与进化》的教学顺序，先学「DNA的复制」，再学「基因通常是有遗传效应的DNA片段」。"
+  },
+  {
+    "topicId": "cnb_h049",
+    "prerequisiteId": "cnb_h048",
+    "strength": "hard",
+    "reason": "转录是以基因（DNA 片段）的一条链为模板，要先知道基因与 DNA 的关系。"
+  },
+  {
+    "topicId": "cnb_h050",
+    "prerequisiteId": "cnb_h049",
+    "strength": "hard",
+    "reason": "翻译以转录得到的 mRNA 为模板，要先掌握转录。"
+  },
+  {
+    "topicId": "cnb_h050",
+    "prerequisiteId": "cnb_h014",
+    "strength": "hard",
+    "reason": "翻译在核糖体上进行，要先知道核糖体的功能。"
+  },
+  {
+    "topicId": "cnb_h051",
+    "prerequisiteId": "cnb_h050",
+    "strength": "hard",
+    "reason": "中心法则把复制、转录、翻译三个过程联系在一起，要先掌握翻译。"
+  },
+  {
+    "topicId": "cnb_h051",
+    "prerequisiteId": "cnb_h047",
+    "strength": "hard",
+    "reason": "中心法则中有 DNA→DNA 的流向，要先掌握 DNA 复制。"
+  },
+  {
+    "topicId": "cnb_h052",
+    "prerequisiteId": "cnb_h051",
+    "strength": "hard",
+    "reason": "基因控制性状要通过表达形成蛋白质，要先掌握遗传信息的流动。"
+  },
+  {
+    "topicId": "cnb_h053",
+    "prerequisiteId": "cnb_h052",
+    "strength": "hard",
+    "reason": "表观遗传是基因表达影响性状的特殊情形，要先知道基因与性状的关系。"
+  },
+  {
+    "topicId": "cnb_h054",
+    "prerequisiteId": "cnb_h047",
+    "strength": "hard",
+    "reason": "基因突变常发生在 DNA 复制时，要先掌握 DNA 复制。"
+  },
+  {
+    "topicId": "cnb_h054",
+    "prerequisiteId": "cnb_j060",
+    "strength": "hard",
+    "reason": "初中已学过生物的变异，基因突变是可遗传变异的一种。"
+  },
+  {
+    "topicId": "cnb_h054",
+    "prerequisiteId": "cnb_h053",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修2《遗传与进化》的教学顺序，先学「表观遗传」，再学「基因突变」。"
+  },
+  {
+    "topicId": "cnb_h055",
+    "prerequisiteId": "cnb_h039",
+    "strength": "hard",
+    "reason": "基因重组的一种类型就是非同源染色体上非等位基因的自由组合。"
+  },
+  {
+    "topicId": "cnb_h055",
+    "prerequisiteId": "cnb_h040",
+    "strength": "hard",
+    "reason": "基因重组发生在减数分裂过程中，要先掌握减数分裂各时期的特点。"
+  },
+  {
+    "topicId": "cnb_h055",
+    "prerequisiteId": "cnb_h054",
+    "strength": "soft",
+    "reason": "基因重组与基因突变对比学习，更容易分清二者的区别。"
+  },
+  {
+    "topicId": "cnb_h056",
+    "prerequisiteId": "cnb_h055",
+    "strength": "hard",
+    "reason": "对比交叉互换（基因重组）与易位（染色体变异）要先掌握基因重组。"
+  },
+  {
+    "topicId": "cnb_h056",
+    "prerequisiteId": "cnb_h042",
+    "strength": "hard",
+    "reason": "染色体结构变异使基因的数目或排列顺序改变，要先知道基因在染色体上呈线性排列。"
+  },
+  {
+    "topicId": "cnb_h057",
+    "prerequisiteId": "cnb_h040",
+    "strength": "hard",
+    "reason": "多倍体、单倍体的染色体数与配子形成有关，三倍体不育也要用减数分裂联会来解释。"
+  },
+  {
+    "topicId": "cnb_h057",
+    "prerequisiteId": "cnb_h056",
+    "strength": "soft",
+    "reason": "染色体变异包括结构变异和数目变异，前者先学可以对比。"
+  },
+  {
+    "topicId": "cnb_h058",
+    "prerequisiteId": "cnb_h057",
+    "strength": "hard",
+    "reason": "染色体异常遗传病是染色体数目或结构变异的结果，要先学染色体变异。"
+  },
+  {
+    "topicId": "cnb_h058",
+    "prerequisiteId": "cnb_h037",
+    "strength": "hard",
+    "reason": "单基因遗传病的发病概率计算依据分离定律。"
+  },
+  {
+    "topicId": "cnb_h059",
+    "prerequisiteId": "cnb_h058",
+    "strength": "hard",
+    "reason": "监测和预防要对应不同类型遗传病的特点，要先知道遗传病的类型。"
+  },
+  {
+    "topicId": "cnb_h060",
+    "prerequisiteId": "cnb_j062",
+    "strength": "hard",
+    "reason": "化石是证明生物进化的直接证据，初中已学过生物进化的历程。"
+  },
+  {
+    "topicId": "cnb_h060",
+    "prerequisiteId": "cnb_h059",
+    "strength": "soft",
+    "reason": "按人教版高中生物必修2《遗传与进化》的教学顺序，先学「遗传病的检测和预防」，再学「生物有共同祖先的证据」。"
+  },
+  {
+    "topicId": "cnb_h061",
+    "prerequisiteId": "cnb_h060",
+    "strength": "hard",
+    "reason": "达尔文学说以生物有共同祖先、逐渐演变为前提，要先知道进化的证据。"
+  },
+  {
+    "topicId": "cnb_h061",
+    "prerequisiteId": "cnb_j063",
+    "strength": "hard",
+    "reason": "初中已学过生物进化的原因，是学习自然选择学说的起点。"
+  },
+  {
+    "topicId": "cnb_h062",
+    "prerequisiteId": "cnb_h061",
+    "strength": "hard",
+    "reason": "种群基因频率的定向改变是自然选择作用的结果，要先学自然选择学说。"
+  },
+  {
+    "topicId": "cnb_h062",
+    "prerequisiteId": "cnb_h037",
+    "strength": "hard",
+    "reason": "基因频率与基因型频率的计算要用到基因型、等位基因等概念。"
+  },
+  {
+    "topicId": "cnb_h063",
+    "prerequisiteId": "cnb_h062",
+    "strength": "hard",
+    "reason": "新物种的形成以种群基因频率的改变为基础，要先学基因频率。"
+  },
+  {
+    "topicId": "cnb_h063",
+    "prerequisiteId": "cnb_j065",
+    "strength": "soft",
+    "reason": "初中已学过进化与生物多样性，物种的形成是其进一步展开。"
+  },
+  {
+    "topicId": "cnb_h064",
+    "prerequisiteId": "cnb_h063",
+    "strength": "hard",
+    "reason": "生物多样性是新物种不断形成与协同进化的结果，要先学物种的形成。"
+  },
+  {
+    "topicId": "cnb_h064",
+    "prerequisiteId": "cnb_j065",
+    "strength": "hard",
+    "reason": "初中已知道进化与生物多样性的关系，是理解协同进化的起点。"
+  },
+  {
+    "topicId": "cnb_h065",
+    "prerequisiteId": "cnb_j037",
+    "strength": "hard",
+    "reason": "血浆是血液中的液体部分，需要先知道血液的组成，才能理解它属于细胞外液。"
+  },
+  {
+    "topicId": "cnb_h065",
+    "prerequisiteId": "cnb_h064",
+    "strength": "soft",
+    "reason": "按人教版高中生物课序，学完必修2《遗传与进化》的「协同进化与生物多样性的形成」后进入选择性必修1《稳态与调节》的「内环境的组成」。"
+  },
+  {
+    "topicId": "cnb_h066",
+    "prerequisiteId": "cnb_h065",
+    "strength": "hard",
+    "reason": "要讨论内环境的理化性质，先得清楚内环境由哪些液体构成。"
+  },
+  {
+    "topicId": "cnb_h066",
+    "prerequisiteId": "cnb_h006",
+    "strength": "hard",
+    "reason": "血浆渗透压和 pH 的维持都离不开无机盐离子。"
+  },
+  {
+    "topicId": "cnb_h067",
+    "prerequisiteId": "cnb_h066",
+    "strength": "hard",
+    "reason": "稳态就是内环境成分和理化性质的相对稳定，必须先了解这些指标。"
+  },
+  {
+    "topicId": "cnb_h068",
+    "prerequisiteId": "cnb_j042",
+    "strength": "hard",
+    "reason": "初中学过神经系统由脑、脊髓和神经组成，这里进一步按功能细分。"
+  },
+  {
+    "topicId": "cnb_h068",
+    "prerequisiteId": "cnb_h067",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修1《稳态与调节》的教学顺序，先学「内环境的稳态及其调节」，再学「神经系统的基本结构」。"
+  },
+  {
+    "topicId": "cnb_h069",
+    "prerequisiteId": "cnb_h068",
+    "strength": "hard",
+    "reason": "先认识神经系统的组成，才能进一步看它的基本单位神经元。"
+  },
+  {
+    "topicId": "cnb_h070",
+    "prerequisiteId": "cnb_h069",
+    "strength": "hard",
+    "reason": "反射弧中的传入神经、传出神经都由神经元的突起构成。"
+  },
+  {
+    "topicId": "cnb_h071",
+    "prerequisiteId": "cnb_h019",
+    "strength": "hard",
+    "reason": "钠钾泵逆浓度梯度运输 Na+ 和 K+，属于主动运输，用来恢复离子分布。"
+  },
+  {
+    "topicId": "cnb_h071",
+    "prerequisiteId": "cnb_h069",
+    "strength": "hard",
+    "reason": "兴奋是沿神经元轴突等突起传导的，要先知道神经纤维的结构。"
+  },
+  {
+    "topicId": "cnb_h071",
+    "prerequisiteId": "cnb_h070",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修1《稳态与调节》的教学顺序，先学「反射与反射弧」，再学「神经冲动的产生和在神经纤维上的传导」。"
+  },
+  {
+    "topicId": "cnb_h072",
+    "prerequisiteId": "cnb_h020",
+    "strength": "hard",
+    "reason": "神经递质以胞吐的方式从突触前膜释放，依赖膜的流动性。"
+  },
+  {
+    "topicId": "cnb_h072",
+    "prerequisiteId": "cnb_h071",
+    "strength": "hard",
+    "reason": "兴奋先在轴突上以电信号传到末梢，才能触发突触传递。"
+  },
+  {
+    "topicId": "cnb_h073",
+    "prerequisiteId": "cnb_h070",
+    "strength": "hard",
+    "reason": "分级调节讨论的是各级神经中枢在反射中的位置与关系。"
+  },
+  {
+    "topicId": "cnb_h073",
+    "prerequisiteId": "cnb_h072",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修1《稳态与调节》的教学顺序，先学「兴奋在神经元之间的传递」，再学「神经系统的分级调节」。"
+  },
+  {
+    "topicId": "cnb_h074",
+    "prerequisiteId": "cnb_h073",
+    "strength": "hard",
+    "reason": "高级功能是大脑皮层的功能，需要先理解大脑皮层位于分级调节的最高层。"
+  },
+  {
+    "topicId": "cnb_h075",
+    "prerequisiteId": "cnb_j044",
+    "strength": "hard",
+    "reason": "初中已认识激素和主要内分泌腺，高中阶段进一步讨论其化学本质与作用特点。"
+  },
+  {
+    "topicId": "cnb_h075",
+    "prerequisiteId": "cnb_h074",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修1《稳态与调节》的教学顺序，先学「人脑的高级功能」，再学「激素与内分泌系统」。"
+  },
+  {
+    "topicId": "cnb_h076",
+    "prerequisiteId": "cnb_h075",
+    "strength": "hard",
+    "reason": "血糖调节是激素调节的典型实例，要先理解激素和靶细胞的概念。"
+  },
+  {
+    "topicId": "cnb_h076",
+    "prerequisiteId": "cnb_h007",
+    "strength": "hard",
+    "reason": "肝糖原的分解和葡萄糖的储存需要先了解糖类，特别是糖原。"
+  },
+  {
+    "topicId": "cnb_h077",
+    "prerequisiteId": "cnb_h075",
+    "strength": "hard",
+    "reason": "分级调节和反馈调节讨论的是几种内分泌腺所分泌激素之间的相互关系。"
+  },
+  {
+    "topicId": "cnb_h077",
+    "prerequisiteId": "cnb_h076",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修1《稳态与调节》的教学顺序，先学「血糖平衡的调节」，再学「激素分泌的分级调节与反馈调节」。"
+  },
+  {
+    "topicId": "cnb_h078",
+    "prerequisiteId": "cnb_h073",
+    "strength": "hard",
+    "reason": "体温调节中枢在下丘脑，需要先知道各级中枢的分工。"
+  },
+  {
+    "topicId": "cnb_h078",
+    "prerequisiteId": "cnb_h077",
+    "strength": "hard",
+    "reason": "寒冷时甲状腺激素的增加依赖下丘脑—垂体—甲状腺轴的调节。"
+  },
+  {
+    "topicId": "cnb_h079",
+    "prerequisiteId": "cnb_h066",
+    "strength": "hard",
+    "reason": "水盐调节的目标是稳定细胞外液渗透压，需要理解渗透压的来源。"
+  },
+  {
+    "topicId": "cnb_h079",
+    "prerequisiteId": "cnb_h075",
+    "strength": "hard",
+    "reason": "抗利尿激素与醛固酮都是通过体液运输、作用于肾小管的激素。"
+  },
+  {
+    "topicId": "cnb_h079",
+    "prerequisiteId": "cnb_h078",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修1《稳态与调节》的教学顺序，先学「体温调节」，再学「水盐平衡调节」。"
+  },
+  {
+    "topicId": "cnb_h080",
+    "prerequisiteId": "cnb_h070",
+    "strength": "hard",
+    "reason": "神经调节的特点要对照反射弧的结构来理解。"
+  },
+  {
+    "topicId": "cnb_h080",
+    "prerequisiteId": "cnb_h075",
+    "strength": "hard",
+    "reason": "体液调节的特点要对照激素的运输和作用来理解。"
+  },
+  {
+    "topicId": "cnb_h080",
+    "prerequisiteId": "cnb_h079",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修1《稳态与调节》的教学顺序，先学「水盐平衡调节」，再学「神经调节与体液调节的关系」。"
+  },
+  {
+    "topicId": "cnb_h081",
+    "prerequisiteId": "cnb_j046",
+    "strength": "hard",
+    "reason": "初中已学过免疫的基本概念和人体三道防线，这里进一步细化免疫系统的组成。"
+  },
+  {
+    "topicId": "cnb_h081",
+    "prerequisiteId": "cnb_h080",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修1《稳态与调节》的教学顺序，先学「神经调节与体液调节的关系」，再学「免疫系统的组成和功能」。"
+  },
+  {
+    "topicId": "cnb_h082",
+    "prerequisiteId": "cnb_h081",
+    "strength": "hard",
+    "reason": "体液免疫涉及多种免疫细胞和活性物质，需要先认识免疫系统的组成。"
+  },
+  {
+    "topicId": "cnb_h082",
+    "prerequisiteId": "cnb_h010",
+    "strength": "hard",
+    "reason": "抗体是一类蛋白质，要理解它如何特异性地结合抗原。"
+  },
+  {
+    "topicId": "cnb_h083",
+    "prerequisiteId": "cnb_h082",
+    "strength": "hard",
+    "reason": "细胞免疫与体液免疫相互配合，需要先掌握体液免疫的过程和抗原呈递。"
+  },
+  {
+    "topicId": "cnb_h084",
+    "prerequisiteId": "cnb_h082",
+    "strength": "hard",
+    "reason": "过敏反应涉及抗体的产生和再次免疫，需要先掌握体液免疫。"
+  },
+  {
+    "topicId": "cnb_h084",
+    "prerequisiteId": "cnb_h083",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修1《稳态与调节》的教学顺序，先学「细胞免疫」，再学「过敏反应」。"
+  },
+  {
+    "topicId": "cnb_h085",
+    "prerequisiteId": "cnb_h083",
+    "strength": "hard",
+    "reason": "免疫缺陷与 T 细胞的功能密切相关，需要先掌握细胞免疫和辅助性 T 细胞的作用。"
+  },
+  {
+    "topicId": "cnb_h085",
+    "prerequisiteId": "cnb_h084",
+    "strength": "soft",
+    "reason": "三类免疫失调需要对照比较，过敏反应是其中最先学的一类。"
+  },
+  {
+    "topicId": "cnb_h086",
+    "prerequisiteId": "cnb_h082",
+    "strength": "hard",
+    "reason": "疫苗的作用就是借助体液免疫的二次反应获得记忆细胞，需要先理解该过程。"
+  },
+  {
+    "topicId": "cnb_h086",
+    "prerequisiteId": "cnb_h085",
+    "strength": "soft",
+    "reason": "免疫抑制剂与免疫失调的认识有助于理解移植后的用药。"
+  },
+  {
+    "topicId": "cnb_h087",
+    "prerequisiteId": "cnb_h086",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修1《稳态与调节》的教学顺序，先学「免疫学的应用」，再学「生长素的发现过程」。"
+  },
+  {
+    "topicId": "cnb_h088",
+    "prerequisiteId": "cnb_h087",
+    "strength": "hard",
+    "reason": "生长素的作用以及分布变化的认识来自经典的胚芽鞘实验。"
+  },
+  {
+    "topicId": "cnb_h088",
+    "prerequisiteId": "cnb_h019",
+    "strength": "hard",
+    "reason": "极性运输是逆浓度梯度的主动运输，需要载体和能量。"
+  },
+  {
+    "topicId": "cnb_h089",
+    "prerequisiteId": "cnb_h088",
+    "strength": "hard",
+    "reason": "这个实验检验的是生长素类调节剂的两重性，需要先掌握生长素的作用特点。"
+  },
+  {
+    "topicId": "cnb_h090",
+    "prerequisiteId": "cnb_h088",
+    "strength": "hard",
+    "reason": "其他植物激素与生长素共同调节，需要先掌握生长素的作用特点。"
+  },
+  {
+    "topicId": "cnb_h090",
+    "prerequisiteId": "cnb_h089",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修1《稳态与调节》的教学顺序，先学「探索生长素类调节剂促进插条生根的最适浓度」，再学「其他植物激素」。"
+  },
+  {
+    "topicId": "cnb_h091",
+    "prerequisiteId": "cnb_h090",
+    "strength": "hard",
+    "reason": "植物生长调节剂的功能多数与某种植物激素类似，需要先了解各类植物激素的作用。"
+  },
+  {
+    "topicId": "cnb_h092",
+    "prerequisiteId": "cnb_h088",
+    "strength": "hard",
+    "reason": "重力引起生长素的横向运输和不均匀分布是向重力性的基础。"
+  },
+  {
+    "topicId": "cnb_h092",
+    "prerequisiteId": "cnb_h091",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修1《稳态与调节》的教学顺序，先学「植物生长调节剂的应用」，再学「环境因素参与调节植物的生命活动」。"
+  },
+  {
+    "topicId": "cnb_h093",
+    "prerequisiteId": "cnb_j049",
+    "strength": "hard",
+    "reason": "初中学过生物与环境的相互作用，种群密度是进一步定量描述生物与环境关系的起点。"
+  },
+  {
+    "topicId": "cnb_h093",
+    "prerequisiteId": "cnb_h092",
+    "strength": "soft",
+    "reason": "按人教版高中生物课序，学完选择性必修1《稳态与调节》的「环境因素参与调节植物的生命活动」后进入选择性必修2《生物与环境》的「种群密度及其调查方法」。"
+  },
+  {
+    "topicId": "cnb_h094",
+    "prerequisiteId": "cnb_h093",
+    "strength": "hard",
+    "reason": "各种数量特征都是围绕种群密度的变化展开的，需要先理解种群密度的概念。"
+  },
+  {
+    "topicId": "cnb_h095",
+    "prerequisiteId": "cnb_h094",
+    "strength": "hard",
+    "reason": "增长模型是出生率、死亡率等特征随时间变化的综合结果。"
+  },
+  {
+    "topicId": "cnb_h096",
+    "prerequisiteId": "cnb_h095",
+    "strength": "hard",
+    "reason": "影响因素决定了种群是 J 形增长还是 S 形增长，以及 K 值的大小。"
+  },
+  {
+    "topicId": "cnb_h097",
+    "prerequisiteId": "cnb_h096",
+    "strength": "hard",
+    "reason": "种间关系（捕食、竞争、寄生等）是影响种群数量变化的重要生物因素。"
+  },
+  {
+    "topicId": "cnb_h098",
+    "prerequisiteId": "cnb_h097",
+    "strength": "hard",
+    "reason": "群落的空间结构建立在群落的物种组成和种间关系之上。"
+  },
+  {
+    "topicId": "cnb_h099",
+    "prerequisiteId": "cnb_h098",
+    "strength": "hard",
+    "reason": "生态位包括空间位置，需要先理解群落的垂直结构和水平结构。"
+  },
+  {
+    "topicId": "cnb_h100",
+    "prerequisiteId": "cnb_h098",
+    "strength": "hard",
+    "reason": "不同群落类型的结构与生物组成各有特点，需要先认识群落的空间结构。"
+  },
+  {
+    "topicId": "cnb_h100",
+    "prerequisiteId": "cnb_h099",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修2《生物与环境》的教学顺序，先学「群落的生态位」，再学「群落的主要类型」。"
+  },
+  {
+    "topicId": "cnb_h101",
+    "prerequisiteId": "cnb_h098",
+    "strength": "hard",
+    "reason": "演替是群落物种组成和结构的更替，需要先理解群落的结构。"
+  },
+  {
+    "topicId": "cnb_h101",
+    "prerequisiteId": "cnb_h100",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修2《生物与环境》的教学顺序，先学「群落的主要类型」，再学「群落的演替」。"
+  },
+  {
+    "topicId": "cnb_h102",
+    "prerequisiteId": "cnb_j050",
+    "strength": "hard",
+    "reason": "初中已学过生态系统的组成和食物链，这里进一步用营养方式划分成分。"
+  },
+  {
+    "topicId": "cnb_h102",
+    "prerequisiteId": "cnb_h101",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修2《生物与环境》的教学顺序，先学「群落的演替」，再学「生态系统的组成成分」。"
+  },
+  {
+    "topicId": "cnb_h103",
+    "prerequisiteId": "cnb_h102",
+    "strength": "hard",
+    "reason": "食物链只包含生产者和消费者，需要先区分生态系统的各种成分。"
+  },
+  {
+    "topicId": "cnb_h104",
+    "prerequisiteId": "cnb_h103",
+    "strength": "hard",
+    "reason": "能量是沿着食物链和食物网流动的，需要先掌握营养级的概念。"
+  },
+  {
+    "topicId": "cnb_h104",
+    "prerequisiteId": "cnb_h029",
+    "strength": "hard",
+    "reason": "流入生态系统的总能量来自生产者通过光合作用固定的太阳能。"
+  },
+  {
+    "topicId": "cnb_h105",
+    "prerequisiteId": "cnb_h104",
+    "strength": "hard",
+    "reason": "要理解传递特点，需要先清楚各营养级同化能量的去向。"
+  },
+  {
+    "topicId": "cnb_h106",
+    "prerequisiteId": "cnb_h029",
+    "strength": "hard",
+    "reason": "CO2 进入生物群落的主要途径是光合作用。"
+  },
+  {
+    "topicId": "cnb_h106",
+    "prerequisiteId": "cnb_h026",
+    "strength": "hard",
+    "reason": "生物体内的碳以 CO2 形式释放回环境，主要靠呼吸作用。"
+  },
+  {
+    "topicId": "cnb_h106",
+    "prerequisiteId": "cnb_h102",
+    "strength": "hard",
+    "reason": "判断碳循环模式图中的各成分，需要先理解生产者、消费者和分解者。"
+  },
+  {
+    "topicId": "cnb_h106",
+    "prerequisiteId": "cnb_h105",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修2《生物与环境》的教学顺序，先学「能量流动的特点及其应用」，再学「碳循环」。"
+  },
+  {
+    "topicId": "cnb_h107",
+    "prerequisiteId": "cnb_h106",
+    "strength": "hard",
+    "reason": "碳循环是物质循环的典型实例，需要先掌握其过程。"
+  },
+  {
+    "topicId": "cnb_h108",
+    "prerequisiteId": "cnb_h097",
+    "strength": "hard",
+    "reason": "信息传递能调节种间关系，需要先理解捕食、竞争等种间关系。"
+  },
+  {
+    "topicId": "cnb_h108",
+    "prerequisiteId": "cnb_h107",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修2《生物与环境》的教学顺序，先学「物质循环的特点与生物富集」，再学「生态系统的信息传递」。"
+  },
+  {
+    "topicId": "cnb_h109",
+    "prerequisiteId": "cnb_h103",
+    "strength": "hard",
+    "reason": "稳定性与食物网的复杂程度密切相关，需要先掌握食物链和食物网。"
+  },
+  {
+    "topicId": "cnb_h109",
+    "prerequisiteId": "cnb_h108",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修2《生物与环境》的教学顺序，先学「生态系统的信息传递」，再学「生态系统的稳定性」。"
+  },
+  {
+    "topicId": "cnb_h110",
+    "prerequisiteId": "cnb_h106",
+    "strength": "hard",
+    "reason": "全球气候变化与大气 CO2 增多有关，需要先理解碳循环。"
+  },
+  {
+    "topicId": "cnb_h110",
+    "prerequisiteId": "cnb_h109",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修2《生物与环境》的教学顺序，先学「生态系统的稳定性」，再学「人类活动对生态环境的影响」。"
+  },
+  {
+    "topicId": "cnb_h111",
+    "prerequisiteId": "cnb_h110",
+    "strength": "hard",
+    "reason": "生物多样性锐减是全球性生态环境问题之一，其成因与人类活动密切相关。"
+  },
+  {
+    "topicId": "cnb_h112",
+    "prerequisiteId": "cnb_h107",
+    "strength": "hard",
+    "reason": "循环原理以物质循环再生为核心，需要先掌握物质循环的特点。"
+  },
+  {
+    "topicId": "cnb_h112",
+    "prerequisiteId": "cnb_h109",
+    "strength": "hard",
+    "reason": "生态工程利用生态系统的自我调节能力来修复和维持稳定。"
+  },
+  {
+    "topicId": "cnb_h112",
+    "prerequisiteId": "cnb_h111",
+    "strength": "soft",
+    "reason": "物种的合理选择与布设以保护生物多样性为基础。"
+  },
+  {
+    "topicId": "cnb_h113",
+    "prerequisiteId": "cnb_h027",
+    "strength": "hard",
+    "reason": "乳酸菌发酵就是乳酸菌的无氧呼吸，产物是乳酸。"
+  },
+  {
+    "topicId": "cnb_h113",
+    "prerequisiteId": "cnb_h112",
+    "strength": "soft",
+    "reason": "按人教版高中生物课序，学完选择性必修2《生物与环境》的「生态工程」后进入选择性必修3《生物技术与工程》的「泡菜的制作与传统发酵技术」。"
+  },
+  {
+    "topicId": "cnb_h114",
+    "prerequisiteId": "cnb_h025",
+    "strength": "hard",
+    "reason": "酵母菌在有氧和无氧条件下的细胞呼吸方式与产物，是果酒制作的原理。"
+  },
+  {
+    "topicId": "cnb_h114",
+    "prerequisiteId": "cnb_h113",
+    "strength": "soft",
+    "reason": "果酒、果醋与泡菜一样属于传统发酵，要对比不同菌种的呼吸类型。"
+  },
+  {
+    "topicId": "cnb_h115",
+    "prerequisiteId": "cnb_j018",
+    "strength": "hard",
+    "reason": "培养基的设计依据细菌的营养和繁殖方式，初中已有基本认识。"
+  },
+  {
+    "topicId": "cnb_h115",
+    "prerequisiteId": "cnb_h114",
+    "strength": "soft",
+    "reason": "传统发酵依靠混合菌种，纯培养技术则用于获得单一菌种，二者对比学习。"
+  },
+  {
+    "topicId": "cnb_h116",
+    "prerequisiteId": "cnb_h115",
+    "strength": "hard",
+    "reason": "选择培养和计数都建立在培养基配制和无菌操作的基础上。"
+  },
+  {
+    "topicId": "cnb_h117",
+    "prerequisiteId": "cnb_h115",
+    "strength": "hard",
+    "reason": "发酵工程使用单一菌种的纯培养，依赖无菌技术和培养基配制。"
+  },
+  {
+    "topicId": "cnb_h117",
+    "prerequisiteId": "cnb_h116",
+    "strength": "soft",
+    "reason": "菌种选育与扩大培养中常用选择培养和计数的方法。"
+  },
+  {
+    "topicId": "cnb_h118",
+    "prerequisiteId": "cnb_h117",
+    "strength": "hard",
+    "reason": "应用都是通过发酵工程的基本环节实现的。"
+  },
+  {
+    "topicId": "cnb_h119",
+    "prerequisiteId": "cnb_h033",
+    "strength": "hard",
+    "reason": "植物细胞全能性是组织培养的理论基础，需要先理解细胞分化和全能性。"
+  },
+  {
+    "topicId": "cnb_h119",
+    "prerequisiteId": "cnb_h115",
+    "strength": "hard",
+    "reason": "组织培养依赖培养基配制和无菌操作。"
+  },
+  {
+    "topicId": "cnb_h119",
+    "prerequisiteId": "cnb_h118",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修3《生物技术与工程》的教学顺序，先学「发酵工程的应用」，再学「植物组织培养技术」。"
+  },
+  {
+    "topicId": "cnb_h120",
+    "prerequisiteId": "cnb_h119",
+    "strength": "hard",
+    "reason": "杂种细胞需要借助植物组织培养发育成完整植株。"
+  },
+  {
+    "topicId": "cnb_h120",
+    "prerequisiteId": "cnb_h012",
+    "strength": "hard",
+    "reason": "原生质体融合依赖细胞膜的流动性。"
+  },
+  {
+    "topicId": "cnb_h121",
+    "prerequisiteId": "cnb_h119",
+    "strength": "hard",
+    "reason": "各项应用都是植物组织培养技术的延伸。"
+  },
+  {
+    "topicId": "cnb_h121",
+    "prerequisiteId": "cnb_h120",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修3《生物技术与工程》的教学顺序，先学「植物体细胞杂交技术」，再学「植物细胞工程的应用」。"
+  },
+  {
+    "topicId": "cnb_h122",
+    "prerequisiteId": "cnb_h115",
+    "strength": "hard",
+    "reason": "动物细胞培养同样需要无菌技术和培养基。"
+  },
+  {
+    "topicId": "cnb_h122",
+    "prerequisiteId": "cnb_h121",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修3《生物技术与工程》的教学顺序，先学「植物细胞工程的应用」，再学「动物细胞培养」。"
+  },
+  {
+    "topicId": "cnb_h123",
+    "prerequisiteId": "cnb_h122",
+    "strength": "hard",
+    "reason": "核移植的供体细胞和重构胚都需要经过动物细胞培养。"
+  },
+  {
+    "topicId": "cnb_h123",
+    "prerequisiteId": "cnb_h016",
+    "strength": "hard",
+    "reason": "细胞核是遗传信息库，是核移植实验的前提。"
+  },
+  {
+    "topicId": "cnb_h124",
+    "prerequisiteId": "cnb_h082",
+    "strength": "hard",
+    "reason": "抗体由浆细胞（B 细胞分化而来）产生，要先理解体液免疫的过程。"
+  },
+  {
+    "topicId": "cnb_h124",
+    "prerequisiteId": "cnb_h122",
+    "strength": "hard",
+    "reason": "杂交瘤细胞的培养属于动物细胞培养。"
+  },
+  {
+    "topicId": "cnb_h124",
+    "prerequisiteId": "cnb_h123",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修3《生物技术与工程》的教学顺序，先学「动物体细胞核移植与克隆动物」，再学「动物细胞融合与单克隆抗体」。"
+  },
+  {
+    "topicId": "cnb_h125",
+    "prerequisiteId": "cnb_h041",
+    "strength": "hard",
+    "reason": "胚胎工程的理论基础是配子形成与受精作用，需要先学减数分裂与受精。"
+  },
+  {
+    "topicId": "cnb_h125",
+    "prerequisiteId": "cnb_h124",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修3《生物技术与工程》的教学顺序，先学「动物细胞融合与单克隆抗体」，再学「胚胎工程的理论基础」。"
+  },
+  {
+    "topicId": "cnb_h126",
+    "prerequisiteId": "cnb_h125",
+    "strength": "hard",
+    "reason": "胚胎工程技术操作的对象是早期胚胎，需要先掌握其发育过程。"
+  },
+  {
+    "topicId": "cnb_h127",
+    "prerequisiteId": "cnb_h046",
+    "strength": "hard",
+    "reason": "限制酶切断的是磷酸二酯键，识别的是特定碱基序列，需要先了解 DNA 的结构。"
+  },
+  {
+    "topicId": "cnb_h127",
+    "prerequisiteId": "cnb_h022",
+    "strength": "hard",
+    "reason": "限制酶只识别特定序列，体现了酶的专一性。"
+  },
+  {
+    "topicId": "cnb_h127",
+    "prerequisiteId": "cnb_h126",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修3《生物技术与工程》的教学顺序，先学「胚胎工程技术及其应用」，再学「重组DNA技术的基本工具」。"
+  },
+  {
+    "topicId": "cnb_h128",
+    "prerequisiteId": "cnb_h047",
+    "strength": "hard",
+    "reason": "PCR 的原理就是 DNA 半保留复制，需要引物和聚合酶。"
+  },
+  {
+    "topicId": "cnb_h128",
+    "prerequisiteId": "cnb_h127",
+    "strength": "soft",
+    "reason": "获取目的基因是基因工程的第一步，要与限制酶等工具的使用联系起来。"
+  },
+  {
+    "topicId": "cnb_h129",
+    "prerequisiteId": "cnb_h127",
+    "strength": "hard",
+    "reason": "构建载体要用到限制酶、DNA 连接酶和质粒。"
+  },
+  {
+    "topicId": "cnb_h129",
+    "prerequisiteId": "cnb_h049",
+    "strength": "hard",
+    "reason": "启动子和终止子的功能与 RNA 聚合酶催化转录有关。"
+  },
+  {
+    "topicId": "cnb_h129",
+    "prerequisiteId": "cnb_h128",
+    "strength": "soft",
+    "reason": "目的基因的获取是构建载体的上一步。"
+  },
+  {
+    "topicId": "cnb_h130",
+    "prerequisiteId": "cnb_h129",
+    "strength": "hard",
+    "reason": "导入的是已经构建好的基因表达载体。"
+  },
+  {
+    "topicId": "cnb_h131",
+    "prerequisiteId": "cnb_h130",
+    "strength": "hard",
+    "reason": "各项应用都要依靠目的基因的导入和表达。"
+  },
+  {
+    "topicId": "cnb_h132",
+    "prerequisiteId": "cnb_h129",
+    "strength": "hard",
+    "reason": "蛋白质工程最终仍要通过基因表达载体让改造后的基因表达。"
+  },
+  {
+    "topicId": "cnb_h132",
+    "prerequisiteId": "cnb_h051",
+    "strength": "hard",
+    "reason": "蛋白质工程的思路按中心法则逆推：从蛋白质到基因。"
+  },
+  {
+    "topicId": "cnb_h132",
+    "prerequisiteId": "cnb_h131",
+    "strength": "soft",
+    "reason": "与基因工程的应用对照，更容易看出蛋白质工程的特点。"
+  },
+  {
+    "topicId": "cnb_h133",
+    "prerequisiteId": "cnb_h131",
+    "strength": "hard",
+    "reason": "要评价转基因产品的安全性，先要知道转基因产品有哪些应用。"
+  },
+  {
+    "topicId": "cnb_h133",
+    "prerequisiteId": "cnb_h132",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修3《生物技术与工程》的教学顺序，先学「蛋白质工程的原理和应用」，再学「转基因产品的安全性」。"
+  },
+  {
+    "topicId": "cnb_h134",
+    "prerequisiteId": "cnb_h123",
+    "strength": "hard",
+    "reason": "克隆人涉及的就是体细胞核移植技术。"
+  },
+  {
+    "topicId": "cnb_h134",
+    "prerequisiteId": "cnb_h133",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修3《生物技术与工程》的教学顺序，先学「转基因产品的安全性」，再学「关注生殖性克隆人」。"
+  },
+  {
+    "topicId": "cnb_h135",
+    "prerequisiteId": "cnb_j045",
+    "strength": "hard",
+    "reason": "生物武器引起的是传染病大规模流行，需要了解传染病的传播与预防。"
+  },
+  {
+    "topicId": "cnb_h135",
+    "prerequisiteId": "cnb_h134",
+    "strength": "soft",
+    "reason": "按人教版高中生物选择性必修3《生物技术与工程》的教学顺序，先学「关注生殖性克隆人」，再学「禁止生物武器」。"
   }
 ]

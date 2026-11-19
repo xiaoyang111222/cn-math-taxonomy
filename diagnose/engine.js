@@ -588,6 +588,9 @@
     // 高中化学章名可以有多个词，例如「铁 金属材料」「物质结构 元素周期律」，绪言/引言也没有「第×章」。
     // 只在上面的通用格式对不上、且首词是必修一/二/三或选必一/二/三时使用。
     // 数学、英语、物理已经对上的章节不会落到这里。
+    // 高中历史按「单元」编排：「必修一 第一单元 单元名 第1课」。
+    const unit = /^(必修[一二三]|选必[一二三]) (第\S+单元) (\S+?)(?: (\S+))?$/.exec(s);
+    if (unit) return { volume: unit[1], chapterNo: unit[2], chapterName: unit[3], section: unit[4] || '' };
     const book = /^(必修[一二三]|选必[一二三])(?:\s+(.+))?$/.exec(s);
     if (book) {
       const rest = book[2] || '';
@@ -983,7 +986,9 @@
     if (m) letter = m[1].toUpperCase();
     else {
       const n = normalizeText(raw);
-      const hit = choices.find(function (c) { return normalizeText(c.text) === n; });
+      // 基因型 Dd 与 dd 只差大小写，先按原文精确匹配，再按规范化文字匹配
+      const hit = choices.find(function (c) { return String(c.text).trim() === raw; })
+        || choices.find(function (c) { return normalizeText(c.text) === n; });
       if (hit) letter = hit.key;
     }
     if (!letter || keys.indexOf(letter) < 0) return { verdict: 'manual', reason: 'unrecognized' };

@@ -67,9 +67,9 @@ test('旧 7 个 ID 有别名，指向仍存在的小学科学知识点', () => {
   });
 });
 
-test('科学 262 个、全站 3550 个知识点；每个科学点 4 题；先修都指向更靠前的点', () => {
+test('科学 262 个、全站 3924 个知识点（含 2026-11-20 补强批新增的高中地理 119、生物 135、历史 120）；每个科学点 4 题；先修都指向更靠前的点', () => {
   assert.strictEqual(sci.length, 262);
-  assert.strictEqual(topics.length, 3550);
+  assert.strictEqual(topics.length, 3924);
   sci.forEach((t) => {
     assert.strictEqual(questions.filter((q) => q.topicId === t.id).length, 4, t.id);
   });
