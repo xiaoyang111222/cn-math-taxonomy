@@ -716,6 +716,14 @@ a.grade-card:hover, a.iq-card:hover { border-color: var(--brand); }
 a.grade-card strong, a.iq-card strong { font-size: 1.08rem; letter-spacing: -0.02em; }
 a.iq-card { margin-top: 22px; gap: 4px; max-width: 100%; border-top-color: var(--brand); }
 a.iq-card .iq-sub { font-weight: 650; overflow-wrap: anywhere; }
+a.finals-card {
+  display: flex; flex-direction: column; gap: 4px; margin-top: 22px; padding: 12px 14px;
+  background: var(--bg-elev); border: 1px solid var(--line); border-top: 3px solid var(--brand);
+  border-radius: var(--radius); text-decoration: none; color: inherit; min-width: 0;
+}
+a.finals-card:hover { border-color: var(--brand); }
+a.finals-card strong { font-size: 1.08rem; letter-spacing: -0.02em; }
+a.finals-card .finals-sub { color: var(--muted); font-size: 0.92rem; font-weight: 650; overflow-wrap: anywhere; }
 a.iq-card .iq-note { color: var(--muted); font-size: 0.82rem; font-weight: 650; overflow-wrap: anywhere; }
 .grade-stage { color: var(--muted); font-size: 0.82rem; font-weight: 650; }
 .grade-count { font-weight: 650; }

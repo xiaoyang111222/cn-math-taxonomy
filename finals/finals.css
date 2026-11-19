@@ -1,0 +1,47 @@
+/* 期末补漏计划页。配色、字号来自 assets/site.css；卡片、按钮沿用错题本 / 诊断页的写法。 */
+
+main.finals { width: min(760px, 100%); margin: 0 auto; padding: 20px 16px 56px; }
+.finals h1 { margin: 0 0 8px; font-size: 1.5rem; letter-spacing: -0.02em; }
+.finals h2 { margin: 0 0 8px; font-size: 1.15rem; letter-spacing: -0.02em; }
+.finals h3 { margin: 0 0 8px; font-size: 1.05rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.finals .muted { color: var(--muted); }
+.finals p { overflow-wrap: anywhere; }
+
+.fin-card, .fin-day {
+  background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 14px 16px; margin: 12px 0;
+}
+.fin-note { padding: 10px 12px; background: var(--bg-muted); border-radius: var(--radius-sm); }
+
+.fin-form { display: grid; grid-template-columns: auto 1fr; gap: 10px 12px; align-items: center; margin: 12px 0; }
+.fin-form label { font-weight: 700; }
+.fin-form select { min-width: 0; width: 100%; min-height: 44px; }
+#f-go { width: 100%; margin-top: 4px; }
+
+.fin-progress { height: 10px; border-radius: 999px; background: var(--bg-muted); overflow: hidden; margin-top: 10px; }
+.fin-progress span { display: block; height: 100%; background: var(--ok); border-radius: 999px; transition: width 0.2s; }
+.fin-progress-text { margin: 6px 0 0; font-weight: 800; }
+
+.fin-date { font-size: 0.88rem; font-weight: 650; color: var(--muted); }
+.fin-day.is-today { border-color: var(--brand); border-width: 2px; }
+.fin-day.is-done { background: var(--ok-bg); }
+.fin-day.is-done h3 { color: var(--ok); }
+
+.fin-kps { list-style: none; margin: 0; padding: 0; }
+.fin-kps li {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px;
+  padding: 8px 0; border-top: 1px dashed var(--line);
+}
+.fin-kps li:first-child { border-top: 0; }
+.fin-kp-name { font-weight: 650; overflow-wrap: anywhere; min-width: 0; flex: 1 1 160px; }
+.fin-links { display: flex; gap: 8px; flex: none; }
+.fin-links a {
+  display: inline-flex; align-items: center; min-height: 36px; padding: 2px 12px;
+  border: 1px solid var(--line); border-radius: 999px; text-decoration: none; font-weight: 650; color: var(--brand-strong);
+}
+.fin-links a:hover { background: var(--bg-muted); }
+
+.fin-foot { margin-top: 10px; }
+.fin-check { width: 100%; }
+.fin-check.on { background: var(--ok); border-color: transparent; color: #fff; }
+.fin-reset { text-align: center; margin-top: 18px; }

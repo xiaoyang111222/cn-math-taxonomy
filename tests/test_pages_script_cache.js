@@ -26,6 +26,8 @@ const REQUIRED = [
   './explore',
   './diagnose',
   './children',
+  './finals',
+  './finals/index.html',
   './data/topics.json',
   './data/dependencies.json',
   './data/cn-curriculum-standards.json',

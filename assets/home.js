@@ -31,7 +31,7 @@
     if (on) link.setAttribute('aria-current', 'true');
     else link.removeAttribute('aria-current');
   });
-  document.querySelectorAll('.site-nav a:not(.subject-link), a.brand').forEach(function (link) {
+  document.querySelectorAll('.site-nav a:not(.subject-link), a.brand, a.finals-card').forEach(function (link) {
     var href = link.getAttribute('href');
     var next = withSubject(href);
     if (next && next !== href) link.setAttribute('href', next);
