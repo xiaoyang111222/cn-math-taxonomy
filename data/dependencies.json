@@ -30790,5 +30790,1235 @@
     "prerequisiteId": "cnk_h101",
     "strength": "hard",
     "reason": "复习本章要先会高分子材料。"
+  },
+  {
+    "topicId": "cnd_j001",
+    "prerequisiteId": "cnd_j003",
+    "strength": "soft",
+    "reason": "教学上宜先把初中目标定得可核对，把它排成谁在何时做哪一件事的可执行计划。写计划可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j006",
+    "prerequisiteId": "cnd_j003",
+    "strength": "soft",
+    "reason": "教学上宜先目标要写得可核对、贴合条件，再看怎样用当下一件实事靠近梦想。靠近梦想可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j021",
+    "prerequisiteId": "cnd_j006",
+    "strength": "soft",
+    "reason": "教学上宜先知道梦想要靠当下实事靠近，再追问自己愿意长期投入什么。探问人生目标可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j022",
+    "prerequisiteId": "cnd_j021",
+    "strength": "soft",
+    "reason": "教学上宜先探问自己愿长期投入什么，再树立不损害他人且能指引行动的人生目标。树立人生目标可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j024",
+    "prerequisiteId": "cnd_j023",
+    "strength": "soft",
+    "reason": "教学上宜先看见困难后仍做自己能做的事这种积极态度，再分辨顺境怎样积累、逆境怎样调整并求助。顺逆境的做法可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j009",
+    "prerequisiteId": "cnd_j008",
+    "strength": "soft",
+    "reason": "教学上宜先辨清家庭里的关爱与各自的责任，再处理沟通不畅和冲突。家庭沟通可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j011",
+    "prerequisiteId": "cnd_j010",
+    "strength": "soft",
+    "reason": "教学上宜先学会带着具体问题走近老师，再用认真完成、守约和适度表达回应师生情谊。珍惜师生情谊可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j014",
+    "prerequisiteId": "cnd_j013",
+    "strength": "soft",
+    "reason": "教学上宜先看到集体怎样成就个人，再承担共建里自己做得到的那一份。共建中的那一份可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j015",
+    "prerequisiteId": "cnd_j014",
+    "strength": "soft",
+    "reason": "教学上宜先承担共同约定里自己的那一份，再在约定的办法里提出不同意见且不排斥别人。提出不同意见可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j017",
+    "prerequisiteId": "cnd_j016",
+    "strength": "soft",
+    "reason": "教学上宜先认识每条生命不可替代且时间有限，再把敬畏落到不拿自己和他人的身体、痛苦当笑料。敬畏生命可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j027",
+    "prerequisiteId": "cnd_j026",
+    "strength": "soft",
+    "reason": "教学上宜先把身体和想法的变化看成成长的邀约，再守住交往中的性别平等与身体边界。身体边界可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j028",
+    "prerequisiteId": "cnd_j026",
+    "strength": "soft",
+    "reason": "教学上宜先知道青春期身体、想法和同伴关系都在变化，再辨认随之出现的情绪并在持续不适时求助。辨认情绪可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j028",
+    "prerequisiteId": "cnd_j020",
+    "strength": "soft",
+    "reason": "教学上宜先知道难过时找可信任的人说、给自己留一点愿意做的事，再区分一时情绪和持续不适并求助。持续不适求助可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j030",
+    "prerequisiteId": "cnd_j029",
+    "strength": "soft",
+    "reason": "教学上宜先辨清自尊是肯定自己的人格并同样尊重他人，再用自重和清楚的边界做自尊的人。自重与边界可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j030",
+    "prerequisiteId": "cnd_j027",
+    "strength": "soft",
+    "reason": "教学上宜先守住身体边界，再把边界意识用到自重上。自重与边界可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j031",
+    "prerequisiteId": "cnd_j004",
+    "strength": "soft",
+    "reason": "教学上宜先用自己的观察、他人指出的事实和结果认识自己，再看清不足后仍愿意准备并尝试。自信可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j032",
+    "prerequisiteId": "cnd_j031",
+    "strength": "soft",
+    "reason": "教学上宜先看清不足后仍愿意尝试的自信，再理解遇挫后自己把还能做的部分做完的自强。自强可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j033",
+    "prerequisiteId": "cnd_j032",
+    "strength": "soft",
+    "reason": "教学上宜先遇挫后把还能做的部分做完，再把这份劲头用到自己那一份公共小事上。自强不息可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j035",
+    "prerequisiteId": "cnd_j034",
+    "strength": "soft",
+    "reason": "教学上宜先知道传承是用仍说得通的理念判断今天的选择，再看人文精神怎样落在相处里承认具体的人的尊严。人文精神可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j035",
+    "prerequisiteId": "cnd_j029",
+    "strength": "soft",
+    "reason": "教学上宜先辨清自尊要同样尊重他人，再理解相处中承认具体的人的尊严。人文精神可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j036",
+    "prerequisiteId": "cnd_j035",
+    "strength": "soft",
+    "reason": "教学上宜先承认相处中具体的人的尊严，再自己做成一件尊重人的事。弘扬人文精神可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j037",
+    "prerequisiteId": "cnd_j034",
+    "strength": "soft",
+    "reason": "教学上宜先知道传承要用仍说得通的理念判断今天的选择，再把一条美德做成可重复且安全的行为。践行传统美德可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j108",
+    "prerequisiteId": "cnd_j038",
+    "strength": "soft",
+    "reason": "教学上宜先分清不同法律各调整一类关系，再认识民法典调整平等主体的人身财产关系。民法典可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j040",
+    "prerequisiteId": "cnd_j108",
+    "strength": "soft",
+    "reason": "教学上宜先知道民法典调整平等主体的人身财产关系，再把人身权与财产权分开保护。人身权与财产权可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j041",
+    "prerequisiteId": "cnd_j038",
+    "strength": "soft",
+    "reason": "教学上宜先知道法律体系里各法调整的关系不同，再以刑法是否明文规定区分一般违法与犯罪。违法与犯罪可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j042",
+    "prerequisiteId": "cnd_j041",
+    "strength": "soft",
+    "reason": "教学上宜先分清一般违法与犯罪，再判断受到侵害时要向法定途径求助而不是私自处刑。法定途径求助可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j043",
+    "prerequisiteId": "cnd_j039",
+    "strength": "soft",
+    "reason": "教学上宜先知道法律保障生活同时禁止滥用权利，再理解严于律己是守住边界而不是自我处刑。严于律己可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j045",
+    "prerequisiteId": "cnd_j039",
+    "strength": "soft",
+    "reason": "教学上宜先知道法律保障生活同时禁止滥用权利，再看社会成员受保护的同时要顾及他人合法权益。顾及他人合法权益可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j045",
+    "prerequisiteId": "cnd_j044",
+    "strength": "soft",
+    "reason": "教学上宜先认识社会生活里人与人相互联系，再看自己受保护时他人也有合法权益。顾及他人合法权益可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j046",
+    "prerequisiteId": "cnd_j044",
+    "strength": "soft",
+    "reason": "教学上宜先认识社会生活是人与人的相互联系，再理解社会化是学会共同生活。社会化可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j047",
+    "prerequisiteId": "cnd_j044",
+    "strength": "soft",
+    "reason": "教学上宜先认识社会生活是人与人的相互联系，再看网络改变的是联系的速度和范围。网络的影响可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j048",
+    "prerequisiteId": "cnd_j047",
+    "strength": "soft",
+    "reason": "教学上宜先知道网络改变联系的速度和范围，再理解网上表达不能扩大对他人的伤害。清朗空间可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j048",
+    "prerequisiteId": "cnd_j045",
+    "strength": "soft",
+    "reason": "教学上宜先知道行使自己的便利时要顾及他人合法权益，再判断网上表达怎样才不伤害他人。清朗空间可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j049",
+    "prerequisiteId": "cnd_j044",
+    "strength": "soft",
+    "reason": "教学上宜先认识社会生活里人与人相互联系，再理解社会秩序靠共同遵守的规则变得可预期。社会秩序可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j050",
+    "prerequisiteId": "cnd_j049",
+    "strength": "soft",
+    "reason": "教学上宜先知道共同遵守的规则让社会秩序可预期，再把道德倡议和法律规定的义务分开。道德与法律义务可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j055",
+    "prerequisiteId": "cnd_j054",
+    "strength": "soft",
+    "reason": "教学上宜先知道平等是同等尊重、同一规则对大家适用，再理解公平靠同一标准。公平可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j055",
+    "prerequisiteId": "cnd_j042",
+    "strength": "soft",
+    "reason": "教学上宜先知道受到侵害要走法定途径，再理解守护正义要走正当途径。守护正义可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j056",
+    "prerequisiteId": "cnd_j014",
+    "strength": "soft",
+    "reason": "教学上宜先学会在共建中承担自己做得到的那一份，再把这种担当放到社会角色的责任上。社会责任可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j057",
+    "prerequisiteId": "cnd_j056",
+    "strength": "soft",
+    "reason": "教学上宜先知道社会责任是角色里能做的事，再把它落到能力和安全范围内的具体奉献。践行奉献可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j057",
+    "prerequisiteId": "cnd_j107",
+    "strength": "soft",
+    "reason": "教学上宜先知道把小我融入祖国和人民、在岗位上作奉献，再把愿意帮助变成自己做得了的具体行动。践行奉献可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j060",
+    "prerequisiteId": "cnd_j058",
+    "strength": "soft",
+    "reason": "教学上宜先知道国家利益高于眼前私利，再理解国防和军队现代化为了捍卫主权、安全和发展利益。国防现代化可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j061",
+    "prerequisiteId": "cnd_j058",
+    "strength": "soft",
+    "reason": "教学上宜先知道国家利益包括安全、主权和发展，再理解总体国家安全观以人民安全为宗旨。总体国家安全观可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j061",
+    "prerequisiteId": "cnd_j060",
+    "strength": "soft",
+    "reason": "教学上宜先知道国防是捍卫主权和安全的一部分，再分清国家安全观不只是打仗。总体国家安全观可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j063",
+    "prerequisiteId": "cnd_j062",
+    "strength": "soft",
+    "reason": "教学上宜先知道党领导人民制定宪法，再理解宪法是治国安邦的总章程并具有最高效力。宪法的地位可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j063",
+    "prerequisiteId": "cnd_j038",
+    "strength": "soft",
+    "reason": "教学上宜先知道法律体系里各部法律并存，再理解宪法在其中具有最高效力。宪法的地位可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j064",
+    "prerequisiteId": "cnd_j063",
+    "strength": "soft",
+    "reason": "教学上宜先知道宪法规定根本内容并具有最高效力，再理解依宪治国要在宪法范围内活动。依宪治国可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j065",
+    "prerequisiteId": "cnd_j040",
+    "strength": "soft",
+    "reason": "教学上宜先把人身权与财产权分开保护，再理解公民在法律面前平等且人格尊严、人身财产受保护。公民权利平等可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j066",
+    "prerequisiteId": "cnd_j050",
+    "strength": "soft",
+    "reason": "教学上宜先分清道德倡议和法律规定的义务，再判断受教育既是权利也是义务而道德建议不是法律义务。受教育权利义务可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j067",
+    "prerequisiteId": "cnd_j065",
+    "strength": "soft",
+    "reason": "教学上宜先知道公民在法律面前平等且权利受保护，再理解权利义务相统一。权利义务相统一可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j067",
+    "prerequisiteId": "cnd_j066",
+    "strength": "soft",
+    "reason": "教学上宜先知道受教育既是权利也是义务，再理解依法行使权利、不滥用也不盲从。权利义务相统一可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j067",
+    "prerequisiteId": "cnd_j039",
+    "strength": "soft",
+    "reason": "教学上宜先知道法律保障生活同时禁止滥用权利，再理解权利义务相统一、依法行使。权利义务相统一可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j069",
+    "prerequisiteId": "cnd_j068",
+    "strength": "soft",
+    "reason": "教学上宜先知道人民代表大会制度是根本政治制度，再认识多党合作和政治协商这项基本政治制度。多党合作可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j070",
+    "prerequisiteId": "cnd_j068",
+    "strength": "soft",
+    "reason": "教学上宜先知道人民代表大会制度是根本政治制度，再分清民族区域自治与基层群众自治各有范围。两种自治制度可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j072",
+    "prerequisiteId": "cnd_j071",
+    "strength": "soft",
+    "reason": "教学上宜先知道公有制为主体、多种所有制共同发展，再理解按劳分配为主体、多种分配方式并存。分配制度可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j073",
+    "prerequisiteId": "cnd_j072",
+    "strength": "soft",
+    "reason": "教学上宜先知道所有制和分配制度的基本框架，再理解社会主义市场经济体制。市场经济体制可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j074",
+    "prerequisiteId": "cnd_j068",
+    "strength": "soft",
+    "reason": "教学上宜先知道人民代表大会制度是根本政治制度，再分辨不同国家机关的性质不能互换。国家机关性质可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j075",
+    "prerequisiteId": "cnd_j068",
+    "strength": "soft",
+    "reason": "教学上宜先知道人民代表大会制度是根本政治制度，再看全国人大选举哪些国家机构负责人。人大选举可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j075",
+    "prerequisiteId": "cnd_j074",
+    "strength": "soft",
+    "reason": "教学上宜先分辨不同国家机关的性质，再看全国人大选举特定国家机构负责人。人大选举可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j076",
+    "prerequisiteId": "cnd_j075",
+    "strength": "soft",
+    "reason": "教学上宜先知道全国人大选举特定国家机构负责人，再认识国家主席的产生、地位和职权。国家主席可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j110",
+    "prerequisiteId": "cnd_j074",
+    "strength": "soft",
+    "reason": "教学上宜先分辨不同国家机关的性质，再理解行政机关依法设立并行使国家行政权。行政机关可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j077",
+    "prerequisiteId": "cnd_j110",
+    "strength": "soft",
+    "reason": "教学上宜先知道行政机关依法设立并行使国家行政权，再理解行政机关依法行使职权、建设法治政府。法治政府可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j078",
+    "prerequisiteId": "cnd_j074",
+    "strength": "soft",
+    "reason": "教学上宜先分辨不同国家机关的性质，再理解中央军委领导武装力量而不兼其他机关职权。中央军委可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j078",
+    "prerequisiteId": "cnd_j060",
+    "strength": "soft",
+    "reason": "教学上宜先知道国防和军队现代化的目的，再理解中央军委怎样领导全国武装力量。中央军委可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j079",
+    "prerequisiteId": "cnd_j078",
+    "strength": "soft",
+    "reason": "教学上宜先知道中央军委领导全国武装力量，再理解中央军委主席由全国人大选举产生。军委主席产生可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j079",
+    "prerequisiteId": "cnd_j075",
+    "strength": "soft",
+    "reason": "教学上宜先知道全国人大选举特定国家机构负责人，再理解中央军委主席也由全国人大选举产生。军委主席产生可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j080",
+    "prerequisiteId": "cnd_j074",
+    "strength": "soft",
+    "reason": "教学上宜先分辨不同国家机关的性质，再认识监察委员会的设立、产生和负责关系。监察委员会可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j080",
+    "prerequisiteId": "cnd_j075",
+    "strength": "soft",
+    "reason": "教学上宜先知道全国人大选举特定国家机构负责人，再认识监察委员会由人大产生并对其负责。监察委员会可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j081",
+    "prerequisiteId": "cnd_j080",
+    "strength": "soft",
+    "reason": "教学上宜先知道监察委员会的设立、产生和负责关系，再理解监察权依法独立行使并与其他机关配合制约。监察权行使可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j082",
+    "prerequisiteId": "cnd_j074",
+    "strength": "soft",
+    "reason": "教学上宜先分辨不同国家机关的性质，再看审判权、检察权的行使和刑事案件分工。审判检察分工可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j082",
+    "prerequisiteId": "cnd_j041",
+    "strength": "soft",
+    "reason": "教学上宜先分清一般违法与犯罪，再看刑事案件中审判、检察怎样分工。审判检察分工可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j083",
+    "prerequisiteId": "cnd_j064",
+    "strength": "soft",
+    "reason": "教学上宜先知道依宪治国要求在宪法范围内活动，再理解全面依法治国以习近平法治思想为指导思想。全面依法治国可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j084",
+    "prerequisiteId": "cnd_j083",
+    "strength": "soft",
+    "reason": "教学上宜先知道全面依法治国的指导思想，再把科学立法、严格执法、公正司法、全民守法逐项落实。法治各环节可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j084",
+    "prerequisiteId": "cnd_j082",
+    "strength": "soft",
+    "reason": "教学上宜先知道审判权、检察权的行使，再理解公正司法是法治的一个环节。法治各环节可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j084",
+    "prerequisiteId": "cnd_j077",
+    "strength": "soft",
+    "reason": "教学上宜先知道行政机关依法行使职权，再理解严格执法是法治的一个环节。法治各环节可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j085",
+    "prerequisiteId": "cnd_j084",
+    "strength": "soft",
+    "reason": "教学上宜先知道法治建设的各个环节，再理解重大改革要于法有据。法治与德治可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j085",
+    "prerequisiteId": "cnd_j050",
+    "strength": "soft",
+    "reason": "教学上宜先分清道德倡议和法律规定的义务，再理解法治与德治不能互相代替。法治与德治可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j087",
+    "prerequisiteId": "cnd_j086",
+    "strength": "soft",
+    "reason": "教学上宜先知道党团结带领人民书写百年史诗，再理解弘扬伟大建党精神。建党精神可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j088",
+    "prerequisiteId": "cnd_j087",
+    "strength": "soft",
+    "reason": "教学上宜先弘扬伟大建党精神，再牢记初心使命并站稳人民立场。初心使命可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j089",
+    "prerequisiteId": "cnd_j086",
+    "strength": "soft",
+    "reason": "教学上宜先知道党团结带领人民书写百年史诗，再理解中国共产党是坚强的领导核心。领导核心可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j089",
+    "prerequisiteId": "cnd_j062",
+    "strength": "soft",
+    "reason": "教学上宜先知道党领导人民制定宪法，再理解党是坚强的领导核心。领导核心可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j090",
+    "prerequisiteId": "cnd_j089",
+    "strength": "soft",
+    "reason": "教学上宜先理解中国共产党是坚强的领导核心，再理解为什么要坚持和加强党的全面领导。党的全面领导可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j093",
+    "prerequisiteId": "cnd_j092",
+    "strength": "soft",
+    "reason": "教学上宜先理解中国特色社会主义进入新时代的意义，再理解新时代思想是必须长期坚持的指导思想。新时代思想可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j095",
+    "prerequisiteId": "cnd_j068",
+    "strength": "soft",
+    "reason": "教学上宜先知道人民代表大会制度是根本政治制度，再看新时代民主政治怎样发展。民主政治发展可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j096",
+    "prerequisiteId": "cnd_j034",
+    "strength": "soft",
+    "reason": "教学上宜先知道传承是用仍说得通的理念判断今天的选择，再理解文化自信为什么日益增强。文化自信可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j100",
+    "prerequisiteId": "cnd_j099",
+    "strength": "soft",
+    "reason": "教学上宜先知道分两步建成社会主义现代化强国，再理解中国式现代化有自己的特征。中国式现代化可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j101",
+    "prerequisiteId": "cnd_j091",
+    "strength": "soft",
+    "reason": "教学上宜先理解社会主要矛盾已经变化，再理解完整贯彻新发展理念。新发展理念可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j102",
+    "prerequisiteId": "cnd_j101",
+    "strength": "soft",
+    "reason": "教学上宜先知道新发展理念，再理解构建以国内大循环为主体的新发展格局。新发展格局可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j102",
+    "prerequisiteId": "cnd_j073",
+    "strength": "soft",
+    "reason": "教学上宜先知道社会主义市场经济体制，再理解构建新发展格局。新发展格局可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j104",
+    "prerequisiteId": "cnd_j070",
+    "strength": "soft",
+    "reason": "教学上宜先分清民族区域自治与基层群众自治，再理解铸牢中华民族共同体意识。共同体意识可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j106",
+    "prerequisiteId": "cnd_j006",
+    "strength": "soft",
+    "reason": "教学上宜先知道靠近梦想要从当下实事做起，再理解民族复兴梦要靠每个人追梦。民族复兴梦可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j106",
+    "prerequisiteId": "cnd_j099",
+    "strength": "soft",
+    "reason": "教学上宜先知道分两步建成现代化强国，再理解民族复兴梦要靠每个人追梦。民族复兴梦可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j004",
+    "prerequisiteId": "cnd_p093",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道每个人是独特的，再用多种渠道认识自己。认识自己可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j006",
+    "prerequisiteId": "cnd_p064",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道实现梦想要从现在做起，再用当下实事靠近梦想。靠近梦想可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j007",
+    "prerequisiteId": "cnd_p067",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过学习有方法，再按学习结果改下次的方法。改学习方法可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j007",
+    "prerequisiteId": "cnd_p152",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过学会反思，再把反思写成用了什么学法、得到什么结果、下次改哪一步。改学习方法可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j008",
+    "prerequisiteId": "cnd_p084",
+    "strength": "soft",
+    "reason": "教学上宜先在小学认识自己对家庭的贡献与责任，再辨识家庭里的关爱与责任。关爱与责任可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j009",
+    "prerequisiteId": "cnd_p127",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过读懂彼此的心，再处理家庭沟通与冲突。家庭沟通可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j010",
+    "prerequisiteId": "cnd_p071",
+    "strength": "soft",
+    "reason": "教学上宜先在小学走近自己的老师，再带着具体问题走近老师。走近老师可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j012",
+    "prerequisiteId": "cnd_p102",
+    "strength": "soft",
+    "reason": "教学上宜先在小学认识好朋友相处的道理，再按彼此尊重判断友谊和交友要求。友谊可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j013",
+    "prerequisiteId": "cnd_p090",
+    "strength": "soft",
+    "reason": "教学上宜先在小学热爱班集体，再看集体生活怎样成就个人。集体成就个人可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j014",
+    "prerequisiteId": "cnd_p040",
+    "strength": "soft",
+    "reason": "教学上宜先在小学为班级作过贡献，再在共建中承担自己做得到的那一份。共建中的那一份可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j015",
+    "prerequisiteId": "cnd_p092",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过协商决定班级事务，再在集体里提出不同意见并避免排斥。提出不同意见可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j016",
+    "prerequisiteId": "cnd_p094",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道生命最宝贵，再认识生命不可替代且时间有限。生命可贵可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j018",
+    "prerequisiteId": "cnd_p095",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过自我保护、免受伤害，再把遇险先撤离求助落到具体选择上。遇险处理可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j019",
+    "prerequisiteId": "cnd_p049",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道身心健康很重要，再用能长期坚持的方式爱护身体。爱护身体可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j020",
+    "prerequisiteId": "cnd_p050",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学做快乐鸟、调节情绪，再用能恢复心情的事滋养心灵。滋养心灵可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j021",
+    "prerequisiteId": "cnd_p061",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道每个人都有梦想，再追问自己愿意长期投入什么。探问人生目标可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j023",
+    "prerequisiteId": "cnd_p052",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道坚持才会有收获，再理解积极的人生态度是看见困难后仍做能做的事。积极人生态度可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j025",
+    "prerequisiteId": "cnd_p080",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道一切靠劳动，再理解人生价值要在实在的劳动里创造。人生价值可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j029",
+    "prerequisiteId": "cnd_p150",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学会尊重他人，再辨清自尊是肯定自己的人格并同样尊重他人。自尊可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j032",
+    "prerequisiteId": "cnd_p059",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道少年当自强，再理解自强是遇挫后把还能做的部分做完。自强可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j034",
+    "prerequisiteId": "cnd_p057",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道勤俭等传统美德要弘扬，再理解传承是用仍说得通的理念判断今天的选择。传承可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j038",
+    "prerequisiteId": "cnd_p139",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道法律是什么，再理解不同法律各调整一类关系才构成法律体系。法律体系可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j039",
+    "prerequisiteId": "cnd_p140",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道法律作用大，再理解法律保障生活同时禁止滥用权利。禁止滥用权利可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j041",
+    "prerequisiteId": "cnd_p149",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学做守法公民，再以刑法是否明文规定区分一般违法与犯罪。违法与犯罪可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j042",
+    "prerequisiteId": "cnd_p148",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学用好法律维护权利，再判断受到侵害要向法定途径求助。法定途径求助可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j044",
+    "prerequisiteId": "cnd_p130",
+    "strength": "soft",
+    "reason": "教学上宜先在小学认识我们的公共生活，再认识社会生活是人与人的相互联系。社会生活可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j046",
+    "prerequisiteId": "cnd_p075",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学做热心人，再理解亲社会行为也要安全可做。亲社会行为可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j047",
+    "prerequisiteId": "cnd_p098",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过安全文明上网，再理解网络改变的是联系的速度和范围。网络的影响可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j049",
+    "prerequisiteId": "cnd_p131",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过建立良好的公共秩序，再理解社会秩序靠共同遵守的规则变得可预期。社会秩序可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j051",
+    "prerequisiteId": "cnd_p074",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过公共场所的文明素养，再理解文明有礼要按场合表达尊重。文明有礼可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j052",
+    "prerequisiteId": "cnd_p103",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道说话要算数，再理解诚实守信是说清该说的事实并履行承诺。诚实守信可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j054",
+    "prerequisiteId": "cnd_p150",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学会尊重他人，再理解平等是同等尊重而不是结果完全一样。平等可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j057",
+    "prerequisiteId": "cnd_p132",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过我参与我奉献，再把奉献落到能力和安全范围内的具体事。践行奉献可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j058",
+    "prerequisiteId": "cnd_p143",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道公民有维护国家利益的义务，再理解国家利益高于眼前私利。国家利益可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j059",
+    "prerequisiteId": "cnd_p136",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过夺取抗日战争和人民解放战争的胜利，再理解人民军队为什么受党和人民信赖。人民军队可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j062",
+    "prerequisiteId": "cnd_p141",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道宪法是根本法，再理解党领导人民制定宪法。制定宪法可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j065",
+    "prerequisiteId": "cnd_p143",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道公民的基本权利和义务，再理解公民在法律面前平等且人格尊严受保护。公民权利平等可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j066",
+    "prerequisiteId": "cnd_p143",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道公民的基本权利和义务，再判断受教育既是权利也是义务。受教育权利义务可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j068",
+    "prerequisiteId": "cnd_p119",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道人民当家作主，再理解人民代表大会制度是根本政治制度。人大制度可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j071",
+    "prerequisiteId": "cnd_p120",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道社会主义好，再理解公有制为主体、多种所有制共同发展。所有制可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j073",
+    "prerequisiteId": "cnd_p121",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过改革开放展宏图，再理解社会主义市场经济体制。市场经济体制可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j074",
+    "prerequisiteId": "cnd_p144",
+    "strength": "soft",
+    "reason": "教学上宜先在小学了解国家机构，再分辨不同国家机关的性质不能互换。国家机关性质可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j086",
+    "prerequisiteId": "cnd_p138",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过从富起来到强起来，再概括党团结带领人民书写的百年史诗。百年史诗可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j087",
+    "prerequisiteId": "cnd_p135",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道中国有了共产党，再理解弘扬伟大建党精神。建党精神可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j091",
+    "prerequisiteId": "cnd_p124",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过走进新时代，再理解我国社会主要矛盾已经变化。社会主要矛盾可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j094",
+    "prerequisiteId": "cnd_p125",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过新时代的历史性成就，再理解新时代经济实力大幅跃升。经济实力可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j097",
+    "prerequisiteId": "cnd_p125",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过新时代的历史性成就，再理解新时代民生福祉持续增进。民生福祉可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j098",
+    "prerequisiteId": "cnd_p045",
+    "strength": "soft",
+    "reason": "教学上宜先在小学认识美丽中国我们的家，再理解美丽中国加快建设。美丽中国可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j098",
+    "prerequisiteId": "cnd_p153",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过地球是我们的家园，再理解美丽中国加快建设。美丽中国可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j099",
+    "prerequisiteId": "cnd_p126",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过开启新征程，再理解分两步把我国建成现代化强国。两步走可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j105",
+    "prerequisiteId": "cnd_p123",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过祖国统一大业不断推进，再理解坚持一个中国原则、实现祖国完全统一。一个中国原则可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j003",
+    "prerequisiteId": "cnd_p017",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道要有个新目标，再把初中目标定得可核对且贴合条件。定目标可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j011",
+    "prerequisiteId": "cnd_p034",
+    "strength": "soft",
+    "reason": "教学上宜先在小学过教师节、感恩老师，再用具体行动珍惜师生情谊。珍惜师生情谊可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j043",
+    "prerequisiteId": "cnd_p149",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学做守法公民，再理解严于律己是守住边界而不是自我处刑。严于律己可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j048",
+    "prerequisiteId": "cnd_p098",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过安全文明上网，再理解网上表达不能扩大对他人的伤害。清朗空间可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j067",
+    "prerequisiteId": "cnd_p143",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道公民的基本权利和义务，再理解权利义务相统一、依法行使。权利义务相统一可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j095",
+    "prerequisiteId": "cnd_p119",
+    "strength": "soft",
+    "reason": "教学上宜先在小学知道人民当家作主，再理解新时代民主政治不断发展。民主政治发展可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_j106",
+    "prerequisiteId": "cnd_p063",
+    "strength": "soft",
+    "reason": "教学上宜先在小学学过梦想接力棒，再理解民族复兴梦要靠每个人追梦。民族复兴梦可以凭题面单独判断，这条 soft 不是掌握门槛。"
+  },
+  {
+    "topicId": "cnd_p090",
+    "prerequisiteId": "cnd_p037",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「这是我们班」，再学「热爱班集体」：从认识自己的班到热爱班集体，班级归属感一步步加深。"
+  },
+  {
+    "topicId": "cnd_p092",
+    "prerequisiteId": "cnd_p038",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「班级生活有规则」，再学「协商决定班级事务」：班级生活有规则是协商决定班级事务的前提。"
+  },
+  {
+    "topicId": "cnd_p074",
+    "prerequisiteId": "cnd_p013",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「我们小点儿声」，再学「公共场所的文明素养」：从低年级的小声说话到公共场所的文明素养。"
+  },
+  {
+    "topicId": "cnd_p130",
+    "prerequisiteId": "cnd_p014",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「人人爱护公物」，再学「我们的公共生活」：爱护公物是认识公共生活的起点。"
+  },
+  {
+    "topicId": "cnd_p076",
+    "prerequisiteId": "cnd_p038",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「班级生活有规则」，再学「生活离不开规则」：从班级规则到生活中处处有规则。"
+  },
+  {
+    "topicId": "cnd_p131",
+    "prerequisiteId": "cnd_p076",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「生活离不开规则」，再学「建立良好的公共秩序」：先懂得生活离不开规则，才谈得上建立良好的公共秩序。"
+  },
+  {
+    "topicId": "cnd_p077",
+    "prerequisiteId": "cnd_p004",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「平平安安回家来」，再学「安全记心上」：从平安回家到更系统的安全意识。"
+  },
+  {
+    "topicId": "cnd_p095",
+    "prerequisiteId": "cnd_p077",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「安全记心上」，再学「自我保护，免受伤害」：安全意识是学会自我保护的基础。"
+  },
+  {
+    "topicId": "cnd_p105",
+    "prerequisiteId": "cnd_p099",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「购物有学问」，再学「买东西的学问」：从购物有学问到买东西的学问，消费主题深化。"
+  },
+  {
+    "topicId": "cnd_p106",
+    "prerequisiteId": "cnd_p100",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「学会合理消费」，再学「合理消费」：从学会合理消费到进一步合理消费。"
+  },
+  {
+    "topicId": "cnd_p107",
+    "prerequisiteId": "cnd_p101",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「反对浪费」，再学「有多少浪费本可以避免」：从反对浪费到分析哪些浪费本可以避免。"
+  },
+  {
+    "topicId": "cnd_p101",
+    "prerequisiteId": "cnd_p057",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「勤俭传家好」，再学「反对浪费」：勤俭是反对浪费的传统美德基础。"
+  },
+  {
+    "topicId": "cnd_p083",
+    "prerequisiteId": "cnd_p028",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「学做家务活」，再学「少让父母操心」：会做家务是学会少让父母操心的起点。"
+  },
+  {
+    "topicId": "cnd_p084",
+    "prerequisiteId": "cnd_p028",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「学做家务活」，再学「我的家庭贡献与责任」：会做家务是理解家庭贡献与责任的起点。"
+  },
+  {
+    "topicId": "cnd_p085",
+    "prerequisiteId": "cnd_p026",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「相亲相爱一家人」，再学「弘扬家庭美德」：相亲相爱是弘扬家庭美德的情感基础。"
+  },
+  {
+    "topicId": "cnd_p128",
+    "prerequisiteId": "cnd_p084",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「我的家庭贡献与责任」，再学「让我们的家更美好」：从认识家庭责任到共同让家更美好。"
+  },
+  {
+    "topicId": "cnd_p129",
+    "prerequisiteId": "cnd_p085",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「弘扬家庭美德」，再学「弘扬优秀家风」：从家庭美德到优秀家风，主题逐年深化。"
+  },
+  {
+    "topicId": "cnd_p127",
+    "prerequisiteId": "cnd_p083",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「少让父母操心」，再学「读懂彼此的心」：从少让父母操心到读懂彼此的心，亲情理解加深。"
+  },
+  {
+    "topicId": "cnd_p113",
+    "prerequisiteId": "cnd_p041",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「我爱家乡山和水」，再学「家乡的喜与忧」：从热爱家乡山水到关心家乡的喜与忧。"
+  },
+  {
+    "topicId": "cnd_p153",
+    "prerequisiteId": "cnd_p054",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「爱护动植物」，再学「地球——我们的家园」：从爱护动植物到爱护地球这个共同的家。"
+  },
+  {
+    "topicId": "cnd_p153",
+    "prerequisiteId": "cnd_p113",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「家乡的喜与忧」，再学「地球——我们的家园」：从关心家乡环境到关心地球家园。"
+  },
+  {
+    "topicId": "cnd_p108",
+    "prerequisiteId": "cnd_p042",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「家乡物产养育我」，再学「我们的衣食之源」：从家乡物产养育我到认识衣食之源。"
+  },
+  {
+    "topicId": "cnd_p109",
+    "prerequisiteId": "cnd_p056",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「我是一张纸」，再学「这些东西哪里来」：从一张纸的来历到认识日常物品从哪里来。"
+  },
+  {
+    "topicId": "cnd_p110",
+    "prerequisiteId": "cnd_p081",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「致敬劳动者」，再学「生活离不开他们」：从致敬劳动者到理解生活离不开他们。"
+  },
+  {
+    "topicId": "cnd_p111",
+    "prerequisiteId": "cnd_p047",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「红红火火中国年」，再学「我们当地的风俗」：从过中国年到了解当地风俗。"
+  },
+  {
+    "topicId": "cnd_p118",
+    "prerequisiteId": "cnd_p036",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「欢欢喜喜庆国庆」，再学「中国人民站起来了」：从庆国庆到理解新中国成立、中国人民站起来了。"
+  },
+  {
+    "topicId": "cnd_p142",
+    "prerequisiteId": "cnd_p046",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「我们都是中国人」，再学「我是中国公民」：知道我们都是中国人是认识中国公民身份的基础。"
+  },
+  {
+    "topicId": "cnd_p126",
+    "prerequisiteId": "cnd_p063",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「梦想接力棒」，再学「开启新征程」：梦想接力棒与开启新征程都在讲一代代人接续追梦。"
+  },
+  {
+    "topicId": "cnd_p135",
+    "prerequisiteId": "cnd_p114",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「开天辟地的大事变」，再学「中国有了共产党」：从开天辟地的大事变到中国有了共产党，党史主题再深化。"
+  },
+  {
+    "topicId": "cnd_p136",
+    "prerequisiteId": "cnd_p116",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「抗日战争的中流砥柱」，再学「夺取抗日战争和人民解放战争的胜利」：从抗日战争的中流砥柱到夺取抗日战争的胜利。"
+  },
+  {
+    "topicId": "cnd_p136",
+    "prerequisiteId": "cnd_p117",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「夺取胜利的解放战争」，再学「夺取抗日战争和人民解放战争的胜利」：从夺取解放战争的胜利到夺取抗日战争和人民解放战争的胜利。"
+  },
+  {
+    "topicId": "cnd_p137",
+    "prerequisiteId": "cnd_p118",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「中国人民站起来了」，再学「屹立在世界的东方」：从中国人民站起来了到屹立在世界的东方。"
+  },
+  {
+    "topicId": "cnd_p138",
+    "prerequisiteId": "cnd_p121",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「改革开放展宏图」，再学「富起来到强起来」：从改革开放展宏图到富起来。"
+  },
+  {
+    "topicId": "cnd_p138",
+    "prerequisiteId": "cnd_p125",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「历史性成就」，再学「富起来到强起来」：从新时代的历史性成就到强起来。"
+  },
+  {
+    "topicId": "cnd_p139",
+    "prerequisiteId": "cnd_p076",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「生活离不开规则」，再学「法律是什么」：懂得生活离不开规则，再理解法律是什么。"
+  },
+  {
+    "topicId": "cnd_p145",
+    "prerequisiteId": "cnd_p095",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「自我保护，免受伤害」，再学「未成年人需特殊保护」：从自我保护到未成年人受特殊保护。"
+  },
+  {
+    "topicId": "cnd_p149",
+    "prerequisiteId": "cnd_p131",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「建立良好的公共秩序」，再学「做守法公民」：从公共秩序到做守法公民。"
+  },
+  {
+    "topicId": "cnd_p152",
+    "prerequisiteId": "cnd_p019",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「错了就要改」，再学「学会反思」：从错了就要改到学会反思。"
+  },
+  {
+    "topicId": "cnd_p151",
+    "prerequisiteId": "cnd_p104",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「当冲突发生」，再学「学会宽容」：从冲突发生时的处理到学会宽容。"
+  },
+  {
+    "topicId": "cnd_p088",
+    "prerequisiteId": "cnd_p022",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「请帮我一下」，再学「同学要互助」：从请同学帮一下到同学要互助。"
+  },
+  {
+    "topicId": "cnd_p089",
+    "prerequisiteId": "cnd_p058",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「诚信贵如金」，再学「待人要诚信」：从诚信贵如金到待人要诚信。"
+  },
+  {
+    "topicId": "cnd_p103",
+    "prerequisiteId": "cnd_p089",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「待人要诚信」，再学「说话要算数」：从待人要诚信到说话要算数。"
+  },
+  {
+    "topicId": "cnd_p132",
+    "prerequisiteId": "cnd_p075",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「我们都是热心人」，再学「我参与 我奉献」：从做热心人到我参与我奉献。"
+  },
+  {
+    "topicId": "cnd_p102",
+    "prerequisiteId": "cnd_p006",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「拉拉手，交朋友」，再学「我们的好朋友」：从拉拉手交朋友到我们的好朋友。"
+  },
+  {
+    "topicId": "cnd_p060",
+    "prerequisiteId": "cnd_p032",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「学先锋 做先锋」，再学「见贤要思齐」：从学先锋做先锋到见贤要思齐。"
+  },
+  {
+    "topicId": "cnd_p157",
+    "prerequisiteId": "cnd_p068",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「科技力量大」，再学「科技发展 造福人类」：从科技力量大到科技发展造福人类。"
+  },
+  {
+    "topicId": "cnd_p082",
+    "prerequisiteId": "cnd_p028",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「学做家务活」，再学「从小爱劳动」：从学做家务活到从小爱劳动。"
+  },
+  {
+    "topicId": "cnd_p049",
+    "prerequisiteId": "cnd_p009",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「作息有规律」，再学「身心健康很重要」：从作息有规律到身心健康很重要。"
+  },
+  {
+    "topicId": "cnd_p097",
+    "prerequisiteId": "cnd_p012",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「玩也有学问」，再学「别让它抢走太多」：从玩也有学问到别让上网玩乐抢走太多时间。"
+  },
+  {
+    "topicId": "cnd_p072",
+    "prerequisiteId": "cnd_p021",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「和大家在一起」，再学「同学相伴」：从和大家在一起到同学相伴。"
+  },
+  {
+    "topicId": "cnd_p071",
+    "prerequisiteId": "cnd_p034",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「教师节快乐」，再学「走近我们的老师」：从教师节快乐到走近我们的老师。"
+  },
+  {
+    "topicId": "cnd_p071",
+    "prerequisiteId": "cnd_p005",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「老师，您好！」，再学「走近我们的老师」：从问候老师到走近我们的老师。"
+  },
+  {
+    "topicId": "cnd_p065",
+    "prerequisiteId": "cnd_p007",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「上课了，好好学」，再学「学习伴我成长」：从上课了好好学到学习伴我成长。"
+  },
+  {
+    "topicId": "cnd_p148",
+    "prerequisiteId": "cnd_p140",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「法律作用大」，再学「用好法律 维护权利」：知道法律作用大，才懂得用好法律维护权利。"
+  },
+  {
+    "topicId": "cnd_p053",
+    "prerequisiteId": "cnd_p041",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「我爱家乡山和水」，再学「亲近大自然」：从热爱家乡山水到亲近大自然。"
+  },
+  {
+    "topicId": "cnd_p094",
+    "prerequisiteId": "cnd_p049",
+    "strength": "soft",
+    "reason": "按统编版道德与法治螺旋式编排的主题递进，先学「身心健康很重要」，再学「生命最宝贵」：懂得身心健康很重要，再认识生命最宝贵。"
   }
 ]
