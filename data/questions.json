@@ -42025,9 +42025,9 @@
     "topicId": "cnm_h117",
     "difficulty": "standard",
     "type": "numeric",
-    "prompt": "性质定理里，交线有几条？",
+    "prompt": "直线 a 平行于平面 α，过 a 的平面 β 与平面 α 相交于直线 b。在这条性质定理里，平面 β 与平面 α 的交线有几条？",
     "answer": "1",
-    "explanation": "两个平面相交得到一条交线。",
+    "explanation": "两个不重合的平面相交，交线只有一条，就是直线 b；再由性质定理得 a 平行于 b。",
     "verify": "1"
   },
   {
@@ -214163,10 +214163,10 @@
   {
     "difficulty": "standard",
     "type": "numeric",
-    "prompt": "54 个气球平均分成 9 份。每份几个？又拿走 1 份，还剩多少个？",
-    "answer": "48",
-    "explanation": "每份 54÷9＝6，拿走 1 份剩 54－6＝48。",
-    "verify": "54-54//9",
+    "prompt": "54 个气球平均分成 9 份。每份几个？又拿走 1 份，还剩多少个？（依次作答，用逗号隔开）",
+    "answer": "6，48",
+    "explanation": "每份 54÷9＝6（个），拿走 1 份剩 54－6＝48（个）。所以两问依次是 6，48。",
+    "verify": "(54//9, 54-54//9)",
     "id": "cnm_p268_q3",
     "topicId": "cnm_p268"
   },
@@ -296354,118 +296354,6 @@
     "verify": "\"那里的草被人常常踩踏\""
   },
   {
-    "id": "cns_p007_q1",
-    "topicId": "cns_p007",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "植物从土里吸水靠的是什么？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "根"
-      },
-      {
-        "key": "B",
-        "text": "花"
-      },
-      {
-        "key": "C",
-        "text": "果实"
-      },
-      {
-        "key": "D",
-        "text": "叶"
-      }
-    ],
-    "answer": "A",
-    "explanation": "根把水从土里吸上来。",
-    "verify": "\"根\""
-  },
-  {
-    "id": "cns_p007_q2",
-    "topicId": "cns_p007",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "把水从根运送到叶子的部分是什么？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "花"
-      },
-      {
-        "key": "B",
-        "text": "茎"
-      },
-      {
-        "key": "C",
-        "text": "种子"
-      },
-      {
-        "key": "D",
-        "text": "果实"
-      }
-    ],
-    "answer": "B",
-    "explanation": "茎连接根和叶，运送水分。",
-    "verify": "\"茎\""
-  },
-  {
-    "id": "cns_p007_q3",
-    "topicId": "cns_p007",
-    "difficulty": "standard",
-    "type": "choice",
-    "prompt": "下面哪一样我们吃的是植物的叶？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "胡萝卜"
-      },
-      {
-        "key": "B",
-        "text": "土豆"
-      },
-      {
-        "key": "C",
-        "text": "青菜"
-      },
-      {
-        "key": "D",
-        "text": "苹果"
-      }
-    ],
-    "answer": "C",
-    "explanation": "青菜吃的是叶；胡萝卜吃根，土豆吃茎，苹果是果实。",
-    "verify": "\"青菜\""
-  },
-  {
-    "id": "cns_p007_q4",
-    "topicId": "cns_p007",
-    "difficulty": "challenge",
-    "type": "choice",
-    "prompt": "大风吹来，大树没有倒下，主要靠哪部分？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "绿绿的叶子"
-      },
-      {
-        "key": "B",
-        "text": "漂亮的花"
-      },
-      {
-        "key": "C",
-        "text": "树上的果实"
-      },
-      {
-        "key": "D",
-        "text": "深深扎在土里的根"
-      }
-    ],
-    "answer": "D",
-    "explanation": "根扎得深，能把植物牢牢固定在土里。",
-    "verify": "\"深深扎在土里的根\""
-  },
-  {
     "id": "cns_p008_q1",
     "topicId": "cns_p008",
     "difficulty": "basic",
@@ -298147,118 +298035,6 @@
     "verify": "\"用勺子搅拌\""
   },
   {
-    "id": "cns_p023_q1",
-    "topicId": "cns_p023",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "铅笔外面那层通常是用什么材料做的？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "木头"
-      },
-      {
-        "key": "B",
-        "text": "玻璃"
-      },
-      {
-        "key": "C",
-        "text": "布"
-      },
-      {
-        "key": "D",
-        "text": "陶瓷"
-      }
-    ],
-    "answer": "A",
-    "explanation": "铅笔杆多用木头做。",
-    "verify": "\"木头\""
-  },
-  {
-    "id": "cns_p023_q2",
-    "topicId": "cns_p023",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "下面哪一样是用金属做的？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "纸杯"
-      },
-      {
-        "key": "B",
-        "text": "铁钉"
-      },
-      {
-        "key": "C",
-        "text": "木筷"
-      },
-      {
-        "key": "D",
-        "text": "塑料尺"
-      }
-    ],
-    "answer": "B",
-    "explanation": "铁钉是金属铁做的。",
-    "verify": "\"铁钉\""
-  },
-  {
-    "id": "cns_p023_q3",
-    "topicId": "cns_p023",
-    "difficulty": "standard",
-    "type": "choice",
-    "prompt": "想做一个不怕摔的水杯，选哪种材料比较好？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "玻璃"
-      },
-      {
-        "key": "B",
-        "text": "陶瓷"
-      },
-      {
-        "key": "C",
-        "text": "塑料"
-      },
-      {
-        "key": "D",
-        "text": "纸"
-      }
-    ],
-    "answer": "C",
-    "explanation": "塑料不易摔碎；玻璃、陶瓷易碎，纸怕水。",
-    "verify": "\"塑料\""
-  },
-  {
-    "id": "cns_p023_q4",
-    "topicId": "cns_p023",
-    "difficulty": "challenge",
-    "type": "choice",
-    "prompt": "为什么雨伞面常用布或塑料做，而不用纸？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "纸太重"
-      },
-      {
-        "key": "B",
-        "text": "纸颜色太少"
-      },
-      {
-        "key": "C",
-        "text": "纸太硬"
-      },
-      {
-        "key": "D",
-        "text": "布和塑料不容易被雨水泡坏"
-      }
-    ],
-    "answer": "D",
-    "explanation": "普通纸遇水会变软破掉。",
-    "verify": "\"布和塑料不容易被雨水泡坏\""
-  },
-  {
     "id": "cns_p024_q1",
     "topicId": "cns_p024",
     "difficulty": "basic",
@@ -298931,118 +298707,6 @@
     "verify": "\"选择一种动物并扮演它去参加\""
   },
   {
-    "id": "cns_p029_q1",
-    "topicId": "cns_p029",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "小鸟身上长的是什么？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "鳞片"
-      },
-      {
-        "key": "B",
-        "text": "壳"
-      },
-      {
-        "key": "C",
-        "text": "羽毛"
-      },
-      {
-        "key": "D",
-        "text": "长毛"
-      }
-    ],
-    "answer": "C",
-    "explanation": "鸟类有羽毛。",
-    "verify": "\"羽毛\""
-  },
-  {
-    "id": "cns_p029_q2",
-    "topicId": "cns_p029",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "鱼的身体表面一般覆盖着什么？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "羽毛"
-      },
-      {
-        "key": "B",
-        "text": "长毛"
-      },
-      {
-        "key": "C",
-        "text": "硬壳"
-      },
-      {
-        "key": "D",
-        "text": "鳞片"
-      }
-    ],
-    "answer": "D",
-    "explanation": "多数鱼体表有鳞片。",
-    "verify": "\"鳞片\""
-  },
-  {
-    "id": "cns_p029_q3",
-    "topicId": "cns_p029",
-    "difficulty": "standard",
-    "type": "choice",
-    "prompt": "小猫身上长的是什么？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "毛"
-      },
-      {
-        "key": "B",
-        "text": "羽毛"
-      },
-      {
-        "key": "C",
-        "text": "鳞片"
-      },
-      {
-        "key": "D",
-        "text": "壳"
-      }
-    ],
-    "answer": "A",
-    "explanation": "猫的身上长满毛，能保暖。",
-    "verify": "\"毛\""
-  },
-  {
-    "id": "cns_p029_q4",
-    "topicId": "cns_p029",
-    "difficulty": "challenge",
-    "type": "choice",
-    "prompt": "乌龟遇到危险时会把头缩进去，这主要靠身体的哪个特征保护自己？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "长长的尾巴"
-      },
-      {
-        "key": "B",
-        "text": "坚硬的壳"
-      },
-      {
-        "key": "C",
-        "text": "漂亮的花纹"
-      },
-      {
-        "key": "D",
-        "text": "锋利的牙齿"
-      }
-    ],
-    "answer": "B",
-    "explanation": "乌龟用硬壳保护身体。",
-    "verify": "\"坚硬的壳\""
-  },
-  {
     "id": "cns_p031_q1",
     "topicId": "cns_p031",
     "difficulty": "basic",
@@ -299713,118 +299377,6 @@
     "answer": "A",
     "explanation": "听取意见并改进是工程的一部分。",
     "verify": "\"根据建议改进自己的小房子\""
-  },
-  {
-    "id": "cns_p037_q1",
-    "topicId": "cns_p037",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "下面哪种形状的框架最不容易变形？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "正方形"
-      },
-      {
-        "key": "B",
-        "text": "长方形"
-      },
-      {
-        "key": "C",
-        "text": "三角形"
-      },
-      {
-        "key": "D",
-        "text": "圆形"
-      }
-    ],
-    "answer": "C",
-    "explanation": "三角形结构稳定，不易变形。",
-    "verify": "\"三角形\""
-  },
-  {
-    "id": "cns_p037_q2",
-    "topicId": "cns_p037",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "铁架桥、电线塔上常看到哪种结构？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "圆形"
-      },
-      {
-        "key": "B",
-        "text": "五边形"
-      },
-      {
-        "key": "C",
-        "text": "心形"
-      },
-      {
-        "key": "D",
-        "text": "三角形"
-      }
-    ],
-    "answer": "D",
-    "explanation": "三角形结构稳固，常用于建筑和支架。",
-    "verify": "\"三角形\""
-  },
-  {
-    "id": "cns_p037_q3",
-    "topicId": "cns_p037",
-    "difficulty": "standard",
-    "type": "choice",
-    "prompt": "用吸管做的正方形框架一推就歪，怎样最简单地让它变牢？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "加一根对角线变成两个三角形"
-      },
-      {
-        "key": "B",
-        "text": "再涂一层颜色"
-      },
-      {
-        "key": "C",
-        "text": "换一种颜色的吸管"
-      },
-      {
-        "key": "D",
-        "text": "把它放在桌上"
-      }
-    ],
-    "answer": "A",
-    "explanation": "加对角线后形成三角形，就不易变形。",
-    "verify": "\"加一根对角线变成两个三角形\""
-  },
-  {
-    "id": "cns_p037_q4",
-    "topicId": "cns_p037",
-    "difficulty": "challenge",
-    "type": "choice",
-    "prompt": "搭纸塔时，底部宽、上部窄的塔为什么更稳？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "它更好看"
-      },
-      {
-        "key": "B",
-        "text": "底面大，上面轻，不容易倒"
-      },
-      {
-        "key": "C",
-        "text": "它用的纸更少"
-      },
-      {
-        "key": "D",
-        "text": "它更高"
-      }
-    ],
-    "answer": "B",
-    "explanation": "底面大、上轻下重的结构更稳。",
-    "verify": "\"底面大，上面轻，不容易倒\""
   },
   {
     "id": "cns_p038_q1",
@@ -300839,28 +300391,28 @@
     "topicId": "cns_p047",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "化石通常是在哪里发现的？",
+    "prompt": "古代生物的遗体被泥沙掩埋，在岩石里经过非常漫长的时间，可能变成什么？",
     "choices": [
       {
         "key": "A",
-        "text": "岩石里"
+        "text": "化石"
       },
       {
         "key": "B",
-        "text": "空气中"
+        "text": "岩浆"
       },
       {
         "key": "C",
-        "text": "水面上"
+        "text": "煤气"
       },
       {
         "key": "D",
-        "text": "云里"
+        "text": "沙漠"
       }
     ],
     "answer": "A",
-    "explanation": "化石保存在岩层中。",
-    "verify": "\"岩石里\""
+    "explanation": "遗体被泥沙掩埋、保存在岩石里，经过极其漫长的时间才能形成化石，所以化石通常在岩层中发现。",
+    "verify": "\"化石\""
   },
   {
     "id": "cns_p047_q2",
@@ -301508,118 +301060,6 @@
     "verify": "\"化石是了解古代生物的证据\""
   },
   {
-    "id": "cns_p053_q1",
-    "topicId": "cns_p053",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "化石形成需要多长时间？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "一天"
-      },
-      {
-        "key": "B",
-        "text": "一个星期"
-      },
-      {
-        "key": "C",
-        "text": "非常非常长，往往上万年以上"
-      },
-      {
-        "key": "D",
-        "text": "一年"
-      }
-    ],
-    "answer": "C",
-    "explanation": "化石要经过极其漫长的时间才能形成。",
-    "verify": "\"非常非常长，往往上万年以上\""
-  },
-  {
-    "id": "cns_p053_q2",
-    "topicId": "cns_p053",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "动物死后被什么迅速掩埋，才更容易形成化石？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "空气"
-      },
-      {
-        "key": "B",
-        "text": "阳光"
-      },
-      {
-        "key": "C",
-        "text": "雪花"
-      },
-      {
-        "key": "D",
-        "text": "泥沙"
-      }
-    ],
-    "answer": "D",
-    "explanation": "被泥沙掩埋能隔绝空气，减慢腐烂。",
-    "verify": "\"泥沙\""
-  },
-  {
-    "id": "cns_p053_q3",
-    "topicId": "cns_p053",
-    "difficulty": "standard",
-    "type": "choice",
-    "prompt": "恐龙身体的哪部分最容易保存成化石？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "骨骼和牙齿"
-      },
-      {
-        "key": "B",
-        "text": "皮肤的颜色"
-      },
-      {
-        "key": "C",
-        "text": "眼睛"
-      },
-      {
-        "key": "D",
-        "text": "叫声"
-      }
-    ],
-    "answer": "A",
-    "explanation": "坚硬的骨骼和牙齿最容易保存下来。",
-    "verify": "\"骨骼和牙齿\""
-  },
-  {
-    "id": "cns_p053_q4",
-    "topicId": "cns_p053",
-    "difficulty": "challenge",
-    "type": "choice",
-    "prompt": "在高山的岩石里发现了鱼的化石，说明什么？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "鱼会爬山"
-      },
-      {
-        "key": "B",
-        "text": "这里很久以前可能是水域"
-      },
-      {
-        "key": "C",
-        "text": "化石是人放上去的"
-      },
-      {
-        "key": "D",
-        "text": "山上一直有河"
-      }
-    ],
-    "answer": "B",
-    "explanation": "化石能告诉我们古代的环境。",
-    "verify": "\"这里很久以前可能是水域\""
-  },
-  {
     "id": "cns_p054_q1",
     "topicId": "cns_p054",
     "difficulty": "basic",
@@ -301904,56 +301344,56 @@
     "topicId": "cns_p059",
     "difficulty": "standard",
     "type": "choice",
-    "prompt": "探索「拉动小车」时，还应该想一想什么？",
+    "prompt": "不用手碰铁架小车，也能让它动起来，可以怎么做？",
     "choices": [
       {
         "key": "A",
-        "text": "怎样给磁铁涂颜色"
+        "text": "对着小车大声喊"
       },
       {
         "key": "B",
-        "text": "小车轮胎要买哪一种"
+        "text": "给小车涂上颜色"
       },
       {
         "key": "C",
-        "text": "我们还见过哪些拉力现象"
+        "text": "用磁铁隔着一段距离吸引它"
       },
       {
         "key": "D",
-        "text": "怎样记录一周的天气"
+        "text": "把小车放在桌上不管"
       }
     ],
     "answer": "C",
-    "explanation": "开篇先探索拉动小车，并联系见过的拉力现象。",
-    "verify": "\"我们还见过哪些拉力现象\""
+    "explanation": "磁铁的吸引力隔着一段距离也起作用，不接触小车就能把它吸动。",
+    "verify": "\"用磁铁隔着一段距离吸引它\""
   },
   {
     "id": "cns_p059_q4",
     "topicId": "cns_p059",
     "difficulty": "challenge",
     "type": "choice",
-    "prompt": "面对这辆铁架四轮小车，课文聚焦的问题是什么？",
+    "prompt": "用磁铁隔空吸引铁架小车时，磁铁离小车越近，小车受到的吸引力会怎样？",
     "choices": [
       {
         "key": "A",
-        "text": "怎样给磁铁编号？"
+        "text": "越小"
       },
       {
         "key": "B",
-        "text": "恐龙化石有多长？"
+        "text": "一点也不变"
       },
       {
         "key": "C",
-        "text": "云量怎么记？"
+        "text": "变成排斥力"
       },
       {
         "key": "D",
-        "text": "我们有多少种方法让这辆小车动起来？"
+        "text": "越大"
       }
     ],
     "answer": "D",
-    "explanation": "课文聚焦「我们有多少种方法让这辆小车动起来？」",
-    "verify": "\"我们有多少种方法让这辆小车动起来？\""
+    "explanation": "磁铁离得越近，吸引力越大；离得越远，吸引力越小。",
+    "verify": "\"越大\""
   },
   {
     "id": "cns_p056_q1",
@@ -302290,230 +301730,6 @@
     "answer": "D",
     "explanation": "要先有设计好的钓鱼玩具，才能开展「我们来钓鱼」。",
     "verify": "\"先把玩具做好，才能用来钓鱼\""
-  },
-  {
-    "id": "cns_p058_q1",
-    "topicId": "cns_p058",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "一块磁铁有几个磁极？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "一个"
-      },
-      {
-        "key": "B",
-        "text": "三个"
-      },
-      {
-        "key": "C",
-        "text": "没有"
-      },
-      {
-        "key": "D",
-        "text": "两个"
-      }
-    ],
-    "answer": "D",
-    "explanation": "每块磁铁都有 N 极和 S 极两个磁极。",
-    "verify": "\"两个\""
-  },
-  {
-    "id": "cns_p058_q2",
-    "topicId": "cns_p058",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "磁铁的 N 极又叫什么极？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "北极"
-      },
-      {
-        "key": "B",
-        "text": "南极"
-      },
-      {
-        "key": "C",
-        "text": "东极"
-      },
-      {
-        "key": "D",
-        "text": "西极"
-      }
-    ],
-    "answer": "A",
-    "explanation": "N 极指北，又叫北极。",
-    "verify": "\"北极\""
-  },
-  {
-    "id": "cns_p058_q3",
-    "topicId": "cns_p058",
-    "difficulty": "standard",
-    "type": "choice",
-    "prompt": "把条形磁铁吊起来让它自由转动，停下时会怎样？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "随便停在哪个方向"
-      },
-      {
-        "key": "B",
-        "text": "一端指南，一端指北"
-      },
-      {
-        "key": "C",
-        "text": "一直不停地转"
-      },
-      {
-        "key": "D",
-        "text": "一端指东一端指西"
-      }
-    ],
-    "answer": "B",
-    "explanation": "自由转动的磁铁会指南北。",
-    "verify": "\"一端指南，一端指北\""
-  },
-  {
-    "id": "cns_p058_q4",
-    "topicId": "cns_p058",
-    "difficulty": "challenge",
-    "type": "choice",
-    "prompt": "把一块条形磁铁从中间断开，每一段有几个磁极？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "一个"
-      },
-      {
-        "key": "B",
-        "text": "零个"
-      },
-      {
-        "key": "C",
-        "text": "两个"
-      },
-      {
-        "key": "D",
-        "text": "四个"
-      }
-    ],
-    "answer": "C",
-    "explanation": "断开后每段仍然有 N 极和 S 极。",
-    "verify": "\"两个\""
-  },
-  {
-    "id": "cns_p060_q1",
-    "topicId": "cns_p060",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "下面哪一样东西用到了磁铁？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "铅笔芯"
-      },
-      {
-        "key": "B",
-        "text": "冰箱门封条"
-      },
-      {
-        "key": "C",
-        "text": "木头椅子"
-      },
-      {
-        "key": "D",
-        "text": "玻璃杯"
-      }
-    ],
-    "answer": "B",
-    "explanation": "冰箱门封条里有磁条，能把门吸紧。",
-    "verify": "\"冰箱门封条\""
-  },
-  {
-    "id": "cns_p060_q2",
-    "topicId": "cns_p060",
-    "difficulty": "basic",
-    "type": "choice",
-    "prompt": "有的文具盒盖子能「啪」地自动吸住，里面装了什么？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "胶水"
-      },
-      {
-        "key": "B",
-        "text": "弹簧"
-      },
-      {
-        "key": "C",
-        "text": "小磁铁"
-      },
-      {
-        "key": "D",
-        "text": "海绵"
-      }
-    ],
-    "answer": "C",
-    "explanation": "盒盖和盒身里的磁铁互相吸引。",
-    "verify": "\"小磁铁\""
-  },
-  {
-    "id": "cns_p060_q3",
-    "topicId": "cns_p060",
-    "difficulty": "standard",
-    "type": "choice",
-    "prompt": "能帮助人们辨别方向的磁铁工具是什么？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "放大镜"
-      },
-      {
-        "key": "B",
-        "text": "温度计"
-      },
-      {
-        "key": "C",
-        "text": "天平"
-      },
-      {
-        "key": "D",
-        "text": "指南针"
-      }
-    ],
-    "answer": "D",
-    "explanation": "指南针里的磁针会指南北。",
-    "verify": "\"指南针\""
-  },
-  {
-    "id": "cns_p060_q4",
-    "topicId": "cns_p060",
-    "difficulty": "challenge",
-    "type": "choice",
-    "prompt": "为什么不能把磁铁靠近手机、银行卡？",
-    "choices": [
-      {
-        "key": "A",
-        "text": "磁铁可能影响它们正常工作"
-      },
-      {
-        "key": "B",
-        "text": "磁铁会变色"
-      },
-      {
-        "key": "C",
-        "text": "手机会变重"
-      },
-      {
-        "key": "D",
-        "text": "磁铁会碎"
-      }
-    ],
-    "answer": "A",
-    "explanation": "强磁铁可能损坏磁条卡或干扰电子设备。",
-    "verify": "\"磁铁可能影响它们正常工作\""
   },
   {
     "id": "cns_p061_q1",
@@ -305547,7 +304763,7 @@
     "topicId": "cns_p085",
     "difficulty": "basic",
     "type": "choice",
-    "prompt": "两块磁铁的 S 极互相靠近，会怎样？",
+    "prompt": "每块磁铁都有 N 极和 S 极两个磁极。两块磁铁的两个 S 极互相靠近，会怎样？",
     "choices": [
       {
         "key": "A",
@@ -305567,7 +304783,7 @@
       }
     ],
     "answer": "C",
-    "explanation": "同极相斥。",
+    "explanation": "每块磁铁都有两个磁极；同名磁极互相排斥，异名磁极互相吸引。",
     "verify": "\"互相排斥\""
   },
   {

@@ -8,7 +8,6 @@ KEY_IDS = {
     "g1a_hua": "cns_p004",  # 给植物画张「像」
     "g1a_bianhua": "cns_p005",  # 植物的变化
     "g1a_xiaoyuan": "cns_p006",  # 校园里的植物
-    "g1a_genjing": "cns_p007",  # 植物的根、茎、叶
     "g1a_shenti": "cns_p008",  # 我们的身体
     "g1a_shengzhang": "cns_p009",  # 发现生长
     "g1a_youxi": "cns_p010",  # 游戏中的观察
@@ -24,13 +23,11 @@ KEY_IDS = {
     "g1b_shui": "cns_p020",  # 观察一杯水
     "g1b_liudong": "cns_p021",  # 哪个流动得快
     "g1b_qunali": "cns_p022",  # 它们去哪里了
-    "g1b_cailiao": "cns_p023",  # 物体是用什么做的
     "g1b_zhouwei": "cns_p024",  # 我们周围的动物
     "g1b_yizhong": "cns_p025",  # 观察一种动物
     "g1b_jian": "cns_p026",  # 给蜗牛建个「家」
     "g1b_shuizhong": "cns_p027",  # 水中的动物
     "g1b_chi": "cns_p028",  # 它们吃什么
-    "g1b_dongwutezheng": "cns_p029",  # 动物的身体特征
     "g1b_lianhuan": "cns_p030",  # 动物联欢会
     "g2a_dongwujia": "cns_p031",  # 动物的「家」
     "g2a_women": "cns_p032",  # 我们的家
@@ -38,7 +35,6 @@ KEY_IDS = {
     "g2a_sheji": "cns_p034",  # 设计小房子
     "g2a_jianzao": "cns_p035",  # 建造小房子
     "g2a_zhanshi": "cns_p036",  # 「小房子」展示会
-    "g2a_jiegou": "cns_p037",  # 牢固的结构
     "g2a_jiayuan": "cns_p038",  # 地球家园有什么
     "g2a_xiaoyuan": "cns_p039",  # 我们的校园
     "g2a_kongqi": "cns_p040",  # 我们周围的空气
@@ -54,14 +50,11 @@ KEY_IDS = {
     "g2b_fuyuan": "cns_p050",  # 复原恐龙
     "g2b_moxing": "cns_p051",  # 制作恐龙模型
     "g2b_gongyuan": "cns_p052",  # 我们的恐龙公园
-    "g2b_huashi": "cns_p053",  # 化石是怎样形成的
     "g2b_xiyin": "cns_p054",  # 磁铁能吸引什么
     "g2b_liliang": "cns_p055",  # 比较磁力的大小
     "g2b_geshi": "cns_p056",  # 隔物吸铁
     "g2b_diaoyu": "cns_p057",  # 设计和玩钓鱼玩具
-    "g2b_jiechu": "cns_p058",  # 磁铁的两极
     "g2b_xiaoche": "cns_p059",  # 让小车动起来
-    "g2b_yongchu": "cns_p060",  # 磁铁在生活中的应用
     "g3a_guanxin": "cns_p061",  # 我们关心天气
     "g3a_qiwenji": "cns_p062",  # 认识气温计
     "g3a_celiang": "cns_p063",  # 测量气温

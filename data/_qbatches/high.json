@@ -7509,9 +7509,9 @@
     "topicId": "cnm_h117",
     "difficulty": "standard",
     "type": "numeric",
-    "prompt": "性质定理里，交线有几条？",
+    "prompt": "直线 a 平行于平面 α，过 a 的平面 β 与平面 α 相交于直线 b。在这条性质定理里，平面 β 与平面 α 的交线有几条？",
     "answer": "1",
-    "explanation": "两个平面相交得到一条交线。",
+    "explanation": "两个不重合的平面相交，交线只有一条，就是直线 b；再由性质定理得 a 平行于 b。",
     "verify": "1"
   },
   {

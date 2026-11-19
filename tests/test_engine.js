@@ -812,7 +812,7 @@ test('真实数据：先修子图不含外部节点，初中目标能回到小�
 
 test('旧 id 别名：cnm_ext_* 已不在图中，resolveTargets 跳到小学正式知识点', () => {
   const aliases = JSON.parse(fs.readFileSync(path.join(dataDir, 'id-aliases.json'), 'utf8')).aliases;
-  assert.strictEqual(Object.keys(aliases).length, 18);
+  assert.strictEqual(Object.keys(aliases).filter((k) => /^cnm_ext_/.test(k)).length, 18);
   for (let i = 1; i <= 18; i++) {
     const key = 'cnm_ext_' + String(i).padStart(3, '0');
     assert.ok(!RG.byId[key], key + ' 不应再作为知识点');
@@ -1527,7 +1527,7 @@ test('gradeTargets：一年级 = 一上 + 一下，七上只含七上；写法�
   assert.strictEqual(E.subjectOf(RGQ.byId[g7zh.ids[0]]), 'chinese');
   assert.strictEqual(E.subjectOf({ id: 'cnc_j001' }), 'chinese');
   const g1sci = E.gradeTargets(RGQ, '一年级', 'science');
-  assert.strictEqual(g1sci.ids.length, 30); // 一上 15 + 一下 15
+  assert.strictEqual(g1sci.ids.length, 27); // 一上 14 + 一下 13
   assert.ok(g1sci.ids.every((id) => id.startsWith('cns_')));
   const g6sci = E.gradeTargets(RGQ, '六下', 'science');
   assert.ok(g6sci.ids.length >= 15 && g6sci.ids.every((id) => RGQ.byId[id].grade === 6 && RGQ.byId[id].semester === '下'));

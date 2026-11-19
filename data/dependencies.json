@@ -27864,12 +27864,6 @@
     "reason": "按教科版科学的常见教学顺序，先学「利用自然物辨别方向」，再学「利用磁铁辨别方向」。"
   },
   {
-    "topicId": "cns_p085",
-    "prerequisiteId": "cns_p084",
-    "strength": "soft",
-    "reason": "按教科版科学的常见教学顺序，先学「利用磁铁辨别方向」，再学「磁极与方向」。"
-  },
-  {
     "topicId": "cns_p265",
     "prerequisiteId": "cns_p264",
     "strength": "soft",
@@ -28650,46 +28644,10 @@
     "reason": "按教科版科学的常见教学顺序，先学「生命体中的化学变化」，再学「美丽的化学变化」。"
   },
   {
-    "topicId": "cns_p023",
-    "prerequisiteId": "cns_p016",
-    "strength": "soft",
-    "reason": "认识物体的材料，要先会观察物体的特征。"
-  },
-  {
-    "topicId": "cns_p029",
-    "prerequisiteId": "cns_p025",
-    "strength": "soft",
-    "reason": "说出动物的身体特征，要先观察过一种动物。"
-  },
-  {
-    "topicId": "cns_p037",
-    "prerequisiteId": "cns_p035",
-    "strength": "soft",
-    "reason": "认识牢固的结构，要先经历建造小房子。"
-  },
-  {
-    "topicId": "cns_p058",
-    "prerequisiteId": "cns_p054",
-    "strength": "soft",
-    "reason": "认识磁铁的两极，要先知道磁铁能吸引什么。"
-  },
-  {
-    "topicId": "cns_p060",
-    "prerequisiteId": "cns_p054",
-    "strength": "soft",
-    "reason": "说出生活中磁铁的应用，要先知道磁铁能吸引什么。"
-  },
-  {
     "topicId": "cns_p015",
     "prerequisiteId": "cns_p012",
     "strength": "soft",
     "reason": "知道要保护感官，要先会通过感官来发现周围世界。"
-  },
-  {
-    "topicId": "cns_p007",
-    "prerequisiteId": "cns_p002",
-    "strength": "hard",
-    "reason": "说出根、茎、叶的作用之前，要先会观察植物的各个部分。"
   },
   {
     "topicId": "cns_p012",
@@ -28708,12 +28666,6 @@
     "prerequisiteId": "cns_p024",
     "strength": "hard",
     "reason": "比较动物吃什么之前，要先认识周围的动物。"
-  },
-  {
-    "topicId": "cns_p053",
-    "prerequisiteId": "cns_p047",
-    "strength": "hard",
-    "reason": "理解化石的形成，要先知道化石保存在岩石里。"
   },
   {
     "topicId": "cns_p087",
@@ -28759,9 +28711,9 @@
   },
   {
     "topicId": "cns_p122",
-    "prerequisiteId": "cns_p007",
+    "prerequisiteId": "cns_p002",
     "strength": "hard",
-    "reason": "研究茎运输水分、叶制造养料，要先知道根、茎、叶的位置。"
+    "reason": "研究茎运输水分、叶制造养料，要先会观察植物并认出根、茎、叶。"
   },
   {
     "topicId": "cns_p124",
@@ -28843,9 +28795,9 @@
   },
   {
     "topicId": "cns_p214",
-    "prerequisiteId": "cns_p053",
+    "prerequisiteId": "cns_p047",
     "strength": "hard",
-    "reason": "用化石研究古代生物多样性，要先知道化石是怎样形成的。"
+    "reason": "用化石研究古代生物多样性，要先知道化石是古代生物遗体在岩石里保存下来形成的。"
   },
   {
     "topicId": "cns_p021",
@@ -28921,15 +28873,15 @@
   },
   {
     "topicId": "cns_p084",
-    "prerequisiteId": "cns_p058",
+    "prerequisiteId": "cns_p055",
     "strength": "hard",
-    "reason": "用磁铁辨别方向，要先知道磁铁有 N、S 两极并会指南北。"
+    "reason": "用磁铁辨别方向，要先知道磁铁两端磁力最强的地方叫磁极。"
   },
   {
     "topicId": "cns_p085",
-    "prerequisiteId": "cns_p058",
+    "prerequisiteId": "cns_p084",
     "strength": "hard",
-    "reason": "理解磁极与方向，要先知道磁铁有 N、S 两极。"
+    "reason": "理解磁极的相互作用，要先知道自由转动的磁铁静止时 N 极指北、S 极指南。"
   },
   {
     "topicId": "cns_p264",
@@ -29461,9 +29413,9 @@
   },
   {
     "topicId": "cns_p208",
-    "prerequisiteId": "cns_p037",
+    "prerequisiteId": "cns_p035",
     "strength": "hard",
-    "reason": "建造稳固的塔台，要先知道三角形结构牢固。"
+    "reason": "建造稳固的塔台，要先在建造小房子时用三角形支撑加固过结构。"
   },
   {
     "topicId": "cns_p209",

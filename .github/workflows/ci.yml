@@ -82,3 +82,6 @@ jobs:
 
       - name: 页面脚本缓存测试
         run: node tests/test_pages_script_cache.js
+
+      - name: 数据修补批回归（科学锚定、两道单题、历史诊断题量）
+        run: node tests/test_data_patch_batch.js

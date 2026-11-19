@@ -3,11 +3,9 @@
 from sci_lib import hard, math, soft
 
 # 生命科学
-hard("g1a_genjing", "g1a_guancha", "说出根、茎、叶的作用之前，要先会观察植物的各个部分。")
 hard("g1a_ganguan", "g1a_youxi", "综合使用五种感官之前，要先会用眼睛观察。")
 hard("g1a_ganguan", "g1a_qiwei", "综合使用感官之前，要先会安全地闻气味。")
 hard("g1b_chi", "g1b_zhouwei", "比较动物吃什么之前，要先认识周围的动物。")
-hard("g2b_huashi", "g2b_wajue", "理解化石的形成，要先知道化石保存在岩石里。")
 hard("g3b_zhonglei", "g1b_yizhong", "按脊椎、哺乳等特征分类之前，要先会观察动物的身体特征。")
 hard("g3b_can", "g3b_fanzhi", "迎接蚕宝宝的到来之前，要先知道卵生等繁殖方式。")
 hard("g3b_cane", "g3b_caner", "比较完全变态和不完全变态，要先看完蚕从茧中钻出蚕蛾。")
@@ -15,7 +13,7 @@ hard("g3b_zhouqi", "g3b_cane", "概括动物的生命周期，要先认识昆虫
 hard("g4a_kouqiang", "g4a_huxixiaohua", "研究口腔消化之前，要先知道消化的作用。")
 hard("g4a_lvxing", "g4a_weixiaochang", "排出完整的消化道顺序，要先认识胃和小肠。")
 hard("g4b_zhongzi", "g1a_bianhua", "研究种子孕育新生命，要先知道植物会生长变化。")
-hard("g4b_jingye", "g1a_genjing", "研究茎运输水分、叶制造养料，要先知道根、茎、叶的位置。")
+hard("g4b_jingye", "g1a_guancha", "研究茎运输水分、叶制造养料，要先会观察植物并认出根、茎、叶。")
 hard("g4b_guoshi", "g4b_kaihua", "理解子房发育成果实，要先认识花的结构。")
 hard("g4b_yisheng", "g4b_guoshi", "概括植物的一生，要先知道果实和种子的形成。")
 hard("g5a_jianyixianwei", "g5a_fangda", "用简易显微镜观察，要先知道怎样放得更大。")
@@ -30,7 +28,7 @@ hard("g5b_shengtaiping", "g5b_shiwulian", "设计生态瓶要先懂得生物之�
 hard("g6a_yingyang", "g4a_weixiaochang", "理解营养被吸收利用，要先知道消化和吸收的器官。")
 hard("g6b_zhiwu", "g4b_kaihua", "按是否开花给植物分类，要先认识花。")
 hard("g6b_dongwu", "g3b_zhonglei", "进一步给动物分类，要先会区分脊椎动物和无脊椎动物。")
-hard("g6b_gudai", "g2b_huashi", "用化石研究古代生物多样性，要先知道化石是怎样形成的。")
+hard("g6b_gudai", "g2b_wajue", "用化石研究古代生物多样性，要先知道化石是古代生物遗体在岩石里保存下来形成的。")
 
 # 物质科学
 hard("g1b_liudong", "g1b_shui", "比较液体流动快慢，要先知道水会流动。")
@@ -45,8 +43,8 @@ hard("g3a_fenli", "g3a_rongjie", "用溶解、过滤分离混合物，要先知�
 hard("g3a_fenli", "g3a_zhengfa", "用蒸发取回溶解的盐，要先知道水会蒸发。")
 hard("g3a_kuaiman", "g3a_weizhi", "相同距离比快慢，要先会描述物体的位置和运动。")
 hard("g3a_guoshan", "g3a_nengliang", "设计和制作过山车要先知道运动和能量的关系。")
-hard("g3b_cizhen", "g2b_jiechu", "用磁铁辨别方向，要先知道磁铁有 N、S 两极并会指南北。")
-hard("g3b_ciji", "g2b_jiechu", "理解磁极与方向，要先知道磁铁有 N、S 两极。")
+hard("g3b_cizhen", "g2b_liliang", "用磁铁辨别方向，要先知道磁铁两端磁力最强的地方叫磁极。")
+hard("g3b_ciji", "g3b_cizhen", "理解磁极的相互作用，要先知道自由转动的磁铁静止时 N 极指北、S 极指南。")
 hard("g3b_xiaocizhen", "g3b_ciji", "制作小磁针要先理解磁极与方向。")
 hard("g3b_zhinanzhen", "g3b_ciji", "制作指南针要先理解磁极与方向的关系。")
 hard("g4a_zhanju", "g2a_kongqi", "研究空气占据空间，要先认识周围的空气。")
@@ -139,7 +137,7 @@ hard("g2a_zhanshi", "g2a_jianzao", "展示评价小房子，要先把它建好�
 hard("g2b_moxing", "g2b_fuyuan", "制作恐龙模型要先复原恐龙的样子。")
 hard("g2b_diaoyu", "g2b_geshi", "设计钓鱼玩具要先知道磁铁能隔物吸铁。")
 hard("g2b_laidiaoyu", "g2b_diaoyu", "我们来钓鱼，要先设计好钓鱼玩具。")
-hard("g6b_tatai", "g2a_jiegou", "建造稳固的塔台，要先知道三角形结构牢固。")
+hard("g6b_tatai", "g2a_jianzao", "建造稳固的塔台，要先在建造小房子时用三角形支撑加固过结构。")
 hard("g6b_tataisheji", "g6b_tatai", "设计塔台模型，要先懂得塔台稳固的条件。")
 hard("g6b_tataisheji", "g5b_shejichuan", "完成塔台工程，要先经历过明确问题、设计、制作、测试、改进的工程过程。")
 hard("g6b_tataizhizuo", "g6b_tataisheji", "制作塔台模型要先设计好。")
@@ -147,11 +145,6 @@ hard("g6b_tataiceshi", "g6b_tataizhizuo", "测试塔台模型要先制作好。"
 hard("g6b_tataipinggu", "g6b_tataiceshi", "评估改进塔台模型要先测试过。")
 
 # 概念节点从课序链拆出后的侧枝软边
-soft("g1b_cailiao", "g1b_tezheng", "认识物体的材料，要先会观察物体的特征。")
-soft("g1b_dongwutezheng", "g1b_yizhong", "说出动物的身体特征，要先观察过一种动物。")
-soft("g2a_jiegou", "g2a_jianzao", "认识牢固的结构，要先经历建造小房子。")
-soft("g2b_jiechu", "g2b_xiyin", "认识磁铁的两极，要先知道磁铁能吸引什么。")
-soft("g2b_yongchu", "g2b_xiyin", "说出生活中磁铁的应用，要先知道磁铁能吸引什么。")
 soft("g1a_baohu", "g1a_ganguan", "知道要保护感官，要先会通过感官来发现周围世界。")
 
 # 指向数学的跨学科链接（mathLinks，不进先修图）

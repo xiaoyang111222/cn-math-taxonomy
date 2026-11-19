@@ -1254,6 +1254,10 @@
         stat('ok', sum.mastered.length, '已掌握'),
         stat('unk', sum.untested.length, '未测')),
       sum.unconfirmed.length ? h('p', { class: 'notice' }, '「' + sum.unconfirmed.map(nameOf).join('」「') + '」答错过但还没完成确认就到了题量上限，没来得及复测，暂按薄弱处理。') : null,
+      !screen && !sum.limitReached && sum.asked > 0 && sum.asked < 8
+        ? h('p', { class: 'notice', id: 'short-run-hint' }, '这次只检查了你选的知识点，答对后就结束了，所以只有 ' + sum.asked + ' 题。想按整个年级检查（默认 ' + E.SCREEN_LIMIT + ' 题），请用开始页的「按年级整体诊断」。',
+          h('button', { class: 'no-print', style: 'margin-left:8px', onclick: restart }, '去做整体诊断'))
+        : null,
       sum.limitReached ? h('p', { class: 'notice' }, '已达到题量上限（' + sum.limit + '），剩余没测到的知识点标为「未测」。薄弱根因的先修里若有未测点，真正的根因可能更靠前。',
         session.limit >= 60 ? null : h('button', { class: 'no-print', style: 'margin-left:8px', onclick: function () { rebuild(session.answers, Math.min(session.limit + more, 60)); } }, '再多答 ' + Math.min(more, 60 - session.limit) + ' 题')) : null,
       h('p', { class: 'muted small' }, '自动判题只是近似的，答题记录里可以更正任何一题。生成时间：' + new Date().toLocaleString('zh-CN')),

@@ -45,12 +45,21 @@ def load(name):
 def dump(name, data):
     path = os.path.join(ROOT, "data", name)
     with open(path, "w", encoding="utf-8") as f:
-        if name == "questions.json":
-            # 题库保持仓库里的紧凑单行格式。
-            f.write(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
-            return
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write("\n")
+
+
+def splice_science(original, is_sci, new_sci):
+    """把科学条目原位替换进已有文件：保持其他学科条目的顺序，科学块留在原来的位置。
+
+    直接 base + new 会把科学挪到文件末尾，整份 JSON 重排，diff 里全是无关改动。
+    原文件里没有科学条目时才追加到末尾。
+    """
+    first = next((i for i, x in enumerate(original) if is_sci(x)), None)
+    rest = [x for x in original if not is_sci(x)]
+    if first is None:
+        return rest + list(new_sci)
+    return rest[:first] + list(new_sci) + rest[first:]
 
 
 def is_zh_topic_id(tid):
@@ -169,8 +178,8 @@ def main():
     by_vol = Counter("%d%s" % (t["grade"], t["semester"]) for t in TOPICS)
     for k in VOLUMES:
         n = by_vol[k]
-        # 每册 15–30 个知识点。五、六年级官方每册 4 单元×7 课 = 28 课。
-        lo, hi = (15, 30)
+        # 每册 12–30 个知识点。教科版一、二年级官方每册 13 课上下，五、六年级每册 4 单元×7 课 = 28 课。
+        lo, hi = (12, 30)
         if n < lo or n > hi:
             print("%s 有 %d 个知识点，每册应为 %d–%d" % (k, n, lo, hi), file=sys.stderr)
             return 1
@@ -351,7 +360,8 @@ def main():
 
     kept_std = {k: v for k, v in standards.items() if k != "items" and k != "science"}
     standards_out = dict(standards)
-    standards_out["items"] = list(base_items) + new_items
+    standards_out["items"] = splice_science(
+        standards.get("items", []), lambda it: str(it.get("id", "")).startswith("css-"), new_items)
     standards_out["science"] = {
         "title": "义务教育科学课程标准（2022年版）",
         "issuer": "中华人民共和国教育部",
@@ -379,9 +389,9 @@ def main():
     print("题目 %d" % len(new_questions))
     print("课标条目 %d" % len(new_items))
 
-    dump("topics.json", base_topics + new_topics)
-    dump("dependencies.json", merged_deps)
-    dump("questions.json", base_questions + new_questions)
+    dump("topics.json", splice_science(topics, lambda t: is_zh_topic_id(t.get("id")), new_topics))
+    dump("dependencies.json", splice_science(deps, lambda e: is_zh_topic_id(e.get("topicId")), zh_edges))
+    dump("questions.json", splice_science(questions, lambda q: is_zh_topic_id(q.get("topicId")), new_questions))
     dump("cn-curriculum-standards.json", standards_out)
 
     again_t = load("topics.json")

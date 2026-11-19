@@ -1,5 +1,5 @@
 {
-  "description": "方案 b：18 个 cnm_ext_* 已从 topics.json 删除，不再作为节点。诊断或浏览遇到旧 id（例如 ?target=cnm_ext_002）时，按 targets 跳到对应的小学正式知识点。targets 是该外部节点所概括内容里的代表知识点，不是完整清单。",
+  "description": "方案 b：18 个 cnm_ext_* 已从 topics.json 删除，不再作为节点。诊断或浏览遇到旧 id（例如 ?target=cnm_ext_002）时，按 targets 跳到对应的小学正式知识点。targets 是该外部节点所概括内容里的代表知识点，不是完整清单。 另有 7 个 cns_p* 是 2026-11 按教科版 2024 版目录合并或删除的小学科学概念节点（无同名独立课），旧编号按 targets 跳到内容并入的知识点。",
   "aliases": {
     "cnm_ext_001": {
       "name": "整数四则运算与运算律",
@@ -141,6 +141,48 @@
       "name": "可能性",
       "targets": [
         "cnm_p140"
+      ]
+    },
+    "cns_p007": {
+      "name": "植物的根、茎、叶",
+      "targets": [
+        "cns_p002"
+      ]
+    },
+    "cns_p023": {
+      "name": "物体是用什么做的",
+      "targets": [
+        "cns_p016"
+      ]
+    },
+    "cns_p029": {
+      "name": "动物的身体特征",
+      "targets": [
+        "cns_p025"
+      ]
+    },
+    "cns_p037": {
+      "name": "牢固的结构",
+      "targets": [
+        "cns_p035"
+      ]
+    },
+    "cns_p053": {
+      "name": "化石是怎样形成的",
+      "targets": [
+        "cns_p047"
+      ]
+    },
+    "cns_p058": {
+      "name": "磁铁的两极",
+      "targets": [
+        "cns_p085"
+      ]
+    },
+    "cns_p060": {
+      "name": "磁铁在生活中的应用",
+      "targets": [
+        "cns_p056"
       ]
     }
   }

@@ -136,7 +136,7 @@ ID_RE = re.compile(r"^(?:cnm_(?:p|h)?|cne_[pjh]|cnp_h?|cnc_[pj]|cns_p|cnd_[pj]|c
 # 10、11 是必修第一、二册；12、13、14 是选择性必修第一、二、三册，不是教学年份。
 GRADES = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
 ALIASES_PATH = os.path.join(ROOT, "data", "id-aliases.json")
-ALIAS_ID_RE = re.compile(r"^cnm_ext_\d{3,}$")
+ALIAS_ID_RE = re.compile(r"^(cnm_ext_\d{3,}|cns_p\d{3,})$")
 # 教材版本对照（可选）：topic.mappings 与 data/mappings/*.json，说明见 docs/edition-mappings.md
 MAPPINGS_DIR = os.path.join(ROOT, "data", "mappings")
 EDITION_KEY_RE = re.compile(r"^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$")
@@ -1572,7 +1572,7 @@ def report_questions(stats, topics_by_id):
 
 
 def check_aliases(ids):
-    """data/id-aliases.json：旧 cnm_ext_* 必须映射到仍存在的小学正式知识点。"""
+    """data/id-aliases.json：旧 cnm_ext_* 与已合并/删除的 cns_p* 必须映射到仍存在的小学正式知识点。"""
     if not os.path.exists(ALIASES_PATH):
         err("缺少 data/id-aliases.json（旧 cnm_ext_* 的跳转表）")
         return
