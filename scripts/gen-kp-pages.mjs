@@ -75,6 +75,9 @@ function gradeLabel(t) {
     const sem = t.semester === '上' || t.semester === '下' ? t.semester + '学期' : '';
     return NUM_ZH[g] + '年级' + sem;
   }
+  if (subjectOf(t) === 'chinese' && g >= 10 && g <= 14) {
+    return { 10: '必修上', 11: '必修下', 12: '选必上', 13: '选必中', 14: '选必下' }[g];
+  }
   const first = String(t.chapter || '').split(/\s+/)[0] || '';
   if (g >= 10 && /^(必修|选必)/.test(first)) return first;
   if (g >= 10 && g <= 12) return '高' + NUM_ZH[g - 9];

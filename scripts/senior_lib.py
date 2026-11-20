@@ -72,7 +72,8 @@ def check_question(key, q):
 
 class Senior:
     def __init__(self, *, subject, label, tag, edition, id_prefix, junior_prefix, std_prefix, std_key,
-                 std_meta, domains, book_title, count_expect=None):
+                 std_meta, domains, book_title, count_expect=None, book_words=None, chapter_re=None,
+                 extra_prereq_prefixes=(), std_note=None):
         self.subject = subject          # geography
         self.label = label              # 地理
         self.tag = tag                  # geo
@@ -84,19 +85,24 @@ class Senior:
         self.std_meta = std_meta
         self.domains = tuple(domains)   # 本科高中点允许的 domain（含与初中共用的名称）
         self.book_title = book_title    # {10: "必修第一册", ...}
+        # 默认仍是化学式册名。地理、生物、历史、化学都不传，章节字符串保持原样。
+        self.book_words = book_words or BOOK_WORD
+        self.chapter_re = chapter_re or CHAPTER_RE
+        self.extra_prereq_prefixes = tuple(extra_prereq_prefixes)
+        self.std_note = std_note or NOTE
         self.count_expect = count_expect or {}
         self.PLAN = []
         self.PLAN_BY_KEY = {}
         self.ORDER = {}
         self.HS = {}
         self.CLAUSES = []   # (tail, domain, section, text)
-        self.NOTE = NOTE
+        self.NOTE = self.std_note
 
     # ------------------------------------------------------------ 课序
     def plan(self, grade, rows):
         """rows: [(key, 显示名, 章节尾部, domain)]。章节尾部不含册名，如「第一章 宇宙中的地球 1.1」；domain 必须在本科允许范围内，T() 会核对。"""
-        if grade not in BOOK_WORD:
-            raise SystemExit("grade 必须是 10–14：%s" % grade)
+        if grade not in self.book_words:
+            raise SystemExit("grade 必须是已登记册次：%s" % grade)
         if self.PLAN and self.PLAN[-1]["grade"] > grade:
             raise SystemExit("课序必须按册从前往后登记：%s" % grade)
         for key, name, tail, domain in rows:
@@ -104,9 +110,9 @@ class Senior:
                 raise SystemExit("%s 的 domain 不在允许范围里：%s" % (key, domain))
             if key in self.PLAN_BY_KEY:
                 raise SystemExit("课序 key 重复：%s" % key)
-            chapter = BOOK_WORD[grade] + " " + tail
-            if not CHAPTER_RE.match(chapter):
-                raise SystemExit("%s 章节格式不对（应为「第X章 章名 节号」或「第X单元 单元名 第N课」，名称内不要有空格）：%s" % (key, chapter))
+            chapter = self.book_words[grade] + " " + tail
+            if not self.chapter_re.match(chapter):
+                raise SystemExit("%s 章节格式不对（名称内不要有空格）：%s" % (key, chapter))
             row = {"key": key, "name": name, "chapter": chapter, "grade": grade, "semester": "上", "domain": domain}
             self.ORDER[key] = len(self.PLAN)
             self.PLAN.append(row)

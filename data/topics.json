@@ -107055,5 +107055,3893 @@
         "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF。"
       }
     ]
+  },
+  {
+    "id": "cnc_h001",
+    "name": "阅读《沁园春·长沙》",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第一单元 第1课",
+    "type": "conceptual",
+    "description": "《沁园春·长沙》的作者是毛泽东，文体归入词。课文里有“独立寒秋，湘江北去”。",
+    "mastery_criteria": [
+      "能说出《沁园春·长沙》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《沁园春·长沙》的作者是？",
+      "answer": "毛泽东"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h002",
+    "name": "阅读《立在地球边上放号》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第一单元 第2课",
+    "type": "conceptual",
+    "description": "《立在地球边上放号》的作者是郭沫若，文体归入现代新诗。",
+    "mastery_criteria": [
+      "能说出《立在地球边上放号》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《立在地球边上放号》的作者是？",
+      "answer": "郭沫若"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h003",
+    "name": "阅读《红烛》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第一单元 第2课",
+    "type": "conceptual",
+    "description": "《红烛》的作者是闻一多，文体归入现代新诗。",
+    "mastery_criteria": [
+      "能说出《红烛》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《红烛》的作者是？",
+      "answer": "闻一多"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h004",
+    "name": "阅读《峨日朵雪峰之侧》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第一单元 第2课",
+    "type": "conceptual",
+    "description": "目录标为自读。《峨日朵雪峰之侧》的作者是昌耀，文体归入现代新诗。",
+    "mastery_criteria": [
+      "能说出《峨日朵雪峰之侧》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《峨日朵雪峰之侧》的作者是？",
+      "answer": "昌耀"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h005",
+    "name": "阅读《致云雀》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第一单元 第2课",
+    "type": "conceptual",
+    "description": "目录标为自读。《致云雀》的作者是雪莱，文体归入现代新诗。",
+    "mastery_criteria": [
+      "能说出《致云雀》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《致云雀》的作者是？",
+      "answer": "雪莱"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h006",
+    "name": "阅读《百合花》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第一单元 第3课",
+    "type": "conceptual",
+    "description": "《百合花》的作者是茹志鹃，文体归入现代小说。",
+    "mastery_criteria": [
+      "能说出《百合花》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《百合花》的作者是？",
+      "answer": "茹志鹃"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h007",
+    "name": "阅读《哦，香雪》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第一单元 第3课",
+    "type": "conceptual",
+    "description": "目录标为自读。《哦，香雪》的作者是铁凝，文体归入现代小说。",
+    "mastery_criteria": [
+      "能说出《哦，香雪》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《哦，香雪》的作者是？",
+      "answer": "铁凝"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h008",
+    "name": "阅读《喜看稻菽千重浪》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第二单元 第4课",
+    "type": "conceptual",
+    "description": "《喜看稻菽千重浪》的作者是沈英甲，文体归入新闻通讯。标题里的人物是袁隆平，作者不是袁隆平本人。",
+    "mastery_criteria": [
+      "能说出《喜看稻菽千重浪》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《喜看稻菽千重浪》的作者是？",
+      "answer": "沈英甲"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h009",
+    "name": "阅读《心有一团火，温暖众人心》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第二单元 第4课",
+    "type": "conceptual",
+    "description": "目录标为自读。《心有一团火，温暖众人心》的作者是林为民，文体归入新闻通讯。",
+    "mastery_criteria": [
+      "能说出《心有一团火，温暖众人心》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《心有一团火，温暖众人心》的作者是？",
+      "answer": "林为民"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h010",
+    "name": "阅读《“探界者”钟扬》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第二单元 第4课",
+    "type": "conceptual",
+    "description": "目录标为自读。《“探界者”钟扬》的作者是叶雨婷，文体归入新闻通讯。",
+    "mastery_criteria": [
+      "能说出《“探界者”钟扬》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《“探界者”钟扬》的作者是？",
+      "answer": "叶雨婷"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h011",
+    "name": "阅读《以工匠精神雕琢时代品质》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第二单元 第5课",
+    "type": "conceptual",
+    "description": "《以工匠精神雕琢时代品质》的作者是李斌，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出《以工匠精神雕琢时代品质》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《以工匠精神雕琢时代品质》的作者是？",
+      "answer": "李斌"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h012",
+    "name": "诗《芣苢》",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第二单元 第6课",
+    "type": "conceptual",
+    "description": "《芣苢》出自《诗经·周南》，文体归入诗。课文里有“采采芣苢”。",
+    "mastery_criteria": [
+      "能说出《芣苢》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《芣苢》的出处是？",
+      "answer": "《诗经·周南》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h013",
+    "name": "诗《插秧歌》",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第二单元 第6课",
+    "type": "conceptual",
+    "description": "《插秧歌》的作者是杨万里，文体归入诗。课文里有“田夫抛秧田妇接，小儿拔秧大儿插”。",
+    "mastery_criteria": [
+      "能说出《插秧歌》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《插秧歌》的作者是？",
+      "answer": "杨万里"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h014",
+    "name": "诗《短歌行》",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第三单元 第7课",
+    "type": "conceptual",
+    "description": "《短歌行》的作者是曹操，文体归入诗。课文里有“对酒当歌，人生几何”。",
+    "mastery_criteria": [
+      "能说出《短歌行》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《短歌行》的作者是？",
+      "answer": "曹操"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h015",
+    "name": "诗《归园田居》（其一）",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第三单元 第7课",
+    "type": "conceptual",
+    "description": "目录标为自读。《归园田居（其一）》的作者是陶渊明，文体归入诗。课文里有“久在樊笼里，复得返自然”。",
+    "mastery_criteria": [
+      "能说出《归园田居（其一）》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《归园田居（其一）》的作者是？",
+      "answer": "陶渊明"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h016",
+    "name": "诗《梦游天姥吟留别》",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第三单元 第8课",
+    "type": "conceptual",
+    "description": "《梦游天姥吟留别》的作者是李白，文体归入诗。课文里有“安能摧眉折腰事权贵”。",
+    "mastery_criteria": [
+      "能说出《梦游天姥吟留别》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《梦游天姥吟留别》的作者是？",
+      "answer": "李白"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h017",
+    "name": "诗《登高》",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第三单元 第8课",
+    "type": "conceptual",
+    "description": "《登高》的作者是杜甫，文体归入诗。课文里有“无边落木萧萧下，不尽长江滚滚来”。",
+    "mastery_criteria": [
+      "能说出《登高》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《登高》的作者是？",
+      "answer": "杜甫"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h018",
+    "name": "诗《琵琶行并序》",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第三单元 第8课",
+    "type": "conceptual",
+    "description": "目录标为自读。《琵琶行并序》的作者是白居易，文体归入诗。课文里有“同是天涯沦落人，相逢何必曾相识”。序里点明诗人谪居浔阳。",
+    "mastery_criteria": [
+      "能说出《琵琶行并序》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《琵琶行并序》的作者是？",
+      "answer": "白居易"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h019",
+    "name": "词《念奴娇·赤壁怀古》",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第三单元 第9课",
+    "type": "conceptual",
+    "description": "《念奴娇·赤壁怀古》的作者是苏轼，文体归入词。课文里有“大江东去，浪淘尽，千古风流人物”。",
+    "mastery_criteria": [
+      "能说出《念奴娇·赤壁怀古》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《念奴娇·赤壁怀古》的作者是？",
+      "answer": "苏轼"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h020",
+    "name": "词《永遇乐·京口北固亭怀古》",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第三单元 第9课",
+    "type": "conceptual",
+    "description": "目录标为自读。《永遇乐·京口北固亭怀古》的作者是辛弃疾，文体归入词。课文里有“金戈铁马，气吞万里如虎”。",
+    "mastery_criteria": [
+      "能说出《永遇乐·京口北固亭怀古》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《永遇乐·京口北固亭怀古》的作者是？",
+      "answer": "辛弃疾"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h021",
+    "name": "词《声声慢》（寻寻觅觅）",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第三单元 第9课",
+    "type": "conceptual",
+    "description": "目录标为自读。《声声慢（寻寻觅觅）》的作者是李清照，文体归入词。课文里有“寻寻觅觅，冷冷清清，凄凄惨惨戚戚”。",
+    "mastery_criteria": [
+      "能说出《声声慢（寻寻觅觅）》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《声声慢（寻寻觅觅）》的作者是？",
+      "answer": "李清照"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h022",
+    "name": "学习活动《家乡文化生活》",
+    "domain": "习作基础",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第四单元 家乡文化生活",
+    "type": "conceptual",
+    "description": "《家乡文化生活》在教材里归入学习活动。",
+    "mastery_criteria": [
+      "能说出《家乡文化生活》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "必修上第四单元的名称是？",
+      "answer": "家乡文化生活"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.05",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h023",
+    "name": "整本书阅读《乡土中国》",
+    "domain": "名著阅读",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第五单元 整本书阅读",
+    "type": "conceptual",
+    "description": "《乡土中国》的作者是费孝通，文体归入学术说明文。这一单元是整本书阅读，不是单篇课文。",
+    "mastery_criteria": [
+      "能说出《乡土中国》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《乡土中国》的作者是？",
+      "answer": "费孝通"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.04",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h024",
+    "name": "文言文《劝学》",
+    "domain": "文言文阅读",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第六单元 第10课",
+    "type": "conceptual",
+    "description": "《劝学》的作者是荀子，文体归入文言文。课文里有“青，取之于蓝，而青于蓝”。",
+    "mastery_criteria": [
+      "能说出《劝学》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《劝学》的作者是？",
+      "answer": "荀子"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h025",
+    "name": "文言文《师说》",
+    "domain": "文言文阅读",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第六单元 第10课",
+    "type": "conceptual",
+    "description": "目录标为自读。《师说》的作者是韩愈，文体归入文言文。课文里有“师者，所以传道受业解惑也”。",
+    "mastery_criteria": [
+      "能说出《师说》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《师说》的作者是？",
+      "answer": "韩愈"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h026",
+    "name": "阅读《反对党八股》（节选）",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第六单元 第11课",
+    "type": "conceptual",
+    "description": "《反对党八股》的作者是毛泽东，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出《反对党八股》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《反对党八股》的作者是？",
+      "answer": "毛泽东"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h027",
+    "name": "阅读《拿来主义》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第六单元 第12课",
+    "type": "conceptual",
+    "description": "《拿来主义》的作者是鲁迅，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出《拿来主义》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《拿来主义》的作者是？",
+      "answer": "鲁迅"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h028",
+    "name": "阅读《读书：目的和前提》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第六单元 第13课",
+    "type": "conceptual",
+    "description": "目录标为自读。《读书：目的和前提》的作者是黑塞，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出《读书：目的和前提》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《读书：目的和前提》的作者是？",
+      "answer": "黑塞"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h029",
+    "name": "阅读《上图书馆》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第六单元 第13课",
+    "type": "conceptual",
+    "description": "目录标为自读。《上图书馆》的作者是王佐良，文体归入现代散文。",
+    "mastery_criteria": [
+      "能说出《上图书馆》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《上图书馆》的作者是？",
+      "answer": "王佐良"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h030",
+    "name": "阅读《故都的秋》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第七单元 第14课",
+    "type": "conceptual",
+    "description": "《故都的秋》的作者是郁达夫，文体归入现代散文。课文里有“北国的秋，却特别地来得清，来得静，来得悲凉”。",
+    "mastery_criteria": [
+      "能说出《故都的秋》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《故都的秋》的作者是？",
+      "answer": "郁达夫"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h031",
+    "name": "阅读《荷塘月色》",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第七单元 第14课",
+    "type": "conceptual",
+    "description": "目录标为自读。《荷塘月色》的作者是朱自清，文体归入现代散文。课文里有“这几天心里颇不宁静”。",
+    "mastery_criteria": [
+      "能说出《荷塘月色》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《荷塘月色》的作者是？",
+      "answer": "朱自清"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h032",
+    "name": "阅读《我与地坛》（节选）",
+    "domain": "阅读理解",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第七单元 第15课",
+    "type": "conceptual",
+    "description": "《我与地坛》的作者是史铁生，文体归入现代散文。",
+    "mastery_criteria": [
+      "能说出《我与地坛》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《我与地坛》的作者是？",
+      "answer": "史铁生"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h033",
+    "name": "文言文《赤壁赋》",
+    "domain": "文言文阅读",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第七单元 第16课",
+    "type": "conceptual",
+    "description": "《赤壁赋》的作者是苏轼，文体归入文言文。课文里有“清风徐来，水波不兴”。",
+    "mastery_criteria": [
+      "能说出《赤壁赋》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《赤壁赋》的作者是？",
+      "answer": "苏轼"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h034",
+    "name": "文言文《登泰山记》",
+    "domain": "文言文阅读",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第七单元 第16课",
+    "type": "conceptual",
+    "description": "目录标为自读。《登泰山记》的作者是姚鼐，文体归入文言文。课文里有“苍山负雪，明烛天南”。",
+    "mastery_criteria": [
+      "能说出《登泰山记》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《登泰山记》的作者是？",
+      "answer": "姚鼐"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h035",
+    "name": "学习活动《词语积累与词语解释》",
+    "domain": "词语",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 第八单元 词语积累与词语解释",
+    "type": "conceptual",
+    "description": "《词语积累与词语解释》在教材里归入学习活动。",
+    "mastery_criteria": [
+      "能说出《词语积累与词语解释》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "必修上第八单元的名称是？",
+      "answer": "词语积累与词语解释"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.06",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h036",
+    "name": "古诗词诵读《静女》",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 古诗词诵读 静女",
+    "type": "conceptual",
+    "description": "《静女》出自《诗经·邶风》，文体归入诗。课文里有“静女其姝，俟我于城隅”。",
+    "mastery_criteria": [
+      "能说出《静女》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《静女》的出处是？",
+      "answer": "《诗经·邶风》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h037",
+    "name": "古诗词诵读《涉江采芙蓉》",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 古诗词诵读 涉江采芙蓉",
+    "type": "conceptual",
+    "description": "《涉江采芙蓉》出自《古诗十九首》，文体归入诗。课文里有“同心而离居，忧伤以终老”。",
+    "mastery_criteria": [
+      "能说出《涉江采芙蓉》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《涉江采芙蓉》的出处是？",
+      "answer": "《古诗十九首》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h038",
+    "name": "古诗词诵读《虞美人》（春花秋月何时了）",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 古诗词诵读 虞美人（春花秋月何时了）",
+    "type": "conceptual",
+    "description": "《虞美人（春花秋月何时了）》的作者是李煜，文体归入词。课文里有“春花秋月何时了”。",
+    "mastery_criteria": [
+      "能说出《虞美人（春花秋月何时了）》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《虞美人（春花秋月何时了）》的作者是？",
+      "answer": "李煜"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h039",
+    "name": "古诗词诵读《鹊桥仙》（纤云弄巧）",
+    "domain": "古诗文积累",
+    "grade": 10,
+    "semester": "上",
+    "chapter": "必修上 古诗词诵读 鹊桥仙（纤云弄巧）",
+    "type": "conceptual",
+    "description": "《鹊桥仙（纤云弄巧）》的作者是秦观，文体归入词。课文里有“两情若是久长时，又岂在朝朝暮暮”。",
+    "mastery_criteria": [
+      "能说出《鹊桥仙（纤云弄巧）》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《鹊桥仙（纤云弄巧）》的作者是？",
+      "answer": "秦观"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h040",
+    "name": "文言文《子路、曾皙、冉有、公西华侍坐》",
+    "domain": "文言文阅读",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第一单元 第1课",
+    "type": "conceptual",
+    "description": "《子路、曾皙、冉有、公西华侍坐》出自《论语》，文体归入文言文。课文里有“浴乎沂，风乎舞雩，咏而归”。",
+    "mastery_criteria": [
+      "能说出《子路、曾皙、冉有、公西华侍坐》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《子路、曾皙、冉有、公西华侍坐》的出处是？",
+      "answer": "《论语》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h041",
+    "name": "文言文《齐桓晋文之事》",
+    "domain": "文言文阅读",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第一单元 第1课",
+    "type": "conceptual",
+    "description": "目录标为自读。《齐桓晋文之事》出自《孟子》，文体归入文言文。课文里有“保民而王，莫之能御也”。",
+    "mastery_criteria": [
+      "能说出《齐桓晋文之事》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《齐桓晋文之事》的出处是？",
+      "answer": "《孟子》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h042",
+    "name": "文言文《庖丁解牛》",
+    "domain": "文言文阅读",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第一单元 第1课",
+    "type": "conceptual",
+    "description": "《庖丁解牛》出自《庄子》，文体归入文言文。课文里有“臣之所好者，道也；进乎技矣”。",
+    "mastery_criteria": [
+      "能说出《庖丁解牛》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《庖丁解牛》的出处是？",
+      "answer": "《庄子》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h043",
+    "name": "文言文《烛之武退秦师》",
+    "domain": "文言文阅读",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第一单元 第2课",
+    "type": "conceptual",
+    "description": "《烛之武退秦师》出自《左传》，文体归入文言文。课文里有“因人之力而敝之，不仁”。",
+    "mastery_criteria": [
+      "能说出《烛之武退秦师》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《烛之武退秦师》的出处是？",
+      "answer": "《左传》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h044",
+    "name": "文言文《鸿门宴》",
+    "domain": "文言文阅读",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第一单元 第3课",
+    "type": "conceptual",
+    "description": "目录标为自读。《鸿门宴》的作者是司马迁，文体归入文言文。课文里有“项庄舞剑，意在沛公”。",
+    "mastery_criteria": [
+      "能说出《鸿门宴》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《鸿门宴》的作者是？",
+      "answer": "司马迁"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h045",
+    "name": "阅读《窦娥冤》（节选）",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第二单元 第4课",
+    "type": "conceptual",
+    "description": "《窦娥冤》的作者是关汉卿，文体归入戏剧。",
+    "mastery_criteria": [
+      "能说出《窦娥冤》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《窦娥冤》的作者是？",
+      "answer": "关汉卿"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h046",
+    "name": "阅读《雷雨》（节选）",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第二单元 第5课",
+    "type": "conceptual",
+    "description": "《雷雨》的作者是曹禺，文体归入戏剧。",
+    "mastery_criteria": [
+      "能说出《雷雨》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《雷雨》的作者是？",
+      "answer": "曹禺"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h047",
+    "name": "阅读《哈姆莱特》（节选）",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第二单元 第6课",
+    "type": "conceptual",
+    "description": "目录标为自读。《哈姆莱特》的作者是莎士比亚，文体归入戏剧。",
+    "mastery_criteria": [
+      "能说出《哈姆莱特》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《哈姆莱特》的作者是？",
+      "answer": "莎士比亚"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h048",
+    "name": "阅读《青蒿素：人类征服疾病的一小步》",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第三单元 第7课",
+    "type": "conceptual",
+    "description": "《青蒿素：人类征服疾病的一小步》的作者是屠呦呦，文体归入学术说明文。",
+    "mastery_criteria": [
+      "能说出《青蒿素：人类征服疾病的一小步》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《青蒿素：人类征服疾病的一小步》的作者是？",
+      "answer": "屠呦呦"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h049",
+    "name": "阅读《一名物理学家的教育历程》",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第三单元 第7课",
+    "type": "conceptual",
+    "description": "目录标为自读。《一名物理学家的教育历程》的作者是加来道雄，文体归入学术说明文。",
+    "mastery_criteria": [
+      "能说出《一名物理学家的教育历程》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《一名物理学家的教育历程》的作者是？",
+      "answer": "加来道雄"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h050",
+    "name": "阅读《中国建筑的特征》",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第三单元 第8课",
+    "type": "conceptual",
+    "description": "目录标为自读。《中国建筑的特征》的作者是梁思成，文体归入学术说明文。",
+    "mastery_criteria": [
+      "能说出《中国建筑的特征》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《中国建筑的特征》的作者是？",
+      "answer": "梁思成"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h051",
+    "name": "阅读《说“木叶”》",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第三单元 第9课",
+    "type": "conceptual",
+    "description": "《说“木叶”》的作者是林庚，文体归入学术说明文。",
+    "mastery_criteria": [
+      "能说出《说“木叶”》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《说“木叶”》的作者是？",
+      "answer": "林庚"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h052",
+    "name": "学习活动《信息时代的语文生活》",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第四单元 信息时代的语文生活",
+    "type": "conceptual",
+    "description": "《信息时代的语文生活》在教材里归入学习活动。",
+    "mastery_criteria": [
+      "能说出《信息时代的语文生活》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "必修下第四单元的名称是？",
+      "answer": "信息时代的语文生活"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h053",
+    "name": "阅读《在〈人民报〉创刊纪念会上的演说》",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第五单元 第10课",
+    "type": "conceptual",
+    "description": "在《人民报》创刊纪念会上的演说的作者是马克思，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出在《人民报》创刊纪念会上的演说的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "在《人民报》创刊纪念会上的演说的作者是？",
+      "answer": "马克思"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h054",
+    "name": "阅读《在马克思墓前的讲话》",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第五单元 第10课",
+    "type": "conceptual",
+    "description": "《在马克思墓前的讲话》的作者是恩格斯，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出《在马克思墓前的讲话》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《在马克思墓前的讲话》的作者是？",
+      "answer": "恩格斯"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h055",
+    "name": "文言文《谏逐客书》",
+    "domain": "文言文阅读",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第五单元 第11课",
+    "type": "conceptual",
+    "description": "《谏逐客书》的作者是李斯，文体归入文言文。课文里有“泰山不让土壤，故能成其大”。",
+    "mastery_criteria": [
+      "能说出《谏逐客书》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《谏逐客书》的作者是？",
+      "answer": "李斯"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h056",
+    "name": "文言文《与妻书》",
+    "domain": "文言文阅读",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第五单元 第11课",
+    "type": "conceptual",
+    "description": "目录标为自读。《与妻书》的作者是林觉民，文体归入文言文。",
+    "mastery_criteria": [
+      "能说出《与妻书》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《与妻书》的作者是？",
+      "answer": "林觉民"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h057",
+    "name": "阅读《祝福》",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第六单元 第12课",
+    "type": "conceptual",
+    "description": "《祝福》的作者是鲁迅，文体归入现代小说。课文里有“我真傻，真的”。",
+    "mastery_criteria": [
+      "能说出《祝福》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《祝福》的作者是？",
+      "answer": "鲁迅"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h058",
+    "name": "阅读《林教头风雪山神庙》",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第六单元 第13课",
+    "type": "conceptual",
+    "description": "《林教头风雪山神庙》的作者是施耐庵，文体归入古典小说。",
+    "mastery_criteria": [
+      "能说出《林教头风雪山神庙》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《林教头风雪山神庙》的作者是？",
+      "answer": "施耐庵"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h059",
+    "name": "阅读《装在套子里的人》",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第六单元 第13课",
+    "type": "conceptual",
+    "description": "目录标为自读。《装在套子里的人》的作者是契诃夫，文体归入外国小说。",
+    "mastery_criteria": [
+      "能说出《装在套子里的人》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《装在套子里的人》的作者是？",
+      "answer": "契诃夫"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h060",
+    "name": "阅读《促织》",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第六单元 第14课",
+    "type": "conceptual",
+    "description": "《促织》的作者是蒲松龄，文体归入古典小说。",
+    "mastery_criteria": [
+      "能说出《促织》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《促织》的作者是？",
+      "answer": "蒲松龄"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h061",
+    "name": "阅读《变形记》（节选）",
+    "domain": "阅读理解",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第六单元 第14课",
+    "type": "conceptual",
+    "description": "目录标为自读。《变形记》的作者是卡夫卡，文体归入外国小说。",
+    "mastery_criteria": [
+      "能说出《变形记》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《变形记》的作者是？",
+      "answer": "卡夫卡"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h062",
+    "name": "整本书阅读《红楼梦》",
+    "domain": "名著阅读",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第七单元 整本书阅读",
+    "type": "conceptual",
+    "description": "《红楼梦》的作者是曹雪芹，文体归入古典小说。课文里有“满纸荒唐言，一把辛酸泪”。这一单元是整本书阅读。不把后四十回的整理者写成课本署名的作者。",
+    "mastery_criteria": [
+      "能说出《红楼梦》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《红楼梦》的作者是？",
+      "answer": "曹雪芹"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.04",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h063",
+    "name": "文言文《谏太宗十思疏》",
+    "domain": "文言文阅读",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第八单元 第15课",
+    "type": "conceptual",
+    "description": "《谏太宗十思疏》的作者是魏征，文体归入文言文。课文里有“求木之长者，必固其根本”。",
+    "mastery_criteria": [
+      "能说出《谏太宗十思疏》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《谏太宗十思疏》的作者是？",
+      "answer": "魏征"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h064",
+    "name": "文言文《答司马谏议书》",
+    "domain": "文言文阅读",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第八单元 第15课",
+    "type": "conceptual",
+    "description": "目录标为自读。《答司马谏议书》的作者是王安石，文体归入文言文。",
+    "mastery_criteria": [
+      "能说出《答司马谏议书》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《答司马谏议书》的作者是？",
+      "answer": "王安石"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h065",
+    "name": "文言文《阿房宫赋》",
+    "domain": "文言文阅读",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第八单元 第16课",
+    "type": "conceptual",
+    "description": "《阿房宫赋》的作者是杜牧，文体归入文言文。课文里有“六王毕，四海一，蜀山兀，阿房出”。",
+    "mastery_criteria": [
+      "能说出《阿房宫赋》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《阿房宫赋》的作者是？",
+      "answer": "杜牧"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h066",
+    "name": "文言文《六国论》",
+    "domain": "文言文阅读",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 第八单元 第16课",
+    "type": "conceptual",
+    "description": "目录标为自读。《六国论》的作者是苏洵，文体归入文言文。课文里有“六国破灭，非兵不利，战不善，弊在赂秦”。",
+    "mastery_criteria": [
+      "能说出《六国论》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《六国论》的作者是？",
+      "answer": "苏洵"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h067",
+    "name": "古诗词诵读《登岳阳楼》",
+    "domain": "古诗文积累",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 古诗词诵读 登岳阳楼",
+    "type": "conceptual",
+    "description": "《登岳阳楼》的作者是杜甫，文体归入诗。课文里有“吴楚东南坼，乾坤日夜浮”。",
+    "mastery_criteria": [
+      "能说出《登岳阳楼》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《登岳阳楼》的作者是？",
+      "answer": "杜甫"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h068",
+    "name": "古诗词诵读《桂枝香·金陵怀古》",
+    "domain": "古诗文积累",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 古诗词诵读 桂枝香·金陵怀古",
+    "type": "conceptual",
+    "description": "《桂枝香·金陵怀古》的作者是王安石，文体归入词。",
+    "mastery_criteria": [
+      "能说出《桂枝香·金陵怀古》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《桂枝香·金陵怀古》的作者是？",
+      "answer": "王安石"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h069",
+    "name": "古诗词诵读《念奴娇·过洞庭》",
+    "domain": "古诗文积累",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 古诗词诵读 念奴娇·过洞庭",
+    "type": "conceptual",
+    "description": "《念奴娇·过洞庭》的作者是张孝祥，文体归入词。",
+    "mastery_criteria": [
+      "能说出《念奴娇·过洞庭》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《念奴娇·过洞庭》的作者是？",
+      "answer": "张孝祥"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h070",
+    "name": "古诗词诵读《游园》（【皂罗袍】）",
+    "domain": "古诗文积累",
+    "grade": 11,
+    "semester": "上",
+    "chapter": "必修下 古诗词诵读 游园（【皂罗袍】）",
+    "type": "conceptual",
+    "description": "《游园（【皂罗袍】）》的作者是汤显祖，文体归入戏剧。课文里有“原来姹紫嫣红开遍”。",
+    "mastery_criteria": [
+      "能说出《游园（【皂罗袍】）》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《游园（【皂罗袍】）》的作者是？",
+      "answer": "汤显祖"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:B2.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h071",
+    "name": "阅读《中国人民站起来了》",
+    "domain": "阅读理解",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第一单元 第1课",
+    "type": "conceptual",
+    "description": "《中国人民站起来了》的作者是毛泽东，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出《中国人民站起来了》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《中国人民站起来了》的作者是？",
+      "answer": "毛泽东"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h072",
+    "name": "阅读《长征胜利万岁》",
+    "domain": "阅读理解",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第一单元 第2课",
+    "type": "conceptual",
+    "description": "《长征胜利万岁》的作者是杨成武，文体归入现代散文。",
+    "mastery_criteria": [
+      "能说出《长征胜利万岁》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《长征胜利万岁》的作者是？",
+      "answer": "杨成武"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h073",
+    "name": "阅读《大战中的插曲》",
+    "domain": "阅读理解",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第一单元 第2课",
+    "type": "conceptual",
+    "description": "目录标为自读。《大战中的插曲》的作者是聂荣臻，文体归入现代散文。",
+    "mastery_criteria": [
+      "能说出《大战中的插曲》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《大战中的插曲》的作者是？",
+      "answer": "聂荣臻"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h074",
+    "name": "阅读《别了，“不列颠尼亚”》",
+    "domain": "阅读理解",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第一单元 第3课",
+    "type": "conceptual",
+    "description": "《别了，“不列颠尼亚”》的作者是周婷、杨兴，文体归入新闻通讯。",
+    "mastery_criteria": [
+      "能说出《别了，“不列颠尼亚”》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《别了，“不列颠尼亚”》的作者是？",
+      "answer": "周婷、杨兴"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h075",
+    "name": "阅读《县委书记的榜样——焦裕禄》",
+    "domain": "阅读理解",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第一单元 第3课",
+    "type": "conceptual",
+    "description": "目录标为自读。《县委书记的榜样——焦裕禄》的作者是穆青、冯健、周原，文体归入新闻通讯。",
+    "mastery_criteria": [
+      "能说出《县委书记的榜样——焦裕禄》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《县委书记的榜样——焦裕禄》的作者是？",
+      "answer": "穆青、冯健、周原"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h076",
+    "name": "阅读《在民族复兴的历史丰碑上——2020中国抗疫记》",
+    "domain": "阅读理解",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第一单元 第4课",
+    "type": "conceptual",
+    "description": "《在民族复兴的历史丰碑上——2020中国抗疫记》的作者是钟华论，文体归入议论性文章。扫描本有这一课。",
+    "mastery_criteria": [
+      "能说出《在民族复兴的历史丰碑上——2020中国抗疫记》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《在民族复兴的历史丰碑上——2020中国抗疫记》的作者是？",
+      "answer": "钟华论"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h077",
+    "name": "文言文《论语》十二章",
+    "domain": "文言文阅读",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第二单元 第5课",
+    "type": "conceptual",
+    "description": "《论语》十二章出自《论语》，文体归入文言文。",
+    "mastery_criteria": [
+      "能说出《论语》十二章的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《论语》十二章的出处是？",
+      "answer": "《论语》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h078",
+    "name": "文言文《大学之道》",
+    "domain": "文言文阅读",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第二单元 第5课",
+    "type": "conceptual",
+    "description": "《大学之道》出自《礼记》，文体归入文言文。课文里有“大学之道，在明明德，在亲民，在止于至善”。",
+    "mastery_criteria": [
+      "能说出《大学之道》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《大学之道》的出处是？",
+      "answer": "《礼记》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h079",
+    "name": "文言文《人皆有不忍人之心》",
+    "domain": "文言文阅读",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第二单元 第5课",
+    "type": "conceptual",
+    "description": "目录标为自读。《人皆有不忍人之心》出自《孟子》，文体归入文言文。",
+    "mastery_criteria": [
+      "能说出《人皆有不忍人之心》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《人皆有不忍人之心》的出处是？",
+      "answer": "《孟子》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h080",
+    "name": "文言文《老子》四章",
+    "domain": "文言文阅读",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第二单元 第6课",
+    "type": "conceptual",
+    "description": "《老子》四章出自《老子》，文体归入文言文。",
+    "mastery_criteria": [
+      "能说出《老子》四章的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《老子》四章的出处是？",
+      "answer": "《老子》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h081",
+    "name": "文言文《五石之瓠》",
+    "domain": "文言文阅读",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第二单元 第6课",
+    "type": "conceptual",
+    "description": "目录标为自读。《五石之瓠》出自《庄子》，文体归入文言文。",
+    "mastery_criteria": [
+      "能说出《五石之瓠》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《五石之瓠》的出处是？",
+      "answer": "《庄子》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h082",
+    "name": "文言文《兼爱》",
+    "domain": "文言文阅读",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第二单元 第7课",
+    "type": "conceptual",
+    "description": "目录标为自读。《兼爱》出自《墨子》，文体归入文言文。课文里有“兼相爱，交相利”。",
+    "mastery_criteria": [
+      "能说出《兼爱》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《兼爱》的出处是？",
+      "answer": "《墨子》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h083",
+    "name": "阅读《大卫·科波菲尔》（节选）",
+    "domain": "阅读理解",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第三单元 第8课",
+    "type": "conceptual",
+    "description": "《大卫·科波菲尔》的作者是狄更斯，文体归入外国小说。",
+    "mastery_criteria": [
+      "能说出《大卫·科波菲尔》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《大卫·科波菲尔》的作者是？",
+      "answer": "狄更斯"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h084",
+    "name": "阅读《复活》（节选）",
+    "domain": "阅读理解",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第三单元 第9课",
+    "type": "conceptual",
+    "description": "《复活》的作者是列夫·托尔斯泰，文体归入外国小说。",
+    "mastery_criteria": [
+      "能说出《复活》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《复活》的作者是？",
+      "answer": "列夫·托尔斯泰"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h085",
+    "name": "阅读《老人与海》（节选）",
+    "domain": "阅读理解",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第三单元 第10课",
+    "type": "conceptual",
+    "description": "目录标为自读。《老人与海》的作者是海明威，文体归入外国小说。",
+    "mastery_criteria": [
+      "能说出《老人与海》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《老人与海》的作者是？",
+      "answer": "海明威"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h086",
+    "name": "阅读《百年孤独》（节选）",
+    "domain": "阅读理解",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第三单元 第11课",
+    "type": "conceptual",
+    "description": "目录标为自读。《百年孤独》的作者是加西亚·马尔克斯，文体归入外国小说。",
+    "mastery_criteria": [
+      "能说出《百年孤独》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《百年孤独》的作者是？",
+      "answer": "加西亚·马尔克斯"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h087",
+    "name": "学习活动《逻辑的力量》",
+    "domain": "句子",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 第四单元 逻辑的力量",
+    "type": "conceptual",
+    "description": "《逻辑的力量》在教材里归入学习活动。",
+    "mastery_criteria": [
+      "能说出《逻辑的力量》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "选必上第四单元的名称是？",
+      "answer": "逻辑的力量"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h088",
+    "name": "古诗词诵读《无衣》",
+    "domain": "古诗文积累",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 古诗词诵读 无衣",
+    "type": "conceptual",
+    "description": "《无衣》出自《诗经·秦风》，文体归入诗。课文里有“岂曰无衣？与子同袍”。",
+    "mastery_criteria": [
+      "能说出《无衣》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《无衣》的出处是？",
+      "answer": "《诗经·秦风》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.04",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h089",
+    "name": "古诗词诵读《春江花月夜》",
+    "domain": "古诗文积累",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 古诗词诵读 春江花月夜",
+    "type": "conceptual",
+    "description": "《春江花月夜》的作者是张若虚，文体归入诗。课文里有“春江潮水连海平，海上明月共潮生”。",
+    "mastery_criteria": [
+      "能说出《春江花月夜》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《春江花月夜》的作者是？",
+      "answer": "张若虚"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.04",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h090",
+    "name": "古诗词诵读《将进酒》",
+    "domain": "古诗文积累",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 古诗词诵读 将进酒",
+    "type": "conceptual",
+    "description": "《将进酒》的作者是李白，文体归入诗。课文里有“君不见黄河之水天上来”。",
+    "mastery_criteria": [
+      "能说出《将进酒》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《将进酒》的作者是？",
+      "answer": "李白"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.04",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h091",
+    "name": "古诗词诵读《江城子·乙卯正月二十日夜记梦》",
+    "domain": "古诗文积累",
+    "grade": 12,
+    "semester": "上",
+    "chapter": "选必上 古诗词诵读 江城子·乙卯正月二十日夜记梦",
+    "type": "conceptual",
+    "description": "《江城子·乙卯正月二十日夜记梦》的作者是苏轼，文体归入词。课文里有“十年生死两茫茫”。",
+    "mastery_criteria": [
+      "能说出《江城子·乙卯正月二十日夜记梦》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《江城子·乙卯正月二十日夜记梦》的作者是？",
+      "answer": "苏轼"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S1.04",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h092",
+    "name": "阅读《社会历史的决定性基础》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第一单元 第1课",
+    "type": "conceptual",
+    "description": "《社会历史的决定性基础》的作者是恩格斯，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出《社会历史的决定性基础》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《社会历史的决定性基础》的作者是？",
+      "answer": "恩格斯"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h093",
+    "name": "阅读《改造我们的学习》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第一单元 第2课",
+    "type": "conceptual",
+    "description": "《改造我们的学习》的作者是毛泽东，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出《改造我们的学习》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《改造我们的学习》的作者是？",
+      "answer": "毛泽东"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h094",
+    "name": "阅读《人的正确思想是从哪里来的？》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第一单元 第2课",
+    "type": "conceptual",
+    "description": "《人的正确思想是从哪里来的？》的作者是毛泽东，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出《人的正确思想是从哪里来的？》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《人的正确思想是从哪里来的？》的作者是？",
+      "answer": "毛泽东"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h095",
+    "name": "阅读《实践是检验真理的唯一标准》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第一单元 第3课",
+    "type": "conceptual",
+    "description": "《实践是检验真理的唯一标准》的作者是《光明日报》特约评论员，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出《实践是检验真理的唯一标准》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《实践是检验真理的唯一标准》的作者是？",
+      "answer": "《光明日报》特约评论员"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h096",
+    "name": "阅读《修辞立其诚》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第一单元 第4课",
+    "type": "conceptual",
+    "description": "目录标为自读。《修辞立其诚》的作者是张岱年，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出《修辞立其诚》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《修辞立其诚》的作者是？",
+      "answer": "张岱年"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h097",
+    "name": "阅读《怜悯是人的天性》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第一单元 第4课",
+    "type": "conceptual",
+    "description": "目录标为自读。《怜悯是人的天性》的作者是卢梭，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出《怜悯是人的天性》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《怜悯是人的天性》的作者是？",
+      "answer": "卢梭"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h098",
+    "name": "阅读《人应当坚持正义》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第一单元 第5课",
+    "type": "conceptual",
+    "description": "目录标为自读。《人应当坚持正义》的作者是柏拉图，文体归入议论性文章。",
+    "mastery_criteria": [
+      "能说出《人应当坚持正义》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《人应当坚持正义》的作者是？",
+      "answer": "柏拉图"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h099",
+    "name": "阅读《记念刘和珍君》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第二单元 第6课",
+    "type": "conceptual",
+    "description": "《记念刘和珍君》的作者是鲁迅，文体归入现代散文。文中有“真的猛士，敢于直面惨淡的人生”。",
+    "mastery_criteria": [
+      "能说出《记念刘和珍君》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《记念刘和珍君》的作者是？",
+      "answer": "鲁迅"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h100",
+    "name": "阅读《为了忘却的记念》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第二单元 第6课",
+    "type": "conceptual",
+    "description": "目录标为自读。《为了忘却的记念》的作者是鲁迅，文体归入现代散文。",
+    "mastery_criteria": [
+      "能说出《为了忘却的记念》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《为了忘却的记念》的作者是？",
+      "answer": "鲁迅"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h101",
+    "name": "阅读《包身工》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第二单元 第7课",
+    "type": "conceptual",
+    "description": "《包身工》的作者是夏衍，文体归入新闻通讯。",
+    "mastery_criteria": [
+      "能说出《包身工》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《包身工》的作者是？",
+      "answer": "夏衍"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h102",
+    "name": "阅读《荷花淀》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第二单元 第8课",
+    "type": "conceptual",
+    "description": "《荷花淀》的作者是孙犁，文体归入现代小说。",
+    "mastery_criteria": [
+      "能说出《荷花淀》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《荷花淀》的作者是？",
+      "answer": "孙犁"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h103",
+    "name": "阅读《小二黑结婚》（节选）",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第二单元 第8课",
+    "type": "conceptual",
+    "description": "目录标为自读。《小二黑结婚》的作者是赵树理，文体归入现代小说。",
+    "mastery_criteria": [
+      "能说出《小二黑结婚》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《小二黑结婚》的作者是？",
+      "answer": "赵树理"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h104",
+    "name": "阅读《党费》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第二单元 第8课",
+    "type": "conceptual",
+    "description": "目录标为自读。《党费》的作者是王愿坚，文体归入现代小说。",
+    "mastery_criteria": [
+      "能说出《党费》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《党费》的作者是？",
+      "answer": "王愿坚"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h105",
+    "name": "文言文《屈原列传》",
+    "domain": "文言文阅读",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第三单元 第9课",
+    "type": "conceptual",
+    "description": "《屈原列传》的作者是司马迁，文体归入文言文。课文里有“信而见疑，忠而被谤”。",
+    "mastery_criteria": [
+      "能说出《屈原列传》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《屈原列传》的作者是？",
+      "answer": "司马迁"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h106",
+    "name": "文言文《苏武传》",
+    "domain": "文言文阅读",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第三单元 第10课",
+    "type": "conceptual",
+    "description": "目录标为自读。《苏武传》的作者是班固，文体归入文言文。",
+    "mastery_criteria": [
+      "能说出《苏武传》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《苏武传》的作者是？",
+      "answer": "班固"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h107",
+    "name": "文言文《过秦论》",
+    "domain": "文言文阅读",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第三单元 第11课",
+    "type": "conceptual",
+    "description": "《过秦论》的作者是贾谊，文体归入文言文。课文里有“仁义不施而攻守之势异也”。",
+    "mastery_criteria": [
+      "能说出《过秦论》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《过秦论》的作者是？",
+      "answer": "贾谊"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h108",
+    "name": "文言文《五代史伶官传序》",
+    "domain": "文言文阅读",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第三单元 第11课",
+    "type": "conceptual",
+    "description": "目录标为自读。《五代史伶官传序》的作者是欧阳修，文体归入文言文。课文里有“忧劳可以兴国，逸豫可以亡身”。",
+    "mastery_criteria": [
+      "能说出《五代史伶官传序》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《五代史伶官传序》的作者是？",
+      "answer": "欧阳修"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h109",
+    "name": "阅读《玩偶之家》（节选）",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第四单元 第12课",
+    "type": "conceptual",
+    "description": "《玩偶之家》的作者是易卜生，文体归入戏剧。",
+    "mastery_criteria": [
+      "能说出《玩偶之家》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《玩偶之家》的作者是？",
+      "answer": "易卜生"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h110",
+    "name": "阅读《迷娘》（之一）",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第四单元 第13课",
+    "type": "conceptual",
+    "description": "《迷娘（之一）》的作者是歌德，文体归入外国诗歌。",
+    "mastery_criteria": [
+      "能说出《迷娘（之一）》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《迷娘（之一）》的作者是？",
+      "answer": "歌德"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h111",
+    "name": "阅读《致大海》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第四单元 第13课",
+    "type": "conceptual",
+    "description": "《致大海》的作者是普希金，文体归入外国诗歌。",
+    "mastery_criteria": [
+      "能说出《致大海》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《致大海》的作者是？",
+      "answer": "普希金"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h112",
+    "name": "阅读《自己之歌》（节选）",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第四单元 第13课",
+    "type": "conceptual",
+    "description": "目录标为自读。《自己之歌》的作者是惠特曼，文体归入外国诗歌。",
+    "mastery_criteria": [
+      "能说出《自己之歌》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《自己之歌》的作者是？",
+      "answer": "惠特曼"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h113",
+    "name": "阅读《树和天空》",
+    "domain": "阅读理解",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 第四单元 第13课",
+    "type": "conceptual",
+    "description": "目录标为自读。《树和天空》的作者是特朗斯特罗姆，文体归入外国诗歌。",
+    "mastery_criteria": [
+      "能说出《树和天空》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《树和天空》的作者是？",
+      "answer": "特朗斯特罗姆"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h114",
+    "name": "古诗词诵读《燕歌行并序》",
+    "domain": "古诗文积累",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 古诗词诵读 燕歌行并序",
+    "type": "conceptual",
+    "description": "《燕歌行并序》的作者是高适，文体归入诗。课文里有“战士军前半死生”。",
+    "mastery_criteria": [
+      "能说出《燕歌行并序》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《燕歌行并序》的作者是？",
+      "answer": "高适"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h115",
+    "name": "古诗词诵读《李凭箜篌引》",
+    "domain": "古诗文积累",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 古诗词诵读 李凭箜篌引",
+    "type": "conceptual",
+    "description": "《李凭箜篌引》的作者是李贺，文体归入诗。课文里有“石破天惊逗秋雨”。",
+    "mastery_criteria": [
+      "能说出《李凭箜篌引》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《李凭箜篌引》的作者是？",
+      "answer": "李贺"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h116",
+    "name": "古诗词诵读《锦瑟》",
+    "domain": "古诗文积累",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 古诗词诵读 锦瑟",
+    "type": "conceptual",
+    "description": "《锦瑟》的作者是李商隐，文体归入诗。课文里有“锦瑟无端五十弦，一弦一柱思华年”。",
+    "mastery_criteria": [
+      "能说出《锦瑟》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《锦瑟》的作者是？",
+      "answer": "李商隐"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h117",
+    "name": "古诗词诵读《书愤》",
+    "domain": "古诗文积累",
+    "grade": 13,
+    "semester": "上",
+    "chapter": "选必中 古诗词诵读 书愤",
+    "type": "conceptual",
+    "description": "《书愤》的作者是陆游，文体归入诗。课文里有“楼船夜雪瓜洲渡，铁马秋风大散关”。",
+    "mastery_criteria": [
+      "能说出《书愤》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《书愤》的作者是？",
+      "answer": "陆游"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S2.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h118",
+    "name": "诗《氓》",
+    "domain": "古诗文积累",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第一单元 第1课",
+    "type": "conceptual",
+    "description": "《氓》出自《诗经·卫风》，文体归入诗。课文里有“氓之蚩蚩，抱布贸丝”。",
+    "mastery_criteria": [
+      "能说出《氓》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《氓》的出处是？",
+      "answer": "《诗经·卫风》"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h119",
+    "name": "诗《离骚》（节选）",
+    "domain": "古诗文积累",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第一单元 第1课",
+    "type": "conceptual",
+    "description": "《离骚》的作者是屈原，文体归入楚辞。课文里有“长太息以掩涕兮，哀民生之多艰”。",
+    "mastery_criteria": [
+      "能说出《离骚》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《离骚》的作者是？",
+      "answer": "屈原"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h120",
+    "name": "诗《孔雀东南飞并序》",
+    "domain": "古诗文积累",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第一单元 第2课",
+    "type": "conceptual",
+    "description": "目录标为自读。《孔雀东南飞并序》的作者是佚名，文体归入乐府诗。课文里有“孔雀东南飞，五里一徘徊”。",
+    "mastery_criteria": [
+      "能说出《孔雀东南飞并序》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《孔雀东南飞并序》的作者是？",
+      "answer": "佚名"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h121",
+    "name": "诗《蜀道难》",
+    "domain": "古诗文积累",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第一单元 第3课",
+    "type": "conceptual",
+    "description": "《蜀道难》的作者是李白，文体归入诗。课文里有“蜀道之难，难于上青天”。",
+    "mastery_criteria": [
+      "能说出《蜀道难》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《蜀道难》的作者是？",
+      "answer": "李白"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h122",
+    "name": "诗《蜀相》",
+    "domain": "古诗文积累",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第一单元 第3课",
+    "type": "conceptual",
+    "description": "目录标为自读。《蜀相》的作者是杜甫，文体归入诗。课文里有“出师未捷身先死，长使英雄泪满襟”。",
+    "mastery_criteria": [
+      "能说出《蜀相》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《蜀相》的作者是？",
+      "answer": "杜甫"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h123",
+    "name": "词《望海潮》（东南形胜）",
+    "domain": "古诗文积累",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第一单元 第4课",
+    "type": "conceptual",
+    "description": "目录标为自读。《望海潮（东南形胜）》的作者是柳永，文体归入词。课文里有“东南形胜，三吴都会，钱塘自古繁华”。",
+    "mastery_criteria": [
+      "能说出《望海潮（东南形胜）》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《望海潮（东南形胜）》的作者是？",
+      "answer": "柳永"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h124",
+    "name": "词《扬州慢》（淮左名都）",
+    "domain": "古诗文积累",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第一单元 第4课",
+    "type": "conceptual",
+    "description": "目录标为自读。《扬州慢（淮左名都）》的作者是姜夔，文体归入词。课文里有“二十四桥仍在”。",
+    "mastery_criteria": [
+      "能说出《扬州慢（淮左名都）》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《扬州慢（淮左名都）》的作者是？",
+      "answer": "姜夔"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h125",
+    "name": "阅读《阿Q正传》（节选）",
+    "domain": "阅读理解",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第二单元 第5课",
+    "type": "conceptual",
+    "description": "《阿Q正传》的作者是鲁迅，文体归入现代小说。",
+    "mastery_criteria": [
+      "能说出《阿Q正传》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《阿Q正传》的作者是？",
+      "answer": "鲁迅"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h126",
+    "name": "阅读《边城》（节选）",
+    "domain": "阅读理解",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第二单元 第5课",
+    "type": "conceptual",
+    "description": "目录标为自读。《边城》的作者是沈从文，文体归入现代小说。",
+    "mastery_criteria": [
+      "能说出《边城》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《边城》的作者是？",
+      "answer": "沈从文"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h127",
+    "name": "阅读《大堰河——我的保姆》",
+    "domain": "阅读理解",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第二单元 第6课",
+    "type": "conceptual",
+    "description": "《大堰河——我的保姆》的作者是艾青，文体归入现代新诗。",
+    "mastery_criteria": [
+      "能说出《大堰河——我的保姆》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《大堰河——我的保姆》的作者是？",
+      "answer": "艾青"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h128",
+    "name": "阅读《再别康桥》",
+    "domain": "阅读理解",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第二单元 第6课",
+    "type": "conceptual",
+    "description": "目录标为自读。《再别康桥》的作者是徐志摩，文体归入现代新诗。课文里有“轻轻的我走了，正如我轻轻的来”。",
+    "mastery_criteria": [
+      "能说出《再别康桥》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《再别康桥》的作者是？",
+      "answer": "徐志摩"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h129",
+    "name": "阅读《一个消逝了的山村》",
+    "domain": "阅读理解",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第二单元 第7课",
+    "type": "conceptual",
+    "description": "《一个消逝了的山村》的作者是冯至，文体归入现代散文。",
+    "mastery_criteria": [
+      "能说出《一个消逝了的山村》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《一个消逝了的山村》的作者是？",
+      "answer": "冯至"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h130",
+    "name": "阅读《秦腔》",
+    "domain": "阅读理解",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第二单元 第7课",
+    "type": "conceptual",
+    "description": "目录标为自读。《秦腔》的作者是贾平凹，文体归入现代散文。",
+    "mastery_criteria": [
+      "能说出《秦腔》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《秦腔》的作者是？",
+      "answer": "贾平凹"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h131",
+    "name": "阅读《茶馆》（节选）",
+    "domain": "阅读理解",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第二单元 第8课",
+    "type": "conceptual",
+    "description": "《茶馆》的作者是老舍，文体归入戏剧。",
+    "mastery_criteria": [
+      "能说出《茶馆》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《茶馆》的作者是？",
+      "answer": "老舍"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h132",
+    "name": "文言文《陈情表》",
+    "domain": "文言文阅读",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第三单元 第9课",
+    "type": "conceptual",
+    "description": "《陈情表》的作者是李密，文体归入文言文。课文里有“乌鸟私情，愿乞终养”。",
+    "mastery_criteria": [
+      "能说出《陈情表》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《陈情表》的作者是？",
+      "answer": "李密"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h133",
+    "name": "文言文《项脊轩志》",
+    "domain": "文言文阅读",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第三单元 第9课",
+    "type": "conceptual",
+    "description": "目录标为自读。《项脊轩志》的作者是归有光，文体归入文言文。课文里有“庭有枇杷树，吾妻死之年所手植也，今已亭亭如盖矣”。",
+    "mastery_criteria": [
+      "能说出《项脊轩志》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《项脊轩志》的作者是？",
+      "answer": "归有光"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h134",
+    "name": "文言文《兰亭集序》",
+    "domain": "文言文阅读",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第三单元 第10课",
+    "type": "conceptual",
+    "description": "《兰亭集序》的作者是王羲之，文体归入文言文。课文里有“永和九年，岁在癸丑”。",
+    "mastery_criteria": [
+      "能说出《兰亭集序》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《兰亭集序》的作者是？",
+      "answer": "王羲之"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h135",
+    "name": "文言文《归去来兮辞并序》",
+    "domain": "文言文阅读",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第三单元 第10课",
+    "type": "conceptual",
+    "description": "《归去来兮辞并序》的作者是陶渊明，文体归入文言文。课文里有“归去来兮，田园将芜胡不归”。",
+    "mastery_criteria": [
+      "能说出《归去来兮辞并序》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《归去来兮辞并序》的作者是？",
+      "answer": "陶渊明"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h136",
+    "name": "文言文《种树郭橐驼传》",
+    "domain": "文言文阅读",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第三单元 第11课",
+    "type": "conceptual",
+    "description": "目录标为自读。《种树郭橐驼传》的作者是柳宗元，文体归入文言文。课文里有“顺木之天，以致其性”。",
+    "mastery_criteria": [
+      "能说出《种树郭橐驼传》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《种树郭橐驼传》的作者是？",
+      "answer": "柳宗元"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h137",
+    "name": "文言文《石钟山记》",
+    "domain": "文言文阅读",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第三单元 第12课",
+    "type": "conceptual",
+    "description": "目录标为自读。《石钟山记》的作者是苏轼，文体归入文言文。课文里有“事不目见耳闻，而臆断其有无，可乎”。",
+    "mastery_criteria": [
+      "能说出《石钟山记》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《石钟山记》的作者是？",
+      "answer": "苏轼"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.03",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h138",
+    "name": "阅读《自然选择的证明》",
+    "domain": "阅读理解",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第四单元 第13课",
+    "type": "conceptual",
+    "description": "《自然选择的证明》的作者是达尔文，文体归入科学说明文。",
+    "mastery_criteria": [
+      "能说出《自然选择的证明》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《自然选择的证明》的作者是？",
+      "answer": "达尔文"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h139",
+    "name": "阅读《宇宙的边疆》",
+    "domain": "阅读理解",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第四单元 第13课",
+    "type": "conceptual",
+    "description": "目录标为自读。《宇宙的边疆》的作者是卡尔·萨根，文体归入科学说明文。",
+    "mastery_criteria": [
+      "能说出《宇宙的边疆》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《宇宙的边疆》的作者是？",
+      "answer": "卡尔·萨根"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h140",
+    "name": "阅读《天文学上的旷世之争》",
+    "domain": "阅读理解",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 第四单元 第14课",
+    "type": "conceptual",
+    "description": "目录标为自读。《天文学上的旷世之争》的作者是关增建，文体归入科学说明文。",
+    "mastery_criteria": [
+      "能说出《天文学上的旷世之争》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《天文学上的旷世之争》的作者是？",
+      "answer": "关增建"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.02",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h141",
+    "name": "古诗词诵读《拟行路难》（其四）",
+    "domain": "古诗文积累",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 古诗词诵读 拟行路难（其四）",
+    "type": "conceptual",
+    "description": "《拟行路难（其四）》的作者是鲍照，文体归入诗。课文里有“泻水置平地，各自东西南北流”。",
+    "mastery_criteria": [
+      "能说出《拟行路难（其四）》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《拟行路难（其四）》的作者是？",
+      "answer": "鲍照"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h142",
+    "name": "古诗词诵读《客至》",
+    "domain": "古诗文积累",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 古诗词诵读 客至",
+    "type": "conceptual",
+    "description": "《客至》的作者是杜甫，文体归入诗。课文里有“花径不曾缘客扫，蓬门今始为君开”。",
+    "mastery_criteria": [
+      "能说出《客至》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《客至》的作者是？",
+      "answer": "杜甫"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h143",
+    "name": "古诗词诵读《登快阁》",
+    "domain": "古诗文积累",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 古诗词诵读 登快阁",
+    "type": "conceptual",
+    "description": "《登快阁》的作者是黄庭坚，文体归入诗。课文里有“落木千山天远大，澄江一道月分明”。",
+    "mastery_criteria": [
+      "能说出《登快阁》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《登快阁》的作者是？",
+      "answer": "黄庭坚"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
+  },
+  {
+    "id": "cnc_h144",
+    "name": "古诗词诵读《临安春雨初霁》",
+    "domain": "古诗文积累",
+    "grade": 14,
+    "semester": "上",
+    "chapter": "选必下 古诗词诵读 临安春雨初霁",
+    "type": "conceptual",
+    "description": "《临安春雨初霁》的作者是陆游，文体归入诗。课文里有“小楼一夜听春雨，深巷明朝卖杏花”。",
+    "mastery_criteria": [
+      "能说出《临安春雨初霁》的作者、出处和文体",
+      "能判断名句、实词或目录里写明的事实"
+    ],
+    "diagnostic_question": {
+      "question": "《临安春雨初霁》的作者是？",
+      "answer": "陆游"
+    },
+    "external": false,
+    "subject": "chinese",
+    "standards": [
+      {
+        "id": "ccs-hs-2017:S3.01",
+        "confidence": "inferred",
+        "note": "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+      }
+    ]
   }
 ]

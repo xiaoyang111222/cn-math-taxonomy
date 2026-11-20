@@ -154,7 +154,15 @@
     if (subject === 'chemistry') return CHEM_BOOK[grade];
     return (SENIOR_BOOK_TITLE[subject] || {})[grade];
   }
+  var ZH_BOOK = {
+    10: ['必修上', '必修上'],
+    11: ['必修下', '必修下'],
+    12: ['选必上', '选必上'],
+    13: ['选必中', '选必中'],
+    14: ['选必下', '选必下']
+  };
   function gradeWord(grade) {
+    if (subject === 'chinese' && ZH_BOOK[grade]) return ZH_BOOK[grade][0];
     if (bookBySubject() && seniorBook(grade)) return seniorBook(grade)[0];
     if ((subject === 'english' || subject === 'physics') && EN_BOOK[grade]) return EN_BOOK[grade][0];
     if (grade === 10) return '高一';
@@ -165,6 +173,7 @@
     return CN[grade] + '年级';
   }
   function gradeLabel(topic) {
+    if (subject === 'chinese' && ZH_BOOK[topic.grade]) return ZH_BOOK[topic.grade][1];
     if (bookBySubject() && seniorBook(topic.grade)) return seniorBook(topic.grade)[1];
     if ((subject === 'english' || subject === 'physics') && EN_BOOK[topic.grade]) return EN_BOOK[topic.grade][1];
     if (topic.grade === 10) return '高一 · 必修第一册';
@@ -192,6 +201,8 @@
     var junior = /^\S+\s+(第\S+章)\s+(.+)$/.exec(text);
     if (junior) return junior[1] + ' ' + junior[2].replace(/\s+(?:\d+(?:\.\d+)*|整理与提升|实验活动\d+)$/, '');
     if (/^必修[一二三]\s+绪言$/.test(text)) return '绪言';
+    var zhHs = /^(?:必修[上下]|选必[上中下]) (.+)$/.exec(text);
+    if (zhHs) return zhHs[1];
     return text;
   }
 
@@ -1152,17 +1163,17 @@
       return;
     }
     if (subject === 'chinese') {
-      document.querySelectorAll('#stage-tabs [data-stage]').forEach(function (button) {
-        button.hidden = button.getAttribute('data-stage') === 'h';
-      });
       var zhGrade = $('fGrade');
       zhGrade.replaceChildren();
       zhGrade.append(el('option', { value: '', text: '全部年级' }));
       [1, 2, 3, 4, 5, 6, 7, 8, 9].forEach(function (g) {
         zhGrade.append(el('option', { value: String(g), text: CN[g] + '年级' }));
       });
+      [[10, '必修上'], [11, '必修下'], [12, '选必上'], [13, '选必中'], [14, '选必下']].forEach(function (row) {
+        zhGrade.append(el('option', { value: String(row[0]), text: row[1] }));
+      });
       var zhSample = $('pick-sample');
-      if (zhSample) zhSample.textContent = '先看看「静夜思」';
+      if (zhSample) zhSample.textContent = '先看看「沁园春·长沙」';
       document.title = '知识图谱 · 语文';
       return;
     }
@@ -1200,11 +1211,11 @@
   function applyQuery() {
     var params = new URLSearchParams(location.search);
     var gradeValue = params.get('grade') || '';
-    var gradeOk = subject === 'english' ? /^(?:[3-9]|1[0-6])$/ : subject === 'physics' ? /^(?:[89]|1[0-5])$/ : subject === 'history' ? /^(?:[7-9]|1[0-4])$/ : subject === 'geography' || subject === 'biology' ? /^(?:[78]|1[0-4])$/ : subject === 'chemistry' ? /^(?:9|1[0-4])$/ : subject === 'chinese' || subject === 'morality' ? /^[1-9]$/ : subject === 'science' ? /^[1-6]$/ : /^(?:[1-9]|1[0-4])$/;
+    var gradeOk = subject === 'english' ? /^(?:[3-9]|1[0-6])$/ : subject === 'physics' ? /^(?:[89]|1[0-5])$/ : subject === 'history' ? /^(?:[7-9]|1[0-4])$/ : subject === 'geography' || subject === 'biology' ? /^(?:[78]|1[0-4])$/ : subject === 'chemistry' ? /^(?:9|1[0-4])$/ : subject === 'chinese' ? /^(?:[1-9]|1[0-4])$/ : subject === 'morality' ? /^[1-9]$/ : subject === 'science' ? /^[1-6]$/ : /^(?:[1-9]|1[0-4])$/;
     if (gradeOk.test(gradeValue)) grade = gradeValue;
     var stageValue = params.get('stage') || '';
     if (stageValue === 'p' || stageValue === 'j' || stageValue === 'h') stage = stageValue;
-    if ((subject === 'chinese' || subject === 'morality') && stage === 'h') stage = '';
+    if (subject === 'morality' && stage === 'h') stage = '';
     domain = params.get('domain') || '';
   }
 

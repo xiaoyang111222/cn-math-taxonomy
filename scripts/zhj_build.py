@@ -3,6 +3,7 @@
 
 只处理 cnc_j 知识点和第四学段（ccs-2022:4.*）课标。可以重复运行：先去掉已有的 cnc_j 再写入。
 不改小学语文 cnc_p 的 id、名称、题目和边，也不回头约简小学语文边。
+高中语文 cnc_h 及其题目、课标保留；topicId 为 cnc_h 或 cnc_p、先修为 cnc_j 的跨段边也保留。
 先修可以指向小学语文，不能指向其他学科。
 
 用法：python3 scripts/zhj_build.py
@@ -95,8 +96,13 @@ def reaches(adj, src, dst, hard_only):
     return False
 
 
+def strip_junior_deps(deps):
+    """只去掉 topicId 为初中语文的边。保留高中或小学点指向初中的跨段边。"""
+    return [e for e in deps if not is_junior_zh_id(e.get("topicId"))]
+
+
 def reduce_junior(edges):
-    """只删除 cnc_j 上的冗余新边。不改小学语文边，也不改其他学科边。"""
+    """只删除 cnc_j 上的冗余新边。不改小学语文边，不改高中边，也不改其他学科边。"""
     adj = defaultdict(list)
     for e in edges:
         adj[e["topicId"]].append([e["prerequisiteId"], e["strength"]])
@@ -268,17 +274,14 @@ def main():
     by_vol = Counter("%d%s" % (t["grade"], t["semester"]) for t in TOPICS)
 
     base_topics = [t for t in topics if not is_junior_zh_id(t.get("id"))]
-    base_deps = [
-        e for e in deps
-        if not is_junior_zh_id(e.get("topicId")) and not is_junior_zh_id(e.get("prerequisiteId"))
-    ]
+    base_deps = strip_junior_deps(deps)
     base_questions = [q for q in questions if not is_junior_zh_id(q.get("topicId"))]
     base_items = [it for it in standards.get("items", []) if not is_stage4_std(it.get("id", ""))]
     if any(is_junior_zh_id(t.get("id")) for t in base_topics):
         print("剥离初中语文知识点失败", file=sys.stderr)
         return 1
-    if any(is_junior_zh_id(e.get("topicId")) or is_junior_zh_id(e.get("prerequisiteId")) for e in base_deps):
-        print("剥离后的依赖里仍有初中语文边", file=sys.stderr)
+    if any(is_junior_zh_id(e.get("topicId")) for e in base_deps):
+        print("剥离后的依赖里仍有以初中语文为起点的边", file=sys.stderr)
         return 1
 
     primary_ids = {t["id"] for t in base_topics if is_primary_zh_id(t.get("id"))}
@@ -483,10 +486,7 @@ def main():
     again_q = load("questions.json")
     again_s = load("cn-curriculum-standards.json")
     again_topics = [t for t in again_t if not is_junior_zh_id(t.get("id"))]
-    again_deps = [
-        e for e in again_d
-        if not is_junior_zh_id(e.get("topicId")) and not is_junior_zh_id(e.get("prerequisiteId"))
-    ]
+    again_deps = strip_junior_deps(again_d)
     again_qs = [q for q in again_q if not is_junior_zh_id(q.get("topicId"))]
     again_items = [it for it in again_s.get("items", []) if not is_stage4_std(it.get("id", ""))]
     if again_topics != base_topics or again_deps != base_deps or again_qs != base_questions or again_items != base_items:

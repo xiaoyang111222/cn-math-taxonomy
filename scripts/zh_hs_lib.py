@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+"""高中语文（统编必修上、下与选择性必修上、中、下）的登记实例。
+
+册次用本图谱的语文写法，不沿用化学的「必修一 / 选必一」：
+10 必修上，11 必修下，12 选必上，13 选必中，14 选必下。semester 都是「上」。
+"""
+import re
+
+from senior_lib import C, Senior  # noqa: F401
+
+DOMAINS = (
+    "拼音", "识字写字", "词语", "句子", "阅读理解",
+    "古诗文积累", "文言文阅读", "名著阅读", "习作基础",
+)
+ZH_BOOKS = {10: "必修上", 11: "必修下", 12: "选必上", 13: "选必中", 14: "选必下"}
+# 课序篇目：必修上 第一单元 第1课。活动单元和整本书用单元短名。古诗词诵读不在「第 N 单元」里。
+ZH_CHAPTER_RE = re.compile(
+    r"^(必修上|必修下|选必上|选必中|选必下) (?:第[一二三四五六七八]单元 \S+|古诗词诵读 \S+)$"
+)
+STD_NOTE = "公开转述，本图谱自编号，未逐页核对教育部课标 PDF，页码待核。"
+
+S = Senior(
+    subject="chinese", label="语文", tag="zh", edition="统编版",
+    id_prefix="cnc_h", junior_prefix="cnc_j", std_prefix="ccs-hs-2017:", std_key="chinese_senior",
+    std_meta={
+        "title": "普通高中语文课程标准（2017年版）",
+        "issuer": "中华人民共和国教育部",
+        "year": 2017,
+        "stage": "高中必修与选择性必修",
+        "note": "条目是对高中语文学习要求的公开转述，不是逐页核对的教育部课标原文。verbatim 为 false，page_or_ref 为「待核」。编号 ccs-hs-2017 是本图谱编的，不是教育部原编号。不得把义务教育语文课程标准（2022年版）当作高中课标。章节依据统编《普通高中教科书 语文》五册扫描目录，未逐页核对纸质课本。",
+        "textbook": "人民教育出版社统编《普通高中教科书 语文》必修上册、必修下册、选择性必修上册、选择性必修中册、选择性必修下册",
+    },
+    domains=DOMAINS,
+    book_title={
+        10: "《普通高中教科书 语文》必修上册",
+        11: "《普通高中教科书 语文》必修下册",
+        12: "《普通高中教科书 语文》选择性必修上册",
+        13: "《普通高中教科书 语文》选择性必修中册",
+        14: "《普通高中教科书 语文》选择性必修下册",
+    },
+    book_words=ZH_BOOKS,
+    chapter_re=ZH_CHAPTER_RE,
+    extra_prereq_prefixes=("cnc_p",),
+    std_note=STD_NOTE,
+    count_expect={10: 39, 11: 31, 12: 21, 13: 26, 14: 27},
+)
+T = S.T
+plan = S.plan
+clause = S.clause

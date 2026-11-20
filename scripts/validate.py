@@ -147,14 +147,20 @@ SENIOR3_STD_TITLE = {
 SENIOR3_LABEL = {"history": "历史", "geography": "地理", "biology": "生物"}
 SENIOR3_DOMAINS = {"history": HIS_DOMAINS, "geography": GEO_SENIOR_DOMAINS, "biology": BIO_SENIOR_DOMAINS}
 ZH_STD_ID_RE = re.compile(r"^ccs-2022:([1234])\.(PY|SZ|CY|JZ|YD|GS|XZ|WY|MZ)\.(\d{2,})$")
+# 高中语文：ccs-hs-2017:<B1|B2|S1|S2|S3>.<NN>。编号是本图谱编的，不是教育部原编号。
+ZH_HS_STD_ID_RE = re.compile(r"^ccs-hs-2017:(B1|B2|S1|S2|S3)\.(\d{2,})$")
+ZH_HS_BOOK = {10: "必修上", 11: "必修下", 12: "选必上", 13: "选必中", 14: "选必下"}
+ZH_HS_CHAPTER_RE = re.compile(
+    r"^(必修上|必修下|选必上|选必中|选必下) (?:第[一二三四五六七八]单元 \S+|古诗词诵读 \S+)$"
+)
 EN_PROMPT_START_RE = re.compile(r"^(同一|上题|该题|同上)")
 EN_PROMPT_BAN_RE = re.compile(r"本知识点|课标|是否要求")
 CORE_FIELDS = ["id", "name", "domain", "grade", "semester", "chapter", "type",
                "description", "mastery_criteria", "diagnostic_question", "external"]
 EXT_FIELDS = ["id", "name", "domain", "grade", "description", "external"]
 # cnm_001 初中正式；cnm_p001 小学正式；cnm_h001 高中正式。cne_p001 小学英语，cne_j001 初中英语，cne_h001 高中英语。
-# cnp_001 初中物理；cnp_h001 高中物理（必修一至选必三，grade 10–15）。cnc_p001 小学语文，cnc_j001 初中语文；cns_p001 小学科学；cnd_p001 小学道德与法治，cnd_j001 初中道德与法治；cnh_j001 初中历史，cnh_h001 高中历史；cng_j001 初中地理，cng_h001 高中地理；cnb_j001 初中生物，cnb_h001 高中生物（三科高中点 grade 10 必修一、11 必修二、12 选必一、13 选必二、14 选必三）；cnk_j001 初中化学；cnk_h001 高中化学（grade 10 必修一、11 必修二、12 选必一、13 选必二、14 选必三）。
-ID_RE = re.compile(r"^(?:cnm_(?:p|h)?|cne_[pjh]|cnp_h?|cnc_[pj]|cns_p|cnd_[pj]|cnh_[jh]|cng_[jh]|cnb_[jh]|cnk_[jh])\d{3,}$")
+# cnp_001 初中物理；cnp_h001 高中物理（必修一至选必三，grade 10–15）。cnc_p001 小学语文，cnc_j001 初中语文，cnc_h001 高中语文（10 必修上、11 必修下、12 选必上、13 选必中、14 选必下）；cns_p001 小学科学；cnd_p001 小学道德与法治，cnd_j001 初中道德与法治；cnh_j001 初中历史，cnh_h001 高中历史；cng_j001 初中地理，cng_h001 高中地理；cnb_j001 初中生物，cnb_h001 高中生物（三科高中点 grade 10 必修一、11 必修二、12 选必一、13 选必二、14 选必三）；cnk_j001 初中化学；cnk_h001 高中化学（grade 10 必修一、11 必修二、12 选必一、13 选必二、14 选必三）。
+ID_RE = re.compile(r"^(?:cnm_(?:p|h)?|cne_[pjh]|cnp_h?|cnc_[pjh]|cns_p|cnd_[pj]|cnh_[jh]|cng_[jh]|cnb_[jh]|cnk_[jh])\d{3,}$")
 # 10、11 是必修第一、二册；12、13、14 是选择性必修第一、二、三册，不是教学年份。
 GRADES = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
 ALIASES_PATH = os.path.join(ROOT, "data", "id-aliases.json")
@@ -550,10 +556,24 @@ def check_topics(topics):
             else:
                 err("%s 化学 id 必须是 cnk_j 或 cnk_h" % where)
         if subj == "chinese":
-            if str(tid).startswith("cnc_p") and g not in (1, 2, 3, 4, 5, 6):
-                err("%s 小学语文 grade 必须是 1–6" % where)
-            elif str(tid).startswith("cnc_j") and g not in (7, 8, 9):
-                err("%s 初中语文 grade 必须是 7–9" % where)
+            if str(tid).startswith("cnc_p"):
+                if g not in (1, 2, 3, 4, 5, 6):
+                    err("%s 小学语文 grade 必须是 1–6" % where)
+            elif str(tid).startswith("cnc_j"):
+                if g not in (7, 8, 9):
+                    err("%s 初中语文 grade 必须是 7–9" % where)
+            elif str(tid).startswith("cnc_h"):
+                if g not in (10, 11, 12, 13, 14):
+                    err("%s 高中语文 grade 必须是 10–14（必修上、下与选必上、中、下）" % where)
+                if t.get("semester") != "上":
+                    err("%s 高中语文 semester 必须是 上" % where)
+                ch = t.get("chapter") or ""
+                if not ZH_HS_CHAPTER_RE.match(ch):
+                    err("%s 高中语文章节格式不对：%r" % (where, ch))
+                elif g in ZH_HS_BOOK and not ch.startswith(ZH_HS_BOOK[g] + " "):
+                    err("%s 高中语文册名与 grade 不一致：%r" % (where, ch))
+            else:
+                err("%s 语文 id 必须是 cnc_p、cnc_j 或 cnc_h" % where)
         if subj == "english":
             if str(tid).startswith("cne_p") and g not in (3, 4, 5, 6):
                 err("%s 小学英语 grade 必须是 3–6" % where)
@@ -749,6 +769,8 @@ def report(ids, prereqs, dependents, n_hard, n_soft, n_en_hard, n_en_soft):
     zh = {1: "一", 2: "二", 3: "三", 4: "四", 5: "五", 6: "六", 7: "七", 8: "八", 9: "九"}
 
     def vol_label(t):
+        if is_chinese_id(t.get("id")) and isinstance(t.get("grade"), int) and t["grade"] >= 10:
+            return ZH_HS_BOOK.get(t["grade"], str(t["grade"]))
         if is_physics_senior_id(t.get("id")):
             return {10: "物必一", 11: "物必二", 12: "物必三", 13: "物选必一", 14: "物选必二", 15: "物选必三"}.get(t["grade"], str(t["grade"]))
         if is_chemistry_senior_id(t.get("id")) or is_senior3_id(t.get("id")):
@@ -786,7 +808,8 @@ def report(ids, prereqs, dependents, n_hard, n_soft, n_en_hard, n_en_soft):
         print("语文按册：")
         zc = Counter(vol_label(t) for t in zh_core)
         for k in ["一上", "一下", "二上", "二下", "三上", "三下", "四上", "四下", "五上", "五下", "六上", "六下",
-                  "七上", "七下", "八上", "八下", "九上", "九下"]:
+                  "七上", "七下", "八上", "八下", "九上", "九下",
+                  "必修上", "必修下", "选必上", "选必中", "选必下"]:
             print("  %-8s %d" % (k, zc.get(k, 0)))
     if sci_core:
         print("\n科学按 domain：")
@@ -899,6 +922,7 @@ def check_standards_file(std):
     saw_physics = False
     saw_physics_senior = False
     saw_chinese = False
+    saw_chinese_senior = False
     saw_science = False
     saw_morality = False
     saw_history = False
@@ -925,6 +949,7 @@ def check_standards_file(std):
         em = EN_STD_ID_RE.match(sid)
         ehm = EN_HS_STD_ID_RE.match(sid)
         zm = ZH_STD_ID_RE.match(sid)
+        zhm = ZH_HS_STD_ID_RE.match(sid)
         scm = SCI_STD_ID_RE.match(sid)
         mrm = MOR_STD_ID_RE.match(sid)
         hism = HIS_STD_ID_RE.match(sid)
@@ -1074,6 +1099,22 @@ def check_standards_file(std):
                     err("%s 语文课标 text_status 必须记下 2026-11-06 的核对" % where)
             elif ref != "待核":
                 err("%s 语文课标 page_or_ref 必须是「待核」，不能编页码" % where)
+        elif zhm:
+            saw_chinese_senior = True
+            book, num = zhm.group(1), int(zhm.group(2))
+            if it.get("domain") not in ZH_DOMAINS:
+                err("%s 高中语文课标 domain 取值非法：%r" % (where, it.get("domain")))
+            key = ("ccs-hs", book)
+            if num != last.get(key, 0) + 1:
+                err("%s 编号在册内不连续（上一条为 %02d）" % (where, last.get(key, 0)))
+            last[key] = num
+            if it.get("verbatim") is not False:
+                err("%s 高中语文课标必须显式标 verbatim:false（原文未逐页核对）" % where)
+            if it.get("page_or_ref") != "待核":
+                err("%s 高中语文课标 page_or_ref 必须是「待核」，不能编页码" % where)
+            status = str(it.get("text_status") or "")
+            if "公开转述" not in status or "未" not in status:
+                err("%s 高中语文课标 text_status 必须写明公开转述且未逐页核对" % where)
         elif mrm:
             saw_morality = True
             if mrm.group(1):
@@ -1243,6 +1284,20 @@ def check_standards_file(std):
                 err("chinese.year 必须是整数")
             elif zh.get("year") != 2022:
                 err("chinese.year 必须是 2022")
+    if saw_chinese_senior:
+        zhs = std.get("chinese_senior")
+        if not isinstance(zhs, dict):
+            err("有高中语文课标条目，但缺少 chinese_senior 对象")
+        else:
+            for f in ("title", "issuer", "stage", "note"):
+                if not nonempty_str(zhs.get(f)):
+                    err("chinese_senior.%s 缺失或为空" % f)
+            if zhs.get("title") != "普通高中语文课程标准（2017年版）":
+                err("chinese_senior.title 必须是「普通高中语文课程标准（2017年版）」")
+            if "2022" in str(zhs.get("title") or ""):
+                err("chinese_senior.title 不能写成 2022 年版义务教育课标")
+            if zhs.get("year") != 2017:
+                err("chinese_senior.year 必须是 2017")
     if saw_morality:
         mo = std.get("morality")
         if not isinstance(mo, dict):
@@ -1374,6 +1429,15 @@ def check_topic_standards(ids, std_items):
                     err("%s 初中物理只能引用 cps-2022，高中物理只能引用 cps-hs-2017：%s" % (sw, sid))
                 if is_chinese_id(tid) != str(sid).startswith("ccs-"):
                     err("%s 学科与课标条目不一致：%s" % (sw, sid))
+                elif str(tid).startswith("cnc_h") and not str(sid).startswith("ccs-hs-2017:"):
+                    err("%s 高中语文只能引用 ccs-hs-2017：%s" % (sw, sid))
+                elif str(tid).startswith(("cnc_p", "cnc_j")) and str(sid).startswith("ccs-hs-2017:"):
+                    err("%s 小学和初中语文不能引用高中课标：%s" % (sw, sid))
+                if str(tid).startswith("cnc_h"):
+                    if s.get("confidence") != "inferred":
+                        err("%s 高中语文课标引用 confidence 必须是 inferred" % sw)
+                    if "待核" not in str(s.get("note") or ""):
+                        err("%s 高中语文课标引用 note 必须注明待核" % sw)
                 if is_science_id(tid) != str(sid).startswith("css-"):
                     err("%s 学科与课标条目不一致：%s" % (sw, sid))
                 if is_morality_id(tid) != str(sid).startswith("cds-"):
@@ -1460,7 +1524,7 @@ PURE_ARITH_CHOICE_RE = re.compile(
     r"^\d+(?:\.\d+)?(?:\s*[＋+\-－×*÷]\s*\d+(?:\.\d+)?)+ 的得数是哪一个？$"
 )
 CHALLENGE_BARE_CALC_RE = re.compile(r"^计算：.*＝？")
-Q_ID_RE = re.compile(r"^((?:cnm_(?:p|h)?|cne_[pjh]|cnp_h?|cnc_[pj]|cns_p|cnd_[pj]|cnh_[jh]|cng_[jh]|cnb_[jh]|cnk_[jh])\d{3,})_q([1-9]\d*)$")
+Q_ID_RE = re.compile(r"^((?:cnm_(?:p|h)?|cne_[pjh]|cnp_h?|cnc_[pjh]|cns_p|cnd_[pj]|cnh_[jh]|cng_[jh]|cnb_[jh]|cnk_[jh])\d{3,})_q([1-9]\d*)$")
 NUM_RE = re.compile(r"^-?\d+(?:\.\d+)?(?:/\d+(?:\.\d+)?)?$")
 MIN_QUESTIONS_PER_TOPIC = 3
 MIN_AUTO_SHARE = 0.60

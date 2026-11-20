@@ -37078,5 +37078,941 @@
     "prerequisiteId": "cnb_h134",
     "strength": "soft",
     "reason": "按人教版高中生物选择性必修3《生物技术与工程》的教学顺序，先学「关注生殖性克隆人」，再学「禁止生物武器」。"
+  },
+  {
+    "topicId": "cnc_h001",
+    "prerequisiteId": "cnc_j127",
+    "strength": "hard",
+    "reason": "初中已学毛泽东的词《沁园春·雪》。词牌、作者和上下阕的读法，是学习《沁园春·长沙》的基础。"
+  },
+  {
+    "topicId": "cnc_h002",
+    "prerequisiteId": "cnc_h001",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《沁园春·长沙》」，再学「阅读《立在地球边上放号》」。"
+  },
+  {
+    "topicId": "cnc_h003",
+    "prerequisiteId": "cnc_h002",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《立在地球边上放号》」，再学「阅读《红烛》」。"
+  },
+  {
+    "topicId": "cnc_h004",
+    "prerequisiteId": "cnc_h003",
+    "strength": "hard",
+    "reason": "《峨日朵雪峰之侧》是自读新诗，紧接同课教读的《红烛》。先读完教读，再读这篇。"
+  },
+  {
+    "topicId": "cnc_h005",
+    "prerequisiteId": "cnc_h004",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《峨日朵雪峰之侧》」，再学「阅读《致云雀》」。"
+  },
+  {
+    "topicId": "cnc_h006",
+    "prerequisiteId": "cnc_h005",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《致云雀》」，再学「阅读《百合花》」。"
+  },
+  {
+    "topicId": "cnc_h007",
+    "prerequisiteId": "cnc_h006",
+    "strength": "hard",
+    "reason": "《哦，香雪》是自读小说，紧接同课教读的《百合花》。先读完教读，再读这篇。"
+  },
+  {
+    "topicId": "cnc_h008",
+    "prerequisiteId": "cnc_h007",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《哦，香雪》」，再学「阅读《喜看稻菽千重浪》」。"
+  },
+  {
+    "topicId": "cnc_h009",
+    "prerequisiteId": "cnc_h008",
+    "strength": "hard",
+    "reason": "《心有一团火，温暖众人心》是自读通讯，紧接同课写袁隆平的教读课文。"
+  },
+  {
+    "topicId": "cnc_h010",
+    "prerequisiteId": "cnc_h009",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《心有一团火，温暖众人心》」，再学「阅读《“探界者”钟扬》」。"
+  },
+  {
+    "topicId": "cnc_h011",
+    "prerequisiteId": "cnc_h010",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《“探界者”钟扬》」，再学「阅读《以工匠精神雕琢时代品质》」。"
+  },
+  {
+    "topicId": "cnc_h012",
+    "prerequisiteId": "cnc_j107",
+    "strength": "hard",
+    "reason": "初中学过《诗经》二首。先有四言诗的印象，再读《芣苢》，不要把它当成屈原的作品。"
+  },
+  {
+    "topicId": "cnc_h012",
+    "prerequisiteId": "cnc_h011",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《以工匠精神雕琢时代品质》」，再学「诗《芣苢》」。"
+  },
+  {
+    "topicId": "cnc_h013",
+    "prerequisiteId": "cnc_h012",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「诗《芣苢》」，再学「诗《插秧歌》」。"
+  },
+  {
+    "topicId": "cnc_h014",
+    "prerequisiteId": "cnc_h013",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「诗《插秧歌》」，再学「诗《短歌行》」。"
+  },
+  {
+    "topicId": "cnc_h015",
+    "prerequisiteId": "cnc_h014",
+    "strength": "hard",
+    "reason": "《归园田居》（其一）是自读诗，紧接同课教读的曹操《短歌行》。"
+  },
+  {
+    "topicId": "cnc_h016",
+    "prerequisiteId": "cnc_p056",
+    "strength": "hard",
+    "reason": "小学学过李白《静夜思》。先分清那是五言绝句，再读《梦游天姥吟留别》，避免把两首诗的句子记到一起。"
+  },
+  {
+    "topicId": "cnc_h016",
+    "prerequisiteId": "cnc_h015",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「诗《归园田居》（其一）」，再学「诗《梦游天姥吟留别》」。"
+  },
+  {
+    "topicId": "cnc_h017",
+    "prerequisiteId": "cnc_h016",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「诗《梦游天姥吟留别》」，再学「诗《登高》」。"
+  },
+  {
+    "topicId": "cnc_h018",
+    "prerequisiteId": "cnc_h017",
+    "strength": "hard",
+    "reason": "《琵琶行并序》是自读长诗，紧接同课教读的杜甫《登高》。"
+  },
+  {
+    "topicId": "cnc_h019",
+    "prerequisiteId": "cnc_h018",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「诗《琵琶行并序》」，再学「词《念奴娇·赤壁怀古》」。"
+  },
+  {
+    "topicId": "cnc_h020",
+    "prerequisiteId": "cnc_h019",
+    "strength": "hard",
+    "reason": "《永遇乐·京口北固亭怀古》是自读词，紧接同课教读的《念奴娇·赤壁怀古》。"
+  },
+  {
+    "topicId": "cnc_h021",
+    "prerequisiteId": "cnc_h020",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「词《永遇乐·京口北固亭怀古》」，再学「词《声声慢》（寻寻觅觅）」。"
+  },
+  {
+    "topicId": "cnc_h022",
+    "prerequisiteId": "cnc_h021",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「词《声声慢》（寻寻觅觅）」，再学「学习活动《家乡文化生活》」。"
+  },
+  {
+    "topicId": "cnc_h023",
+    "prerequisiteId": "cnc_h022",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「学习活动《家乡文化生活》」，再学「整本书阅读《乡土中国》」。"
+  },
+  {
+    "topicId": "cnc_h024",
+    "prerequisiteId": "cnc_j033",
+    "strength": "hard",
+    "reason": "初中学过《孙权劝学》，讲的是吕蒙读书。高中《劝学》是《荀子》里的另一篇，先分清篇名，再读荀子的论证。"
+  },
+  {
+    "topicId": "cnc_h024",
+    "prerequisiteId": "cnc_h023",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「整本书阅读《乡土中国》」，再学「文言文《劝学》」。"
+  },
+  {
+    "topicId": "cnc_h025",
+    "prerequisiteId": "cnc_h024",
+    "strength": "hard",
+    "reason": "《师说》是自读文言文，和《劝学》同在第10课。先读完教读的《劝学》，再读这篇。"
+  },
+  {
+    "topicId": "cnc_h026",
+    "prerequisiteId": "cnc_h025",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「文言文《师说》」，再学「阅读《反对党八股》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h027",
+    "prerequisiteId": "cnc_j143",
+    "strength": "soft",
+    "reason": "初中学过鲁迅的小说《故乡》。先熟悉鲁迅的笔调，再读杂文《拿来主义》，不要把两篇的人物和观点混成一篇。"
+  },
+  {
+    "topicId": "cnc_h027",
+    "prerequisiteId": "cnc_h026",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《反对党八股》（节选）」，再学「阅读《拿来主义》」。"
+  },
+  {
+    "topicId": "cnc_h028",
+    "prerequisiteId": "cnc_h027",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《拿来主义》」，再学「阅读《读书：目的和前提》」。"
+  },
+  {
+    "topicId": "cnc_h029",
+    "prerequisiteId": "cnc_h028",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《读书：目的和前提》」，再学「阅读《上图书馆》」。"
+  },
+  {
+    "topicId": "cnc_h030",
+    "prerequisiteId": "cnc_h029",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《上图书馆》」，再学「阅读《故都的秋》」。"
+  },
+  {
+    "topicId": "cnc_h031",
+    "prerequisiteId": "cnc_h030",
+    "strength": "hard",
+    "reason": "《荷塘月色》是自读散文，紧接同课教读的《故都的秋》。"
+  },
+  {
+    "topicId": "cnc_h031",
+    "prerequisiteId": "cnc_j076",
+    "strength": "hard",
+    "reason": "初中学过朱自清《背影》。先知道作者和散文笔法，再读自读的《荷塘月色》。"
+  },
+  {
+    "topicId": "cnc_h032",
+    "prerequisiteId": "cnc_h031",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《荷塘月色》」，再学「阅读《我与地坛》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h033",
+    "prerequisiteId": "cnc_h019",
+    "strength": "hard",
+    "reason": "两篇都写苏轼与赤壁。先读词《念奴娇·赤壁怀古》，再读文言文《赤壁赋》，才分得清词和赋。"
+  },
+  {
+    "topicId": "cnc_h033",
+    "prerequisiteId": "cnc_h032",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「阅读《我与地坛》（节选）」，再学「文言文《赤壁赋》」。"
+  },
+  {
+    "topicId": "cnc_h034",
+    "prerequisiteId": "cnc_h033",
+    "strength": "hard",
+    "reason": "《登泰山记》是自读游记，紧接教读的《赤壁赋》。先读完赋，再读这篇登山记。"
+  },
+  {
+    "topicId": "cnc_h035",
+    "prerequisiteId": "cnc_h034",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「文言文《登泰山记》」，再学「学习活动《词语积累与词语解释》」。"
+  },
+  {
+    "topicId": "cnc_h036",
+    "prerequisiteId": "cnc_h035",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「学习活动《词语积累与词语解释》」，再学「古诗词诵读《静女》」。"
+  },
+  {
+    "topicId": "cnc_h037",
+    "prerequisiteId": "cnc_h036",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「古诗词诵读《静女》」，再学「古诗词诵读《涉江采芙蓉》」。"
+  },
+  {
+    "topicId": "cnc_h038",
+    "prerequisiteId": "cnc_h037",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「古诗词诵读《涉江采芙蓉》」，再学「古诗词诵读《虞美人》（春花秋月何时了）」。"
+  },
+  {
+    "topicId": "cnc_h039",
+    "prerequisiteId": "cnc_h038",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修上册的教学顺序，先学「古诗词诵读《虞美人》（春花秋月何时了）」，再学「古诗词诵读《鹊桥仙》（纤云弄巧）」。"
+  },
+  {
+    "topicId": "cnc_h040",
+    "prerequisiteId": "cnc_h039",
+    "strength": "soft",
+    "reason": "按统编版高中语文课序，学完《普通高中教科书 语文》必修上册的「古诗词诵读《鹊桥仙》（纤云弄巧）」后进入《普通高中教科书 语文》必修下册的「文言文《子路、曾皙、冉有、公西华侍坐》」。"
+  },
+  {
+    "topicId": "cnc_h041",
+    "prerequisiteId": "cnc_h040",
+    "strength": "hard",
+    "reason": "两篇都是先秦诸子对话。《齐桓晋文之事》是自读，紧接教读的《侍坐》。先读完侍坐，再读这篇。"
+  },
+  {
+    "topicId": "cnc_h042",
+    "prerequisiteId": "cnc_h041",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「文言文《齐桓晋文之事》」，再学「文言文《庖丁解牛》」。"
+  },
+  {
+    "topicId": "cnc_h043",
+    "prerequisiteId": "cnc_h042",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「文言文《庖丁解牛》」，再学「文言文《烛之武退秦师》」。"
+  },
+  {
+    "topicId": "cnc_h044",
+    "prerequisiteId": "cnc_h043",
+    "strength": "hard",
+    "reason": "两篇都是史传散文。《鸿门宴》是自读，紧接《烛之武退秦师》。先把退秦师的叙事读完。"
+  },
+  {
+    "topicId": "cnc_h045",
+    "prerequisiteId": "cnc_h044",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「文言文《鸿门宴》」，再学「阅读《窦娥冤》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h046",
+    "prerequisiteId": "cnc_h045",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「阅读《窦娥冤》（节选）」，再学「阅读《雷雨》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h047",
+    "prerequisiteId": "cnc_h046",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「阅读《雷雨》（节选）」，再学「阅读《哈姆莱特》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h048",
+    "prerequisiteId": "cnc_h047",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「阅读《哈姆莱特》（节选）」，再学「阅读《青蒿素：人类征服疾病的一小步》」。"
+  },
+  {
+    "topicId": "cnc_h049",
+    "prerequisiteId": "cnc_h048",
+    "strength": "hard",
+    "reason": "《一名物理学家的教育历程》是自读，紧接同课屠呦呦的教读文章。"
+  },
+  {
+    "topicId": "cnc_h050",
+    "prerequisiteId": "cnc_h049",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「阅读《一名物理学家的教育历程》」，再学「阅读《中国建筑的特征》」。"
+  },
+  {
+    "topicId": "cnc_h051",
+    "prerequisiteId": "cnc_h050",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「阅读《中国建筑的特征》」，再学「阅读《说“木叶”》」。"
+  },
+  {
+    "topicId": "cnc_h052",
+    "prerequisiteId": "cnc_h051",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「阅读《说“木叶”》」，再学「学习活动《信息时代的语文生活》」。"
+  },
+  {
+    "topicId": "cnc_h053",
+    "prerequisiteId": "cnc_h052",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「学习活动《信息时代的语文生活》」，再学「阅读《在〈人民报〉创刊纪念会上的演说》」。"
+  },
+  {
+    "topicId": "cnc_h054",
+    "prerequisiteId": "cnc_h053",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「阅读《在〈人民报〉创刊纪念会上的演说》」，再学「阅读《在马克思墓前的讲话》」。"
+  },
+  {
+    "topicId": "cnc_h055",
+    "prerequisiteId": "cnc_h054",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「阅读《在马克思墓前的讲话》」，再学「文言文《谏逐客书》」。"
+  },
+  {
+    "topicId": "cnc_h056",
+    "prerequisiteId": "cnc_h055",
+    "strength": "hard",
+    "reason": "《与妻书》是自读，和李斯《谏逐客书》同在第11课。先读完奏书，再读这封家书。"
+  },
+  {
+    "topicId": "cnc_h057",
+    "prerequisiteId": "cnc_h056",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「文言文《与妻书》」，再学「阅读《祝福》」。"
+  },
+  {
+    "topicId": "cnc_h058",
+    "prerequisiteId": "cnc_h057",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「阅读《祝福》」，再学「阅读《林教头风雪山神庙》」。"
+  },
+  {
+    "topicId": "cnc_h059",
+    "prerequisiteId": "cnc_h058",
+    "strength": "hard",
+    "reason": "《装在套子里的人》是自读小说，紧接同课《林教头风雪山神庙》。"
+  },
+  {
+    "topicId": "cnc_h060",
+    "prerequisiteId": "cnc_h059",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「阅读《装在套子里的人》」，再学「阅读《促织》」。"
+  },
+  {
+    "topicId": "cnc_h061",
+    "prerequisiteId": "cnc_h060",
+    "strength": "hard",
+    "reason": "《变形记》是自读，紧接同课蒲松龄《促织》。两篇都写人与虫，但不是同一篇。"
+  },
+  {
+    "topicId": "cnc_h062",
+    "prerequisiteId": "cnc_h061",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「阅读《变形记》（节选）」，再学「整本书阅读《红楼梦》」。"
+  },
+  {
+    "topicId": "cnc_h063",
+    "prerequisiteId": "cnc_h062",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「整本书阅读《红楼梦》」，再学「文言文《谏太宗十思疏》」。"
+  },
+  {
+    "topicId": "cnc_h064",
+    "prerequisiteId": "cnc_h063",
+    "strength": "hard",
+    "reason": "《答司马谏议书》是自读，和魏征《谏太宗十思疏》同在第15课。先读完教读，再读这篇。"
+  },
+  {
+    "topicId": "cnc_h065",
+    "prerequisiteId": "cnc_h064",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「文言文《答司马谏议书》」，再学「文言文《阿房宫赋》」。"
+  },
+  {
+    "topicId": "cnc_h066",
+    "prerequisiteId": "cnc_h065",
+    "strength": "hard",
+    "reason": "《六国论》是自读，和杜牧《阿房宫赋》同在第16课。两篇都写到秦与六国。"
+  },
+  {
+    "topicId": "cnc_h067",
+    "prerequisiteId": "cnc_j137",
+    "strength": "hard",
+    "reason": "初中学过范仲淹《岳阳楼记》。这首诗也写岳阳楼，但是杜甫的五律，不是那篇记。"
+  },
+  {
+    "topicId": "cnc_h067",
+    "prerequisiteId": "cnc_h066",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「文言文《六国论》」，再学「古诗词诵读《登岳阳楼》」。"
+  },
+  {
+    "topicId": "cnc_h068",
+    "prerequisiteId": "cnc_h067",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「古诗词诵读《登岳阳楼》」，再学「古诗词诵读《桂枝香·金陵怀古》」。"
+  },
+  {
+    "topicId": "cnc_h069",
+    "prerequisiteId": "cnc_h068",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「古诗词诵读《桂枝香·金陵怀古》」，再学「古诗词诵读《念奴娇·过洞庭》」。"
+  },
+  {
+    "topicId": "cnc_h070",
+    "prerequisiteId": "cnc_h069",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》必修下册的教学顺序，先学「古诗词诵读《念奴娇·过洞庭》」，再学「古诗词诵读《游园》（【皂罗袍】）」。"
+  },
+  {
+    "topicId": "cnc_h071",
+    "prerequisiteId": "cnc_h070",
+    "strength": "soft",
+    "reason": "按统编版高中语文课序，学完《普通高中教科书 语文》必修下册的「古诗词诵读《游园》（【皂罗袍】）」后进入《普通高中教科书 语文》选择性必修上册的「阅读《中国人民站起来了》」。"
+  },
+  {
+    "topicId": "cnc_h072",
+    "prerequisiteId": "cnc_h071",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「阅读《中国人民站起来了》」，再学「阅读《长征胜利万岁》」。"
+  },
+  {
+    "topicId": "cnc_h073",
+    "prerequisiteId": "cnc_h072",
+    "strength": "hard",
+    "reason": "《大战中的插曲》是自读，紧接同课杨成武《长征胜利万岁》。"
+  },
+  {
+    "topicId": "cnc_h074",
+    "prerequisiteId": "cnc_h073",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「阅读《大战中的插曲》」，再学「阅读《别了，“不列颠尼亚”》」。"
+  },
+  {
+    "topicId": "cnc_h075",
+    "prerequisiteId": "cnc_h074",
+    "strength": "hard",
+    "reason": "《县委书记的榜样——焦裕禄》是自读通讯，紧接同课的《别了，“不列颠尼亚”》。"
+  },
+  {
+    "topicId": "cnc_h076",
+    "prerequisiteId": "cnc_h075",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「阅读《县委书记的榜样——焦裕禄》」，再学「阅读《在民族复兴的历史丰碑上——2020中国抗疫记》」。"
+  },
+  {
+    "topicId": "cnc_h077",
+    "prerequisiteId": "cnc_j013",
+    "strength": "hard",
+    "reason": "初中已经学过《论语》十二章，熟悉语录体和孔子师生的对话。高中这一组章句仍要单独阅读，不能当成同一张默写表。"
+  },
+  {
+    "topicId": "cnc_h077",
+    "prerequisiteId": "cnc_h076",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「阅读《在民族复兴的历史丰碑上——2020中国抗疫记》」，再学「文言文《论语》十二章」。"
+  },
+  {
+    "topicId": "cnc_h078",
+    "prerequisiteId": "cnc_h077",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「文言文《论语》十二章」，再学「文言文《大学之道》」。"
+  },
+  {
+    "topicId": "cnc_h079",
+    "prerequisiteId": "cnc_h078",
+    "strength": "hard",
+    "reason": "《人皆有不忍人之心》是自读，和《大学之道》同在第5课。先读完《大学》，再读这篇。"
+  },
+  {
+    "topicId": "cnc_h080",
+    "prerequisiteId": "cnc_h079",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「文言文《人皆有不忍人之心》」，再学「文言文《老子》四章」。"
+  },
+  {
+    "topicId": "cnc_h081",
+    "prerequisiteId": "cnc_h080",
+    "strength": "hard",
+    "reason": "《五石之瓠》是自读，紧接同课《老子》四章。先读完《老子》，再读这篇庄子寓言。"
+  },
+  {
+    "topicId": "cnc_h082",
+    "prerequisiteId": "cnc_h081",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「文言文《五石之瓠》」，再学「文言文《兼爱》」。"
+  },
+  {
+    "topicId": "cnc_h083",
+    "prerequisiteId": "cnc_h082",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「文言文《兼爱》」，再学「阅读《大卫·科波菲尔》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h084",
+    "prerequisiteId": "cnc_h083",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「阅读《大卫·科波菲尔》（节选）」，再学「阅读《复活》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h085",
+    "prerequisiteId": "cnc_h084",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「阅读《复活》（节选）」，再学「阅读《老人与海》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h086",
+    "prerequisiteId": "cnc_h085",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「阅读《老人与海》（节选）」，再学「阅读《百年孤独》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h087",
+    "prerequisiteId": "cnc_h086",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「阅读《百年孤独》（节选）」，再学「学习活动《逻辑的力量》」。"
+  },
+  {
+    "topicId": "cnc_h088",
+    "prerequisiteId": "cnc_h087",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「学习活动《逻辑的力量》」，再学「古诗词诵读《无衣》」。"
+  },
+  {
+    "topicId": "cnc_h089",
+    "prerequisiteId": "cnc_h088",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「古诗词诵读《无衣》」，再学「古诗词诵读《春江花月夜》」。"
+  },
+  {
+    "topicId": "cnc_h090",
+    "prerequisiteId": "cnc_h089",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「古诗词诵读《春江花月夜》」，再学「古诗词诵读《将进酒》」。"
+  },
+  {
+    "topicId": "cnc_h091",
+    "prerequisiteId": "cnc_h090",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修上册的教学顺序，先学「古诗词诵读《将进酒》」，再学「古诗词诵读《江城子·乙卯正月二十日夜记梦》」。"
+  },
+  {
+    "topicId": "cnc_h092",
+    "prerequisiteId": "cnc_h091",
+    "strength": "soft",
+    "reason": "按统编版高中语文课序，学完《普通高中教科书 语文》选择性必修上册的「古诗词诵读《江城子·乙卯正月二十日夜记梦》」后进入《普通高中教科书 语文》选择性必修中册的「阅读《社会历史的决定性基础》」。"
+  },
+  {
+    "topicId": "cnc_h093",
+    "prerequisiteId": "cnc_h092",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《社会历史的决定性基础》」，再学「阅读《改造我们的学习》」。"
+  },
+  {
+    "topicId": "cnc_h094",
+    "prerequisiteId": "cnc_h093",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《改造我们的学习》」，再学「阅读《人的正确思想是从哪里来的？》」。"
+  },
+  {
+    "topicId": "cnc_h095",
+    "prerequisiteId": "cnc_h094",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《人的正确思想是从哪里来的？》」，再学「阅读《实践是检验真理的唯一标准》」。"
+  },
+  {
+    "topicId": "cnc_h096",
+    "prerequisiteId": "cnc_h095",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《实践是检验真理的唯一标准》」，再学「阅读《修辞立其诚》」。"
+  },
+  {
+    "topicId": "cnc_h097",
+    "prerequisiteId": "cnc_h096",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《修辞立其诚》」，再学「阅读《怜悯是人的天性》」。"
+  },
+  {
+    "topicId": "cnc_h098",
+    "prerequisiteId": "cnc_h097",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《怜悯是人的天性》」，再学「阅读《人应当坚持正义》」。"
+  },
+  {
+    "topicId": "cnc_h099",
+    "prerequisiteId": "cnc_h098",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《人应当坚持正义》」，再学「阅读《记念刘和珍君》」。"
+  },
+  {
+    "topicId": "cnc_h100",
+    "prerequisiteId": "cnc_h099",
+    "strength": "hard",
+    "reason": "《为了忘却的记念》是自读，和《记念刘和珍君》同在第6课。先读完前一篇，再读这篇。"
+  },
+  {
+    "topicId": "cnc_h101",
+    "prerequisiteId": "cnc_h100",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《为了忘却的记念》」，再学「阅读《包身工》」。"
+  },
+  {
+    "topicId": "cnc_h102",
+    "prerequisiteId": "cnc_h101",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《包身工》」，再学「阅读《荷花淀》」。"
+  },
+  {
+    "topicId": "cnc_h103",
+    "prerequisiteId": "cnc_h102",
+    "strength": "hard",
+    "reason": "《小二黑结婚》是自读，紧接同课孙犁《荷花淀》。"
+  },
+  {
+    "topicId": "cnc_h104",
+    "prerequisiteId": "cnc_h103",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《小二黑结婚》（节选）」，再学「阅读《党费》」。"
+  },
+  {
+    "topicId": "cnc_h105",
+    "prerequisiteId": "cnc_h044",
+    "strength": "hard",
+    "reason": "《屈原列传》和《鸿门宴》都出自司马迁《史记》。先熟悉《鸿门宴》的纪传写法，再读这篇列传。"
+  },
+  {
+    "topicId": "cnc_h105",
+    "prerequisiteId": "cnc_h104",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《党费》」，再学「文言文《屈原列传》」。"
+  },
+  {
+    "topicId": "cnc_h106",
+    "prerequisiteId": "cnc_h105",
+    "strength": "hard",
+    "reason": "《苏武传》是自读史传，紧接《屈原列传》。先读司马迁的列传，再读班固的传。"
+  },
+  {
+    "topicId": "cnc_h107",
+    "prerequisiteId": "cnc_h066",
+    "strength": "hard",
+    "reason": "《过秦论》和《六国论》都讨论秦与六国的兴亡。先读过苏洵《六国论》，再比较贾谊的论证。"
+  },
+  {
+    "topicId": "cnc_h107",
+    "prerequisiteId": "cnc_h106",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「文言文《苏武传》」，再学「文言文《过秦论》」。"
+  },
+  {
+    "topicId": "cnc_h108",
+    "prerequisiteId": "cnc_h107",
+    "strength": "hard",
+    "reason": "《五代史伶官传序》是自读史论，和贾谊《过秦论》同在第11课。先读完《过秦论》，再读这篇。"
+  },
+  {
+    "topicId": "cnc_h109",
+    "prerequisiteId": "cnc_h108",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「文言文《五代史伶官传序》」，再学「阅读《玩偶之家》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h110",
+    "prerequisiteId": "cnc_h109",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《玩偶之家》（节选）」，再学「阅读《迷娘》（之一）」。"
+  },
+  {
+    "topicId": "cnc_h111",
+    "prerequisiteId": "cnc_h110",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《迷娘》（之一）」，再学「阅读《致大海》」。"
+  },
+  {
+    "topicId": "cnc_h112",
+    "prerequisiteId": "cnc_h111",
+    "strength": "hard",
+    "reason": "《自己之歌》是自读，紧接同课普希金《致大海》。"
+  },
+  {
+    "topicId": "cnc_h113",
+    "prerequisiteId": "cnc_h112",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《自己之歌》（节选）」，再学「阅读《树和天空》」。"
+  },
+  {
+    "topicId": "cnc_h114",
+    "prerequisiteId": "cnc_h113",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「阅读《树和天空》」，再学「古诗词诵读《燕歌行并序》」。"
+  },
+  {
+    "topicId": "cnc_h115",
+    "prerequisiteId": "cnc_h114",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「古诗词诵读《燕歌行并序》」，再学「古诗词诵读《李凭箜篌引》」。"
+  },
+  {
+    "topicId": "cnc_h116",
+    "prerequisiteId": "cnc_h115",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「古诗词诵读《李凭箜篌引》」，再学「古诗词诵读《锦瑟》」。"
+  },
+  {
+    "topicId": "cnc_h117",
+    "prerequisiteId": "cnc_h116",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修中册的教学顺序，先学「古诗词诵读《锦瑟》」，再学「古诗词诵读《书愤》」。"
+  },
+  {
+    "topicId": "cnc_h118",
+    "prerequisiteId": "cnc_h117",
+    "strength": "soft",
+    "reason": "按统编版高中语文课序，学完《普通高中教科书 语文》选择性必修中册的「古诗词诵读《书愤》」后进入《普通高中教科书 语文》选择性必修下册的「诗《氓》」。"
+  },
+  {
+    "topicId": "cnc_h119",
+    "prerequisiteId": "cnc_h118",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「诗《氓》」，再学「诗《离骚》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h120",
+    "prerequisiteId": "cnc_h119",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「诗《离骚》（节选）」，再学「诗《孔雀东南飞并序》」。"
+  },
+  {
+    "topicId": "cnc_h121",
+    "prerequisiteId": "cnc_h120",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「诗《孔雀东南飞并序》」，再学「诗《蜀道难》」。"
+  },
+  {
+    "topicId": "cnc_h122",
+    "prerequisiteId": "cnc_h121",
+    "strength": "hard",
+    "reason": "《蜀相》是自读，紧接同课李白《蜀道难》。先读完《蜀道难》，再读这首七律。"
+  },
+  {
+    "topicId": "cnc_h123",
+    "prerequisiteId": "cnc_h122",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「诗《蜀相》」，再学「词《望海潮》（东南形胜）」。"
+  },
+  {
+    "topicId": "cnc_h124",
+    "prerequisiteId": "cnc_h123",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「词《望海潮》（东南形胜）」，再学「词《扬州慢》（淮左名都）」。"
+  },
+  {
+    "topicId": "cnc_h125",
+    "prerequisiteId": "cnc_h124",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「词《扬州慢》（淮左名都）」，再学「阅读《阿Q正传》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h126",
+    "prerequisiteId": "cnc_h125",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「阅读《阿Q正传》（节选）」，再学「阅读《边城》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h127",
+    "prerequisiteId": "cnc_h126",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「阅读《边城》（节选）」，再学「阅读《大堰河——我的保姆》」。"
+  },
+  {
+    "topicId": "cnc_h128",
+    "prerequisiteId": "cnc_h127",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「阅读《大堰河——我的保姆》」，再学「阅读《再别康桥》」。"
+  },
+  {
+    "topicId": "cnc_h129",
+    "prerequisiteId": "cnc_h128",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「阅读《再别康桥》」，再学「阅读《一个消逝了的山村》」。"
+  },
+  {
+    "topicId": "cnc_h130",
+    "prerequisiteId": "cnc_h129",
+    "strength": "hard",
+    "reason": "《秦腔》是自读，紧接同课冯至《一个消逝了的山村》。"
+  },
+  {
+    "topicId": "cnc_h131",
+    "prerequisiteId": "cnc_h130",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「阅读《秦腔》」，再学「阅读《茶馆》（节选）」。"
+  },
+  {
+    "topicId": "cnc_h132",
+    "prerequisiteId": "cnc_h131",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「阅读《茶馆》（节选）」，再学「文言文《陈情表》」。"
+  },
+  {
+    "topicId": "cnc_h133",
+    "prerequisiteId": "cnc_h132",
+    "strength": "hard",
+    "reason": "《项脊轩志》是自读，和李密《陈情表》同在第9课。先读完教读，再读这篇。"
+  },
+  {
+    "topicId": "cnc_h134",
+    "prerequisiteId": "cnc_h133",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「文言文《项脊轩志》」，再学「文言文《兰亭集序》」。"
+  },
+  {
+    "topicId": "cnc_h135",
+    "prerequisiteId": "cnc_h015",
+    "strength": "hard",
+    "reason": "《归去来兮辞并序》和《归园田居》（其一）都是陶渊明写归隐。先读过必修上的诗，再读这篇辞。"
+  },
+  {
+    "topicId": "cnc_h135",
+    "prerequisiteId": "cnc_h134",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「文言文《兰亭集序》」，再学「文言文《归去来兮辞并序》」。"
+  },
+  {
+    "topicId": "cnc_h136",
+    "prerequisiteId": "cnc_h135",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「文言文《归去来兮辞并序》」，再学「文言文《种树郭橐驼传》」。"
+  },
+  {
+    "topicId": "cnc_h137",
+    "prerequisiteId": "cnc_h034",
+    "strength": "hard",
+    "reason": "两篇都是文言游记。先读过姚鼐《登泰山记》，再读苏轼《石钟山记》，才分得清两座山和两种写法。"
+  },
+  {
+    "topicId": "cnc_h137",
+    "prerequisiteId": "cnc_h136",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「文言文《种树郭橐驼传》」，再学「文言文《石钟山记》」。"
+  },
+  {
+    "topicId": "cnc_h138",
+    "prerequisiteId": "cnc_h137",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「文言文《石钟山记》」，再学「阅读《自然选择的证明》」。"
+  },
+  {
+    "topicId": "cnc_h139",
+    "prerequisiteId": "cnc_h138",
+    "strength": "hard",
+    "reason": "《宇宙的边疆》是自读，紧接同课达尔文《自然选择的证明》。"
+  },
+  {
+    "topicId": "cnc_h140",
+    "prerequisiteId": "cnc_h139",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「阅读《宇宙的边疆》」，再学「阅读《天文学上的旷世之争》」。"
+  },
+  {
+    "topicId": "cnc_h141",
+    "prerequisiteId": "cnc_h140",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「阅读《天文学上的旷世之争》」，再学「古诗词诵读《拟行路难》（其四）」。"
+  },
+  {
+    "topicId": "cnc_h142",
+    "prerequisiteId": "cnc_h141",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「古诗词诵读《拟行路难》（其四）」，再学「古诗词诵读《客至》」。"
+  },
+  {
+    "topicId": "cnc_h143",
+    "prerequisiteId": "cnc_h142",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「古诗词诵读《客至》」，再学「古诗词诵读《登快阁》」。"
+  },
+  {
+    "topicId": "cnc_h144",
+    "prerequisiteId": "cnc_h143",
+    "strength": "soft",
+    "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「古诗词诵读《登快阁》」，再学「古诗词诵读《临安春雨初霁》」。"
   }
 ]

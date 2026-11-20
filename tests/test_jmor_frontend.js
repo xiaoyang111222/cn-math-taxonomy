@@ -138,7 +138,8 @@ function loadHome(search) {
     const source = fs.readFileSync(path.join(root, 'explore/app.js'), 'utf8');
     assert.ok(source.indexOf('function fillMoralityGrades()') >= 0);
     assert.ok(source.indexOf('[1, 2, 3, 4, 5, 6, 7, 8, 9]') >= 0);
-    assert.ok(source.indexOf("subject === 'chinese' || subject === 'morality'") >= 0);
+    assert.ok(source.indexOf("subject === 'morality' && stage === 'h'") >= 0);
+    assert.ok(source.indexOf("subject === 'morality' ? /^[1-9]$/") >= 0);
     assert.ok(source.indexOf("button.hidden = button.getAttribute('data-stage') === 'h'") >= 0);
     assert.ok(source.indexOf('fillMoralityGrades();') >= 0);
   });
@@ -152,8 +153,9 @@ function loadHome(search) {
 
   await test('诊断道法学段含小学和初中', function () {
     const source = fs.readFileSync(path.join(root, 'diagnose/app.js'), 'utf8');
-    const gate = "subject === 'chinese' || subject === 'morality' ? [stageButton('', '全部'), stageButton('p', '小学'), stageButton('j', '初中')]";
+    const gate = "subject === 'morality' ? [stageButton('', '全部'), stageButton('p', '小学'), stageButton('j', '初中')]";
     assert.ok(source.indexOf(gate) >= 0);
+    assert.ok(source.indexOf('不含高中') >= 0);
     assert.ok(source.indexOf("subject === 'morality'") >= 0);
     assert.ok(source.indexOf("'一二三四五六七八九'") >= 0);
   });

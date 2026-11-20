@@ -65,7 +65,7 @@
   } else if (subject === 'chinese') {
     document.title = '语文 · 中小学·高中知识图谱';
     var zeye = document.querySelector('.eyebrow');
-    if (zeye) zeye.textContent = '语文：小学一至六年级 · 初中七至九年级 · 统编版';
+    if (zeye) zeye.textContent = '语文：小学一至六年级 · 初中七至九年级 · 高中必修上、下与选必上、中、下 · 统编版';
     var zprimary = document.querySelector('.hero-actions a.btn-primary');
     var zbrowse = document.querySelector('.hero-actions a.btn:not(.btn-primary)');
     if (zprimary) zprimary.setAttribute('href', 'diagnose/?subject=chinese');
@@ -389,8 +389,15 @@
       var href = subject !== 'math' ? 'explore/?subject=' + subject + '&grade=' + g : 'explore/?grade=' + g;
       addCard(g, g <= 6 ? '小学' : (wantPhysics ? '初中物理' : '初中'), CN[g] + '年级', g <= 6 ? 'is-primary' : 'is-junior', splitText, href);
     }
-    if (wantPrimary || subject === 'chinese' || subject === 'morality') {
-      /* 语文、道德与法治到九年级且无高中；科学只到六年级。道德与法治空年级不画卡片 */
+    if (wantPrimary || subject === 'morality') {
+      /* 道德与法治到九年级且无高中；科学只到六年级。道德与法治空年级不画卡片 */
+    } else if (subject === 'chinese') {
+      var zhHsTitle = { 10: '必修上', 11: '必修下', 12: '选必上', 13: '选必中', 14: '选必下' };
+      [10, 11, 12, 13, 14].forEach(function (g) {
+        if (topics.some(function (topic) { return topic.grade === g; })) {
+          addCard(g, '高中语文', zhHsTitle[g], 'is-senior', zhHsTitle[g], 'explore/?subject=chinese&grade=' + g);
+        }
+      });
     } else if (wantHistory || wantGeography || wantBiology) {
       var srName = wantHistory ? '高中历史' : wantGeography ? '高中地理' : '高中生物';
       var srTitle = wantHistory

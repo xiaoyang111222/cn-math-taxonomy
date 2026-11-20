@@ -45,7 +45,7 @@ const questions = [
   { topicId: 'cne_a' }, { topicId: 'cnp_a' }
 ];
 
-function load(search) {
+function load(search, topicRows) {
   const ids = {};
   ['n-topics', 'n-edges', 'n-questions', 'n-standards', 'load-error', 'grades'].forEach(id => { ids[id] = element(); });
   ids.grades.setAttribute('aria-busy', 'true');
@@ -67,7 +67,7 @@ function load(search) {
       querySelector() { return null; },
       querySelectorAll() { return []; },
       getElementById(id) { return ids[id] || null; },
-      createElement() { return element(); }
+      createElement(tag) { const el = element(); el.tagName = String(tag || '').toUpperCase(); return el; }
     }
   };
   vm.runInNewContext(source, context, { filename: 'assets/home.js' });
@@ -85,7 +85,7 @@ function load(search) {
     c.reject(new Error('network'));
   };
   async function baseMeta() {
-    respond('data/topics.json', topics);
+    respond('data/topics.json', topicRows || topics);
     respond('data/dependencies.json', deps);
     respond('data/cn-curriculum-standards.json', standards);
     await flush();
@@ -148,6 +148,18 @@ function load(search) {
     respond('data/cn-curriculum-standards.json', standards);
     await flush();
     assert.strictEqual(ids['load-error'].hidden, false);
+  });
+
+  await test('语文高中卡片写必修上', async () => {
+    const rows = topics.concat([{ id: 'cnc_h001', grade: 10, semester: '上', subject: 'chinese' }]);
+    const { ids, baseMeta } = load('?subject=chinese', rows);
+    await baseMeta();
+    const titles = ids.grades.children.map((card) => {
+      const strong = (card.children || []).find((node) => node.tagName === 'STRONG');
+      return strong ? strong.textContent : '';
+    });
+    assert.ok(titles.includes('必修上'), 'cards: ' + titles.join(','));
+    assert.ok(!titles.includes('高一') && !titles.includes('必修一'), titles.join(','));
   });
 
   await test('英语学科计数过滤', async () => {

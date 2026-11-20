@@ -88,3 +88,9 @@ jobs:
 
       - name: 薄弱科目补强批回归（高中地理、生物、历史与历史先修边）
         run: node tests/test_senior_batch.js
+
+      - name: 高中语文五册
+        run: node tests/test_zh_hs.js
+
+      - name: 初中语文重建保留高中跨段边
+        run: python3 tests/test_zhj_keep_hs.py

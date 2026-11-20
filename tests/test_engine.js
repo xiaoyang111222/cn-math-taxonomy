@@ -1676,6 +1676,14 @@ test('gradeTargets：一年级 = 一上 + 一下，七上只含七上；写法�
   assert.strictEqual(RGQ.byId.cnk_h099.name, '实验活动3 糖类的性质');
   assert.strictEqual(E.gradeTargets(RGQ, '必修一'), null);
   assert.strictEqual(E.gradeTargets(RGQ, '必修二'), null);
+  assert.deepStrictEqual(E.parseChapter('必修上 古诗词诵读 静女'), {
+    volume: '必修上', chapterNo: '古诗词诵读', chapterName: '静女', section: ''
+  });
+  assert.deepStrictEqual(E.parseChapter('必修上 第一单元 第1课'), {
+    volume: '必修上', chapterNo: '第一单元', chapterName: '第1课', section: ''
+  });
+  assert.strictEqual(E.gradeTargets(RGQ, '必修上'), null);
+  assert.strictEqual(E.gradeTargets(RGQ, '必修上', 'math'), null);
   assert.deepStrictEqual(E.parseChapter('必修一 绪言'), { volume: '必修一', chapterNo: '绪言', chapterName: '', section: '' });
   assert.deepStrictEqual(E.parseChapter('必修一 第三章 铁 金属材料 3.1'), {
     volume: '必修一', chapterNo: '第三章', chapterName: '铁 金属材料', section: '3.1'

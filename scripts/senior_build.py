@@ -12,7 +12,7 @@ import os
 import sys
 from collections import Counter, defaultdict
 
-from senior_lib import BOOK_CODE, BOOK_WORD, CODE_GRADE, NOTE, choice_verify
+from senior_lib import BOOK_CODE, CODE_GRADE, choice_verify
 from verify_questions import verify_all
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -117,7 +117,7 @@ def run(S):
     for g, n in S.count_expect.items():
         have = sum(1 for r in PLAN if r["grade"] == g)
         if have != n:
-            print("%s 应有 %d 点，实际 %d" % (BOOK_WORD[g], n, have), file=sys.stderr)
+            print("%s 应有 %d 点，实际 %d" % (S.book_words[g], n, have), file=sys.stderr)
             return 1
 
     topics = load("topics.json")
@@ -129,6 +129,10 @@ def run(S):
     if not junior:
         print("找不到初中点 %s*" % S.junior_prefix, file=sys.stderr)
         return 1
+    extra_ids = {
+        t["id"] for t in topics
+        if any(str(t["id"]).startswith(p) for p in S.extra_prereq_prefixes)
+    }
 
     base_topics = [t for t in topics if not is_senior(t["id"])]
     base_deps = [e for e in deps if not is_senior(e["topicId"])]
@@ -147,12 +151,30 @@ def run(S):
         std_items.append({
             "id": S.std_prefix + tail, "domain": domain, "section": section,
             "clause": "(%d)" % seen_std[book], "text": text, "page_or_ref": "待核", "verbatim": False,
-            "text_status": "公开转述，未与课程标准 PDF 逐页核对；%s本图谱自编号。" % BOOK_WORD[CODE_GRADE[book]],
+            "text_status": "公开转述，未与课程标准 PDF 逐页核对；%s本图谱自编号。" % S.book_words[CODE_GRADE[book]],
         })
     std_by_tail = {it["id"][len(S.std_prefix):]: it["id"] for it in std_items}
     cited = set()
 
     id_of = {row["key"]: "%s%03d" % (S.id_prefix, i) for i, row in enumerate(PLAN, start=1)}
+
+    def resolve_pid(ref, key):
+        if ref.startswith("J:"):
+            pid = ref[2:]
+            if pid not in junior:
+                print("%s 的初中先修不存在：%s" % (key, pid), file=sys.stderr)
+                return None
+            return pid
+        if ref.startswith("P:"):
+            pid = ref[2:]
+            if pid not in extra_ids:
+                print("%s 的跨学段先修不存在或不在允许前缀内：%s" % (key, pid), file=sys.stderr)
+                return None
+            return pid
+        if ref not in id_of or S.ORDER[ref] >= S.ORDER[key]:
+            print("%s 的先修 %s 不存在或不在它前面" % (key, ref), file=sys.stderr)
+            return None
+        return id_of[ref]
 
     new_topics, new_questions = [], []
     hard_pairs = {}
@@ -166,7 +188,7 @@ def run(S):
                 print("%s 引用了不存在的课标 %s" % (key, tail), file=sys.stderr)
                 return 1
             cited.add(tail)
-            refs.append({"id": std_by_tail[tail], "confidence": "inferred", "note": NOTE})
+            refs.append({"id": std_by_tail[tail], "confidence": "inferred", "note": S.std_note})
         built, diag = [], None
         for n, q in enumerate(draft["qs"], start=1):
             obj, shown = build_question(tid, n, q, slot=i + n)
@@ -185,21 +207,14 @@ def run(S):
         })
         new_questions.extend(built)
         for ref, reason, strength in draft["pre"]:
-            if partial and not ref.startswith("J:") and ref not in id_of:
+            if partial and not ref.startswith("J:") and not ref.startswith("P:") and ref not in id_of:
                 continue  # 开发期：先修指向还没登记内容的点，先跳过
             if not str(reason).strip():
                 print("%s 先修缺少理由：%s" % (key, ref), file=sys.stderr)
                 return 1
-            if ref.startswith("J:"):
-                pid = ref[2:]
-                if pid not in junior:
-                    print("%s 的初中先修不存在：%s" % (key, pid), file=sys.stderr)
-                    return 1
-            else:
-                if ref not in id_of or S.ORDER[ref] >= S.ORDER[key]:
-                    print("%s 的先修 %s 不存在或不在它前面" % (key, ref), file=sys.stderr)
-                    return 1
-                pid = id_of[ref]
+            pid = resolve_pid(ref, key)
+            if pid is None:
+                return 1
             pair = (tid, pid)
             if pair in hard_pairs:
                 print("重复先修 %s → %s" % pair, file=sys.stderr)
@@ -220,9 +235,11 @@ def run(S):
     for i, row in enumerate(PLAN):
         tid = id_of[row["key"]]
         for ref, reason, strength in HS[row["key"]]["pre"]:
-            if partial and not ref.startswith("J:") and ref not in id_of:
+            if partial and not ref.startswith("J:") and not ref.startswith("P:") and ref not in id_of:
                 continue
-            pid = ref[2:] if ref.startswith("J:") else id_of[ref]
+            pid = resolve_pid(ref, row["key"])
+            if pid is None:
+                return 1
             new_edges.append({"topicId": tid, "prerequisiteId": pid, "strength": strength, "reason": reason})
         if i > 0:
             prev = PLAN[i - 1]
@@ -239,8 +256,13 @@ def run(S):
     if lonely:
         print("约简后仍无先修：%s" % "、".join(lonely), file=sys.stderr)
         return 1
+    def prereq_ok(pid):
+        if is_senior(pid) or is_junior(pid):
+            return True
+        return any(str(pid).startswith(p) for p in S.extra_prereq_prefixes)
+
     for e in senior_edges:
-        if not (is_senior(e["prerequisiteId"]) or is_junior(e["prerequisiteId"])):
+        if not prereq_ok(e["prerequisiteId"]):
             print("高中边连到了其他学科或非初中点：%s" % e["prerequisiteId"], file=sys.stderr)
             return 1
 
@@ -264,7 +286,7 @@ def run(S):
     n_to_junior = sum(1 for e in senior_edges if is_junior(e["prerequisiteId"]))
     print("%s高中知识点 %d" % (S.label, len(new_topics)))
     for g in sorted(by_book):
-        print("  %s %d" % (BOOK_WORD[g], by_book[g]))
+        print("  %s %d" % (S.book_words[g], by_book[g]))
     for name, n in Counter(t["domain"] for t in new_topics).items():
         print("  领域 %s %d" % (name, n))
     print("高中边写入 %d（约简删去 %d）；hard %d，soft %d；连到初中的 %d；平均先修 %.2f" % (
