@@ -105,9 +105,9 @@ try {
   test('sitemap URL 数 = 知识点数 + 索引与主要页面数', () => {
     const xml = fs.readFileSync(path.join(OUT, 'sitemap.xml'), 'utf8');
     const locs = xml.match(/<loc>[^<]+<\/loc>/g) || [];
-    assert.equal(locs.length, topics.length + 1 + SUBJECTS.length + 5);
+    assert.equal(locs.length, topics.length + 1 + SUBJECTS.length + 6);
     assert.equal(new Set(locs).size, locs.length);
-    for (const p of ['/', '/diagnose/', '/explore/', '/goods/', '/wrongbook/', '/kp/']) {
+    for (const p of ['/', '/diagnose/', '/explore/', '/goods/', '/wrongbook/', '/finals/', '/kp/']) {
       assert.ok(xml.includes(`<loc>${ORIGIN}${p}</loc>`), p);
     }
     for (const s of SUBJECTS) assert.ok(xml.includes(`<loc>${ORIGIN}/kp/${s}</loc>`), s);
