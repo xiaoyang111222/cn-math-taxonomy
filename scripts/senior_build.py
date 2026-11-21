@@ -148,10 +148,15 @@ def run(S):
     for tail, domain, section, text in S.CLAUSES:
         book = tail.split(".")[0]
         seen_std[book] += 1
+        if S.CHECK is not None:
+            page_ref, text_status = S.CHECK[tail]
+        else:
+            page_ref = "待核"
+            text_status = "公开转述，未与课程标准 PDF 逐页核对；%s本图谱自编号。" % S.book_words[CODE_GRADE[book]]
         std_items.append({
             "id": S.std_prefix + tail, "domain": domain, "section": section,
-            "clause": "(%d)" % seen_std[book], "text": text, "page_or_ref": "待核", "verbatim": False,
-            "text_status": "公开转述，未与课程标准 PDF 逐页核对；%s本图谱自编号。" % S.book_words[CODE_GRADE[book]],
+            "clause": "(%d)" % seen_std[book], "text": text, "page_or_ref": page_ref, "verbatim": False,
+            "text_status": text_status,
         })
     std_by_tail = {it["id"][len(S.std_prefix):]: it["id"] for it in std_items}
     cited = set()

@@ -96,6 +96,7 @@ class Senior:
         self.ORDER = {}
         self.HS = {}
         self.CLAUSES = []   # (tail, domain, section, text)
+        self.CHECK = None   # 课标核对表 tail -> (page_or_ref, text_status)；未登记则 senior_build 沿用「待核」
         self.NOTE = self.std_note
 
     # ------------------------------------------------------------ 课序
