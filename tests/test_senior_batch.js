@@ -84,7 +84,7 @@ Object.keys(SUBJECTS).forEach((subj) => {
     });
     items.forEach((i) => {
       assert.strictEqual(i.verbatim, false);
-      assert.strictEqual(i.page_or_ref, '待核');
+      assert.ok(i.page_or_ref === '待核' || /^课标印刷页码 \d+(–\d+)?$/.test(i.page_or_ref), i.id + ' ' + i.page_or_ref);
       assert.ok(cited.has(i.id), i.id + ' 没有被引用');
     });
     jr.forEach((t) => t.standards.forEach((s) => assert.ok(!s.id.includes('-hs-'), t.id + ' 初中点不能引用高中课标')));
