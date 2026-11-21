@@ -1236,7 +1236,7 @@ test('高中物理：必修一 27、必修二 25、必修三 37、选必一 28�
   assert.ok(links.length >= 40 && links.every((l) => String(l.id).startsWith('cnm_') && RG.byId[l.id] && l.reason));
   const hs = stdFile.items.filter((it) => String(it.id).startsWith('cps-hs-2017:'));
   assert.strictEqual(hs.length, 108);
-  assert.ok(hs.every((it) => it.verbatim === false && it.page_or_ref === '待核'));
+  assert.ok(hs.every((it) => it.verbatim === false && (it.page_or_ref === '待核' || /^课标印刷页码 \d+$/.test(it.page_or_ref))));
   assert.ok(stdFile.physics_senior && /2020/.test(stdFile.physics_senior.title) && /2019/.test(stdFile.physics_senior.textbook));
   const sq = questions.filter((q) => /^cnp_h\d/.test(String(q.topicId)));
   assert.strictEqual(sq.length, 177 * 4);

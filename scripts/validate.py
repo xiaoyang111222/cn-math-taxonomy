@@ -992,8 +992,12 @@ def check_standards_file(std):
             last[key] = num
             if it.get("verbatim") is not False:
                 err("%s 高中物理课标条目必须显式标 verbatim:false（出版社 PDF 文字层，未与纸本逐字核对）" % where)
-            if it.get("page_or_ref") != "待核":
-                err("%s 高中物理课标 page_or_ref 必须是「待核」，不能编页码" % where)
+            ref = it.get("page_or_ref")
+            if ref != "待核":
+                if not (isinstance(ref, str) and re.match(r"^课标印刷页码 \d+$", ref)):
+                    err("%s 高中物理课标 page_or_ref 必须是「待核」或「课标印刷页码 N」" % where)
+                if "2026-11-21" not in str(it.get("text_status") or ""):
+                    err("%s 高中物理课标 text_status 必须记下 2026-11-21 的核对" % where)
         elif pm:
             saw_physics = True
             if it.get("domain") != PHY_STD_TOPS[pm.group(1)]:
