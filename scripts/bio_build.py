@@ -17,6 +17,7 @@ from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from std_check import apply_check  # noqa: E402
 
 import bio_g7  # noqa: E402,F401
 import bio_g8  # noqa: E402,F401
@@ -112,6 +113,7 @@ def build_standards():
             "verbatim": False,
             "text_status": TEXT_STATUS,
         })
+    apply_check(items)
     return id_of, items
 
 
@@ -328,11 +330,11 @@ def main():
         "stage": "第四学段（7–9年级）",
         "note": (
             "条目是对生物学课标七个学习主题内容要求的公开转述，不是逐页核对的原文。"
-            "verbatim 为 false，page_or_ref 为「待核」。编号 cbs-2022 是本图谱编的，不是教育部原编号。"
+            "verbatim 为 false。2026-11-22 已逐条对照人教社电子书《义务教育生物学课程标准（2022年版）》，page_or_ref 为课标印刷页码，16 条按课标原文改写，仍待核 1 条（BS.01，课标内容要求无对应条款）。编号 cbs-2022 是本图谱编的，不是教育部原编号。"
             "七个学习主题的名称据中国教育新闻网 2022-08-17 报道"
             "（http://www.jyb.cn/rmtzcg/xwy/spxw/202208/t20220817_2110935589.html）。"
             "大概念语句据公开摘录转述（https://m.fx361.com/news/2022/0530/22064858.html），被截断的条款没有补写。"
-            "概念9的原句未核到。跨学科实践一条只采用公开解读中已核对的表述："
+            "概念9的原句已于 2026-11-22 在课标印刷页28核到。跨学科实践一条只采用公开解读中已核对的表述："
             "七个学习主题、约十分之一课时，活动包括模型制作、植物栽培和动物饲养、发酵食品制作。"
             "网上可见「2022年版2025年修订」字样的摘录页，本图谱不把它当成已逐页核对的 2022 年版原文。"
             "教材按人教版七上至八下公开目录，非官方、待核。"
