@@ -1,5 +1,12 @@
 # 变更日志
 
+## 2026-11-22（首页改版）
+
+- 首屏只讲一件事：主标题「先找到真正没学会的那一步」、「开始诊断」大按钮、演示入口；桌面端右侧放一张图谱示意（点击进演示）。原来罗列各学科覆盖的长段落收进学科胶囊的「展开」。
+- 数字条：知识点 / 先修关系 / 题数 / 学科，全站数字，打开页面时现算（`topics.json`、`dependencies.json` 的条数，题数取 `data/questions/index.json`，学科数取 topics 里的不同学科数），不再按学科分，也不再显示课标条目；首页不再请求 `cn-curriculum-standards.json` 和任何题目文件。
+- 学科入口收成一行胶囊（?subject= 切换，当前学科高亮），首页头部的学科切换行在首页隐藏。往下依次：本机盲区（有记录才显示）、三步、期末补漏计划、按年级进入、错题本，每段一句话。账号登录入口、统计埋点、PWA、页脚链接、SEO 标签均未改动。
+- `tests/test_home.js`、`tests/test_jmor_frontend.js` 随之更新；`scripts/screenshot.js` 的首页统计断言改为全站数字。
+
 ## 2026-11-22（题库按学科拆分）
 
 - `data/questions.json`（12.5 MB，16,419 题）按学科拆成 `data/questions/<学科>.json` ×10 和 `index.json`（各科题数），由新增的 `scripts/split_questions.py` 生成并对账（总数、题 id 不丢不重、按知识点归属）。`questions.json` 保留为源数据，各 `*_build.py` 不变。

@@ -39,16 +39,15 @@ const topics = [
   { id: 'cnp_a', grade: 8, semester: '上' }
 ];
 const deps = [{ topicId: 'cnm_b', prerequisiteId: 'cnm_a' }];
-const standards = { items: [{ id: 'cms-1' }, { id: 'ces-1' }, { id: 'cps-1' }] };
 const qIndex = {
-  total: 5,
+  total: 12345,
   subjects: { math: { file: 'math.json', count: 3 }, english: { file: 'english.json', count: 1 }, physics: { file: 'physics.json', count: 1 } }
 };
 const INDEX_URL = 'data/questions/index.json';
 
 function load(search, topicRows) {
   const ids = {};
-  ['n-topics', 'n-edges', 'n-questions', 'n-standards', 'load-error', 'grades'].forEach(id => { ids[id] = element(); });
+  ['n-topics', 'n-edges', 'n-questions', 'n-subjects', 'cover-morality', 'hero-start', 'hero-demo', 'load-error', 'grades'].forEach(id => { ids[id] = element(); });
   ids.grades.setAttribute('aria-busy', 'true');
   const calls = [];
   function fetch(url) {
@@ -88,22 +87,31 @@ function load(search, topicRows) {
   async function baseMeta() {
     respond('data/topics.json', topicRows || topics);
     respond('data/dependencies.json', deps);
-    respond('data/cn-curriculum-standards.json', standards);
     await flush();
   }
   return { ids, calls, all, call, respond, failNet, baseMeta };
 }
 
 (async () => {
-  await test('元数据到后可渲染，题数先显示 …', async () => {
+  await test('元数据到后渲染全站数字（不分学科），题数在索引到达前不显示数字', async () => {
     const { ids, baseMeta, respond } = load('');
     await baseMeta();
-    assert.strictEqual(ids['n-topics'].textContent, '2');
-    assert.strictEqual(ids['n-questions'].textContent, '…');
+    assert.strictEqual(ids['n-topics'].textContent, '4');
+    assert.strictEqual(ids['n-edges'].textContent, '1');
+    assert.strictEqual(ids['n-subjects'].textContent, '3');
+    assert.ok(['', '…'].includes(ids['n-questions'].textContent), '题数在索引到之前不应有数字');
     assert.ok(ids.grades.children.length > 0, 'grade cards rendered');
     respond(INDEX_URL, qIndex);
     await flush();
-    assert.strictEqual(ids['n-questions'].textContent, '3');
+    assert.strictEqual(ids['n-questions'].textContent, '12,345');
+  });
+
+  await test('数字带千分位', async () => {
+    const rows = [];
+    for (let i = 0; i < 1500; i++) rows.push({ id: 'cnm_x' + i, grade: 1, semester: '上' });
+    const { ids, baseMeta } = load('', rows);
+    await baseMeta();
+    assert.strictEqual(ids['n-topics'].textContent, '1,500');
   });
 
   await test('题库索引 404 显示 — 且不整页 fail', async () => {
@@ -113,6 +121,7 @@ function load(search, topicRows) {
     await flush();
     assert.strictEqual(ids['n-questions'].textContent, '—');
     assert.strictEqual(ids['load-error'].hidden, true);
+    assert.strictEqual(ids['n-topics'].textContent, '4');
   });
 
   await test('题库索引格式不对显示 —', async () => {
@@ -124,26 +133,24 @@ function load(search, topicRows) {
   });
 
   await test('题库索引网络错误会重试至多 2 次', async () => {
-    const { ids, all, baseMeta, failNet, respond } = load('');
+    const { ids, all, baseMeta, failNet } = load('');
     await baseMeta();
     assert.strictEqual(all(INDEX_URL).length, 1);
     failNet(INDEX_URL);
     await flush();
     assert.ok(all(INDEX_URL).length >= 2, 'retried');
-    // second attempt succeeds
     const second = all(INDEX_URL)[1];
     second.resolve({ ok: true, status: 200, json: () => Promise.resolve(qIndex) });
     await flush();
-    assert.strictEqual(ids['n-questions'].textContent, '3');
+    assert.strictEqual(ids['n-questions'].textContent, '12,345');
   });
 
-  await test('首页不拉任何题目文件', async () => {
+  await test('首页只请求 topics、dependencies 和题库索引，不拉任何题目文件', async () => {
     const { calls, baseMeta, respond } = load('');
     await baseMeta();
     respond(INDEX_URL, qIndex);
     await flush();
-    const bad = calls.filter(c => /questions\.json$/.test(c.url) || (/data\/questions\//.test(c.url) && c.url !== INDEX_URL));
-    assert.deepStrictEqual(bad.map(c => c.url), []);
+    assert.deepStrictEqual(calls.map(c => c.url).sort(), ['data/dependencies.json', INDEX_URL, 'data/topics.json'].sort());
   });
 
   await test('进行中 Promise 去重', async () => {
@@ -155,7 +162,6 @@ function load(search, topicRows) {
     const { ids, respond } = load('');
     respond('data/topics.json', { bad: true });
     respond('data/dependencies.json', deps);
-    respond('data/cn-curriculum-standards.json', standards);
     await flush();
     assert.strictEqual(ids['load-error'].hidden, false);
   });
@@ -172,13 +178,17 @@ function load(search, topicRows) {
     assert.ok(!titles.includes('高一') && !titles.includes('必修一'), titles.join(','));
   });
 
-  await test('英语学科计数过滤', async () => {
+  await test('英语页：统计仍是全站数字，年级入口只算英语，开始诊断指向英语', async () => {
     const { ids, baseMeta, respond } = load('?subject=english');
     await baseMeta();
     respond(INDEX_URL, qIndex);
     await flush();
-    assert.strictEqual(ids['n-topics'].textContent, '1');
-    assert.strictEqual(ids['n-questions'].textContent, '1');
+    assert.strictEqual(ids['n-topics'].textContent, '4');
+    assert.strictEqual(ids['n-questions'].textContent, '12,345');
+    const counts = ids.grades.children.map((card) => card.children[2].textContent);
+    assert.ok(counts.includes('1 个知识点'), counts.join(','));
+    assert.strictEqual(ids['hero-start'].getAttribute('href'), 'diagnose/?subject=english');
+    assert.ok(ids['hero-demo'].getAttribute('href').indexOf('subject=english') >= 0);
   });
 
   console.log(passed + ' passed');

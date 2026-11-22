@@ -105,45 +105,68 @@
 </header>
 <main class="home">
   <section class="hero">
-    <p class="eyebrow">数学：小学到高中 · 语文：小学一至六年级 · 初中七至九年级 · 高中必修上、下与选必上、中、下 · 科学：小学一至六年级 · 道德与法治：小学一至六年级 · 历史：初中七至九年级 · 高中必修与选择性必修 · 地理：初中七至八年级 · 高中必修与选择性必修 · 生物：初中七至八年级 · 高中必修与选择性必修 · 化学：初中九年级 · 高中必修第一、二册和选择性必修第一、二、三册 · 英语：三年级到高中 · 物理：初中到高中</p>
-    <h1>先找到真正没学会的那一步</h1>
-    <p class="lede">沿着先修关系自适应出题。数学从小学追到高中，语文覆盖统编版小学一至六年级、初中七至九年级和高中必修上册、必修下册、选择性必修上册、中册、下册，科学覆盖教科版小学一至六年级，道德与法治覆盖统编版小学一至六年级，历史覆盖统编版初中七至九年级和高中必修（中外历史纲要上、下）、选择性必修，地理覆盖人教版初中七至八年级和高中必修第一、二册、选择性必修第一、二、三册，生物覆盖人教版初中七至八年级和高中必修1、2、选择性必修1、2、3，化学覆盖人教版初中九年级、高中必修第一、二册和选择性必修第一、二、三册，英语覆盖三年级到高中，物理覆盖初中八、九年级和高中必修、选择性必修。从你选的知识点往回追，定位薄弱根因，并给出一条按学习顺序排起的路径。</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary btn-lg" href="diagnose/">开始诊断</a>
-      <a class="btn btn-lg" href="explore/">浏览知识图谱</a>
-      <a class="btn btn-lg" href="goods/">学习好物</a>
+    <div class="hero-copy">
+      <p class="eyebrow">知识图谱 · 查漏补缺</p>
+      <h1>先找到真正<br>没学会的<em>那一步</em></h1>
+      <p class="lede">沿着先修关系自适应出题，从你选的知识点往回追，定位薄弱根因。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg btn-hero" id="hero-start" href="diagnose/">开始诊断<span class="btn-arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-lg btn-ghost" id="hero-demo" href="diagnose/?target=cnm_221&amp;demo=1">看演示：配方法</a>
+      </div>
     </div>
-    <p class="quiet-link"><a href="diagnose/?target=cnm_221&amp;demo=1">先看一遍演示：配方法</a></p>
+    <a class="hero-art" href="diagnose/?target=cnm_221&amp;demo=1" tabindex="-1" aria-hidden="true">
+      <svg viewBox="0 0 360 240" focusable="false">
+        <g class="art-edges" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M180 120 L70 54"/><path d="M180 120 L296 48"/><path d="M180 120 L62 188"/><path d="M180 120 L300 190"/><path d="M70 54 L62 188" stroke-dasharray="3 6"/>
+        </g>
+        <g class="art-nodes">
+          <circle cx="180" cy="120" r="44"/><circle cx="70" cy="54" r="9"/><circle cx="296" cy="48" r="9"/><circle cx="62" cy="188" r="9"/><circle cx="300" cy="190" r="9"/>
+        </g>
+        <g class="art-text" text-anchor="middle" font-weight="700">
+          <text x="180" y="125" font-size="15">一元二次方程</text>
+          <text x="70" y="36" font-size="13">配方法</text><text x="296" y="30" font-size="13">因式分解</text>
+          <text x="62" y="214" font-size="13">二次函数</text><text x="300" y="216" font-size="13">判别式</text>
+        </g>
+      </svg>
+      <span class="art-tip">薄弱根因：配方法 → 先补这一步</span>
+    </a>
   </section>
 
-  <h2 class="section-title">三步</h2>
-  <ol class="steps">
-    <li>
-      <span class="step-no">1</span>
-      <h3>选知识点</h3>
-      <p>数学从一年级到高中必修和选择性必修，语文从一年级到九年级，以及高中必修上册、必修下册、选择性必修上册、中册、下册，科学和道德与法治从一年级到六年级，历史从七年级到九年级，地理从七年级到八年级，生物从七年级到八年级，化学在九年级、高中必修第一、二册和选择性必修第一、二、三册，英语从三年级到高中，物理从八年级上册到高中选择性必修第三册。搜索或按册、章找到想检查的内容。</p>
-    </li>
-    <li>
-      <span class="step-no">2</span>
-      <h3>自适应答题</h3>
-      <p>先问目标本身。答错再出一道同级或更容易的题，仍然错才沿着先修往回追。</p>
-    </li>
-    <li>
-      <span class="step-no">3</span>
-      <h3>找到根因和学习路径</h3>
-      <p>标出薄弱根因和不稳的点，并按年级从低到高排出建议补学的顺序。</p>
-    </li>
-  </ol>
-
-  <h2 class="section-title">图谱里有什么</h2>
-  <div class="stat-grid" id="stats">
-    <div class="stat-card"><div class="stat-num" id="n-topics">…</div><div class="stat-label">知识点</div></div>
-    <div class="stat-card"><div class="stat-num" id="n-edges">…</div><div class="stat-label">先修边</div></div>
-    <div class="stat-card"><div class="stat-num" id="n-questions">…</div><div class="stat-label">题目</div></div>
-    <div class="stat-card"><div class="stat-num" id="n-standards">…</div><div class="stat-label">课标条目</div></div>
+  <div class="stat-strip" id="stats" role="group" aria-label="图谱规模">
+    <div class="stat-cell"><span class="stat-num" id="n-topics">…</span><span class="stat-label">知识点</span></div>
+    <div class="stat-cell"><span class="stat-num" id="n-edges">…</span><span class="stat-label">先修关系</span></div>
+    <div class="stat-cell"><span class="stat-num" id="n-questions">…</span><span class="stat-label">题数</span></div>
+    <div class="stat-cell"><span class="stat-num" id="n-subjects">…</span><span class="stat-label">学科</span></div>
   </div>
-  <p class="stat-note">以上数字在打开页面时从当前学科的知识点、先修、题库和课标统计。默认是数学。</p>
   <div id="load-error" class="load-error" hidden></div>
+
+  <nav class="subject-pills" aria-label="选择学科">
+    <div class="pill-row" id="pill-row">
+      <a class="pill on" data-subject="math" href="./" aria-current="true">数学</a>
+      <a class="pill" data-subject="chinese" href="./?subject=chinese">语文</a>
+      <a class="pill" data-subject="english" href="./?subject=english">英语</a>
+      <a class="pill" data-subject="physics" href="./?subject=physics">物理</a>
+      <a class="pill" data-subject="chemistry" href="./?subject=chemistry">化学</a>
+      <a class="pill" data-subject="biology" href="./?subject=biology">生物</a>
+      <a class="pill" data-subject="history" href="./?subject=history">历史</a>
+      <a class="pill" data-subject="geography" href="./?subject=geography">地理</a>
+      <a class="pill" data-subject="morality" href="./?subject=morality">道法</a>
+      <a class="pill" data-subject="science" href="./?subject=science">科学</a>
+    </div>
+    <button class="pill-more" id="pill-more" type="button" aria-expanded="false" aria-controls="subject-more">展开</button>
+  </nav>
+  <ul class="subject-more" id="subject-more" hidden>
+    <li><strong>数学</strong><span>小学一至六年级 · 初中七至九年级 · 高中必修与选择性必修</span></li>
+    <li><strong>语文</strong><span>统编版：小学一至六年级 · 初中七至九年级 · 高中必修上、下与选必上、中、下</span></li>
+    <li><strong>英语</strong><span>三年级到高中</span></li>
+    <li><strong>物理</strong><span>初中八、九年级 · 高中必修与选择性必修</span></li>
+    <li><strong>化学</strong><span>人教版：初中九年级 · 高中必修第一、二册和选择性必修第一、二、三册</span></li>
+    <li><strong>生物</strong><span>人教版：初中七至八年级 · 高中必修1、2和选择性必修1、2、3</span></li>
+    <li><strong>历史</strong><span>统编版：初中七至九年级 · 高中必修（中外历史纲要上、下）与选择性必修</span></li>
+    <li><strong>地理</strong><span>人教版：初中七至八年级 · 高中必修第一、二册和选择性必修第一、二、三册</span></li>
+    <li><strong>道法</strong><span id="cover-morality">统编版：小学与初中 · 只列出已录入册次</span></li>
+    <li><strong>科学</strong><span>教科版：小学一至六年级</span></li>
+  </ul>
 
   <section class="blind-home" id="blind-home" hidden>
     <h2 class="section-title">本机盲区</h2>
@@ -152,13 +175,39 @@
     <p class="blind-home-actions" id="blind-home-actions"></p>
   </section>
 
-  <a class="finals-card" id="finals-card" href="finals/">
+  <h2 class="section-title">三步找到根因</h2>
+  <ol class="steps">
+    <li>
+      <span class="step-no">1</span>
+      <h3>选知识点</h3>
+      <p>搜索，或按册、按章，点出想检查的内容。</p>
+    </li>
+    <li>
+      <span class="step-no">2</span>
+      <h3>自适应答题</h3>
+      <p>答错先换道更容易的题，仍错再沿先修往回追。</p>
+    </li>
+    <li>
+      <span class="step-no">3</span>
+      <h3>看根因和路径</h3>
+      <p>标出薄弱根因，并按年级从低到高排好补学顺序。</p>
+    </li>
+  </ol>
+
+  <a class="entry-card finals-card" id="finals-card" href="finals/">
     <strong>期末补漏计划</strong>
-    <span class="finals-sub">7 天排好：每天几个薄弱知识点，看讲解、做题、打卡，第 7 天复测</span>
+    <span class="entry-sub">7 天排好每天要补的薄弱点，第 7 天复测。</span>
   </a>
 
   <h2 class="section-title">按年级进入</h2>
+  <p class="section-sub">选好年级，直接看这一年的知识点。</p>
   <div class="grade-grid" id="grades" aria-busy="true"></div>
+
+  <a class="entry-card wrong-card" id="wrong-card" href="wrongbook/">
+    <strong>错题本</strong>
+    <span class="entry-sub">诊断里答错的题自动收进来，随时回看、打印重练。</span>
+  </a>
+
   <a class="iq-card" href="https://test.pansgo.com/?from=math-home" target="_blank" rel="noopener">
     <strong>🧠 儿童智商测试</strong>
     <span class="iq-sub">找规律 · 补图案 · 空间想象</span>

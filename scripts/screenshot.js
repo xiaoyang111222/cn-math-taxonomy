@@ -51,6 +51,8 @@ const N_TOPICS = String(TOPIC_ROWS.filter((t) => String(t.id).startsWith('cnm_')
 const N_EDGES = String(DEP_ROWS.filter((d) => String(d.topicId).startsWith('cnm_')).length);
 const N_QUESTIONS = String(QUESTION_ROWS.filter((q) => String(q.topicId).startsWith('cnm_')).length);
 const N_STANDARDS = String(STD_ITEMS.filter((it) => String(it.id).startsWith('cms-')).length);
+// 首页统计是全站数字（千分位），不分学科
+const HOME_STATS = [TOPIC_ROWS.length, DEP_ROWS.length, QUESTION_ROWS.length, 10].map((n) => n.toLocaleString('en-US'));
 const N_GRADE_CARDS = 14;
 const TOP_BANNER_EXPR = `(() => {
   const a = document.querySelector('a.top-banner');
@@ -627,8 +629,8 @@ async function main() {
     await setView(1280, 900);
     await goto(BASE + '/');
     await waitFor(() => evalJs('document.getElementById("n-topics") && document.getElementById("n-topics").textContent !== "…" && document.querySelectorAll("a.grade-card").length === ' + N_GRADE_CARDS), '首页统计');
-    const stats = await evalJs('[document.getElementById("n-topics").textContent, document.getElementById("n-edges").textContent, document.getElementById("n-questions").textContent, document.getElementById("n-standards").textContent].join(",")');
-    check(stats === [N_TOPICS, N_EDGES, N_QUESTIONS, N_STANDARDS].join(','), '首页统计来自数据文件（' + stats + '）');
+    const stats = await evalJs('[document.getElementById("n-topics").textContent, document.getElementById("n-edges").textContent, document.getElementById("n-questions").textContent, document.getElementById("n-subjects").textContent].join(",")');
+    check(stats === HOME_STATS.join(','), '首页统计来自数据文件（' + stats + '）');
     check(!(await evalJs('document.body.innerText')).includes('未经教师审核') && !(await evalJs('document.title')).includes('草稿'), '页脚不含初稿声明，标题不含「草稿」');
     check((await evalJs('document.querySelector("a.grade-card").getAttribute("href")')) === 'explore/?grade=1', '一年级卡片指向知识图谱');
     const iqHome = await evalJs(IQ_HOME_EXPR);
@@ -716,7 +718,7 @@ async function main() {
     console.log('窄屏 375');
     await setView(375, 812);
     await goto(BASE + '/');
-    await waitFor(() => evalJs('document.getElementById("n-topics") && document.getElementById("n-topics").textContent === ' + JSON.stringify(N_TOPICS)), '首页 375');
+    await waitFor(() => evalJs('document.getElementById("n-topics") && document.getElementById("n-topics").textContent === ' + JSON.stringify(HOME_STATS[0])), '首页 375');
     check((await evalJs(IQ_HOME_EXPR)) === 'ok', '375 首页儿童智商测试卡片');
     await checkBanner('首页 375');
     await checkPage('首页 375');

@@ -34,7 +34,7 @@ function element() {
 
 function loadHome(search) {
   const ids = {};
-  ['n-topics', 'n-edges', 'n-questions', 'n-standards', 'load-error', 'grades'].forEach(function (id) {
+  ['n-topics', 'n-edges', 'n-questions', 'n-subjects', 'cover-morality', 'load-error', 'grades'].forEach(function (id) {
     ids[id] = element();
   });
   const eyebrow = element();
@@ -62,7 +62,7 @@ function loadHome(search) {
     }
   };
   vm.runInNewContext(fs.readFileSync(path.join(root, 'assets/home.js'), 'utf8'), context, { filename: 'assets/home.js' });
-  return { ids: ids, eyebrow: eyebrow, calls: calls, document: context.document };
+  return { ids: ids, eyebrow: ids['cover-morality'], calls: calls, document: context.document };
 }
 
 (async function () {
@@ -80,9 +80,6 @@ function loadHome(search) {
     assert.ok(byUrl['data/topics.json']);
     byUrl['data/topics.json'].resolve({ ok: true, status: 200, json: function () { return Promise.resolve(topics); } });
     byUrl['data/dependencies.json'].resolve({ ok: true, status: 200, json: function () { return Promise.resolve([]); } });
-    byUrl['data/cn-curriculum-standards.json'].resolve({
-      ok: true, status: 200, json: function () { return Promise.resolve({ items: [{ id: 'cds-2022:4.JK.01' }] }); }
-    });
     for (let i = 0; i < 12; i++) await new Promise(function (r) { setImmediate(r); });
     const titles = home.ids.grades.children.map(function (card) {
       return card.children[1].textContent;
@@ -100,7 +97,7 @@ function loadHome(search) {
     assert.ok(home.eyebrow.textContent.indexOf('九年级未录入') >= 0);
     assert.ok(home.eyebrow.textContent.indexOf('全初中') < 0);
     assert.strictEqual(home.ids['n-topics'].textContent, '5');
-    assert.strictEqual(home.ids['n-standards'].textContent, '1');
+    assert.strictEqual(home.ids['n-subjects'].textContent, '1');
   });
 
   await test('首页道法有九上时写出九上、九下未录入', async function () {
@@ -117,9 +114,6 @@ function loadHome(search) {
     home.calls.forEach(function (call) { byUrl[call.url] = call; });
     byUrl['data/topics.json'].resolve({ ok: true, status: 200, json: function () { return Promise.resolve(topics); } });
     byUrl['data/dependencies.json'].resolve({ ok: true, status: 200, json: function () { return Promise.resolve([]); } });
-    byUrl['data/cn-curriculum-standards.json'].resolve({
-      ok: true, status: 200, json: function () { return Promise.resolve({ items: [] }); }
-    });
     for (let i = 0; i < 12; i++) await new Promise(function (r) { setImmediate(r); });
     const titles = home.ids.grades.children.map(function (card) {
       return card.children[1].textContent;
