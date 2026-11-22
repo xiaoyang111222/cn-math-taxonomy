@@ -38572,5 +38572,1517 @@
     "prerequisiteId": "cnc_h143",
     "strength": "soft",
     "reason": "按统编版高中语文《普通高中教科书 语文》选择性必修下册的教学顺序，先学「古诗词诵读《登快阁》」，再学「古诗词诵读《临安春雨初霁》」。"
+  },
+  {
+    "topicId": "cnz_h001",
+    "prerequisiteId": "cnd_j044",
+    "strength": "hard",
+    "reason": "认识不同社会形态，要先能从人与人的相互联系中理解社会生活。"
+  },
+  {
+    "topicId": "cnz_h002",
+    "prerequisiteId": "cnz_h001",
+    "strength": "hard",
+    "reason": "社会基本矛盾用来解释社会形态为什么更替，要先知道各社会形态的本质特征。"
+  },
+  {
+    "topicId": "cnz_h003",
+    "prerequisiteId": "cnz_h001",
+    "strength": "hard",
+    "reason": "判断资本主义的历史地位，要先能把它和此前的社会形态区别开来。"
+  },
+  {
+    "topicId": "cnz_h003",
+    "prerequisiteId": "cnz_h002",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修1《中国特色社会主义》的教学顺序，先学「社会基本矛盾的运动」，再学「资本主义社会的历史地位」。"
+  },
+  {
+    "topicId": "cnz_h004",
+    "prerequisiteId": "cnz_h003",
+    "strength": "hard",
+    "reason": "空想社会主义针对的是资本主义的弊病，要先理解资本主义的历史地位。"
+  },
+  {
+    "topicId": "cnz_h005",
+    "prerequisiteId": "cnz_h004",
+    "strength": "hard",
+    "reason": "科学社会主义是在指出空想社会主义局限的基础上创立的。"
+  },
+  {
+    "topicId": "cnz_h006",
+    "prerequisiteId": "cnz_h005",
+    "strength": "hard",
+    "reason": "社会主义从理论变为现实，以科学社会主义已经创立为前提。"
+  },
+  {
+    "topicId": "cnz_h007",
+    "prerequisiteId": "cnz_h002",
+    "strength": "hard",
+    "reason": "社会发展的总趋势由社会基本矛盾的运动决定。"
+  },
+  {
+    "topicId": "cnz_h007",
+    "prerequisiteId": "cnz_h006",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修1《中国特色社会主义》的教学顺序，先学「社会主义从理论走向现实」，再学「人类社会发展的趋势」。"
+  },
+  {
+    "topicId": "cnz_h008",
+    "prerequisiteId": "cnz_h007",
+    "strength": "hard",
+    "reason": "各国道路不同，是在社会发展总趋势之下、具体条件不同造成的。"
+  },
+  {
+    "topicId": "cnz_h009",
+    "prerequisiteId": "cnz_h003",
+    "strength": "hard",
+    "reason": "近代中国的国情要放在资本主义世界扩张的背景里理解。"
+  },
+  {
+    "topicId": "cnz_h009",
+    "prerequisiteId": "cnz_h008",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修1《中国特色社会主义》的教学顺序，先学「社会发展道路的多样性」，再学「近代中国的基本国情」。"
+  },
+  {
+    "topicId": "cnz_h010",
+    "prerequisiteId": "cnz_h009",
+    "strength": "hard",
+    "reason": "新民主主义革命的性质和特点，由近代中国的基本国情决定。"
+  },
+  {
+    "topicId": "cnz_h011",
+    "prerequisiteId": "cnz_h010",
+    "strength": "hard",
+    "reason": "社会主义制度的确立，是新民主主义革命胜利之后的历史必然。"
+  },
+  {
+    "topicId": "cnz_h012",
+    "prerequisiteId": "cnz_h011",
+    "strength": "hard",
+    "reason": "判断我国处于社会主义初级阶段，要以社会主义制度已经确立为前提。"
+  },
+  {
+    "topicId": "cnz_h013",
+    "prerequisiteId": "cnz_h012",
+    "strength": "hard",
+    "reason": "改革开放是在认清社会主义初级阶段这个最大国情之后作出的决策。"
+  },
+  {
+    "topicId": "cnz_h014",
+    "prerequisiteId": "cnz_h013",
+    "strength": "hard",
+    "reason": "道路、理论、制度、文化是改革开放和长期奋斗积累下来的根本成就。"
+  },
+  {
+    "topicId": "cnz_h015",
+    "prerequisiteId": "cnz_h014",
+    "strength": "hard",
+    "reason": "坚持和发展中国特色社会主义的自信，来自道路、理论、制度、文化已经形成。"
+  },
+  {
+    "topicId": "cnz_h016",
+    "prerequisiteId": "cnz_h015",
+    "strength": "hard",
+    "reason": "新时代是坚持和发展中国特色社会主义的新的历史方位。"
+  },
+  {
+    "topicId": "cnz_h017",
+    "prerequisiteId": "cnz_h016",
+    "strength": "hard",
+    "reason": "中国梦是进入新时代后要接续奋斗的民族复兴目标。"
+  },
+  {
+    "topicId": "cnz_h018",
+    "prerequisiteId": "cnz_h016",
+    "strength": "hard",
+    "reason": "这一思想回答的是新时代坚持和发展什么样的中国特色社会主义。"
+  },
+  {
+    "topicId": "cnz_h018",
+    "prerequisiteId": "cnz_h017",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修1《中国特色社会主义》的教学顺序，先学「中华民族伟大复兴的中国梦」，再学「习近平新时代中国特色社会主义思想」。"
+  },
+  {
+    "topicId": "cnz_h019",
+    "prerequisiteId": "cnz_h017",
+    "strength": "hard",
+    "reason": "战略安排是把民族复兴目标分成步骤来实现。"
+  },
+  {
+    "topicId": "cnz_h019",
+    "prerequisiteId": "cnz_h018",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修1《中国特色社会主义》的教学顺序，先学「习近平新时代中国特色社会主义思想」，再学「全面建设社会主义现代化国家的战略安排」。"
+  },
+  {
+    "topicId": "cnz_h020",
+    "prerequisiteId": "cnz_h017",
+    "strength": "hard",
+    "reason": "个人理想怎样融入民族复兴，要先理解中国梦的内涵。"
+  },
+  {
+    "topicId": "cnz_h020",
+    "prerequisiteId": "cnz_h019",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修1《中国特色社会主义》的教学顺序，先学「全面建设社会主义现代化国家的战略安排」，再学「把个人理想融入民族复兴」。"
+  },
+  {
+    "topicId": "cnz_h021",
+    "prerequisiteId": "cnz_h014",
+    "strength": "hard",
+    "reason": "基本经济制度是中国特色社会主义制度的重要内容。"
+  },
+  {
+    "topicId": "cnz_h021",
+    "prerequisiteId": "cnz_h020",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治课序，学完必修1《中国特色社会主义》的「把个人理想融入民族复兴」后进入必修2《经济与社会》的「社会主义基本经济制度」。"
+  },
+  {
+    "topicId": "cnz_h022",
+    "prerequisiteId": "cnz_h021",
+    "strength": "hard",
+    "reason": "公有制的主体地位是基本经济制度的首要内容。"
+  },
+  {
+    "topicId": "cnz_h022",
+    "prerequisiteId": "cnd_j071",
+    "strength": "hard",
+    "reason": "初中已经知道公有制为主体、多种所有制共同发展，高中要说明主体地位如何体现。"
+  },
+  {
+    "topicId": "cnz_h023",
+    "prerequisiteId": "cnz_h021",
+    "strength": "hard",
+    "reason": "非公有制经济是基本经济制度中与公有制共同发展的一部分。"
+  },
+  {
+    "topicId": "cnz_h023",
+    "prerequisiteId": "cnz_h022",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「公有制的主体地位」，再学「非公有制经济的地位与作用」。"
+  },
+  {
+    "topicId": "cnz_h024",
+    "prerequisiteId": "cnz_h022",
+    "strength": "hard",
+    "reason": "两个毫不动摇要先分清公有制为什么必须巩固。"
+  },
+  {
+    "topicId": "cnz_h024",
+    "prerequisiteId": "cnz_h023",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「非公有制经济的地位与作用」，再学「两个毫不动摇」。"
+  },
+  {
+    "topicId": "cnz_h025",
+    "prerequisiteId": "cnz_h023",
+    "strength": "hard",
+    "reason": "混合所有制里既有公有成分也有非公有成分，要先分清这两类经济。"
+  },
+  {
+    "topicId": "cnz_h025",
+    "prerequisiteId": "cnz_h024",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「两个毫不动摇」，再学「混合所有制经济」。"
+  },
+  {
+    "topicId": "cnz_h026",
+    "prerequisiteId": "cnz_h021",
+    "strength": "hard",
+    "reason": "社会主义市场经济体制是三项基本经济制度之一。"
+  },
+  {
+    "topicId": "cnz_h026",
+    "prerequisiteId": "cnd_j073",
+    "strength": "hard",
+    "reason": "初中已经接触社会主义市场经济体制，高中要分析市场怎样配置资源。"
+  },
+  {
+    "topicId": "cnz_h026",
+    "prerequisiteId": "cnz_h025",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「混合所有制经济」，再学「市场在资源配置中起决定性作用」。"
+  },
+  {
+    "topicId": "cnz_h027",
+    "prerequisiteId": "cnz_h021",
+    "strength": "hard",
+    "reason": "市场做不到的地方，说明资源配置不能只靠市场，仍要放在基本经济制度里看。"
+  },
+  {
+    "topicId": "cnz_h027",
+    "prerequisiteId": "cnz_h026",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「市场在资源配置中起决定性作用」，再学「市场调节的局限性」。"
+  },
+  {
+    "topicId": "cnz_h028",
+    "prerequisiteId": "cnz_h026",
+    "strength": "hard",
+    "reason": "政府与市场的关系，以市场在资源配置中的作用为一方。"
+  },
+  {
+    "topicId": "cnz_h028",
+    "prerequisiteId": "cnz_h027",
+    "strength": "hard",
+    "reason": "政府要补的是市场调节做不到和做不好的地方。"
+  },
+  {
+    "topicId": "cnz_h029",
+    "prerequisiteId": "cnz_h027",
+    "strength": "hard",
+    "reason": "宏观调控要解决市场调节解决不了的总量和结构问题。"
+  },
+  {
+    "topicId": "cnz_h029",
+    "prerequisiteId": "cnz_h028",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「更好发挥政府作用」，再学「宏观调控的主要目标」。"
+  },
+  {
+    "topicId": "cnz_h030",
+    "prerequisiteId": "cnz_h029",
+    "strength": "hard",
+    "reason": "手段是为了实现宏观调控的目标。"
+  },
+  {
+    "topicId": "cnz_h030",
+    "prerequisiteId": "cnz_h028",
+    "strength": "hard",
+    "reason": "经济手段、法律手段和行政手段都是政府在发挥作用。"
+  },
+  {
+    "topicId": "cnz_h031",
+    "prerequisiteId": "cnz_h026",
+    "strength": "hard",
+    "reason": "高标准市场体系是市场发挥决定性作用的基础条件。"
+  },
+  {
+    "topicId": "cnz_h031",
+    "prerequisiteId": "cnz_h030",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「宏观调控的手段」，再学「建设高标准市场体系」。"
+  },
+  {
+    "topicId": "cnz_h032",
+    "prerequisiteId": "cnz_h021",
+    "strength": "hard",
+    "reason": "以人民为中心，是社会主义基本经济制度的价值立场。"
+  },
+  {
+    "topicId": "cnz_h032",
+    "prerequisiteId": "cnz_h031",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「建设高标准市场体系」，再学「以人民为中心的发展思想」。"
+  },
+  {
+    "topicId": "cnz_h033",
+    "prerequisiteId": "cnz_h032",
+    "strength": "hard",
+    "reason": "新发展理念回答的是怎样实现以人民为中心的发展。"
+  },
+  {
+    "topicId": "cnz_h034",
+    "prerequisiteId": "cnz_h033",
+    "strength": "hard",
+    "reason": "供给侧结构性改革是贯彻新发展理念的重要举措。"
+  },
+  {
+    "topicId": "cnz_h035",
+    "prerequisiteId": "cnz_h033",
+    "strength": "hard",
+    "reason": "供给侧一侧要把发展实体经济作为着力点。"
+  },
+  {
+    "topicId": "cnz_h035",
+    "prerequisiteId": "cnz_h034",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「供给侧结构性改革」，再学「巩固和发展实体经济」。"
+  },
+  {
+    "topicId": "cnz_h036",
+    "prerequisiteId": "cnz_h033",
+    "strength": "hard",
+    "reason": "高质量发展是贯彻新发展理念的发展。"
+  },
+  {
+    "topicId": "cnz_h036",
+    "prerequisiteId": "cnz_h035",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「巩固和发展实体经济」，再学「推动高质量发展」。"
+  },
+  {
+    "topicId": "cnz_h037",
+    "prerequisiteId": "cnz_h033",
+    "strength": "hard",
+    "reason": "市场主体承担社会责任，是新发展理念落到经营中的要求。"
+  },
+  {
+    "topicId": "cnz_h037",
+    "prerequisiteId": "cnz_h036",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「推动高质量发展」，再学「市场主体的社会责任」。"
+  },
+  {
+    "topicId": "cnz_h038",
+    "prerequisiteId": "cnz_h033",
+    "strength": "hard",
+    "reason": "开放是新发展理念的一项，要先理解新发展理念的整体。"
+  },
+  {
+    "topicId": "cnz_h038",
+    "prerequisiteId": "cnz_h037",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「市场主体的社会责任」，再学「开放发展」。"
+  },
+  {
+    "topicId": "cnz_h039",
+    "prerequisiteId": "cnz_h032",
+    "strength": "hard",
+    "reason": "劳动是创造社会财富、实现以人民为中心发展的根本途径。"
+  },
+  {
+    "topicId": "cnz_h039",
+    "prerequisiteId": "cnz_h038",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「开放发展」，再学「劳动对社会发展的意义」。"
+  },
+  {
+    "topicId": "cnz_h040",
+    "prerequisiteId": "cnz_h039",
+    "strength": "hard",
+    "reason": "合法收入来自劳动和其他要素的投入，要先理解劳动的意义。"
+  },
+  {
+    "topicId": "cnz_h041",
+    "prerequisiteId": "cnz_h022",
+    "strength": "hard",
+    "reason": "按劳分配为主体，和公有制的主体地位相对应。"
+  },
+  {
+    "topicId": "cnz_h041",
+    "prerequisiteId": "cnd_j072",
+    "strength": "hard",
+    "reason": "初中已经知道按劳分配为主体、多种分配方式并存，高中要说明它为什么是主体。"
+  },
+  {
+    "topicId": "cnz_h041",
+    "prerequisiteId": "cnz_h040",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「个人收入的合法方式」，再学「按劳分配为主体」。"
+  },
+  {
+    "topicId": "cnz_h042",
+    "prerequisiteId": "cnz_h040",
+    "strength": "hard",
+    "reason": "按要素分配是合法收入途径的一种，要先分清收入从哪里来。"
+  },
+  {
+    "topicId": "cnz_h042",
+    "prerequisiteId": "cnz_h041",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「按劳分配为主体」，再学「按生产要素分配」。"
+  },
+  {
+    "topicId": "cnz_h043",
+    "prerequisiteId": "cnz_h041",
+    "strength": "hard",
+    "reason": "再分配调节的是初次分配之后的差距，初次分配以按劳分配为主体。"
+  },
+  {
+    "topicId": "cnz_h043",
+    "prerequisiteId": "cnz_h042",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「按生产要素分配」，再学「再分配促进公平」。"
+  },
+  {
+    "topicId": "cnz_h044",
+    "prerequisiteId": "cnz_h041",
+    "strength": "hard",
+    "reason": "共同富裕要以按劳分配为主体、不搞平均主义为前提。"
+  },
+  {
+    "topicId": "cnz_h044",
+    "prerequisiteId": "cnz_h043",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「再分配促进公平」，再学「共同富裕」。"
+  },
+  {
+    "topicId": "cnz_h045",
+    "prerequisiteId": "cnz_h043",
+    "strength": "hard",
+    "reason": "社会保障是再分配促进公平的重要制度。"
+  },
+  {
+    "topicId": "cnz_h045",
+    "prerequisiteId": "cnz_h044",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「共同富裕」，再学「社会保障体系」。"
+  },
+  {
+    "topicId": "cnz_h046",
+    "prerequisiteId": "cnz_h040",
+    "strength": "hard",
+    "reason": "完善收入分配，先要分清哪些收入是合法的。"
+  },
+  {
+    "topicId": "cnz_h046",
+    "prerequisiteId": "cnz_h045",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修2《经济与社会》的教学顺序，先学「社会保障体系」，再学「完善个人收入分配」。"
+  },
+  {
+    "topicId": "cnz_h047",
+    "prerequisiteId": "cnd_j089",
+    "strength": "hard",
+    "reason": "初中已经知道中国共产党是领导核心，高中要说明党成为执政党的历史必然"
+  },
+  {
+    "topicId": "cnz_h047",
+    "prerequisiteId": "cnz_h046",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治课序，学完必修2《经济与社会》的「完善个人收入分配」后进入必修3《政治与法治》的「中国共产党执政是历史和人民的选择」。"
+  },
+  {
+    "topicId": "cnz_h048",
+    "prerequisiteId": "cnz_h047",
+    "strength": "hard",
+    "reason": "宪法序言里的这一结论，建立在党执政是历史和人民的选择之上"
+  },
+  {
+    "topicId": "cnz_h049",
+    "prerequisiteId": "cnz_h047",
+    "strength": "hard",
+    "reason": "理解党的性质和宗旨，要先知道党为什么能够成为执政党"
+  },
+  {
+    "topicId": "cnz_h049",
+    "prerequisiteId": "cnz_h048",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「没有共产党就没有新中国」，再学「党的性质和宗旨」。"
+  },
+  {
+    "topicId": "cnz_h050",
+    "prerequisiteId": "cnz_h049",
+    "strength": "hard",
+    "reason": "指导思想由党的性质决定，要先明确党的性质"
+  },
+  {
+    "topicId": "cnz_h051",
+    "prerequisiteId": "cnz_h049",
+    "strength": "hard",
+    "reason": "从严治党是由党的性质和宗旨决定的"
+  },
+  {
+    "topicId": "cnz_h051",
+    "prerequisiteId": "cnz_h050",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「党的指导思想」，再学「全面从严治党」。"
+  },
+  {
+    "topicId": "cnz_h052",
+    "prerequisiteId": "cnz_h047",
+    "strength": "hard",
+    "reason": "坚持党对一切工作的领导，因为党的执政地位是历史和人民的选择"
+  },
+  {
+    "topicId": "cnz_h052",
+    "prerequisiteId": "cnz_h051",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「全面从严治党」，再学「党对一切工作的领导」。"
+  },
+  {
+    "topicId": "cnz_h053",
+    "prerequisiteId": "cnz_h052",
+    "strength": "hard",
+    "reason": "依法执政是党领导一切工作的基本方式"
+  },
+  {
+    "topicId": "cnz_h054",
+    "prerequisiteId": "cnz_h053",
+    "strength": "hard",
+    "reason": "依宪执政是依法执政的首要内容"
+  },
+  {
+    "topicId": "cnz_h054",
+    "prerequisiteId": "cnd_j063",
+    "strength": "hard",
+    "reason": "初中已经知道宪法具有最高法律效力，高中要说明党依宪执政"
+  },
+  {
+    "topicId": "cnz_h055",
+    "prerequisiteId": "cnz_h047",
+    "strength": "hard",
+    "reason": "人民民主专政的国家政权是党领导人民建立的"
+  },
+  {
+    "topicId": "cnz_h055",
+    "prerequisiteId": "cnz_h054",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「依宪执政」，再学「人民民主专政」。"
+  },
+  {
+    "topicId": "cnz_h056",
+    "prerequisiteId": "cnz_h055",
+    "strength": "hard",
+    "reason": "最广泛的人民民主是人民民主专政在民主一侧的展开"
+  },
+  {
+    "topicId": "cnz_h057",
+    "prerequisiteId": "cnz_h055",
+    "strength": "hard",
+    "reason": "人民代表大会制度是人民民主专政的政权组织形式"
+  },
+  {
+    "topicId": "cnz_h057",
+    "prerequisiteId": "cnd_j068",
+    "strength": "hard",
+    "reason": "初中已经知道人民代表大会制度是根本政治制度，高中要说明它如何组织国家政权"
+  },
+  {
+    "topicId": "cnz_h057",
+    "prerequisiteId": "cnz_h056",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「最广泛的人民民主」，再学「人民代表大会制度」。"
+  },
+  {
+    "topicId": "cnz_h058",
+    "prerequisiteId": "cnz_h057",
+    "strength": "hard",
+    "reason": "国家机关由人大产生，要先理解人民代表大会制度"
+  },
+  {
+    "topicId": "cnz_h059",
+    "prerequisiteId": "cnz_h057",
+    "strength": "hard",
+    "reason": "人大代表的职责来自人民代表大会制度"
+  },
+  {
+    "topicId": "cnz_h059",
+    "prerequisiteId": "cnz_h058",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「国家机关的产生与职权」，再学「人大代表的职责」。"
+  },
+  {
+    "topicId": "cnz_h060",
+    "prerequisiteId": "cnz_h052",
+    "strength": "hard",
+    "reason": "多党合作必须坚持中国共产党的领导"
+  },
+  {
+    "topicId": "cnz_h060",
+    "prerequisiteId": "cnz_h059",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「人大代表的职责」，再学「中国共产党领导的多党合作和政治协商制度」。"
+  },
+  {
+    "topicId": "cnz_h061",
+    "prerequisiteId": "cnz_h060",
+    "strength": "hard",
+    "reason": "政治协商是协商民主的重要渠道"
+  },
+  {
+    "topicId": "cnz_h062",
+    "prerequisiteId": "cnz_h057",
+    "strength": "hard",
+    "reason": "民族区域自治是在国家统一领导下的制度安排，要先理解国家根本政治制度"
+  },
+  {
+    "topicId": "cnz_h062",
+    "prerequisiteId": "cnz_h061",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「协商民主」，再学「民族区域自治制度」。"
+  },
+  {
+    "topicId": "cnz_h063",
+    "prerequisiteId": "cnz_h056",
+    "strength": "hard",
+    "reason": "宗教信仰自由是人民民主权利的一项内容"
+  },
+  {
+    "topicId": "cnz_h063",
+    "prerequisiteId": "cnz_h062",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「民族区域自治制度」，再学「宗教信仰自由」。"
+  },
+  {
+    "topicId": "cnz_h064",
+    "prerequisiteId": "cnz_h062",
+    "strength": "hard",
+    "reason": "共同体意识是民族区域自治所要巩固的价值基础"
+  },
+  {
+    "topicId": "cnz_h064",
+    "prerequisiteId": "cnz_h063",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「宗教信仰自由」，再学「铸牢中华民族共同体意识」。"
+  },
+  {
+    "topicId": "cnz_h065",
+    "prerequisiteId": "cnz_h056",
+    "strength": "hard",
+    "reason": "基层群众自治是人民直接行使民主权利的制度"
+  },
+  {
+    "topicId": "cnz_h065",
+    "prerequisiteId": "cnz_h064",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「铸牢中华民族共同体意识」，再学「基层群众自治制度」。"
+  },
+  {
+    "topicId": "cnz_h066",
+    "prerequisiteId": "cnz_h065",
+    "strength": "hard",
+    "reason": "基层自治是有序政治参与的重要途径"
+  },
+  {
+    "topicId": "cnz_h067",
+    "prerequisiteId": "cnz_h053",
+    "strength": "hard",
+    "reason": "总目标把党依法执政落实为国家法治建设的方向"
+  },
+  {
+    "topicId": "cnz_h067",
+    "prerequisiteId": "cnz_h066",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「有序的政治参与」，再学「全面依法治国的总目标」。"
+  },
+  {
+    "topicId": "cnz_h068",
+    "prerequisiteId": "cnz_h067",
+    "strength": "hard",
+    "reason": "一体建设是实现全面依法治国总目标的布局"
+  },
+  {
+    "topicId": "cnz_h069",
+    "prerequisiteId": "cnz_h068",
+    "strength": "hard",
+    "reason": "法治政府是一体建设中的政府这一侧"
+  },
+  {
+    "topicId": "cnz_h070",
+    "prerequisiteId": "cnz_h068",
+    "strength": "hard",
+    "reason": "公正司法是一体建设中司法机关这一侧"
+  },
+  {
+    "topicId": "cnz_h070",
+    "prerequisiteId": "cnz_h069",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「建设法治政府」，再学「公正司法」。"
+  },
+  {
+    "topicId": "cnz_h071",
+    "prerequisiteId": "cnz_h068",
+    "strength": "hard",
+    "reason": "法治社会是一体建设中社会这一侧"
+  },
+  {
+    "topicId": "cnz_h071",
+    "prerequisiteId": "cnz_h070",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「公正司法」，再学「建设法治社会」。"
+  },
+  {
+    "topicId": "cnz_h072",
+    "prerequisiteId": "cnz_h071",
+    "strength": "hard",
+    "reason": "公民权利要在法治社会中得到保障"
+  },
+  {
+    "topicId": "cnz_h073",
+    "prerequisiteId": "cnz_h071",
+    "strength": "hard",
+    "reason": "德治是法治社会里规范人们行为的另一条途径"
+  },
+  {
+    "topicId": "cnz_h073",
+    "prerequisiteId": "cnz_h072",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「法治保障公民权利」，再学「法治与德治相结合」。"
+  },
+  {
+    "topicId": "cnz_h074",
+    "prerequisiteId": "cnz_h067",
+    "strength": "hard",
+    "reason": "改革要服务于建设法治国家这一总目标"
+  },
+  {
+    "topicId": "cnz_h074",
+    "prerequisiteId": "cnz_h073",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「法治与德治相结合」，再学「在法治轨道上推进改革」。"
+  },
+  {
+    "topicId": "cnz_h075",
+    "prerequisiteId": "cnz_h067",
+    "strength": "hard",
+    "reason": "十六字方针是落实全面依法治国总目标的基本要求"
+  },
+  {
+    "topicId": "cnz_h075",
+    "prerequisiteId": "cnd_j084",
+    "strength": "hard",
+    "reason": "初中已经记住这十六个字，高中要说明每一句对谁提出要求"
+  },
+  {
+    "topicId": "cnz_h075",
+    "prerequisiteId": "cnz_h074",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修3《政治与法治》的教学顺序，先学「在法治轨道上推进改革」，再学「科学立法、严格执法、公正司法、全民守法」。"
+  },
+  {
+    "topicId": "cnz_h076",
+    "prerequisiteId": "cnz_h075",
+    "strength": "hard",
+    "reason": "科学立法是十六字方针的第一句"
+  },
+  {
+    "topicId": "cnz_h077",
+    "prerequisiteId": "cnz_h002",
+    "strength": "hard",
+    "reason": "从社会基本矛盾追问下去，就会碰到用什么样的世界观看世界。"
+  },
+  {
+    "topicId": "cnz_h077",
+    "prerequisiteId": "cnz_h076",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治课序，学完必修3《政治与法治》的「科学立法的基本要求」后进入必修4《哲学与文化》的「哲学与世界观方法论」。"
+  },
+  {
+    "topicId": "cnz_h078",
+    "prerequisiteId": "cnz_h077",
+    "strength": "hard",
+    "reason": "思维和存在的关系，是哲学作为世界观必然要回答的问题。"
+  },
+  {
+    "topicId": "cnz_h079",
+    "prerequisiteId": "cnz_h077",
+    "strength": "hard",
+    "reason": "说马克思主义哲学是科学的世界观和方法论，要先知道哲学是什么。"
+  },
+  {
+    "topicId": "cnz_h079",
+    "prerequisiteId": "cnz_h078",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修4《哲学与文化》的教学顺序，先学「哲学的基本问题」，再学「马克思主义哲学」。"
+  },
+  {
+    "topicId": "cnz_h080",
+    "prerequisiteId": "cnz_h078",
+    "strength": "hard",
+    "reason": "主张世界统一于物质，是对哲学基本问题的一种回答。"
+  },
+  {
+    "topicId": "cnz_h080",
+    "prerequisiteId": "cnz_h079",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修4《哲学与文化》的教学顺序，先学「马克思主义哲学」，再学「世界的物质统一性」。"
+  },
+  {
+    "topicId": "cnz_h081",
+    "prerequisiteId": "cnz_h080",
+    "strength": "hard",
+    "reason": "实事求是要求按物质世界的本来面目看问题。"
+  },
+  {
+    "topicId": "cnz_h082",
+    "prerequisiteId": "cnz_h080",
+    "strength": "hard",
+    "reason": "联系是物质世界本身的状态。"
+  },
+  {
+    "topicId": "cnz_h082",
+    "prerequisiteId": "cnz_h081",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修4《哲学与文化》的教学顺序，先学「一切从实际出发」，再学「世界的普遍联系」。"
+  },
+  {
+    "topicId": "cnz_h083",
+    "prerequisiteId": "cnz_h082",
+    "strength": "hard",
+    "reason": "发展是前进的运动，要先承认事物处于联系和运动之中。"
+  },
+  {
+    "topicId": "cnz_h084",
+    "prerequisiteId": "cnz_h083",
+    "strength": "hard",
+    "reason": "矛盾解释事物为什么会运动和发展。"
+  },
+  {
+    "topicId": "cnz_h085",
+    "prerequisiteId": "cnz_h084",
+    "strength": "hard",
+    "reason": "抓主要矛盾，以承认矛盾是发展动力为前提。"
+  },
+  {
+    "topicId": "cnz_h086",
+    "prerequisiteId": "cnz_h080",
+    "strength": "hard",
+    "reason": "实践是改造客观物质世界的活动。"
+  },
+  {
+    "topicId": "cnz_h086",
+    "prerequisiteId": "cnz_h085",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修4《哲学与文化》的教学顺序，先学「主要矛盾和矛盾的主要方面」，再学「实践的特点与作用」。"
+  },
+  {
+    "topicId": "cnz_h087",
+    "prerequisiteId": "cnz_h086",
+    "strength": "hard",
+    "reason": "认识来源于实践，要先知道实践是什么。"
+  },
+  {
+    "topicId": "cnz_h088",
+    "prerequisiteId": "cnz_h087",
+    "strength": "hard",
+    "reason": "用实践检验认识，以实践是认识的基础为前提。"
+  },
+  {
+    "topicId": "cnz_h089",
+    "prerequisiteId": "cnz_h087",
+    "strength": "hard",
+    "reason": "认识的反复和无限发展，是因为实践是认识的基础，而且实践本身还在发展。"
+  },
+  {
+    "topicId": "cnz_h089",
+    "prerequisiteId": "cnz_h088",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修4《哲学与文化》的教学顺序，先学「实践是检验真理的唯一标准」，再学「认识的辩证发展过程」。"
+  },
+  {
+    "topicId": "cnz_h090",
+    "prerequisiteId": "cnz_h080",
+    "strength": "hard",
+    "reason": "社会存在是物质世界在社会领域的表现。"
+  },
+  {
+    "topicId": "cnz_h090",
+    "prerequisiteId": "cnz_h089",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修4《哲学与文化》的教学顺序，先学「认识的辩证发展过程」，再学「社会存在决定社会意识」。"
+  },
+  {
+    "topicId": "cnz_h091",
+    "prerequisiteId": "cnz_h090",
+    "strength": "hard",
+    "reason": "群众是社会存在和社会变革的主体。"
+  },
+  {
+    "topicId": "cnz_h091",
+    "prerequisiteId": "cnz_h086",
+    "strength": "hard",
+    "reason": "群众路线把实践观点贯彻到工作中。"
+  },
+  {
+    "topicId": "cnz_h092",
+    "prerequisiteId": "cnz_h090",
+    "strength": "hard",
+    "reason": "价值判断受社会存在的制约。"
+  },
+  {
+    "topicId": "cnz_h092",
+    "prerequisiteId": "cnz_h091",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修4《哲学与文化》的教学顺序，先学「群众观点和群众路线」，再学「价值判断与价值选择」。"
+  },
+  {
+    "topicId": "cnz_h093",
+    "prerequisiteId": "cnz_h092",
+    "strength": "hard",
+    "reason": "价值冲突是不同价值判断碰在一起。"
+  },
+  {
+    "topicId": "cnz_h094",
+    "prerequisiteId": "cnz_h092",
+    "strength": "hard",
+    "reason": "实现人生价值，先要会做价值判断和价值选择。"
+  },
+  {
+    "topicId": "cnz_h094",
+    "prerequisiteId": "cnz_h093",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修4《哲学与文化》的教学顺序，先学「价值观的差异与冲突」，再学「人生价值的实现」。"
+  },
+  {
+    "topicId": "cnz_h095",
+    "prerequisiteId": "cnz_h094",
+    "strength": "hard",
+    "reason": "核心价值观给人生价值的实现提供共同导向。"
+  },
+  {
+    "topicId": "cnz_h096",
+    "prerequisiteId": "cnz_h090",
+    "strength": "hard",
+    "reason": "传统文化属于社会意识，要看它由什么样的社会存在产生。"
+  },
+  {
+    "topicId": "cnz_h096",
+    "prerequisiteId": "cnz_h095",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修4《哲学与文化》的教学顺序，先学「社会主义核心价值观」，再学「正确对待传统文化」。"
+  },
+  {
+    "topicId": "cnz_h097",
+    "prerequisiteId": "cnz_h096",
+    "strength": "hard",
+    "reason": "转化和创新针对的是传统文化中需要取舍的部分。"
+  },
+  {
+    "topicId": "cnz_h098",
+    "prerequisiteId": "cnz_h096",
+    "strength": "hard",
+    "reason": "民族精神是中华优秀传统文化的精华。"
+  },
+  {
+    "topicId": "cnz_h098",
+    "prerequisiteId": "cnz_h097",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修4《哲学与文化》的教学顺序，先学「创造性转化与创新性发展」，再学「弘扬民族精神」。"
+  },
+  {
+    "topicId": "cnz_h099",
+    "prerequisiteId": "cnz_h096",
+    "strength": "hard",
+    "reason": "理解文化多样，要先能看待本民族文化。"
+  },
+  {
+    "topicId": "cnz_h099",
+    "prerequisiteId": "cnz_h098",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修4《哲学与文化》的教学顺序，先学「弘扬民族精神」，再学「世界文化的多样性」。"
+  },
+  {
+    "topicId": "cnz_h100",
+    "prerequisiteId": "cnz_h099",
+    "strength": "hard",
+    "reason": "交流互鉴以承认文化多样性为前提。"
+  },
+  {
+    "topicId": "cnz_h101",
+    "prerequisiteId": "cnz_h097",
+    "strength": "hard",
+    "reason": "文化自信包括对本民族文化创造性转化、创新性发展的信心。"
+  },
+  {
+    "topicId": "cnz_h101",
+    "prerequisiteId": "cnz_h100",
+    "strength": "hard",
+    "reason": "文化自信不是封闭，要在交流互鉴中确立。"
+  },
+  {
+    "topicId": "cnz_h102",
+    "prerequisiteId": "cnz_h101",
+    "strength": "hard",
+    "reason": "发展中国特色社会主义文化，以文化自信为精神状态。"
+  },
+  {
+    "topicId": "cnz_h103",
+    "prerequisiteId": "cnz_h097",
+    "strength": "hard",
+    "reason": "文化创新要把创造性转化落到当代文化产品上。"
+  },
+  {
+    "topicId": "cnz_h103",
+    "prerequisiteId": "cnz_h102",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治必修4《哲学与文化》的教学顺序，先学「发展中国特色社会主义文化」，再学「文化创新」。"
+  },
+  {
+    "topicId": "cnz_h104",
+    "prerequisiteId": "cnz_h055",
+    "strength": "hard",
+    "reason": "理解国家的本质，要先知道我国国体是人民民主专政。"
+  },
+  {
+    "topicId": "cnz_h104",
+    "prerequisiteId": "cnz_h103",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治课序，学完必修4《哲学与文化》的「文化创新」后进入选择性必修1《当代国际政治与经济》的「国家的本质」。"
+  },
+  {
+    "topicId": "cnz_h105",
+    "prerequisiteId": "cnz_h104",
+    "strength": "hard",
+    "reason": "政体是国家本质的实现形式，要先知道国家的本质。"
+  },
+  {
+    "topicId": "cnz_h106",
+    "prerequisiteId": "cnz_h104",
+    "strength": "hard",
+    "reason": "结构形式回答的是国家整体与部分如何组织，仍由国家的本质规定。"
+  },
+  {
+    "topicId": "cnz_h106",
+    "prerequisiteId": "cnz_h105",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修1《当代国际政治与经济》的教学顺序，先学「国体与政体」，再学「国家结构形式」。"
+  },
+  {
+    "topicId": "cnz_h107",
+    "prerequisiteId": "cnz_h106",
+    "strength": "hard",
+    "reason": "维护国家统一，要先分清单一制和复合制怎样处理中央与地方。"
+  },
+  {
+    "topicId": "cnz_h108",
+    "prerequisiteId": "cnz_h107",
+    "strength": "hard",
+    "reason": "国家安全首先是主权、统一和领土完整不受威胁。"
+  },
+  {
+    "topicId": "cnz_h109",
+    "prerequisiteId": "cnz_h107",
+    "strength": "hard",
+    "reason": "国家利益的核心包括主权和安全。"
+  },
+  {
+    "topicId": "cnz_h109",
+    "prerequisiteId": "cnz_h108",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修1《当代国际政治与经济》的教学顺序，先学「总体国家安全观」，再学「国家利益与国家实力」。"
+  },
+  {
+    "topicId": "cnz_h110",
+    "prerequisiteId": "cnz_h109",
+    "strength": "hard",
+    "reason": "多极化格局里各国关系仍由利益和实力推动。"
+  },
+  {
+    "topicId": "cnz_h111",
+    "prerequisiteId": "cnz_h109",
+    "strength": "hard",
+    "reason": "和平与发展要放在国家利益的合作与冲突中理解。"
+  },
+  {
+    "topicId": "cnz_h111",
+    "prerequisiteId": "cnz_h110",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修1《当代国际政治与经济》的教学顺序，先学「世界多极化」，再学「和平与发展的时代主题」。"
+  },
+  {
+    "topicId": "cnz_h112",
+    "prerequisiteId": "cnz_h111",
+    "strength": "hard",
+    "reason": "霸权主义危害的是和平与发展。"
+  },
+  {
+    "topicId": "cnz_h113",
+    "prerequisiteId": "cnz_h112",
+    "strength": "hard",
+    "reason": "全球治理观是针对霸权主义和强权政治提出的。"
+  },
+  {
+    "topicId": "cnz_h114",
+    "prerequisiteId": "cnz_h111",
+    "strength": "hard",
+    "reason": "独立自主的和平外交服务于和平与发展的时代主题。"
+  },
+  {
+    "topicId": "cnz_h114",
+    "prerequisiteId": "cnz_h113",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修1《当代国际政治与经济》的教学顺序，先学「共商共建共享的全球治理观」，再学「独立自主的和平外交政策」。"
+  },
+  {
+    "topicId": "cnz_h115",
+    "prerequisiteId": "cnz_h114",
+    "strength": "hard",
+    "reason": "人类命运共同体是我国外交理念的展开。"
+  },
+  {
+    "topicId": "cnz_h115",
+    "prerequisiteId": "cnz_h113",
+    "strength": "hard",
+    "reason": "共同体理念和共商共建共享的全球治理观一致。"
+  },
+  {
+    "topicId": "cnz_h116",
+    "prerequisiteId": "cnz_h109",
+    "strength": "hard",
+    "reason": "比较优势影响一国在国际经济中的利益和实力。"
+  },
+  {
+    "topicId": "cnz_h116",
+    "prerequisiteId": "cnz_h115",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修1《当代国际政治与经济》的教学顺序，先学「构建人类命运共同体」，再学「比较优势」。"
+  },
+  {
+    "topicId": "cnz_h117",
+    "prerequisiteId": "cnz_h116",
+    "strength": "hard",
+    "reason": "国际经济趋势要结合各国比较优势来看。"
+  },
+  {
+    "topicId": "cnz_h118",
+    "prerequisiteId": "cnz_h117",
+    "strength": "hard",
+    "reason": "经济全球化是当代国际经济发展的基本趋势之一。"
+  },
+  {
+    "topicId": "cnz_h119",
+    "prerequisiteId": "cnz_h118",
+    "strength": "hard",
+    "reason": "推动开放型世界经济，是应对经济全球化挑战的主张。"
+  },
+  {
+    "topicId": "cnz_h120",
+    "prerequisiteId": "cnz_h118",
+    "strength": "hard",
+    "reason": "讨论中国怎样推动经济全球化，要先分清全球化的机遇和挑战。"
+  },
+  {
+    "topicId": "cnz_h120",
+    "prerequisiteId": "cnz_h038",
+    "strength": "hard",
+    "reason": "国内的开放发展是中国参与经济全球化的国内一侧。"
+  },
+  {
+    "topicId": "cnz_h120",
+    "prerequisiteId": "cnz_h119",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修1《当代国际政治与经济》的教学顺序，先学「开放型世界经济」，再学「中国与经济全球化」。"
+  },
+  {
+    "topicId": "cnz_h121",
+    "prerequisiteId": "cnz_h113",
+    "strength": "hard",
+    "reason": "联合国是全球治理的重要平台。"
+  },
+  {
+    "topicId": "cnz_h121",
+    "prerequisiteId": "cnz_h120",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修1《当代国际政治与经济》的教学顺序，先学「中国与经济全球化」，再学「联合国」。"
+  },
+  {
+    "topicId": "cnz_h122",
+    "prerequisiteId": "cnz_h118",
+    "strength": "hard",
+    "reason": "这三家机构处理的是经济全球化中的贸易和金融事务。"
+  },
+  {
+    "topicId": "cnz_h122",
+    "prerequisiteId": "cnz_h121",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修1《当代国际政治与经济》的教学顺序，先学「联合国」，再学「世界贸易组织、世界银行与国际货币基金组织」。"
+  },
+  {
+    "topicId": "cnz_h123",
+    "prerequisiteId": "cnz_h121",
+    "strength": "hard",
+    "reason": "区域性国际组织要放在以联合国为代表的国际组织体系里比较。"
+  },
+  {
+    "topicId": "cnz_h123",
+    "prerequisiteId": "cnz_h122",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修1《当代国际政治与经济》的教学顺序，先学「世界贸易组织、世界银行与国际货币基金组织」，再学「区域性国际组织」。"
+  },
+  {
+    "topicId": "cnz_h124",
+    "prerequisiteId": "cnd_j108",
+    "strength": "hard",
+    "reason": "初中已经知道民法典调整平等主体之间的人身和财产关系，高中要掌握民法的基本原则。"
+  },
+  {
+    "topicId": "cnz_h124",
+    "prerequisiteId": "cnz_h123",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治课序，学完选择性必修1《当代国际政治与经济》的「区域性国际组织」后进入选择性必修2《法律与生活》的「民法的基本原则」。"
+  },
+  {
+    "topicId": "cnz_h125",
+    "prerequisiteId": "cnz_h124",
+    "strength": "hard",
+    "reason": "谁享有民事权利、谁能独立实施民事法律行为，要先知道民法调整什么。"
+  },
+  {
+    "topicId": "cnz_h126",
+    "prerequisiteId": "cnz_h124",
+    "strength": "hard",
+    "reason": "物权是民事权利的一类，保护物权要遵守民法基本原则。"
+  },
+  {
+    "topicId": "cnz_h126",
+    "prerequisiteId": "cnz_h125",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修2《法律与生活》的教学顺序，先学「民事权利能力与民事行为能力」，再学「物权的类型与保护」。"
+  },
+  {
+    "topicId": "cnz_h127",
+    "prerequisiteId": "cnz_h124",
+    "strength": "hard",
+    "reason": "合同是平等主体之间的民事法律行为。"
+  },
+  {
+    "topicId": "cnz_h127",
+    "prerequisiteId": "cnz_h126",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修2《法律与生活》的教学顺序，先学「物权的类型与保护」，再学「合同的订立与违约责任」。"
+  },
+  {
+    "topicId": "cnz_h128",
+    "prerequisiteId": "cnz_h124",
+    "strength": "hard",
+    "reason": "侵权责任是违反民事义务后要承担的民事责任。"
+  },
+  {
+    "topicId": "cnz_h128",
+    "prerequisiteId": "cnz_h127",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修2《法律与生活》的教学顺序，先学「合同的订立与违约责任」，再学「侵权责任」。"
+  },
+  {
+    "topicId": "cnz_h129",
+    "prerequisiteId": "cnz_h128",
+    "strength": "hard",
+    "reason": "讨论罪与非罪的界限，要先知道什么是侵权这种民事责任。"
+  },
+  {
+    "topicId": "cnz_h129",
+    "prerequisiteId": "cnd_j041",
+    "strength": "hard",
+    "reason": "初中已经用刑法是否明文规定来区分一般违法和犯罪，高中把它用到民事责任上。"
+  },
+  {
+    "topicId": "cnz_h130",
+    "prerequisiteId": "cnz_h124",
+    "strength": "hard",
+    "reason": "监护、抚养、扶养、赡养和继承都是民事关系。"
+  },
+  {
+    "topicId": "cnz_h130",
+    "prerequisiteId": "cnz_h129",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修2《法律与生活》的教学顺序，先学「民事责任与犯罪的界限」，再学「家庭中的权利义务」。"
+  },
+  {
+    "topicId": "cnz_h131",
+    "prerequisiteId": "cnz_h130",
+    "strength": "hard",
+    "reason": "婚姻家庭观念要放在家庭权利义务里理解。"
+  },
+  {
+    "topicId": "cnz_h132",
+    "prerequisiteId": "cnz_h127",
+    "strength": "hard",
+    "reason": "劳动合同是合同的一种，订立和违约的一般规则仍然适用。"
+  },
+  {
+    "topicId": "cnz_h132",
+    "prerequisiteId": "cnz_h131",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修2《法律与生活》的教学顺序，先学「婚姻法律关系」，再学「劳动者的权利与劳动合同」。"
+  },
+  {
+    "topicId": "cnz_h133",
+    "prerequisiteId": "cnz_h124",
+    "strength": "hard",
+    "reason": "企业登记之后，创业者仍要以平等主体的身份守民法。"
+  },
+  {
+    "topicId": "cnz_h133",
+    "prerequisiteId": "cnz_h132",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修2《法律与生活》的教学顺序，先学「劳动者的权利与劳动合同」，再学「创业与企业登记」。"
+  },
+  {
+    "topicId": "cnz_h134",
+    "prerequisiteId": "cnz_h133",
+    "strength": "hard",
+    "reason": "市场竞争规则是对已经登记经营的主体说的。"
+  },
+  {
+    "topicId": "cnz_h135",
+    "prerequisiteId": "cnz_h124",
+    "strength": "hard",
+    "reason": "调解解决的是平等主体之间的民事争议。"
+  },
+  {
+    "topicId": "cnz_h135",
+    "prerequisiteId": "cnz_h134",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修2《法律与生活》的教学顺序，先学「公平竞争与依法经营」，再学「人民调解与行政调解」。"
+  },
+  {
+    "topicId": "cnz_h136",
+    "prerequisiteId": "cnz_h132",
+    "strength": "hard",
+    "reason": "劳动人事争议仲裁用来解决劳动争议。"
+  },
+  {
+    "topicId": "cnz_h136",
+    "prerequisiteId": "cnz_h135",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修2《法律与生活》的教学顺序，先学「人民调解与行政调解」，再学「仲裁」。"
+  },
+  {
+    "topicId": "cnz_h137",
+    "prerequisiteId": "cnz_h135",
+    "strength": "hard",
+    "reason": "诉讼是调解之外解决争议的途径。"
+  },
+  {
+    "topicId": "cnz_h137",
+    "prerequisiteId": "cnz_h136",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修2《法律与生活》的教学顺序，先学「仲裁」，再学「三大诉讼与举证责任」。"
+  },
+  {
+    "topicId": "cnz_h138",
+    "prerequisiteId": "cnz_h137",
+    "strength": "hard",
+    "reason": "法律援助帮助当事人行使诉讼权利，要先知道诉讼里有哪些权利。"
+  },
+  {
+    "topicId": "cnz_h139",
+    "prerequisiteId": "cnz_h087",
+    "strength": "hard",
+    "reason": "思维是认识的高级阶段，要先知道认识来自实践"
+  },
+  {
+    "topicId": "cnz_h139",
+    "prerequisiteId": "cnz_h138",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治课序，学完选择性必修2《法律与生活》的「诉讼权利与法律援助」后进入选择性必修3《逻辑与思维》的「思维的特征与形态」。"
+  },
+  {
+    "topicId": "cnz_h140",
+    "prerequisiteId": "cnz_h139",
+    "strength": "hard",
+    "reason": "形式逻辑的规律是对正确思维提出的要求，要先知道思维的特征"
+  },
+  {
+    "topicId": "cnz_h141",
+    "prerequisiteId": "cnz_h140",
+    "strength": "hard",
+    "reason": "偷换概念、自相矛盾和两不可，分别违反三条形式逻辑规律"
+  },
+  {
+    "topicId": "cnz_h142",
+    "prerequisiteId": "cnz_h139",
+    "strength": "hard",
+    "reason": "科学思维是思维形态里追求客观和可检验的那一类"
+  },
+  {
+    "topicId": "cnz_h142",
+    "prerequisiteId": "cnz_h141",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修3《逻辑与思维》的教学顺序，先学「常见逻辑错误」，再学「科学思维的特征」。"
+  },
+  {
+    "topicId": "cnz_h143",
+    "prerequisiteId": "cnz_h140",
+    "strength": "hard",
+    "reason": "明确概念要遵守同一律，不能在同一思维过程中偷换概念"
+  },
+  {
+    "topicId": "cnz_h143",
+    "prerequisiteId": "cnz_h142",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修3《逻辑与思维》的教学顺序，先学「科学思维的特征」，再学「概念的内涵与外延」。"
+  },
+  {
+    "topicId": "cnz_h144",
+    "prerequisiteId": "cnz_h143",
+    "strength": "hard",
+    "reason": "判断由概念构成，概念不清则判断不当"
+  },
+  {
+    "topicId": "cnz_h145",
+    "prerequisiteId": "cnz_h144",
+    "strength": "hard",
+    "reason": "演绎推理从判断推出判断"
+  },
+  {
+    "topicId": "cnz_h146",
+    "prerequisiteId": "cnz_h145",
+    "strength": "hard",
+    "reason": "归纳和类比要与演绎对照，才分得清从一般到个别和从个别到一般"
+  },
+  {
+    "topicId": "cnz_h147",
+    "prerequisiteId": "cnz_h084",
+    "strength": "hard",
+    "reason": "辩证地分析与综合，要用矛盾的观点看复杂事物"
+  },
+  {
+    "topicId": "cnz_h147",
+    "prerequisiteId": "cnz_h142",
+    "strength": "hard",
+    "reason": "分析与综合是科学思维的方法"
+  },
+  {
+    "topicId": "cnz_h147",
+    "prerequisiteId": "cnz_h146",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修3《逻辑与思维》的教学顺序，先学「归纳推理与类比推理」，再学「分析与综合」。"
+  },
+  {
+    "topicId": "cnz_h148",
+    "prerequisiteId": "cnz_h147",
+    "strength": "hard",
+    "reason": "把握度，要把事物分析成质和量两个方面再综合"
+  },
+  {
+    "topicId": "cnz_h149",
+    "prerequisiteId": "cnz_h089",
+    "strength": "hard",
+    "reason": "辩证否定描述认识怎样深化，要先知道认识是辩证发展的"
+  },
+  {
+    "topicId": "cnz_h149",
+    "prerequisiteId": "cnz_h147",
+    "strength": "hard",
+    "reason": "否定之中有肯定，是分析之后的综合"
+  },
+  {
+    "topicId": "cnz_h149",
+    "prerequisiteId": "cnz_h148",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修3《逻辑与思维》的教学顺序，先学「质量互变与适度原则」，再学「辩证否定」。"
+  },
+  {
+    "topicId": "cnz_h150",
+    "prerequisiteId": "cnz_h142",
+    "strength": "hard",
+    "reason": "联想中的迁移和想象要接受科学思维的检验"
+  },
+  {
+    "topicId": "cnz_h150",
+    "prerequisiteId": "cnz_h149",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修3《逻辑与思维》的教学顺序，先学「辩证否定」，再学「联想思维」。"
+  },
+  {
+    "topicId": "cnz_h151",
+    "prerequisiteId": "cnz_h150",
+    "strength": "hard",
+    "reason": "发散常从联想打开思路，再由聚合收束"
+  },
+  {
+    "topicId": "cnz_h152",
+    "prerequisiteId": "cnz_h151",
+    "strength": "hard",
+    "reason": "逆向是多路探索中沿相反方向想的那一路"
+  },
+  {
+    "topicId": "cnz_h153",
+    "prerequisiteId": "cnz_h142",
+    "strength": "hard",
+    "reason": "超前思维的预测要力求可检验，这是科学思维的特征"
+  },
+  {
+    "topicId": "cnz_h153",
+    "prerequisiteId": "cnz_h152",
+    "strength": "soft",
+    "reason": "按统编版高中思想政治选择性必修3《逻辑与思维》的教学顺序，先学「逆向思维」，再学「超前思维」。"
   }
 ]

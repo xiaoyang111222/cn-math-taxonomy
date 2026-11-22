@@ -12,7 +12,7 @@ import os
 import sys
 from collections import Counter, defaultdict
 
-from senior_lib import BOOK_CODE, CODE_GRADE, choice_verify
+from senior_lib import choice_verify
 from verify_questions import verify_all
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -152,7 +152,7 @@ def run(S):
             page_ref, text_status = S.CHECK[tail]
         else:
             page_ref = "待核"
-            text_status = "公开转述，未与课程标准 PDF 逐页核对；%s本图谱自编号。" % S.book_words[CODE_GRADE[book]]
+            text_status = "公开转述，未与课程标准 PDF 逐页核对；%s本图谱自编号。" % S.book_words[S.code_grade[book]]
         std_items.append({
             "id": S.std_prefix + tail, "domain": domain, "section": section,
             "clause": "(%d)" % seen_std[book], "text": text, "page_or_ref": page_ref, "verbatim": False,

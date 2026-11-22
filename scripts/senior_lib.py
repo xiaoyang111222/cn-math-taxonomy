@@ -73,7 +73,7 @@ def check_question(key, q):
 class Senior:
     def __init__(self, *, subject, label, tag, edition, id_prefix, junior_prefix, std_prefix, std_key,
                  std_meta, domains, book_title, count_expect=None, book_words=None, chapter_re=None,
-                 extra_prereq_prefixes=(), std_note=None):
+                 extra_prereq_prefixes=(), std_note=None, book_codes=None):
         self.subject = subject          # geography
         self.label = label              # 地理
         self.tag = tag                  # geo
@@ -87,6 +87,8 @@ class Senior:
         self.book_title = book_title    # {10: "必修第一册", ...}
         # 默认仍是化学式册名。地理、生物、历史、化学都不传，章节字符串保持原样。
         self.book_words = book_words or BOOK_WORD
+        self.book_codes = dict(book_codes) if book_codes else dict(BOOK_CODE)
+        self.code_grade = {v: k for k, v in self.book_codes.items()}
         self.chapter_re = chapter_re or CHAPTER_RE
         self.extra_prereq_prefixes = tuple(extra_prereq_prefixes)
         self.std_note = std_note or NOTE
@@ -121,8 +123,9 @@ class Senior:
 
     # ------------------------------------------------------------ 课标转述
     def clause(self, tail, domain, section, text):
-        """tail 形如 B1.01、S2.03；册内编号必须连续。"""
-        m = re.match(r"^(B1|B2|S1|S2|S3)\.(\d{2})$", tail)
+        """tail 形如 B1.01、S2.03；册内编号必须连续。允许的册代码来自本实例的 book_codes。"""
+        codes = sorted(set(self.book_codes.values()), key=lambda c: (c[0] != "B", c))
+        m = re.match(r"^(%s)\.(\d{2})$" % "|".join(codes), tail)
         if not m:
             raise SystemExit("课标尾部格式应为 B1.01：%s" % tail)
         if domain not in self.domains:
