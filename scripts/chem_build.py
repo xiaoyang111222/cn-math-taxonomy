@@ -18,6 +18,7 @@ from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from std_check import apply_check  # noqa: E402
 
 import chem_g9  # noqa: E402,F401
 import chem_edges  # noqa: E402,F401
@@ -113,6 +114,7 @@ def build_standards():
             "verbatim": False,
             "text_status": TEXT_STATUS,
         })
+    apply_check(items)
     return id_of, items
 
 
@@ -344,11 +346,11 @@ def main():
         "stage": "第四学段（7–9年级；六三制化学在九年级开设）",
         "note": (
             "条目是对化学课标五个学习主题内容要求的公开转述，不是逐页核对的原文。"
-            "verbatim 为 false，page_or_ref 为「待核」。编号 cks-2022 是本图谱编的，不是教育部原编号。"
+            "verbatim 为 false。2026-11-22 已逐条对照人教社电子书《义务教育化学课程标准（2022年版）》，page_or_ref 为课标印刷页码，5 条按课标原文改写，13 条库存多出课标未点名的内容、留待裁决，仍待核 2 条（SP.02、SR.03，课标内容要求无对应条款）。编号 cks-2022 是本图谱编的，不是教育部原编号。"
             "五个学习主题的名称据中国教育新闻网 2022-08-03 报道"
             "（http://www.jyb.cn/rmtzcg/xwy/spxw/202208/t20220803_2110932643.html）。"
             "二级主题框架参考公开对照（https://m.fx361.com/news/2022/0530/21987573.html）。"
-            "学生必做实验的具体名单未逐条对照教育部原文，按人教版 2024 目录中的实验活动转述。"
+            "学生必做实验清单已于 2026-11-22 对照课标内容要求 1.5 及附录 4。"
             "没有把未经核对的「2022年版2025年修订」摘录写成化学课标原文。"
             "教材按六三制人教版九年级上、下册公开目录，非官方、待核。不采用五四制全一册。"
             "整理与提升、复习与提高和跨学科实践活动暂不单建点。"
