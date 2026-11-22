@@ -182,6 +182,19 @@ N_BIO_EDGES = 0
 N_CHEM_EDGES = 0
 
 
+TAIL_REF_RE = re.compile(r"^课标印刷页码 \d+([–、]\d+)*$")
+
+
+def check_tail_ref(it, where, label, err):
+    """2026-11-22 课标待核清尾：page_or_ref 为「待核」或「课标印刷页码 N」，核对过的必须记下 2026-11-22。"""
+    ref = it.get("page_or_ref")
+    if ref != "待核":
+        if not (isinstance(ref, str) and TAIL_REF_RE.match(ref)):
+            err("%s %s课标 page_or_ref 必须是「待核」或「课标印刷页码 N」" % (where, label))
+        if "2026-11-22" not in str(it.get("text_status") or ""):
+            err("%s %s课标 text_status 必须记下 2026-11-22 的核对" % (where, label))
+
+
 def err(msg):
     errors.append(msg)
 
@@ -1055,8 +1068,8 @@ def check_standards_file(std):
             if ref != "待核":
                 if not (isinstance(ref, str) and ref.startswith("人教社电子书印刷页") and "转述" in ref):
                     err("%s 英语课标 page_or_ref 必须标明人教社电子书印刷页，并写明是转述" % where)
-                if "2026-11-06" not in str(it.get("text_status") or ""):
-                    err("%s 英语课标 text_status 必须记下 2026-11-06 的核对" % where)
+                if not any(d in str(it.get("text_status") or "") for d in ("2026-11-06", "2026-11-22")):
+                    err("%s 英语课标 text_status 必须记下 2026-11-06 或 2026-11-22 的核对" % where)
         elif ehm:
             saw_english = True
             band, code, num = ehm.group(1), ehm.group(2), int(ehm.group(3))
@@ -1072,8 +1085,8 @@ def check_standards_file(std):
             if ref != "待核":
                 if not (isinstance(ref, str) and ref.startswith("人教社转载 PDF 印刷页") and "转述" in ref):
                     err("%s 高中英语课标 page_or_ref 必须标明人教社转载 PDF 印刷页，并写明是转述" % where)
-                if "2026-11-06" not in str(it.get("text_status") or ""):
-                    err("%s 高中英语课标 text_status 必须记下 2026-11-06 的核对" % where)
+                if not any(d in str(it.get("text_status") or "") for d in ("2026-11-06", "2026-11-22")):
+                    err("%s 高中英语课标 text_status 必须记下 2026-11-06 或 2026-11-22 的核对" % where)
         elif scm:
             saw_science = True
             level, code, num = scm.group(1), scm.group(2), int(scm.group(3))
@@ -1085,8 +1098,7 @@ def check_standards_file(std):
             last[key] = num
             if it.get("verbatim") is not False:
                 err("%s 科学课标必须显式标 verbatim:false（原文未逐页核对）" % where)
-            if it.get("page_or_ref") != "待核":
-                err("%s 科学课标 page_or_ref 必须是「待核」，不能编页码" % where)
+            check_tail_ref(it, where, "科学", err)
         elif zm:
             saw_chinese = True
             level, code, num = zm.group(1), zm.group(2), int(zm.group(3))
@@ -1118,11 +1130,7 @@ def check_standards_file(std):
             last[key] = num
             if it.get("verbatim") is not False:
                 err("%s 高中语文课标必须显式标 verbatim:false（原文未逐页核对）" % where)
-            if it.get("page_or_ref") != "待核":
-                err("%s 高中语文课标 page_or_ref 必须是「待核」，不能编页码" % where)
-            status = str(it.get("text_status") or "")
-            if "公开转述" not in status or "未" not in status:
-                err("%s 高中语文课标 text_status 必须写明公开转述且未逐页核对" % where)
+            check_tail_ref(it, where, "高中语文", err)
         elif mrm:
             saw_morality = True
             if mrm.group(1):
@@ -1140,8 +1148,7 @@ def check_standards_file(std):
             last[key] = num
             if it.get("verbatim") is not False:
                 err("%s 道德与法治课标必须显式标 verbatim:false（原文未逐页核对）" % where)
-            if it.get("page_or_ref") != "待核":
-                err("%s 道德与法治课标 page_or_ref 必须是「待核」，不能编页码" % where)
+            check_tail_ref(it, where, "道德与法治", err)
         elif hism:
             saw_history = True
             code, num = hism.group(1), int(hism.group(2))
@@ -1153,8 +1160,7 @@ def check_standards_file(std):
             last[key] = num
             if it.get("verbatim") is not False:
                 err("%s 历史课标必须显式标 verbatim:false（原文未逐页核对）" % where)
-            if it.get("page_or_ref") != "待核":
-                err("%s 历史课标 page_or_ref 必须是「待核」，不能编页码" % where)
+            check_tail_ref(it, where, "历史", err)
         elif geom:
             saw_geography = True
             code, num = geom.group(1), int(geom.group(2))
@@ -1166,8 +1172,7 @@ def check_standards_file(std):
             last[key] = num
             if it.get("verbatim") is not False:
                 err("%s 地理课标必须显式标 verbatim:false（原文未逐页核对）" % where)
-            if it.get("page_or_ref") != "待核":
-                err("%s 地理课标 page_or_ref 必须是「待核」，不能编页码" % where)
+            check_tail_ref(it, where, "地理", err)
         elif biom:
             saw_biology = True
             code, num = biom.group(1), int(biom.group(2))
@@ -1179,8 +1184,7 @@ def check_standards_file(std):
             last[key] = num
             if it.get("verbatim") is not False:
                 err("%s 生物课标必须显式标 verbatim:false（原文未逐页核对）" % where)
-            if it.get("page_or_ref") != "待核":
-                err("%s 生物课标 page_or_ref 必须是「待核」，不能编页码" % where)
+            check_tail_ref(it, where, "生物", err)
         elif chemm:
             saw_chemistry = True
             code, num = chemm.group(1), int(chemm.group(2))
@@ -1192,8 +1196,7 @@ def check_standards_file(std):
             last[key] = num
             if it.get("verbatim") is not False:
                 err("%s 化学课标必须显式标 verbatim:false（原文未逐页核对）" % where)
-            if it.get("page_or_ref") != "待核":
-                err("%s 化学课标 page_or_ref 必须是「待核」，不能编页码" % where)
+            check_tail_ref(it, where, "化学", err)
         elif chemmhs:
             saw_chemistry_senior = True
             book, code, num = chemmhs.group(1), chemmhs.group(2), int(chemmhs.group(3))

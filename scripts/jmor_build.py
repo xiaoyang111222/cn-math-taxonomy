@@ -20,6 +20,7 @@ from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from std_check import apply_check  # noqa: E402
 
 import jmor_lib as L  # noqa: E402
 
@@ -254,6 +255,7 @@ def main():
             "notice_url": NOTICE_URL,
             "pdf_url": PDF_URL,
         })
+    apply_check(new_items)
     used = {t["std"] for t in TOPICS}
     missing = [row[0] for row in STANDARD_ROWS if row[0] not in used]
     # 第四学段五个主题不限于当前册。七、八年级未引用时只警告，不拒绝生成，也不为消警告去映射。
@@ -350,12 +352,12 @@ def main():
     mo["year"] = 2022
     mo["notice_url"] = NOTICE_URL
     mo["pdf_url"] = PDF_URL
-    mo["pdf_status"] = "官方通知所附 PDF 为扫描件，未逐页核对，页码待核，verbatim 均为 false"
+    mo["pdf_status"] = "官方通知所附 PDF 为扫描件；2026-11-22 已逐条对照人教社电子书印刷页，页码见各条 page_or_ref，verbatim 均为 false"
     mo["junior_stage"] = "第四学段五主题为公开解读的推断，不是课标原文"
     labels = volume_labels(new_topics)
     mo["coverage"] = coverage_text(new_topics)
     mo["junior_note"] = (
-        "cds-2022:4.* 只标第四学段五个学习主题的名称，confidence 为 inferred，verbatim 为 false，page_or_ref 为「待核」。"
+        "cds-2022:4.* 只标第四学段五个学习主题的名称，verbatim 为 false；2026-11-22 核到这五个主题名是课标自有的（课标印刷页码 34），不是推断，知识点里的 confidence 仍沿用 inferred，page_or_ref 为课标印刷页码。"
         "通知页 %s ，PDF %s 。"
         "七上至九上教材目录来自智慧教育平台官方阅读器，已确认点 catalog_status=official_toc。"
         "对不上官方课、框的点挂「N年级X册 待核」，catalog_status=pending_official_lesson_list。"

@@ -17,6 +17,7 @@ from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from std_check import apply_check  # noqa: E402
 
 import mor_g1  # noqa: E402,F401
 import mor_g2  # noqa: E402,F401
@@ -121,6 +122,7 @@ def build_standards():
             "verbatim": False,
             "text_status": "公开转述，未与《义务教育道德与法治课程标准（2022年版）》逐页核对",
         })
+    apply_check(items)
     return id_of, items
 
 
@@ -326,7 +328,7 @@ def main():
         "issuer": "中华人民共和国教育部",
         "year": 2022,
         "stage": "第一至第三学段（1–2、3–4、5–6年级）",
-        "note": "条目是对道德与法治课标学段内容要求的公开转述，不是逐页核对的原文。verbatim 为 false，page_or_ref 为「待核」。编号 cds-2022 是本图谱编的，不是教育部原编号。一上按2024秋修订统编目录，一下按2025春，二上按2025秋，二下按2026春，三上按2025秋，三下按2026春，四上/五上/六上按2026秋修订目录；四下、五下、六下修订版公开目录仍按现行统编版编排。",
+        "note": "条目是对道德与法治课标学段内容要求的公开转述，不是逐页核对的原文。verbatim 为 false。2026-11-22 已逐条对照人教社电子书《义务教育道德与法治课程标准（2022年版）》，page_or_ref 为课标印刷页码，其中 14 条库存比课标多出具体化内容、留待裁决（见各条 text_status）。编号 cds-2022 是本图谱编的，不是教育部原编号。一上按2024秋修订统编目录，一下按2025春，二上按2025秋，二下按2026春，三上按2025秋，三下按2026春，四上/五上/六上按2026秋修订目录；四下、五下、六下修订版公开目录仍按现行统编版编排。",
     }
     # 初中字段由 jmor_build.py 写入。重跑小学脚本时原样保留，避免把第四学段说明剥掉。
     for k in ("junior_note", "notice_url", "pdf_url", "pdf_status", "coverage", "junior_stage"):
