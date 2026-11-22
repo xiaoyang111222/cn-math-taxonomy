@@ -17,6 +17,7 @@ from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from std_check import apply_check  # noqa: E402
 
 import his_g7  # noqa: E402,F401
 import his_g8  # noqa: E402,F401
@@ -106,6 +107,7 @@ def build_standards():
             "verbatim": False,
             "text_status": "公开转述，未与《义务教育历史课程标准（2022年版）》逐页核对",
         })
+    apply_check(items)
     return id_of, items
 
 
@@ -332,7 +334,7 @@ def main():
         "issuer": "中华人民共和国教育部",
         "year": 2022,
         "stage": "第四学段（7–9年级）",
-        "note": "条目是对历史课标中国史、世界史内容要求的公开转述，不是逐页核对的原文。verbatim 为 false，page_or_ref 为「待核」。编号 chs-2022 是本图谱编的，不是教育部原编号。七上按2024秋修订统编目录，七下按2025春，八上按2025秋，八下按2026春，九上按2026秋修订目录；九下修订版公开目录未上线，暂按现行统编九年级下册。",
+        "note": "条目是对历史课标中国史、世界史内容要求的公开转述，不是逐页核对的原文。verbatim 为 false。2026-11-22 已逐条对照人教社电子书《义务教育历史课程标准（2022年版）》，page_or_ref 为课标印刷页码，1 条（CM.03）按课标原文改写，4 条库存多出课标未点名的内容、留待裁决（见各条 text_status）。编号 chs-2022 是本图谱编的，不是教育部原编号。七上按2024秋修订统编目录，七下按2025春，八上按2025秋，八下按2026春，九上按2026秋修订目录；九下修订版公开目录未上线，暂按现行统编九年级下册。",
     }
     for k, v in kept_std.items():
         standards_out[k] = v
