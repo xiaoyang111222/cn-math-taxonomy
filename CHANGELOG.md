@@ -1,5 +1,14 @@
 # 变更日志
 
+## 2026-11-22（Phase 1：账号与云同步地基，免费灰度）
+
+- 新增 `api/`：Cloudflare Worker（`worker.js`）+ D1 表结构（`schema.sql`）+ `wrangler.toml`（name=math-pansgo-api，D1 binding DB）。只写代码和本地测试，未部署。接口：`POST /auth/request-code`（6 位验证码，10 分钟有效；同邮箱 60 秒冷却、每小时 5 次，同 IP 每小时 20 次；已注册与否响应一致）、`POST /auth/verify`（最多试 5 次，成功即作废；新用户记录服务邮件 / 营销邮件两类同意；发 30 天会话令牌）、`POST /auth/logout`、`GET /auth/me`、`GET /sync`、`PUT /sync/:dataset`（`base_updated_at` 不符返回 409 和云端现状）。验证码与会话令牌只存 SHA-256 哈希；CORS 白名单在 `ALLOWED_ORIGINS` 里配置，支持 `https://*.xxx.pages.dev`。发信走 `sendMail()` 抽象（Resend，`RESEND_API_KEY` 为 Worker secret）；`MAIL_DRY_RUN=1` 只写日志，仅调试用，生产必须是 `"0"`。
+- 前端：`assets/account.js`（页头「登录 / 账号」入口、邮箱验证码弹窗、会话管理）与 `assets/sync.js`（同步引擎）挂在首页、档案、错题本、期末补漏四个页面。本地优先，未登录时 sync.js 不挂钩子、不请求网络。同步 `cnmChildren.v1`、`cnmChildren.records.v1`、`cnmWrong.v1`、`cnmFinals.v1`：登录后拉云端 → 合并 → 写回本地 → 推上云；之后本地改动防抖 5 秒上传，409 重新拉取合并再传（最多 2 次）。合并是纯函数：档案按孩子 id、错题按 qid、诊断记录按记录 key、期末计划按整份较新者；删除靠上次同步的基线做三方推断，云端没有数据时不推断删除。
+- `assets/children.js` 编辑档案和设置学习进度时写 `updatedAt`；`finals/finals.js` 的 `savePlan` 写 `updatedAt`，供合并比较新旧。
+- 档案、错题本、期末补漏页的隐私说明改为「不登录不上传，登录（可选）后才同步」。
+- 新增 `tests/test_sync.js`（合并函数 + 两台设备的同步流程）、`tests/test_api.js`（验证码 / 限流 / CORS 纯逻辑，Worker 路由用 node:sqlite 内存库跑真实 `schema.sql`），已加入 CI 与 `npm test`。
+- Service Worker 缓存版本 v32 → v33，缓存清单加入 `assets/account.js`、`assets/sync.js`。
+
 ## 2026-11-22（诊断按学习进度出题，#56）
 
 - 诊断开始页新增「学习进度」：上学期 / 下学期 / 已学完全年。默认按月份预选（9–1 月上学期，2–7 月下学期，8 月已学完全年），手动改动存进当前孩子的档案（没选孩子时存本机设置），只在同一学期内有效，过了学期回到按月份的默认值。

@@ -73,7 +73,7 @@
     if (i < 0) return { ok: false, error: '找不到这个孩子。' };
     var err = check(s, f, id);
     if (err) return { ok: false, error: err };
-    s.children[i] = Object.assign({}, s.children[i], f);
+    s.children[i] = Object.assign({}, s.children[i], f, { updatedAt: new Date().toISOString() });
     write(KEY, s);
     return { ok: true, child: s.children[i] };
   }
@@ -85,7 +85,7 @@
     var s = state();
     var i = s.children.map(function (c) { return c.id; }).indexOf(id);
     if (i < 0 || !validProgress(p)) return false;
-    s.children[i] = Object.assign({}, s.children[i], { progress: { v: p.v, term: p.term } });
+    s.children[i] = Object.assign({}, s.children[i], { progress: { v: p.v, term: p.term }, updatedAt: new Date().toISOString() });
     return write(KEY, s);
   }
   function remove(id) {

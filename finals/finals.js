@@ -191,6 +191,7 @@
     } catch (e) { return null; }
   }
   function savePlan(storage, plan) {
+    plan.updatedAt = Date.now();
     try { storage.setItem(KEY, JSON.stringify(plan)); return true; } catch (e) { return false; }
   }
   function clearPlan(storage) {

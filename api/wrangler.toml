@@ -1,0 +1,21 @@
+# 账号与云同步 Worker。Phase 1 只写代码和本地测试，不部署。
+# 上线前（人工做）：
+#   1. wrangler d1 create math-pansgo，把返回的 database_id 填到下面；
+#   2. wrangler d1 execute math-pansgo --remote --file=api/schema.sql；
+#   3. wrangler secret put RESEND_API_KEY；可选 wrangler secret put OTP_PEPPER（验证码哈希的服务端盐）；
+#   4. 确认 MAIL_DRY_RUN 为 "0"（"1" 会把验证码明文写进日志，只准本地 / 灰度调试用）。
+name = "math-pansgo-api"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "math-pansgo"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[vars]
+# 允许的前端来源，逗号分隔；支持 https://*.xxx.pages.dev 形式的子域通配（灰度预览用）。
+ALLOWED_ORIGINS = "https://math.pansgo.com,https://cn-math-taxonomy.pages.dev,https://*.cn-math-taxonomy.pages.dev"
+MAIL_FROM = "数学知识图谱 <noreply@math.pansgo.com>"
+# 生产必须是 "0"。
+MAIL_DRY_RUN = "0"

@@ -65,6 +65,12 @@ jobs:
       - name: 期末补漏计划测试
         run: node tests/test_finals.js
 
+      - name: 云同步合并与引擎测试
+        run: node tests/test_sync.js
+
+      - name: 账号与同步 API 测试
+        run: node tests/test_api.js
+
       - name: 知识点静态页测试
         run: node tests/test_kp_pages.js
 
