@@ -16,6 +16,7 @@ from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from std_check import apply_check  # noqa: E402
 
 import sci_g1  # noqa: E402,F401
 import sci_g2  # noqa: E402,F401
@@ -125,6 +126,7 @@ def build_standards():
             "verbatim": False,
             "text_status": "公开转述，未与《义务教育科学课程标准（2022年版）》逐页核对",
         })
+    apply_check(items)
     return id_of, items
 
 
@@ -367,7 +369,7 @@ def main():
         "issuer": "中华人民共和国教育部",
         "year": 2022,
         "stage": "第一至第三学段（1–2、3–4、5–6年级）",
-        "note": "条目是对科学课标十三个学科核心概念中学段内容要求的公开转述，不是逐页核对的原文。verbatim 为 false，page_or_ref 为「待核」。编号 css-2022 是本图谱编的，不是教育部原编号。一上按2024秋修订教科版目录，一下、二下、三下按2025春/2026春修订目录，二上、三上按2025秋修订目录，四上、五上、六上按2026秋修订目录；四下、五下、六下修订版尚未发行，暂按教科版现行目录编排。",
+        "note": "条目是对科学课标十三个学科核心概念中学段内容要求的公开转述，不是逐页核对的原文。verbatim 为 false。2026-11-22 已逐条对照人教社电子书《义务教育科学课程标准（2022年版）》，page_or_ref 为课标印刷页码，26 条按课标原文改写，仍待核 1 条（1.SM.04，课标内容要求无对应条款）。编号 css-2022 是本图谱编的，不是教育部原编号。一上按2024秋修订教科版目录，一下、二下、三下按2025春/2026春修订目录，二上、三上按2025秋修订目录，四上、五上、六上按2026秋修订目录；四下、五下、六下修订版尚未发行，暂按教科版现行目录编排。",
     }
     for k, v in kept_std.items():
         standards_out[k] = v
