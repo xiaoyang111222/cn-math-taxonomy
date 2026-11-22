@@ -27,7 +27,7 @@ const topics = readJson('data/topics.json');
 const deps = readJson('data/dependencies.json');
 const questions = readJson('data/questions.json');
 const byId = new Map(topics.map((t) => [t.id, t]));
-const SUBJECTS = ['math', 'chinese', 'science', 'morality', 'history', 'geography', 'biology', 'chemistry', 'english', 'physics'];
+const SUBJECTS = ['math', 'chinese', 'science', 'morality', 'history', 'geography', 'biology', 'chemistry', 'english', 'physics', 'politics'];
 
 let log;
 try {
@@ -41,7 +41,7 @@ try {
     assert.match(log, new RegExp('知识点页：' + topics.length));
   });
 
-  test('总索引与 10 个学科索引页', () => {
+  test('总索引与 11 个学科索引页', () => {
     assert.ok(fs.existsSync(path.join(OUT, 'kp/index.html')));
     for (const s of SUBJECTS) assert.ok(fs.existsSync(path.join(OUT, 'kp', s + '.html')), s);
     const index = fs.readFileSync(path.join(OUT, 'kp/index.html'), 'utf8');

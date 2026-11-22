@@ -51,8 +51,9 @@ const N_TOPICS = String(TOPIC_ROWS.filter((t) => String(t.id).startsWith('cnm_')
 const N_EDGES = String(DEP_ROWS.filter((d) => String(d.topicId).startsWith('cnm_')).length);
 const N_QUESTIONS = String(QUESTION_ROWS.filter((q) => String(q.topicId).startsWith('cnm_')).length);
 const N_STANDARDS = String(STD_ITEMS.filter((it) => String(it.id).startsWith('cms-')).length);
-// 首页统计是全站数字（千分位），不分学科
-const HOME_STATS = [TOPIC_ROWS.length, DEP_ROWS.length, QUESTION_ROWS.length, 10].map((n) => n.toLocaleString('en-US'));
+// 首页统计是全站数字（千分位），不分学科。学科数与首页一样按 topics 里的 subject 现算。
+const HOME_SUBJECTS = new Set(TOPIC_ROWS.map((t) => t.subject || 'math')).size;
+const HOME_STATS = [TOPIC_ROWS.length, DEP_ROWS.length, QUESTION_ROWS.length, HOME_SUBJECTS].map((n) => n.toLocaleString('en-US'));
 const N_GRADE_CARDS = 14;
 const TOP_BANNER_EXPR = `(() => {
   const a = document.querySelector('a.top-banner');

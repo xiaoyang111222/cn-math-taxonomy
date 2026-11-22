@@ -8,7 +8,7 @@ data/questions.json 仍是各 *_build.py 的写入目标（源数据）；前端
   python3 scripts/split_questions.py           拆分并对账（有任何不一致就非零退出）
   python3 scripts/split_questions.py --check   只核对磁盘上的拆分文件是否和 questions.json 一致，不写文件
 
-学科代码与前端 ?subject= 完全一致：math english physics chinese science morality history geography biology chemistry。
+学科代码与前端 ?subject= 完全一致：math english physics chinese science morality history geography biology chemistry politics。
 归属按知识点：题目的 topicId 对应 topics.json 里的知识点，取其 subject 字段，没有就按 id 前缀。
 """
 import json
@@ -19,10 +19,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 OUT = os.path.join(DATA, "questions")
 
-SUBJECTS = ["math", "chinese", "english", "physics", "chemistry", "biology", "history", "geography", "morality", "science"]
+SUBJECTS = ["math", "chinese", "english", "physics", "chemistry", "biology", "history", "geography", "morality", "science", "politics"]
 PREFIX = {
     "cnm_": "math", "cne_": "english", "cnp_": "physics", "cnc_": "chinese", "cns_": "science",
     "cnd_": "morality", "cnh_": "history", "cng_": "geography", "cnb_": "biology", "cnk_": "chemistry",
+    "cnz_": "politics",
 }
 
 

@@ -1,5 +1,5 @@
 {
-  "total": 16419,
+  "total": 17031,
   "subjects": {
     "math": {
       "file": "math.json",
@@ -40,6 +40,10 @@
     "science": {
       "file": "science.json",
       "count": 1048
+    },
+    "politics": {
+      "file": "politics.json",
+      "count": 612
     }
   }
 }

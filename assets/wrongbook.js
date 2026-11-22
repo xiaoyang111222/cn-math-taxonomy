@@ -8,7 +8,7 @@
   var MAX_TEXT = 4000;
   var SUBJECT_NAME = {
     math: '数学', chinese: '语文', science: '科学',
-    morality: '道德与法治', history: '历史', geography: '地理', biology: '生物', chemistry: '化学', english: '英语', physics: '物理'
+    morality: '道德与法治', history: '历史', geography: '地理', biology: '生物', chemistry: '化学', english: '英语', physics: '物理', politics: '思想政治'
   };
 
   function read(k, fallback) {

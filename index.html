@@ -7,17 +7,17 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="中小学·高中知识图谱">
 <meta property="og:title" content="中小学·高中知识图谱">
-<meta property="og:description" content="孩子哪块没学扎实，3 分钟测出来：沿先修关系往回找到薄弱根因。覆盖数学、语文、英语等十个学科，小学到高中，免费自测。">
+<meta property="og:description" content="孩子哪块没学扎实，3 分钟测出来：沿先修关系往回找到薄弱根因。覆盖数学、语文、英语等十一个学科，小学到高中，免费自测。">
 <meta property="og:url" content="https://math.pansgo.com/">
 <meta property="og:image" content="https://math.pansgo.com/assets/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="中小学·高中知识图谱">
-<meta name="twitter:description" content="孩子哪块没学扎实，3 分钟测出来：沿先修关系往回找到薄弱根因。覆盖数学、语文、英语等十个学科，小学到高中，免费自测。">
+<meta name="twitter:description" content="孩子哪块没学扎实，3 分钟测出来：沿先修关系往回找到薄弱根因。覆盖数学、语文、英语等十一个学科，小学到高中，免费自测。">
 <meta name="twitter:image" content="https://math.pansgo.com/assets/og-cover.jpg">
 
-<meta name="description" content="数学（小学到高中）、语文（小学一至六年级、初中七至九年级、高中必修上册、必修下册、选择性必修上册、中册、下册）、科学（小学一至六年级）、道德与法治（小学一至六年级）、历史（初中七至九年级、高中必修与选择性必修）、地理（初中七至八年级、高中必修与选择性必修）、生物（初中七至八年级、高中必修与选择性必修）、化学（初中九年级、高中必修第一、二册和选择性必修第一、二、三册）、英语（三年级到高中）和物理（初中、高中）的知识图谱。沿先修关系自适应出题，从选中的知识点往回找到薄弱根因。">
+<meta name="description" content="数学（小学到高中）、语文（小学一至六年级、初中七至九年级、高中必修上册、必修下册、选择性必修上册、中册、下册）、科学（小学一至六年级）、道德与法治（小学一至六年级）、历史（初中七至九年级、高中必修与选择性必修）、地理（初中七至八年级、高中必修与选择性必修）、生物（初中七至八年级、高中必修与选择性必修）、化学（初中九年级、高中必修第一、二册和选择性必修第一、二、三册）、英语（三年级到高中）、物理（初中、高中）和思想政治（仅高中，必修四册与选择性必修三册）的知识图谱。沿先修关系自适应出题，从选中的知识点往回找到薄弱根因。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill%3D%22%23dff3ef%22%20stroke%3D%22%230f6e62%22%20stroke-width%3D%221.7%22%20stroke-linejoin%3D%22round%22%20d%3D%22M6.6%204.8H17L27.4%2015.2V25Q27.4%2027.4%2025.2%2027.4H6.6Q4.4%2027.4%204.4%2025.2V7Q4.4%204.8%206.6%204.8Z%22%2F%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M17.7%206.3%2026.1%2014.7H17.7Z%22%2F%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%230f6e62%22%20stroke-width%3D%221.35%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M17.7%206.3V14.7H26.1%22%2F%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%230f6e62%22%20stroke-width%3D%222.15%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M8.3%2024.2H12.4Q14.2%2024.2%2014.2%2022.4V20.2Q14.2%2018.6%2016%2018.6H18.8%22%2F%3E%3Cpath%20fill%3D%22%230f6e62%22%20d%3D%22M18.5%2016.85%2023%2018.6%2018.5%2020.35Z%22%2F%3E%3C%2Fsvg%3E">
 <script>
 (function () {
@@ -53,6 +53,9 @@
   } else if (/^cnk_[A-Za-z0-9]+$/.test(id)) {
     document.documentElement.style.visibility = 'hidden';
     location.replace('explore/?subject=chemistry#' + encodeURIComponent(id));
+  } else if (/^cnz_[A-Za-z0-9]+$/.test(id)) {
+    document.documentElement.style.visibility = 'hidden';
+    location.replace('explore/?subject=politics#' + encodeURIComponent(id));
   }
 })();
 </script>
@@ -87,6 +90,7 @@
       <a class="nav-link subject-link" data-subject="chemistry" href="./?subject=chemistry">化学</a>
       <a class="nav-link subject-link" data-subject="english" href="./?subject=english">英语</a>
       <a class="nav-link subject-link" data-subject="physics" href="./?subject=physics">物理</a>
+      <a class="nav-link subject-link" data-subject="politics" href="./?subject=politics">思想政治</a>
     </div>
     <div class="page-links">
       <a class="nav-link active" href="./" aria-current="page">首页</a>
@@ -153,6 +157,7 @@
       <a class="pill" data-subject="geography" href="./?subject=geography">地理</a>
       <a class="pill" data-subject="morality" href="./?subject=morality">道法</a>
       <a class="pill" data-subject="science" href="./?subject=science">科学</a>
+      <a class="pill" data-subject="politics" href="./?subject=politics">思想政治</a>
     </div>
     <button class="pill-more" id="pill-more" type="button" aria-expanded="false" aria-controls="subject-more">展开</button>
   </nav>
@@ -167,6 +172,7 @@
     <li><strong>地理</strong><span>人教版：初中七至八年级 · 高中必修第一、二册和选择性必修第一、二、三册</span></li>
     <li><strong>道法</strong><span id="cover-morality">统编版：小学与初中 · 只列出已录入册次</span></li>
     <li><strong>科学</strong><span>教科版：小学一至六年级</span></li>
+    <li><strong>思想政治</strong><span>统编版：仅高中。必修1–4 与选择性必修1–3</span></li>
   </ul>
 
   <section class="blind-home" id="blind-home" hidden>

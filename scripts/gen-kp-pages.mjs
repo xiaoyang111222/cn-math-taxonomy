@@ -16,7 +16,7 @@ const OG_IMAGE = ORIGIN + '/assets/og-cover.jpg';
 const SUBJECTS = [
   ['math', '数学'], ['chinese', '语文'], ['science', '科学'], ['morality', '道德与法治'],
   ['history', '历史'], ['geography', '地理'], ['biology', '生物'], ['chemistry', '化学'],
-  ['english', '英语'], ['physics', '物理']
+  ['english', '英语'], ['physics', '物理'], ['politics', '思想政治']
 ];
 const SUBJECT_NAME = Object.fromEntries(SUBJECTS);
 const NUM_ZH = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九'];

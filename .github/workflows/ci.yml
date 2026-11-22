@@ -104,5 +104,8 @@ jobs:
       - name: 高中语文五册
         run: node tests/test_zh_hs.js
 
+      - name: 高中思想政治七册
+        run: node tests/test_pol_hs.js
+
       - name: 初中语文重建保留高中跨段边
         run: python3 tests/test_zhj_keep_hs.py

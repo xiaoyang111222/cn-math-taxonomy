@@ -12,11 +12,11 @@
 
   var SUBJECTS = [
     ['math', '数学'], ['chinese', '语文'], ['english', '英语'], ['physics', '物理'], ['chemistry', '化学'],
-    ['biology', '生物'], ['history', '历史'], ['geography', '地理'], ['morality', '道德与法治'], ['science', '科学']
+    ['biology', '生物'], ['history', '历史'], ['geography', '地理'], ['morality', '道德与法治'], ['science', '科学'], ['politics', '思想政治']
   ];
   var PREFIX = {
     cne_: 'english', cnp_: 'physics', cnc_: 'chinese', cns_: 'science', cnd_: 'morality',
-    cnh_: 'history', cng_: 'geography', cnb_: 'biology', cnk_: 'chemistry'
+    cnh_: 'history', cng_: 'geography', cnb_: 'biology', cnk_: 'chemistry', cnz_: 'politics'
   };
   var SEMESTER_ORDER = { '上': 0, '下': 1, '全': 2 };
   var CN = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
@@ -27,6 +27,7 @@
     history: { 10: '必修一', 11: '必修二', 12: '选必一', 13: '选必二', 14: '选必三' },
     geography: { 10: '必修一', 11: '必修二', 12: '选必一', 13: '选必二', 14: '选必三' },
     biology: { 10: '必修一', 11: '必修二', 12: '选必一', 13: '选必二', 14: '选必三' },
+    politics: { 10: '必修一', 11: '必修二', 12: '必修三', 13: '必修四', 14: '选必一', 15: '选必二', 16: '选必三' },
     math: { 10: '高一', 11: '高二', 12: '选必一', 13: '选必二', 14: '选必三' }
   };
 

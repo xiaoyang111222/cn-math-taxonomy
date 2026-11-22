@@ -4,10 +4,10 @@
   'use strict';
   var raw = location.hash.replace(/^#/, '');
   try { raw = decodeURIComponent(raw); } catch (e) { /* 保持原样 */ }
-  if (/^(?:cnm|cne|cnp|cnc|cns|cnd|cnh|cng|cnb|cnk)_[A-Za-z0-9]+$/.test(raw)) return;
+  if (/^(?:cnm|cne|cnp|cnc|cns|cnd|cnh|cng|cnb|cnk|cnz)_[A-Za-z0-9]+$/.test(raw)) return;
 
   var CN = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
-  var SUBJECT_KEYS = ['math', 'english', 'physics', 'chinese', 'science', 'morality', 'history', 'geography', 'biology', 'chemistry'];
+  var SUBJECT_KEYS = ['math', 'english', 'physics', 'chinese', 'science', 'morality', 'history', 'geography', 'biology', 'chemistry', 'politics'];
   var subjectParam = new URLSearchParams(location.search).get('subject');
   var subject = SUBJECT_KEYS.indexOf(subjectParam) >= 0 ? subjectParam : 'math';
   /* 非数学学科：页面标题、眉标、演示入口（年级用 diagnose 的册次写法）。数学是默认页，沿用 index.html 里的静态内容。 */
@@ -20,7 +20,8 @@
     history: { name: '历史', demo: '七上', demoText: '看演示：七年级上册历史' },
     geography: { name: '地理', demo: '七上', demoText: '看演示：七年级上册地理' },
     biology: { name: '生物', demo: '七上', demoText: '看演示：七年级上册生物' },
-    chemistry: { name: '化学', demo: '九上', demoText: '看演示：九年级上册化学' }
+    chemistry: { name: '化学', demo: '九上', demoText: '看演示：九年级上册化学' },
+    politics: { name: '思想政治', demo: '必修一', demoText: '看演示：必修一 中国特色社会主义' }
   };
 
   function $(id) { return document.getElementById(id); }
@@ -189,7 +190,7 @@
   }
 
   var homeLoadToken = subject;
-  var PREFIX_SUBJECT = { cnm_: 'math', cne_: 'english', cnp_: 'physics', cnc_: 'chinese', cns_: 'science', cnd_: 'morality', cnh_: 'history', cng_: 'geography', cnb_: 'biology', cnk_: 'chemistry' };
+  var PREFIX_SUBJECT = { cnm_: 'math', cne_: 'english', cnp_: 'physics', cnc_: 'chinese', cns_: 'science', cnd_: 'morality', cnh_: 'history', cng_: 'geography', cnb_: 'biology', cnk_: 'chemistry', cnz_: 'politics' };
   function subjectOfId(id) {
     return PREFIX_SUBJECT[String(id || '').slice(0, 4)] || 'math';
   }
@@ -232,6 +233,7 @@
     var wantGeography = subject === 'geography';
     var wantBiology = subject === 'biology';
     var wantChemistry = subject === 'chemistry';
+    var wantPolitics = subject === 'politics';
     topics = topics.filter(function (topic) { return (topic.subject || subjectOfId(topic.id)) === subject; });
 
     var grades = $('grades');
@@ -257,8 +259,8 @@
       link.append(stage, name, count, split);
       grades.append(link);
     }
-    var from = wantPhysics ? 8 : (wantEnglish ? 3 : (wantChemistry ? 9 : (wantHistory || wantGeography || wantBiology ? 7 : 1)));
-    var to = wantPrimary ? 6 : (wantChemistry ? 9 : (wantGeography || wantBiology ? 8 : 9));
+    var from = wantPolitics ? 10 : (wantPhysics ? 8 : (wantEnglish ? 3 : (wantChemistry ? 9 : (wantHistory || wantGeography || wantBiology ? 7 : 1))));
+    var to = wantPolitics ? 9 : (wantPrimary ? 6 : (wantChemistry ? 9 : (wantGeography || wantBiology ? 8 : 9)));
     for (var g = from; g <= to; g++) {
       var list = topics.filter(function (topic) { return topic.grade === g; });
       var up = list.filter(function (topic) { return topic.semester === '上'; }).length;
@@ -295,6 +297,17 @@
       [10, 11, 12, 13, 14].forEach(function (g) {
         if (topics.some(function (topic) { return topic.grade === g; })) {
           addCard(g, srName, srWord[g], 'is-senior', srTitle[g], 'explore/?subject=' + subject + '&grade=' + g);
+        }
+      });
+    } else if (wantPolitics) {
+      var polWord = { 10: '必修一', 11: '必修二', 12: '必修三', 13: '必修四', 14: '选必一', 15: '选必二', 16: '选必三' };
+      var polTitle = {
+        10: '中国特色社会主义', 11: '经济与社会', 12: '政治与法治', 13: '哲学与文化',
+        14: '当代国际政治与经济', 15: '法律与生活', 16: '逻辑与思维'
+      };
+      [10, 11, 12, 13, 14, 15, 16].forEach(function (g) {
+        if (topics.some(function (topic) { return topic.grade === g; })) {
+          addCard(g, '高中思想政治', polWord[g], 'is-senior', polTitle[g], 'explore/?subject=politics&grade=' + g);
         }
       });
     } else if (wantChemistry) {

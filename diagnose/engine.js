@@ -592,6 +592,9 @@
     // 高中历史按「单元」编排：「必修一 第一单元 单元名 第1课」。
     const unit = /^(必修[一二三]|选必[一二三]) (第\S+单元) (\S+?)(?: (\S+))?$/.exec(s);
     if (unit) return { volume: unit[1], chapterNo: unit[2], chapterName: unit[3], section: unit[4] || '' };
+    // 高中思想政治按「课」编排，有必修四：「必修一 第一课 课名」。
+    const lesson = /^(必修[一二三四]|选必[一二三]) (第\S+课) (\S+?)(?: (\S+))?$/.exec(s);
+    if (lesson) return { volume: lesson[1], chapterNo: lesson[2], chapterName: lesson[3], section: lesson[4] || '' };
     // 高中语文五册：必修上 第一单元 第1课，或 必修上 古诗词诵读 静女。不要套到化学、历史的「必修一」。
     const zhBook = /^(必修[上下]|选必[上中下]) (第[一二三四五六七八]单元|古诗词诵读) (\S+)$/.exec(s);
     if (zhBook) return { volume: zhBook[1], chapterNo: zhBook[2], chapterName: zhBook[3], section: '' };
@@ -617,10 +620,10 @@
     return { volume: '', chapterNo: '', chapterName: s, section: '' };
   }
 
-  /** 学科：显式 subject 优先，否则 cne_ 是英语、cnp_ 是物理、cnc_ 是语文、cns_ 是科学、cnd_ 是道德与法治、cnh_ 是历史、cng_ 是地理、cnb_ 是生物、cnk_ 是化学，其余算数学。 */
+  /** 学科：显式 subject 优先，否则 cne_ 是英语、cnp_ 是物理、cnc_ 是语文、cns_ 是科学、cnd_ 是道德与法治、cnh_ 是历史、cng_ 是地理、cnb_ 是生物、cnk_ 是化学、cnz_ 是思想政治，其余算数学。 */
   function subjectOf(topic) {
     if (!topic) return 'math';
-    if (topic.subject === 'english' || topic.subject === 'math' || topic.subject === 'physics' || topic.subject === 'chinese' || topic.subject === 'science' || topic.subject === 'morality' || topic.subject === 'history' || topic.subject === 'geography' || topic.subject === 'biology' || topic.subject === 'chemistry') return topic.subject;
+    if (topic.subject === 'english' || topic.subject === 'math' || topic.subject === 'physics' || topic.subject === 'chinese' || topic.subject === 'science' || topic.subject === 'morality' || topic.subject === 'history' || topic.subject === 'geography' || topic.subject === 'biology' || topic.subject === 'chemistry' || topic.subject === 'politics') return topic.subject;
     if (String(topic.id || '').indexOf('cne_') === 0) return 'english';
     if (String(topic.id || '').indexOf('cnp_') === 0) return 'physics';
     if (String(topic.id || '').indexOf('cnc_') === 0) return 'chinese';
@@ -630,6 +633,7 @@
     if (String(topic.id || '').indexOf('cng_') === 0) return 'geography';
     if (String(topic.id || '').indexOf('cnb_') === 0) return 'biology';
     if (String(topic.id || '').indexOf('cnk_') === 0) return 'chemistry';
+    if (String(topic.id || '').indexOf('cnz_') === 0) return 'politics';
     return 'math';
   }
 
@@ -662,6 +666,8 @@
       '必修第二册': ['必修二', '必修二（必修第二册）'],
       '必修三': ['必修三', '必修三（必修第三册）'],
       '必修第三册': ['必修三', '必修三（必修第三册）'],
+      '必修四': ['必修四', '必修四（必修第四册）'],
+      '必修第四册': ['必修四', '必修四（必修第四册）'],
       '选必四': ['选必四', '选必四（选择性必修第四册）'],
       '选择性必修第四册': ['选必四', '选必四（选择性必修第四册）'],
       '必修上': ['必修上', '必修上'],

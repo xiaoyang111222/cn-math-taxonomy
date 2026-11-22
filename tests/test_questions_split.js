@@ -8,8 +8,8 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
 const readJson = (p) => JSON.parse(read(p));
-const SUBJECTS = ['math', 'chinese', 'english', 'physics', 'chemistry', 'biology', 'history', 'geography', 'morality', 'science'];
-const PREFIX = { cnm_: 'math', cne_: 'english', cnp_: 'physics', cnc_: 'chinese', cns_: 'science', cnd_: 'morality', cnh_: 'history', cng_: 'geography', cnb_: 'biology', cnk_: 'chemistry' };
+const SUBJECTS = ['math', 'chinese', 'english', 'physics', 'chemistry', 'biology', 'history', 'geography', 'morality', 'science', 'politics'];
+const PREFIX = { cnm_: 'math', cne_: 'english', cnp_: 'physics', cnc_: 'chinese', cns_: 'science', cnd_: 'morality', cnh_: 'history', cng_: 'geography', cnb_: 'biology', cnk_: 'chemistry', cnz_: 'politics' };
 let passed = 0;
 
 function test(name, fn) {
@@ -29,7 +29,7 @@ topics.forEach((t) => {
 const parts = {};
 SUBJECTS.forEach((s) => { parts[s] = readJson('data/questions/' + s + '.json'); });
 
-test('恰好 10 个学科文件加 index.json', () => {
+test('恰好 11 个学科文件加 index.json', () => {
   const names = fs.readdirSync(path.join(ROOT, 'data/questions')).sort();
   assert.deepStrictEqual(names, SUBJECTS.map((s) => s + '.json').concat(['index.json']).sort());
 });
@@ -82,8 +82,8 @@ test('诊断页和图谱页按当前学科取文件', () => {
   assert.ok(read('explore/app.js').includes("'../data/questions/' + subject + '.json'"));
 });
 
-test('sw 版本已升到 v36', () => {
-  assert.ok(/var VERSION = 'v36';/.test(read('sw.js')));
+test('sw 版本已升到 v37', () => {
+  assert.ok(/var VERSION = 'v37';/.test(read('sw.js')));
 });
 
 console.log(passed + ' passed');

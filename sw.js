@@ -3,7 +3,7 @@
  * 改了 SHELL 或 DATA 列表、或数据结构变了，就把 VERSION 加一。 */
 'use strict';
 
-var VERSION = 'v36';
+var VERSION = 'v37';
 var CACHE = 'cnm-pwa-' + VERSION;
 var SCOPE = self.registration.scope;
 
@@ -63,7 +63,7 @@ var DATA = [
   'data/questions/math.json',
   'data/id-aliases.json'
 ];
-/* 题库按学科分文件（data/questions/<学科>.json）：安装时只预缓存索引和默认学科数学，
+/* 题库按学科分文件（data/questions/<学科>.json，含思想政治 politics.json）：安装时只预缓存索引和默认学科数学，
  * 其余学科第一次进入时由下面的 .json 规则（先用缓存、后台更新）缓存，之后可离线。
  * 旧的整包 data/questions.json 不再预缓存、不再有页面请求它。 */
 

@@ -21,21 +21,28 @@ function storage() {
   return { getItem: k => (m.has(k) ? m.get(k) : null), setItem: (k, v) => m.set(k, v), removeItem: k => m.delete(k), m };
 }
 
-test('每个学科每个年级：21–28 个点、前 6 天各 3–5 个、第 7 天为空、不重复', () => {
+test('每个学科每个年级：有足够知识点时 21–28 个点、前 6 天各 3–5 个、第 7 天为空、不重复', () => {
   const seen = new Set();
   topics.filter(t => !t.external).forEach(t => seen.add(F.subjectOf(t) + '|' + t.grade));
   assert.ok(seen.size > 50);
   seen.forEach(k => {
     const [subject, grade] = k.split('|');
-    const plan = build({ subject, grade: Number(grade) });
+    const g = Number(grade);
+    /* 补齐只向本年级和更低年级取。某册不足 21 且前面没有同学科点时，计划就是这一册的全部。 */
+    const pool = topics.filter(t => !t.external && F.subjectOf(t) === subject && t.grade <= g).length;
+    const plan = build({ subject, grade: g });
     const ids = flat(plan);
-    assert.ok(ids.length >= 21 && ids.length <= 28, k + ' 共 ' + ids.length);
+    const lo = Math.min(21, pool);
+    assert.ok(ids.length >= lo && ids.length <= 28, k + ' 共 ' + ids.length + '，可用 ' + pool);
     assert.equal(plan.days.length, 7);
     assert.equal(plan.days[6].length, 0);
-    plan.days.slice(0, 6).forEach((d, i) => assert.ok(d.length >= 3 && d.length <= 5, k + ' 第 ' + (i + 1) + ' 天 ' + d.length));
+    if (ids.length >= 18) {
+      plan.days.slice(0, 6).forEach((d, i) => assert.ok(d.length >= 3 && d.length <= 5, k + ' 第 ' + (i + 1) + ' 天 ' + d.length));
+    }
     assert.equal(new Set(ids).size, ids.length, k + ' 有重复');
     ids.forEach(id => {
       assert.ok(byId[id] && !byId[id].external && F.subjectOf(byId[id]) === subject, k + ' ' + id);
+      assert.ok(byId[id].grade <= g, k + ' ' + id + ' 年级更高');
     });
   });
 });

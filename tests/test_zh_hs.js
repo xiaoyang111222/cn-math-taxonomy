@@ -137,8 +137,9 @@ test('初中小学与地理生物历史高中点数不变', () => {
   assert.strictEqual(topics.filter((t) => String(t.id).startsWith('cng_h')).length, 119);
   assert.strictEqual(topics.filter((t) => String(t.id).startsWith('cnb_h')).length, 135);
   assert.strictEqual(topics.filter((t) => String(t.id).startsWith('cnh_h')).length, 120);
-  assert.strictEqual(topics.length, 4068);
-  assert.strictEqual(questions.length, 16419);
+  assert.strictEqual(topics.filter((t) => String(t.id).startsWith('cnz_h')).length, 153);
+  assert.strictEqual(topics.length, 4221);
+  assert.strictEqual(questions.length, 17031);
 });
 
 test('界面册次不用高一或必修一', () => {

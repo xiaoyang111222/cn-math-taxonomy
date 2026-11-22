@@ -161,6 +161,17 @@ body.subject-chemistry {
   --logo-fold: #ffffff;
 }
 
+body.subject-politics {
+  --brand: #3730a3;
+  --brand-strong: #312e81;
+  --brand-soft: #eef2ff;
+  --on-brand: #ffffff;
+  --focus: #3730a3;
+  --accent: #3730a3;
+  --logo-sheet: #e0e7ff;
+  --logo-fold: #ffffff;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -308,6 +319,16 @@ body.subject-chemistry {
     --accent: #ff8a65;
     --logo-sheet: #7a2614;
     --logo-fold: #de3b16;
+  }
+  body.subject-politics {
+    --brand: #a5b4fc;
+    --brand-strong: #c7d2fe;
+    --brand-soft: #1e1b4b;
+    --on-brand: #1e1b4b;
+    --focus: #c7d2fe;
+    --accent: #a5b4fc;
+    --logo-sheet: #312e81;
+    --logo-fold: #3730a3;
   }
 }
 
