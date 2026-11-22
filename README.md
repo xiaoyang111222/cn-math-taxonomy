@@ -122,6 +122,7 @@ data/id-aliases.json               旧 id cnm_ext_001…018 → 小学正式知�
 data/mappings/             教材版本对照表（可选，沪教、苏教等；现只有一个占位示例 hujiao_math.example.json），说明见 docs/edition-mappings.md
 docs/standards-mapping.md          课标对齐说明：来源、映射规则、覆盖率、未映射清单、局限
 data/questions.json      题库：数学 3627 题 + 英语 3164 题（小学 1100 + 初中 1028 + 高中 1036）+ 物理 1076 题（初中 368 + 高中 708）+ 语文 3304 题（小学 1972 + 初中 756 + 高中 576）+ 历史 536 题 + 地理 236 题 + 生物 264 题等；另有科学、道德与法治，以文件为准
+data/questions/          题库的按学科拆分版（<学科>.json ×10 + index.json 各科题数），前端只读这里；由 scripts/split_questions.py 从 questions.json 生成，改题后必须重跑（tests/test_questions_split.js 会核对）
 data/_qbatches/primary_g1.json … primary_g6.json、high.json、high_sel.json   生成批次（保留，便于对照；不部署）
 data/verification_report.json  题库答案核验报告（自动核验 + 独立第二遍复核）
 data/second_pass_log.json      第二遍复核的裁决与修正记录；data/_second_pass/ 是解题者的原始答案和推导

@@ -336,13 +336,13 @@
     setText('n-questions', '…');
     setText('n-standards', String(items.length));
 
-    /* 题库较大，单独加载，不挡统计和年级入口；失败只把题目数显示成 — */
+    /* 题数取自题库索引（几百字节），不拉任何题目文件；失败只把题目数显示成 — */
     var qToken = homeLoadToken;
-    fetchJsonWithRetry('data/questions.json', 2).then(function (questions) {
+    fetchJsonWithRetry('data/questions/index.json', 2).then(function (index) {
       if (qToken !== subject) return;
-      if (!Array.isArray(questions)) throw new Error('数据格式无法识别');
-      var count = questions.filter(function (question) { return subjectOfId(question.topicId) === subject; }).length;
-      setText('n-questions', String(count));
+      var row = index && index.subjects && index.subjects[subject];
+      if (!row || typeof row.count !== 'number') throw new Error('数据格式无法识别');
+      setText('n-questions', String(row.count));
     }).catch(function () {
       if (qToken !== subject) return;
       setText('n-questions', '—');

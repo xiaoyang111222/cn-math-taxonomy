@@ -4,6 +4,10 @@
 
 下面「统计」「核验方法」里标成第五轮的数字只计当时的 1407 道初中题。全库和小学见文末「小学题（2026-10-19）」。
 
+## 拆分版（2026-11-22）
+
+`data/questions.json` 仍是源数据（各 `*_build.py` 写它）。前端不再读整包，改读 `data/questions/<学科>.json`（学科代码同 `?subject=`：math chinese english physics chemistry biology history geography morality science）和只含各科题数的 `data/questions/index.json`。改过 `questions.json` 后运行 `python3 scripts/split_questions.py` 重新生成；`--check` 只核对不写。归属按题目 `topicId` 对应知识点的学科，拆分前后总数与题 id 逐一对账。
+
 ## 格式
 
 `data/questions.json` 是一个 JSON 数组，每题一个对象：

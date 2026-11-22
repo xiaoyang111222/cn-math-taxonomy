@@ -333,10 +333,10 @@
     const rs = await Promise.all(urls.map(function (u) { return fetch(u); }));
     rs.forEach(function (r, i) { if (!r.ok) throw new Error(urls[i] + ' → HTTP ' + r.status); });
     const js = await Promise.all(rs.map(function (r) { return r.json(); }));
-    // 题库可选：缺失（404）或损坏时回退到 topics.json 的 diagnostic_question
+    // 题库按学科分文件，只拉当前学科；缺失（404）或损坏时回退到 topics.json 的 diagnostic_question
     let questions = null;
     try {
-      const qr = await fetch('../data/questions.json');
+      const qr = await fetch('../data/questions/' + subject + '.json');
       if (qr.ok) questions = await qr.json();
     } catch (e) { questions = null; }
     const topics = js[0].filter(function (t) { return E.subjectOf(t) === subject; });

@@ -40,10 +40,11 @@ const topics = [
 ];
 const deps = [{ topicId: 'cnm_b', prerequisiteId: 'cnm_a' }];
 const standards = { items: [{ id: 'cms-1' }, { id: 'ces-1' }, { id: 'cps-1' }] };
-const questions = [
-  { topicId: 'cnm_a' }, { topicId: 'cnm_b' }, { topicId: 'cnm_a' },
-  { topicId: 'cne_a' }, { topicId: 'cnp_a' }
-];
+const qIndex = {
+  total: 5,
+  subjects: { math: { file: 'math.json', count: 3 }, english: { file: 'english.json', count: 1 }, physics: { file: 'physics.json', count: 1 } }
+};
+const INDEX_URL = 'data/questions/index.json';
 
 function load(search, topicRows) {
   const ids = {};
@@ -94,46 +95,55 @@ function load(search, topicRows) {
 }
 
 (async () => {
-  await test('元数据到后可渲染，题库先显示 …', async () => {
+  await test('元数据到后可渲染，题数先显示 …', async () => {
     const { ids, baseMeta, respond } = load('');
     await baseMeta();
     assert.strictEqual(ids['n-topics'].textContent, '2');
     assert.strictEqual(ids['n-questions'].textContent, '…');
     assert.ok(ids.grades.children.length > 0, 'grade cards rendered');
-    respond('data/questions.json', questions);
+    respond(INDEX_URL, qIndex);
     await flush();
     assert.strictEqual(ids['n-questions'].textContent, '3');
   });
 
-  await test('题库 404 显示 — 且不整页 fail', async () => {
+  await test('题库索引 404 显示 — 且不整页 fail', async () => {
     const { ids, baseMeta, respond } = load('');
     await baseMeta();
-    respond('data/questions.json', null, 404);
+    respond(INDEX_URL, null, 404);
     await flush();
     assert.strictEqual(ids['n-questions'].textContent, '—');
     assert.strictEqual(ids['load-error'].hidden, true);
   });
 
-  await test('题库非数组显示 —', async () => {
+  await test('题库索引格式不对显示 —', async () => {
     const { ids, baseMeta, respond } = load('');
     await baseMeta();
-    respond('data/questions.json', { nope: true });
+    respond(INDEX_URL, { subjects: { math: {} } });
     await flush();
     assert.strictEqual(ids['n-questions'].textContent, '—');
   });
 
-  await test('题库网络错误会重试至多 2 次', async () => {
+  await test('题库索引网络错误会重试至多 2 次', async () => {
     const { ids, all, baseMeta, failNet, respond } = load('');
     await baseMeta();
-    assert.strictEqual(all('data/questions.json').length, 1);
-    failNet('data/questions.json');
+    assert.strictEqual(all(INDEX_URL).length, 1);
+    failNet(INDEX_URL);
     await flush();
-    assert.ok(all('data/questions.json').length >= 2, 'retried');
+    assert.ok(all(INDEX_URL).length >= 2, 'retried');
     // second attempt succeeds
-    const second = all('data/questions.json')[1];
-    second.resolve({ ok: true, status: 200, json: () => Promise.resolve(questions) });
+    const second = all(INDEX_URL)[1];
+    second.resolve({ ok: true, status: 200, json: () => Promise.resolve(qIndex) });
     await flush();
     assert.strictEqual(ids['n-questions'].textContent, '3');
+  });
+
+  await test('首页不拉任何题目文件', async () => {
+    const { calls, baseMeta, respond } = load('');
+    await baseMeta();
+    respond(INDEX_URL, qIndex);
+    await flush();
+    const bad = calls.filter(c => /questions\.json$/.test(c.url) || (/data\/questions\//.test(c.url) && c.url !== INDEX_URL));
+    assert.deepStrictEqual(bad.map(c => c.url), []);
   });
 
   await test('进行中 Promise 去重', async () => {
@@ -165,7 +175,7 @@ function load(search, topicRows) {
   await test('英语学科计数过滤', async () => {
     const { ids, baseMeta, respond } = load('?subject=english');
     await baseMeta();
-    respond('data/questions.json', questions);
+    respond(INDEX_URL, qIndex);
     await flush();
     assert.strictEqual(ids['n-topics'].textContent, '1');
     assert.strictEqual(ids['n-questions'].textContent, '1');

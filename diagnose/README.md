@@ -13,7 +13,7 @@ python3 -m http.server 8000
 # 浏览器打开 http://localhost:8000/diagnose/
 ```
 
-页面用 `fetch('../data/*.json')` 读数据（含 `questions.json` 题库；缺失时自动回退到 `topics.json` 里每个知识点的 `diagnostic_question`），不能直接用 `file://` 打开。全站顶部导航都能进来：首页是根目录的 `index.html`，知识图谱在 `../explore/`。样式与首页、图谱共用 `../assets/site.css`，本目录的 `style.css` 只写诊断页自己的布局。
+页面用 `fetch('../data/*.json')` 读数据（含按学科拆分的题库 `data/questions/<学科>.json`，只读当前学科；缺失时自动回退到 `topics.json` 里每个知识点的 `diagnostic_question`），不能直接用 `file://` 打开。全站顶部导航都能进来：首页是根目录的 `index.html`，知识图谱在 `../explore/`。样式与首页、图谱共用 `../assets/site.css`，本目录的 `style.css` 只写诊断页自己的布局。
 
 ### URL 参数（演示 / 截图 / 分享入口）
 

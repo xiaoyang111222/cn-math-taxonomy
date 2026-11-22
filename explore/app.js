@@ -1389,7 +1389,7 @@
   async function loadQuestions() {
     questionsByTopic = new Map();
     try {
-      var response = await fetch('../data/questions.json');
+      var response = await fetch('../data/questions/' + subject + '.json');
       if (!response.ok) return;
       var rows = await response.json();
       if (!Array.isArray(rows)) return;

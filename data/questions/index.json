@@ -1,0 +1,45 @@
+{
+  "total": 16419,
+  "subjects": {
+    "math": {
+      "file": "math.json",
+      "count": 3627
+    },
+    "chinese": {
+      "file": "chinese.json",
+      "count": 3308
+    },
+    "english": {
+      "file": "english.json",
+      "count": 3164
+    },
+    "physics": {
+      "file": "physics.json",
+      "count": 1076
+    },
+    "chemistry": {
+      "file": "chemistry.json",
+      "count": 588
+    },
+    "biology": {
+      "file": "biology.json",
+      "count": 804
+    },
+    "history": {
+      "file": "history.json",
+      "count": 1016
+    },
+    "geography": {
+      "file": "geography.json",
+      "count": 712
+    },
+    "morality": {
+      "file": "morality.json",
+      "count": 1076
+    },
+    "science": {
+      "file": "science.json",
+      "count": 1048
+    }
+  }
+}

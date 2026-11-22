@@ -1,5 +1,12 @@
 # 变更日志
 
+## 2026-11-22（题库按学科拆分）
+
+- `data/questions.json`（12.5 MB，16,419 题）按学科拆成 `data/questions/<学科>.json` ×10 和 `index.json`（各科题数），由新增的 `scripts/split_questions.py` 生成并对账（总数、题 id 不丢不重、按知识点归属）。`questions.json` 保留为源数据，各 `*_build.py` 不变。
+- 诊断页、知识图谱只拉当前学科的文件；首页只读 `index.json` 取题数，不再拉任何题目。
+- Service Worker 缓存版本 v34 → v35：安装时预缓存 `index.json` 和 `math.json`，其余学科首次进入时缓存。`deploy-cf.sh` 打包拆分目录；整包 `questions.json` 作为过渡期兼容副本仍随站点发布，但页面和 sw 都不再使用。
+- 新增 `tests/test_questions_split.js`，加入 CI 与 `npm test`。
+
 ## 2026-11-22（Phase 1：账号与云同步地基，免费灰度）
 
 - 新增 `api/`：Cloudflare Worker（`worker.js`）+ D1 表结构（`schema.sql`）+ `wrangler.toml`（name=math-pansgo-api，D1 binding DB）。只写代码和本地测试，未部署。接口：`POST /auth/request-code`（6 位验证码，10 分钟有效；同邮箱 60 秒冷却、每小时 5 次，同 IP 每小时 20 次；已注册与否响应一致）、`POST /auth/verify`（最多试 5 次，成功即作废；新用户记录服务邮件 / 营销邮件两类同意；发 30 天会话令牌）、`POST /auth/logout`、`GET /auth/me`、`GET /sync`、`PUT /sync/:dataset`（`base_updated_at` 不符返回 409 和云端现状）。验证码与会话令牌只存 SHA-256 哈希；CORS 白名单在 `ALLOWED_ORIGINS` 里配置，支持 `https://*.xxx.pages.dev`。发信走 `sendMail()` 抽象（Resend，`RESEND_API_KEY` 为 Worker secret）；`MAIL_DRY_RUN=1` 只写日志，仅调试用，生产必须是 `"0"`。
