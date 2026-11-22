@@ -3,7 +3,7 @@
  *   GET /sync                PUT /sync/:dataset
  * 会话令牌走 Authorization: Bearer，只存 SHA-256 哈希；验证码只存哈希，日志不打明文（MAIL_DRY_RUN 除外）。 */
 import {
-  DEFAULT_ALLOWED_ORIGINS, OTP_TTL_MS, SESSION_TTL_MS, HOUR_MS,
+  DEFAULT_ALLOWED_ORIGINS, OTP_TTL_MS, SESSION_TTL_MS, SESSION_RENEW_BELOW_MS, HOUR_MS,
   isDataset, normalizeEmail, generateOtp, hashOtp, timingSafeEqual, otpUsable, rateLimit,
   generateToken, hashToken, parseBearer, originAllowed, validatePayload, parseBase
 } from './lib.js';
@@ -50,7 +50,12 @@ async function authenticate(request, env, now) {
     await env.DB.prepare('DELETE FROM sessions WHERE token_hash = ?').bind(tokenHash).run();
     return null;
   }
-  return { tokenHash, userId: row.user_id, email: row.email, expiresAt: row.expires_at, mailConsent: row.mail_consent, mktConsent: row.mkt_consent };
+  let expiresAt = row.expires_at;
+  if (expiresAt - now < SESSION_RENEW_BELOW_MS) {
+    expiresAt = now + SESSION_TTL_MS;
+    await env.DB.prepare('UPDATE sessions SET expires_at = ? WHERE token_hash = ?').bind(expiresAt, tokenHash).run();
+  }
+  return { tokenHash, userId: row.user_id, email: row.email, expiresAt, mailConsent: row.mail_consent, mktConsent: row.mkt_consent };
 }
 
 async function requestCode(request, env, deps, now) {
@@ -174,6 +179,7 @@ export function createHandler(overrides) {
       headers['Access-Control-Allow-Headers'] = 'Authorization, Content-Type';
       headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, OPTIONS';
       headers['Access-Control-Max-Age'] = '86400';
+      headers['Access-Control-Expose-Headers'] = 'X-Session-Expires';
     }
     const done = (res) => {
       Object.keys(headers).forEach((k) => res.headers.set(k, headers[k]));
@@ -196,6 +202,7 @@ export function createHandler(overrides) {
       if (!isAuthRoute) return done(fail(404, 'not_found'));
       const session = await authenticate(request, env, now);
       if (!session) return done(fail(401, 'unauthorized', '请先登录。'));
+      headers['X-Session-Expires'] = String(session.expiresAt);
 
       if (path === '/auth/me' && method === 'GET') {
         return done(json({ email: session.email, expires_at: session.expiresAt, mail_consent: !!session.mailConsent, mkt_consent: !!session.mktConsent }));

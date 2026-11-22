@@ -8,6 +8,7 @@ export const EMAIL_HOURLY_LIMIT = 5;
 export const IP_HOURLY_LIMIT = 20;
 export const HOUR_MS = 60 * 60 * 1000;
 export const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+export const SESSION_RENEW_BELOW_MS = 15 * 24 * 60 * 60 * 1000;
 export const MAX_PAYLOAD_CHARS = 1000000;
 export const DEFAULT_MAIL_FROM = '知识图谱 <noreply@math.pansgo.com>';
 export const DEFAULT_ALLOWED_ORIGINS = 'https://math.pansgo.com';

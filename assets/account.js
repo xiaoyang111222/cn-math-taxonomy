@@ -42,6 +42,12 @@
       if (init.body.length < 60000) init.keepalive = true;
     }
     return fetch(apiBase() + path, init).then(function (res) {
+      /* 服务端滚动续期：会话被顺延后，本机记的过期时间跟着更新，否则 30 天后本机会误判已过期。 */
+      var ext = Number(res.headers && res.headers.get && res.headers.get('X-Session-Expires'));
+      var cur = readSession();
+      if (ext && cur && cur.token === (s && s.token) && ext > cur.exp) {
+        lsSet(SESSION_KEY, JSON.stringify({ token: cur.token, email: cur.email, exp: ext }));
+      }
       return res.json().catch(function () { return null; }).then(function (data) { return { status: res.status, data: data }; });
     });
   }

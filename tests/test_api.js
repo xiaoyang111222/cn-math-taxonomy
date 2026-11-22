@@ -370,6 +370,36 @@ worldTest('会话：/auth/me 与 /sync 必须带有效令牌；退出后失效�
   assert.strictEqual((await w.call('GET', '/auth/me', undefined, { token: t2 })).status, 401);
 });
 
+worldTest('会话滚动续期：剩余不足 15 天顺延到 now+30 天，充足不写库，已过期仍拒绝', async (w) => {
+  const DAY = 24 * 3600 * 1000;
+  const token = await w.login('roll@example.com');
+  const row = () => w.d1.db.prepare('SELECT expires_at FROM sessions').get().expires_at;
+  const created = row();
+
+  w.now += 10 * DAY;
+  const early = await w.call('GET', '/auth/me', undefined, { token });
+  assert.strictEqual(early.status, 200);
+  assert.strictEqual(row(), created);
+  assert.strictEqual(early.data.expires_at, created);
+  assert.strictEqual(early.headers.get('X-Session-Expires'), String(created));
+
+  w.now = created - 14 * DAY;
+  const renewed = await w.call('GET', '/auth/me', undefined, { token });
+  assert.strictEqual(renewed.status, 200);
+  assert.strictEqual(row(), w.now + 30 * DAY);
+  assert.strictEqual(renewed.data.expires_at, w.now + 30 * DAY);
+  assert.strictEqual(renewed.headers.get('X-Session-Expires'), String(w.now + 30 * DAY));
+  const after = row();
+
+  w.now += 1000;
+  assert.strictEqual((await w.call('GET', '/sync', undefined, { token })).status, 200);
+  assert.strictEqual(row(), after);
+
+  w.now = after + 1000;
+  assert.strictEqual((await w.call('GET', '/auth/me', undefined, { token })).status, 401);
+  assert.strictEqual(w.d1.db.prepare('SELECT COUNT(*) AS n FROM sessions').get().n, 0);
+});
+
 worldTest('同步：GET / PUT 乐观并发（base 不符 409 并带云端现状）', async (w) => {
   const token = await w.login('sync@example.com');
   const empty = await w.call('GET', '/sync', undefined, { token });
