@@ -106,14 +106,13 @@ test('先修只连语文，高中点指向更早的点，且无环', () => {
   assert.strictEqual(byId.get('cnc_j013').name.indexOf('论语') >= 0, true);
 });
 
-test('高中课标待核，小学初中不引用它', () => {
+test('高中语文课标已对照课标 PDF，未对应的仍待核，小学初中不引用它', () => {
   const items = standards.items.filter((it) => String(it.id).startsWith('ccs-hs-2017:'));
   assert.strictEqual(items.length, 20);
   items.forEach((it) => {
     assert.strictEqual(it.verbatim, false);
-    assert.strictEqual(it.page_or_ref, '待核');
-    assert.match(it.text_status, /公开转述/);
-    assert.match(it.text_status, /未/);
+    assert.ok(it.page_or_ref === '待核' || /^课标印刷页码 \d+([–、]\d+)*$/.test(it.page_or_ref), it.id + ' ' + it.page_or_ref);
+    assert.match(it.text_status, /2026-11-22/);
   });
   const meta = standards.chinese_senior;
   assert.strictEqual(meta.title, '普通高中语文课程标准（2017年版）');
