@@ -15,6 +15,7 @@ from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from std_check import apply_check  # noqa: E402
 
 import en_topics  # noqa: E402,F401
 from en_lib import (  # noqa: E402
@@ -100,6 +101,7 @@ def build_standards():
             "verbatim": False,
             "text_status": status,
         })
+    apply_check(items)
     return id_of, items
 
 
@@ -288,7 +290,7 @@ def main():
         "note": (
             "2026-11-06 对照人教社电子书印刷页19–21（表9语音、表10词汇、表11语法）。"
             "语音、词汇、语法的 page_or_ref 记这些印刷页，text 仍是转述，verbatim 为 false。"
-            "日常表达和读写的大图未打开，page_or_ref 仍为「待核」。"
+            "日常表达和读写 2026-11-22 已对照表13语用知识与表15–19语言技能表：9 条有对应但库存多出内容（留待裁决），7 条课标无对应、page_or_ref 仍为「待核」。"
             "编号 ces-2022 是本图谱编的，不是教育部原编号。教材册次另见核对文档。"
         ),
     }

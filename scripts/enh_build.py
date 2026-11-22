@@ -15,6 +15,7 @@ from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from std_check import apply_check  # noqa: E402
 
 import en_lib  # noqa: E402
 import en_topics  # noqa: E402,F401
@@ -273,7 +274,7 @@ ENG_NOTE = (
 )
 SENIOR_NOTE = (
     "2026-11-06 对照的是人教社转载的 2020 年修订版 PDF，不是 2025 年日常修订版。"
-    "语音、词汇、语法记了表4–6的印刷页；日常表达和读写仍为待核。"
+    "语音、词汇、语法记了表4–6的印刷页；日常表达和读写 2026-11-22 已对照表8语用知识与表10语言技能表：10 条有对应但库存多出内容（留待裁决），2 条课标无对应、仍为待核。"
     "必修对应课标中的必修，选择性必修对应课标中的选择性必修。"
     "虚拟语气、倒装、强调在表6里属于选修（提高类），库存仍标在选择性必修，text 未改。"
 )
@@ -350,6 +351,7 @@ def build_standards():
             "verbatim": False,
             "text_status": status,
         })
+    apply_check(items)
     return id_of, band_of, items
 
 
