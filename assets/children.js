@@ -77,6 +77,17 @@
     write(KEY, s);
     return { ok: true, child: s.children[i] };
   }
+  /* 学习进度（#56）：{ v: '上'|'下'|'全', term: '2026-上' }，只在同一学期内有效。存在孩子档案里，随档案备份。 */
+  function validProgress(p) {
+    return isObject(p) && ['上', '下', '全'].indexOf(p.v) >= 0 && typeof p.term === 'string' && p.term.length > 0 && p.term.length <= 16;
+  }
+  function setProgress(id, p) {
+    var s = state();
+    var i = s.children.map(function (c) { return c.id; }).indexOf(id);
+    if (i < 0 || !validProgress(p)) return false;
+    s.children[i] = Object.assign({}, s.children[i], { progress: { v: p.v, term: p.term } });
+    return write(KEY, s);
+  }
   function remove(id) {
     var s = state();
     s.children = s.children.filter(function (c) { return c.id !== id; });
@@ -216,6 +227,7 @@
           GRADES.indexOf(c.grade) < 0 || TEXTBOOKS.indexOf(c.textbook) < 0 || !validDate(c.createdAt)) {
         throw new Error('孩子资料不完整、ID 重复，或年级和教材版本不正确。');
       }
+      if (own(c, 'progress') && !validProgress(c.progress)) throw new Error('孩子的学习进度格式不正确。');
       ids.add(c.id);
     });
     if (profiles.current !== null && !ids.has(profiles.current)) throw new Error('当前孩子不在备份档案中。');
@@ -342,7 +354,7 @@
   window.CnmChildren = {
     GRADES: GRADES, TEXTBOOKS: TEXTBOOKS, MAX_CHILDREN: MAX_CHILDREN,
     list: list, get: get, current: current, setCurrent: setCurrent,
-    add: add, update: update, remove: remove,
+    add: add, update: update, remove: remove, setProgress: setProgress,
     recordsOf: recordsOf, saveRecord: saveRecord, hasRecord: hasRecord, moveRecord: moveRecord, removeRecord: removeRecord,
     presentRecord: presentRecord, latestStatus: latestStatus, exportBackup: exportBackup,
     MAX_BACKUP_BYTES: MAX_BACKUP_BYTES, parseBackup: parseBackup, previewImport: previewImport, importBackup: importBackup

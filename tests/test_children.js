@@ -449,4 +449,19 @@ test('化学学科的诊断记录可以备份和恢复', () => {
   assert.ok(stored(storage, RECORD_KEY)['child-b'].some((r) => r.subject === 'chemistry'));
 });
 
+test('学习进度存进孩子档案，随备份导出，格式不对时被拒绝', () => {
+  const { api, storage } = load({ [PROFILE_KEY]: JSON.stringify(profiles) });
+  assert.strictEqual(api.setProgress('child-b', { v: '上', term: '2026-上' }), true);
+  assert.strictEqual(api.setProgress('child-b', { v: '坏值', term: '2026-上' }), false);
+  assert.strictEqual(api.setProgress('nobody', { v: '下', term: '2026-下' }), false);
+  const child = stored(storage, PROFILE_KEY).children.find((c) => c.id === 'child-b');
+  assert.deepStrictEqual(child.progress, { v: '上', term: '2026-上' });
+  assert.ok(!stored(storage, PROFILE_KEY).children.find((c) => c.id === 'child-a').progress);
+  assert.deepStrictEqual(JSON.parse(JSON.stringify(api.update('child-b', { name: '小禾', grade: '五年级', textbook: '沪教版' }).child.progress)), { v: '上', term: '2026-上' });
+  assert.deepStrictEqual(exported(api).profiles.children.find((c) => c.id === 'child-b').progress, { v: '上', term: '2026-上' });
+  const bad = JSON.parse(JSON.stringify(exported(api)));
+  bad.profiles.children[1].progress = { v: 'x', term: 1 };
+  assert.throws(() => api.parseBackup(JSON.stringify(bad)), /学习进度/);
+});
+
 console.log('\n' + passed + ' passed, 0 failed');

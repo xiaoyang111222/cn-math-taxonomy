@@ -239,9 +239,53 @@
     let screenLimit = parseInt(st.screenLimit, 10);
     if (!(screenLimit >= SCREEN_MIN && screenLimit <= SCREEN_MAX)) screenLimit = E.SCREEN_LIMIT;
     const confirm = E.clampConfirm(st.confirm);
-    return { limit: limit, screenLimit: screenLimit, confirm: confirm };
+    return { limit: limit, screenLimit: screenLimit, confirm: confirm, progress: st.progress };
   }
   function setSetting(k, v) { const o = getSettings(); o[k] = v; lsSet(LS_SETTINGS, o); }
+
+  /* ------------------------------------------------------------ 学习进度（#56）
+   * 进度只过滤「被测目标点」候选池（整年级 / 整章 / URL 的 grade、volume、chapter）：上学期不测本年级下册。
+   * 沿先修边回溯不经过这里。单点「选为目标」和 target= 是用户点名要测的，不过滤。 */
+  const PROGRESS_LABEL = { '上': '上学期', '下': '下学期', '全': '已学完全年' };
+  function getProgress() {
+    const now = new Date();
+    const term = E.termKey(now);
+    const cur = CC.current();
+    const saved = cur ? cur.progress : getSettings().progress;
+    const manual = !!(saved && saved.term === term && E.PROGRESS_CHOICES.indexOf(saved.v) >= 0);
+    return { v: manual ? saved.v : E.defaultProgress(now), manual: manual };
+  }
+  function setProgress(v) {
+    const p = { v: v, term: E.termKey(new Date()) };
+    const cur = CC.current();
+    if (cur) CC.setProgress(cur.id, p); else setSetting('progress', p);
+  }
+  function gradeNumOf(sel) { const i = GRADES.indexOf(sel); return i >= 0 ? i + 1 : null; }
+  function childGradeNum() {
+    const c = CC.current();
+    const m = c && /^([一二三四五六七八九])年级$/.exec(c.grade || '');
+    return m ? gradeNumOf(m[1]) : null;
+  }
+  function progressNote(pv, deferred) {
+    return deferred ? '（按' + PROGRESS_LABEL[pv] + '进度，不含还没学的下册 ' + deferred + ' 个点）' : '';
+  }
+  function progressCard() {
+    const p = getProgress();
+    const cur = CC.current();
+    return h('div', { class: 'card', id: 'progress-card' },
+      h('h2', { text: '学习进度' }),
+      h('p', { class: 'muted' }, '孩子这学期学到哪了？选「上学期」时，整年级、整章诊断不会出本年级下册的内容（还没学到，不算不会）；先修知识点照常往前回溯。高中按册（必修 / 选必）不受影响。'),
+      h('div', { class: 'stage-tabs', role: 'tablist', 'aria-label': '学习进度' }, E.PROGRESS_CHOICES.map(function (v) {
+        return h('button', {
+          type: 'button', class: 'stage-tab' + (p.v === v ? ' on' : ''), role: 'tab', 'data-value': v,
+          'aria-selected': p.v === v ? 'true' : 'false',
+          onclick: function () { setProgress(v); renderStart(); }
+        }, PROGRESS_LABEL[v]);
+      })),
+      h('p', { class: 'muted small', id: 'progress-hint' },
+        (p.v === '上' ? '上学期：只测本年级上册和更低年级的全部内容。' : '下学期 / 已学完全年：本年级上、下册都可以测。') +
+        (p.manual ? '已按你的选择记住，本学期内有效' + (cur ? '（保存在「' + cur.name + '」的档案里）' : '') + '。' : '已按当前月份预选，可以改。')));
+  }
   function seenList() {
     const v = lsGet(LS_SEEN);
     if (!Array.isArray(v)) return [];
@@ -695,6 +739,7 @@
         h('label', null, '单点 / 整章题量上限（' + LIMIT_MIN + '–' + LIMIT_MAX + '）', limitInput),
         h('label', null, '每知识点确认题数', confirmSelect),
         h('span', { class: 'muted small' }, '连续答对这么多题才判掌握；中途答错会再出一道确认题。到上限后，没测到的标为「未测」。'))));
+    page.append(progressCard());
     page.append(gradeCard());
     page.append(h('div', { class: 'card' }, browser));
     page.append(h('p', { class: 'muted small' },
@@ -720,6 +765,8 @@
     const fill = function () {
       while (box.firstChild) box.removeChild(box.firstChild);
       const g = E.gradeTargets(D.graph, gradeScope(), subject);
+      const prog = getProgress();
+      const fp = g ? E.filterByProgress(D.graph, g.ids, prog.v, gradeNumOf(gradeSel)) : { ids: [], deferred: [] };
       const tabs = function (label, items, current, set) {
         return h('div', { class: 'stage-tabs', role: 'tablist', 'aria-label': label }, items.map(function (it) {
           return h('button', {
@@ -793,12 +840,14 @@
               return volSel;
             })(), function (v) { volSel = v; })
             : tabs('范围', [['', '整年级'], ['上', '上册'], ['下', '下册']], volSel, function (v) { volSel = v; }),
-        h('p', { class: 'muted', id: 'grade-info' }, g ? g.label + '：' + g.ids.length + ' 个知识点。' : '这个范围没有知识点。'),
+        h('p', { class: 'muted', id: 'grade-info' }, !g ? '这个范围没有知识点。'
+          : !fp.ids.length ? g.label + '：按「' + PROGRESS_LABEL[prog.v] + '」进度，这个范围还没学到。已学到下册的话，把上方「学习进度」改成「下学期」。'
+          : g.label + '：' + fp.ids.length + ' 个知识点' + progressNote(prog.v, fp.deferred.length) + '。'),
         h('div', { class: 'row' },
           h('label', null, '题量上限（' + SCREEN_MIN + '–' + SCREEN_MAX + '）', limitInput),
           h('button', {
-            class: 'primary', id: 'btn-grade-start', disabled: !g,
-            onclick: function () { if (g) startSession(g.ids, g.label + '（整体筛查）', null, 'screen'); }
+            class: 'primary', id: 'btn-grade-start', disabled: !fp.ids.length,
+            onclick: function () { if (fp.ids.length) startSession(fp.ids, g.label + '（整体筛查）' + progressNote(prog.v, fp.deferred.length), null, 'screen'); }
           }, '开始整体诊断')),
         h('p', { class: 'muted small' }, '知识点多、题量有限，到上限后没测到的标为「未测」；结果页可以再加题。默认 ' + E.SCREEN_LIMIT + ' 题。'));
     };
@@ -843,7 +892,16 @@
             h('span', { class: 't', text: ch.label }),
             h('button', {
               class: 'primary', title: '把本章全部 ' + ch.topics.length + ' 个知识点一起作为目标',
-              onclick: function () { startSession(ch.topics.map(function (x) { return x.t.id; }), ch.volume + ' ' + ch.label + '（整章）'); }
+              onclick: function () {
+                const prog = getProgress();
+                const f = E.filterByProgress(D.graph, ch.topics.map(function (x) { return x.t.id; }), prog.v, childGradeNum());
+                if (!f.ids.length) {
+                  renderStart('「' + ch.volume + ' ' + ch.label + '」是下册内容，按「' + PROGRESS_LABEL[prog.v] + '」进度还没学到。已学到下册的话，先把「学习进度」改成「下学期」。');
+                  window.scrollTo(0, 0);
+                  return;
+                }
+                startSession(f.ids, ch.volume + ' ' + ch.label + '（整章）' + progressNote(prog.v, f.deferred.length));
+              }
             }, '以整章为目标')),
           c.rows.map(function (x) {
             return h('div', { class: 'topic-row', title: x.t.description },
@@ -1776,6 +1834,15 @@
 
   /* ------------------------------------------------------------ 启动 */
   function resolveTargets(params) {
+    const pv = (function () {
+      const x = (params.get('progress') || '').trim();
+      return E.PROGRESS_CHOICES.indexOf(x) >= 0 ? x : getProgress().v;
+    })();
+    const gate = function (ids, curGrade, name) {
+      const f = E.filterByProgress(D.graph, ids, pv, curGrade);
+      if (!f.ids.length) throw new Error(name + ' 是下册内容，按学习进度「' + PROGRESS_LABEL[pv] + '」还没学到。已学到下册请在开始页把学习进度改成「下学期」，或在网址里加 progress=下。');
+      return { ids: f.ids, note: progressNote(pv, f.deferred.length) };
+    };
     const t = params.get('target');
     if (t) {
       const raw = t.split(',').map(function (x) { return x.trim(); }).filter(Boolean);
@@ -1797,7 +1864,8 @@
         ((D.tree[vv[0]] || {}).chapters || []).forEach(function (ch) { if (ch.key === c.trim()) hit.push(ch); });
       });
       if (!hit.length) throw new Error('URL 参数 chapter 没有匹配的章节：' + c + '（格式如 “七上 第一章”）');
-      return { ids: hit[0].topics.map(function (x) { return x.t.id; }), label: hit[0].volume + ' ' + hit[0].label + '（整章）' };
+      const ok = gate(hit[0].topics.map(function (x) { return x.t.id; }), childGradeNum(), c.trim());
+      return { ids: ok.ids, label: hit[0].volume + ' ' + hit[0].label + '（整章）' + ok.note };
     }
     const grade = (params.get('grade') || '').trim();
     const volume = (params.get('volume') || '').trim();
@@ -1832,7 +1900,8 @@
       if (/^[一二三四五六七八九]$/.test(scope)) scope += '年级';
       const g = E.gradeTargets(D.graph, scope, subject);
       if (!g) throw new Error('URL 参数 grade / volume 无法识别：' + (volume || grade) + '（写法如 grade=七年级、volume=七上）');
-      return { ids: g.ids, label: g.label + '（整体筛查）', mode: 'screen' };
+      const ok = gate(g.ids, gradeNumOf(scope.charAt(0)), g.label);
+      return { ids: ok.ids, label: g.label + '（整体筛查）' + ok.note, mode: 'screen' };
     }
     return null;
   }

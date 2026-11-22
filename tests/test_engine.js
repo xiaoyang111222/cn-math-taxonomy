@@ -2177,5 +2177,70 @@ test('筛查真实数据（历史七上 confirm=1）：推断点均可沿 hard �
   assert.ok(!inferred.includes('cnh_j001') || reach.has('cnh_j001'));
 });
 
+console.log('学习进度过滤（#56）');
+{
+  const PT = [
+    mk('C4x', { grade: 4, semester: '下' }),     // 低年级下册：先修
+    mk('A5s', { grade: 5, semester: '上' }),
+    mk('B5x', { grade: 5, semester: '下' }),     // 本年级下册：上学期还没学
+    mk('D5q', { grade: 5, semester: '全' }),
+    mk('E6s', { grade: 6, semester: '上' })
+  ];
+  const PD = [
+    { topicId: 'A5s', prerequisiteId: 'C4x', strength: 'hard' },
+    { topicId: 'B5x', prerequisiteId: 'A5s', strength: 'hard' }
+  ];
+  const PG = E.buildGraph(PT, PD);
+  const all = PT.map((t) => t.id);
+
+  test('上学期：候选池不含本年级下册点，含本年级上册、低年级下册、semester=全', () => {
+    const f = E.filterByProgress(PG, all, '上', 5);
+    assert.deepStrictEqual(f.ids, ['C4x', 'A5s', 'D5q', 'E6s']);
+    assert.deepStrictEqual(f.deferred, ['B5x']);
+  });
+
+  test('下学期 / 已学完全年：不过滤', () => {
+    ['下', '全'].forEach((p) => {
+      const f = E.filterByProgress(PG, all, p, 5);
+      assert.deepStrictEqual(f.ids, all);
+      assert.deepStrictEqual(f.deferred, []);
+    });
+  });
+
+  test('年级未知（null）时上学期把所有下册点当未学；输入数组不被修改', () => {
+    const input = all.slice();
+    const f = E.filterByProgress(PG, input, '上', null);
+    assert.deepStrictEqual(f.ids, ['A5s', 'D5q', 'E6s']);
+    assert.deepStrictEqual(f.deferred, ['C4x', 'B5x']);
+    assert.deepStrictEqual(input, all);
+  });
+
+  test('过滤后的会话：未学的下册点不进诊断范围和结果，先修回溯仍能到低年级下册点', () => {
+    const f = E.filterByProgress(PG, ['A5s', 'B5x', 'D5q'], '上', 5);
+    let s = E.createSession(PG, f.ids, { mode: 'screen', limit: 40, confirm: 1 });
+    assert.ok(s.order.indexOf('B5x') < 0);
+    const t = E.createSession(PG, ['A5s'], { limit: 40, confirm: 1 });
+    assert.ok(t.order.indexOf('C4x') >= 0, '先修回溯不受进度过滤影响');
+    let s2 = t;
+    for (let i = 0; i < 20 && E.nextQuestion(PG, s2); i++) s2 = E.applyAnswer(PG, s2, E.nextQuestion(PG, s2), 'wrong');
+    assert.strictEqual(E.statusOf(s2, 'C4x'), 'weak');
+    for (let i = 0; i < 20 && E.nextQuestion(PG, s); i++) s = E.applyAnswer(PG, s, E.nextQuestion(PG, s), 'wrong');
+    const sum = E.summarize(PG, s);
+    const seen = sum.weak.concat(sum.shaky, sum.untested, sum.path.map((p) => p.id));
+    assert.ok(seen.indexOf('B5x') < 0, '未学的下册点不能出现在薄弱 / 未测 / 学习路径里');
+  });
+
+  test('按月份给默认进度：9–1 月上学期，2–7 月下学期，8 月已学完全年', () => {
+    const at = (m) => new Date(2026, m - 1, 15);
+    [9, 10, 11, 12, 1].forEach((m) => assert.strictEqual(E.defaultProgress(at(m)), '上', m + ' 月'));
+    [2, 3, 4, 5, 6, 7].forEach((m) => assert.strictEqual(E.defaultProgress(at(m)), '下', m + ' 月'));
+    assert.strictEqual(E.defaultProgress(at(8)), '全');
+    assert.strictEqual(E.termKey(new Date(2026, 10, 22)), '2026-上');
+    assert.strictEqual(E.termKey(new Date(2027, 0, 10)), '2026-上');
+    assert.strictEqual(E.termKey(new Date(2027, 2, 10)), '2026-下');
+    assert.strictEqual(E.termKey(new Date(2027, 7, 10)), '2026-全');
+  });
+}
+
 console.log('\n' + passed + ' passed, ' + failed + ' failed');
 process.exit(failed ? 1 : 0);

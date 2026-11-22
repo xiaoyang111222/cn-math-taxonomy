@@ -10,6 +10,7 @@
  *         gradeTargets(graph, '一年级'|'七上'|'高一'|'选必二', subject?) -> {ids, volumes, label} | null
  *           默认 subject 为 math，不把英语卷进数学的整册；'english' 只取英语（含九全），'physics' 只取物理（八上、八下、九全），'all' 不限学科
  *         createSession(graph, ids, {mode:'screen', confirm}) -> 筛查会话：范围 = 目标本身，回溯不出范围，默认题量上限 SCREEN_LIMIT
+ *         filterByProgress(graph, ids, '上'|'下'|'全', curGrade) -> {ids, deferred}：上学期时去掉本年级下册点（未学，不判薄弱）
  *         chapterSummary(graph, session) -> 按章汇总（薄弱章节在前）
  *         layout(graph, session, summary) -> 路径图的分层布局
  *         judgeQuestion(question, userText) -> {verdict:'correct'|'wrong'|'manual', reason}
@@ -696,6 +697,44 @@
     return ids.length ? { ids: ids, volumes: volumes, label: label } : null;
   }
 
+  /* ------------------------------------------------------------------ 学习进度（#56） */
+
+  /** 学习进度：'上' 上学期 / '下' 下学期 / '全' 已学完全年。 */
+  const PROGRESS_CHOICES = ['上', '下', '全'];
+
+  /** 按月份给默认进度：9–1 月上学期，2–7 月下学期，8 月已学完全年。 */
+  function defaultProgress(date) {
+    const m = (date || new Date()).getMonth() + 1;
+    if (m === 8) return '全';
+    return m >= 9 || m === 1 ? '上' : '下';
+  }
+
+  /** 学期标识（学年起始年 + 进度）。用户手动选的进度只在同一学期内有效，过了学期自动回到按月份的默认值。 */
+  function termKey(date) {
+    const d = date || new Date();
+    const m = d.getMonth() + 1;
+    const start = m >= 9 ? d.getFullYear() : d.getFullYear() - 1;
+    return start + '-' + defaultProgress(d);
+  }
+
+  /**
+   * 按学习进度过滤「被测目标点」候选池。进度为 '上' 时，去掉 curGrade 年级的下册知识点（还没学，不是不会）；
+   * 低年级的下册、semester 为「全」的点、其它年级的点都保留。curGrade 为 null 时，所有下册点都视为未学。
+   * 只用于挑目标；沿先修边回溯不经过这里（先修本来就更早）。
+   * 返回 { ids: 保留的, deferred: 因未学而排除的 }，顺序同入参。
+   */
+  function filterByProgress(graph, ids, progress, curGrade) {
+    if (progress !== '上') return { ids: ids.slice(), deferred: [] };
+    const keep = [];
+    const deferred = [];
+    ids.forEach(function (id) {
+      const t = graph.byId[id];
+      const later = !!t && t.semester === '下' && typeof t.grade === 'number' && (curGrade == null || t.grade === curGrade);
+      (later ? deferred : keep).push(id);
+    });
+    return { ids: keep, deferred: deferred };
+  }
+
   /**
    * 按章汇总：范围内每章的 掌握 / 不稳 / 薄弱 / 未测 数量和薄弱、不稳的知识点 id。
    * 章按教材顺序给出，再按「薄弱数多、不稳数多」稳定排序，薄弱的章排前面。
@@ -1099,6 +1138,10 @@
     layout: layout,
     parseChapter: parseChapter,
     gradeRank: gradeRank,
+    PROGRESS_CHOICES: PROGRESS_CHOICES,
+    defaultProgress: defaultProgress,
+    termKey: termKey,
+    filterByProgress: filterByProgress,
     resolveTargets: resolveTargets,
     normalizeText: normalizeText,
     judgeAnswer: judgeAnswer
