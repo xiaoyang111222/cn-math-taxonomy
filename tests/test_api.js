@@ -135,7 +135,7 @@ test('发信：DRY_RUN 只写日志不联网；生产走 Resend；缺密钥 / �
   assert.strictEqual(seen.url, 'https://api.resend.com/emails');
   assert.strictEqual(seen.init.method, 'POST');
   assert.strictEqual(seen.init.headers.Authorization, 'Bearer re_test');
-  assert.deepStrictEqual(JSON.parse(seen.init.body), { from: '数学知识图谱 <noreply@math.pansgo.com>', to: ['a@b.com'], subject: '主题', text: '正文' });
+  assert.deepStrictEqual(JSON.parse(seen.init.body), { from: '知识图谱 <noreply@math.pansgo.com>', to: ['a@b.com'], subject: '主题', text: '正文' });
 
   const custom = createMailer({ RESEND_API_KEY: 'k', MAIL_FROM: 'X <x@y.com>' }, async (u, init) => { seen = { init }; return { ok: true }; });
   await custom('a@b.com', 's', 't');
