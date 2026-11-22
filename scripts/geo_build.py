@@ -17,6 +17,7 @@ from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from std_check import apply_check  # noqa: E402
 
 import geo_g7  # noqa: E402,F401
 import geo_g8  # noqa: E402,F401
@@ -105,6 +106,7 @@ def build_standards():
             "verbatim": False,
             "text_status": "公开转述，未与《义务教育地理课程标准（2022年版）》逐页核对",
         })
+    apply_check(items)
     return id_of, items
 
 
@@ -306,7 +308,7 @@ def main():
         "issuer": "中华人民共和国教育部",
         "year": 2022,
         "stage": "第四学段（7–9年级）",
-        "note": "条目是对地理课标地球与地图、世界地理、中国地理内容要求的公开转述，不是逐页核对的原文。verbatim 为 false，page_or_ref 为「待核」。编号 cgs-2022 是本图谱编的，不是教育部原编号。七上至八下按 2024 审定人教版目录。六三制初中地理只开七、八年级，九年级没有地理课。",
+        "note": "条目是对地理课标地球与地图、世界地理、中国地理内容要求的公开转述，不是逐页核对的原文。verbatim 为 false。2026-11-22 已逐条对照人教社电子书《义务教育地理课程标准（2022年版）》，page_or_ref 为课标印刷页码，12 条按课标原文改写，9 条库存多出课标未点名的内容、留待裁决，仍待核 1 条（CG.11，课标无对应条款）。编号 cgs-2022 是本图谱编的，不是教育部原编号。七上至八下按 2024 审定人教版目录。六三制初中地理只开七、八年级，九年级没有地理课。",
     }
     for k, v in kept_std.items():
         standards_out[k] = v
