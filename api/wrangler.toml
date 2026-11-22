@@ -7,6 +7,7 @@
 name = "math-pansgo-api"
 main = "worker.js"
 compatibility_date = "2025-01-01"
+routes = [{ pattern = "api.math.pansgo.com", custom_domain = true }]
 
 [[d1_databases]]
 binding = "DB"
@@ -19,3 +20,4 @@ ALLOWED_ORIGINS = "https://math.pansgo.com,https://cn-math-taxonomy.pages.dev,ht
 MAIL_FROM = "数学知识图谱 <noreply@math.pansgo.com>"
 # 生产必须是 "0"。
 MAIL_DRY_RUN = "0"
+
