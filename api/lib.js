@@ -9,7 +9,7 @@ export const IP_HOURLY_LIMIT = 20;
 export const HOUR_MS = 60 * 60 * 1000;
 export const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 export const MAX_PAYLOAD_CHARS = 1000000;
-export const DEFAULT_MAIL_FROM = '数学知识图谱 <noreply@math.pansgo.com>';
+export const DEFAULT_MAIL_FROM = '知识图谱 <noreply@math.pansgo.com>';
 export const DEFAULT_ALLOWED_ORIGINS = 'https://math.pansgo.com';
 
 /* dataset 名 → 前端 localStorage 键（仅作文档，服务端不解析内容）。 */

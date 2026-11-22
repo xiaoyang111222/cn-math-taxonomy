@@ -17,7 +17,7 @@ database_id = "9c88e932-92d6-4d38-9cf9-08196908f212"
 [vars]
 # 允许的前端来源，逗号分隔；支持 https://*.xxx.pages.dev 形式的子域通配（灰度预览用）。
 ALLOWED_ORIGINS = "https://math.pansgo.com,https://cn-math-taxonomy.pages.dev,https://*.cn-math-taxonomy.pages.dev"
-MAIL_FROM = "数学知识图谱 <noreply@math.pansgo.com>"
+MAIL_FROM = "知识图谱 <noreply@math.pansgo.com>"
 # 生产必须是 "0"。
 MAIL_DRY_RUN = "0"
 

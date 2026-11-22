@@ -79,7 +79,7 @@ async function requestCode(request, env, deps, now) {
   const otpId = inserted.meta.last_row_id;
 
   try {
-    await deps.sendMail(email, '数学知识图谱登录验证码', '你的验证码是 ' + code + '，10 分钟内有效。\n如果不是你本人在操作，请直接忽略这封邮件。');
+    await deps.sendMail(email, '知识图谱登录验证码', '你的验证码是 ' + code + '，10 分钟内有效。\n如果不是你本人在操作，请直接忽略这封邮件。');
   } catch (e) {
     await env.DB.prepare('DELETE FROM otp_codes WHERE id = ?').bind(otpId).run();
     console.error('sendMail failed: ' + (e && e.message));
