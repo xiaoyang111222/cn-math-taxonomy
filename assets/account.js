@@ -1,5 +1,6 @@
 /* 账号：邮箱验证码登录 + 会话管理 + 页头入口。
- * 登录完全可选；不登录时本站一切照旧，这个文件只往页头放一个「登录」按钮，别的什么都不做。
+ * 登录完全可选；不登录时本站一切照旧，这个文件只往页头放一个「登录」按钮，再按页面里预留的位置
+ * （.cnm-nudge-slot[data-nudge]）放可关闭的登录提示，别的什么都不做。
  * 会话令牌存在 localStorage 的 cnmAuth.v1；云同步见 assets/sync.js。window.CnmAccount。 */
 (function () {
   'use strict';
@@ -89,7 +90,24 @@
   }
 
   var CSS = [
-    '.nav-link.cnm-account-btn{border:0;background:transparent;font:inherit;font-size:.94rem;font-weight:650;cursor:pointer;gap:6px}',
+    '.cnm-acc-wrap{display:inline-flex;align-items:center;gap:8px;margin-left:6px;min-width:0}',
+    '.nav-link.cnm-account-btn{border:1px solid var(--brand,#0f6e62);background:var(--brand,#0f6e62);color:var(--on-brand,#fff);font:inherit;font-size:1.05rem;font-weight:750;padding:0 18px;cursor:pointer;gap:7px;max-width:15em}',
+    '.nav-link.cnm-account-btn:hover{background:var(--brand-strong,#0c574e);color:var(--on-brand,#fff)}',
+    '.nav-link.cnm-account-btn.cnm-on{background:var(--brand-soft,#e6f4f1);color:var(--brand-strong,#0c574e);font-size:1rem;padding:0 14px}',
+    '.nav-link.cnm-account-btn.cnm-on:hover{background:var(--brand-soft,#e6f4f1);color:var(--brand-strong,#0c574e)}',
+    '.nav-link.cnm-account-btn:focus-visible{outline:2px solid var(--focus,#0f6e62);outline-offset:2px}',
+    '.cnm-acc-email{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}',
+    '.cnm-acc-hint{font-size:.76rem;line-height:1.3;color:var(--muted,#5c6370);white-space:nowrap}',
+    '@media (max-width:560px){.cnm-acc-hint{display:none}.cnm-acc-wrap{margin-left:0}.nav-link.cnm-account-btn{font-size:1rem;padding:0 14px;min-height:36px}}',
+    '.cnm-nudge{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:12px 0;padding:10px 8px 10px 14px;border:1px solid var(--line,#e3e6ed);border-radius:var(--radius-sm,10px);background:var(--brand-soft,#e6f4f1);color:var(--text,#17191f);font-size:.92rem;line-height:1.5}',
+    '.cnm-nudge[data-kind="home"]{justify-content:center;margin:0;border-width:0 0 1px;border-radius:0;padding:8px 12px}',
+    '.cnm-nudge-text{flex:0 1 auto;min-width:0}',
+    '.cnm-nudge-go{min-height:36px;padding:0 16px;font:inherit;font-weight:700;border-radius:999px;border:1px solid var(--brand,#0f6e62);background:var(--brand,#0f6e62);color:var(--on-brand,#fff);cursor:pointer;white-space:nowrap}',
+    '.cnm-nudge-go:hover{background:var(--brand-strong,#0c574e)}',
+    '.cnm-nudge-x{width:36px;height:36px;padding:0;font-size:1.3rem;line-height:1;border:0;border-radius:50%;background:transparent;color:var(--muted,#5c6370);cursor:pointer}',
+    '.cnm-nudge-x:hover{background:var(--bg-muted,#eef0f3);color:var(--text,#17191f)}',
+    '.cnm-nudge-go:focus-visible,.cnm-nudge-x:focus-visible{outline:2px solid var(--focus,#0f6e62);outline-offset:2px}',
+    '@media print{.cnm-acc-wrap,.cnm-nudge{display:none!important}}',
     '.cnm-dot{width:8px;height:8px;border-radius:50%;background:var(--ok,#157a3a);flex:none}',
     '.cnm-dot[data-s="syncing"]{background:var(--warn,#9a3412)}',
     '.cnm-dot[data-s="error"]{background:var(--bad,#b91c1c)}',
@@ -112,7 +130,9 @@
     '.cnm-toast button{white-space:nowrap;font:inherit;font-weight:700;border:0;background:transparent;color:inherit;text-decoration:underline;cursor:pointer;padding:4px}'
   ].join('\n');
 
+  var wrap = null;
   var button = null;
+  var hint = null;
   var dot = null;
   var mask = null;
   var returnFocus = null;
@@ -129,15 +149,33 @@
     return '已同步 · ' + (min < 1 ? '刚刚' : min + ' 分钟前');
   }
 
+  function syncShort() {
+    var st = syncStatus.state;
+    if (st === 'syncing') return '同步中……';
+    if (st === 'error') return '同步未成功';
+    var eng = window.CnmSyncEngine;
+    var at = (eng && eng.lastSyncAt()) || 0;
+    if (!at) return '尚未同步';
+    var min = Math.floor((Date.now() - at) / 60000);
+    return '已同步 · ' + (min < 1 ? '刚刚' : min + ' 分钟前');
+  }
+
   function refreshButton() {
     if (!button) return;
     var on = isLoggedIn();
-    button.textContent = on ? '账号' : '登录';
-    button.title = on ? email() + ' · ' + syncText() : '登录后可在多台设备间同步档案和错题（可选）';
+    button.className = 'nav-link cnm-account-btn' + (on ? ' cnm-on' : '');
+    button.textContent = '';
     if (on) {
       dot = h('span', { class: 'cnm-dot', 'data-s': syncStatus.state === 'syncing' ? 'syncing' : (syncStatus.state === 'error' ? 'error' : 'ok'), 'aria-hidden': 'true' });
       button.appendChild(dot);
+      button.appendChild(h('span', { class: 'cnm-acc-email', text: email() }));
+      button.setAttribute('aria-label', '账号：' + email());
+    } else {
+      button.textContent = '登录';
+      button.removeAttribute('aria-label');
     }
+    button.title = on ? email() + ' · ' + syncText() : '登录后可在多台设备间同步档案和错题（可选）';
+    hint.textContent = on ? syncShort() : '登录后换手机不丢';
   }
 
   function closeDialog() {
@@ -271,23 +309,80 @@
     setTimeout(function () { toast.remove(); }, 15000);
   }
 
+  var cssAdded = false;
+  function ensureStyle() {
+    if (cssAdded || !document.head) return;
+    cssAdded = true;
+    var style = document.createElement('style');
+    style.textContent = CSS;
+    document.head.appendChild(style);
+  }
+
   function mount() {
     if (button || !document.body) return;
     var host = document.querySelector('.site-nav .page-links') || document.querySelector('.site-nav');
     if (!host) return;
-    var style = document.createElement('style');
-    style.textContent = CSS;
-    document.head.appendChild(style);
+    ensureStyle();
     button = h('button', { type: 'button', class: 'nav-link cnm-account-btn', id: 'cnm-account-btn', onclick: openDialog });
+    hint = h('span', { class: 'cnm-acc-hint' });
+    wrap = h('span', { class: 'cnm-acc-wrap' }, button, hint);
     var search = host.querySelector('.resource-search-btn');
-    if (search) host.insertBefore(button, search); else host.appendChild(button);
+    if (search) host.insertBefore(wrap, search); else host.appendChild(wrap);
     refreshButton();
+    setInterval(function () { if (isLoggedIn() && !document.hidden) refreshButton(); }, 60000);
+  }
+
+  /* ------------------------------------------------------------------ 登录提示（可关闭，关闭后本机不再出现） */
+
+  var NUDGES = {
+    home: { kind: 'home', text: '登录后，孩子档案、诊断记录和错题本会同步到云端，换手机或电脑也不丢。登录可选，不登录一切照旧。' },
+    diagnose: { kind: 'card', text: '登录后，诊断记录和错题本换设备也能看。' },
+    wrongbook: { kind: 'card', text: '登录后，错题本和诊断记录换设备也能看。' }
+  };
+  function nudgeKey(name) { return 'cnmNudge.' + name; }
+
+  function fillNudge(slot) {
+    var name = slot.getAttribute('data-nudge');
+    var def = NUDGES[name];
+    slot.setAttribute('data-cnm-done', '1');
+    if (!def) return;
+    if (isLoggedIn()) { if (name === 'home') lsSet(nudgeKey(name), '1'); return; }
+    if (lsGet(nudgeKey(name))) return;
+    ensureStyle();
+    function dismiss() { lsSet(nudgeKey(name), '1'); slot.replaceChildren(); }
+    slot.appendChild(h('aside', { class: 'cnm-nudge', 'data-kind': def.kind, 'aria-label': '登录提示' },
+      h('span', { class: 'cnm-nudge-text', text: def.text }),
+      h('button', { type: 'button', class: 'cnm-nudge-go', text: '去登录', onclick: openDialog }),
+      h('button', { type: 'button', class: 'cnm-nudge-x', 'aria-label': '关闭提示', title: '关闭，不再提示', text: '×', onclick: dismiss })));
+  }
+  function fillNudges() {
+    var slots = document.querySelectorAll('.cnm-nudge-slot[data-nudge]:not([data-cnm-done])');
+    for (var i = 0; i < slots.length; i++) fillNudge(slots[i]);
+  }
+  function clearNudges() {
+    var slots = document.querySelectorAll('.cnm-nudge-slot[data-nudge]');
+    for (var i = 0; i < slots.length; i++) {
+      if (slots[i].getAttribute('data-nudge') === 'home') lsSet(nudgeKey('home'), '1');
+      slots[i].replaceChildren();
+    }
+  }
+  /* 页面的结果区 / 错题列表会重绘，位置是后来才出现的，所以盯着 DOM 变化补填。 */
+  function watchSlots() {
+    fillNudges();
+    if (!window.MutationObserver || !document.body) return;
+    var queued = false;
+    new MutationObserver(function () {
+      if (queued) return;
+      queued = true;
+      (window.requestAnimationFrame || setTimeout)(function () { queued = false; fillNudges(); });
+    }).observe(document.body, { childList: true, subtree: true });
   }
 
   window.addEventListener('cnm:auth', function () {
     syncStatus = { state: 'idle', at: 0, message: '' };
     refreshButton();
     if (mask && !isLoggedIn()) closeDialog();
+    if (isLoggedIn()) clearNudges();
   });
   window.addEventListener('cnm:sync', function (e) {
     syncStatus = e.detail || syncStatus;
@@ -302,9 +397,10 @@
 
   window.CnmAccount = {
     isLoggedIn: isLoggedIn, email: email, api: api, requestCode: requestCode, verify: verify,
-    logout: logout, expire: expire, open: openDialog
+    logout: logout, expire: expire, open: openDialog, fillNudges: fillNudges
   };
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount);
-  else mount();
+  function start() { mount(); watchSlots(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
 })();

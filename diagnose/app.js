@@ -1330,6 +1330,7 @@
         h('a', { class: 'btn', id: 'btn-finals', href: '../finals/' + (subject !== 'math' ? '?subject=' + subject : ''), text: '生成我的 7 天补漏计划' }),
         h('button', { onclick: function () { if (confirm('重新开始会清除当前进度，确定吗？')) restart(); } }, '重新开始'),
         session.answers.length ? h('button', { onclick: function () { rebuild(session.answers.slice(0, -1)); } }, '撤销上一题') : null));
+    page.append(h('div', { class: 'cnm-nudge-slot no-print', 'data-nudge': 'diagnose' }));
     page.append(summaryCard);
     const blindCard = blindResultCard(sum);
     if (blindCard) page.append(blindCard);

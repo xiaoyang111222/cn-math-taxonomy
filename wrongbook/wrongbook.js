@@ -185,6 +185,9 @@
     all.forEach(function (e) { if (subjects.indexOf(e.subject) < 0) subjects.push(e.subject); });
     if (subjectSel && subjects.indexOf(subjectSel) < 0) subjectSel = '';
     var rows = subjectSel ? all.filter(function (e) { return e.subject === subjectSel; }) : all;
+    var slot = el('div', 'cnm-nudge-slot no-print');
+    slot.setAttribute('data-nudge', 'wrongbook');
+    content.appendChild(slot);
     content.appendChild(toolbar(all.length, rows.length, subjects));
 
     var who = childName();

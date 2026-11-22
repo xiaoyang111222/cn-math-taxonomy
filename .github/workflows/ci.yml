@@ -89,6 +89,9 @@ jobs:
       - name: 题库按学科拆分对账
         run: node tests/test_questions_split.js
 
+      - name: 登录体验静态检查
+        run: node tests/test_login_ux.js
+
       - name: 页面脚本缓存测试
         run: node tests/test_pages_script_cache.js
 
