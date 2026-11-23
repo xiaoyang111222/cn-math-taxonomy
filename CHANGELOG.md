@@ -758,3 +758,34 @@
 ## 2026-10-17（第一版）
 
 - 生成初稿：289 个正式知识点、18 个小学外部节点、567 条先修边；九下章目为“（暂拟）”。
+
+## 2026-11-23（复查报告：粘性第一批 61a624b 复测 + 9879dd0 周报）
+
+复查者视角重读两个提交的全部改动与被改文件现状。修复提交：`566897f`（复测合并与首页口径）、`bc649d4`（周报并发与多孩子口径）。`npm test` 全绿。未部署、未推送，`DIGEST_DRY_RUN` 保持 `"1"` 未动。
+
+### 逐条结论
+
+1. **复测状态机（assets/wrongbook.js）——状态机本身没问题；一处同步合并有问题，已修（见 2）。**
+   - 新条目 stage 0 / dueAt = ts + 1 天 / done false；老条目无字段按 ts + 1 天到期；同题再答错回 stage 0、dueAt = 新 ts + 1 天、done 清掉、count + 1；stage 0→1→2→3 的下一次间隔依次 3 / 7 / 15 天，stage 3 通过毕业并清 dueAt；未过 stage 不变、明天再测；已毕业条目 review 不改动。边界（dueAt 恰等于 now 算到期）与 `api/lib.js` 的 `computeDue` 一致，`test_digest.js` 有同规则对拍。
+   - 数量一致性：错题本页 `dueList(childId)` 与首页 `dueTotal()` 用同一个 `isDue`，单孩子时数一致，只差「算两遍的时间点」。多孩子时口径不同，见 4。
+2. **同步合并：认同是真问题，已修（`566897f`）。** 原规则 done 优先，一台毕业、另一台之后又答错回炉，合并后回炉被盖成「已毕业」，count / ts 是回炉的、进度却是毕业的；同理，较新一次「没过」复测（dueAt 更早）会被另一台 dueAt 更晚的旧进度盖掉。做法：条目加 `reviewedAt`（`record` 取 ts，`review` 取 now，未过也更新，已毕业的 no-op 不动）；`progressCmp` 在两边都带 `reviewedAt` 且不同时较新者胜，其余（老副本没有 reviewedAt、或相同）仍按 done > stage > dueAt。ts / count / chosen 的 pickNewer 规则不变。新增测试锁住：毕业后另一台回炉不被盖（两个方向）、旧副本（含 stage 更高 / 已毕业）不覆盖新进度、较新的未过复测不被盖、无 reviewedAt 的老副本与一边有一边没有时行为不变。
+3. **周报 Worker（api/）**
+   - 收件筛选：严格 `mail_consent = 1 AND COALESCE(digest_opt_out, 0) = 0`，营销同意与否无关——没问题（测试覆盖）。
+   - week_key：`isoWeekKey` 先 +8 小时再取日历日，周一 00:00 UTC（上海 08:00）落在当周；我另用 `Intl`（Asia/Shanghai）独立实现对拍 2019–2032 每 5 小时一个点共 22791 个，0 个不一致——没问题。
+   - 并发重复：**有问题，已修（`bc649d4`）。** 原来先查 `digest_log`、发送成功后才写，cron 与手动 `/admin/digest/run` 同时跑，或同一用户在两个并发请求里，会各发一封（新增测试先红：每人两封）。改为发送前 `INSERT OR IGNORE` 占位、`meta.changes < 1` 就跳过（计入 already_sent），发送失败或 `MAIL_DRY_RUN` 未真发时 `DELETE` 释放占位。代价：进程恰好死在占位之后、发送之前，该用户本周漏发一封（宁漏勿重）。
+   - 单个用户数据损坏：`parseData` 捕获 JSON 解析失败当没有数据，用户级处理有 try/catch，一人失败不拖垮整批；整页 `sync_data` 查询失败也只记该页失败后继续——没问题。
+   - 67 人量级：逐页（50 人）批量查 `sync_data`，不是逐人查；但每个发送用户还有 占位 1 次 + 首次生成 token 2 次（UPDATE + SELECT）+ 1 次发信 fetch。我用 67 个用户、桩发信实测：D1 查询 206 次 + 发信 67 次，共约 273 次子请求；dry-run 只有 5 次。**Workers 免费版单次调用子请求上限 50，付费版 1000：若线上是免费版，真发会在约 12 封后撞限。需要上级确认 Cloudflare 套餐**；撞限时已占位未发的用户若连释放占位也失败，会漏发当周（日志有 `release claim failed`）。未改：确认是付费版就不必动，免费版需要另行设计（分批多次触发或改批量发信）。
+   - 退订 token：`crypto.getRandomValues` 16 字节 = 128 位十六进制，不可猜；单独存 `users.digest_token`，只被 `/digest/unsub` 使用，测试确认拿它调 `/auth/me`、`/sync` 都是 401，不与会话 / 验证码混用——没问题。
+   - `/admin/digest/run`：`ADMIN_KEY` 未设（含空串）时先于方法与密钥判断直接 404，任何方法都是——没问题；密钥错 401，GET 405。
+   - HTML 转义：孩子名、标签、数字、退订链接都过 `escapeHtml`，测试用 `<b>小明</b>` 验证；孩子名另去控制字符、截 12 字——没问题。
+   - 日志明文邮箱：`digest.js` 与 cron 汇总日志只有用户 id 与计数，admin 返回体邮箱已打码——没问题。唯一例外是 `mail.js` 既有的 `MAIL_DRY_RUN=1` 调试日志会写明文收件人、正文与退订链接，生产为 `"0"`，保持现状。
+   - 另一处同源问题已修（`bc649d4`）：待复测数是全部孩子（含 guest 桶）合计，主题却写「{第一个孩子名}有 N 道错题待复测」，多孩子家庭会把兄弟姐妹的错题算到第一个孩子头上。现在只有恰好一个孩子档案时才带名字，多个孩子时主题为「知识图谱周报：有 N 道错题待复测」、问候语不带名字。这改的是原设计「第一个孩子的名字」，若上级倾向保留可单独回退该处。
+4. **首页复测卡（assets/home.js）：** 未登录或到期数 0 时 `hidden`，不渲染不占位（测试覆盖，含无 CnmWrong 脚本时不报错）——没问题。多孩子口径：**有问题，已修（`566897f`）**——首页是全部孩子合计，错题本页只显示当前孩子，两边数字可能对不上而文案没说明。新增 `CnmWrong.dueBuckets(now)`（有到期题的桶数），到期题分在多个孩子名下时卡片后缀「（全部孩子合计）」，单个孩子不显示。
+5. **sw.js v38：没问题。** 61a624b 改动的 `home.js`、`site.css`、`sync.js`、`wrongbook.js`、`diagnose/app.js`、`index.html`、`wrongbook/wrongbook.js`、`wrongbook/wrongbook.css` 都在 SHELL 里；版本 v37→v38 只升一版；SW 只处理同源 GET，`api.math.pansgo.com` 的响应不缓存也不在清单里；9879dd0 没改任何被缓存文件。复查修复后又改了 `assets/wrongbook.js` / `sync.js` / `home.js` / `index.html`，脚本与页面走网络优先，未再升版本，以免 v38 若尚未上线时多升一版；如果 v38 已经发出，部署时需由上级决定是否升 v39。
+6. **diagnose demo 的 null：没问题，真修对了。** `childBar()` 在演示模式 `return null`，开始页 / 答题页 / 结果页三处都改成 `const bar = childBar(...); if (bar) page.append(bar)`；`h()` 本身会跳过 null 子节点，其余 `page.append(...)` 的来源（`blindStartCard`、`excludedNote` 等）本就判空，`wrongbookLink()` 在 `h()` 里；正常模式 `childBar` 恒返回元素。已有静态测试锁住三处判空与「不得直接 append(childBar(...))」。
+
+### 没修的及理由
+
+- 退订链接是 GET：邮件安全网关预取链接可能误退订。属行业通行做法，改成确认页 / One-Click POST 属于功能改动，留给上级裁决。
+- `sync_data` 单页 50 人一次全载入内存：单条上限由同步接口限制，67 人量级远低于 Worker 内存上限，规模上去后再说。
+- 手动在周日触发会占掉上一周的 week_key，周一 cron 因换周会再发一次；只在手动真发时可能出现，当前 dry-run 阶段不影响。
