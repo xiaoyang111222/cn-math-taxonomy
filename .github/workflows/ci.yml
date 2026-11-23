@@ -116,6 +116,9 @@ jobs:
       - name: 学习打卡与连续天数
         run: node tests/test_activity.js
 
+      - name: 英语每日一句与学习打卡的云同步合并、打卡接入点
+        run: node tests/test_english_sync.js
+
       - name: 高中语文五册
         run: node tests/test_zh_hs.js
 

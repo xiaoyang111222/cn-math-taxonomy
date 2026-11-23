@@ -1,4 +1,4 @@
--- math.pansgo.com 账号与云同步。只存账号、验证码哈希、会话哈希和 4 份同步数据；题库不进 D1。
+-- math.pansgo.com 账号与云同步。只存账号、验证码哈希、会话哈希和 6 份同步数据；题库不进 D1。
 -- 时间一律是 Unix 毫秒。本地建库：wrangler d1 execute math-pansgo --local --file=api/schema.sql
 -- 已上线的库不会因为这里的 CREATE TABLE IF NOT EXISTS 多出新列：users 的 digest_opt_out / digest_token
 -- 要另跑 api/migrations/0001_digest.sql（只跑一次，列已存在会报错）。

@@ -131,6 +131,7 @@
 
   function doReview(e, passed) {
     var updated = CW.review(childId, e.qid, passed, Date.now());
+    if (updated && passed && window.CnmActivity) window.CnmActivity.mark(childId, Date.now());
     delete revealed[e.qid];
     if (!updated) flash = '没能保存复测结果，请稍后再试。';
     else if (updated.done) flash = '答对了，这道题已毕业 ✓';

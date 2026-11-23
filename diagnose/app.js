@@ -455,7 +455,10 @@
         rec.needsRetest = [topic];
       }
     }
+    /* 新存下一条诊断记录才算「做完一次诊断」打卡；重新打开已存的结果页（同一个 key）不重复打卡。 */
+    const firstSave = !CC.hasRecord(cur.id, rec.key);
     CC.saveRecord(cur.id, rec);
+    if (firstSave && window.CnmActivity) window.CnmActivity.mark(cur.id);
   }
   function wrongbookLink() {
     if (!window.CnmWrong) return null;

@@ -1,14 +1,18 @@
 /* 云端同步引擎。本地优先：现有功能只读写 localStorage，不依赖网络与登录；
  * 未登录时这个文件什么都不做（不拦截、不弹窗、不挂钩子）。
- * 同步四份数据：children=cnmChildren.v1、records=cnmChildren.records.v1、wrongbook=cnmWrong.v1、finals=cnmFinals.v1。
+ * 同步六份数据：children=cnmChildren.v1、records=cnmChildren.records.v1、wrongbook=cnmWrong.v1、finals=cnmFinals.v1、
+ * english=cnmEnglish.v1（每日一句进度）、activity=cnmActivity.v1（学习打卡日期）。
  * 合并函数是纯函数（Node 里 module.exports 同一份，tests/test_sync.js 覆盖）；
  * 删除靠「上次同步的基线」做三方合并推断：基线里有、一边没了、另一边没改过 → 删除；另一边改过 → 保留改动。
  * 云端没有可用数据（没有这一行 / 载荷损坏）时不推断任何删除。 */
 (function (root) {
   'use strict';
 
-  var DATASETS = { children: 'cnmChildren.v1', records: 'cnmChildren.records.v1', wrongbook: 'cnmWrong.v1', finals: 'cnmFinals.v1' };
-  var NAMES = ['children', 'records', 'wrongbook', 'finals'];
+  var DATASETS = {
+    children: 'cnmChildren.v1', records: 'cnmChildren.records.v1', wrongbook: 'cnmWrong.v1', finals: 'cnmFinals.v1',
+    english: 'cnmEnglish.v1', activity: 'cnmActivity.v1'
+  };
+  var NAMES = ['children', 'records', 'wrongbook', 'finals', 'english', 'activity'];
   var META_KEY = 'cnmSync.meta.v1';
   var BASE_KEY = 'cnmSync.base.v1';
   var MAX_PER_BUCKET = 300;
@@ -199,7 +203,77 @@
     return pickNewer(local, remote, planTs, ctx);
   }
 
-  var MERGERS = { children: mergeChildren, records: mergeRecords, wrongbook: mergeWrongbook, finals: mergeWhole };
+  /* 英语每日一句进度 {孩子id 或 guest: {done: {day: {at, checks}}, reviews: {day: {dueOrd, doneOrds}}}}。
+   * 进度只增不减，所以不做删除推断：done 按 day 取并集（同一天两边都学了取 at 晚者，相同取本地）；
+   * reviews 按 day 取并集，doneOrds 取并集，下一轮到期序号按合并后做过的轮数重算。
+   * 复习间隔与 assets/english.js 的 OFFSETS 同值（tests/test_english_sync.js 核对）。 */
+  var ENGLISH_OFFSETS = [2, 4, 7, 15];
+  function numList(v) {
+    var seen = Object.create(null);
+    return (Array.isArray(v) ? v : []).map(Number).filter(function (n) {
+      if (!(n > 0) || seen[n]) return false;
+      seen[n] = true;
+      return true;
+    }).sort(function (a, b) { return a - b; });
+  }
+  function mergeReview(l, r) {
+    var done = numList((isObj(l) && l.doneOrds || []).concat(isObj(r) && r.doneOrds || []));
+    if (done.length >= ENGLISH_OFFSETS.length) return { dueOrd: null, doneOrds: done };
+    var n0 = null;
+    [l, r].forEach(function (x) {
+      if (!isObj(x) || x.dueOrd == null || !(Number(x.dueOrd) > 0)) return;
+      var base = Number(x.dueOrd) - ENGLISH_OFFSETS[numList(x.doneOrds).length];
+      if (n0 === null || base > n0) n0 = base;
+    });
+    return { dueOrd: n0 === null ? null : n0 + ENGLISH_OFFSETS[done.length], doneOrds: done };
+  }
+  function mergeEnglishBucket(l, r) {
+    l = isObj(l) ? l : {};
+    r = isObj(r) ? r : {};
+    var out = { done: {}, reviews: {} };
+    var ld = mapOf(l.done), rd = mapOf(r.done);
+    bucketNames([ld, rd]).forEach(function (day) {
+      var a = ld[day], b = rd[day];
+      if (isObj(a) && isObj(b)) out.done[day] = ms(b.at) > ms(a.at) ? b : a;
+      else if (isObj(a) || isObj(b)) out.done[day] = isObj(a) ? a : b;
+    });
+    var lr = mapOf(l.reviews), rr = mapOf(r.reviews);
+    bucketNames([lr, rr]).forEach(function (day) {
+      if (!isObj(lr[day]) && !isObj(rr[day])) return;
+      out.reviews[day] = mergeReview(lr[day], rr[day]);
+    });
+    return out;
+  }
+  function mergeEnglish(local, remote) {
+    var L = mapOf(local), R = mapOf(remote);
+    var out = {};
+    bucketNames([L, R]).forEach(function (bucket) { out[bucket] = mergeEnglishBucket(L[bucket], R[bucket]); });
+    if (!Object.keys(out).length && !isObj(local)) return null;
+    return out;
+  }
+
+  /* 学习打卡 {孩子id 或 guest: ['YYYY-MM-DD', ...]}：日期取并集，去重排序。 */
+  function mergeActivity(local, remote) {
+    var L = mapOf(local), R = mapOf(remote);
+    var out = {};
+    bucketNames([L, R]).forEach(function (bucket) {
+      var seen = Object.create(null);
+      var list = [];
+      [L[bucket], R[bucket]].forEach(function (a) {
+        (Array.isArray(a) ? a : []).forEach(function (d) {
+          if (typeof d === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(d) && !seen[d]) { seen[d] = true; list.push(d); }
+        });
+      });
+      out[bucket] = list.sort();
+    });
+    if (!Object.keys(out).length && !isObj(local)) return null;
+    return out;
+  }
+
+  var MERGERS = {
+    children: mergeChildren, records: mergeRecords, wrongbook: mergeWrongbook, finals: mergeWhole,
+    english: mergeEnglish, activity: mergeActivity
+  };
 
   /* local / remote / base 都是解析后的 JSON 值（没有就是 null）。
    * remote 为 undefined 表示「云端没有可用数据」，此时不用基线推断删除。
@@ -433,7 +507,8 @@
   var api = {
     DATASETS: DATASETS, NAMES: NAMES, stable: stable,
     mergeDataset: mergeDataset, mergeChildren: mergeChildren, mergeRecords: mergeRecords,
-    mergeWrongbook: mergeWrongbook, mergeWhole: mergeWhole, parseEnvelope: parseEnvelope,
+    mergeWrongbook: mergeWrongbook, mergeWhole: mergeWhole, mergeEnglish: mergeEnglish, mergeActivity: mergeActivity,
+    ENGLISH_OFFSETS: ENGLISH_OFFSETS, parseEnvelope: parseEnvelope,
     createEngine: createEngine
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;

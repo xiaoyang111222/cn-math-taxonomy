@@ -109,8 +109,9 @@ test('同步载荷与 base_updated_at 校验', async () => {
   assert.deepStrictEqual(L.parseBase(undefined), { ok: true, base: null });
   assert.deepStrictEqual(L.parseBase(123), { ok: true, base: 123 });
   ['12', -1, 1.5, NaN, {}].forEach((bad) => assert.strictEqual(L.parseBase(bad).ok, false));
-  assert.deepStrictEqual(Object.values(L.DATASETS), ['cnmChildren.v1', 'cnmChildren.records.v1', 'cnmWrong.v1', 'cnmFinals.v1']);
+  assert.deepStrictEqual(Object.values(L.DATASETS), ['cnmChildren.v1', 'cnmChildren.records.v1', 'cnmWrong.v1', 'cnmFinals.v1', 'cnmEnglish.v1', 'cnmActivity.v1']);
   assert.ok(L.isDataset('wrongbook'));
+  assert.ok(L.isDataset('english') && L.isDataset('activity'));
   ['toString', '__proto__', 'users', 5, null].forEach((bad) => assert.ok(!L.isDataset(bad)));
 });
 

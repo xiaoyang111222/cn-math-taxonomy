@@ -18,7 +18,9 @@ export const DATASETS = {
   children: 'cnmChildren.v1',
   records: 'cnmChildren.records.v1',
   wrongbook: 'cnmWrong.v1',
-  finals: 'cnmFinals.v1'
+  finals: 'cnmFinals.v1',
+  english: 'cnmEnglish.v1',
+  activity: 'cnmActivity.v1'
 };
 
 export function isDataset(name) {
