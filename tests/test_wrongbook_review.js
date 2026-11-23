@@ -240,6 +240,76 @@ test('mergeWrongbook：两边一致时原样返回', () => {
   assert.deepStrictEqual(merge({ c1: [a] }, { c1: [Object.assign({}, a)] }), a);
 });
 
+test('dueBuckets：只数有到期题的桶；dueTotal 是各桶之和', () => {
+  const { api } = load();
+  api.record(entry('q1'));
+  api.record(entry('q2'));
+  api.record(entry('q1', { childId: 'c2' }));
+  api.record(entry('q9', { childId: 'c3', ts: T0 + 10 * DAY }));
+  assert.strictEqual(api.dueTotal(T0 + DAY), 3);
+  assert.strictEqual(api.dueBuckets(T0 + DAY), 2);
+  assert.strictEqual(api.dueBuckets(T0), 0);
+  assert.strictEqual(api.dueBuckets(T0 + 11 * DAY), 3);
+});
+
+/* ------------------------------------------------------------ reviewedAt：谁的复测进度更新 */
+
+test('record / review 都会更新 reviewedAt（再次答错取新 ts，复测取 now，已毕业的不动）', () => {
+  const { api } = load();
+  api.record(entry('q1'));
+  assert.strictEqual(api.list('c1')[0].reviewedAt, T0);
+  assert.strictEqual(api.review('c1', 'q1', true, T0 + DAY).reviewedAt, T0 + DAY);
+  assert.strictEqual(api.review('c1', 'q1', false, T0 + 5 * DAY).reviewedAt, T0 + 5 * DAY, '未过也算一次复测');
+  api.record(entry('q1', { ts: T0 + 6 * DAY }));
+  assert.strictEqual(api.list('c1')[0].reviewedAt, T0 + 6 * DAY);
+  [T0 + 7 * DAY, T0 + 9 * DAY, T0 + 13 * DAY, T0 + 30 * DAY].forEach((t) => api.review('c1', 'q1', true, t));
+  const g = api.review('c1', 'q1', true, T0 + 99 * DAY);
+  assert.strictEqual(g.done, true);
+  assert.strictEqual(g.reviewedAt, T0 + 30 * DAY, '已毕业再点不改动');
+});
+
+test('mergeWrongbook：一台已毕业、另一台之后又答错回炉，回炉不被毕业盖掉（两个方向）', () => {
+  const grad = legacy('q1', T0, { stage: 3, done: true, reviewedAt: T0 + 20 * DAY });
+  const relapse = legacy('q1', T0 + 25 * DAY, { count: 2, stage: 0, dueAt: T0 + 26 * DAY, done: false, reviewedAt: T0 + 25 * DAY });
+  [merge({ c1: [grad] }, { c1: [relapse] }), merge({ c1: [relapse] }, { c1: [grad] })].forEach((m) => {
+    assert.strictEqual(m.done, false);
+    assert.strictEqual(m.stage, 0);
+    assert.strictEqual(m.dueAt, T0 + 26 * DAY);
+    assert.strictEqual(m.reviewedAt, T0 + 25 * DAY);
+    assert.strictEqual(m.count, 2);
+  });
+});
+
+test('mergeWrongbook：旧副本不覆盖新进度，即使旧副本 stage 更高或已毕业（两个方向）', () => {
+  const fresh = legacy('q1', T0, { stage: 1, dueAt: T0 + 40 * DAY, done: false, reviewedAt: T0 + 37 * DAY });
+  const staleHigh = legacy('q1', T0, { stage: 2, dueAt: T0 + 50 * DAY, done: false, reviewedAt: T0 + 30 * DAY });
+  const staleGrad = legacy('q1', T0, { stage: 3, done: true, reviewedAt: T0 + 30 * DAY });
+  [staleHigh, staleGrad].forEach((stale) => {
+    [merge({ c1: [fresh] }, { c1: [stale] }), merge({ c1: [stale] }, { c1: [fresh] })].forEach((m) => {
+      assert.strictEqual(m.stage, 1);
+      assert.strictEqual(m.done, false);
+      assert.strictEqual(m.dueAt, T0 + 40 * DAY);
+      assert.strictEqual(m.reviewedAt, T0 + 37 * DAY);
+    });
+  });
+});
+
+test('mergeWrongbook：较新的一次「没过」复测不被另一台 dueAt 更晚的旧进度盖掉', () => {
+  const passed = legacy('q1', T0, { stage: 1, dueAt: T0 + 13 * DAY, done: false, reviewedAt: T0 + 10 * DAY });
+  const failed = legacy('q1', T0, { stage: 1, dueAt: T0 + 12 * DAY, done: false, reviewedAt: T0 + 11 * DAY });
+  [merge({ c1: [passed] }, { c1: [failed] }), merge({ c1: [failed] }, { c1: [passed] })].forEach((m) => {
+    assert.strictEqual(m.dueAt, T0 + 12 * DAY);
+    assert.strictEqual(m.reviewedAt, T0 + 11 * DAY);
+  });
+});
+
+test('mergeWrongbook：没有 reviewedAt 的老副本仍按 done > stage > dueAt 比较，且一边有一边没有时同样', () => {
+  const withAt = legacy('q1', T0, { stage: 1, dueAt: T0 + 3 * DAY, done: false, reviewedAt: T0 + DAY });
+  const without = legacy('q1', T0, { stage: 2, dueAt: T0 + 9 * DAY, done: false });
+  assert.strictEqual(merge({ c1: [withAt] }, { c1: [without] }).stage, 2);
+  assert.strictEqual(merge({ c1: [without] }, { c1: [withAt] }).stage, 2);
+});
+
 /* ------------------------------------------------------------ 顺手修的 bug */
 
 test('诊断页：childBar 在演示模式返回 null，三处调用都不能直接 append(null)', () => {

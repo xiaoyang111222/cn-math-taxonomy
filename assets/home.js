@@ -114,11 +114,16 @@
   function renderDueHome() {
     var box = $('due-home');
     if (!box) return;
-    var n = 0;
+    var n = 0, spread = false;
     try {
-      if (window.CnmWrong && window.CnmWrong.dueTotal && loggedIn()) n = window.CnmWrong.dueTotal(Date.now());
-    } catch (e) { n = 0; }
+      if (window.CnmWrong && window.CnmWrong.dueTotal && loggedIn()) {
+        n = window.CnmWrong.dueTotal(Date.now());
+        spread = n > 0 && !!window.CnmWrong.dueBuckets && window.CnmWrong.dueBuckets(Date.now()) > 1;
+      }
+    } catch (e) { n = 0; spread = false; }
     if (n > 0) setText('due-home-n', String(n));
+    var all = $('due-home-all');
+    if (all) all.hidden = !spread;
     box.hidden = !(n > 0);
   }
   renderDueHome();

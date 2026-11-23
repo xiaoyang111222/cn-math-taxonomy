@@ -65,6 +65,7 @@
       hit.stage = 0;
       hit.dueAt = ts + DAY_MS;
       hit.done = false;
+      hit.reviewedAt = ts;
     } else {
       rows.push({
         qid: qid,
@@ -81,7 +82,8 @@
         count: 1,
         stage: 0,
         dueAt: ts + DAY_MS,
-        done: false
+        done: false,
+        reviewedAt: ts
       });
     }
     rows.sort(function (a, b) { return (a.ts || 0) - (b.ts || 0); });
@@ -137,6 +139,16 @@
     return n;
   }
 
+  /* 有到期题的桶（孩子 / guest）个数，首页据此判断合计数是否跨孩子。 */
+  function dueBuckets(now) {
+    var s = store();
+    var t = now == null ? Date.now() : now;
+    return Object.keys(s).filter(function (k) {
+      return bucketOf(s, k).some(function (e) { return isDue(e, t); });
+    }).length;
+  }
+
+  /* reviewedAt：复测进度（stage / dueAt / done）最后一次变动的时间，record 与 review 都会更新，同步合并按它判断谁的进度更新。 */
   /* 通过：stage + 1，原 stage 为最后一轮则毕业；未过：stage 不变，明天再测。返回更新后的条目，找不到返回 null。 */
   function review(childId, qid, passed, now) {
     var s = store();
@@ -148,6 +160,7 @@
     if (!hit.done) {
       var t = now == null ? Date.now() : now;
       var stage = stageOf(hit);
+      hit.reviewedAt = t;
       if (passed) {
         if (stage >= LAST_STAGE) {
           hit.stage = LAST_STAGE;
@@ -205,6 +218,7 @@
     isDue: isDue,
     dueList: dueList,
     dueTotal: dueTotal,
+    dueBuckets: dueBuckets,
     review: review,
     answerKey: answerKey,
     reviewLabel: reviewLabel

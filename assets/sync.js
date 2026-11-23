@@ -144,8 +144,12 @@
   var DAY_MS = 24 * 60 * 60 * 1000;
   function wrongStage(e) { var n = Math.floor(Number(e && e.stage)); return n >= 0 ? Math.min(n, 3) : 0; }
   function wrongDueAt(e) { var d = Number(e && e.dueAt); return d > 0 ? d : ms(e && e.ts) + DAY_MS; }
-  /* 复测进度谁更靠前：done=true 优先，其次 stage 高者，其次 dueAt 晚者；打平返回 0。 */
+  function wrongReviewedAt(e) { var n = Number(e && e.reviewedAt); return n > 0 ? n : 0; }
+  /* 复测进度谁更新：两边都带 reviewedAt 且不同，较新者胜（毕业后又答错回炉、没过的复测都能盖过旧进度）；
+   * 否则（老副本没有 reviewedAt、或时间相同）done=true 优先，其次 stage 高者，其次 dueAt 晚者；打平返回 0。 */
   function progressCmp(a, b) {
+    var ra = wrongReviewedAt(a), rb = wrongReviewedAt(b);
+    if (ra && rb && ra !== rb) return ra > rb ? 1 : -1;
     if (!!a.done !== !!b.done) return a.done ? 1 : -1;
     if (wrongStage(a) !== wrongStage(b)) return wrongStage(a) > wrongStage(b) ? 1 : -1;
     var da = wrongDueAt(a), db = wrongDueAt(b);
@@ -158,7 +162,7 @@
     var c = progressCmp(r, l);
     var best = c > 0 ? r : (c < 0 ? l : win);
     var out = Object.assign({}, win);
-    ['stage', 'dueAt', 'done'].forEach(function (k) {
+    ['stage', 'dueAt', 'done', 'reviewedAt'].forEach(function (k) {
       if (k in best) out[k] = best[k]; else delete out[k];
     });
     if (out.done) delete out.dueAt;

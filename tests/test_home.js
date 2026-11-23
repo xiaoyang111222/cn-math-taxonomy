@@ -47,7 +47,7 @@ const INDEX_URL = 'data/questions/index.json';
 
 function load(search, topicRows, extraWindow) {
   const ids = {};
-  ['due-home', 'due-home-n', 'n-topics', 'n-edges', 'n-questions', 'n-subjects', 'cover-morality', 'hero-start', 'hero-demo', 'load-error', 'grades'].forEach(id => { ids[id] = element(); });
+  ['due-home', 'due-home-n', 'due-home-all', 'n-topics', 'n-edges', 'n-questions', 'n-subjects', 'cover-morality', 'hero-start', 'hero-demo', 'load-error', 'grades'].forEach(id => { ids[id] = element(); });
   ids.grades.setAttribute('aria-busy', 'true');
   const calls = [];
   function fetch(url) {
@@ -191,14 +191,14 @@ function load(search, topicRows, extraWindow) {
     assert.ok(ids['hero-demo'].getAttribute('href').indexOf('subject=english') >= 0);
   });
 
-  const dueWindow = (loggedIn, n) => {
+  const dueWindow = (loggedIn, n, buckets) => {
     const handlers = {};
-    const state = { loggedIn, n };
+    const state = { loggedIn, n, buckets: buckets === undefined ? 1 : buckets };
     return {
       state, handlers,
       win: {
         CnmAccount: { isLoggedIn: () => state.loggedIn },
-        CnmWrong: { dueTotal: () => state.n },
+        CnmWrong: { dueTotal: () => state.n, dueBuckets: () => state.buckets },
         addEventListener: (name, fn) => { handlers[name] = fn; }
       }
     };
@@ -209,6 +209,19 @@ function load(search, topicRows, extraWindow) {
     const { ids } = load('', undefined, d.win);
     assert.strictEqual(ids['due-home'].hidden, false);
     assert.strictEqual(ids['due-home-n'].textContent, '5');
+  });
+
+  await test('首页待复测卡片：到期题分散在多个孩子名下时标明是全部孩子合计，单个孩子不标', async () => {
+    const multi = load('', undefined, dueWindow(true, 6, 2).win).ids;
+    assert.strictEqual(multi['due-home-n'].textContent, '6');
+    assert.strictEqual(multi['due-home-all'].hidden, false);
+    const single = load('', undefined, dueWindow(true, 6, 1).win).ids;
+    assert.strictEqual(single['due-home-all'].hidden, true);
+    const d = dueWindow(true, 6, 2);
+    const { ids } = load('', undefined, d.win);
+    d.state.buckets = 1;
+    d.handlers['cnm:sync']();
+    assert.strictEqual(ids['due-home-all'].hidden, true);
   });
 
   await test('首页待复测卡片：未登录或没有到期题都不显示', async () => {
