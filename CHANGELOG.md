@@ -789,3 +789,101 @@
 - 退订链接是 GET：邮件安全网关预取链接可能误退订。属行业通行做法，改成确认页 / One-Click POST 属于功能改动，留给上级裁决。
 - `sync_data` 单页 50 人一次全载入内存：单条上限由同步接口限制，67 人量级远低于 Worker 内存上限，规模上去后再说。
 - 手动在周日触发会占掉上一周的 week_key，周一 cron 因换周会再发一次；只在手动真发时可能出现，当前 dry-run 阶段不影响。
+
+## 2026-11-23（第二批：英语「每日一句」并入本站，30 天起步）
+
+按 `~/english-daily-brief.md` 实现。只在本地提交，未部署、未推送，`DIGEST_DRY_RUN` 保持 `"1"` 未动。`npm test` 全绿（新增 5 个测试文件并入 npm test 与 CI；另有一个不进 CI 的浏览器端到端脚本）。
+
+### 提交
+
+| 哈希 | 内容 |
+|---|---|
+| `2e8b1d2` | 30 天句子表 `data/english/days.json`、`assets/english.js`（进度与解锁 / 复习规则）、`assets/activity.js`（学习打卡）、`english/scenes.js`（动画模板）、三个测试 |
+| `ef96125` | `/english/` 页面（index.html / app.js / style.css）、sw 缓存清单、`scripts/deploy-cf.sh` 发布清单、CI 步骤、浏览器端到端脚本 |
+| `a35f50a` | `sync.js` 新增 english / activity 两个数据集及合并规则，`api/lib.js` 放行白名单，错题复测与诊断完成接入打卡，同步测试 |
+| `fb3cfda` | 首页「今日学习」卡 + 学科区下方的英语入口，周报英语行，首页与周报测试 |
+
+### 第 8–30 天句子表（第 1–7 天按简报照抄）
+
+| 天 | 句子 | 意译 | 模板 | sceneProps |
+|---|---|---|---|---|
+| 8 | I am hungry. | 我饿了。 | emotion | mood=hungry |
+| 9 | I want an apple. | 我想要一个苹果。 | eat | food=apple, mode=want |
+| 10 | I eat an apple. | 我吃一个苹果。 | eat | food=apple, mode=eat |
+| 11 | I have a dog. | 我有一只狗。 | show | items=[dog], mode=have |
+| 12 | I can run. | 我会跑。 | run | — |
+| 13 | I can sing. | 我会唱歌。 | sing | — |
+| 14 | This is my mom. | 这是我妈妈。 | family | who=mom |
+| 15 | I like my mom. | 我喜欢我妈妈。 | family | who=mom, mode=like |
+| 16 | I sleep every night. | 我每晚睡觉。 | sleep | — |
+| 17 | I can sing a song. | 我会唱一首歌。 | sing | extra=song |
+| 18 | It is sunny. | 今天天气晴朗。 | weather | kind=sunny |
+| 19 | It is rainy. | 今天在下雨。 | weather | kind=rainy |
+| 20 | I am sleepy. | 我困了。 | emotion | mood=sleepy |
+| 21 | I like milk and cake. | 我喜欢牛奶和蛋糕。 | eat | food=milk, food2=cake, mode=like |
+| 22 | I like cats and dogs. | 我喜欢猫和狗。 | show | items=[cat, dog], mode=like |
+| 23 | I read a book at night. | 我晚上读一本书。 | read | when=night, item=book |
+| 24 | I swim in the sun. | 我在阳光下游泳。 | swim | sun=true |
+| 25 | It is rainy at night. | 晚上下雨。 | weather | kind=rainy, night=true |
+| 26 | I want to swim. | 我想去游泳。 | swim | mode=want |
+| 27 | I am happy at home. | 我在家很开心。 | emotion | mood=happy, place=home |
+| 28 | I have a cat at home. | 我家里有一只猫。 | show | items=[cat], mode=have, place=home |
+| 29 | I like my mom and dad. | 我喜欢我的爸爸妈妈。 | family | who=[mom, dad], mode=like |
+| 30 | I like my family. | 我喜欢我的家人。 | family | who=all, mode=like |
+
+约束核对（`tests/test_english_data.js` 锁住）：每句 3–6 词；`words` 逐词覆盖全句、每词有中文；每句 3 个换词变体，只换一个词，且同一句的变体换的是同一个位置（页面据此做「换词造句」的空位）；`and / in / at / the / to` 等小词只在第 21–30 天出现；每句都带预留的 `audio: null`。前 20 天只用 be / have / like / can / want / 基础动词；难度从「I am X」逐步到带 and / 地点短语的句子。
+
+### 模板清单（10 个，`english/scenes.js`，CSS / SVG 动画，`prefers-reduced-motion` 下不播放）
+
+| 模板 | 用于第几天 |
+|---|---|
+| emotion（表情：happy / hungry / sleepy，可加房子） | 1, 8, 20, 27 |
+| show（指物展示：小人指着道具，like 时飘爱心） | 2, 11, 22, 28 |
+| eat（吃喝：eat 咀嚼 / want 想法泡泡 / like 爱心） | 3, 9, 10, 21 |
+| swim（游泳，含岸边想去游泳、太阳） | 4, 24, 26 |
+| family（家人，指着妈妈 / 爸爸 / 全家） | 5, 14, 15, 29, 30 |
+| read（白天 / 夜晚读书，story 加星星） | 6, 7, 23 |
+| run（跑步） | 12 |
+| sing（唱歌，song 音符更多） | 13, 17 |
+| sleep（夜晚睡觉） | 16 |
+| weather（晴天 / 雨天 / 雨夜） | 18, 19, 25 |
+
+道具图 7 个：apple、milk、cake、cat、dog、book、story。固定简笔小人只有一套（中性配色，妈妈 / 爸爸只靠发型与裙子区分）。
+
+### 产品口径落地
+
+- **每日闭环**：听（常速 / 慢速，逐词高亮）→ 动画猜意思 → 三层翻译折叠（逐词对照 / 字面连读 / 整句意译，词与译词同色）→ 拆词发音 → 跟读（可选，不进打卡）→ 词卡排序 → 换词造句 → 三项打卡（翻开任一层翻译即勾「猜出意思」、排对即勾、换了一个词即勾「造句」）→ 全满才能点完成。
+- **解锁**：下一句 = 最小的未学 day；一个自然日（本地时区）只能完成 1 句，学完当天显示完成卡与明日预告，30 句学完显示完成态与「敬请期待下一阶段」。
+- **复习**：完成序号 n0 的句子在学到第 n0+2、n0+4、n0+7、n0+15 句那天各回炉一次（`reviews[day] = {dueOrd, doneOrds}`），形式为词卡排序 + 听写，不占新句名额；做完一轮 `dueOrd` 顺延，四轮后 `dueOrd=null` 不再到期。一天最多列 5 条。
+- **朗读**：`speechSynthesis`（优先 en-US），有 `boundary` 事件按事件推进高亮，没有就按词长估算；浏览器没有朗读时给文字提示、仍做高亮，流程不被挡住；听写在无语音时改成凭动画记忆写。`audio` 字段只在数据层预留，页面本批不读。
+- **孩子**：复用档案；有档案时顶部选孩子，没档案用 guest 桶，guest 有进度时选单里多一项「未建档时学的」。
+
+### activity 接入点（`cnmActivity.v1`）
+
+1. **每日一句完成**：`assets/english.js` 的 `completeDay` 成功写入进度后调用 `CnmActivity.mark`（任何调用方都会打卡；复习不打卡）。
+2. **错题复测通过**：`wrongbook/wrongbook.js` 的 `doReview`，`CW.review` 成功且 `passed` 时 mark（含 guest 桶）。
+3. **诊断完成**：`diagnose/app.js` 的 `saveToChild`——这是现成的「做完一次诊断」落点。只在该孩子**首次存下这条诊断记录**（`CC.hasRecord` 为假）时 mark，所以重新打开已存的结果页、换孩子重渲染都不会重复打卡。**没有接入的情形**：演示模式、没有选孩子档案（诊断记录本身也不存）、一题没答的诊断——这些不 mark。没有用 `renderResult` 当回调，是因为它在「继续未清除的存档」时也会跑，会把几天前已完成的诊断记成今天。
+
+`tests/test_english_sync.js` 用静态断言锁住这三处接入与四个页面引入了 `assets/activity.js`。
+
+### 同步
+
+`sync.js` 数据集由 4 个增至 6 个（`english`=`cnmEnglish.v1`、`activity`=`cnmActivity.v1`），`api/lib.js` 的 `DATASETS` 白名单同步放行（worker 只靠 `isDataset`，不需另改；D1 表无需迁移，`sync_data` 的 dataset 是自由文本）。合并规则：english 的 `done` 按 day 取并集、同一天取 `at` 晚者（相同取本地）；`reviews` 按 day 取并集，`doneOrds` 取并集，下一轮 `dueOrd` 按合并后做过的轮数与 n0 重算；activity 日期取并集去重排序。两者都不做删除推断。测试覆盖纯合并函数和两台设备经假云端的完整同步流程。
+
+### 首页与周报
+
+- 首页 `#due-home` 由一行链接升级为「今日学习」卡：待复测 N 题（沿用第一批口径——全部孩子合计，分散在多个孩子名下时标「（全部孩子合计）」，没有改成当前孩子口径）、今日英语一句（未学 / 已完成 / 30 句已学完）、到期旧句复习 M 句、连续学习 S 天；英语与连续天数取站内当前孩子（`CnmChildren.current()`，没有则 guest）。登录用户卡常在；未登录时当前桶有英语或打卡进度才显示游客版。学科区下方加全访客可见的「英语每日一句 · 每天 3 分钟 →」。数字条、学科胶囊、登录入口、统计埋点、页脚友链都没动，`test_home.js` 里加了静态核对。第一批的两条首页测试随之改了断言：登录用户没有到期题时卡片仍在、只隐藏待复测一行。
+- 周报：`summarizeUser` 多算 `english = {week, total, streak}`，正文加一行「英语每日一句：本周学了 N 句，连续学习 S 天」。`week` 是最近 7 天完成的新句数（与前端 `weekStats` 同口径，各孩子 / guest 桶相加）；`streak` 取各桶中最长的当前连续段，以发送日的 Asia/Shanghai 日期为锚（当天没打卡就从前一天数，所以周一早上周日打过卡仍连着）。有英语数据才加这一行；**只有英语也可发**，但只有「本周学过或仍在连续打卡」才算有内容——学完很久且没在打卡的账号仍按没内容跳过，免得每周发空小结（若上级想放宽成「有过英语数据就发」，改 `digest.js` 的 `englishFresh` 一处即可）。原有四项与跳过规则、`items` 字段形状不变（仅在有英语数据时多两个字段）。
+
+### 测试
+
+- 新增并入 npm test 与 CI：`test_english_data.js`（8 项）、`test_english_logic.js`（13 项）、`test_activity.js`（7 项）、`test_english_sync.js`（8 项）；`test_digest.js` 新增 5 项（含「只有英语的用户不被跳过、正文含英语行」）；`test_home.js` 改 2 项、新增 3 项；`test_api.js` 的数据集清单断言加了两项。
+- `tests/test_english_browser.js`：真实 Chrome 走完整的一天（翻开翻译、排序、造句、完成、刷新仍是完成态、过一天解锁第 2 句、复习排序 + 听写、首页卡片），10 项通过。同 `test_children_browser.js`，需要本机 Chrome，不进 CI / npm test。
+- 最终 `npm test` 退出码 0，`VALIDATION PASSED`、`VERIFICATION PASSED`。
+
+### 需要上级知道的
+
+- **sw 版本没有再升**：HEAD 已是 `v39`（上一批复查提交升的），且 `test_questions_split.js` 固定断言 `v39`；本批新增的 `english/*`、`assets/english.js`、`assets/activity.js`、`data/english/days.json` 都加进了 v39 的清单。若 v39 已经部署过，需要另升一版并同步改那条断言。
+- **部署清单**：`scripts/deploy-cf.sh` 已加 `english/` 与 `data/english/`；不加的话页面会 404。
+- **已知局限**：复习按完成序号计，30 句学完后序号不再增长，所以第 16–30 句的第 7、15 次回炉可能永远排不到；学完后的巩固留给下一阶段。动画和 TTS 在真实手机浏览器 / 有真实语音的环境下只在桌面 Chrome 里看过静态帧与流程，iOS Safari 的语音与 `boundary` 事件行为未实测。
+- 未做：分年级（二期）、录制音频、sitemap 收录 `/english/`（`test_kp_pages.js` 固定了 sitemap 条数，没有顺手改）。
