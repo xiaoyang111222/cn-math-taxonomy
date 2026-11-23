@@ -1,7 +1,8 @@
 /* 英语每日一句的进度存储与解锁 / 复习规则。只读写 localStorage（cnmEnglish.v1），不上传、不需要账号；登录后由 sync.js 同步。
  * 结构 { [孩子id 或 guest]: { done: { [day]: {at, checks} }, reviews: { [day]: {dueOrd, doneOrds: []} } } }。
  * 解锁按进度不按日历：下一句 = 最小的未学 day；一个自然日只学 1 句新句。
- * 旧句复习按「完成序号」计：第 n0 句完成后，在学到第 n0+2、n0+4、n0+7、n0+15 句的那天各回炉一次，不占新句名额。window.CnmEnglish。 */
+ * 旧句复习按「完成序号」计：第 n0 句完成后，在学到第 n0+2、n0+4、n0+7、n0+15 句的那天各回炉一次，不占新句名额。
+ * 30 句学完后序号不再增长：之后每过一个自然日，序号视同 +1，这样第 16–30 句的第 7、15 天回炉仍能按期出现，而不是永远排不到。window.CnmEnglish。 */
 (function () {
   'use strict';
   var KEY = 'cnmEnglish.v1';
@@ -9,7 +10,8 @@
   var TOTAL = 30;
   var OFFSETS = [2, 4, 7, 15];
   var REVIEW_CAP = 5;
-  var WEEK_MS = 7 * 24 * 60 * 60 * 1000;
+  var DAY_MS = 24 * 60 * 60 * 1000;
+  var WEEK_MS = 7 * DAY_MS;
   var CHECKS = ['guess', 'order', 'build'];
 
   function read() {
@@ -40,6 +42,10 @@
     var d = new Date(ms);
     return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
   }
+  function dayNum(str) {
+    var p = String(str).split('-');
+    return Date.UTC(Number(p[0]), Number(p[1]) - 1, Number(p[2])) / DAY_MS;
+  }
   function nextUnlearned(b) {
     for (var d = 1; d <= TOTAL; d++) if (!isObj(b.done[d])) return d;
     return null;
@@ -63,7 +69,14 @@
     var finished = n >= TOTAL;
     var next = nextUnlearned(b);
     var day = completedToday ? Math.max.apply(null, todayDone) : next;
-    var ordToday = completedToday ? n : n + 1;
+    var ordToday;
+    if (finished) {
+      var lastAt = 0;
+      days.forEach(function (d) { var at = Number(b.done[d].at) || 0; if (at > lastAt) lastAt = at; });
+      ordToday = n + (dayNum(today) - dayNum(dateStr(lastAt)));
+    } else {
+      ordToday = completedToday ? n : n + 1;
+    }
     var due = [];
     Object.keys(b.reviews).forEach(function (k) {
       var r = b.reviews[k];

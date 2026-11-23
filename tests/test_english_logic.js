@@ -161,6 +161,43 @@ test('30 句学完：显示完成态，没有新句；复习仍可做', () => {
   assert.ok(st.reviews.length > 0);
 });
 
+test('30 句学完后：每过一天序号视同 +1，尾部复习仍能到期', () => {
+  const { E, raw } = load();
+  learn(E, 'c1', 30); // 第 30 句在 11 月 30 日学完
+  const has = (t, day, stage) => E.todayState('c1', t).reviews.some((r) => r.day === day && r.stage === stage);
+  // 把已到期复习全部做完，但跳过指定的一句（复习列表只显示前 5 条，免得目标被截掉）
+  function drainExcept(child, t, keepDay) {
+    for (let i = 0; i < 200; i++) {
+      const st = E.todayState(child, t);
+      const todo = st.reviews.filter((r) => r.day !== keepDay);
+      if (!todo.length) return;
+      todo.forEach((r) => E.completeReview(child, r.day));
+    }
+    throw new Error('drain did not finish');
+  }
+  // 第 16 句前三轮做完（分别在学到第 18、20、23 句那天到期），第 4 轮排到序号 31
+  E.completeReview('c1', 16);
+  E.completeReview('c1', 16);
+  E.completeReview('c1', 16);
+  assert.deepStrictEqual(raw().c1.reviews['16'], { dueOrd: 31, doneOrds: [18, 20, 23] });
+  // 学完当天（序号 30）：第 16 句第 4 轮还没到；次日（序号视同 31）到期
+  assert.strictEqual(has(at(11, 30, 20), 16, 4), false);
+  drainExcept('c1', at(12, 1), 16);
+  assert.strictEqual(has(at(12, 1), 16, 4), true);
+  // 第 30 句第 1 轮（dueOrd 32）：次日没到，第 3 天到期
+  assert.strictEqual(has(at(12, 1), 30, 1), false);
+  drainExcept('c1', at(12, 2), 30);
+  assert.strictEqual(has(at(12, 2), 30, 1), true);
+  // 第 30 句前三轮做完，第 4 轮排到序号 45：学完后第 14 天没到，第 15 天到期
+  E.completeReview('c1', 30);
+  E.completeReview('c1', 30);
+  E.completeReview('c1', 30);
+  assert.deepStrictEqual(raw().c1.reviews['30'], { dueOrd: 45, doneOrds: [32, 34, 37] });
+  assert.strictEqual(has(at(12, 14), 30, 4), false);
+  drainExcept('c1', at(12, 15), 30);
+  assert.strictEqual(has(at(12, 15), 30, 4), true);
+});
+
 test('weekStats：最近 7 天完成的新句数，不含更早的', () => {
   const { E } = load();
   learn(E, 'c1', 10);
