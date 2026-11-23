@@ -892,3 +892,26 @@
 
 - **复习尾部已修**：30 句学完后，`todayState` 按「学完后每过一个自然日、序号视同 +1」推进，第 16–30 句的第 7、15 天回炉仍能按期出现（第 30 句第 4 轮在学完后第 15 天到期）。`test_english_logic.js` 加一例覆盖。上面「已知局限」里「第 16–30 句的第 7、15 次回炉可能永远排不到」一条作废。
 - **sw 升 v40**：v39 已在线上，缓存清单变了必须换版才能推给老用户；`sw.js` VERSION v39→v40，`test_questions_split.js` 断言同步改到 v40。
+
+## 英语每日一句：慢速听改为逐词慢读 + 点词单读（2026-11-23）
+
+用户实测反馈：3–6 个词的句子把 rate 从 1 拉到 0.6 只是变调变慢，听不出词界，对单个词也没帮助。只改 `/english/` 前端与 `assets/english.js` 的常量，没动 `api/`、`data/english/days.json` 结构、三项打卡判定与同步数据结构。
+
+### 改动
+
+- **逐词慢读**：「慢速听」按钮改为「逐词慢读」，「慢速跟读」同步改成同一个行为（同一问题，同一处修）。按词序一词一个 utterance，每词 `rate 0.75`，词与词之间停 420ms（要求区间 350–500ms），读到哪个词就高亮哪个词。高亮由队列自己推进，不依赖 `boundary` 事件。「听一遍」「常速跟读」仍是整句常速朗读，没动。
+- **点词单读**：今日句里的每个词、拆词区的词卡都可点（句子词用 `role=button` + `tabindex`，支持 Enter / 空格）。**第一下常速读该词；3 秒内再点同一个词读慢速（`rate 0.6`）**，读时高亮该词。取的是「第二次点击慢读」，没有加小喇叭按钮（词卡本身是 button，嵌套按钮不合法）；长按没做。拆词区标题与步骤提示里写明了「点一下听，再点一下慢读」。
+- **降级**：没有英语语音时，逐词慢读与点词按同样的词序和节奏（按词长估算每词时长 + 同样停顿）走文字高亮，并显示原有的「没有英语朗读」提示。有语音但 `onend` 迟迟不来时，每词另设估算时长 +2.5 秒的兜底，避免队列卡死。
+- 实现：`assets/english.js` 新增常量 `WORD_SLOW`（rate 0.75、gapMs 420、区间 350–500）、`WORD_TAP`（rate 1、slowRate 0.6、重复点窗口 3 秒）与纯函数 `wordPlan(words)`、`tapPlan(word, idx, slow)`；`english/app.js` 新增 `speakSeq(steps, opts)`，逐词慢读与点词单读共用同一套队列机制。
+
+### 测试与版本
+
+- sw 升 **v41**（`test_questions_split.js` 断言同步），缓存清单没有新增文件，所以无需改清单；`.github/workflows/ci.yml` 与 `package.json` 加入新测试。
+- 新增 `tests/test_english_slowread.js`（9 项）：常量、`wordPlan` 词序 / 停顿 / 末词不停、`tapPlan` 常速与慢速；用假 `speechSynthesis` 跑真实的 `speakSeq`，核对读出的词序与 rate、高亮序列（含最后清除）、词间停顿确实存在、无语音降级节奏、新朗读打断旧队列；以及页面接线与 sw 版本的静态核对。不测真实语音。
+- `npm test` 退出码 0，`VALIDATION PASSED`、`VERIFICATION PASSED`；`tests/test_english_browser.js`（真实 Chrome）10 项仍通过。
+
+### 需要上级知道的
+
+- **没动**：旧句复习听写里的「慢速播放」仍是整句 rate 0.6——听写要靠听，逐词读出来会降低难度，且简报没点名；若要一起改，把 `reviewCard` 里那个按钮接到 `speakSeq(EN.wordPlan(tokens))` 即可。
+- **未实测**：iOS Safari / 真机语音下的停顿手感（420ms 是按简报区间取的中值，需要时调 `WORD_SLOW.gapMs`）；桌面 Chrome 里只验证了无语音降级与页面流程。
+- 只做了本地提交，未部署、未推送；v41 上线前需要部署（`scripts/deploy-cf.sh`）。

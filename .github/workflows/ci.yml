@@ -113,6 +113,9 @@ jobs:
       - name: 英语每日一句：解锁、复习、打卡判定
         run: node tests/test_english_logic.js
 
+      - name: 英语每日一句：逐词慢读与点词单读
+        run: node tests/test_english_slowread.js
+
       - name: 学习打卡与连续天数
         run: node tests/test_activity.js
 

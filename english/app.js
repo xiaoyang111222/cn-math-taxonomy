@@ -116,6 +116,52 @@
     try { synth.speak(u); } catch (e) { showTtsNote(true); startTimers(); }
     if (!voice && synth.getVoices && synth.getVoices().length === 0) showTtsNote(false);
   }
+  /* 按队列逐项朗读（逐词慢读、点词单读共用）：steps 来自 EN.wordPlan / EN.tapPlan，每项 {idx, text, rate, gapMs}。
+   * 读到哪项就 setActive(idx)；项与项之间停 gapMs。没有语音或事件不触发时，按词长估算时间推进，高亮节奏不变。 */
+  function speakSeq(steps, opts) {
+    opts = opts || {};
+    stopSpeaking();
+    var id = speaking.id;
+    speaking.onActive = opts.onActive || null;
+    if (!synth) showTtsNote(true);
+    function later(fn, ms) { speaking.timers.push(setTimeout(fn, ms)); }
+    function end() {
+      if (speaking.id !== id) return;
+      clearTimers();
+      setActive(-1);
+      if (opts.onEnd) opts.onEnd();
+    }
+    function run(k) {
+      if (speaking.id !== id) return;
+      if (k >= steps.length) { end(); return; }
+      var s = steps[k];
+      var done = false;
+      var est = (0.3 + 0.07 * s.text.length) / s.rate * 1000;
+      function next() {
+        if (done || speaking.id !== id) return;
+        done = true;
+        clearTimers();
+        if (k + 1 >= steps.length) { end(); return; }
+        later(function () { run(k + 1); }, s.gapMs);
+      }
+      setActive(s.idx);
+      if (!synth) { later(next, est); return; }
+      var u = new window.SpeechSynthesisUtterance(s.text);
+      u.lang = 'en-US';
+      u.rate = s.rate;
+      var voice = pickVoice();
+      if (voice) u.voice = voice;
+      u.onend = next;
+      u.onerror = function (e) {
+        if (speaking.id !== id) return;
+        if (e && e.error && e.error !== 'canceled' && e.error !== 'interrupted') showTtsNote(true);
+        next();
+      };
+      later(next, est + 2500);
+      try { synth.speak(u); } catch (e) { showTtsNote(true); }
+    }
+    run(0);
+  }
   function showTtsNote(hard) {
     if (!ttsNote) return;
     ttsNote.hidden = false;
@@ -231,6 +277,15 @@
       });
     }
     function say(text, words, rate) { speak(text, words, { rate: rate, onActive: active }); }
+    function sayByWord() { speakSeq(EN.wordPlan(tokens), { onActive: active }); }
+    /* 点词单读：第一下常速读该词，3 秒内再点同一个词读慢速（rate 0.6）；读的时候高亮该词。句子里的词和拆词区词卡共用。 */
+    var lastTap = { i: -1, at: 0 };
+    function tapWord(i) {
+      var now = Date.now();
+      var slow = lastTap.i === i && now - lastTap.at <= EN.WORD_TAP.repeatWindowMs;
+      lastTap = slow ? { i: -1, at: 0 } : { i: i, at: now };
+      speakSeq(EN.tapPlan(tokens[i], i, slow), { onActive: active });
+    }
 
     var head = el('div', 'lesson-head');
     head.appendChild(el('span', 'lesson-no', mode === 'revisit' ? '回看第 ' + entry.day + ' 句' : '第 ' + entry.day + ' 句'));
@@ -243,7 +298,12 @@
     card.appendChild(scene);
     var sentence = el('p', 'sentence');
     tokens.forEach(function (w, i) {
-      var s = el('span', 'w ' + wc(i), w);
+      var s = el('span', 'w tap ' + wc(i), w);
+      s.setAttribute('role', 'button');
+      s.tabIndex = 0;
+      s.title = '点一下听这个词，再点一下慢读';
+      s.addEventListener('click', function () { tapWord(i); });
+      s.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tapWord(i); } });
       spans.push(s);
       if (i) sentence.appendChild(document.createTextNode(' '));
       sentence.appendChild(s);
@@ -252,12 +312,12 @@
     card.appendChild(sentence);
     var listen = el('div', 'row');
     listen.appendChild(btn('听一遍', 'primary', function () { say(entry.sentence, tokens, 1); }));
-    listen.appendChild(btn('慢速听', null, function () { say(entry.sentence, tokens, 0.6); }));
+    listen.appendChild(btn('逐词慢读', null, sayByWord));
     card.appendChild(listen);
     ttsNote = el('p', 'tts-note muted');
     ttsNote.hidden = true;
     card.appendChild(ttsNote);
-    card.appendChild(el('p', 'step-hint', '先看动画，猜猜这句话是什么意思，再往下翻开答案。'));
+    card.appendChild(el('p', 'step-hint', '先看动画，猜猜这句话是什么意思，再往下翻开答案。点句子里的词可以单独听，再点一下慢读。'));
 
     /* 2 三层翻译 */
     var trans = el('div', 'layers');
@@ -295,10 +355,10 @@
     card.appendChild(trans);
 
     /* 3 拆词发音 */
-    card.appendChild(el('h3', 'sec', '拆词发音'));
+    card.appendChild(el('h3', 'sec', '拆词发音（点词卡听，再点一下慢读）'));
     var chipRow = el('div', 'chips');
     entry.words.forEach(function (w, i) {
-      var c = btn('', 'chip ' + wc(i), function () { speak(w.en, null, { rate: 0.8 }); active(i); setTimeout(function () { active(-1); }, 900); });
+      var c = btn('', 'chip ' + wc(i), function () { tapWord(i); });
       c.appendChild(el('span', 'en', w.en));
       c.appendChild(el('span', 'zh', w.zh));
       chips.push(c);
@@ -311,7 +371,7 @@
     card.appendChild(el('h3', 'sec', '跟读（可选，不影响打卡）'));
     card.appendChild(el('p', 'step-hint', '先慢后快，跟着变色的词大声读一遍。不需要录音。'));
     var follow = el('div', 'row');
-    follow.appendChild(btn('慢速跟读', null, function () { say(entry.sentence, tokens, 0.6); }));
+    follow.appendChild(btn('逐词慢读', null, sayByWord));
     follow.appendChild(btn('常速跟读', null, function () { say(entry.sentence, tokens, 1); }));
     card.appendChild(follow);
 

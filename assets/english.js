@@ -13,6 +13,9 @@
   var DAY_MS = 24 * 60 * 60 * 1000;
   var WEEK_MS = 7 * DAY_MS;
   var CHECKS = ['guess', 'order', 'build'];
+  /* 朗读参数：逐词慢读每词 rate 0.75、词间停 420ms（要求 350–500ms）；点词单读第一下常速，同一词再点一下慢速 rate 0.6。 */
+  var WORD_SLOW = { rate: 0.75, gapMs: 420, gapMinMs: 350, gapMaxMs: 500 };
+  var WORD_TAP = { rate: 1, slowRate: 0.6, repeatWindowMs: 3000 };
 
   function read() {
     try {
@@ -151,7 +154,19 @@
     return { days: week, total: days.length };
   }
 
+  /* 逐词慢读的朗读队列：按词序一词一项，最后一词后不留停顿。 */
+  function wordPlan(words) {
+    return (words || []).map(function (w, i, a) {
+      return { idx: i, text: w, rate: WORD_SLOW.rate, gapMs: i < a.length - 1 ? WORD_SLOW.gapMs : 0 };
+    });
+  }
+  /* 点词单读：slow 为真读慢速，否则常速；gapMs 为 0（只有一项）。 */
+  function tapPlan(word, idx, slow) {
+    return [{ idx: idx, text: word, rate: slow ? WORD_TAP.slowRate : WORD_TAP.rate, gapMs: 0 }];
+  }
+
   window.CnmEnglish = {
+    WORD_SLOW: WORD_SLOW, WORD_TAP: WORD_TAP, wordPlan: wordPlan, tapPlan: tapPlan,
     KEY: KEY, GUEST: GUEST, TOTAL: TOTAL, OFFSETS: OFFSETS, REVIEW_CAP: REVIEW_CAP, CHECKS: CHECKS,
     progress: progress, doneCount: doneCount, hasProgress: hasProgress, checksComplete: checksComplete,
     todayState: todayState, completeDay: completeDay, completeReview: completeReview, weekStats: weekStats,

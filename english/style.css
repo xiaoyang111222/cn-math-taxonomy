@@ -45,6 +45,7 @@ main.eng { width: min(760px, 100%); margin: 0 auto; padding: 20px 16px 56px; }
 .w, .pair b, .zh { color: var(--wc, inherit); }
 .w { border-radius: 8px; padding: 0 4px; transition: background 0.12s, color 0.12s; }
 .w.on { background: var(--wc); color: #fff; }
+.w.tap { cursor: pointer; }
 .w.plain { color: var(--text); }
 .w.slot { color: var(--brand-strong); border-bottom: 3px dashed var(--brand); min-width: 3.4em; display: inline-block; text-align: center; }
 .w.slot.filled { border-bottom-style: solid; background: var(--brand-soft); }
