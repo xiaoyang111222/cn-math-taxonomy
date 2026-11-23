@@ -1,5 +1,14 @@
 # 变更日志
 
+## 2026-11-23（每周学习周报，Worker，尚未部署）
+
+- 新增 `api/digest.js`：每周一 00:00 UTC（北京 08:00）cron 触发 `sendWeeklyDigests`，给 `mail_consent = 1` 且未退订的用户发一封服务邮件。内容只来自用户自己同步的数据：第一个孩子的名字、本周新增错题（`ts` 在近 7 天）、待复测数（`api/lib.js` 的 `computeDue`，与前端 `isDue` 同规则，老条目按 `ts` + 1 天）、已毕业总数、本周诊断次数（诊断记录的 `savedAt`）、进行中的期末补漏计划（计划日期 7 天内）。四项全 0 且没有进行中的计划就不发。主题「知识图谱周报：{孩子名}有 N 道错题待复测」，N 为 0 时「知识图谱周报：本周学习小结」；正文 HTML + 纯文本，一个「去错题本复测」按钮，页脚是服务邮件说明和退订链接，不提付费产品。
+- 防重复：`digest_log(user_id, week_key)`，`week_key` 为按 Asia/Shanghai 算的 ISO 周（如 2026-W48），发送前查、发送成功后写；单个用户失败只记日志，不中断整批。`mail.js` 的 `sendMail` 多一个可选的第四参数 `{ html, headers }`，验证码邮件不受影响。
+- 退订：`users.digest_token`（32 位随机十六进制，首次发送时生成）、`users.digest_opt_out`；`GET /digest/unsub?t=…` 置退订并返回中文确认页，token 不能用于登录 / 同步。邮件带 `List-Unsubscribe` 头。
+- 管理端点：`POST /admin/digest/run`，请求头 `X-Admin-Key` 等于 `ADMIN_KEY`（未设置一律 404），`?dry=1` 强制只算不发，返回候选人数、将发送数、跳过原因、每封的打码邮箱与各项计数。
+- `wrangler.toml`：`[triggers] crons = ["0 0 * * 1"]`，`DIGEST_DRY_RUN = "1"`（只有恰好是 `"0"` 才真发，其余一律只算不发、不写发送日志）。`schema.sql` 新增 `digest_log` 与 `users` 两列；已上线的库要先跑一次 `api/migrations/0001_digest.sql`（见 `wrangler.toml` 顶部的上线步骤）。
+- 新增 `tests/test_digest.js`，加入 CI 与 `npm test`。
+
 ## 2026-11-23（错题到期复测）
 
 - 错题条目新增可选字段 `stage`（0–3）、`dueAt`（下次到期，毫秒）、`done`（已毕业），缺省按 stage 0、`ts` + 1 天、未毕业处理，老数据无需迁移。复测间隔 `INTERVALS_DAYS = [1, 3, 7, 15]`（`assets/wrongbook.js`；周报用的 `api/lib.js` 将存一份同值）。又答错：回到 stage 0、明天到期、清掉毕业标记；复测通过：stage + 1、按间隔排下一次，stage 3 通过即毕业；未过：stage 不变，明天再测。

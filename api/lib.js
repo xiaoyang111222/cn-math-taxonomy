@@ -130,3 +130,53 @@ export function parseBase(value) {
   if (Number.isSafeInteger(value) && value > 0) return { ok: true, base: value };
   return { ok: false };
 }
+
+/* ------------------------------------------------------------ 每周学习周报用 */
+
+export const DAY_MS = 24 * 60 * 60 * 1000;
+/* 错题复测间隔（天），下标是轮次 stage。与前端 assets/wrongbook.js 的 INTERVALS_DAYS 必须同值（tests/test_digest.js 核对）。 */
+export const INTERVALS_DAYS = [1, 3, 7, 15];
+export const WRONGBOOK_URL = 'https://math.pansgo.com/wrongbook/';
+export const DIGEST_UNSUB_BASE = 'https://api.math.pansgo.com/digest/unsub?t=';
+const SHANGHAI_OFFSET_MS = 8 * 60 * 60 * 1000;
+
+/* 一条错题此刻是否到期：与前端 assets/wrongbook.js 的 isDue 同规则。
+ * done=true 不到期；dueAt 缺省按 ts + 1 天（老条目，没有复测字段）。 */
+export function computeDue(entry, now) {
+  if (!entry || typeof entry !== 'object' || entry.done) return false;
+  const dueAt = Number(entry.dueAt);
+  const at = dueAt > 0 ? dueAt : (Number(entry.ts) || 0) + DAY_MS;
+  return at <= now;
+}
+
+/* ISO 周（周一为一周之始），按 Asia/Shanghai 的日历日算，如 2026-W48。 */
+export function isoWeekKey(ms) {
+  const local = new Date(ms + SHANGHAI_OFFSET_MS);
+  const day = Date.UTC(local.getUTCFullYear(), local.getUTCMonth(), local.getUTCDate());
+  const mondayOffset = (new Date(day).getUTCDay() + 6) % 7;
+  const monday = day - mondayOffset * DAY_MS;
+  const thursday = monday + 3 * DAY_MS;
+  const isoYear = new Date(thursday).getUTCFullYear();
+  const jan4 = Date.UTC(isoYear, 0, 4);
+  const week1Monday = jan4 - ((new Date(jan4).getUTCDay() + 6) % 7) * DAY_MS;
+  const week = 1 + Math.round((monday - week1Monday) / (7 * DAY_MS));
+  return isoYear + '-W' + String(week).padStart(2, '0');
+}
+
+/* 邮箱打码：a***@qq.com。 */
+export function maskEmail(email) {
+  const s = String(email || '');
+  const at = s.lastIndexOf('@');
+  if (at < 1) return '***';
+  return s.slice(0, 1) + '***' + s.slice(at);
+}
+
+/* 32 位小写十六进制随机串，只用于周报退订链接，不用于任何登录 / 鉴权。 */
+export function generateDigestToken() {
+  const bytes = crypto.getRandomValues(new Uint8Array(16));
+  return Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('');
+}
+
+export function isDigestToken(value) {
+  return typeof value === 'string' && /^[0-9a-f]{32}$/.test(value);
+}

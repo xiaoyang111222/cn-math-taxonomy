@@ -74,6 +74,9 @@ jobs:
       - name: 账号与同步 API 测试
         run: node tests/test_api.js
 
+      - name: 每周学习周报测试
+        run: node tests/test_digest.js
+
       - name: 知识点静态页测试
         run: node tests/test_kp_pages.js
 

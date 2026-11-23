@@ -4,10 +4,19 @@
 #   2. wrangler d1 execute math-pansgo --remote --file=api/schema.sql；
 #   3. wrangler secret put RESEND_API_KEY；可选 wrangler secret put OTP_PEPPER（验证码哈希的服务端盐）；
 #   4. 确认 MAIL_DRY_RUN 为 "0"（"1" 会把验证码明文写进日志，只准本地 / 灰度调试用）。
+# 每周学习周报（api/digest.js）上线前（人工做）：
+#   5. 已上线的库补列和表：wrangler d1 execute math-pansgo --remote --file=api/migrations/0001_digest.sql（只跑一次）；
+#   6. wrangler secret put ADMIN_KEY（手动触发 / dry-run 端点用；不设则 /admin/digest/run 一律 404）；
+#   7. 先保持 DIGEST_DRY_RUN = "1"，用 curl -X POST -H "X-Admin-Key: …" "https://api.math.pansgo.com/admin/digest/run?dry=1"
+#      看汇总（将发送数、打码邮箱、各项计数）确认无误，再改成 "0" 部署，之后每周一 08:00（北京）自动发。
 name = "math-pansgo-api"
 main = "worker.js"
 compatibility_date = "2025-01-01"
 routes = [{ pattern = "api.math.pansgo.com", custom_domain = true }]
+
+[triggers]
+# 周一 00:00 UTC = 北京时间 08:00，发每周学习周报。
+crons = ["0 0 * * 1"]
 
 [[d1_databases]]
 binding = "DB"
@@ -20,4 +29,5 @@ ALLOWED_ORIGINS = "https://math.pansgo.com,https://cn-math-taxonomy.pages.dev,ht
 MAIL_FROM = "知识图谱 <noreply@math.pansgo.com>"
 # 生产必须是 "0"。
 MAIL_DRY_RUN = "0"
-
+# 周报只算不发开关：只有恰好是 "0" 才真发，其余（含未设置）一律只算不发、不写 digest_log。先保持 "1"。
+DIGEST_DRY_RUN = "1"

@@ -1,5 +1,7 @@
 -- math.pansgo.com 账号与云同步。只存账号、验证码哈希、会话哈希和 4 份同步数据；题库不进 D1。
 -- 时间一律是 Unix 毫秒。本地建库：wrangler d1 execute math-pansgo --local --file=api/schema.sql
+-- 已上线的库不会因为这里的 CREATE TABLE IF NOT EXISTS 多出新列：users 的 digest_opt_out / digest_token
+-- 要另跑 api/migrations/0001_digest.sql（只跑一次，列已存在会报错）。
 
 CREATE TABLE IF NOT EXISTS users (
   id              INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -8,7 +10,9 @@ CREATE TABLE IF NOT EXISTS users (
   mail_consent    INTEGER NOT NULL DEFAULT 0,
   mkt_consent     INTEGER NOT NULL DEFAULT 0,
   mail_consent_at INTEGER,
-  mkt_consent_at  INTEGER
+  mkt_consent_at  INTEGER,
+  digest_opt_out  INTEGER NOT NULL DEFAULT 0,
+  digest_token    TEXT
 );
 
 CREATE TABLE IF NOT EXISTS otp_codes (
@@ -39,4 +43,12 @@ CREATE TABLE IF NOT EXISTS sync_data (
   payload    TEXT    NOT NULL,
   updated_at INTEGER NOT NULL,
   PRIMARY KEY (user_id, dataset)
+);
+
+-- 每周学习周报的发送日志：同一用户同一 ISO 周（Asia/Shanghai，如 2026-W48）只发一次。
+CREATE TABLE IF NOT EXISTS digest_log (
+  user_id  INTEGER NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+  week_key TEXT    NOT NULL,
+  sent_at  INTEGER NOT NULL,
+  PRIMARY KEY (user_id, week_key)
 );

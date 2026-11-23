@@ -1,13 +1,17 @@
 /* math.pansgo.com 账号（邮箱验证码）与云同步 Worker。
  *   POST /auth/request-code  POST /auth/verify  POST /auth/logout  GET /auth/me
  *   GET /sync                PUT /sync/:dataset
+ *   GET /digest/unsub?t=…    周报退订（token 只管退订，不用于登录）
+ *   POST /admin/digest/run   手动跑周报（X-Admin-Key；?dry=1 强制只算不发；ADMIN_KEY 未设则 404）
+ *   scheduled()              每周一 00:00 UTC 发周报（见 digest.js、wrangler.toml）
  * 会话令牌走 Authorization: Bearer，只存 SHA-256 哈希；验证码只存哈希，日志不打明文（MAIL_DRY_RUN 除外）。 */
 import {
   DEFAULT_ALLOWED_ORIGINS, OTP_TTL_MS, SESSION_TTL_MS, SESSION_RENEW_BELOW_MS, HOUR_MS,
   isDataset, normalizeEmail, generateOtp, hashOtp, timingSafeEqual, otpUsable, rateLimit,
-  generateToken, hashToken, parseBearer, originAllowed, validatePayload, parseBase
+  generateToken, hashToken, parseBearer, originAllowed, validatePayload, parseBase, isDigestToken
 } from './lib.js';
 import { createMailer } from './mail.js';
+import { sendWeeklyDigests } from './digest.js';
 
 const MAX_BODY_CHARS = 1200000;
 const REQUEST_OK_MESSAGE = '如果邮箱填写无误，验证码已发送，请在 10 分钟内查收（也看看垃圾邮件）。';
@@ -167,6 +171,42 @@ async function syncPut(request, env, session, dataset, now) {
   return json({ error: 'conflict', message: '云端有更新，请合并后重新提交。', payload: current ? current.payload : null, updated_at: current ? current.updated_at : null }, 409);
 }
 
+function htmlPage(title, message, status) {
+  const body = '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">' +
+    '<meta name="robots" content="noindex"><title>' + title + '</title></head>' +
+    '<body style="font-family:-apple-system,\'PingFang SC\',\'Microsoft YaHei\',sans-serif;max-width:480px;margin:48px auto;padding:0 20px;color:#1f2933;line-height:1.7">' +
+    '<h1 style="font-size:1.3rem">' + title + '</h1><p>' + message + '</p>' +
+    '<p><a href="https://math.pansgo.com/" style="color:#0f6e62">回到知识图谱</a></p></body></html>';
+  return new Response(body, {
+    status: status || 200,
+    headers: { 'Content-Type': 'text/html; charset=utf-8', 'Referrer-Policy': 'no-referrer' }
+  });
+}
+
+async function digestUnsub(url, env) {
+  const token = url.searchParams.get('t');
+  if (!isDigestToken(token)) return htmlPage('链接无效', '这个退订链接无效或已失效。', 404);
+  const res = await env.DB.prepare('UPDATE users SET digest_opt_out = 1 WHERE digest_token = ?').bind(token).run();
+  if (res.meta.changes < 1) return htmlPage('链接无效', '这个退订链接无效或已失效。', 404);
+  return htmlPage('已退订', '已退订知识图谱每周学习周报，之后不会再发这类邮件。登录验证码等账号邮件不受影响。');
+}
+
+async function adminDigestRun(request, url, env, deps, now) {
+  if (!env.ADMIN_KEY) return fail(404, 'not_found');
+  if (request.method !== 'POST') return fail(405, 'method_not_allowed');
+  if (!timingSafeEqual(request.headers.get('X-Admin-Key') || '', String(env.ADMIN_KEY))) return fail(401, 'unauthorized');
+  const summary = await sendWeeklyDigests(env, { dryRun: url.searchParams.get('dry') === '1' ? true : undefined, now, sendMail: deps.sendMail });
+  return json(summary);
+}
+
+/* cron 入口：DIGEST_DRY_RUN 不是 "0" 一律只算不发。 */
+export async function runScheduled(env, sendMail, now) {
+  const dryRun = String(env.DIGEST_DRY_RUN) !== '0';
+  const summary = await sendWeeklyDigests(env, { dryRun, now: now === undefined ? Date.now() : now, sendMail });
+  console.log('digest ' + JSON.stringify(Object.assign({}, summary, { items: undefined })));
+  return summary;
+}
+
 export function createHandler(overrides) {
   return async function handle(request, env) {
     const deps = Object.assign({ sendMail: createMailer(env), now: () => Date.now() }, overrides || {});
@@ -197,6 +237,8 @@ export function createHandler(overrides) {
 
       if (path === '/auth/request-code' && method === 'POST') return done(await requestCode(request, env, deps, now));
       if (path === '/auth/verify' && method === 'POST') return done(await verify(request, env, now));
+      if (path === '/digest/unsub' && method === 'GET') return done(await digestUnsub(url, env));
+      if (path === '/admin/digest/run') return done(await adminDigestRun(request, url, env, deps, now));
 
       const isAuthRoute = path === '/auth/logout' || path === '/auth/me' || path === '/sync' || path.indexOf('/sync/') === 0;
       if (!isAuthRoute) return done(fail(404, 'not_found'));
@@ -224,5 +266,8 @@ export function createHandler(overrides) {
 const handler = createHandler();
 
 export default {
-  fetch(request, env) { return handler(request, env); }
+  fetch(request, env) { return handler(request, env); },
+  scheduled(event, env, ctx) {
+    ctx.waitUntil(runScheduled(env, createMailer(env)).catch((e) => { console.error('digest cron failed: ' + (e && e.message)); }));
+  }
 };
