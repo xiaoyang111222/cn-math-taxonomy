@@ -30,6 +30,7 @@ cp -a "$ROOT/children" "$DIST/"
 cp -a "$ROOT/goods" "$DIST/"
 cp -a "$ROOT/wrongbook" "$DIST/"
 cp -a "$ROOT/finals" "$DIST/"
+cp -a "$ROOT/english" "$DIST/"
 rm -f "$DIST/diagnose/README.md"
 cp "$ROOT/data/topics.json" \
    "$ROOT/data/dependencies.json" \
@@ -38,6 +39,7 @@ cp "$ROOT/data/topics.json" \
    "$DIST/data/"
 # 题库按学科拆分：data/questions/<学科>.json + index.json（由 scripts/split_questions.py 生成）
 cp -a "$ROOT/data/questions" "$DIST/data/"
+cp -a "$ROOT/data/english" "$DIST/data/"
 # 过渡期兼容副本：旧版页面/外部引用仍可能请求 data/questions.json，站内已无任何页面使用，sw 也不再缓存它。
 # 下一个版本确认旧客户端都已升级后，删掉这一行即可。
 cp "$ROOT/data/questions.json" "$DIST/data/"

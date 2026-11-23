@@ -107,6 +107,15 @@ jobs:
       - name: 薄弱科目补强批回归（高中地理、生物、历史与历史先修边）
         run: node tests/test_senior_batch.js
 
+      - name: 英语每日一句：句子表与动画模板
+        run: node tests/test_english_data.js
+
+      - name: 英语每日一句：解锁、复习、打卡判定
+        run: node tests/test_english_logic.js
+
+      - name: 学习打卡与连续天数
+        run: node tests/test_activity.js
+
       - name: 高中语文五册
         run: node tests/test_zh_hs.js
 

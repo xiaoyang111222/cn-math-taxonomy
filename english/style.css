@@ -1,0 +1,177 @@
+/* 英语每日一句页。配色、字号来自 assets/site.css；场景动画（.an-*）只在用户不要求减少动态效果时播放。 */
+
+main.eng { width: min(760px, 100%); margin: 0 auto; padding: 20px 16px 56px; }
+.eng h1 { margin: 0 0 8px; font-size: 1.5rem; letter-spacing: -0.02em; }
+.eng h2 { margin: 0 0 8px; font-size: 1.2rem; letter-spacing: -0.02em; }
+.eng h3.sec { margin: 22px 0 8px; font-size: 1.02rem; }
+.eng h3.sec:empty { display: none; }
+.eng .muted { color: var(--muted); }
+.eng button.small { min-height: 36px; padding: 4px 12px; font-size: 0.92rem; }
+
+.kid-picker { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; }
+.kid-picker label { font-weight: 700; }
+.kid-picker select { flex: 1 1 160px; min-width: 0; }
+.kid-empty { margin: 8px 0 14px; padding: 12px 16px; background: var(--bg-muted); border-radius: var(--radius-sm); color: var(--muted); }
+.eng-flash { margin: 8px 0 14px; padding: 12px 16px; border-radius: var(--radius-sm); background: var(--brand-soft); color: var(--brand-strong); font-weight: 700; }
+.load-error { padding: 14px 16px; border-radius: var(--radius-sm); background: var(--bad-bg); color: var(--bad); }
+.back { margin-bottom: 10px; }
+
+.eng-card {
+  background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px; margin: 0 0 16px; box-shadow: var(--shadow);
+}
+.lesson-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.lesson-no { font-weight: 800; font-size: 1.05rem; color: var(--brand-strong); }
+.lesson-grammar { color: var(--muted); font-size: 0.9rem; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.step-hint { margin: 6px 0; color: var(--muted); font-size: 0.92rem; }
+.tts-note { margin: 6px 0; font-size: 0.9rem; }
+
+.scene { border-radius: 14px; overflow: hidden; line-height: 0; border: 1px solid var(--line); background: #fff; color: #334155; }
+.scene.small { max-width: 220px; margin: 8px 0; }
+.scene-svg { width: 100%; height: auto; display: block; }
+
+.sentence { margin: 14px 0 8px; font-size: 1.9rem; font-weight: 800; line-height: 1.5; overflow-wrap: anywhere; }
+.sentence.plain { font-size: 1.5rem; }
+.sentence .punct { color: var(--muted); }
+
+/* 词与译词同色：同一个词序号在句子、逐词对照、字面连读里是同一种颜色 */
+.wc0 { --wc: #0f766e; --wb: #ccfbf1; }
+.wc1 { --wc: #1d4ed8; --wb: #dbeafe; }
+.wc2 { --wc: #b45309; --wb: #fef3c7; }
+.wc3 { --wc: #a21caf; --wb: #fae8ff; }
+.wc4 { --wc: #be123c; --wb: #ffe4e6; }
+.wc5 { --wc: #4d7c0f; --wb: #ecfccb; }
+.w, .pair b, .zh { color: var(--wc, inherit); }
+.w { border-radius: 8px; padding: 0 4px; transition: background 0.12s, color 0.12s; }
+.w.on { background: var(--wc); color: #fff; }
+.w.plain { color: var(--text); }
+.w.slot { color: var(--brand-strong); border-bottom: 3px dashed var(--brand); min-width: 3.4em; display: inline-block; text-align: center; }
+.w.slot.filled { border-bottom-style: solid; background: var(--brand-soft); }
+
+.layers { margin-top: 12px; display: grid; gap: 8px; }
+.layer { border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--bg); }
+.layer summary { cursor: pointer; padding: 10px 12px; font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+.layer-body { padding: 4px 12px 12px; }
+.pairs { display: flex; flex-wrap: wrap; gap: 8px; }
+.pair { display: inline-flex; flex-direction: column; align-items: center; padding: 6px 12px; border-radius: 10px; background: var(--wb, var(--bg-muted)); border: 2px solid transparent; }
+.pair.on { border-color: var(--wc); }
+.pair b { font-size: 1.15rem; }
+.pair i { font-style: normal; color: var(--wc); font-size: 0.95rem; }
+.literal { margin: 0; font-size: 1.15rem; font-weight: 700; }
+.literal .zh { border-radius: 6px; padding: 0 3px; }
+.literal .zh.on { background: var(--wc); color: #fff; }
+.meaning { margin: 0; font-size: 1.2rem; font-weight: 800; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex; flex-direction: column; align-items: center; gap: 2px; min-width: 64px;
+  padding: 8px 14px; border-radius: 14px; background: var(--wb, var(--bg-elev)); border: 2px solid var(--wc, var(--line)); color: var(--text);
+}
+.chip .en { font-size: 1.1rem; font-weight: 800; color: var(--wc, var(--text)); }
+.chip .zh { font-size: 0.85rem; color: var(--muted); font-weight: 600; }
+.chip.on { background: var(--wc); }
+.chip.on .en, .chip.on .zh { color: #fff; }
+.chip.plain { flex-direction: row; font-size: 1.05rem; font-weight: 800; background: var(--brand-soft); border-color: var(--brand); color: var(--brand-strong); }
+.tip { margin: 12px 0 0; padding: 10px 12px; border-radius: var(--radius-sm); background: var(--warn-bg); color: var(--warn); font-size: 0.95rem; }
+
+.sorter { margin: 8px 0; }
+.sort-line, .sort-pool { display: flex; flex-wrap: wrap; gap: 8px; min-height: 52px; padding: 8px; border-radius: var(--radius-sm); align-items: center; }
+.sort-line { background: var(--bg-muted); border: 2px dashed var(--line); }
+.sort-pool { margin-top: 8px; }
+.sort-slot { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; border: 2px dashed var(--line); color: var(--muted); }
+.sort-card { font-size: 1.1rem; font-weight: 800; padding: 8px 16px; border-radius: 12px; }
+.sort-card.placed { background: var(--bg-elev); border-color: var(--brand); }
+.sort-card.ok { background: var(--ok-bg); border-color: var(--ok); color: var(--ok); }
+.sort-msg { min-height: 1.4em; margin: 6px 0; font-weight: 700; color: var(--muted); }
+.sort-msg.ok { color: var(--ok); }
+.sort-msg.bad { color: var(--bad); }
+
+.built { margin: 8px 0 0; font-size: 1.5rem; font-weight: 800; }
+.built-zh { margin: 4px 0 10px; min-height: 1.4em; }
+
+.checks { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.check { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg-muted); color: var(--muted); font-weight: 700; }
+.check.done { background: var(--ok-bg); border-color: var(--ok); color: var(--ok); }
+.finish { width: 100%; min-height: 52px; font-size: 1.1rem; }
+.finish:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.complete { border: 2px solid var(--brand-strong); }
+.complete-meta { margin: 6px 0; font-weight: 700; color: var(--brand-strong); }
+.preview { margin-top: 12px; padding: 12px 14px; border-radius: var(--radius-sm); background: var(--brand-soft); }
+.preview p { margin: 4px 0 0; }
+
+.review { border: 2px solid var(--brand-strong); }
+.rev-card { margin: 12px 0; padding: 12px 14px; background: var(--bg); border-radius: var(--radius-sm); border: 1px solid var(--line); }
+.rev-card h3 { margin: 0; font-size: 1.05rem; }
+.rev-card h4 { margin: 16px 0 6px; font-size: 0.98rem; }
+.dictation { width: 100%; margin: 8px 0; font-size: 1.1rem; }
+
+.cal-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; align-items: baseline; }
+.streak { color: var(--brand-strong); font-weight: 800; }
+.cal-bar { height: 8px; border-radius: 99px; background: var(--bg-muted); margin: 10px 0; overflow: hidden; }
+.cal-bar i { display: block; height: 100%; background: var(--brand); border-radius: 99px; }
+.cal-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; }
+.cal-cell { min-height: 0; aspect-ratio: 1; padding: 0; border-radius: 10px; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+.cal-cell.done { background: var(--ok-bg); border-color: var(--ok); color: var(--ok); }
+.cal-cell.today { border: 2px solid var(--brand); background: var(--brand-soft); color: var(--brand-strong); }
+.cal-cell.locked { background: var(--bg-muted); color: var(--muted); cursor: default; opacity: 0.7; }
+@media (max-width: 480px) {
+  .cal-grid { grid-template-columns: repeat(6, 1fr); }
+  .sentence { font-size: 1.6rem; }
+}
+
+/* ---- 场景动画：带 CSS 动画的元素没有 transform 属性，旋转都以所在 <g> 的局部原点为轴 */
+.limb, .an-spin, .an-crawl { transform-origin: 0 0; }
+.an-chew, .an-pulse, .an-breathe { transform-box: fill-box; }
+.an-chew { transform-origin: center; }
+.an-pulse { transform-origin: center bottom; }
+.an-breathe { transform-origin: center bottom; }
+
+@keyframes engWave { from { transform: rotate(-14deg); } to { transform: rotate(14deg); } }
+@keyframes engPoint { from { transform: rotate(-7deg); } to { transform: rotate(7deg); } }
+@keyframes engBob { from { transform: translateY(0); } to { transform: translateY(-5px); } }
+@keyframes engSway { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
+@keyframes engNod { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+@keyframes engRunA { from { transform: rotate(-38deg); } to { transform: rotate(38deg); } }
+@keyframes engRunB { from { transform: rotate(38deg); } to { transform: rotate(-38deg); } }
+@keyframes engCrawl { to { transform: rotate(360deg); } }
+@keyframes engFloat { 0% { transform: translateY(8px); opacity: 0; } 25% { opacity: 1; } 100% { transform: translateY(-22px); opacity: 0; } }
+@keyframes engTwinkle { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+@keyframes engSpin { to { transform: rotate(360deg); } }
+@keyframes engDrop { 0% { transform: translateY(0); opacity: 0.9; } 100% { transform: translateY(22px); opacity: 0; } }
+@keyframes engRain { 0% { transform: translateY(0); opacity: 0.9; } 100% { transform: translateY(112px); opacity: 0; } }
+@keyframes engSpeed { from { transform: translateX(14px); opacity: 0.2; } to { transform: translateX(-10px); opacity: 0.9; } }
+@keyframes engBreathe { from { transform: scaleY(1); } to { transform: scaleY(1.07); } }
+@keyframes engChew { from { transform: scaleY(0.4); } to { transform: scaleY(1); } }
+@keyframes engPulse { from { transform: scale(1); } to { transform: scale(1.1); } }
+@keyframes engWaveX { to { transform: translateX(-40px); } }
+@keyframes engDrift { from { transform: translateX(-14px); } to { transform: translateX(14px); } }
+@keyframes engFlip { 0% { transform: scaleX(1); } 50% { transform: scaleX(0.05); } 100% { transform: scaleX(1); } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .an-wave { animation: engWave 0.7s ease-in-out infinite alternate; }
+  .an-wave2 { animation: engWave 0.7s ease-in-out -0.35s infinite alternate; }
+  .an-point { animation: engPoint 0.9s ease-in-out infinite alternate; }
+  .an-eat { animation: engWave 0.6s ease-in-out infinite alternate; }
+  .an-bob { animation: engBob 0.8s ease-in-out infinite alternate; }
+  .an-sway { animation: engSway 1.6s ease-in-out infinite alternate; transform-origin: 0 0; }
+  .an-nod { animation: engNod 1.8s ease-in-out infinite; }
+  .an-run-a { animation: engRunA 0.34s ease-in-out infinite alternate; }
+  .an-run-b { animation: engRunB 0.34s ease-in-out infinite alternate; }
+  .an-crawl { animation: engCrawl 2.4s linear infinite; }
+  .an-float { animation: engFloat 2.4s ease-out infinite; }
+  .an-twinkle { animation: engTwinkle 1.8s ease-in-out infinite; }
+  .an-spin { animation: engSpin 24s linear infinite; }
+  .an-drop { animation: engDrop 1.6s ease-in infinite; }
+  .an-rain { animation: engRain 1.1s linear infinite; }
+  .an-speed { animation: engSpeed 0.5s linear infinite alternate; }
+  .an-breathe { animation: engBreathe 2.2s ease-in-out infinite alternate; }
+  .an-chew { animation: engChew 0.35s ease-in-out infinite alternate; }
+  .an-pulse { animation: engPulse 0.9s ease-in-out infinite alternate; }
+  .an-wave-x { animation: engWaveX 1.6s linear infinite; }
+  .an-drift { animation: engDrift 5s ease-in-out infinite alternate; }
+  .an-flip { animation: engFlip 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: left center; }
+}
+
+@media print { .eng .no-print { display: none; } }
