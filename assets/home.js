@@ -103,6 +103,30 @@
 
   function fmt(n) { return Number(n).toLocaleString('en-US'); }
 
+  /* 登录用户本机错题本到期复测提示：未登录或没有到期题时整条隐藏，不占位。 */
+  function loggedIn() {
+    try {
+      if (window.CnmAccount && window.CnmAccount.isLoggedIn) return !!window.CnmAccount.isLoggedIn();
+      var s = JSON.parse(localStorage.getItem('cnmAuth.v1'));
+      return !!(s && typeof s.token === 'string' && Number(s.exp) > Date.now());
+    } catch (e) { return false; }
+  }
+  function renderDueHome() {
+    var box = $('due-home');
+    if (!box) return;
+    var n = 0;
+    try {
+      if (window.CnmWrong && window.CnmWrong.dueTotal && loggedIn()) n = window.CnmWrong.dueTotal(Date.now());
+    } catch (e) { n = 0; }
+    if (n > 0) setText('due-home-n', String(n));
+    box.hidden = !(n > 0);
+  }
+  renderDueHome();
+  if (window.addEventListener) {
+    window.addEventListener('cnm:auth', renderDueHome);
+    window.addEventListener('cnm:sync', renderDueHome);
+  }
+
   function fail(message) {
     var box = $('load-error');
     if (!box) return;

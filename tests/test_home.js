@@ -45,9 +45,9 @@ const qIndex = {
 };
 const INDEX_URL = 'data/questions/index.json';
 
-function load(search, topicRows) {
+function load(search, topicRows, extraWindow) {
   const ids = {};
-  ['n-topics', 'n-edges', 'n-questions', 'n-subjects', 'cover-morality', 'hero-start', 'hero-demo', 'load-error', 'grades'].forEach(id => { ids[id] = element(); });
+  ['due-home', 'due-home-n', 'n-topics', 'n-edges', 'n-questions', 'n-subjects', 'cover-morality', 'hero-start', 'hero-demo', 'load-error', 'grades'].forEach(id => { ids[id] = element(); });
   ids.grades.setAttribute('aria-busy', 'true');
   const calls = [];
   function fetch(url) {
@@ -57,7 +57,7 @@ function load(search, topicRows) {
     return promise;
   }
   const context = {
-    window: {},
+    window: Object.assign({}, extraWindow || {}),
     location: { hash: '', search: search || '' },
     URLSearchParams,
     fetch,
@@ -89,7 +89,7 @@ function load(search, topicRows) {
     respond('data/dependencies.json', deps);
     await flush();
   }
-  return { ids, calls, all, call, respond, failNet, baseMeta };
+  return { ids, calls, all, call, respond, failNet, baseMeta, context };
 }
 
 (async () => {
@@ -189,6 +189,47 @@ function load(search, topicRows) {
     assert.ok(counts.includes('1 个知识点'), counts.join(','));
     assert.strictEqual(ids['hero-start'].getAttribute('href'), 'diagnose/?subject=english');
     assert.ok(ids['hero-demo'].getAttribute('href').indexOf('subject=english') >= 0);
+  });
+
+  const dueWindow = (loggedIn, n) => {
+    const handlers = {};
+    const state = { loggedIn, n };
+    return {
+      state, handlers,
+      win: {
+        CnmAccount: { isLoggedIn: () => state.loggedIn },
+        CnmWrong: { dueTotal: () => state.n },
+        addEventListener: (name, fn) => { handlers[name] = fn; }
+      }
+    };
+  };
+
+  await test('首页待复测卡片：登录且有到期题才显示，带数量', async () => {
+    const d = dueWindow(true, 5);
+    const { ids } = load('', undefined, d.win);
+    assert.strictEqual(ids['due-home'].hidden, false);
+    assert.strictEqual(ids['due-home-n'].textContent, '5');
+  });
+
+  await test('首页待复测卡片：未登录或没有到期题都不显示', async () => {
+    const out = dueWindow(false, 5);
+    assert.strictEqual(load('', undefined, out.win).ids['due-home'].hidden, true);
+    const none = dueWindow(true, 0);
+    assert.strictEqual(load('', undefined, none.win).ids['due-home'].hidden, true);
+    assert.strictEqual(load('').ids['due-home'].hidden, true, '没有错题本脚本时不显示、不报错');
+  });
+
+  await test('首页待复测卡片：登录 / 同步事件后刷新', async () => {
+    const d = dueWindow(false, 3);
+    const { ids } = load('', undefined, d.win);
+    assert.strictEqual(ids['due-home'].hidden, true);
+    d.state.loggedIn = true;
+    d.handlers['cnm:auth']();
+    assert.strictEqual(ids['due-home'].hidden, false);
+    assert.strictEqual(ids['due-home-n'].textContent, '3');
+    d.state.n = 0;
+    d.handlers['cnm:sync']();
+    assert.strictEqual(ids['due-home'].hidden, true);
   });
 
   console.log(passed + ' passed');

@@ -58,14 +58,14 @@
   }
 
   /* 按键合并两个列表。hasBase 为 false 时只做并集，不推断删除。带 deleted 标记的条目：任一边标了就删。 */
-  function mergeKeyed(local, remote, base, hasBase, keyOf, tsOf, ctx) {
+  function mergeKeyed(local, remote, base, hasBase, keyOf, tsOf, ctx, pick) {
     var L = indexBy(local, keyOf), R = indexBy(remote, keyOf), B = indexBy(base, keyOf);
     var order = L.order.concat(R.order.filter(function (k) { return !(k in L.map); }));
     var out = [];
     order.forEach(function (k) {
       var l = L.map[k], r = R.map[k], b = B.map[k];
       var item;
-      if (l && r) item = (l.deleted || r.deleted) ? null : pickNewer(l, r, tsOf, ctx);
+      if (l && r) item = (l.deleted || r.deleted) ? null : (pick || pickNewer)(l, r, tsOf, ctx);
       else if (l) item = (hasBase && b && same(l, b)) ? null : l;
       else item = (hasBase && b && same(r, b)) ? null : r;
       if (item && !item.deleted) out.push(item);
@@ -140,13 +140,38 @@
     return out;
   }
 
-  /* 错题本 {孩子id 或 guest: [错题]}：按 qid 逐条合并，较新的 ts 胜，每桶最多 300 条。 */
+  /* 错题本复测进度（stage / dueAt / done，与 assets/wrongbook.js 同规则，缺省值：0 / ts + 1 天 / false）。 */
+  var DAY_MS = 24 * 60 * 60 * 1000;
+  function wrongStage(e) { var n = Math.floor(Number(e && e.stage)); return n >= 0 ? Math.min(n, 3) : 0; }
+  function wrongDueAt(e) { var d = Number(e && e.dueAt); return d > 0 ? d : ms(e && e.ts) + DAY_MS; }
+  /* 复测进度谁更靠前：done=true 优先，其次 stage 高者，其次 dueAt 晚者；打平返回 0。 */
+  function progressCmp(a, b) {
+    if (!!a.done !== !!b.done) return a.done ? 1 : -1;
+    if (wrongStage(a) !== wrongStage(b)) return wrongStage(a) > wrongStage(b) ? 1 : -1;
+    var da = wrongDueAt(a), db = wrongDueAt(b);
+    return da === db ? 0 : (da > db ? 1 : -1);
+  }
+  /* 同一 qid 两份条目：ts / count / chosen 等沿用 pickNewer（较新的 ts 胜），复测进度单独取更靠前的一份，旧副本不会冲掉复测进度。 */
+  function pickWrong(l, r, tsOf, ctx) {
+    var win = pickNewer(l, r, tsOf, ctx);
+    if (same(l, r)) return win;
+    var c = progressCmp(r, l);
+    var best = c > 0 ? r : (c < 0 ? l : win);
+    var out = Object.assign({}, win);
+    ['stage', 'dueAt', 'done'].forEach(function (k) {
+      if (k in best) out[k] = best[k]; else delete out[k];
+    });
+    if (out.done) delete out.dueAt;
+    return same(out, win) ? win : out;
+  }
+
+  /* 错题本 {孩子id 或 guest: [错题]}：按 qid 逐条合并，较新的 ts 胜（复测进度另算，见 pickWrong），每桶最多 300 条。 */
   function mergeWrongbook(local, remote, base, ctx) {
     var L = mapOf(local), R = mapOf(remote), B = mapOf(base);
     var out = {};
     bucketNames([L, R]).forEach(function (bucket) {
       var list = mergeKeyed(L[bucket], R[bucket], B[bucket], base !== undefined,
-        function (e) { return e.qid; }, wrongTs, ctx);
+        function (e) { return e.qid; }, wrongTs, ctx, pickWrong);
       list.sort(function (a, b) { return (a.ts || 0) - (b.ts || 0); });
       if (list.length > MAX_PER_BUCKET) list = list.slice(list.length - MAX_PER_BUCKET);
       if (list.length || bucket in L) out[bucket] = list;

@@ -683,7 +683,8 @@
         ' ', h('button', { onclick: function () { lsDel(sessionKey()); renderStart(); } }, '放弃存档')));
     }
     if (errMsg) page.append(h('p', { class: 'err', text: errMsg }));
-    page.append(childBar('start'));
+    const bar = childBar('start');
+    if (bar) page.append(bar);
     const startBlind = blindStartCard();
     if (startBlind) page.append(startBlind);
 
@@ -1111,7 +1112,8 @@
       h('button', { class: 'small', onclick: function () { if (confirm('确定放弃当前诊断并回到开始页吗？')) restart(); } }, '重新开始')));
     const page = h('div');
     if (demo) page.append(demoBanner());
-    page.append(childBar('question'));
+    const bar = childBar('question');
+    if (bar) page.append(bar);
     page.append(card);
     show(page, !isNewQuestion);
     const inp = document.getElementById('ans');
@@ -1304,7 +1306,8 @@
     if (demo) page.append(demoBanner());
     saveToChild(sum);
     noteBlind(sum);
-    page.append(childBar('result'));
+    const bar = childBar('result');
+    if (bar) page.append(bar);
     const dropped = excludedNote();
     if (dropped) page.append(dropped);
 

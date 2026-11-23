@@ -62,6 +62,9 @@ jobs:
       - name: 错题本存储测试
         run: node tests/test_wrongbook.js
 
+      - name: 错题到期复测测试
+        run: node tests/test_wrongbook_review.js
+
       - name: 期末补漏计划测试
         run: node tests/test_finals.js
 

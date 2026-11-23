@@ -51,6 +51,20 @@ main.wrong { width: min(760px, 100%); margin: 0 auto; padding: 20px 16px 56px; }
 .wb-tag.skip { background: var(--unk-bg); color: var(--unk); }
 .wb-tag.count { background: var(--diagram-shaky-bg); color: var(--diagram-shaky); }
 
+.wb-tag.due { background: var(--bad-bg); color: var(--bad); }
+.wb-tag.later { background: var(--bg-muted); color: var(--muted); }
+.wb-tag.done { background: var(--ok-bg, var(--bg-muted)); color: var(--ok); }
+
+.wb-flash { margin: 0 0 12px; padding: 10px 14px; border-radius: var(--radius-sm); background: var(--bg-muted); font-weight: 700; overflow-wrap: anywhere; }
+.wb-due { margin-bottom: 20px; padding: 14px 16px 6px; background: var(--bg-elev); border: 2px solid var(--brand-strong); border-radius: var(--radius); }
+.wb-due .wb-card { background: var(--bg); }
+.wb-due-meta { margin: 6px 0 0; color: var(--muted); font-size: 0.88rem; overflow-wrap: anywhere; }
+.wb-due-choices { list-style: none; margin: 8px 0 0; padding: 0; }
+.wb-due-choices li { margin: 6px 0; }
+.wb-due-choice { width: 100%; text-align: left; white-space: normal; overflow-wrap: anywhere; }
+.wb-due-self { margin-top: 10px; }
+.wb-due-actions { display: flex; gap: 8px; margin-top: 8px; }
+
 .wb-print-title { display: none; }
 .wb-answers { display: none; margin-top: 8px; padding: 14px 16px; background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius); }
 .wb-answers.shown { display: block; }
