@@ -557,7 +557,7 @@
 
   /**
    * 初中："七上 第一章 有理数 1.1" -> {volume:'七上', chapterNo:'第一章', chapterName:'有理数', section:'1.1'}
-   * 小学："一年级上册 第1单元 单元名" 或 "一年级上册 综合与实践 活动名"
+   * 小学："一年级上册 第1单元 单元名" 或 "一年级上册 综合与实践 活动名"；九年级综合与实践同样是册级："九年级上册 综合与实践 活动名"
    */
   function parseChapter(chapter) {
     const s = chapter || '';
@@ -566,7 +566,7 @@
     // 资源页没有写进某一课的项目，例如「七年级上册 待核」。仍算进该册，不假装有单元号。
     const pend = /^([一二三四五六七八九])年级([上下全])册 待核$/.exec(s);
     if (pend) return { volume: pend[1] + pend[2], chapterNo: '待核', chapterName: '未挂到具体单元', section: '' };
-    const pi = /^([一二三四五六])年级([上下])册 (综合与实践) (.+)$/.exec(s);
+    const pi = /^([一二三四五六九])年级([上下])册 (综合与实践) (.+)$/.exec(s);
     if (pi) return { volume: pi[1] + pi[2], chapterNo: pi[3], chapterName: pi[4], section: '' };
     // 小学英语复习 / Recycle（如「四年级上册 复习 Let's help!」）
     const prev = /^([一二三四五六])年级([上下])册 (复习) (.+)$/.exec(s);

@@ -133,3 +133,6 @@ jobs:
 
       - name: verify 表达式精确求值
         run: python3 tests/test_verify_exact.py
+
+      - name: 章节数据一致性
+        run: node tests/test_chapter_consistency.js

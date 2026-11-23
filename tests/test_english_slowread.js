@@ -108,9 +108,9 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     assert.ok(/s\.addEventListener\('click', function \(\) \{ tapWord\(i\); \}\)/.test(app));
   });
 
-  await test('sw 升到 v41 且清单仍含英语文件', () => {
+  await test('sw 升到 v42 且清单仍含英语文件', () => {
     const sw = read('sw.js');
-    assert.ok(/var VERSION = 'v41';/.test(sw));
+    assert.ok(/var VERSION = 'v42';/.test(sw));
     ['english/app.js', 'assets/english.js', 'data/english/days.json'].forEach((f) => assert.ok(sw.includes("'" + f + "'"), f));
   });
 

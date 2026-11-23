@@ -3220,7 +3220,7 @@
     "domain": "统计与概率",
     "grade": 4,
     "semester": "上",
-    "chapter": "四年级上册 第6单元 条形统计图",
+    "chapter": "四年级上册 第7单元 条形统计图",
     "type": "procedural",
     "description": "认识条形统计图，会根据统计表画出简单的条形统计图并比较多少。",
     "mastery_criteria": [
@@ -3245,7 +3245,7 @@
     "domain": "统计与概率",
     "grade": 4,
     "semester": "上",
-    "chapter": "四年级上册 第6单元 条形统计图",
+    "chapter": "四年级上册 第7单元 条形统计图",
     "type": "procedural",
     "description": "认识复式条形统计图，能比较两组数据的多少。",
     "mastery_criteria": [
@@ -14179,7 +14179,7 @@
     "domain": "综合与实践",
     "grade": 9,
     "semester": "上",
-    "chapter": "九上 第二十七章 反比例函数 综合与实践",
+    "chapter": "九年级上册 综合与实践 高铁列车运行中的数量关系",
     "type": "modeling",
     "description": "收集高铁运行数据，探究路程、速度、时间等量之间的函数关系。",
     "mastery_criteria": [
@@ -14807,7 +14807,7 @@
     "domain": "综合与实践",
     "grade": 9,
     "semester": "上",
-    "chapter": "九上 第三十章 直线与圆的位置关系 综合与实践",
+    "chapter": "九年级上册 综合与实践 生活中的优化问题",
     "type": "modeling",
     "description": "利用函数、不等式、几何知识，解决最大面积、最省材料等生活中的优化问题。",
     "mastery_criteria": [
@@ -15172,7 +15172,7 @@
     "domain": "综合与实践",
     "grade": 9,
     "semester": "下",
-    "chapter": "九下 第三十二章 锐角三角函数 综合与实践",
+    "chapter": "九年级下册 综合与实践 停车设计问题",
     "type": "modeling",
     "description": "以教材章末综合与实践的主题名建模（具体活动内容未核实）：在给定场地中设计停车位的摆放角度与尺寸，用解直角三角形计算占用的宽度和深度并比较方案。",
     "mastery_criteria": [
@@ -15278,7 +15278,7 @@
     "domain": "综合与实践",
     "grade": 9,
     "semester": "下",
-    "chapter": "九下 第三十三章 投影与视图 综合与实践",
+    "chapter": "九年级下册 综合与实践 建筑中的数学",
     "type": "modeling",
     "description": "以教材章末综合与实践的主题名建模（具体活动内容未核实）：从三视图、比例与对称等角度分析建筑的数学特征，并按比例读图或绘图。",
     "mastery_criteria": [
