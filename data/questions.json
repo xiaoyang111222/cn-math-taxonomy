@@ -9067,7 +9067,7 @@
     "prompt": "计算：2/7×3＝？",
     "answer": "6/7",
     "explanation": "2/7×3＝6/7。",
-    "verify": "2/7*3",
+    "verify": "Fraction(2,7)*3",
     "id": "cnm_p177_q1",
     "topicId": "cnm_p177"
   },
@@ -9107,7 +9107,7 @@
     "prompt": "计算：1/2×1/3＝？",
     "answer": "1/6",
     "explanation": "1/2×1/3＝1/6。",
-    "verify": "1/2*1/3",
+    "verify": "Fraction(1,2)*Fraction(1,3)",
     "id": "cnm_p178_q1",
     "topicId": "cnm_p178"
   },
@@ -9127,7 +9127,7 @@
     "prompt": "一条路已经修了全程的 1/2，其中的 2/3 是上午修的。上午修了全程的几分之几？",
     "answer": "1/3",
     "explanation": "求 1/2 的 2/3，用乘法：1/2×2/3＝1/3。",
-    "verify": "1/2*2/3",
+    "verify": "Fraction(1,2)*Fraction(2,3)",
     "id": "cnm_p178_q3",
     "topicId": "cnm_p178"
   },
@@ -9358,7 +9358,7 @@
     "prompt": "计算：6/7÷3＝？",
     "answer": "2/7",
     "explanation": "6/7÷3＝6/7×1/3＝2/7。",
-    "verify": "6/7/3",
+    "verify": "Fraction(6,7)/3",
     "id": "cnm_p182_q2",
     "topicId": "cnm_p182"
   },
@@ -9378,7 +9378,7 @@
     "prompt": "一块蛋糕的 5/6 平均分给 4 人。每人分得这块蛋糕的几分之几？",
     "answer": "5/24",
     "explanation": "5/6÷4＝5/6×1/4＝5/24。",
-    "verify": "5/6/4",
+    "verify": "Fraction(5,6)/4",
     "id": "cnm_p182_q4",
     "topicId": "cnm_p182"
   },
@@ -9398,7 +9398,7 @@
     "prompt": "计算：（2/3）÷（4/5）＝？",
     "answer": "5/6",
     "explanation": "2/3×5/4＝5/6。",
-    "verify": "(2/3)/(4/5)",
+    "verify": "Fraction(2,3)/Fraction(4,5)",
     "id": "cnm_p183_q2",
     "topicId": "cnm_p183"
   },
@@ -9730,7 +9730,7 @@
     "prompt": "半径 5 厘米的圆，周长是多少厘米？圆周率按 314/100。（用小数作答）",
     "answer": "31.4",
     "explanation": "周长＝2×3.14×5＝31.4。",
-    "verify": "2*314/100*5",
+    "verify": "2*Fraction(314,100)*5",
     "id": "cnm_p190_q2",
     "topicId": "cnm_p190"
   },
@@ -9750,7 +9750,7 @@
     "prompt": "圆形花坛的半径是 10 米。沿花坛围一圈篱笆，篱笆大约长多少米？圆周率按 314/100。（用小数作答）",
     "answer": "62.8",
     "explanation": "篱笆长等于周长：2×3.14×10＝62.8。",
-    "verify": "2*314/100*10",
+    "verify": "2*Fraction(314,100)*10",
     "id": "cnm_p190_q4",
     "topicId": "cnm_p190"
   },
@@ -9770,7 +9770,7 @@
     "prompt": "圆形跑道的半径是 20 米。跑一圈大约多少米？圆周率按 314/100。（用小数作答）",
     "answer": "125.6",
     "explanation": "2×3.14×20＝125.6。",
-    "verify": "2*314/100*20",
+    "verify": "2*Fraction(314,100)*20",
     "id": "cnm_p191_q2",
     "topicId": "cnm_p191"
   },
@@ -9780,7 +9780,7 @@
     "prompt": "圆形花坛直径 20 米，沿边缘围一圈篱笆大约多少米？圆周率按 314/100。（用小数作答）",
     "answer": "62.8",
     "explanation": "3.14×20＝62.8。",
-    "verify": "314/100*20",
+    "verify": "Fraction(314,100)*20",
     "id": "cnm_p191_q3",
     "topicId": "cnm_p191"
   },
@@ -9790,7 +9790,7 @@
     "prompt": "钟面上时针长 5 厘米。时针走一圈，针尖大约走过多少厘米？圆周率按 314/100。（用小数作答）",
     "answer": "31.4",
     "explanation": "针尖走过的是半径 5 厘米的圆周长：2×3.14×5＝31.4。",
-    "verify": "2*314/100*5",
+    "verify": "2*Fraction(314,100)*5",
     "id": "cnm_p191_q4",
     "topicId": "cnm_p191"
   },
@@ -9887,7 +9887,7 @@
     "prompt": "一个扇形的圆心角是 120 度。它的面积是整个圆面积的几分之几？",
     "answer": "1/3",
     "explanation": "120÷360＝1/3。",
-    "verify": "120/360",
+    "verify": "Fraction(120,360)",
     "id": "cnm_p193_q4",
     "topicId": "cnm_p193"
   },
@@ -10529,7 +10529,7 @@
     "prompt": "底面半径 2 厘米、高 5 厘米的圆柱，体积是多少立方厘米？圆周率按 314/100。（用小数作答）",
     "answer": "62.8",
     "explanation": "体积＝3.14×2×2×5＝62.8。",
-    "verify": "314/100*2*2*5",
+    "verify": "Fraction(314,100)*2*2*5",
     "id": "cnm_p207_q1",
     "topicId": "cnm_p207"
   },
@@ -10539,7 +10539,7 @@
     "prompt": "底面半径 1 厘米、高 10 厘米的圆柱，体积是多少立方厘米？圆周率按 314/100。（用小数作答）",
     "answer": "31.4",
     "explanation": "3.14×1×1×10＝31.4。",
-    "verify": "314/100*1*1*10",
+    "verify": "Fraction(314,100)*1*1*10",
     "id": "cnm_p207_q2",
     "topicId": "cnm_p207"
   },
@@ -10559,7 +10559,7 @@
     "prompt": "底面直径 6 厘米、高 2 厘米的圆柱，体积是多少立方厘米？圆周率按 314/100。（用小数作答）",
     "answer": "56.52",
     "explanation": "半径＝3 厘米，体积＝3.14×3×3×2＝56.52。",
-    "verify": "314/100*3*3*2",
+    "verify": "Fraction(314,100)*3*3*2",
     "id": "cnm_p207_q4",
     "topicId": "cnm_p207"
   },
@@ -10606,7 +10606,7 @@
     "prompt": "圆柱的侧面展开是长 6.28 厘米、宽 5 厘米的长方形。侧面积是多少平方厘米？（用小数作答）",
     "answer": "31.4",
     "explanation": "侧面积＝底面周长×高＝6.28×5＝31.4。",
-    "verify": "628/100*5",
+    "verify": "Fraction(628,100)*5",
     "id": "cnm_p208_q3",
     "topicId": "cnm_p208"
   },
@@ -24674,7 +24674,7 @@
     "prompt": "化简 √((-5)²) 和 (√7)²。（依次作答，用逗号隔开）",
     "answer": "5，7",
     "explanation": "√((-5)²)=|-5|=5；(√7)²=7（7≥0）。",
-    "verify": "[sqrt((-5)**2), sqrt(7)**2]"
+    "verify": "[sqrt((-5)**2), round(sqrt(7)**2, 6)]"
   },
   {
     "id": "cnm_168_q2",
@@ -24684,7 +24684,7 @@
     "prompt": "计算 (√10)² - √(3²) 的值。",
     "answer": "7",
     "explanation": "(√10)²=10，√(3²)=3，10-3=7。",
-    "verify": "sqrt(10)**2 - sqrt(3**2)"
+    "verify": "round(sqrt(10)**2 - sqrt(3**2), 6)"
   },
   {
     "id": "cnm_168_q3",
@@ -24919,7 +24919,7 @@
     "prompt": "分母有理化：1/(√5+√3)=k(√5-√3)，则 k 等于多少？（写成最简分数）",
     "answer": "1/2",
     "explanation": "分子分母同乘 √5-√3：(√5-√3)/(5-3)=(1/2)(√5-√3)，所以 k=1/2。",
-    "verify": "1/(sqrt(5)+sqrt(3))/(sqrt(5)-sqrt(3))"
+    "verify": "round(1/(sqrt(5)+sqrt(3))/(sqrt(5)-sqrt(3)), 6)"
   },
   {
     "id": "cnm_172_q1",
@@ -25030,7 +25030,7 @@
     "prompt": "计算 (√3+1)(√3-1)。",
     "answer": "2",
     "explanation": "平方差公式：(√3)²-1²=3-1=2。",
-    "verify": "sqrt(3)**2-1**2"
+    "verify": "round(sqrt(3)**2-1**2, 6)"
   },
   {
     "id": "cnm_173_q3",
@@ -30153,7 +30153,7 @@
     "prompt": "⊙O 的半径为 4，点 A、B、C、D、E、F 把圆周六等分，求弦 AB 的长。",
     "answer": "4",
     "explanation": "每段弧所对的圆心角为 360°÷6=60°，又 OA=OB，△OAB 为等边三角形，所以 AB=OA=4。",
-    "verify": "2*4*sin(radians(30))"
+    "verify": "round(2*4*sin(radians(30)), 6)"
   },
   {
     "id": "cnm_252_q4",
@@ -30313,7 +30313,7 @@
     "prompt": "AB 是⊙O 的直径，点 C 在圆上，∠CAB=30°，BC=3，求⊙O 的半径。",
     "answer": "3",
     "explanation": "∠ACB=90°，∠A=30°，所以 AB=2BC=6，半径为 3。",
-    "verify": "3/sin(radians(30))/2"
+    "verify": "round(3/sin(radians(30))/2, 6)"
   },
   {
     "id": "cnm_255_q1",
@@ -30875,7 +30875,7 @@
     "prompt": "⊙O 的半径为 6，PA 切⊙O 于点 A，∠P=30°，求 OP 的长。",
     "answer": "12",
     "explanation": "∠OAP=90°，∠P=30°，所以 OP=2OA=12。",
-    "verify": "6/sin(radians(30))"
+    "verify": "round(6/sin(radians(30)), 6)"
   },
   {
     "id": "cnm_263_q1",
@@ -30905,7 +30905,7 @@
     "prompt": "PA、PB 是⊙O 的两条切线，A、B 为切点，∠APB=60°，PA=6，求 AB 的长。",
     "answer": "6",
     "explanation": "PA=PB 且 ∠APB=60°，△PAB 是等边三角形，AB=PA=6。",
-    "verify": "2*6*sin(radians(30))"
+    "verify": "round(2*6*sin(radians(30)), 6)"
   },
   {
     "id": "cnm_263_q4",
@@ -31124,7 +31124,7 @@
     "prompt": "正三角形的外接圆半径为 6，求它的边心距。",
     "answer": "3",
     "explanation": "中心角 120°，边心距=R·cos60°=6×1/2=3。",
-    "verify": "6*cos(radians(60))"
+    "verify": "round(6*cos(radians(60)), 6)"
   },
   {
     "id": "cnm_266_q4",
@@ -37397,7 +37397,7 @@
     "prompt": "计算 log₈2。",
     "answer": "1/3",
     "explanation": "log₂2=1，log₂8=3，结果是 1/3。",
-    "verify": "log2(2)/log2(8)"
+    "verify": "Fraction(round(log2(2)),round(log2(8)))"
   },
   {
     "id": "cnm_h045_q3",
@@ -38231,7 +38231,7 @@
     "prompt": "π/6 弧度等于多少度？",
     "answer": "30",
     "explanation": "180°/6=30°。",
-    "verify": "degrees(pi/6)"
+    "verify": "round(degrees(pi/6), 6)"
   },
   {
     "id": "cnm_h058_q2",
@@ -38357,7 +38357,7 @@
     "prompt": "求 sin30°。",
     "answer": "1/2",
     "explanation": "sin30°=1/2。",
-    "verify": "sin(radians(30))"
+    "verify": "round(sin(radians(30)), 6)"
   },
   {
     "id": "cnm_h060_q3",
@@ -38405,7 +38405,7 @@
     "prompt": "求 sin180°。",
     "answer": "0",
     "explanation": "终边在 x 轴负方向，交点 (−1，0)，正弦是 0。",
-    "verify": "sin(radians(180))"
+    "verify": "round(sin(radians(180)), 6)"
   },
   {
     "id": "cnm_h061_q2",
@@ -38531,7 +38531,7 @@
     "prompt": "求 tan45°。",
     "answer": "1",
     "explanation": "45° 时正弦和余弦相等，正切是 1。",
-    "verify": "tan(radians(45))"
+    "verify": "round(tan(radians(45)), 6)"
   },
   {
     "id": "cnm_h063_q3",
@@ -38673,7 +38673,7 @@
     "prompt": "求 sin150°。",
     "answer": "1/2",
     "explanation": "sin(180°−30°)=sin30°=1/2。",
-    "verify": "sin(radians(150))"
+    "verify": "round(sin(radians(150)), 6)"
   },
   {
     "id": "cnm_h065_q2",
@@ -38683,7 +38683,7 @@
     "prompt": "求 cos120°。",
     "answer": "-1/2",
     "explanation": "cos(180°−60°)=−cos60°=−1/2。",
-    "verify": "cos(radians(120))"
+    "verify": "round(cos(radians(120)), 6)"
   },
   {
     "id": "cnm_h065_q3",
@@ -38693,7 +38693,7 @@
     "prompt": "求 sin210°。",
     "answer": "-1/2",
     "explanation": "sin(180°+30°)=−sin30°=−1/2。",
-    "verify": "sin(radians(210))"
+    "verify": "round(sin(radians(210)), 6)"
   },
   {
     "id": "cnm_h065_q4",
@@ -38857,7 +38857,7 @@
     "prompt": "求 cos60°。",
     "answer": "1/2",
     "explanation": "cos60°=1/2。",
-    "verify": "cos(radians(60))"
+    "verify": "round(cos(radians(60)), 6)"
   },
   {
     "id": "cnm_h068_q3",
@@ -38915,7 +38915,7 @@
     "prompt": "求 tan45°。",
     "answer": "1",
     "explanation": "sin45° 与 cos45° 相等，正切是 1。",
-    "verify": "tan(radians(45))"
+    "verify": "round(tan(radians(45)), 6)"
   },
   {
     "id": "cnm_h069_q3",
@@ -40330,7 +40330,7 @@
     "prompt": "a=2，A=30°，sin30°=1/2。a/sinA 等于多少？",
     "answer": "4",
     "explanation": "2÷(1/2)=4。这个值等于外接圆直径 2R。",
-    "verify": "2/sin(radians(30))"
+    "verify": "round(2/sin(radians(30)), 6)"
   },
   {
     "id": "cnm_h092_q2",
@@ -40466,7 +40466,7 @@
     "prompt": "直角三角形的斜边为 2，一个锐角为 30°。这个角的对边是多少？",
     "answer": "1",
     "explanation": "对边等于斜边乘正弦，2×1/2=1。",
-    "verify": "2*sin(radians(30))"
+    "verify": "round(2*sin(radians(30)), 6)"
   },
   {
     "id": "cnm_h094_q4",
@@ -133138,7 +133138,7 @@
     ],
     "answer": "C",
     "explanation": "设一半路程为 s，总时间 t = s/4 + s/6 = 5s/12，平均速度 = 2s ÷ (5s/12) = 4.8 m/s。直接求速度的平均值 5 m/s 是错的。",
-    "verify": "2/(1/4+1/6)"
+    "verify": "2/(Fraction(1,4)+Fraction(1,6))"
   },
   {
     "id": "cnp_004_q1",
@@ -139533,7 +139533,7 @@
     "prompt": "并联电路中干路电流为 1.2 A，一条支路电流为 0.4 A，另一条支路电流是多少 A？（只填数值）",
     "answer": "0.8",
     "explanation": "I₂ = I - I₁ = 1.2 - 0.4 = 0.8 A。",
-    "verify": "1.2-0.4"
+    "verify": "round(1.2-0.4, 6)"
   },
   {
     "id": "cnp_064_q4",
@@ -140165,7 +140165,7 @@
     "prompt": "某定值电阻两端电压为 2 V 时电流为 0.2 A，电压增大到 6 V 时，电流是多少 A？（只填数值）",
     "answer": "0.6",
     "explanation": "电阻一定时电流与电压成正比，电压变为 3 倍，电流也变为 3 倍：0.6 A。",
-    "verify": "0.2*6/2"
+    "verify": "round(0.2*6/2, 6)"
   },
   {
     "id": "cnp_071_q1",
@@ -143103,7 +143103,7 @@
     "prompt": "质量为 6 kg 的物体在月球表面，月球表面的重力加速度取 1.6 m/s²，它受到的重力是多少 N？（只填数值）",
     "answer": "9.6",
     "explanation": "G = mg = 6 × 1.6 = 9.6 N。质量是物体本身的属性，不随地点改变，但重力会随 g 变化。",
-    "verify": "6*1.6"
+    "verify": "round(6*1.6, 6)"
   },
   {
     "id": "cnp_h010_q3",
@@ -144409,7 +144409,7 @@
     "prompt": "物块沿倾角为 37° 的斜面下滑，物块与斜面间的动摩擦因数为 0.5，g 取 10 m/s²，sin37° = 0.6，cos37° = 0.8。物块下滑的加速度大小是多少 m/s²？（只填数值）",
     "answer": "2",
     "explanation": "沿斜面：mg sin37° − μmg cos37° = ma，a = g(sin37° − μ cos37°) = 10 × (0.6 − 0.5×0.8) = 2 m/s²。",
-    "verify": "10*(0.6-0.5*0.8)",
+    "verify": "round(10*(0.6-0.5*0.8), 6)",
     "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 195\"><g transform=\"translate(25 0)\"><polygon points=\"34,172 217.7,33.6 217.7,172\" fill=\"currentColor\" fill-opacity=\"0.08\" stroke=\"none\"/><polygon points=\"34,172 217.7,33.6 217.7,172\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><polygon points=\"107.5,116.6 149,85.3 128.5,58.2 87,89.5\" fill=\"currentColor\" fill-opacity=\"0.14\" stroke=\"none\"/><polygon points=\"107.5,116.6 149,85.3 128.5,58.2 87,89.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"118\" y=\"92\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"13\" text-anchor=\"middle\">m</text><path d=\"M 69.1 145.5 A 44 44 0 0 1 78 172\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"89\" y=\"158.5\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"14\" text-anchor=\"middle\">37°</text><text x=\"176.6\" y=\"102.1\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"14\" text-anchor=\"middle\">μ = 0.5</text></g></svg>"
   },
   {
@@ -144500,7 +144500,7 @@
     "prompt": "质量 m_A = 1 kg 的物块 A 叠放在质量 m_B = 2 kg 的长木板 B 上，B 放在光滑水平面上，A、B 间的动摩擦因数为 0.2，最大静摩擦力等于滑动摩擦力，g 取 10 m/s²。对 B 施加水平拉力 F，要使 A、B 保持相对静止，F 的最大值是多少 N？（只填数值）",
     "answer": "6",
     "explanation": "A 的加速度只能由 B 对它的静摩擦力提供，最大为 a = μg = 2 m/s²。此时整体：F = (m_A + m_B)a = 3 × 2 = 6 N。若误按 F = μm_Ag = 2 N（只算了 A 受的最大静摩擦力，忘了 F 还要带动 B）会算错。",
-    "verify": "(1+2)*0.2*10",
+    "verify": "round((1+2)*0.2*10, 6)",
     "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 350 168\"><defs><marker id=\"ah37\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"3.2\" orient=\"auto\"><path d=\"M0,0.4 L7,3.2 L0,6 Z\" fill=\"currentColor\"/></marker></defs><line x1=\"14\" y1=\"124\" x2=\"336\" y2=\"124\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><line x1=\"26\" y1=\"124\" x2=\"18\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"37\" y1=\"124\" x2=\"29\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"48\" y1=\"124\" x2=\"40\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"59\" y1=\"124\" x2=\"51\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"70\" y1=\"124\" x2=\"62\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"81\" y1=\"124\" x2=\"73\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"92\" y1=\"124\" x2=\"84\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"103\" y1=\"124\" x2=\"95\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"114\" y1=\"124\" x2=\"106\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"125\" y1=\"124\" x2=\"117\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"136\" y1=\"124\" x2=\"128\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"147\" y1=\"124\" x2=\"139\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"158\" y1=\"124\" x2=\"150\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"169\" y1=\"124\" x2=\"161\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"180\" y1=\"124\" x2=\"172\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"191\" y1=\"124\" x2=\"183\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"202\" y1=\"124\" x2=\"194\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"213\" y1=\"124\" x2=\"205\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"224\" y1=\"124\" x2=\"216\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"235\" y1=\"124\" x2=\"227\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"246\" y1=\"124\" x2=\"238\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"257\" y1=\"124\" x2=\"249\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"268\" y1=\"124\" x2=\"260\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"279\" y1=\"124\" x2=\"271\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"290\" y1=\"124\" x2=\"282\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"301\" y1=\"124\" x2=\"293\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"312\" y1=\"124\" x2=\"304\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"323\" y1=\"124\" x2=\"315\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><line x1=\"334\" y1=\"124\" x2=\"326\" y2=\"133\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><text x=\"180\" y=\"152\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"13\" text-anchor=\"middle\">光滑水平面</text><rect x=\"40\" y=\"92\" width=\"220\" height=\"32\" fill=\"currentColor\" fill-opacity=\"0.12\" stroke=\"none\"/><rect x=\"40\" y=\"92\" width=\"220\" height=\"32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"150\" y=\"112.9\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"14\" text-anchor=\"middle\">B  2 kg</text><rect x=\"96\" y=\"56\" width=\"66\" height=\"36\" fill=\"currentColor\" fill-opacity=\"0.12\" stroke=\"none\"/><rect x=\"96\" y=\"56\" width=\"66\" height=\"36\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"129\" y=\"78.9\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"14\" text-anchor=\"middle\">A  1 kg</text><text x=\"210\" y=\"86\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"14\" text-anchor=\"middle\">μ = 0.2</text><line x1=\"260\" y1=\"108\" x2=\"322\" y2=\"108\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" marker-end=\"url(#ah37)\"/><text x=\"300\" y=\"96\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"15\" text-anchor=\"middle\">F</text></svg>"
   },
   {
@@ -146810,7 +146810,7 @@
     "prompt": "真空中固定着两个同种点电荷 A（电荷量 +4Q）和 B（电荷量 +Q），相距 0.3 m。在 A、B 连线上放入第三个点电荷 C，要使 C 所受合力为零，C 应放在距 B 多少 m 的位置？（只填数值）",
     "answer": "0.1",
     "explanation": "C 在两者之间才能受力平衡。设距 B 为 x：k·4Q·q/(0.3 − x)² = k·Q·q/x²，得 2x = 0.3 − x，x = 0.1 m。该位置与 C 的电荷量和电性无关。",
-    "verify": "0.3/3"
+    "verify": "round(0.3/3, 6)"
   },
   {
     "id": "cnp_h055_q1",
@@ -147274,7 +147274,7 @@
     "prompt": "把电荷量 q = −4×10⁻⁶ C 的点电荷从 A 点移到 B 点，克服静电力做功 8×10⁻⁴ J。A、B 两点的电势差 U_AB 是多少 V？（只填数值）",
     "answer": "200",
     "explanation": "克服静电力做功，W_AB = −8×10⁻⁴ J。代入符号：U_AB = W_AB/q = (−8×10⁻⁴)/(−4×10⁻⁶) = 200 V。若把克服静电力做功误当成 W = +8×10⁻⁴ J 代入，会得到 −200 V，从而判错 A、B 两点电势的高低。",
-    "verify": "(-8e-4)/(-4e-6)"
+    "verify": "round((-8e-4)/(-4e-6), 6)"
   },
   {
     "id": "cnp_h060_q4",
@@ -147368,7 +147368,7 @@
     "prompt": "电势分别为 30 V 和 −10 V 的两个等势面，一个电荷量为 2×10⁻⁶ C 的正电荷从前一个等势面移到后一个等势面，静电力做多少 J 的功？（只填数值）",
     "answer": "0.00008",
     "explanation": "U = 30 − (−10) = 40 V，W = qU = 2×10⁻⁶ × 40 = 8×10⁻⁵ J = 0.00008 J。若把电势差算成 30 − 10 = 20 V，会错得 4×10⁻⁵ J。",
-    "verify": "2e-6*40"
+    "verify": "round(2e-6*40, 10)"
   },
   {
     "id": "cnp_h061_q4",
@@ -147738,7 +147738,7 @@
     "prompt": "不计重力的带电粒子以 v₀ = 2×10⁶ m/s 垂直电场方向射入长 L = 0.1 m 的匀强电场，在电场中的加速度大小为 4×10¹² m/s²。粒子射出电场时沿电场方向偏移了多少 mm？（只填数值）",
     "answer": "5",
     "explanation": "t = L/v₀ = 0.1 ÷ 2×10⁶ = 5×10⁻⁸ s，y = ½at² = ½ × 4×10¹² × (5×10⁻⁸)² = 5×10⁻³ m = 5 mm。若漏掉 ½，会得到 10 mm。",
-    "verify": "0.5*4e12*(0.1/2e6)**2*1000"
+    "verify": "round(0.5*4e12*(0.1/2e6)**2*1000, 6)"
   },
   {
     "id": "cnp_h066_q3",
@@ -147748,7 +147748,7 @@
     "prompt": "条件同上：粒子以 v₀ = 2×10⁶ m/s 垂直射入长 L = 0.1 m 的匀强电场，加速度大小为 4×10¹² m/s²。粒子射出电场时，速度方向与初速度方向夹角的正切值 tanθ 是多少？（只填数值）",
     "answer": "0.1",
     "explanation": "t = 5×10⁻⁸ s，v_y = at = 4×10¹² × 5×10⁻⁸ = 2×10⁵ m/s，tanθ = v_y/v₀ = 2×10⁵ ÷ 2×10⁶ = 0.1。注意 tanθ = 2y/L（y = 5 mm 时为 0.1），不是 y/L。",
-    "verify": "4e12*(0.1/2e6)/2e6"
+    "verify": "round(4e12*(0.1/2e6)/2e6, 6)"
   },
   {
     "id": "cnp_h066_q4",
@@ -148262,7 +148262,7 @@
     "prompt": "满偏电流 I_g = 10 mA、内阻 R_g = 90 Ω 的表头，要改装成量程为 0.1 A 的电流表，需要并联的分流电阻是多少 Ω？（只填数值）",
     "answer": "10",
     "explanation": "表头两端电压 U = I_gR_g = 0.01 × 90 = 0.9 V，分流电阻中的电流 I − I_g = 0.09 A，R = 0.9 ÷ 0.09 = 10 Ω。若用 0.1 A 计算分流电阻的电流，会得到 9 Ω。",
-    "verify": "0.01*90/(0.1-0.01)"
+    "verify": "round(0.01*90/(0.1-0.01), 6)"
   },
   {
     "id": "cnp_h073_q4",
@@ -152491,7 +152491,7 @@
     "prompt": "质谱仪中离子经 400 V 电压加速后，垂直进入 B = 0.1 T 的匀强磁场，轨道半径为 0.2 m。该离子的比荷 q/m 是多少 C/kg？（只填数值）",
     "answer": "2000000",
     "explanation": "由 qU = mv²/2 和 r = mv/(qB) 消去 v：q/m = 2U/(B²r²) = 2 × 400 ÷ (0.01 × 0.04) = 2×10⁶ C/kg。若漏掉 B 和 r 的平方，会得到 4×10⁴ C/kg。",
-    "verify": "2*400/(0.1**2*0.2**2)"
+    "verify": "round(2*400/(0.1**2*0.2**2), 6)"
   },
   {
     "id": "cnp_h122_q4",
@@ -152895,7 +152895,7 @@
     "prompt": "一个 100 匝的线圈，面积 0.02 m²，垂直于线圈平面的磁场的磁感应强度在 0.3 s 内由 0.2 T 均匀增大到 0.8 T。线圈中感应电动势的大小是多少 V？（只填数值）",
     "answer": "4",
     "explanation": "E = nSΔB/Δt = 100 × 0.02 × (0.8 − 0.2) ÷ 0.3 = 4 V。",
-    "verify": "100*0.02*(0.8-0.2)/0.3"
+    "verify": "round(100*0.02*(0.8-0.2)/0.3, 6)"
   },
   {
     "id": "cnp_h127_q1",
@@ -152971,7 +152971,7 @@
     "prompt": "长 0.4 m 的金属棒，一端固定在 O 点，在垂直于磁场方向的平面内以 50 rad/s 的角速度匀速转动，磁感应强度 B = 0.5 T。棒两端的感应电动势是多少 V？（只填数值）",
     "answer": "2",
     "explanation": "棒上各点速度不同，平均速度 v = ωL/2，E = BL·ωL/2 = BL²ω/2 = 0.5 × 0.16 × 50 ÷ 2 = 2 V。若取端点速度 ωL 代入 BLv，会得到 4 V。",
-    "verify": "0.5*0.4**2*50/2"
+    "verify": "round(0.5*0.4**2*50/2, 6)"
   },
   {
     "id": "cnp_h128_q1",
@@ -212793,7 +212793,7 @@
     "prompt": "3/4 的倒数是多少？",
     "answer": "4/3",
     "explanation": "分子分母颠倒：3/4 的倒数是 4/3。",
-    "verify": "4/3",
+    "verify": "Fraction(4,3)",
     "id": "cnm_p246_q1",
     "topicId": "cnm_p246"
   },
@@ -212860,7 +212860,7 @@
     "prompt": "计算：3/4×0.8＝？",
     "answer": "3/5",
     "explanation": "0.8＝4/5，3/4×4/5＝3/5。",
-    "verify": "3/4*Fraction(4,5)",
+    "verify": "Fraction(3,4)*Fraction(4,5)",
     "id": "cnm_p247_q2",
     "topicId": "cnm_p247"
   },
@@ -385022,7 +385022,7 @@
     "prompt": "某种群在理想条件下呈“J”形增长，初始数量 N0 为 100，λ 为 1.2。按 Nt = N0 × λ^t，3 年后种群数量是多少？",
     "answer": "172.8",
     "explanation": "Nt = 100 × 1.2^3 = 100 × 1.728 = 172.8。",
-    "verify": "100 * 1.2 ** 3"
+    "verify": "Fraction(100)*Fraction(12,10)**3"
   },
   {
     "id": "cnb_h095_q3",

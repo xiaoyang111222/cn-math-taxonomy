@@ -47,6 +47,8 @@ numeric 和 choice 题可以带 `verify` 表达式，脚本在**受限环境**�
 - numeric：结果与 `answer` 逐项比较；整数 / 分数结果**精确比较**，浮点结果容差 1e-9；多个答案按 `unordered` 决定是否顺序无关；
 - choice：结果与**正确选项的内容**比较（选项是数时按数值比较，否则要求文字完全相同），同时要求没有第二个选项与它相同（防双解）。
 
+写 `verify` 时避免浮点残差：下游若用 Fraction 精确比较，`sqrt(7)**2`（7.000000000000001）、`sin(radians(30))`（0.49999999999999994）、`2/7*3`（0.857…）都会被判不等。分数用 `Fraction(2,7)*3`，根式 / 三角整体包一层 `round(…, 6)`，小数用 `Fraction(314,100)` 或 `round`。`tests/test_verify_exact.py` 对全库数值型 verify 按精确有理数比较（float 取最短十进制表示再转 Fraction），已进 `npm test` 与 CI。
+
 脚本会同时做格式检查，输出 `auto_verified`（有 verify 且通过）、`mismatch`、`unverifiable`，明细写入 `data/verification_report.json`。第五轮当时（只计初中；全库数字见文末）：
 
 | 项 | 数量 |

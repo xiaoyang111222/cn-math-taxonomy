@@ -130,3 +130,6 @@ jobs:
 
       - name: 初中语文重建保留高中跨段边
         run: python3 tests/test_zhj_keep_hs.py
+
+      - name: verify 表达式精确求值
+        run: python3 tests/test_verify_exact.py
