@@ -51,8 +51,9 @@ function activeFinals(plan, now) {
 /* datasets: { children, records, wrongbook, finals } 解析后的数据（缺的是 null）。 */
 export function summarizeUser(datasets, now) {
   const kids = isObj(datasets.children) && Array.isArray(datasets.children.children) ? datasets.children.children : [];
-  const first = kids.find((c) => isObj(c) && cleanName(c.name));
-  const name = first ? cleanName(first.name) : '';
+  const named = kids.filter((c) => isObj(c) && cleanName(c.name));
+  /* 待复测等数字是全部孩子合计，多个孩子时不挂某一个孩子的名字。 */
+  const name = named.length === 1 && kids.length === 1 ? cleanName(named[0].name) : '';
 
   let newWrong = 0;
   let due = 0;
@@ -157,6 +158,14 @@ async function ensureToken(env, user) {
   return row.digest_token;
 }
 
+async function releaseClaim(env, userId, weekKey) {
+  try {
+    await env.DB.prepare('DELETE FROM digest_log WHERE user_id = ? AND week_key = ?').bind(userId, weekKey).run();
+  } catch (e) {
+    console.error('digest: release claim failed for user ' + userId + ': ' + (e && e.message));
+  }
+}
+
 /* opts: { dryRun, now, sendMail }。dryRun 缺省看 env.DIGEST_DRY_RUN，不是 "0" 一律当 dry-run。
  * 返回 JSON 汇总，单个用户失败只记日志、不中断整批。 */
 export async function sendWeeklyDigests(env, opts) {
@@ -197,9 +206,17 @@ export async function sendWeeklyDigests(env, opts) {
 
     for (const user of pending) {
       let item = null;
+      let claimed = false;
       try {
         const summary = summarizeUser(datasets.get(user.id) || {}, now);
         if (!summary.hasContent) { result.skipped.no_content++; continue; }
+        /* 先占位再发：并发的另一次运行（cron 与手动同时跑）抢不到占位就跳过，同周不会重复发。
+         * 发送失败会释放占位以便补发；进程在占位后、发送前死掉则本周漏发（宁可漏一封，不重复发）。 */
+        if (!dryRun) {
+          const claim = await env.DB.prepare('INSERT OR IGNORE INTO digest_log (user_id, week_key, sent_at) VALUES (?, ?, ?)').bind(user.id, weekKey, now).run();
+          if (!claim.meta || claim.meta.changes < 1) { result.skipped.already_sent++; continue; }
+          claimed = true;
+        }
         result.will_send++;
         item = {
           to: maskEmail(user.email), new_wrong: summary.newWrong, due: summary.due, graduated: summary.graduated,
@@ -213,18 +230,20 @@ export async function sendWeeklyDigests(env, opts) {
         const sent = await o.sendMail(user.email, digestSubject(summary), body.text, {
           html: body.html, headers: { 'List-Unsubscribe': '<' + unsubUrl + '>' }
         });
-        if (sent && sent.dryRun) { item.status = 'mail_dry_run'; continue; }
+        if (sent && sent.dryRun) {
+          item.status = 'mail_dry_run';
+          claimed = false;
+          await releaseClaim(env, user.id, weekKey);
+          continue;
+        }
+        claimed = false;
         item.status = 'sent';
         result.sent++;
-        try {
-          await env.DB.prepare('INSERT OR IGNORE INTO digest_log (user_id, week_key, sent_at) VALUES (?, ?, ?)').bind(user.id, weekKey, now).run();
-        } catch (e) {
-          console.error('digest: log write failed for user ' + user.id + ': ' + (e && e.message));
-        }
       } catch (e) {
         console.error('digest: user ' + user.id + ' failed: ' + (e && e.message));
         result.failed++;
         if (item) item.status = 'failed';
+        if (claimed) await releaseClaim(env, user.id, weekKey);
       }
     }
   }

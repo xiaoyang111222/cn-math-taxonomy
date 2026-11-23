@@ -129,6 +129,17 @@ test('summarizeUser：没有孩子不带名字；四项全 0 且无计划没内�
   assert.strictEqual(digestSubject({ name: '小明', due: 0 }), '知识图谱周报：本周学习小结');
 });
 
+test('summarizeUser：多个孩子时不用第一个孩子的名字（待复测数是全部孩子合计）', async () => {
+  const { summarizeUser, digestSubject } = await load('digest.js');
+  const kids = { v: 1, current: 'c1', children: [{ id: 'c1', name: '小明' }, { id: 'c2', name: '小红' }] };
+  const s = summarizeUser({ children: kids, wrongbook: { c1: [wrong('a', MON - 5 * DAY)], c2: [wrong('b', MON - 5 * DAY)] } }, MON);
+  assert.strictEqual(s.due, 2);
+  assert.strictEqual(s.name, '');
+  assert.strictEqual(digestSubject(s), '知识图谱周报：有 2 道错题待复测');
+  const one = summarizeUser({ children: profile('小明'), wrongbook: { c1: [wrong('a', MON - 5 * DAY)] } }, MON);
+  assert.strictEqual(one.name, '小明');
+});
+
 test('renderDigest：正文双份、数字齐全、按钮与退订链接、转义、不提付费', async () => {
   const { renderDigest } = await load('digest.js');
   const url = 'https://api.math.pansgo.com/digest/unsub?t=' + 'a'.repeat(32);
@@ -363,6 +374,26 @@ worldTest('单个用户发送失败不中断整批，失败的不写日志，下
   w.failFor.clear();
   const again = await w.run();
   assert.strictEqual(again.sent, 1);
+  assert.strictEqual(w.mails[w.mails.length - 1].to, 'bad@qq.com');
+});
+
+worldTest('并发重复触发（cron 与手动同时跑）：同一用户同一周只发一封，发送失败会释放占位以便补发', async (w) => {
+  addUser(w.d1, 'a@qq.com', {}, RICH());
+  addUser(w.d1, 'b@qq.com', {}, RICH());
+  const [r1, r2] = await Promise.all([w.run(), w.run()]);
+  assert.deepStrictEqual(w.mails.map((m) => m.to).sort(), ['a@qq.com', 'b@qq.com'], '每人一封，不重复');
+  assert.strictEqual(r1.sent + r2.sent, 2);
+  assert.strictEqual(r1.skipped.already_sent + r2.skipped.already_sent >= 2, true, '输的一方按已发过跳过');
+  assert.deepStrictEqual(w.logRows().map((x) => x.user_id), [1, 2]);
+
+  addUser(w.d1, 'bad@qq.com', {}, RICH());
+  w.failFor.add('bad@qq.com');
+  const orig = console.error;
+  console.error = () => {};
+  try { await w.run(); } finally { console.error = orig; }
+  assert.deepStrictEqual(w.logRows().map((x) => x.user_id), [1, 2], '失败的占位已释放');
+  w.failFor.clear();
+  assert.strictEqual((await w.run()).sent, 1);
   assert.strictEqual(w.mails[w.mails.length - 1].to, 'bad@qq.com');
 });
 
