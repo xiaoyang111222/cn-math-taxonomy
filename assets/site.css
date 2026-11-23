@@ -854,15 +854,28 @@ a.entry-card .entry-sub { color: var(--muted); font-size: 0.95rem; overflow-wrap
 
 /* 首页本机盲区汇总 */
 .due-home {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  margin: 16px 0 0; padding: 12px 16px; text-decoration: none;
+  margin: 16px 0 0; padding: 12px 16px 6px;
   background: var(--bg-elev); border: 1px solid var(--brand-strong); border-radius: var(--radius);
-  color: var(--text); font-weight: 700;
+  color: var(--text);
 }
 .due-home[hidden] { display: none; }
+.today-title { margin: 0 0 4px; font-size: 1rem; color: var(--brand-strong); letter-spacing: -0.01em; }
+.today-list { list-style: none; margin: 0; padding: 0; }
+.today-list li[hidden] { display: none; }
+.today-list li + li { border-top: 1px solid var(--line); }
+.today-list a {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 0; text-decoration: none; color: var(--text); font-weight: 700;
+}
+.today-streak { padding: 10px 0; font-weight: 700; color: var(--muted); }
 .due-home strong { color: var(--brand-strong); }
 .due-home-go { color: var(--brand-strong); white-space: nowrap; }
-.due-home:hover .due-home-go { text-decoration: underline; }
+.today-list a:hover .due-home-go { text-decoration: underline; }
+.english-entry {
+  display: block; margin: 12px 0 0; padding: 10px 16px; text-decoration: none; text-align: center;
+  border: 1px dashed var(--brand); border-radius: var(--radius); color: var(--brand-strong); font-weight: 700;
+}
+.english-entry:hover { background: var(--brand-soft); }
 .blind-home { margin: 28px 0 8px; }
 .blind-home-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .blind-home-item {

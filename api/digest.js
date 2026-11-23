@@ -1,7 +1,7 @@
 /* 每周学习周报：周一 08:00（北京）由 cron 触发，也可用 POST /admin/digest/run 手动 / dry-run。
- * 收件人：mail_consent = 1 且 digest_opt_out = 0。内容只来自用户自己同步上来的四份数据，没内容不发。
+ * 收件人：mail_consent = 1 且 digest_opt_out = 0。内容只来自用户自己同步上来的数据（档案、诊断、错题本、期末计划、英语每日一句、学习打卡），没内容不发。
  * DIGEST_DRY_RUN 不是 "0" 时一律只算不发、不写 digest_log。 */
-import { DAY_MS, WRONGBOOK_URL, DIGEST_UNSUB_BASE, computeDue, isoWeekKey, maskEmail, generateDigestToken } from './lib.js';
+import { DAY_MS, WRONGBOOK_URL, DIGEST_UNSUB_BASE, computeDue, isoWeekKey, maskEmail, generateDigestToken, activityStreak } from './lib.js';
 
 const PAGE_SIZE = 50;
 const WEEK_MS = 7 * DAY_MS;
@@ -48,7 +48,35 @@ function activeFinals(plan, now) {
   return { endMonth: endDate.getUTCMonth() + 1, endDay: endDate.getUTCDate() };
 }
 
-/* datasets: { children, records, wrongbook, finals } 解析后的数据（缺的是 null）。 */
+/* 英语每日一句（cnmEnglish.v1：{桶: {done: {day: {at}}}}）：近 7 天完成的新句数（与前端 weekStats 同口径）、累计句数。 */
+function summarizeEnglish(english, now) {
+  let week = 0;
+  let total = 0;
+  if (isObj(english)) {
+    Object.keys(english).forEach((bucket) => {
+      const done = isObj(english[bucket]) ? english[bucket].done : null;
+      if (!isObj(done)) return;
+      Object.keys(done).forEach((day) => {
+        if (!isObj(done[day])) return;
+        total++;
+        const at = toMs(done[day].at);
+        if (at > now - WEEK_MS && at <= now) week++;
+      });
+    });
+  }
+  return { week, total };
+}
+
+/* 学习打卡（cnmActivity.v1：{桶: [日期]}）：各孩子 / 游客桶里最长的当前连续段。 */
+function summarizeStreak(activity, now) {
+  let best = 0;
+  if (isObj(activity)) {
+    Object.keys(activity).forEach((bucket) => { best = Math.max(best, activityStreak(activity[bucket], now)); });
+  }
+  return best;
+}
+
+/* datasets: { children, records, wrongbook, finals, english, activity } 解析后的数据（缺的是 null）。 */
 export function summarizeUser(datasets, now) {
   const kids = isObj(datasets.children) && Array.isArray(datasets.children.children) ? datasets.children.children : [];
   const named = kids.filter((c) => isObj(c) && cleanName(c.name));
@@ -87,8 +115,13 @@ export function summarizeUser(datasets, now) {
   }
 
   const finals = activeFinals(datasets.finals, now);
-  const hasContent = newWrong > 0 || due > 0 || graduated > 0 || diagnoses > 0 || !!finals;
-  return { name, newWrong, due, graduated, diagnoses, finals, hasContent };
+  /* 有英语数据才加一行；但只有本周学过或还在连续打卡才算「有内容」，免得学完很久的账号每周都收到空小结。 */
+  const eng = summarizeEnglish(datasets.english, now);
+  const streak = summarizeStreak(datasets.activity, now);
+  const english = eng.total > 0 ? { week: eng.week, total: eng.total, streak } : null;
+  const englishFresh = !!english && (eng.week > 0 || streak > 0);
+  const hasContent = newWrong > 0 || due > 0 || graduated > 0 || diagnoses > 0 || !!finals || englishFresh;
+  return { name, newWrong, due, graduated, diagnoses, finals, english, hasContent };
 }
 
 export function digestSubject(summary) {
@@ -109,6 +142,9 @@ function lines(summary) {
     ['已毕业的错题', summary.graduated + ' 道'],
     ['本周诊断', summary.diagnoses + ' 次']
   ];
+  if (summary.english) {
+    out.push(['英语每日一句', '本周学了 ' + summary.english.week + ' 句，连续学习 ' + summary.english.streak + ' 天']);
+  }
   return out;
 }
 
@@ -222,6 +258,7 @@ export async function sendWeeklyDigests(env, opts) {
           to: maskEmail(user.email), new_wrong: summary.newWrong, due: summary.due, graduated: summary.graduated,
           diagnoses: summary.diagnoses, finals: !!summary.finals, status: dryRun ? 'dry_run' : 'pending'
         };
+        if (summary.english) { item.english_week = summary.english.week; item.english_streak = summary.english.streak; }
         result.items.push(item);
         if (dryRun) continue;
 

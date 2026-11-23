@@ -47,7 +47,7 @@ const INDEX_URL = 'data/questions/index.json';
 
 function load(search, topicRows, extraWindow) {
   const ids = {};
-  ['due-home', 'due-home-n', 'due-home-all', 'n-topics', 'n-edges', 'n-questions', 'n-subjects', 'cover-morality', 'hero-start', 'hero-demo', 'load-error', 'grades'].forEach(id => { ids[id] = element(); });
+  ['due-home', 'due-home-line', 'due-home-n', 'due-home-all', 'today-en-line', 'today-en-state', 'today-en-review', 'today-en-review-n', 'today-streak-line', 'today-streak-n', 'n-topics', 'n-edges', 'n-questions', 'n-subjects', 'cover-morality', 'hero-start', 'hero-demo', 'load-error', 'grades'].forEach(id => { ids[id] = element(); });
   ids.grades.setAttribute('aria-busy', 'true');
   const calls = [];
   function fetch(url) {
@@ -224,11 +224,14 @@ function load(search, topicRows, extraWindow) {
     assert.strictEqual(ids['due-home-all'].hidden, true);
   });
 
-  await test('首页待复测卡片：未登录或没有到期题都不显示', async () => {
+  await test('首页待复测卡片：未登录且没有任何进度不显示；登录但没有到期题时待复测一行隐藏（卡片仍在）', async () => {
     const out = dueWindow(false, 5);
     assert.strictEqual(load('', undefined, out.win).ids['due-home'].hidden, true);
     const none = dueWindow(true, 0);
-    assert.strictEqual(load('', undefined, none.win).ids['due-home'].hidden, true);
+    const { ids } = load('', undefined, none.win);
+    assert.strictEqual(ids['due-home'].hidden, false, '登录用户的「今日学习」卡常在');
+    assert.strictEqual(ids['due-home-line'].hidden, true);
+    assert.strictEqual(ids['today-en-line'].hidden, true, '没有英语脚本时不显示英语一行');
     assert.strictEqual(load('').ids['due-home'].hidden, true, '没有错题本脚本时不显示、不报错');
   });
 
@@ -239,10 +242,71 @@ function load(search, topicRows, extraWindow) {
     d.state.loggedIn = true;
     d.handlers['cnm:auth']();
     assert.strictEqual(ids['due-home'].hidden, false);
+    assert.strictEqual(ids['due-home-line'].hidden, false);
     assert.strictEqual(ids['due-home-n'].textContent, '3');
     d.state.n = 0;
     d.handlers['cnm:sync']();
-    assert.strictEqual(ids['due-home'].hidden, true);
+    assert.strictEqual(ids['due-home-line'].hidden, true);
+  });
+
+  const todayWindow = (opts) => {
+    const state = Object.assign({ loggedIn: true, n: 0, child: { id: 'c1' }, en: { doneCount: 0, completedToday: false, finished: false, reviewTotal: 0 }, streak: 0, any: false }, opts || {});
+    const seen = {};
+    const win = {
+      CnmAccount: { isLoggedIn: () => state.loggedIn },
+      CnmWrong: { dueTotal: () => state.n, dueBuckets: () => 1 },
+      CnmChildren: { current: () => state.child },
+      CnmEnglish: { todayState: (bucket) => { seen.enBucket = bucket; return state.en; } },
+      CnmActivity: { streak: (bucket) => { seen.actBucket = bucket; return state.streak; }, hasAny: () => state.any },
+      addEventListener: (name, fn) => { seen[name] = fn; }
+    };
+    return { state, seen, win };
+  };
+
+  await test('今日学习卡：当前孩子的英语一句（未学 / 已完成 / 学完）、到期旧句复习与连续天数', async () => {
+    const t = todayWindow({ n: 4, streak: 6, en: { doneCount: 3, completedToday: false, finished: false, reviewTotal: 2 } });
+    const { ids } = load('', undefined, t.win);
+    assert.strictEqual(t.seen.enBucket, 'c1', '用站内当前孩子');
+    assert.strictEqual(t.seen.actBucket, 'c1');
+    assert.strictEqual(ids['due-home'].hidden, false);
+    assert.strictEqual(ids['due-home-n'].textContent, '4');
+    assert.strictEqual(ids['today-en-line'].hidden, false);
+    assert.strictEqual(ids['today-en-state'].textContent, '未学');
+    assert.strictEqual(ids['today-en-review'].hidden, false);
+    assert.strictEqual(ids['today-en-review-n'].textContent, '2');
+    assert.strictEqual(ids['today-streak-line'].hidden, false);
+    assert.strictEqual(ids['today-streak-n'].textContent, '6');
+    t.state.en = { doneCount: 4, completedToday: true, finished: false, reviewTotal: 0 };
+    t.state.streak = 0;
+    t.seen['cnm:sync']();
+    assert.strictEqual(ids['today-en-state'].textContent, '已完成');
+    assert.strictEqual(ids['today-en-review'].hidden, true);
+    assert.strictEqual(ids['today-streak-line'].hidden, true);
+    t.state.en = { doneCount: 30, completedToday: false, finished: true, reviewTotal: 0 };
+    t.seen['cnm:sync']();
+    assert.strictEqual(ids['today-en-state'].textContent, '30 句已学完');
+  });
+
+  await test('今日学习卡：没有孩子档案用 guest 桶；未登录的游客有英语或打卡进度才显示游客版', async () => {
+    const g = todayWindow({ loggedIn: false, child: null, en: { doneCount: 2, completedToday: true, finished: false, reviewTotal: 0 } });
+    const { ids } = load('', undefined, g.win);
+    assert.strictEqual(g.seen.enBucket, 'guest');
+    assert.strictEqual(ids['due-home'].hidden, false);
+    const none = todayWindow({ loggedIn: false, child: null });
+    assert.strictEqual(load('', undefined, none.win).ids['due-home'].hidden, true);
+    const act = todayWindow({ loggedIn: false, child: null, any: true, streak: 1 });
+    assert.strictEqual(load('', undefined, act.win).ids['due-home'].hidden, false);
+  });
+
+  await test('首页硬约束：数字条、学科胶囊、登录入口脚本、统计埋点、页脚友链、英语入口都在', async () => {
+    const html = fs.readFileSync(path.join(__dirname, '../index.html'), 'utf8');
+    ['id="stats"', 'id="n-topics"', 'id="pill-row"', 'data-subject="english"', 'assets/account.js', 'assets/stats.js', 'assets/stats-config.js', 'id="blind-home"', 'class="site-footer"', 'issues/new/choose'].forEach((frag) => {
+      assert.ok(html.includes(frag), frag);
+    });
+    assert.ok(/<a class="english-entry[^"]*" href="english\/">英语每日一句 · 每天 3 分钟 →<\/a>/.test(html));
+    assert.ok(html.indexOf('id="subject-more"') < html.indexOf('class="english-entry'), '入口在学科区下方');
+    assert.ok(html.indexOf('assets/english.js') < html.indexOf('assets/home.js') && html.indexOf('assets/activity.js') < html.indexOf('assets/home.js'));
+    assert.ok(html.includes('href="wrongbook/"') && html.includes('href="english/"'), '卡内两个链接');
   });
 
   console.log(passed + ' passed');

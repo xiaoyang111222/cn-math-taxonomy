@@ -149,6 +149,16 @@ let chrome;
   assert.deepStrictEqual(after.guest.reviews['1'], { dueOrd: 5, doneOrds: [3] });
   test('旧句复习：排序 + 听写通过 → 记下这一轮，下一轮 +4');
 
+  await cdp.send('Page.navigate', { url: base + '/' });
+  await until(() => cdp.eval('document.readyState === "complete" && !!document.getElementById("due-home")'), '首页');
+  await sleep(300);
+  assert.ok(await cdp.eval('!document.getElementById("due-home").hidden'), '首页今日学习卡');
+  const card = await cdp.eval('document.getElementById("due-home").innerText');
+  assert.ok(card.includes('今日英语一句：未学') && card.includes('连续学习 1 天'), card);
+  assert.ok(await cdp.eval('!!document.querySelector("a.english-entry[href=\\"english/\\"]")'));
+  await shot('home');
+  test('首页：今日学习卡显示英语一句与连续天数，小入口可见');
+
   assert.deepStrictEqual(errors, [], JSON.stringify(errors));
   test('页面没有未捕获异常');
   console.log(passed + ' passed；截图在 ' + out);

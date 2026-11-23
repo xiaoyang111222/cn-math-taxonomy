@@ -145,10 +145,20 @@
   </div>
   <div id="load-error" class="load-error" hidden></div>
 
-  <a class="due-home no-print" id="due-home" href="wrongbook/" hidden>
-    <span class="due-home-text">今日待复测 <strong id="due-home-n">0</strong> 题<span id="due-home-all" hidden>（全部孩子合计）</span></span>
-    <span class="due-home-go">去复测 →</span>
-  </a>
+  <section class="due-home no-print" id="due-home" aria-label="今日学习" hidden>
+    <h2 class="today-title">今日学习</h2>
+    <ul class="today-list">
+      <li id="due-home-line" hidden><a href="wrongbook/">
+        <span class="due-home-text">今日待复测 <strong id="due-home-n">0</strong> 题<span id="due-home-all" hidden>（全部孩子合计）</span></span>
+        <span class="due-home-go">去复测 →</span>
+      </a></li>
+      <li id="today-en-line" hidden><a href="english/">
+        <span class="due-home-text">今日英语一句：<strong id="today-en-state">未学</strong><span id="today-en-review" hidden>，到期旧句复习 <strong id="today-en-review-n">0</strong> 句</span></span>
+        <span class="due-home-go">去学习 →</span>
+      </a></li>
+      <li id="today-streak-line" class="today-streak" hidden>连续学习 <strong id="today-streak-n">0</strong> 天</li>
+    </ul>
+  </section>
 
   <nav class="subject-pills" aria-label="选择学科">
     <div class="pill-row" id="pill-row">
@@ -179,6 +189,8 @@
     <li><strong>科学</strong><span>教科版：小学一至六年级</span></li>
     <li><strong>思想政治</strong><span>统编版：仅高中。必修1–4 与选择性必修1–3</span></li>
   </ul>
+
+  <a class="english-entry no-print" href="english/">英语每日一句 · 每天 3 分钟 →</a>
 
   <section class="blind-home" id="blind-home" hidden>
     <h2 class="section-title">本机盲区</h2>
@@ -233,6 +245,8 @@
 <script src="assets/children.js"></script>
 <script src="assets/blindspots.js"></script>
 <script src="assets/wrongbook.js"></script>
+<script src="assets/activity.js"></script>
+<script src="assets/english.js"></script>
 <script src="assets/home.js"></script>
 <script src="assets/account.js"></script>
 <script src="assets/sync.js"></script>

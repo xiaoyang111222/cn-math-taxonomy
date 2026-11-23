@@ -103,7 +103,9 @@
 
   function fmt(n) { return Number(n).toLocaleString('en-US'); }
 
-  /* 登录用户本机错题本到期复测提示：未登录或没有到期题时整条隐藏，不占位。 */
+  /* 「今日学习」卡：登录用户一张卡汇总当前孩子（站内 active child，没有则 guest 桶）——错题待复测、今日英语一句、
+   * 到期旧句复习、连续学习天数；没登录时，当前桶有英语 / 打卡进度也显示（游客版）。什么都没有就整张隐藏，不占位。
+   * 待复测数沿用第一批口径：全部孩子（含 guest）合计，分散在多个孩子名下时标「（全部孩子合计）」。 */
   function loggedIn() {
     try {
       if (window.CnmAccount && window.CnmAccount.isLoggedIn) return !!window.CnmAccount.isLoggedIn();
@@ -111,25 +113,61 @@
       return !!(s && typeof s.token === 'string' && Number(s.exp) > Date.now());
     } catch (e) { return false; }
   }
+  function setHidden(id, hidden) {
+    var node = $(id);
+    if (node) node.hidden = !!hidden;
+  }
+  function currentBucket() {
+    try {
+      var cur = window.CnmChildren && window.CnmChildren.current && window.CnmChildren.current();
+      return cur && cur.id ? cur.id : 'guest';
+    } catch (e) { return 'guest'; }
+  }
   function renderDueHome() {
     var box = $('due-home');
     if (!box) return;
+    var bucket = currentBucket();
+    var login = loggedIn();
+    var en = null, streak = 0, hasProgress = false;
+    try {
+      if (window.CnmEnglish && window.CnmEnglish.todayState) {
+        en = window.CnmEnglish.todayState(bucket, Date.now());
+        hasProgress = en.doneCount > 0;
+      }
+    } catch (e) { en = null; }
+    try {
+      if (window.CnmActivity && window.CnmActivity.streak) {
+        streak = window.CnmActivity.streak(bucket, Date.now());
+        if (window.CnmActivity.hasAny && window.CnmActivity.hasAny(bucket)) hasProgress = true;
+      }
+    } catch (e) { streak = 0; }
+    var show = login || hasProgress;
     var n = 0, spread = false;
     try {
-      if (window.CnmWrong && window.CnmWrong.dueTotal && loggedIn()) {
+      if (show && window.CnmWrong && window.CnmWrong.dueTotal) {
         n = window.CnmWrong.dueTotal(Date.now());
         spread = n > 0 && !!window.CnmWrong.dueBuckets && window.CnmWrong.dueBuckets(Date.now()) > 1;
       }
     } catch (e) { n = 0; spread = false; }
     if (n > 0) setText('due-home-n', String(n));
-    var all = $('due-home-all');
-    if (all) all.hidden = !spread;
-    box.hidden = !(n > 0);
+    setHidden('due-home-all', !spread);
+    setHidden('due-home-line', !(n > 0));
+    setHidden('today-en-line', !en);
+    if (en) {
+      setText('today-en-state', en.finished ? '30 句已学完' : (en.completedToday ? '已完成' : '未学'));
+      var rn = en.reviewTotal || 0;
+      if (rn > 0) setText('today-en-review-n', String(rn));
+      setHidden('today-en-review', !(rn > 0));
+    }
+    if (streak > 0) setText('today-streak-n', String(streak));
+    setHidden('today-streak-line', !(streak > 0));
+    box.hidden = !show;
   }
   renderDueHome();
   if (window.addEventListener) {
     window.addEventListener('cnm:auth', renderDueHome);
     window.addEventListener('cnm:sync', renderDueHome);
+    window.addEventListener('pageshow', renderDueHome);
   }
 
   function fail(message) {
