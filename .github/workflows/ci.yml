@@ -142,3 +142,6 @@ jobs:
 
       - name: 沪教版映射文件格式
         run: node tests/test_hujiao_mapping.js
+
+      - name: 教材版本落点投影
+        run: node tests/test_edition_view.js

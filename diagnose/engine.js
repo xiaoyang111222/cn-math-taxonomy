@@ -10,8 +10,8 @@
  *         gradeTargets(graph, '一年级'|'七上'|'高一'|'选必二', subject?) -> {ids, volumes, label} | null
  *           默认 subject 为 math，不把英语卷进数学的整册；'english' 只取英语（含九全），'physics' 只取物理（八上、八下、九全），'all' 不限学科
  *         createSession(graph, ids, {mode:'screen', confirm}) -> 筛查会话：范围 = 目标本身，回溯不出范围，默认题量上限 SCREEN_LIMIT
- *         filterByProgress(graph, ids, '上'|'下'|'全', curGrade) -> {ids, deferred}：上学期时去掉本年级下册点（未学，不判薄弱）
- *         chapterSummary(graph, session) -> 按章汇总（薄弱章节在前）
+ *         filterByProgress(graph, ids, '上'|'下'|'全', curGrade, place?) -> {ids, deferred}：上学期时去掉本年级下册点（未学，不判薄弱）；place 换教材版本的落点
+ *         chapterSummary(graph, session, view?) -> 按章汇总（薄弱章节在前）；view 换教材版本的章与顺序
  *         layout(graph, session, summary) -> 路径图的分层布局
  *         judgeQuestion(question, userText) -> {verdict:'correct'|'wrong'|'manual', reason}
  *         judgeAnswer(user, reference) -> 同上（只按参考答案文本判，旧接口）
@@ -728,14 +728,16 @@
    * 低年级的下册、semester 为「全」的点、其它年级的点都保留。curGrade 为 null 时，所有下册点都视为未学。
    * 只用于挑目标；沿先修边回溯不经过这里（先修本来就更早）。
    * 返回 { ids: 保留的, deferred: 因未学而排除的 }，顺序同入参。
+   * place(id, topic) 可选：返回 { grade, semester }（不同教材版本的落点），缺省读 topic 自己的 grade / semester；返回 null 当作保留。
    */
-  function filterByProgress(graph, ids, progress, curGrade) {
+  function filterByProgress(graph, ids, progress, curGrade, place) {
     if (progress !== '上') return { ids: ids.slice(), deferred: [] };
     const keep = [];
     const deferred = [];
     ids.forEach(function (id) {
       const t = graph.byId[id];
-      const later = !!t && t.semester === '下' && typeof t.grade === 'number' && (curGrade == null || t.grade === curGrade);
+      const at = place && t ? place(id, t) : t;
+      const later = !!at && at.semester === '下' && typeof at.grade === 'number' && (curGrade == null || at.grade === curGrade);
       (later ? deferred : keep).push(id);
     });
     return { ids: keep, deferred: deferred };
@@ -744,14 +746,22 @@
   /**
    * 按章汇总：范围内每章的 掌握 / 不稳 / 薄弱 / 未测 数量和薄弱、不稳的知识点 id。
    * 章按教材顺序给出，再按「薄弱数多、不稳数多」稳定排序，薄弱的章排前面。
+   * view 可选：{ chapterOf(topic) -> {volume, chapterNo, chapterName}, order(topic) -> 数字 }，
+   * 给其它教材版本按自己的单元与顺序汇总；缺省按 topic.chapter 与 topics 文件顺序。
    */
-  function chapterSummary(graph, session) {
+  function chapterSummary(graph, session, view) {
     const inOrder = new Set(session.order);
     const byKey = Object.create(null);
     const list = [];
-    graph.topics.forEach(function (t) {
+    let source = graph.topics;
+    if (view && view.order) {
+      source = graph.topics.map(function (t, i) { return { t: t, k: view.order(t), i: i }; })
+        .sort(function (a, b) { return a.k - b.k || a.i - b.i; })
+        .map(function (x) { return x.t; });
+    }
+    source.forEach(function (t) {
       if (t.external || !inOrder.has(t.id)) return;
-      const c = parseChapter(t.chapter);
+      const c = view && view.chapterOf ? view.chapterOf(t) : parseChapter(t.chapter);
       const parts = [c.volume, c.chapterNo, c.chapterName].filter(Boolean);
       const key = parts.join(' ');
       let ch = byKey[key];
