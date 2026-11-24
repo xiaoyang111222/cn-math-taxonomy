@@ -23,7 +23,7 @@ const NUM_ZH = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九
 const SEMESTER_ORDER = { '上': 0, '下': 1, '全': 2 };
 
 const MAIN_PAGES = [
-  ['/', '1.0'], ['/diagnose/', '1.0'], ['/explore/', '0.9'], ['/goods/', '0.9'], ['/wrongbook/', '0.9'], ['/finals/', '0.9']
+  ['/', '1.0'], ['/diagnose/', '1.0'], ['/explore/', '0.9'], ['/goods/', '0.9'], ['/wrongbook/', '0.9'], ['/finals/', '0.9'], ['/english/', '0.9']
 ];
 
 function parseArgs(argv) {
