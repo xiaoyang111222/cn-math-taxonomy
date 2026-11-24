@@ -139,3 +139,6 @@ jobs:
 
       - name: 章节数据一致性
         run: node tests/test_chapter_consistency.js
+
+      - name: 沪教版映射文件格式
+        run: node tests/test_hujiao_mapping.js

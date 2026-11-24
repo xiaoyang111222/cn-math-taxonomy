@@ -185,6 +185,17 @@ EDITION_RESERVED = {"renjiao_math", "pep_math"}  # 人教版就是 topic 自己�
 MAPPING_TERMS = ("上", "下", "全")
 MAPPING_ENTRY_FIELDS = {"grade", "term", "unit", "chapter", "note"}
 MAPPING_FILE_STATUS = ("example", "draft", "reviewed")
+# 运行时映射文件（连字符文件名，规则见 docs/hujiao-mapping-plan.md 第 2 节）：{version}-{subject}[-{stage}].json
+RT_VERSION_RE = re.compile(r"^[a-z][a-z0-9]*$")
+RT_FILE_RE = re.compile(r"^([a-z][a-z0-9]*)-([a-z]+)(?:-([a-z]+))?\.json$")
+RT_VERSIONS = ("hujiao",)
+RT_SUBJECTS = ("math",)  # 一期只有数学；物理、英语在三期
+RT_STAGE_GRADES = {"primary": (1, 5)}  # 一期只有小学；junior 在二期，grade 6–9
+RT_HEAD_FIELDS = {"version", "subject", "stage", "label", "status", "source", "contributor", "note", "entries"}
+RT_ENTRY_FIELDS = {"grade", "term", "unit", "chapter", "note"}
+RT_STATUS = ("draft", "reviewed")
+RT_BANNED_WORDS = ("示例", "占位")
+PRIMARY_MATH_ID_RE = re.compile(r"^cnm_p\d+$")
 
 errors = []
 warnings = []
@@ -367,8 +378,8 @@ def check_mapping_files(ids):
         return 0, 0
     n_files = n_entries = 0
     for fn in sorted(os.listdir(MAPPINGS_DIR)):
-        if not fn.endswith(".json"):
-            continue
+        if not fn.endswith(".json") or "-" in fn:
+            continue  # 连字符文件是运行时映射，走 check_runtime_mapping_files
         n_files += 1
         where = "data/mappings/%s" % fn
         data = load(os.path.join(MAPPINGS_DIR, fn))
@@ -417,6 +428,132 @@ def check_mapping_files(ids):
             check_mapping_entry({k: v for k, v in e.items() if k != "topicId"}, ew)
             n_entries += 1
     return n_files, n_entries
+
+
+def _no_dup_pairs(pairs):
+    seen = set()
+    for k, _ in pairs:
+        if k in seen:
+            raise ValueError("重复键 %r" % k)
+        seen.add(k)
+    return dict(pairs)
+
+
+def check_runtime_mapping_files(ids):
+    """data/mappings/<version>-<subject>[-<stage>].json：站点运行时读的映射层。
+    返回 (文件数, 条目数, 覆盖统计 dict)。统计只在小学数学文件上有意义。"""
+    stats = {"denominator": 0, "numerator": 0, "entries": 0, "grade6": 0, "grade6_covered": 0}
+    if not os.path.isdir(MAPPINGS_DIR):
+        return 0, 0, stats
+    n_files = n_entries = 0
+    seen_in_files = {}
+    for fn in sorted(os.listdir(MAPPINGS_DIR)):
+        if not fn.endswith(".json") or "-" not in fn:
+            continue
+        n_files += 1
+        where = "data/mappings/%s" % fn
+        m = RT_FILE_RE.match(fn)
+        if not m:
+            err("%s 文件名必须是 {version}-{subject}.json 或 {version}-{subject}-{stage}.json" % where)
+            continue
+        f_version, f_subject, f_stage = m.group(1), m.group(2), m.group(3) or "primary"
+        try:
+            with open(os.path.join(MAPPINGS_DIR, fn), encoding="utf-8") as f:
+                raw = f.read()
+            if raw.startswith("\ufeff"):
+                err("%s 不能带 BOM" % where)
+                raw = raw.lstrip("\ufeff")
+            data = json.loads(raw, object_pairs_hook=_no_dup_pairs)
+        except ValueError as e:
+            err("%s 无法解析或有重复键：%s" % (where, e))
+            continue
+        if not isinstance(data, dict):
+            err("%s 顶层必须是对象" % where)
+            continue
+        for k in data:
+            if k not in RT_HEAD_FIELDS:
+                err("%s 有未知顶层字段 %s" % (where, k))
+        version = data.get("version")
+        subject = data.get("subject")
+        stage = data.get("stage")
+        if not (isinstance(version, str) and RT_VERSION_RE.match(version)) or version not in RT_VERSIONS:
+            err("%s version 不合法：%r（一期只有 %s；小写字母数字，不含下划线与学科）" % (where, version, "、".join(RT_VERSIONS)))
+        elif version != f_version:
+            err("%s 文件名的 version（%s）与文件头（%s）不一致" % (where, f_version, version))
+        if subject not in RT_SUBJECTS:
+            err("%s subject 必须是 %s（现为 %r）" % (where, " / ".join(RT_SUBJECTS), subject))
+        elif subject != f_subject:
+            err("%s 文件名的 subject（%s）与文件头（%s）不一致" % (where, f_subject, subject))
+        if stage not in RT_STAGE_GRADES:
+            err("%s stage 必须是 %s（现为 %r）" % (where, " / ".join(RT_STAGE_GRADES), stage))
+        elif stage != f_stage:
+            err("%s 文件名的 stage（%s，无后缀即 primary）与文件头（%s）不一致" % (where, f_stage, stage))
+        src = data.get("source")
+        if not (nonempty_str(src) and len(src) <= 2000):
+            err("%s source 必须是 1–2000 字的非空字符串" % where)
+        ctr = data.get("contributor")
+        if not (nonempty_str(ctr) and len(ctr) <= 40):
+            err("%s contributor 必须是 1–40 字的非空字符串" % where)
+        for k in ("label", "note"):
+            if k in data and not nonempty_str(data[k]):
+                err("%s %s 若出现必须是非空字符串" % (where, k))
+        status = data.get("status", "draft")
+        if status not in RT_STATUS:
+            err("%s status 必须是 %s" % (where, " / ".join(RT_STATUS)))
+        for k in ("label", "note", "source", "contributor"):
+            if isinstance(data.get(k), str) and any(w in data[k] for w in RT_BANNED_WORDS):
+                err("%s %s 里不能出现%s" % (where, k, "、".join("「%s」" % w for w in RT_BANNED_WORDS)))
+        entries = data.get("entries")
+        if not isinstance(entries, dict):
+            err("%s entries 必须是对象（键为 topicId，可为空）" % where)
+            continue
+        if status == "reviewed" and not entries:
+            err("%s status 为 reviewed 时 entries 至少一条" % where)
+        lo, hi = RT_STAGE_GRADES.get(stage, (1, 5))
+        for tid, e in entries.items():
+            ew = "%s entries.%s" % (where, tid)
+            t = ids.get(tid)
+            if t is None:
+                err("%s topicId 不存在" % ew)
+            elif t.get("external") or topic_subject(tid) != subject:
+                err("%s 只能对照%s正式知识点" % (ew, subject))
+            elif subject == "math" and stage == "primary" and not PRIMARY_MATH_ID_RE.match(tid):
+                err("%s 小学映射只能含 cnm_p 开头的知识点" % ew)
+            if tid in seen_in_files and seen_in_files[tid] != fn:
+                err("%s 已出现在 %s，同一知识点不能跨文件重复" % (ew, seen_in_files[tid]))
+            seen_in_files.setdefault(tid, fn)
+            if not isinstance(e, dict):
+                err("%s 必须是对象" % ew)
+                continue
+            for k in e:
+                if k not in RT_ENTRY_FIELDS:
+                    err("%s 有未知字段 %s（允许：%s）" % (ew, k, "、".join(sorted(RT_ENTRY_FIELDS))))
+            g, term = e.get("grade"), e.get("term")
+            if not (type(g) is int and lo <= g <= hi):
+                err("%s grade 必须是 %d–%d 的整数（%s）" % (ew, lo, hi, stage))
+            if not (type(term) is int and term in (1, 2)):
+                err("%s term 必须是整数 1 或 2" % ew)
+            if not nonempty_str(e.get("unit")):
+                err("%s unit 必须是非空字符串" % ew)
+            for k in ("chapter", "note"):
+                if k in e and not nonempty_str(e[k]):
+                    err("%s %s 若出现必须是非空字符串" % (ew, k))
+            for k in ("unit", "chapter", "note"):
+                if isinstance(e.get(k), str) and any(w in e[k] for w in RT_BANNED_WORDS):
+                    err("%s %s 里不能出现%s" % (ew, k, "、".join("「%s」" % w for w in RT_BANNED_WORDS)))
+            n_entries += 1
+        if subject == "math" and stage == "primary":
+            denom = [i for i, t in ids.items() if PRIMARY_MATH_ID_RE.match(i) and not t.get("external")]
+            numer = [i for i in denom if i in entries]
+            stats["denominator"] += len(denom)
+            stats["numerator"] += len(numer)
+            stats["entries"] += len(entries)
+            g6 = [i for i in denom if ids[i].get("grade") == 6]
+            stats["grade6"] += len(g6)
+            stats["grade6_covered"] += sum(1 for i in g6 if i in entries)
+            if len(numer) > len(denom) or len(numer) != len(entries):
+                err("%s 条目数 %d 与小学数学正式点命中数 %d 不符（条目指向了非小学数学 id？）" % (where, len(entries), len(numer)))
+    return n_files, n_entries, stats
 
 
 def check_topics(topics):
@@ -1889,9 +2026,14 @@ def main():
     ids = check_topics(topics)
     check_aliases(ids)
     n_map_files, n_map_entries = check_mapping_files(ids)
+    n_rt_files, n_rt_entries, rt_stats = check_runtime_mapping_files(ids)
     n_topic_maps = sum(1 for t in ids.values() if "mappings" in t)
-    print("教材版本对照（可选）：topic.mappings %d 个知识点；data/mappings %d 个文件、%d 条" % (
-        n_topic_maps, n_map_files, n_map_entries))
+    print("教材版本对照（可选）：topic.mappings %d 个知识点；data/mappings 下划线贡献文件 %d 个、%d 条；运行时映射文件 %d 个、%d 条" % (
+        n_topic_maps, n_map_files, n_map_entries, n_rt_files, n_rt_entries))
+    if n_rt_files:
+        print("沪教版小学数学映射覆盖率：%d/%d（条目 %d；人教六年级点 %d 个，其中已有落点 %d 个）" % (
+            rt_stats["numerator"], rt_stats["denominator"], rt_stats["entries"],
+            rt_stats["grade6"], rt_stats["grade6_covered"]))
     prereqs, dependents, n_hard, n_soft, n_en_hard, n_en_soft = check_deps(deps, ids)
     qs_for_split = load(QUESTIONS_PATH) if os.path.exists(QUESTIONS_PATH) else None
     check_g2b_yard_split(ids, deps, qs_for_split)
