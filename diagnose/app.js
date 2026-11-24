@@ -2,6 +2,7 @@
 (function () {
   'use strict';
   const E = window.DiagEngine;
+  const Ed = window.CnmEdition;
   const LS_SESSION = 'cnmDiagnose.session.v2';
   const LS_SESSION_EN = 'cneDiagnose.session.v2';
   const LS_SESSION_PHY = 'cnpDiagnose.session.v2';
@@ -37,7 +38,8 @@
   const TYPE_LABEL = { numeric: '数值题', choice: '选择题', short: '短答题', self: '开放题', legacy: '诊断题' };
 
   const root = document.getElementById('root');
-  let D = null;            // 数据：{topics, deps, stdById, graph, tree}
+  let D = null;            // 数据：{topics, deps, stdById, graph, tree, uncovered}
+  const ED = { on: false, P: null }; // 数学册次：on 为沪教版时 P 是落点表；人教版不建落点表，走原来的 topic.chapter
   let session = null;      // 引擎会话
   let sessionMeta = null;  // {label, chapterKey?}
   let demo = null;         // 演示模式：{oracle}
@@ -362,11 +364,72 @@
     const stdById = {};
     js[2].items.forEach(function (x) { stdById[x.id] = x; });
     const graph = E.buildGraph(topics, deps, questions);
-    D = { topics: topics, deps: deps, stdById: stdById, graph: graph, tree: buildTree(topics), aliases: (js[3] && js[3].aliases) || {} };
+    D = { topics: topics, deps: deps, stdById: stdById, graph: graph, tree: {}, uncovered: [], aliases: (js[3] && js[3].aliases) || {} };
+    await syncEdition();
   }
+
+  /* ------------------------------------------------------------ 数学册次（沪教版映射层）
+   * 人教版：册次、章名都用 topic 自己的 chapter。沪教版：用 data/mappings/hujiao-math.json 的落点（只影响目标池与目录），
+   * 没有落点的点写「该版本暂未覆盖」，不退回人教版的册次。先修回溯不看版本，仍走 dependencies.json 的边。 */
+  function PL() { return ED.on ? ED.P : null; }
+  function chapterOf(t) { return PL() && !t.external ? Ed.chapterText(PL(), t) : t.chapter; }
+  async function syncEdition() {
+    const want = subject === 'math' ? CC.currentEdition('math') : 'renjiao';
+    if (want === 'hujiao' && !ED.P) {
+      try { ED.P = await Ed.load({ base: '../', version: 'hujiao', subject: 'math', stage: 'primary' }); }
+      catch (e) { throw new Error('沪教版册次文件加载失败，请刷新重试（不会退回人教版册次）：' + (e && e.message || e)); }
+    }
+    ED.on = want === 'hujiao';
+    if (D) { D.tree = buildTree(D.topics); D.uncovered = buildUncovered(D.topics); }
+  }
+  /* 档案里换了孩子或在本页换了册次后重算，失败时回到人教版并提示 */
+  function reloadEdition(then) {
+    syncEdition().then(then, function (e) {
+      CC.setEdition('math', 'renjiao');
+      ED.on = false;
+      D.tree = buildTree(D.topics); D.uncovered = [];
+      renderStart(String(e.message || e));
+    });
+  }
+  function switchEdition(v) {
+    if (!CC.setEdition('math', v)) { renderStart('浏览器不允许保存数据，没有切换成功。'); return; }
+    reloadEdition(function () { renderStart(); });
+  }
+  function stageOfGrade(g) { return g <= 6 ? 'p' : g <= 9 ? 'j' : 'h'; }
+  function buildUncovered(topics) {
+    const P = PL();
+    return P ? topics.filter(function (t) { return !t.external && !Ed.isCovered(P, t.id); }) : [];
+  }
+  function progressFilter(ids, progress, curGrade) {
+    return PL() ? Ed.filterByProgress(D.graph, PL(), ids, progress, curGrade) : E.filterByProgress(D.graph, ids, progress, curGrade);
+  }
+  function chapSummary() { return E.chapterSummary(D.graph, session, PL() ? Ed.chapterView(PL()) : undefined); }
+  /* 整年级 / 整册目标池：沪教版只认小学一至五年级，六年级与初中以上走空态并说明原因 */
+  function scopeTargets(scope) {
+    const P = PL();
+    if (!P) return E.gradeTargets(D.graph, scope, subject);
+    if (Ed.isPrimaryScope(scope)) return Ed.gradeTargets(D.graph, P, scope, subject);
+    return { ids: [], volumes: [], label: scope, empty: true, reason: Ed.BEYOND_PRIMARY_NOTE };
+  }
+  function scopeLabel(g) { return PL() ? '沪教版 ' + g.label : g.label; }
 
   function buildTree(topics) {
     const vols = {};
+    const P = PL();
+    if (P) {
+      const byId = {};
+      topics.forEach(function (t) { byId[t.id] = t; });
+      const covered = topics.filter(function (t) { return !t.external && Ed.isCovered(P, t.id); }).map(function (t) { return t.id; });
+      Ed.groupByUnit(P, covered).volumes.forEach(function (gv) {
+        vols[gv.volume] = { chapters: gv.units.map(function (u) {
+          return {
+            volume: gv.volume, key: gv.volume + ' ' + u.unit, label: u.unit,
+            topics: u.ids.map(function (id) { return { t: byId[id], section: Ed.placementOf(P, id).chapter }; })
+          };
+        }), byKey: {} };
+      });
+      return vols;
+    }
     topics.forEach(function (t) {
       if (t.external) return;
       const c = E.parseChapter(t.chapter);
@@ -410,7 +473,7 @@
     if (mode === 'question') {
       return h('div', { class: 'child-bar compact row no-print', id: 'child-bar' },
         h('span', { class: 'muted small' }, '当前孩子'),
-        childSelect(function (id) { CC.setCurrent(id); }));
+        childSelect(function (id) { CC.setCurrent(id); reloadEdition(function () {}); }));
     }
     if (mode === 'result') {
       const key = recordKey();
@@ -423,14 +486,14 @@
           childSelect(function (id) {
             if (cur && id !== cur.id) { if (id) CC.moveRecord(key, cur.id, id); else CC.removeRecord(cur.id, key); }
             CC.setCurrent(id);
-            renderResult();
+            reloadEdition(renderResult);
           }),
           cur ? h('a', { class: 'btn', href: childrenHref('history.html?child=' + encodeURIComponent(cur.id)), text: '盲区与历史' }) : null));
     }
     return h('div', { class: 'card child-bar no-print', id: 'child-bar' },
       h('div', { class: 'row' },
         h('label', { for: 'child-select' }, '当前孩子'),
-        childSelect(function (id) { CC.setCurrent(id); renderStart(); }),
+        childSelect(function (id) { CC.setCurrent(id); reloadEdition(function () { renderStart(); }); }),
         h('span', { class: 'grow' }),
         cur ? h('a', { class: 'btn', href: childrenHref('history.html?child=' + encodeURIComponent(cur.id)), text: '盲区与历史' }) : null,
         h('a', { class: 'btn', href: childrenHref(fromQuery()), text: '孩子档案' })),
@@ -761,6 +824,7 @@
         h('label', null, '单点 / 整章题量上限（' + LIMIT_MIN + '–' + LIMIT_MAX + '）', limitInput),
         h('label', null, '每知识点确认题数', confirmSelect),
         h('span', { class: 'muted small' }, '连续答对这么多题才判掌握；中途答错会再出一道确认题。到上限后，没测到的标为「未测」。'))));
+    page.append(editionCard());
     page.append(progressCard());
     page.append(gradeCard());
     page.append(h('div', { class: 'card' }, browser));
@@ -769,6 +833,28 @@
     show(page);
     fillList(listBox);
     if (startQuery) { const el = document.getElementById('search'); if (el) el.focus(); }
+  }
+
+  function editionCard() {
+    if (subject !== 'math' || demo) return null;
+    const cur = CC.current();
+    const NAMES = { renjiao: '人教版', hujiao: '沪教版' };
+    const now = ED.on ? 'hujiao' : 'renjiao';
+    return h('div', { class: 'card', id: 'edition-card' },
+      h('h2', { text: '数学册次' }),
+      h('p', { class: 'muted' }, '整年级、整册诊断和下面的册章列表按哪套教材的册次来分。先修回溯不受影响：答错时仍沿知识点的先修关系往前找，不看册次。'),
+      h('div', { class: 'stage-tabs', role: 'tablist', 'aria-label': '数学册次' }, CC.EDITIONS.map(function (v) {
+        return h('button', {
+          type: 'button', class: 'stage-tab' + (now === v ? ' on' : ''), role: 'tab', 'data-value': v,
+          'aria-selected': now === v ? 'true' : 'false',
+          onclick: function () { if (v !== now) switchEdition(v); }
+        }, NAMES[v]);
+      })),
+      h('p', { class: 'muted small', id: 'edition-hint' },
+        (now === 'hujiao'
+          ? '沪教版目前只收录小学一至五年级（' + Ed.draftNote(ED.P) + '）；还没有对照的知识点放在册章列表最底下的「' + Ed.UNCOVERED + '」，仍可以单个选为目标。六年级是初中预备年级，这一期没有册次。'
+          : '人教版：按人教版的册次（六三制）。') +
+        (cur ? '已保存在「' + cur.name + '」的档案里。' : '没有选孩子时，只记在这台浏览器里。')));
   }
 
   function seniorGrade(sel) {
@@ -786,9 +872,9 @@
     const box = h('div', { class: 'card', id: 'grade-card' });
     const fill = function () {
       while (box.firstChild) box.removeChild(box.firstChild);
-      const g = E.gradeTargets(D.graph, gradeScope(), subject);
+      const g = scopeTargets(gradeScope());
       const prog = getProgress();
-      const fp = g ? E.filterByProgress(D.graph, g.ids, prog.v, gradeNumOf(gradeSel)) : { ids: [], deferred: [] };
+      const fp = g && g.ids.length ? progressFilter(g.ids, prog.v, gradeNumOf(gradeSel)) : { ids: [], deferred: [] };
       const tabs = function (label, items, current, set) {
         return h('div', { class: 'stage-tabs', role: 'tablist', 'aria-label': label }, items.map(function (it) {
           return h('button', {
@@ -865,13 +951,14 @@
             })(), function (v) { volSel = v; })
             : tabs('范围', [['', '整年级'], ['上', '上册'], ['下', '下册']], volSel, function (v) { volSel = v; }),
         h('p', { class: 'muted', id: 'grade-info' }, !g ? '这个范围没有知识点。'
+          : g.empty && g.reason ? scopeLabel(g) + '：' + g.reason
           : !fp.ids.length ? g.label + '：按「' + PROGRESS_LABEL[prog.v] + '」进度，这个范围还没学到。已学到下册的话，把上方「学习进度」改成「下学期」。'
-          : g.label + '：' + fp.ids.length + ' 个知识点' + progressNote(prog.v, fp.deferred.length) + '。'),
+          : g.label + '：' + fp.ids.length + ' 个知识点' + progressNote(prog.v, fp.deferred.length) + '。' + (PL() ? Ed.draftNote(PL()) + '。' : '')),
         h('div', { class: 'row' },
           h('label', null, '题量上限（' + SCREEN_MIN + '–' + SCREEN_MAX + '）', limitInput),
           h('button', {
             class: 'primary', id: 'btn-grade-start', disabled: !fp.ids.length,
-            onclick: function () { if (fp.ids.length) startSession(fp.ids, g.label + '（整体筛查）' + progressNote(prog.v, fp.deferred.length), null, 'screen'); }
+            onclick: function () { if (fp.ids.length) startSession(fp.ids, scopeLabel(g) + '（整体筛查）' + progressNote(prog.v, fp.deferred.length), null, 'screen'); }
           }, '开始整体诊断')),
         h('p', { class: 'muted small' }, '知识点多、题量有限，到上限后没测到的标为「未测」；结果页可以再加题。默认 ' + E.SCREEN_LIMIT + ' 题。'));
     };
@@ -897,7 +984,7 @@
         const chHit = q && ch.label.toLowerCase().indexOf(q) >= 0;
         const rows = ch.topics.filter(function (x) {
           if (!q || chHit) return true;
-          return (x.t.name + ' ' + x.t.description + ' ' + x.t.chapter).toLowerCase().indexOf(q) >= 0;
+          return (x.t.name + ' ' + x.t.description + ' ' + chapterOf(x.t)).toLowerCase().indexOf(q) >= 0;
         });
         if (rows.length) chapters.push({ ch: ch, rows: rows });
       });
@@ -908,7 +995,7 @@
       const juniorOpen = subject === 'chemistry' ? '九上' : '七上';
       const seniorOpen = subject === 'chinese' ? '必修上' : subject === 'english' || subject === 'physics' || subject === 'chemistry' || subject === 'history' || subject === 'geography' || subject === 'biology' || subject === 'politics' ? '必修一' : '高一';
       const det = h('details', { class: 'vol', open: !!q || (startStage === 'j' ? vv[0] === juniorOpen : startStage === 'h' ? vv[0] === seniorOpen : vv[0] === openVol) },
-        h('summary', null, vv[1] + '（' + count + ' 个知识点）'));
+        h('summary', null, vv[1] + '（' + count + ' 个知识点）' + (PL() ? '· ' + Ed.draftNote(PL()) : '')));
       chapters.forEach(function (c) {
         const ch = c.ch;
         det.append(h('div', { class: 'chap' },
@@ -918,13 +1005,13 @@
               class: 'primary', title: '把本章全部 ' + ch.topics.length + ' 个知识点一起作为目标',
               onclick: function () {
                 const prog = getProgress();
-                const f = E.filterByProgress(D.graph, ch.topics.map(function (x) { return x.t.id; }), prog.v, childGradeNum());
+                const f = progressFilter(ch.topics.map(function (x) { return x.t.id; }), prog.v, childGradeNum());
                 if (!f.ids.length) {
                   renderStart('「' + ch.volume + ' ' + ch.label + '」是下册内容，按「' + PROGRESS_LABEL[prog.v] + '」进度还没学到。已学到下册的话，先把「学习进度」改成「下学期」。');
                   window.scrollTo(0, 0);
                   return;
                 }
-                startSession(f.ids, ch.volume + ' ' + ch.label + '（整章）' + progressNote(prog.v, f.deferred.length));
+                startSession(f.ids, (PL() ? '沪教版 ' : '') + ch.volume + ' ' + ch.label + '（整章）' + progressNote(prog.v, f.deferred.length));
               }
             }, '以整章为目标')),
           c.rows.map(function (x) {
@@ -936,6 +1023,23 @@
       });
       box.append(det);
     });
+    if (PL()) {
+      const rows = D.uncovered.filter(function (t) {
+        if (startStage && stageOfGrade(t.grade) !== startStage) return false;
+        return !q || (t.name + ' ' + t.description).toLowerCase().indexOf(q) >= 0;
+      });
+      if (rows.length) {
+        shown += rows.length;
+        box.append(h('details', { class: 'vol', id: 'uncovered-group', open: !!q },
+          h('summary', null, Ed.UNCOVERED + '（' + rows.length + ' 个知识点）'),
+          h('p', { class: 'muted small', text: '这些知识点在沪教版册次里还没有对照，不属于任何一册；描述、先修和题库照常，可以单个选为目标。' }),
+          rows.map(function (t) {
+            return h('div', { class: 'topic-row', title: t.description },
+              h('span', { class: 'nm', text: t.name }),
+              h('button', { onclick: function () { startSession([t.id], t.name); } }, '选为目标'));
+          })));
+      }
+    }
     if (!shown) box.append(h('p', { class: 'muted', text: '没有匹配的知识点。' }));
     const mc = document.getElementById('match-count');
     if (mc) mc.textContent = (q ? '找到 ' : '册章列表里有 ') + shown + ' 个知识点';
@@ -1032,7 +1136,7 @@
         h('span', { class: 'grow' }),
         h('span', { class: 'muted' }, '第 ' + (n + 1) + ' 题 / 上限 ' + session.limit)),
       h('div', { class: 'progress' }, h('i', { style: 'width:' + Math.round(n / session.limit * 100) + '%' })),
-      h('h2', { class: 'q-title' }, t.name, ' ', h('span', { class: 'tag', text: t.chapter })),
+      h('h2', { class: 'q-title' }, t.name, ' ', h('span', { class: 'tag', text: chapterOf(t) })),
       h('div', { class: 'row small', style: 'margin:2px 0' },
         isPrereqKnowledge(id) ? h('span', { class: 'tag ext', text: '前置知识' }) : null,
         h('span', { class: 'tag diff-' + q.difficulty, text: DIFF_LABEL[q.difficulty] || q.difficulty }),
@@ -1226,7 +1330,7 @@
     }
     var token = ++shareToken;
     var sum = E.summarize(D.graph, session);
-    var chapters = session.mode === 'screen' ? E.chapterSummary(D.graph, session) : null;
+    var chapters = session.mode === 'screen' ? chapSummary() : null;
     var model = buildShareModel(sum, chapters);
     window.__shareModel = model;
     var canvas = document.createElement('canvas');
@@ -1271,7 +1375,7 @@
   function topicBody(id, extra) {
     const t = D.graph.byId[id];
     const body = h('div', { class: 'body' });
-    body.append(h('div', { class: 'muted' }, (t.external ? '小学先修知识点（无诊断题）' : t.chapter) + (t.domain ? ' · ' + t.domain : '')));
+    body.append(h('div', { class: 'muted' }, (t.external ? '小学先修知识点（无诊断题）' : chapterOf(t)) + (t.domain ? ' · ' + t.domain : '')));
     body.append(h('div', { text: t.description }));
     if (t.mastery_criteria && t.mastery_criteria.length) {
       body.append(h('div', null, h('b', null, '掌握标准：'), h('ul', null, t.mastery_criteria.map(function (m) { return h('li', { text: m }); }))));
@@ -1284,7 +1388,7 @@
   function topicItem(id, tags, extra) {
     const t = D.graph.byId[id];
     return h('details', { class: 'topic' },
-      h('summary', null, tags, h('span', { text: t.name }), ' ', h('span', { class: 'muted small', text: t.external ? '小学' : t.chapter })),
+      h('summary', null, tags, h('span', { text: t.name }), ' ', h('span', { class: 'muted small', text: t.external ? '小学' : chapterOf(t) })),
       topicBody(id, extra));
   }
 
@@ -1315,7 +1419,7 @@
     if (dropped) page.append(dropped);
 
     const targetsMastered = session.targets.every(function (id) { return E.statusOf(session, id) === 'mastered'; });
-    const chapters = screen ? E.chapterSummary(D.graph, session) : null;
+    const chapters = screen ? chapSummary() : null;
     const outOfScope = screen ? sum.roots.filter(function (r) { return r.outOfScopePrereqs.length; }) : [];
     let headline;
     if (screen) {
@@ -1799,7 +1903,7 @@
     sum.path.concat(session.mode === 'screen' ? [] : session.targets.map(function (id) { return { id: id }; })).forEach(function (p) {
       (D.graph.byId[p.id].standards || []).forEach(function (sd) { stdIds.add(sd.id); });
     });
-    const chapters = session.mode === 'screen' ? E.chapterSummary(D.graph, session) : null;
+    const chapters = session.mode === 'screen' ? chapSummary() : null;
     const out = {
       tool: 'cn-math-taxonomy/diagnose', version: 2, mode: session.mode || 'target', generatedAt: new Date().toISOString(),
       note: '自动判题是近似的，以参考答案为准。',
@@ -1869,7 +1973,7 @@
       return E.PROGRESS_CHOICES.indexOf(x) >= 0 ? x : getProgress().v;
     })();
     const gate = function (ids, curGrade, name) {
-      const f = E.filterByProgress(D.graph, ids, pv, curGrade);
+      const f = progressFilter(ids, pv, curGrade);
       if (!f.ids.length) throw new Error(name + ' 是下册内容，按学习进度「' + PROGRESS_LABEL[pv] + '」还没学到。已学到下册请在开始页把学习进度改成「下学期」，或在网址里加 progress=下。');
       return { ids: f.ids, note: progressNote(pv, f.deferred.length) };
     };
@@ -1895,7 +1999,7 @@
       });
       if (!hit.length) throw new Error('URL 参数 chapter 没有匹配的章节：' + c + '（格式如 “七上 第一章”）');
       const ok = gate(hit[0].topics.map(function (x) { return x.t.id; }), childGradeNum(), c.trim());
-      return { ids: ok.ids, label: hit[0].volume + ' ' + hit[0].label + '（整章）' + ok.note };
+      return { ids: ok.ids, label: (PL() ? '沪教版 ' : '') + hit[0].volume + ' ' + hit[0].label + '（整章）' + ok.note };
     }
     const grade = (params.get('grade') || '').trim();
     const volume = (params.get('volume') || '').trim();
@@ -1931,10 +2035,11 @@
         if (scope.charAt(0) !== gch) throw new Error('URL 参数 grade 与 volume 不一致：' + grade + ' / ' + volume);
       }
       if (/^[一二三四五六七八九]$/.test(scope)) scope += '年级';
-      const g = E.gradeTargets(D.graph, scope, subject);
+      const g = scopeTargets(scope);
       if (!g) throw new Error('URL 参数 grade / volume 无法识别：' + (volume || grade) + '（写法如 grade=七年级、volume=七上）');
+      if (g.empty && g.reason) throw new Error(scopeLabel(g) + '：' + g.reason);
       const ok = gate(g.ids, gradeNumOf(scope.charAt(0)), g.label);
-      return { ids: ok.ids, label: g.label + '（整体筛查）' + ok.note, mode: 'screen' };
+      return { ids: ok.ids, label: scopeLabel(g) + '（整体筛查）' + ok.note, mode: 'screen' };
     }
     return null;
   }
