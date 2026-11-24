@@ -464,4 +464,80 @@ test('学习进度存进孩子档案，随备份导出，格式不对时被拒�
   assert.throws(() => api.parseBackup(JSON.stringify(bad)), /学习进度/);
 });
 
+test('数学册次：没有 editions 的旧备份能导入；textbook 为沪教版读成 hujiao，苏教版读成 renjiao', () => {
+  const { api } = load();
+  assert.doesNotThrow(() => api.parseBackup(JSON.stringify({
+    format: 'cn-math-taxonomy.children', version: 1, exportedAt: '2026-11-01T00:00:00.000Z', profiles, records
+  })));
+  assert.strictEqual(api.editionOf({ textbook: '沪教版' }, 'math'), 'hujiao');
+  assert.strictEqual(api.editionOf({ textbook: '苏教版' }, 'math'), 'renjiao');
+  assert.strictEqual(api.editionOf({ textbook: '北师大版' }, 'math'), 'renjiao');
+  assert.strictEqual(api.editionOf({ textbook: '人教版' }, 'math'), 'renjiao');
+  assert.strictEqual(api.editionOf({ textbook: '其他' }, 'math'), 'renjiao');
+  assert.strictEqual(api.editionOf({}, 'math'), 'renjiao');
+  assert.strictEqual(api.editionOf(null, 'math'), 'renjiao');
+});
+
+test('数学册次：editions.math 为 hujiao 时，即使 textbook 是人教版也读成 hujiao；反之亦然', () => {
+  const { api } = load();
+  assert.strictEqual(api.editionOf({ textbook: '人教版', editions: { math: 'hujiao' } }, 'math'), 'hujiao');
+  assert.strictEqual(api.editionOf({ textbook: '沪教版', editions: { math: 'renjiao' } }, 'math'), 'renjiao');
+  assert.strictEqual(api.editionOf({ textbook: '沪教版', editions: {} }, 'math'), 'hujiao');
+});
+
+test('数学册次：editions.math 写成 hujiao_math 或 beishida 时导入失败，合法值通过', () => {
+  const { api } = load();
+  const make = (editions) => JSON.stringify({
+    format: 'cn-math-taxonomy.children', version: 1, exportedAt: '2026-11-01T00:00:00.000Z',
+    profiles: { v: 1, current: 'child-a', children: [Object.assign({}, profiles.children[0], { editions })] }, records: {}
+  });
+  assert.throws(() => api.parseBackup(make({ math: 'hujiao_math' })), /数学册次/);
+  assert.throws(() => api.parseBackup(make({ math: 'beishida' })), /数学册次/);
+  assert.throws(() => api.parseBackup(make({ physics: 'hujiao' })), /数学册次/);
+  assert.throws(() => api.parseBackup(make('hujiao')), /数学册次/);
+  assert.doesNotThrow(() => api.parseBackup(make({ math: 'hujiao' })));
+  assert.doesNotThrow(() => api.parseBackup(make({ math: 'renjiao' })));
+});
+
+test('数学册次：新增、编辑、只改昵称都不丢 editions，并更新 updatedAt', () => {
+  const { api, storage } = load();
+  const added = api.add({ name: '小满', grade: '三年级', textbook: '苏教版', editions: { math: 'hujiao' } });
+  assert.ok(added.ok);
+  assert.deepStrictEqual(JSON.parse(JSON.stringify(added.child.editions)), { math: 'hujiao' });
+  assert.strictEqual(added.child.textbook, '苏教版');
+  const id = added.child.id;
+  const renamed = api.update(id, { name: '小满满', grade: '三年级', textbook: '苏教版' });
+  assert.ok(renamed.ok);
+  assert.deepStrictEqual(JSON.parse(JSON.stringify(renamed.child.editions)), { math: 'hujiao' });
+  const switched = api.update(id, { name: '小满满', grade: '三年级', textbook: '苏教版', editions: { math: 'renjiao' } });
+  assert.deepStrictEqual(JSON.parse(JSON.stringify(switched.child.editions)), { math: 'renjiao' });
+  assert.ok(switched.child.updatedAt);
+  assert.strictEqual(JSON.parse(storage.get(PROFILE_KEY)).children[0].editions.math, 'renjiao');
+  const bad = api.update(id, { name: '小满满', grade: '三年级', textbook: '苏教版', editions: { math: 'hujiao_math' } });
+  assert.deepStrictEqual(JSON.parse(JSON.stringify(bad.child.editions)), { math: 'renjiao' }, '非法版本被忽略，不覆盖已有值');
+});
+
+test('数学册次：没有当前孩子时存本机 cnmEdition.v1，有当前孩子时写进档案；新孩子从本机键抄初值', () => {
+  const { api, storage } = load();
+  assert.strictEqual(api.currentEdition('math'), 'renjiao');
+  assert.strictEqual(api.setEdition('math', 'hujiao'), true);
+  assert.deepStrictEqual(JSON.parse(storage.get('cnmEdition.v1')), { math: 'hujiao' });
+  assert.strictEqual(api.currentEdition('math'), 'hujiao');
+  assert.strictEqual(api.setEdition('math', 'hujiao_math'), false);
+  assert.strictEqual(api.setEdition('physics', 'hujiao'), false);
+  const kid = api.add({ name: '小禾', grade: '二年级', textbook: '人教版' });
+  assert.deepStrictEqual(JSON.parse(JSON.stringify(kid.child.editions)), { math: 'hujiao' });
+  api.setEdition('math', 'renjiao');
+  assert.deepStrictEqual(JSON.parse(storage.get('cnmEdition.v1')), { math: 'hujiao' }, '有当前孩子时不动本机键');
+  assert.strictEqual(api.currentEdition('math'), 'renjiao');
+  assert.strictEqual(JSON.parse(storage.get(PROFILE_KEY)).children[0].editions.math, 'renjiao');
+  assert.ok(JSON.parse(storage.get(PROFILE_KEY)).children[0].updatedAt);
+});
+
+test('数学册次：本机键默认 renjiao 的新孩子不带 editions，旧结构保持不变', () => {
+  const { api } = load();
+  const kid = api.add({ name: '小禾', grade: '二年级', textbook: '人教版' });
+  assert.ok(!('editions' in kid.child));
+});
+
 console.log('\n' + passed + ' passed, 0 failed');

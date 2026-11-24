@@ -74,7 +74,9 @@
       <select id="f-grade"></select>
       <label for="f-book">教材版本</label>
       <select id="f-book"></select>
-      <p class="muted small" id="book-note">当前按六三制编排：数学等人教版、语文/道德与法治/历史等统编版、小学科学教科版。五四制与其它教材版本尚未支持对照筛选；选其他版本也能用，章节名称可能和手上的教材略有不同。</p>
+      <label for="f-math-edition">数学册次</label>
+      <select id="f-math-edition"></select>
+      <p class="muted small" id="book-note">数学的诊断和章节目录按「数学册次」编排；上面的教材版本只是备注，不改变册次。选北师大版、苏教版等其它版本时，数学册次仍按人教版（六三制），章节名称可能和手上的教材略有不同。沪教版数学目前只收录小学一至五年级，六年级是初中预备年级，这一期没有册次。语文、道德与法治、历史等仍是统编版，小学科学教科版。</p>
       <p class="err" id="f-error" role="alert" hidden></p>
       <div class="form-actions">
         <button type="submit" class="primary" id="f-submit">添加孩子</button>

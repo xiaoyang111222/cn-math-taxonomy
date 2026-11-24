@@ -1,5 +1,7 @@
 /* 孩子档案：多个孩子、当前孩子、每个孩子的诊断记录。全部保存在本机 localStorage，不上传、不需要账号。
- * 诊断页和档案页共用。window.CnmChildren。 */
+ * 诊断页和档案页共用。window.CnmChildren。
+ * 数学册次（editions.math）：renjiao 人教版（用知识点自己的册次）或 hujiao 沪教版（用 data/mappings/hujiao-math.json 的落点）。
+ * 规则见 docs/hujiao-mapping-plan.md 第 3.1 节。 */
 (function () {
   'use strict';
   var KEY = 'cnmChildren.v1';
@@ -9,6 +11,9 @@
   var MAX_BACKUP_BYTES = 10 * 1024 * 1024;
   var GRADES = ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级', '七年级', '八年级', '九年级', '高一', '高二', '高三'];
   var TEXTBOOKS = ['人教版', '北师大版', '苏教版', '沪教版', '外研版', '译林版', '其他'];
+  var EDITION_SUBJECTS = ['math'];
+  var EDITIONS = ['renjiao', 'hujiao'];
+  var GUEST_EDITION_KEY = 'cnmEdition.v1';
 
   function read(k, fallback) {
     try { var v = JSON.parse(localStorage.getItem(k)); return v == null ? fallback : v; } catch (e) { return fallback; }
@@ -39,11 +44,59 @@
     return write(KEY, s);
   }
 
+  /* 版本表形状：{ math: 'renjiao'|'hujiao' }，键只能是已支持的学科。 */
+  function validEditions(e) {
+    return isObject(e) && Object.keys(e).every(function (k) {
+      return EDITION_SUBJECTS.indexOf(k) >= 0 && EDITIONS.indexOf(e[k]) >= 0;
+    });
+  }
+  /* 某学科用哪个版本：editions[subject] 优先；没有时只有旧字段 textbook 为沪教版才算 hujiao，
+   * 北师大版、苏教版、其他、人教版一律按 renjiao（这些版本没有映射文件，textbook 只是备注）。 */
+  function editionOf(child, subject) {
+    var sub = subject || 'math';
+    if (sub !== 'math') return EDITIONS[0];
+    var e = child && child.editions;
+    if (isObject(e) && EDITIONS.indexOf(e[sub]) >= 0) return e[sub];
+    return child && child.textbook === '沪教版' ? 'hujiao' : EDITIONS[0];
+  }
+  function guestEdition(subject) {
+    var v = read(GUEST_EDITION_KEY, null);
+    var sub = subject || 'math';
+    return isObject(v) && EDITIONS.indexOf(v[sub]) >= 0 ? v[sub] : EDITIONS[0];
+  }
+  function setGuestEdition(subject, value) {
+    if (EDITION_SUBJECTS.indexOf(subject) < 0 || EDITIONS.indexOf(value) < 0) return false;
+    var v = read(GUEST_EDITION_KEY, null);
+    var next = Object.assign({}, isObject(v) ? v : {});
+    next[subject] = value;
+    return write(GUEST_EDITION_KEY, next);
+  }
+  /* 当前该用的版本：有当前孩子读他的档案，没有读本机的 cnmEdition.v1（不上传）。 */
+  function currentEdition(subject) {
+    var c = current();
+    return c ? editionOf(c, subject) : guestEdition(subject);
+  }
+  /* 切换版本：有当前孩子就写进他的档案并更新 updatedAt（登录后随档案上云），否则写本机键。 */
+  function setEdition(subject, value) {
+    if (EDITION_SUBJECTS.indexOf(subject) < 0 || EDITIONS.indexOf(value) < 0) return false;
+    var s = state();
+    var i = s.children.map(function (c) { return c.id; }).indexOf(s.current);
+    if (i < 0) return setGuestEdition(subject, value);
+    if (isObject(s.children[i].editions) && s.children[i].editions[subject] === value) return true;
+    var editions = Object.assign({}, isObject(s.children[i].editions) ? s.children[i].editions : {});
+    editions[subject] = value;
+    s.children[i] = Object.assign({}, s.children[i], { editions: editions, updatedAt: new Date().toISOString() });
+    return write(KEY, s);
+  }
+
   function clean(f) {
     var name = String(f && f.name || '').replace(/\s+/g, ' ').trim();
     var grade = GRADES.indexOf(f && f.grade) >= 0 ? f.grade : '';
     var textbook = TEXTBOOKS.indexOf(f && f.textbook) >= 0 ? f.textbook : TEXTBOOKS[0];
-    return { name: name, grade: grade, textbook: textbook };
+    var out = { name: name, grade: grade, textbook: textbook };
+    // 表单没给版本就不带这个键，update 才不会把已有的 editions 冲掉
+    if (f && validEditions(f.editions) && Object.keys(f.editions).length) out.editions = Object.assign({}, f.editions);
+    return out;
   }
   function check(s, f, selfId) {
     if (!f.name) return '请填写孩子的昵称。';
@@ -61,6 +114,8 @@
     var err = check(s, f, null);
     if (err) return { ok: false, error: err };
     var child = { id: newId(), name: f.name, grade: f.grade, textbook: f.textbook, createdAt: new Date().toISOString() };
+    var editions = f.editions || (guestEdition('math') !== EDITIONS[0] ? { math: guestEdition('math') } : null);
+    if (editions) child.editions = editions;
     s.children.push(child);
     if (!s.current) s.current = child.id;
     if (!write(KEY, s)) return { ok: false, error: '浏览器不允许保存数据（可能是隐私模式），档案无法保存。' };
@@ -73,7 +128,9 @@
     if (i < 0) return { ok: false, error: '找不到这个孩子。' };
     var err = check(s, f, id);
     if (err) return { ok: false, error: err };
-    s.children[i] = Object.assign({}, s.children[i], f, { updatedAt: new Date().toISOString() });
+    var old = s.children[i];
+    s.children[i] = Object.assign({}, old, f, { updatedAt: new Date().toISOString() });
+    if (f.editions) s.children[i].editions = Object.assign({}, isObject(old.editions) ? old.editions : {}, f.editions);
     write(KEY, s);
     return { ok: true, child: s.children[i] };
   }
@@ -228,6 +285,7 @@
         throw new Error('孩子资料不完整、ID 重复，或年级和教材版本不正确。');
       }
       if (own(c, 'progress') && !validProgress(c.progress)) throw new Error('孩子的学习进度格式不正确。');
+      if (own(c, 'editions') && !validEditions(c.editions)) throw new Error('孩子的数学册次格式不正确。');
       ids.add(c.id);
     });
     if (profiles.current !== null && !ids.has(profiles.current)) throw new Error('当前孩子不在备份档案中。');
@@ -352,7 +410,9 @@
   }
 
   window.CnmChildren = {
-    GRADES: GRADES, TEXTBOOKS: TEXTBOOKS, MAX_CHILDREN: MAX_CHILDREN,
+    GRADES: GRADES, TEXTBOOKS: TEXTBOOKS, MAX_CHILDREN: MAX_CHILDREN, EDITIONS: EDITIONS,
+    editionOf: editionOf, guestEdition: guestEdition, setGuestEdition: setGuestEdition,
+    currentEdition: currentEdition, setEdition: setEdition,
     list: list, get: get, current: current, setCurrent: setCurrent,
     add: add, update: update, remove: remove, setProgress: setProgress,
     recordsOf: recordsOf, saveRecord: saveRecord, hasRecord: hasRecord, moveRecord: moveRecord, removeRecord: removeRecord,

@@ -7,6 +7,8 @@
   var nameIn = document.getElementById('f-name');
   var gradeSel = document.getElementById('f-grade');
   var bookSel = document.getElementById('f-book');
+  var editionSel = document.getElementById('f-math-edition');
+  var EDITION_NAMES = { renjiao: '人教版', hujiao: '沪教版' };
   var errBox = document.getElementById('f-error');
   var submitBtn = document.getElementById('f-submit');
   var cancelBtn = document.getElementById('f-cancel');
@@ -37,6 +39,7 @@
   }
   fillSelect(gradeSel, CC.GRADES, '请选择年级');
   fillSelect(bookSel, CC.TEXTBOOKS);
+  CC.EDITIONS.forEach(function (v) { var o = el('option', null, EDITION_NAMES[v]); o.value = v; editionSel.appendChild(o); });
 
   var params = new URLSearchParams(location.search);
   if (params.get('from') === 'diagnose') {
@@ -56,6 +59,7 @@
     nameIn.value = '';
     gradeSel.value = '';
     bookSel.value = CC.TEXTBOOKS[0];
+    editionSel.value = CC.guestEdition('math');
     formTitle.textContent = '添加孩子';
     submitBtn.textContent = '添加孩子';
     cancelBtn.hidden = true;
@@ -67,6 +71,7 @@
     nameIn.value = c.name;
     gradeSel.value = c.grade;
     bookSel.value = c.textbook;
+    editionSel.value = CC.editionOf(c, 'math');
     formTitle.textContent = '修改「' + c.name + '」的信息';
     submitBtn.textContent = '保存修改';
     cancelBtn.hidden = false;
@@ -90,7 +95,7 @@
     head.appendChild(el('h3', null, c.name));
     if (isCurrent) head.appendChild(el('span', 'kid-badge', '当前'));
     art.appendChild(head);
-    art.appendChild(el('p', 'kid-meta', c.grade + ' · ' + c.textbook));
+    art.appendChild(el('p', 'kid-meta', c.grade + ' · ' + c.textbook + ' · 数学册次：' + EDITION_NAMES[CC.editionOf(c, 'math')]));
     art.appendChild(el('p', 'kid-stat', st.runs
       ? '已诊断 ' + st.runs + ' 次，目前有 ' + st.weak + ' 个薄弱知识点'
       : '还没有诊断记录'));
@@ -142,7 +147,7 @@
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var f = { name: nameIn.value, grade: gradeSel.value, textbook: bookSel.value };
+    var f = { name: nameIn.value, grade: gradeSel.value, textbook: bookSel.value, editions: { math: editionSel.value } };
     var res = editing ? CC.update(editing, f) : CC.add(f);
     if (!res.ok) { showError(res.error); return; }
     if (!editing && window.cnmTrack) window.cnmTrack('child_added');

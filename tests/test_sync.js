@@ -102,6 +102,20 @@ test('档案：同一孩子按 updatedAt 取较新的一份（含学习进度）
   assert.strictEqual(m2.children[0].grade, '四年级');
 });
 
+test('档案：本地孩子较新且带 editions、云端同 id 较旧且不带时，合并结果保留 editions（反向亦然）', () => {
+  const older = child('c1', '小满', { updatedAt: '2026-11-01T00:00:00.000Z' });
+  const newer = child('c1', '小满', { updatedAt: '2026-11-10T00:00:00.000Z', editions: { math: 'hujiao' } });
+  const m1 = S.mergeChildren(profiles([newer]), profiles([older]), undefined, CTX);
+  assert.deepStrictEqual(m1.children[0].editions, { math: 'hujiao' });
+  const m2 = S.mergeChildren(profiles([older]), profiles([newer]), undefined, CTX);
+  assert.deepStrictEqual(m2.children[0].editions, { math: 'hujiao' });
+});
+
+test('档案：editions 随 cnmChildren.v1 同步；本机版本键 cnmEdition.v1 不在同步数据集里', () => {
+  assert.strictEqual(S.DATASETS.children, 'cnmChildren.v1');
+  assert.ok(!Object.values(S.DATASETS).includes('cnmEdition.v1'));
+});
+
 test('档案：没有时间戳的同一孩子按整表较新的一方；平手取本地', () => {
   const l = child('c1', '小满', { grade: '三年级' });
   const r = child('c1', '小满', { grade: '五年级' });
