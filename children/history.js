@@ -2,11 +2,13 @@
 (function () {
   'use strict';
   var CC = window.CnmChildren;
+  var Ed = window.CnmEdition;
   var picker = document.getElementById('picker');
   var content = document.getElementById('content');
   var SUBJECTS = [['', '全部'], ['math', '数学'], ['chinese', '语文'], ['science', '科学'], ['morality', '道德与法治'], ['history', '历史'], ['geography', '地理'], ['biology', '生物'], ['chemistry', '化学'], ['english', '英语'], ['physics', '物理'], ['politics', '思想政治']];
   var SUBJECT_NAME = { math: '数学', chinese: '语文', science: '科学', morality: '道德与法治', history: '历史', geography: '地理', biology: '生物', chemistry: '化学', english: '英语', physics: '物理', politics: '思想政治' };
   var topics = null;
+  var hujiaoP = null;
   var childId = null;
   var subjectSel = '';
 
@@ -31,7 +33,32 @@
     return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
   }
   function nameOf(id) { return topics && topics[id] ? topics[id].name : id; }
-  function chapterOf(id) { return topics && topics[id] && topics[id].chapter ? topics[id].chapter : ''; }
+  /* 数学册次：当前孩子（没有孩子时看本机键）的数学册次为沪教版时，数学点的章节用映射落点，
+   * 没有落点写「该版本暂未覆盖」，不显示人教 chapter；其它学科照旧。 */
+  function wantHujiao(id) {
+    if (subjectOfId(id) !== 'math') return false;
+    var c = childId ? CC.get(childId) : null;
+    return (c ? CC.editionOf(c, 'math') : CC.guestEdition('math')) === 'hujiao';
+  }
+  function chapterOf(id) {
+    if (!topics || !topics[id]) return '';
+    if (wantHujiao(id)) return hujiaoP ? Ed.chapterText(hujiaoP, topics[id]) : '沪教版册次加载失败';
+    return topics[id].chapter ? topics[id].chapter : '';
+  }
+  function chapterGroupOf(id) {
+    if (wantHujiao(id) && hujiaoP && topics && topics[id]) {
+      var p = Ed.placementOf(hujiaoP, id);
+      return p ? p.volume + ' ' + p.unit : Ed.UNCOVERED;
+    }
+    return chapterOf(id);
+  }
+  function gradeKeyOf(id) {
+    if (wantHujiao(id) && hujiaoP) {
+      var p = Ed.placementOf(hujiaoP, id);
+      return p ? p.grade : 99;
+    }
+    return (topics && topics[id] && topics[id].grade) || 99;
+  }
   function tag(cls, text) { return el('span', 'kid-tag ' + cls, text); }
 
   function retestHref(ids, sub) {
@@ -93,7 +120,7 @@
     }
     var rank = function (id) { return (by[id].status === 'weak' ? 0 : 2) + (by[id].root ? 0 : 1); };
     ids.sort(function (a, b) {
-      return rank(a) - rank(b) || ((topics && topics[a] && topics[a].grade) || 99) - ((topics && topics[b] && topics[b].grade) || 99) || String(by[b].at || '').localeCompare(String(by[a].at || ''));
+      return rank(a) - rank(b) || gradeKeyOf(a) - gradeKeyOf(b) || String(by[b].at || '').localeCompare(String(by[a].at || ''));
     });
     var sec = el('section', 'kid-section');
     var weakN = ids.filter(function (id) { return by[id].status === 'weak'; }).length;
@@ -111,7 +138,7 @@
     var groups = {};
     var order = [];
     ids.forEach(function (id) {
-      var ch = chapterOf(id) || '未标注章节';
+      var ch = chapterGroupOf(id) || '未标注章节';
       if (!groups[ch]) { groups[ch] = []; order.push(ch); }
       groups[ch].push(id);
     });
@@ -296,6 +323,10 @@
     }).then(function (rows) {
       topics = {};
       rows.forEach(function (t) { topics[t.id] = t; });
+    }).then(function () {
+      var needHujiao = kids.some(function (c) { return CC.editionOf(c, 'math') === 'hujiao'; });
+      if (!needHujiao) return;
+      return Ed.load({ base: '../', version: 'hujiao', subject: 'math', stage: 'primary' }).then(function (P) { hujiaoP = P; }, function () { hujiaoP = null; });
     }).catch(function () { topics = null; }).then(render);
   }
   init();
