@@ -177,6 +177,40 @@ test('sw.js：壳含 edition.js，预缓存数据含映射文件，路径与页�
   });
 });
 
+test('迁入的草稿：条数与旧文件一致，cnm_p001 的年级学期与旧文件一致，全部落点年级在 1–5', () => {
+  const old = JSON.parse(fs.readFileSync(path.join(MAP_DIR, 'hujiao_math.json'), 'utf8'));
+  assert.equal(Object.keys(map.entries).length, old.entries.length);
+  const TERM = { 上: 1, 下: 2 };
+  old.entries.forEach((o) => {
+    const e = map.entries[o.topicId];
+    assert.ok(e, o.topicId + ' 没有迁入');
+    assert.equal(e.grade, o.grade, o.topicId);
+    assert.equal(e.term, TERM[o.term], o.topicId);
+    assert.equal(e.unit, o.unit, o.topicId);
+    assert.equal(e.chapter, o.chapter, o.topicId);
+    assert.equal(e.note, o.note, o.topicId);
+  });
+  const p1 = old.entries.find((o) => o.topicId === 'cnm_p001');
+  assert.equal(map.entries.cnm_p001.grade, p1.grade);
+  assert.equal(map.entries.cnm_p001.term, TERM[p1.term]);
+  Object.entries(map.entries).forEach(([id, e]) => assert.ok(e.grade >= 1 && e.grade <= 5, id));
+});
+
+test('迁入的草稿：键顺序与旧数组顺序一致，status 仍是 draft，旧文件原样保留', () => {
+  const old = JSON.parse(fs.readFileSync(path.join(MAP_DIR, 'hujiao_math.json'), 'utf8'));
+  assert.deepEqual(Object.keys(map.entries), old.entries.map((o) => o.topicId));
+  assert.equal(map.status, 'draft');
+  assert.ok(map.source.startsWith(old.source));
+  assert.equal(old.edition, 'hujiao_math');
+  assert.ok(old.entries.every((o) => o.term === '上' || o.term === '下'));
+});
+
+test('人教六年级的点已对照到沪教 1–5 年级的，落点年级不是 6', () => {
+  const g6 = topics.filter((t) => /^cnm_p\d+$/.test(t.id) && !t.external && t.grade === 6 && map.entries[t.id]);
+  assert.ok(g6.length >= 1, '草稿里应有人教六年级的点被标进 1–5 年级');
+  g6.forEach((t) => assert.notEqual(map.entries[t.id].grade, 6, t.id));
+});
+
 test('覆盖率（只打印，不设最低线）', () => {
   const denom = topics.filter((t) => /^cnm_p\d+$/.test(t.id) && !t.external);
   const numer = denom.filter((t) => Object.prototype.hasOwnProperty.call(map.entries, t.id));
