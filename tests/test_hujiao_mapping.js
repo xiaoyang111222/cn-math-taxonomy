@@ -160,6 +160,23 @@ test('旧的下划线对照文件仍在，且不被新文件取代', () => {
   }
 });
 
+test('sw.js：壳含 edition.js，预缓存数据含映射文件，路径与页面请求的是同一个 URL', () => {
+  const sw = fs.readFileSync(path.join(ROOT, 'sw.js'), 'utf8');
+  const list = (name) => {
+    const m = new RegExp('var ' + name + ' = \\[([\\s\\S]*?)\\];').exec(sw);
+    assert.ok(m, name);
+    return m[1].split(',').map((x) => x.trim().replace(/^'|'$/g, '')).filter(Boolean);
+  };
+  assert.ok(list('SHELL').includes('assets/edition.js'));
+  assert.ok(list('DATA').includes('data/mappings/hujiao-math.json'));
+  const Ed = require('../assets/edition.js');
+  assert.strictEqual(Ed.mappingPath(map.version, map.subject, map.stage), 'data/mappings/hujiao-math.json');
+  ['diagnose/index.html', 'explore/index.html', 'children/history.html'].forEach((page) => {
+    const html = fs.readFileSync(path.join(ROOT, page), 'utf8');
+    assert.ok(html.includes('<script src="../assets/edition.js"></script>'), page + ' 没有引入 edition.js');
+  });
+});
+
 test('覆盖率（只打印，不设最低线）', () => {
   const denom = topics.filter((t) => /^cnm_p\d+$/.test(t.id) && !t.external);
   const numer = denom.filter((t) => Object.prototype.hasOwnProperty.call(map.entries, t.id));

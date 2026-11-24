@@ -82,8 +82,8 @@ test('诊断页和图谱页按当前学科取文件', () => {
   assert.ok(read('explore/app.js').includes("'../data/questions/' + subject + '.json'"));
 });
 
-test('sw 版本已升到 v42', () => {
-  assert.ok(/var VERSION = 'v42';/.test(read('sw.js')));
+test('sw 版本已升到 v43', () => {
+  assert.ok(/var VERSION = 'v43';/.test(read('sw.js')));
 });
 
 console.log(passed + ' passed');
