@@ -40,6 +40,8 @@ body.page-explore .site-footer { flex: none; }
 }
 .side-tools input, .side-tools select { width: 100%; }
 .filter-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.edition-row { display: flex; align-items: center; gap: 8px; font-size: 0.92rem; }
+.edition-row select { flex: 1; }
 .count { color: var(--muted); font-size: 0.92rem; }
 .list { overflow: auto; flex: 1; padding-bottom: 12px; }
 

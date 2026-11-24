@@ -18,6 +18,11 @@
   var POL_DOMAIN_ORDER = ['中国特色社会主义', '经济与社会', '政治与法治', '哲学与文化', '当代国际政治与经济', '法律与生活', '逻辑与思维'];
   var ZH_DOMAIN_ORDER = ['拼音', '识字写字', '词语', '句子', '阅读理解', '古诗文积累', '文言文阅读', '名著阅读', '习作基础'];
 
+  var CC = window.CnmChildren;
+  var Ed = window.CnmEdition;
+  var P = null;            // 沪教版落点表；人教版为 null，目录走原来的 topic.grade / semester / chapter
+  var hujiaoP = null;
+  var editionError = '';
   var topics = [];
   var deps = [];
   var aliases = {};
@@ -215,6 +220,41 @@
     return text;
   }
 
+  /* 数学册次：沪教版时「年级册次」「章节」用映射落点，没有落点写「该版本暂未覆盖」，不显示人教册次 */
+  function volumeTextFor(topic) {
+    if (!P) return gradeLabel(topic);
+    var p = Ed.placementOf(P, topic.id);
+    return p ? Ed.volumeTitle(p.grade, p.term) : Ed.UNCOVERED;
+  }
+  function chapterTextFor(topic) { return P ? Ed.chapterText(P, topic) : topic.chapter; }
+  function wantEdition() { return subject === 'math' && CC ? CC.currentEdition('math') : 'renjiao'; }
+  async function loadEdition() {
+    editionError = '';
+    if (wantEdition() === 'hujiao') {
+      try {
+        if (!hujiaoP) hujiaoP = await Ed.load({ base: '../', version: 'hujiao', subject: 'math', stage: 'primary' });
+        P = hujiaoP;
+      } catch (error) {
+        P = null;
+        editionError = '沪教版册次文件加载失败，请刷新后重试（不会退回人教版册次）。';
+      }
+    } else P = null;
+    var row = $('edition-row');
+    if (row) {
+      row.hidden = subject !== 'math';
+      $('fEdition').value = wantEdition();
+    }
+  }
+  async function switchEdition(value) {
+    if (!CC.setEdition('math', value)) return;
+    await loadEdition();
+    if (editionError) { showLoadError(editionError); return; }
+    renderList();
+    renderDetail();
+    highlight(false);
+    if (selected) renderGraph();
+  }
+
   function readHash() {
     var hash = location.hash.replace(/^#/, '');
     if (!hash) return '';
@@ -353,7 +393,28 @@
     return href + (href.indexOf('?') >= 0 ? '&' : '?') + 'subject=' + subject;
   }
 
+  /* 沪教版：年级筛选比较落点年级；有年级筛选时没有落点的点不出现；六年级和初中以上没有落点，列表为空 */
+  function passFilterEdition(topic) {
+    var p = Ed.placementOf(P, topic.id);
+    if (grade) {
+      if (!p || String(p.grade) !== grade) return false;
+    } else if (p) {
+      if (stage === 'j' || stage === 'h') return false;
+    } else {
+      if (stage === 'p' && topic.grade > 6) return false;
+      if (stage === 'j' && (topic.grade < 7 || topic.grade > 9)) return false;
+      if (stage === 'h' && topic.grade < 10) return false;
+    }
+    if (domain && topic.domain !== domain) return false;
+    if (query) {
+      var blob = (topic.name + '\n' + topic.description + '\n' + Ed.chapterText(P, topic) + '\n' + topic.id + '\n' + topic.domain).toLowerCase();
+      if (blob.indexOf(query) < 0 && !aliasHitIds.has(topic.id)) return false;
+    }
+    return true;
+  }
+
   function passFilter(topic) {
+    if (P) return passFilterEdition(topic);
     if (subject === 'english') {
       if (stage === 'p' && topic.grade > 6) return false;
       if (stage === 'j' && (topic.grade < 7 || topic.grade > 9)) return false;
@@ -372,7 +433,62 @@
     return true;
   }
 
+  function topicButton(topic) {
+    return el('button', {
+      type: 'button',
+      class: 'topic-item' + (topic.id === selected ? ' sel' : ''),
+      'data-jump': topic.id
+    }, el('span', { class: 'nm', text: topic.name }), el('span', { class: 'meta', text: topic.domain }));
+  }
+
+  /* 沪教版目录：册按落点年级、学期；册内按映射文件里的单元先后；没有落点的点在最底下单独一组 */
+  function renderListEdition() {
+    recomputeAliasHits();
+    var matched = topics.filter(passFilter);
+    var placed = matched.filter(function (topic) { return Ed.isCovered(P, topic.id); }).map(function (topic) { return topic.id; });
+    var uncovered = matched.filter(function (topic) { return !Ed.isCovered(P, topic.id); });
+    var groups = Ed.groupByUnit(P, placed);
+    var box = $('list');
+    box.replaceChildren();
+    var filtering = !!(query || grade || stage || domain);
+    var draft = Ed.draftNote(P);
+    var shown = 0;
+    var gradeNumber = parseInt(grade, 10);
+    if (gradeNumber === 6) box.append(el('p', { class: 'muted', id: 'edition-note', text: Ed.PREP_NOTE, style: 'padding:12px' }));
+    else if (gradeNumber >= 7) box.append(el('p', { class: 'muted', id: 'edition-note', text: Ed.BEYOND_PRIMARY_NOTE, style: 'padding:12px' }));
+    groups.volumes.forEach(function (volume) {
+      var count = volume.units.reduce(function (sum, unit) { return sum + unit.ids.length; }, 0);
+      shown += count;
+      var volumeHas = volume.units.some(function (unit) { return unit.ids.indexOf(selected) >= 0; });
+      var details = el('details', { class: 'vol' });
+      details.open = filtering || volumeHas;
+      details.append(el('summary', null, volume.title, el('span', { class: 'count-pill', text: ' ' + count }),
+        draft ? el('span', { class: 'muted', text: ' · ' + draft }) : null));
+      volume.units.forEach(function (unit) {
+        var unitDetails = el('details', { class: 'chap' });
+        unitDetails.open = !!query || unit.ids.indexOf(selected) >= 0;
+        unitDetails.append(el('summary', { text: unit.unit }));
+        unit.ids.forEach(function (id) { unitDetails.append(topicButton(byId.get(id))); });
+        details.append(unitDetails);
+      });
+      box.append(details);
+    });
+    if (uncovered.length) {
+      shown += uncovered.length;
+      var has = uncovered.some(function (topic) { return topic.id === selected; });
+      var group = el('details', { class: 'vol', id: 'uncovered-group' });
+      group.open = !!query || has;
+      group.append(el('summary', null, Ed.UNCOVERED, el('span', { class: 'count-pill', text: ' ' + uncovered.length })));
+      uncovered.forEach(function (topic) { group.append(topicButton(topic)); });
+      box.append(group);
+    }
+    if (!shown) box.append(el('p', { class: 'muted', text: '没有匹配的知识点。', style: 'padding:12px' }));
+    $('count').textContent = '显示 ' + shown + ' / ' + topics.length;
+  }
+
   function renderList() {
+    if (editionError) { showLoadError(editionError); return; }
+    if (P) { renderListEdition(); return; }
     recomputeAliasHits();
     var volumes = [];
     var volumeMap = new Map();
@@ -475,7 +591,7 @@
     return el('button', { type: 'button', class: 'rel-row', 'data-jump': edge.id },
       badge(edge.strength),
       el('span', { class: 'rel-name', text: other ? other.name : edge.id }),
-      el('span', { class: 'rel-where', text: other ? gradeLabel(other) : '' }),
+      el('span', { class: 'rel-where', text: other ? volumeTextFor(other) : '' }),
       edge.reason ? el('span', { class: 'why', text: edge.reason }) : null);
   }
 
@@ -512,10 +628,10 @@
       href: diagHref
     }, '诊断这个知识点'));
     parts.push(el('dl', { class: 'meta-grid' },
-      metaItem('年级册次', gradeLabel(topic)),
+      metaItem('年级册次', volumeTextFor(topic) + (P && Ed.isCovered(P, topic.id) && Ed.draftNote(P) ? ' · ' + Ed.draftNote(P) : '')),
       metaItem('领域', topic.domain),
       metaItem('类型', TYPE_ZH[topic.type] || topic.type),
-      metaItem('章节', topic.chapter, true)));
+      metaItem('章节', chapterTextFor(topic), true)));
     if (topic.description) parts.push(el('p', { class: 'desc', text: topic.description }));
     if (topic.root_reason) parts.push(el('p', { class: 'root-reason', text: topic.root_reason }));
 
@@ -703,7 +819,7 @@
     var elements = [];
     gradeMembers.forEach(function (ids, grade) {
       var tone = paint(grade, colors);
-      var word = gradeWord(grade);
+      var word = (P ? '人教版' : '') + gradeWord(grade);
       var name = word + '·' + ids.length + '个';
       ids.forEach(function (id) { gradeOf.set(id, grade); });
       elements.push({
@@ -1293,6 +1409,7 @@
       renderList();
       highlight(false);
     });
+    $('fEdition').addEventListener('change', function () { switchEdition($('fEdition').value); });
     $('fGrade').addEventListener('change', function () {
       grade = $('fGrade').value;
       if (subject === 'english') {
@@ -1481,7 +1598,8 @@
   syncDepthButtons();
   applyQuery();
   bind();
-  load().then(function () { return loadQuestions(); }).then(function () {
+  load().then(function () { return loadQuestions(); }).then(function () { return loadEdition(); }).then(function () {
+    if (editionError) { showLoadError(editionError); return; }
     fillMoralityGrades();
     fillDomain();
     syncControls();
