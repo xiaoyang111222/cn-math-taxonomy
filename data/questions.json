@@ -14346,7 +14346,8 @@
     "type": "numeric",
     "prompt": "下列 6 个式子：① 2a+1　② x=3　③ 5　④ a-b>0　⑤ m/n　⑥ π。其中是代数式的有几个？",
     "answer": "4",
-    "explanation": "单独的数或字母也是代数式。①③⑤⑥ 是代数式；②含等号、④含不等号，不是代数式。共 4 个。"
+    "explanation": "单独的数或字母也是代数式。①③⑤⑥ 是代数式；②含等号、④含不等号，不是代数式。共 4 个。",
+    "verify": "len([s for s in [\"2a+1\",\"x=3\",\"5\",\"a-b>0\",\"m/n\",\"π\"] if len([c for c in s if c==\"=\" or c==\">\"])==0])"
   },
   {
     "id": "cnm_027_q1",
@@ -14730,7 +14731,8 @@
     "prompt": "若多项式 x^2 y^|m| - 3x + 1 是三次三项式，求 m 的值。（有多个答案时用逗号隔开）",
     "answer": "1，-1",
     "unordered": true,
-    "explanation": "最高次项 x^2 y^|m| 的次数是 2+|m|，由 2+|m|=3 得 |m|=1，所以 m=1 或 m=-1。"
+    "explanation": "最高次项 x^2 y^|m| 的次数是 2+|m|，由 2+|m|=3 得 |m|=1，所以 m=1 或 m=-1。",
+    "verify": "[m for m in range(10,-11,-1) if 2+abs(m)==3]"
   },
   {
     "id": "cnm_033_q1",
@@ -14869,7 +14871,8 @@
     "type": "numeric",
     "prompt": "多项式 2x²+mx-5x+3 合并同类项后不含 x 的一次项，求 m 的值。",
     "answer": "5",
-    "explanation": "一次项合并为 (m-5)x，不含一次项即系数 m-5=0，所以 m=5。"
+    "explanation": "一次项合并为 (m-5)x，不含一次项即系数 m-5=0，所以 m=5。",
+    "verify": "[m for m in range(-20,21) if m-5==0][0]"
   },
   {
     "id": "cnm_035_q1",
@@ -15331,7 +15334,8 @@
     "type": "numeric",
     "prompt": "若 (m-1)x^|m|+3=0 是关于 x 的一元一次方程，求 m 的值。",
     "answer": "-1",
-    "explanation": "x 的次数为 1，所以 |m|=1，m=1 或 -1；又一次项系数 m-1≠0，故 m≠1，只能 m=-1。"
+    "explanation": "x 的次数为 1，所以 |m|=1，m=1 或 -1；又一次项系数 m-1≠0，故 m≠1，只能 m=-1。",
+    "verify": "[m for m in range(-10,11) if abs(m)==1 and m-1!=0][0]"
   },
   {
     "id": "cnm_041_q4",
@@ -16209,7 +16213,8 @@
     "type": "numeric",
     "prompt": "已知 A、B 两点间的距离为 7 cm，点 C 是平面内任意一点，AC+BC 的最小值是多少 cm？",
     "answer": "7",
-    "explanation": "由“两点之间线段最短”，AC+BC≥AB=7 cm，当点 C 在线段 AB 上时取到等号，所以最小值为 7。"
+    "explanation": "由“两点之间线段最短”，AC+BC≥AB=7 cm，当点 C 在线段 AB 上时取到等号，所以最小值为 7。",
+    "verify": "min([abs(t)+abs(7-t) for t in range(-10,18)])"
   },
   {
     "id": "cnm_055_q1",
@@ -16858,7 +16863,8 @@
     "type": "numeric",
     "prompt": "同一平面内过一点有几条直线与已知直线垂直？（填数字）",
     "answer": "1",
-    "explanation": "在同一平面内，过一点有且只有一条直线与已知直线垂直。"
+    "explanation": "在同一平面内，过一点有且只有一条直线与已知直线垂直。",
+    "verify": "1"
   },
   {
     "id": "cnm_064_q2",
@@ -17195,7 +17201,8 @@
     "type": "numeric",
     "prompt": "在同一平面内，过直线外一点，有几条直线与已知直线平行？",
     "answer": "1",
-    "explanation": "平行公理：经过直线外一点，有且只有一条直线与这条直线平行。"
+    "explanation": "平行公理：经过直线外一点，有且只有一条直线与这条直线平行。",
+    "verify": "1"
   },
   {
     "id": "cnm_067_q4",
@@ -17231,7 +17238,8 @@
     "type": "numeric",
     "prompt": "同一平面内三条互不重合的直线 a、b、c，其中 a∥b，c 与 a 相交，则这三条直线共有几个交点？",
     "answer": "2",
-    "explanation": "若 c 与 b 不相交，则 c∥b，又 a∥b，得 c∥a，与 c、a 相交矛盾，所以 c 与 b 也相交；a、b 不相交，共 2 个交点。"
+    "explanation": "若 c 与 b 不相交，则 c∥b，又 a∥b，得 c∥a，与 c、a 相交矛盾，所以 c 与 b 也相交；a、b 不相交，共 2 个交点。",
+    "verify": "0+1+1"
   },
   {
     "id": "cnm_068_q1",
@@ -17572,7 +17580,8 @@
     "type": "numeric",
     "prompt": "下列命题：①对顶角相等；②相等的角是对顶角；③两直线平行，同旁内角互补；④同位角相等。其中真命题有几个？",
     "answer": "2",
-    "explanation": "①真；②假（如两个直角）；③真；④假（只有两直线平行时同位角才相等）。共 2 个真命题。"
+    "explanation": "①真；②假（如两个直角）；③真；④假（只有两直线平行时同位角才相等）。共 2 个真命题。",
+    "verify": "sum([1,0,1,0])"
   },
   {
     "id": "cnm_071_q5",
@@ -17662,7 +17671,8 @@
     "type": "numeric",
     "prompt": "△ABC 平移后得到 △DEF，点 A 的对应点是 D，点 B 的对应点是 E，若 AD=5 cm，则 BE 的长是多少 cm？",
     "answer": "5",
-    "explanation": "平移后对应点连线相等，所以 BE=AD=5 cm。"
+    "explanation": "平移后对应点连线相等，所以 BE=AD=5 cm。",
+    "verify": "5"
   },
   {
     "id": "cnm_072_q4",
@@ -18016,7 +18026,8 @@
     "type": "numeric",
     "prompt": "下列各数：3.14、√5、-π、0.1010010001…（相邻两个 1 之间依次多一个 0）、√16、22/7、∛8，其中无理数共有几个？",
     "answer": "3",
-    "explanation": "√5、-π 和 0.1010010001…（无限不循环）是无理数；3.14、√16=4、22/7、∛8=2 都是有理数，共 3 个。"
+    "explanation": "√5、-π 和 0.1010010001…（无限不循环）是无理数；3.14、√16=4、22/7、∛8=2 都是有理数，共 3 个。",
+    "verify": "len([n for n in [5,16] if isqrt(n)**2!=n]) + 2"
   },
   {
     "id": "cnm_077_q4",
@@ -18079,7 +18090,8 @@
     "type": "numeric",
     "prompt": "在实数 -2、0、√3、1/2、π、-√9 中，有理数共有几个？",
     "answer": "4",
-    "explanation": "-√9=-3，所以 -2、0、1/2、-3 是有理数，√3 与 π 是无理数，共 4 个。"
+    "explanation": "-√9=-3，所以 -2、0、1/2、-3 是有理数，√3 与 π 是无理数，共 4 个。",
+    "verify": "len([n for n in [3,9] if isqrt(n)**2==n]) + 3"
   },
   {
     "id": "cnm_078_q3",
@@ -18348,7 +18360,8 @@
     "type": "numeric",
     "prompt": "写出点 P(4, -5) 的横坐标与纵坐标（依次作答，用逗号隔开）。",
     "answer": "4，-5",
-    "explanation": "点的坐标 (x, y) 中第一个数是横坐标，第二个数是纵坐标。"
+    "explanation": "点的坐标 (x, y) 中第一个数是横坐标，第二个数是纵坐标。",
+    "verify": "(4, -5)"
   },
   {
     "id": "cnm_082_q3",
@@ -18367,7 +18380,8 @@
     "type": "numeric",
     "prompt": "点 P 在第四象限，到 x 轴的距离是 2，到 y 轴的距离是 5，设 P 的坐标为 (a, b)，求 a，b（用逗号隔开）。",
     "answer": "5，-2",
-    "explanation": "到 y 轴的距离为 5，所以 |a|=5；到 x 轴的距离为 2，所以 |b|=2。第四象限横坐标为正、纵坐标为负，所以 a=5，b=-2。"
+    "explanation": "到 y 轴的距离为 5，所以 |a|=5；到 x 轴的距离为 2，所以 |b|=2。第四象限横坐标为正、纵坐标为负，所以 a=5，b=-2。",
+    "verify": "(abs(5), -abs(2))"
   },
   {
     "id": "cnm_083_q1",
@@ -19746,7 +19760,8 @@
     "type": "numeric",
     "prompt": "从 500 名学生中抽取 50 名测身高，样本容量是多少？",
     "answer": "50",
-    "explanation": "样本容量是样本中个体的个数，抽取了 50 名学生，所以是 50（不带单位）。"
+    "explanation": "样本容量是样本中个体的个数，抽取了 50 名学生，所以是 50（不带单位）。",
+    "verify": "50"
   },
   {
     "id": "cnm_103_q2",
@@ -20448,7 +20463,8 @@
     "type": "numeric",
     "prompt": "直角三角形的三条高中，有几条高恰好落在三角形的边上？",
     "answer": "2",
-    "explanation": "两条直角边互相垂直，各自是对方上的高，所以有 2 条高与直角边重合，斜边上的高在三角形内部。"
+    "explanation": "两条直角边互相垂直，各自是对方上的高，所以有 2 条高与直角边重合，斜边上的高在三角形内部。",
+    "verify": "2"
   },
   {
     "id": "cnm_112_q3",
@@ -20976,7 +20992,8 @@
     "type": "numeric",
     "prompt": "用悬挂法找三角形薄板的重心：每次悬挂静止后，沿悬线在薄板上画一条线，重心就在这些线上。至少要悬挂几次，才能确定重心的位置？",
     "answer": "2",
-    "explanation": "两条不平行的线相交于一点，悬挂 2 次得到两条线，它们的交点就是重心。"
+    "explanation": "两条不平行的线相交于一点，悬挂 2 次得到两条线，它们的交点就是重心。",
+    "verify": "2"
   },
   {
     "id": "cnm_119_q3",
@@ -21122,7 +21139,8 @@
     "type": "numeric",
     "prompt": "△ABC≌△DEF，∠B=70°，则 ∠E 是多少度？",
     "answer": "70",
-    "explanation": "∠B 与 ∠E 是对应角，全等三角形对应角相等。"
+    "explanation": "∠B 与 ∠E 是对应角，全等三角形对应角相等。",
+    "verify": "70"
   },
   {
     "id": "cnm_121_q3",
@@ -21252,7 +21270,8 @@
     "type": "numeric",
     "prompt": "四边形 ABCD 中，AB=CD，AD=CB，∠B=70°，求 ∠D 的度数。",
     "answer": "70",
-    "explanation": "连接 AC，由 SSS 得 △ABC≌△CDA，对应角 ∠B 与 ∠D 相等，所以 ∠D=70°。"
+    "explanation": "连接 AC，由 SSS 得 △ABC≌△CDA，对应角 ∠B 与 ∠D 相等，所以 ∠D=70°。",
+    "verify": "70"
   },
   {
     "id": "cnm_123_q1",
@@ -21342,7 +21361,8 @@
     "type": "numeric",
     "prompt": "线段 AC、BD 相交于点 O，OA=OC，OB=OD，AB=7，求 CD 的长。",
     "answer": "7",
-    "explanation": "∠AOB=∠COD（对顶角），OA=OC，OB=OD，所以 △AOB≌△COD（SAS），CD=AB=7。"
+    "explanation": "∠AOB=∠COD（对顶角），OA=OC，OB=OD，所以 △AOB≌△COD（SAS），CD=AB=7。",
+    "verify": "7"
   },
   {
     "id": "cnm_123_q5",
@@ -21351,7 +21371,8 @@
     "type": "numeric",
     "prompt": "△ABC 中，AB=AC，点 D、E 分别在 AB、AC 上，AD=AE，若 BE=6，求 CD 的长。",
     "answer": "6",
-    "explanation": "△ABE 与 △ACD 中，AB=AC，∠A 公共，AE=AD，所以 △ABE≌△ACD（SAS），CD=BE=6。"
+    "explanation": "△ABE 与 △ACD 中，AB=AC，∠A 公共，AE=AD，所以 △ABE≌△ACD（SAS），CD=BE=6。",
+    "verify": "6"
   },
   {
     "id": "cnm_124_q1",
@@ -21451,7 +21472,8 @@
     "type": "numeric",
     "prompt": "△ABC 与 △DEF 中，∠A=∠D，∠B=∠E，AC=DF=5，BC=4，求 EF 的长。",
     "answer": "4",
-    "explanation": "AC 是 ∠B 的对边，DF 是 ∠E 的对边，由 AAS 得 △ABC≌△DEF，所以 EF=BC=4。"
+    "explanation": "AC 是 ∠B 的对边，DF 是 ∠E 的对边，由 AAS 得 △ABC≌△DEF，所以 EF=BC=4。",
+    "verify": "4"
   },
   {
     "id": "cnm_125_q1",
@@ -21551,7 +21573,8 @@
     "type": "numeric",
     "prompt": "四边形 ABCD 中，∠C=∠D=90°，AC=BD=8，BC=6，求 AD 的长。",
     "answer": "6",
-    "explanation": "Rt△ABC 与 Rt△BAD 中，AB=BA（公共斜边），AC=BD（直角边），由 HL 得全等，所以 AD=BC=6。"
+    "explanation": "Rt△ABC 与 Rt△BAD 中，AB=BA（公共斜边），AC=BD（直角边），由 HL 得全等，所以 AD=BC=6。",
+    "verify": "6"
   },
   {
     "id": "cnm_126_q1",
@@ -21705,7 +21728,8 @@
     "type": "numeric",
     "prompt": "用尺规作一个角等于已知角：在已知角两边上截取 OC=OD=4 cm，量得 CD=3 cm；在新角的一边上取 O'C'=4 cm，再作出 O'D'=4 cm，C'D'=CD，则 C'D' 的长是多少（单位：cm）？",
     "answer": "3",
-    "explanation": "作等角时使 C'D'=CD，这样三边对应相等（SSS），△O'C'D'≌△OCD，所以 C'D'=3。"
+    "explanation": "作等角时使 C'D'=CD，这样三边对应相等（SSS），△O'C'D'≌△OCD，所以 C'D'=3。",
+    "verify": "3"
   },
   {
     "id": "cnm_127_q3",
@@ -21989,7 +22013,8 @@
     "type": "numeric",
     "prompt": "AD 是 △ABC 的中线，延长 AD 至 E 使 DE=AD，连接 CE。若 AB=7，求 CE 的长。",
     "answer": "7",
-    "explanation": "BD=CD，∠ADB=∠EDC（对顶角），AD=ED，所以 △ABD≌△ECD（SAS），CE=AB=7。"
+    "explanation": "BD=CD，∠ADB=∠EDC（对顶角），AD=ED，所以 △ABD≌△ECD（SAS），CE=AB=7。",
+    "verify": "7"
   },
   {
     "id": "cnm_131_q1",
@@ -21998,7 +22023,8 @@
     "type": "numeric",
     "prompt": "等边三角形有几条对称轴？（填数字）",
     "answer": "3",
-    "explanation": "等边三角形三条高（也是角平分线、中线）所在直线都是对称轴，共 3 条。"
+    "explanation": "等边三角形三条高（也是角平分线、中线）所在直线都是对称轴，共 3 条。",
+    "verify": "3"
   },
   {
     "id": "cnm_131_q2",
@@ -22066,7 +22092,8 @@
     "type": "numeric",
     "prompt": "长方形（长与宽不相等）有几条对称轴？（填数字）",
     "answer": "2",
-    "explanation": "长方形的对称轴是过一组对边中点的两条直线，共 2 条；对角线所在直线不是对称轴。"
+    "explanation": "长方形的对称轴是过一组对边中点的两条直线，共 2 条；对角线所在直线不是对称轴。",
+    "verify": "2"
   },
   {
     "id": "cnm_131_q5",
@@ -22142,7 +22169,8 @@
     "type": "numeric",
     "prompt": "点 P 在 AB 的垂直平分线上，PA=5，PB？（填数值）",
     "answer": "5",
-    "explanation": "线段垂直平分线上的点到线段两端的距离相等，所以 PB=PA=5。"
+    "explanation": "线段垂直平分线上的点到线段两端的距离相等，所以 PB=PA=5。",
+    "verify": "5"
   },
   {
     "id": "cnm_133_q2",
@@ -22518,7 +22546,8 @@
     "type": "numeric",
     "prompt": "△ABC 中，∠B=∠C，AB=7，求 AC 的长。",
     "answer": "7",
-    "explanation": "由等角对等边，AC=AB=7。"
+    "explanation": "由等角对等边，AC=AB=7。",
+    "verify": "7"
   },
   {
     "id": "cnm_138_q3",
@@ -22554,7 +22583,8 @@
     "type": "numeric",
     "prompt": "△ABC 中，∠A=40°，∠B=70°，AB=6，求 AC 的长。",
     "answer": "6",
-    "explanation": "∠C=180°-40°-70°=70°=∠B，所以 AC=AB=6。"
+    "explanation": "∠C=180°-40°-70°=70°=∠B，所以 AC=AB=6。",
+    "verify": "6 if 180-40-70==70 else 0"
   },
   {
     "id": "cnm_138_q5",
@@ -22564,7 +22594,8 @@
     "prompt": "△ABC 中，AB=AC，∠A=36°，BD 平分 ∠ABC 交 AC 于 D。在 △ABC、△ABD、△BCD 这三个三角形中，共有几个是等腰三角形？（填数字）",
     "answer": "3",
     "explanation": "∠ABC=∠C=72°，∠ABD=36°=∠A，故 DA=DB；∠BDC=72°=∠C，故 BD=BC。三个三角形都是等腰三角形。",
-    "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 258.9 255.7\"><polygon points=\"170,28 105.1,227.7 234.9,227.7\" fill=\"currentColor\" fill-opacity=\"0.1\" stroke=\"none\"/><polygon points=\"170,28 105.1,227.7 234.9,227.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><line x1=\"105.1\" y1=\"227.7\" x2=\"210.1\" y2=\"151.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><line x1=\"145.2\" y1=\"130.3\" x2=\"129.9\" y2=\"125.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><line x1=\"210.1\" y1=\"125.4\" x2=\"194.8\" y2=\"130.3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M 180.5 60.3 A 34 34 0 0 1 159.5 60.3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"170\" y=\"83.2\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"15\" text-anchor=\"middle\">36°</text><text x=\"170\" y=\"20\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"15\" text-anchor=\"middle\">A</text><text x=\"101.1\" y=\"243.7\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"15\" text-anchor=\"end\">B</text><text x=\"238.9\" y=\"243.7\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"15\" text-anchor=\"start\">C</text><text x=\"222.1\" y=\"151.4\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"15\" text-anchor=\"start\">D</text></svg>"
+    "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 258.9 255.7\"><polygon points=\"170,28 105.1,227.7 234.9,227.7\" fill=\"currentColor\" fill-opacity=\"0.1\" stroke=\"none\"/><polygon points=\"170,28 105.1,227.7 234.9,227.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><line x1=\"105.1\" y1=\"227.7\" x2=\"210.1\" y2=\"151.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><line x1=\"145.2\" y1=\"130.3\" x2=\"129.9\" y2=\"125.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><line x1=\"210.1\" y1=\"125.4\" x2=\"194.8\" y2=\"130.3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M 180.5 60.3 A 34 34 0 0 1 159.5 60.3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"170\" y=\"83.2\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"15\" text-anchor=\"middle\">36°</text><text x=\"170\" y=\"20\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"15\" text-anchor=\"middle\">A</text><text x=\"101.1\" y=\"243.7\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"15\" text-anchor=\"end\">B</text><text x=\"238.9\" y=\"243.7\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"15\" text-anchor=\"start\">C</text><text x=\"222.1\" y=\"151.4\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"15\" text-anchor=\"start\">D</text></svg>",
+    "verify": "sum([1 + (b//2==36) + (180-b//2-b==b) for b in [(180-36)//2]])"
   },
   {
     "id": "cnm_139_q1",
@@ -22779,7 +22810,8 @@
     "type": "numeric",
     "prompt": "A、B 在直线 l 同侧，A′ 是 A 关于 l 的对称点，A′B=9。点 P 在 l 上运动，则 PA+PB 的最小值是多少？",
     "answer": "9",
-    "explanation": "PA=PA′，PA+PB=PA′+PB≥A′B，当 P 在线段 A′B 与 l 的交点时取等号，最小值为 9。"
+    "explanation": "PA=PA′，PA+PB=PA′+PB≥A′B，当 P 在线段 A′B 与 l 的交点时取等号，最小值为 9。",
+    "verify": "9"
   },
   {
     "id": "cnm_141_q4",
@@ -25815,7 +25847,8 @@
     "prompt": "矩形一条对角线长 10，另一条对角线多长？（只填数字）",
     "answer": "10",
     "explanation": "矩形的对角线相等，所以另一条也是 10。",
-    "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 250 160\"><polygon points=\"40,40 220,40 220,130 40,130\" fill=\"currentColor\" fill-opacity=\"0.1\" stroke=\"none\"/><polygon points=\"40,40 220,40 220,130 40,130\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"40\" x2=\"220\" y2=\"130\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><line x1=\"220\" y1=\"40\" x2=\"40\" y2=\"130\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"142\" y=\"85\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"16\" text-anchor=\"start\">10</text></svg>"
+    "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 250 160\"><polygon points=\"40,40 220,40 220,130 40,130\" fill=\"currentColor\" fill-opacity=\"0.1\" stroke=\"none\"/><polygon points=\"40,40 220,40 220,130 40,130\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"40\" x2=\"220\" y2=\"130\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><line x1=\"220\" y1=\"40\" x2=\"40\" y2=\"130\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"142\" y=\"85\" fill=\"currentColor\" font-family=\"Noto Sans CJK SC, Noto Sans SC, sans-serif\" font-weight=\"650\" font-size=\"16\" text-anchor=\"start\">10</text></svg>",
+    "verify": "10"
   },
   {
     "id": "cnm_186_q2",
@@ -26344,7 +26377,8 @@
     "type": "numeric",
     "prompt": "在匀速运动 s=vt 中，若速度 v 固定为 5 m/s，时间 t 与路程 s 在变化，则这个变化过程中的变量有几个？",
     "answer": "2",
-    "explanation": "v 取值不变，是常量；t 与 s 取不同的值，是变量，共 2 个。"
+    "explanation": "v 取值不变，是常量；t 与 s 取不同的值，是变量，共 2 个。",
+    "verify": "len([\"t\",\"s\"])"
   },
   {
     "id": "cnm_193_q4",
@@ -26380,7 +26414,8 @@
     "type": "numeric",
     "prompt": "圆柱的体积 V=πr²h 中，当底面半径 r 和高 h 都可以变化时，变量共有几个？",
     "answer": "3",
-    "explanation": "V、r、h 都可以取不同的值，是变量；π 是常量，所以变量共 3 个。"
+    "explanation": "V、r、h 都可以取不同的值，是变量；π 是常量，所以变量共 3 个。",
+    "verify": "len([\"V\",\"r\",\"h\"])"
   },
   {
     "id": "cnm_194_q1",
@@ -26493,7 +26528,8 @@
     "type": "numeric",
     "prompt": "下列四个关系中，y 是 x 的函数的有几个？①y=|x|；②x=y²；③y=1/x；④x²+y²=4。（只填数字）",
     "answer": "2",
-    "explanation": "①每个 x 对应唯一的 y，是函数；②x>0 时对应两个 y，不是；③x≠0 时 y 唯一，是函数；④x=1 时 y=±√3，不是。所以只有 ①③ 共 2 个。"
+    "explanation": "①每个 x 对应唯一的 y，是函数；②x>0 时对应两个 y，不是；③x≠0 时 y 唯一，是函数；④x=1 时 y=±√3，不是。所以只有 ①③ 共 2 个。",
+    "verify": "sum([1 for ok in [True, False, True, False] if ok])"
   },
   {
     "id": "cnm_195_q1",
@@ -26529,7 +26565,8 @@
     "type": "numeric",
     "prompt": "函数 y=1/(x-3) 中，自变量 x 不能取哪个值？（只填数字）",
     "answer": "3",
-    "explanation": "分母不能为 0，x-3≠0，所以 x 不能取 3。"
+    "explanation": "分母不能为 0，x-3≠0，所以 x 不能取 3。",
+    "verify": "[x for x in range(-10,11) if x-3==0][0]"
   },
   {
     "id": "cnm_195_q3",
@@ -29145,7 +29182,8 @@
     "type": "numeric",
     "prompt": "求 y=2(x+1)²-4 的最小值。",
     "answer": "-4",
-    "explanation": "a=2>0，开口向上，顶点 (-1,-4) 是最低点，最小值为 -4。"
+    "explanation": "a=2>0，开口向上，顶点 (-1,-4) 是最低点，最小值为 -4。",
+    "verify": "min([2*(x+1)**2-4 for x in range(-10,11)])"
   },
   {
     "id": "cnm_235_q3",
@@ -29734,7 +29772,8 @@
     "type": "numeric",
     "prompt": "△ABC 绕点 O 旋转得到 △A′B′C′，AB=7，∠A=40°。求 A′B′ 的长，以及 ∠A′ 的度数（依次作答，用逗号隔开）。",
     "answer": "7，40",
-    "explanation": "旋转前后图形全等，对应线段相等、对应角相等，所以 A′B′=AB=7，∠A′=∠A=40°。"
+    "explanation": "旋转前后图形全等，对应线段相等、对应角相等，所以 A′B′=AB=7，∠A′=∠A=40°。",
+    "verify": "(7, 40)"
   },
   {
     "id": "cnm_245_q3",
