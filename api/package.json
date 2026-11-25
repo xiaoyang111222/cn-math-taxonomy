@@ -1,6 +1,0 @@
-{
-  "name": "math-pansgo-api",
-  "private": true,
-  "type": "module",
-  "description": "math.pansgo.com 账号与云同步 Worker（Cloudflare Workers + D1）。仓库根目录的 npm test 会跑 tests/test_api.js。"
-}

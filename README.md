@@ -10,6 +10,12 @@
 
 > **商业授权：** 本项目采用 CC BY-NC 4.0，个人学习、教学、研究可免费使用；**商业使用（付费课程、付费 App、机构收费服务等）需单独授权**，请通过 X 私信 [@hassanyehiaa](https://x.com/hassanyehiaa)、邮箱 [499749204@qq.com](mailto:499749204@qq.com) 或在本仓库 [提交 Issue](https://github.com/xiaoyang111222/cn-math-taxonomy/issues) 联系，条款见文末「许可证 / License」。
 
+## 仓库拆分说明（2026-11-25）
+
+网站源码（诊断页、知识图谱页、孩子档案、错题本、英语每日一句、后端 API、PWA 与部署脚本等）已迁至私有仓维护。线上站点 [math.pansgo.com](https://math.pansgo.com/) 不受影响，访问与功能照旧。
+
+本仓从此只含**数据与数据工具链**：`data/` 下的知识点、先修边、题库、映射，`scripts/` 下生成与校验这些数据的脚本，`tests/` 下的纯数据测试，以及 `docs/` 里的数据文档。网站侧测试随源码一起迁走，网站仓构建和测试前会从本仓同步 `data/`。拆分前的完整状态保留在 tag `pre-split-2026-11-25`。下文对网站目录（`diagnose/`、`assets/`、`explore/` 等）的描述是拆分前的历史说明。
+
 **[→ 在线试用诊断（演示：配方法）](https://math.pansgo.com/diagnose/?target=cnm_221&demo=1)** · [首页](https://math.pansgo.com/) · [知识图谱](https://math.pansgo.com/explore/) · [诊断工具](https://math.pansgo.com/diagnose/) · [GitHub Pages 备份](https://xiaoyang111222.github.io/cn-math-taxonomy/)
 
 ![首页：三步说明、实时统计和年级入口](screenshots/06-home.png)

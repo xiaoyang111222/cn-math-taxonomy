@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-/* CI 工作流测试：node tests/test_ci_workflow.js（无依赖，只读 .github/workflows/ci.yml 与 package.json）。 */
+/* CI 工作流测试（数据仓）：node tests/test_ci_workflow.js（无依赖，只读 .github/workflows/ci.yml 与 package.json）。
+ * 网站源码已迁至私有仓，本仓 CI 只跑数据侧：node/python 数据测试 + scripts 下的数据校验。 */
 'use strict';
 const assert = require('assert');
 const fs = require('fs');
@@ -176,7 +177,7 @@ test('CI 与 npm test 覆盖全部无浏览器依赖的 Node 测试', () => {
   const runs = new Set(runSteps().map((s) => s.run));
   const npm = new Set(npmParts());
   const files = nodeTestFiles();
-  assert.ok(files.length >= 4, 'Node 测试文件变少了');
+  assert.ok(files.length >= 2, 'Node 测试文件变少了');
   for (const f of files) {
     const cmd = 'node tests/' + f;
     assert.ok(runs.has(cmd), '未在 CI 中运行：' + f);
@@ -184,11 +185,28 @@ test('CI 与 npm test 覆盖全部无浏览器依赖的 Node 测试', () => {
   }
 });
 
-test('不运行需要真实浏览器的测试', () => {
-  const browser = fs.readdirSync(path.join(ROOT, 'tests')).filter((f) => /_browser\.js$/.test(f));
-  assert.ok(browser.length >= 1);
+test('CI 与 npm test 覆盖全部 Python 测试', () => {
+  const runs = new Set(runSteps().map((s) => s.run));
+  const npm = new Set(npmParts());
+  const files = fs.readdirSync(path.join(ROOT, 'tests')).filter((f) => /^test_.*\.py$/.test(f)).sort();
+  assert.ok(files.length >= 4, 'Python 测试文件变少了');
+  for (const f of files) {
+    const cmd = 'python3 tests/' + f;
+    assert.ok(runs.has(cmd), '未在 CI 中运行：' + f);
+    assert.ok(npm.has(cmd), '未在 npm test 中运行：' + f);
+  }
+});
+
+test('数据仓不含网站源码：不跑浏览器测试，不引用网站目录，tests/ 下没有网站侧测试', () => {
   for (const s of runSteps()) assert.doesNotMatch(s.run, /_browser\.js/);
   for (const part of npmParts()) assert.doesNotMatch(part, /_browser\.js/);
+  const webPath = /\b(diagnose|assets|english|children|wrongbook|finals|explore|goods|api)\/|\b(sw\.js|index\.html)\b/;
+  for (const s of runSteps()) assert.doesNotMatch(s.run, webPath, s.name);
+  for (const part of npmParts()) assert.doesNotMatch(part, webPath, part);
+  for (const d of ['diagnose', 'assets', 'children', 'english', 'wrongbook', 'finals', 'explore', 'goods']) {
+    const tracked = fs.existsSync(path.join(ROOT, d, 'index.html')) || fs.existsSync(path.join(ROOT, d, 'app.js'));
+    assert.ok(!tracked, '网站目录不应留在数据仓：' + d);
+  }
 });
 
 test('npm test 含数据、答案和图检查，且答案报告不写进仓库', () => {
