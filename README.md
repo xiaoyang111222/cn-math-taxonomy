@@ -14,7 +14,7 @@
 
 网站源码（诊断页、知识图谱页、孩子档案、错题本、英语每日一句、后端 API、PWA 与部署脚本等）已迁至私有仓维护。线上站点 [math.pansgo.com](https://math.pansgo.com/) 不受影响，访问与功能照旧。
 
-本仓从此只含**数据与数据工具链**：`data/` 下的知识点、先修边、题库、映射，`scripts/` 下生成与校验这些数据的脚本，`tests/` 下的纯数据测试，以及 `docs/` 里的数据文档。网站侧测试随源码一起迁走，网站仓构建和测试前会从本仓同步 `data/`。拆分前的完整状态保留在 tag `pre-split-2026-11-25`。下文对网站目录（`diagnose/`、`assets/`、`explore/` 等）的描述是拆分前的历史说明。
+本仓从此只含**数据与数据工具链**：`data/` 下的知识点、先修边、题库、映射，`scripts/` 下生成与校验这些数据的脚本，`tests/` 下的纯数据测试，以及 `docs/` 里的数据文档。网站侧测试随源码一起迁走，网站仓构建和测试前会从本仓同步 `data/`。拆分前的完整状态保留在 tag `pre-split-2026-11-25`。本仓的目录布局与数据规模见下文「仓库结构」；下文各学科章节、「诊断小工具」和「线上站点功能说明」里提到的页面、URL 参数与交互，描述的是线上站点的功能，其源码已不在本仓。
 
 **[→ 在线试用诊断（演示：配方法）](https://math.pansgo.com/diagnose/?target=cnm_221&demo=1)** · [首页](https://math.pansgo.com/) · [知识图谱](https://math.pansgo.com/explore/) · [诊断工具](https://math.pansgo.com/diagnose/) · [GitHub Pages 备份](https://xiaoyang111222.github.io/cn-math-taxonomy/)
 
@@ -48,7 +48,7 @@
 | 初中语文（7–9 年级） | 189 | 243（hard 59，soft 184；其中 19 条硬边指向小学语文） | 12（2022 语文第四学段，转述；人教社电子书印刷页 14–16，未对教育部 PDF） | 756 |
 | 高中语文（必修上、下，选必上、中、下） | 144 | 249（hard 135，soft 114；其中 63 条指向初中语文，3 条指向小学语文） | 20（2017 高中，本图谱自编号 ccs-hs-2017，2026-11-22 已逐条对照课标 PDF，19 条记课标印刷页码、1 条课标无对应仍待核） | 576 |
 
-上表是数学、英语、物理、语文四科的分学段明细；另有道德与法治 269 个知识点、科学 262 个、历史 254 个、生物 201 个、地理 178 个、化学 147 个，明细见下文各学科章节。全站合计：4,068 个知识点、6,429 条先修边、16,419 道题、972 条课程标准条目。
+上表是数学、英语、物理、语文四科的分学段明细；另有道德与法治 269 个知识点、科学 262 个、历史 254 个、生物 201 个、地理 178 个、化学 147 个、思想政治 153 个，明细见下文各学科章节。全站合计：4,221 个知识点、6,681 条先修边、17,031 道题、1,039 条课程标准条目（实测口径见「仓库结构」）。
 
 数据格式参考 [Marble os-taxonomy](https://github.com/withmarbleapp/os-taxonomy)（`topics` + `dependencies`）。
 
@@ -118,40 +118,64 @@
 - **旧的小学外部节点（方案 b）**：原来的 18 个 `cnm_ext_*` 已从 `topics.json` **删除**，不保留为汇总节点。`data/id-aliases.json` 把每个旧 id 映射到一个或多个小学正式知识点（`cnm_pNNN`）。根路径或知识图谱页遇到 `#cnm_ext_002` 会打开映射里的第一个小学知识点（地址栏仍保留这个旧编号）；诊断页 `?target=cnm_ext_002` 会把该旧 id 展开成映射里的全部小学知识点再开始诊断。图上不再有任何 `cnm_ext_*` 边。
 - **格式参考**：已阅读 Marble 的 `data/topics.json` / `data/dependencies.json`（节点含 `type`、`domain`、`evidence`、`assessmentPrompt`；边为 `topicId` 依赖 `prerequisiteId`）。其中文分支 [os-taxonomy-beijing](https://github.com/luw2007/os-taxonomy-beijing) 只读了 README，**没有解析它的数据文件**。本项目在字段含义上对应关系为：`mastery_criteria` ≈ `evidence`，`diagnostic_question` ≈ `assessmentPrompt`；但文件顶层是裸数组（没有 `version`/`topicCount` 包装），id 为 `cnm_NNN`，也没有 `centrality`、`ageRange`、`standards`。
 
-## 文件
+## 仓库结构
 
-```
-data/topics.json         知识点节点（JSON 数组）
-data/dependencies.json   先修边（JSON 数组）
-data/cn-curriculum-standards.json  课标（数学 314 + 英语 116 + 物理 197（初中 89 + 高中 108，高中 108 条已于 2026-11-21 逐条核对）+ 语文 32 条 ccs-2022（小学 20 + 初中第四学段 12）+ 高中 20 条 ccs-hs-2017（2026-11-22 已对照课标 PDF，1 条仍待核），另有科学、道德与法治，以及历史 19 条 chs-2022、地理 22 条 cgs-2022、生物 18 条 cbs-2022；高中地理 29 条 cgs-hs-2017（25 条已核、4 条待核）、高中生物 34 条 cbs-hs-2017、高中历史 34 条 chs-hs-2017（生物、历史已于 2026-11-21 对照课标 PDF 逐条核对）；高中数学已记人教社转载的 2020 年修订版 PDF 印刷页，条文仍是转述。英语语音、词汇、语法已记人教社印刷页或转载 PDF，日常表达和读写已于 2026-11-22 对照课标（9 条课标无对应、仍待核）。义教历史、地理、生物学、化学、科学、道德与法治已于 2026-11-22 对照人教社电子书 2022 年版课标并记课标印刷页码，仍待核 5 条（地理 1、生物 1、化学 2、科学 1）。语文 ccs-2022 记人教社电子书印刷页，条文仍是转述；高中思想政治 67 条 czs-hs-2017，2026-11-22 已对照人教社转载课标 PDF 核对印刷页码，verbatim 仍为 false，无待核）
-data/id-aliases.json               旧 id cnm_ext_001…018 → 小学正式知识点（方案 b，节点已删除）
-data/mappings/             教材版本对照表（可选，沪教、苏教等；现只有一个占位示例 hujiao_math.example.json），说明见 docs/edition-mappings.md
-docs/standards-mapping.md          课标对齐说明：来源、映射规则、覆盖率、未映射清单、局限
-data/questions.json      题库：数学 3627 题 + 英语 3164 题（小学 1100 + 初中 1028 + 高中 1036）+ 物理 1076 题（初中 368 + 高中 708）+ 语文 3304 题（小学 1972 + 初中 756 + 高中 576）+ 历史 536 题 + 地理 236 题 + 生物 264 题等；另有科学、道德与法治，以文件为准
-data/questions/          题库的按学科拆分版（<学科>.json ×10 + index.json 各科题数），前端只读这里；由 scripts/split_questions.py 从 questions.json 生成，改题后必须重跑（tests/test_questions_split.js 会核对）
-data/_qbatches/primary_g1.json … primary_g6.json、high.json、high_sel.json   生成批次（保留，便于对照；不部署）
-data/verification_report.json  题库答案核验报告（自动核验 + 独立第二遍复核）
-data/second_pass_log.json      第二遍复核的裁决与修正记录；data/_second_pass/ 是解题者的原始答案和推导
-docs/questions.md                题库格式、核验方法、统计、局限
-scripts/validate.py      校验脚本（仅标准库；含题库检查）
-scripts/verify_questions.py  题库答案自动核验（受限表达式求值）
-scripts/second_pass.py       独立第二遍复核的辅助脚本（出盲解题、比对答案）
-CHANGELOG.md             按日期记录的变更日志（含 id 变动说明）
-index.html               首页（实时统计、三步说明、按年级进入）
-manifest.webmanifest, sw.js, assets/pwa.*, assets/icons/   PWA：添加到桌面、离线缓存（说明见 docs/pwa.md）
-children/, assets/children.js     孩子档案、盲区与历史（薄弱 / 不稳汇总、一键再测；只存本机 localStorage）
-assets/blindspots.js              站内错题盲区汇总：本机账本 + 档案 + 未完成会话答错；首页 / 诊断 / 档案共用
-assets/stats-config.js, assets/stats.js   统计钩子（默认不发任何统计请求，配置见 docs/pwa.md）
-explore/                 知识图谱浏览（index.html、app.js；局部先修图）
-assets/site.css          全站配色、字号、导航（浏览页与诊断页共用）
-assets/explore.css       知识图谱三栏布局
-assets/home.js           首页统计与年级入口（从 data/*.json 计算）
-assets/vendor/           Cytoscape 3.30.4、dagre 0.8.5、cytoscape-dagre 2.5.0（MIT，随仓库分发，见 VENDOR.md）
-diagnose/                诊断小工具（纯静态：index.html、engine.js、app.js、style.css、README.md）
-tests/test_engine.js     诊断引擎测试（Node，无依赖）
-scripts/screenshot.js    无头 Chrome 冒烟测试与截图脚本
-screenshots/             首页、知识图谱与诊断页截图（01–05 诊断流程，06 起为新界面与窄屏）
-```
+网站源码已迁至私有仓维护，本仓只发布数据与数据工具链；拆分前的完整状态保留在 tag `pre-split-2026-11-25`。线上站点 [math.pansgo.com](https://math.pansgo.com/) 构建前会同步本仓 `data/`，功能不受影响（背景见上文「仓库拆分说明」）。
+
+本仓现有 429 个受版本控制的文件（`git ls-files` 实测）：
+
+| 位置 | 文件数 | 用途 |
+| --- | ---: | --- |
+| `data/` | 108 | 数据本体：知识点、先修关系、题库、课程标准、id 别名、英语句子表、教材版本映射，以及题库核验与生成留档 |
+| `scripts/` | 256 | 数据生成、加工与校验脚本（253 个 Python 脚本，另有 3 个 JSON 辅助文件） |
+| `tests/` | 6 | 数据侧校验测试（4 个 Python、2 个 Node） |
+| `docs/` | 36 | 文档：课标对齐说明、目录核对记录、题库说明、教材版本映射方案等 |
+| `screenshots/` | 14 | 本 README 引用的站点截图 |
+| `.github/` | 4 | Issue 模板（题目纠错、功能建议）与 CI 配置 |
+| 根目录 | 5 | `README.md`、`LICENSE`（CC BY-NC 4.0）、`CHANGELOG.md`、`package.json`、`.gitignore` |
+
+### 数据规模
+
+全站 **4,221** 个知识点、**6,681** 条先修边（hard 3,564，soft 3,117）、**17,031** 道题、**11** 个学科，课程标准条目 **1,039** 条。分学科如下：
+
+| 学科 | 知识点 | 题 |
+| --- | ---: | ---: |
+| 数学 | 870 | 3,627 |
+| 语文 | 827 | 3,308 |
+| 英语 | 791 | 3,164 |
+| 物理 | 269 | 1,076 |
+| 道德与法治 | 269 | 1,076 |
+| 科学 | 262 | 1,048 |
+| 历史 | 254 | 1,016 |
+| 生物 | 201 | 804 |
+| 地理 | 178 | 712 |
+| 思想政治 | 153 | 612 |
+| 化学 | 147 | 588 |
+| 合计 | 4,221 | 17,031 |
+
+数字取自 `data/topics.json`、`data/dependencies.json`、`data/questions/index.json` 的条数和 `python3 scripts/validate.py` 的输出，数据更新后会变，以文件为准。
+
+### `data/`
+
+- `topics.json`：知识点节点（JSON 数组），字段见下文「topics.json 字段」。
+- `dependencies.json`：先修边（JSON 数组），字段见下文「dependencies.json 字段」。
+- `questions.json`：题库全量。`questions/` 是它按学科拆分的版本（11 个学科文件加 `index.json`，后者记各科题数），由 `scripts/split_questions.py` 从 `questions.json` 生成，改题后必须重跑；站点读取拆分版。格式、核验方法与局限见 [docs/questions.md](docs/questions.md)。
+- `cn-curriculum-standards.json`：课程标准条目，来源、映射规则与覆盖率见 [docs/standards-mapping.md](docs/standards-mapping.md)。内容构成：课标（数学 314 + 英语 116 + 物理 197（初中 89 + 高中 108，高中 108 条已于 2026-11-21 逐条核对）+ 语文 32 条 ccs-2022（小学 20 + 初中第四学段 12）+ 高中 20 条 ccs-hs-2017（2026-11-22 已对照课标 PDF，1 条仍待核），另有科学、道德与法治，以及历史 19 条 chs-2022、地理 22 条 cgs-2022、生物 18 条 cbs-2022；高中地理 29 条 cgs-hs-2017（25 条已核、4 条待核）、高中生物 34 条 cbs-hs-2017、高中历史 34 条 chs-hs-2017（生物、历史已于 2026-11-21 对照课标 PDF 逐条核对）；高中数学已记人教社转载的 2020 年修订版 PDF 印刷页，条文仍是转述。英语语音、词汇、语法已记人教社印刷页或转载 PDF，日常表达和读写已于 2026-11-22 对照课标（9 条课标无对应、仍待核）。义教历史、地理、生物学、化学、科学、道德与法治已于 2026-11-22 对照人教社电子书 2022 年版课标并记课标印刷页码，仍待核 5 条（地理 1、生物 1、化学 2、科学 1）。语文 ccs-2022 记人教社电子书印刷页，条文仍是转述；高中思想政治 67 条 czs-hs-2017，2026-11-22 已对照人教社转载课标 PDF 核对印刷页码，verbatim 仍为 false，无待核）
+- `id-aliases.json`：旧 id 别名，共 25 条：旧的 `cnm_ext_001`…`018`（18 条，映射到小学正式知识点，方案 b，节点已删除）和科学里已合并或删除的 7 个编号。
+- `english/days.json`：英语每日一句句子表，共 30 天，每天一句，含译文、逐词释义、提示和变体句。
+- `mappings/`：教材版本映射，共 6 个文件。
+  - `hujiao-math.json`：沪教版小学数学映射，185 条，状态 draft；站点运行时读取它，方案与格式见 [docs/hujiao-mapping-plan.md](docs/hujiao-mapping-plan.md)。
+  - `hujiao_math.json`（160 条）、`sujiao_math.json`（277 条）、`sd54_math.json`（12 条）、`yilin_english.json`（230 条）：其他版本和早期的沪教版对照草稿，状态均为 draft，站点不读取，贡献约定见 [docs/edition-mappings.md](docs/edition-mappings.md)。
+  - `hujiao_math.example.json`：格式示例（6 条占位值，不是真实对照）。
+- 题库核验与生成留档：`verification_report.json`（答案自动核验加独立第二遍复核的报告）、`second_pass_log.json`（第二遍复核的裁决与修正记录）、`_second_pass/`（73 个文件，解题者的原始答案和推导）、`_qbatches/`（8 个文件，题库生成批次，便于对照）、`_distractor_changelog.json`（干扰项改写记录）。
+
+### `scripts/`、`tests/`、`docs/`、`screenshots/`
+
+- `scripts/`：各学科的构建脚本（`*_build.py`，内容和先修边写在同学科的其他脚本里，可复跑方式见各学科章节）；校验脚本 `validate.py`（仅标准库，含题库检查）、`verify_questions.py`（题库答案自动核验，受限表达式求值）、`second_pass.py`（独立第二遍复核的辅助：出盲解题、比对答案）、`check_figures.py`（带内联示意图的题目检查）；题库拆分脚本 `split_questions.py`。
+- `tests/`：数据侧校验测试，包括题目 id 与纠错模板、`verify` 表达式精确求值、初中道法入库安全（缺模块不删已有点，排序不改 id）、初中语文重建时保留高中指向初中的边、初中英语待核标记、CI 工作流。`npm test` 会依次运行这些测试，再跑 `validate.py`、`check_figures.py` 和 `verify_questions.py`。
+- `docs/`：文档，包括课标对齐说明 [docs/standards-mapping.md](docs/standards-mapping.md)、2025 年修订对齐记录 [docs/moe2025-alignment.md](docs/moe2025-alignment.md)、各学科目录核对记录、题库说明 [docs/questions.md](docs/questions.md) 和教材版本映射方案。
+- `screenshots/`：README 引用的站点截图。
+- 变更记录见根目录 [CHANGELOG.md](CHANGELOG.md)（按日期记录，含 id 变动说明）。
 
 ### topics.json 字段
 
@@ -172,7 +196,7 @@ screenshots/             首页、知识图谱与诊断页截图（01–05 诊�
 | `external` | `false` |
 | `standards` | 课标映射数组，元素 `{"id", "confidence", "note"?}`，见下节；可为空数组 |
 | `root_reason` | 仅当没有任何先修边时必填。现在只有 `cnm_p001`（1到5各数的认识） |
-| `mappings` | 可选。其他教材版本的对照，`{版本 id: {grade, term, unit?, chapter?, note?}}`，如 `hujiao_math`（沪教版）；缺省就是只有人教版。目前没有知识点带这个字段，贡献方式见 [docs/edition-mappings.md](docs/edition-mappings.md) |
+| `mappings` | 可选。其他教材版本的对照，`{版本 id: {grade, term, unit?, chapter?, note?}}`，如 `hujiao_math`（沪教版）；缺省就是只有人教版。目前没有知识点带这个字段；教材版本映射现存放在 `data/mappings/` 下的独立文件（见上文「仓库结构」），贡献方式见 [docs/edition-mappings.md](docs/edition-mappings.md) |
 | `external` | 全部为 `false`。旧的小学外部节点已按方案 b 删除，见 `data/id-aliases.json` |
 
 说明：
@@ -262,7 +286,7 @@ screenshots/             首页、知识图谱与诊断页截图（01–05 诊�
 - 知识点 110 个。七上 13 课 26 点，七下 11 课 19 点，八上 12 课 19 点，八下 14 课 25 点，九上 10 课 21 点。按可测概念拆点。首页按已加载册次写眉题：有九上、没有九下时写明九下未录入。诊断选九年级时按数据出现上册，不写九全。
 - 题库 440 题，每个知识点 4 道选择题（七上 104、七下 76、八上 76、八下 100、九上 84）。八下前三点里部分重复题已改成不同角度；九上及本批新题未做专业逐题复审。
 - 先修边 7 条，全部是 soft，没有 hard。七至八年级原有 5 条。九上新增 2 条：进入新时代的意义宜先见过社会主要矛盾的变化；推动高质量发展宜先见过新发展理念。两条都不是掌握门槛。没有先修的点写了 `root_reason`，允许作为独立根。
-- 可复跑脚本：`python3 scripts/jmor_build.py`（七上 `scripts/jmor_g7a.py`，七下 `scripts/jmor_g7b.py`，八上 `scripts/jmor_g8a.py`，八下 `scripts/jmor_g8b.py`，九上 `scripts/jmor_g9a.py`）。`sw.js` 本地缓存版本为 v18。仅本地变更，未推送、未部署。
+- 可复跑脚本：`python3 scripts/jmor_build.py`（七上 `scripts/jmor_g7a.py`，七下 `scripts/jmor_g7b.py`，八上 `scripts/jmor_g8a.py`，八下 `scripts/jmor_g8b.py`，九上 `scripts/jmor_g9a.py`）。
 
 ## 初中历史
 
@@ -460,10 +484,10 @@ screenshots/             首页、知识图谱与诊断页截图（01–05 诊�
 - 知识点 **177** 个，`cnp_h001`–`cnp_h177`（与初中 `cnp_001`–`cnp_092` 不冲突）：必修一 27、必修二 25、必修三 37、选必一 28、选必二 26、选必三 34。`grade` 10–15（必修第一至三册 = 10–12，选择性必修第一至三册 = 13–15），`semester` 为「上」，与高中英语的习惯一致；`chapter` 写成「必修一 第一章 运动的描述 1.1」。一节一个或两三个（大节拆开，实验单列）。
 - 先修边 **514** 条（hard 277，soft 237），其中 **105** 条指向初中物理（如速度、力、欧姆定律、分子动理论），没有跨学科边；初中物理不依赖高中。数学用到的地方写在 `mathLinks`（58 个知识点共 64 条）。
 - 题库 **708** 题，每个知识点 4 题（choice 440、numeric 268；basic 354，standard 284，advanced 70），全部有 `verify` 且自动核验 708/708（纯概念选择题的 `verify` 只是登记正确选项文字，没有独立核验）。每个知识点至少有两道 basic，第一道（诊断题）一定是 basic。`verify_questions.py` 的单位表加了 m/s²、rad/s、N·s、kg·m/s、V/m、T、Wb、eV、MeV 等。题目由 AI 撰写后，另有一轮独立审校逐题重算并改了约 70 处（解析写错、缺条件导致答案不唯一、干扰项凑数、先修边缺漏等）；没有教师审核。
-- 页面：首页物理多了 6 张高中册卡片（必修一至选必三）；知识图谱「物理」的年级筛选和学段 tab（全部 / 初中 / 高中）可选到高中各册；诊断的「按年级整体诊断」可选必修一至选必三，URL 如 `diagnose/?subject=physics&grade=必修一`、`grade=选必二`。`sw.js` 的缓存版本升到 v2（数据变了）。
+- 页面：首页物理多了 6 张高中册卡片（必修一至选必三）；知识图谱「物理」的年级筛选和学段 tab（全部 / 初中 / 高中）可选到高中各册；诊断的「按年级整体诊断」可选必修一至选必三，URL 如 `diagnose/?subject=physics&grade=必修一`、`grade=选必二`。
 - 生成脚本：`phy_hs_plan.py`（知识点 key、名称、章节、分工）、`phy_hs_std.py`（课标条文）、`phy_hs_lib.py`（登记函数）、`phy_hs_a01.py`–`phy_hs_a11.py`（内容）、`phy_hs_check.py`（单个草稿文件的检查）、`phy_hs_build.py`（编译）、`phy_hs_doc.py`（生成映射文档）。**运行顺序**：`python3 scripts/phy_build.py`（初中 + 高中一起重建；`--junior-only` / `--senior-only` 只重建一部分，另一部分原样保留），再 `python3 scripts/phy_hs_doc.py`，然后 `python3 scripts/validate.py`。
 
-## 当前统计（`python3 scripts/validate.py` 实际输出，2026-10-23）
+## 统计快照（`python3 scripts/validate.py` 输出，2026-10-23；历史记录，最新规模见上文「仓库结构」）
 
 - 知识点总数约 **2615**（数学 **870** + 英语 **761** + 物理 **269** + 科学 **222** + 语文等；物理其中初中 92、高中 177），全部是正式知识点（`external: false`）。数学：小学 **284**，初中 **315**（初中 id 与名称未改），高中必修 **143**（`cnm_h001`–`cnm_h143`），高中选择性必修 **128**（`cnm_h144`–`cnm_h271`）。英语：小学 **275**，初中 **257**（`cne_j001`–`cne_j257`），高中 **259**（`cne_h001`–`cne_h259`）
 - 小学按年级：一年级 48（上 26 / 下 22），二年级 44（上 22 / 下 22），三年级 39（上 24 / 下 15），四年级 41（上 20 / 下 21），五年级 52（上 24 / 下 28），六年级 45（上 30 / 下 15）
@@ -520,16 +544,9 @@ screenshots/             首页、知识图谱与诊断页截图（01–05 诊�
 
 ## 诊断小工具（第四轮；第五轮改为每个知识点最多 2 题）
 
-`diagnose/` 是一个基于上述数据的静态、可离线的诊断页面：选一个目标知识点（或整个章节），按先修关系自适应出题（同一知识点连续答对默认 3 题才掌握并跳过全部祖先，开始页可选 2/3/5；答错则再出一道同级或更容易的确认题——确认题也错才算薄弱并回溯到先修，hard 先于 soft；确认题答对标为「不稳」，不回溯），给出薄弱的根因、不稳的知识点、按年级从低到高排列的学习路径（同一年级里先修在前）、相关课标条目原文，以及一张用 Cytoscape 画的路径图（文字列表仍在）。目标可以选择小学、初中、高中必修或选择性必修知识点；答错会继续问到更早的学段；每题作答后显示解析和参考答案；进度保存在 localStorage，可导出 JSON、打印，或生成分享图。核心算法与判题在 `diagnose/engine.js`（纯函数，浏览器与 Node 通用），由 `node tests/test_engine.js` 测试。**站内盲区汇总**：每次诊断结果会把薄弱 / 不稳记入本机（`cnmBlind.local.v1`），也可并入孩子档案记录；首页、诊断开始页和结果页、以及 `children/history.html`（盲区与历史）可按知识点或章一键再测。数据只留在浏览器，不上传。相关测试：`node tests/test_blindspots.js`。
+线上站点的诊断页（`/diagnose/`，源码在私有站点仓，不在本仓）是一个基于上述数据的静态、可离线的页面：选一个目标知识点（或整个章节），按先修关系自适应出题（同一知识点连续答对默认 3 题才掌握并跳过全部祖先，开始页可选 2/3/5；答错则再出一道同级或更容易的确认题——确认题也错才算薄弱并回溯到先修，hard 先于 soft；确认题答对标为「不稳」，不回溯），给出薄弱的根因、不稳的知识点、按年级从低到高排列的学习路径（同一年级里先修在前）、相关课标条目原文，以及一张用 Cytoscape 画的路径图（文字列表仍在）。目标可以选择小学、初中、高中必修或选择性必修知识点；答错会继续问到更早的学段；每题作答后显示解析和参考答案；进度保存在 localStorage，可导出 JSON、打印，或生成分享图。核心算法与判题是纯函数，浏览器与 Node 通用，测试随站点源码维护。**站内盲区汇总**：每次诊断结果会把薄弱 / 不稳记入本机（`cnmBlind.local.v1`），也可并入孩子档案记录；首页、诊断开始页和结果页、以及档案页的「盲区与历史」可按知识点或章一键再测。数据只留在浏览器，不上传。演示入口：[配方法演示](https://math.pansgo.com/diagnose/?target=cnm_221&demo=1)。
 
-```bash
-python3 -m http.server 8000
-# 访问 http://localhost:8000/diagnose/            （演示：?target=cnm_221&demo=1）
-node tests/test_engine.js                          # 引擎测试
-node scripts/screenshot.js                         # 冒烟测试 + 截图（需要本机 Chrome）
-```
-
-算法说明、判题规则、URL 参数与局限见 [diagnose/README.md](diagnose/README.md)。首页、知识图谱和诊断页顶部都有同一套导航。每个知识点最多问 2 题，诊断结果只是线索。
+算法说明、判题规则和 URL 参数随站点源码维护，本仓不含。首页、知识图谱和诊断页顶部都有同一套导航。每个知识点最多问 2 题，诊断结果只是线索。
 
 ## 小学知识点（2026-10-19）
 
@@ -650,25 +667,17 @@ python3 scripts/validate.py
 
 检查：JSON 合法；id 唯一；必填字段齐全；`domain`/`type`/`strength` 取值合法；每条边的两端都存在；无自环、无重复边；无环（有环时打印环路）；每个非外部知识点要么有先修边要么有 `root_reason`；没有完全孤立的节点。并打印按领域、按册次的数量以及边数、hard/soft 数。第三轮新增：`standards` 引用的课标 id 必须存在于 `data/cn-curriculum-standards.json`，`confidence` 只能是 `exact`/`inferred`，课标文件自身的 id 格式与编号连续性；并打印课标条目数、映射覆盖率；正式知识点 `standards` 为空时只打印警告（至多 30 个），设置 `STRICT_STANDARDS=1` 才视为错误。全部通过时输出 `VALIDATION PASSED` 且退出码为 0，否则输出错误并以非 0 退出。
 
-## 打开网页
+## 线上站点功能说明
 
-页面通过 `fetch` 读取 `data/*.json`，浏览器不允许直接用 `file://` 打开，请在本目录启动一个静态服务器：
+线上站点 [math.pansgo.com](https://math.pansgo.com/) 由私有仓的网站源码构建，构建前会同步本仓 `data/`；页面源码不在本仓，本仓也不提供本地预览。下面记录站点的功能与 URL 约定，数据变动时可对照。
 
-```bash
-python3 -m http.server 8000
-# 首页 http://localhost:8000/
-# 英语（三年级到高中） http://localhost:8000/?subject=english
-# 知识图谱 http://localhost:8000/explore/
-# 诊断 http://localhost:8000/diagnose/
-```
+三个页面共用同一套配色（柔和青绿主色，小学青绿、初中蓝、高中品红三种辅助色，跟随系统深色模式）和顶部导航：数学 / 英语、首页、知识图谱、诊断、关于（GitHub）。图形库和二维码库随站点本地分发，页面不从外网 CDN 加载脚本、样式或字体。旧链接 `#cnm_219`、`#cnm_p001`、`#cnm_ext_002` 写在网站根路径上时，会转到知识图谱的同一哈希。`#cne_…` 转到 `explore/?subject=english#cne_…`。`#cnh_…` 转到 `explore/?subject=history#cnh_…`。`#cng_…` 转到 `explore/?subject=geography#cng_…`。`#cnb_…` 转到 `explore/?subject=biology#cnb_…`。`#cnk_…` 转到 `explore/?subject=chemistry#cnk_…`。`#cnc_…`（含小学 `cnc_p`、初中 `cnc_j` 和高中 `cnc_h`）转到 `explore/?subject=chinese#…`。
 
-三个页面共用 `assets/site.css`（柔和青绿主色，小学青绿、初中蓝、高中品红三种辅助色，跟随系统深色模式）和顶部导航：数学 / 英语、首页、知识图谱、诊断、关于（GitHub）。图形库和二维码库放在 `assets/vendor/`，页面不从外网 CDN 加载脚本、样式或字体。旧链接 `#cnm_219`、`#cnm_p001`、`#cnm_ext_002` 写在网站根路径上时，会转到知识图谱的同一哈希。`#cne_…` 转到 `explore/?subject=english#cne_…`。`#cnh_…` 转到 `explore/?subject=history#cnh_…`。`#cng_…` 转到 `explore/?subject=geography#cng_…`。`#cnb_…` 转到 `explore/?subject=biology#cnb_…`。`#cnk_…` 转到 `explore/?subject=chemistry#cnk_…`。`#cnc_…`（含小学 `cnc_p`、初中 `cnc_j` 和高中 `cnc_h`）转到 `explore/?subject=chinese#…`。
+**首页**：一句话介绍；三步（选知识点 → 自适应答题 → 找到根因和学习路径）；四张统计卡（知识点、先修边、题目、课标条目，打开时按当前学科从数据文件计数，不写死；默认是数学）；「开始诊断」「浏览知识图谱」；数学是一至九年级入口，以及高一（必修第一册）、高二（必修第二册）、选必一、选必二、选必三（链到 `explore/?grade=`）。高中卡片不写「上 / 下」。英语首页是三年级到高中（文案写「英语：三年级到高中」），链到 `explore/?subject=english&grade=`。九年级英语卡片写「全一册」。高中英语卡片是必修一（必修第一册）到必修三，以及选必一（选择性必修第一册）到选必四，不写「高一」到「高四」，也不写「上 / 下」。数学首页仍是 14 张卡片，统计卡默认只计数学。历史首页是七至九年级（文案写「历史：初中七至九年级 · 统编版」），链到 `explore/?subject=history&grade=`，不出现小学和高中卡片。地理首页是七至八年级（文案写「地理：初中七至八年级 · 人教版」），链到 `explore/?subject=geography&grade=`，不出现小学、九年级和高中卡片。生物首页是七至八年级（文案写「生物：初中七至八年级 · 人教版」），链到 `explore/?subject=biology&grade=`，不出现小学、九年级和高中卡片。化学首页是九年级上、下册、必修第一、二册和选择性必修第一、二、三册（文案写「化学：初中九年级 · 高中必修第一、二册和选择性必修第一、二、三册 · 人教版」），链到 `explore/?subject=chemistry&grade=`，不出现小学和七八年级卡片；高中卡片写「必修一」「必修二」「选必一」「选必二」「选必三」，不写「十年级」「十一年级」「十二年级」「十三年级」「十四年级」「必修三」或「高一」「高二」。语文首页是一至九年级，以及高中必修上、必修下、选必上、选必中、选必下（文案写「语文：小学一至六年级 · 初中七至九年级 · 高中必修上、下与选必上、中、下 · 统编版」），链到 `explore/?subject=chinese&grade=`，小学和初中上下册都有，高中卡片不写「高一」或「必修一」。顶部「儿童智商测试」横幅、首页卡片和诊断结果页入口不随学科改变。
 
-**首页**（`index.html`）：一句话介绍；三步（选知识点 → 自适应答题 → 找到根因和学习路径）；四张统计卡（知识点、先修边、题目、课标条目，打开时按当前学科从数据文件计数，不写死；默认是数学）；「开始诊断」「浏览知识图谱」；数学是一至九年级入口，以及高一（必修第一册）、高二（必修第二册）、选必一、选必二、选必三（链到 `explore/?grade=`）。高中卡片不写「上 / 下」。英语首页是三年级到高中（文案写「英语：三年级到高中」），链到 `explore/?subject=english&grade=`。九年级英语卡片写「全一册」。高中英语卡片是必修一（必修第一册）到必修三，以及选必一（选择性必修第一册）到选必四，不写「高一」到「高四」，也不写「上 / 下」。数学首页仍是 14 张卡片，统计卡默认只计数学。历史首页是七至九年级（文案写「历史：初中七至九年级 · 统编版」），链到 `explore/?subject=history&grade=`，不出现小学和高中卡片。地理首页是七至八年级（文案写「地理：初中七至八年级 · 人教版」），链到 `explore/?subject=geography&grade=`，不出现小学、九年级和高中卡片。生物首页是七至八年级（文案写「生物：初中七至八年级 · 人教版」），链到 `explore/?subject=biology&grade=`，不出现小学、九年级和高中卡片。化学首页是九年级上、下册、必修第一、二册和选择性必修第一、二、三册（文案写「化学：初中九年级 · 高中必修第一、二册和选择性必修第一、二、三册 · 人教版」），链到 `explore/?subject=chemistry&grade=`，不出现小学和七八年级卡片；高中卡片写「必修一」「必修二」「选必一」「选必二」「选必三」，不写「十年级」「十一年级」「十二年级」「十三年级」「十四年级」「必修三」或「高一」「高二」。语文首页是一至九年级，以及高中必修上、必修下、选必上、选必中、选必下（文案写「语文：小学一至六年级 · 初中七至九年级 · 高中必修上、下与选必上、中、下 · 统编版」），链到 `explore/?subject=chinese&grade=`，小学和初中上下册都有，高中卡片不写「高一」或「必修一」。顶部「儿童智商测试」横幅、首页卡片和诊断结果页入口不随学科改变。
+**知识图谱**：左侧搜索，以及学段（全部 / 小学 / 初中 / 高中）/ 年级 / 领域筛选，结果按年级·册·章折叠。英语页的学段是全部 / 小学 / 初中 / 高中，年级从三年级到九年级，再加上必修第一册到必修第三册、选择性必修第一册到第四册（不出现「高一」）。领域是语音、词汇、语法、日常表达、读写。选「小学」时清掉初中和高中，选「初中」时清掉小学和高中，选「高中」时只留必修和选择性必修。语文页的学段是全部 / 小学 / 初中 / 高中，年级从一年级到九年级，再加上必修上、必修下、选必上、选必中、选必下（不写成必修一或高一）；领域在拼音、识字写字、词语、句子、阅读理解、古诗文积累、习作基础之外，还有文言文阅读和名著阅读。手机上目录收在顶部抽屉里。中间用 Cytoscape + dagre 只画**当前知识点的局部图**：默认向上 2 层先修（可改 1 / 2 / 3 层或全部祖先），向下 1 层。硬先修实线、软先修虚线，小学、初中、高中节点颜色不同（图例里写明），点节点即可换选中项，可缩放、拖动和「适配画面」。选「全部」时如果超过 40 个点，会先按年级收起，点「共 N 个，点此展开全部」再画每一个点，并对准当前知识点（避免缩成无法辨认的全图）。不会默认铺开全部知识点。名称过长在图上省略，悬停或点按可看全名。右侧（窄屏在图下方）是详情：名称、年级册章、领域、类型、描述、掌握标准、课标条目、样题（答案折叠）、先修列表，以及「被哪些知识点依赖」。大按钮「诊断这个知识点」进入 `diagnose/?target=<id>`；英语会带上 `subject=english`。
 
-**知识图谱**（`explore/`）：左侧搜索，以及学段（全部 / 小学 / 初中 / 高中）/ 年级 / 领域筛选，结果按年级·册·章折叠。英语页的学段是全部 / 小学 / 初中 / 高中，年级从三年级到九年级，再加上必修第一册到必修第三册、选择性必修第一册到第四册（不出现「高一」）。领域是语音、词汇、语法、日常表达、读写。选「小学」时清掉初中和高中，选「初中」时清掉小学和高中，选「高中」时只留必修和选择性必修。语文页的学段是全部 / 小学 / 初中 / 高中，年级从一年级到九年级，再加上必修上、必修下、选必上、选必中、选必下（不写成必修一或高一）；领域在拼音、识字写字、词语、句子、阅读理解、古诗文积累、习作基础之外，还有文言文阅读和名著阅读。手机上目录收在顶部抽屉里。中间用 Cytoscape + dagre 只画**当前知识点的局部图**：默认向上 2 层先修（可改 1 / 2 / 3 层或全部祖先），向下 1 层。硬先修实线、软先修虚线，小学、初中、高中节点颜色不同（图例里写明），点节点即可换选中项，可缩放、拖动和「适配画面」。选「全部」时如果超过 40 个点，会先按年级收起，点「共 N 个，点此展开全部」再画每一个点，并对准当前知识点（避免缩成无法辨认的全图）。不会默认铺开全部知识点。名称过长在图上省略，悬停或点按可看全名。右侧（窄屏在图下方）是详情：名称、年级册章、领域、类型、描述、掌握标准、课标条目、样题（答案折叠）、先修列表，以及「被哪些知识点依赖」。大按钮「诊断这个知识点」进入 `diagnose/?target=<id>`；英语会带上 `subject=english`。
-
-**诊断**（`diagnose/`）：开始页先按学段筛选并搜索，册章列表仍在，但默认折叠。数学按年级整体诊断包含一至九年级，以及高一、高二、选必一、选必二、选必三。高中不提供上下册：必修两册的范围按钮写「必修整册」，选择性必修写「整册」。URL 用 `grade=高一`、`grade=高二`、`grade=选必二`（也接受 `高一必修`、`选择性必修第二册` 这类写法）。英语是 `?subject=english`，年级从三年级到九年级，再加上必修一到必修三、选必一到选必四。整册例如 `grade=四上`、`grade=八上`、`grade=选必一`（也接受 `选择性必修第一册`、`必修第一册`）。九年级英语只有全一册，范围按钮是「全一册」，URL 用 `grade=九全`。高中英语不提供上下册：必修三册的范围按钮是「必修整册」，选择性必修是「整册」。不带 `subject` 时 `grade=必修一` 或 `选择性必修第四册` 不会选到数学。语文是 `?subject=chinese`，年级从一年级到九年级，再加上必修上、必修下、选必上、选必中、选必下，上下册都有，学段是全部 / 小学 / 初中 / 高中。整册例如 `grade=一上`、`grade=七上`、`grade=必修上`。诊断进度仍用 `cncDiagnose.session.v2`，小学未完成的会话可以继续。数学和英语的诊断进度分开存在本机（`cnmDiagnose.session.v2` 与 `cneDiagnose.session.v2`），题量设置仍共用。答题卡片和选项加大（触控不小于 44px）。结果页把根因、不稳和学习路径分成卡片。路径图用与知识图谱相同的 Cytoscape：小学 / 初中 / 高中分色，硬先修实线，软先修虚线，薄弱根因红框标出；文字版路径列表仍在。导出 JSON 和打印保留。结果页可以「生成分享图」：在浏览器里用 canvas 画一张 1080×1920 的竖图，写上站名、学科和诊断范围、已掌握 / 不稳 / 薄弱 / 未测、最薄弱的 2–3 章或知识点、1–2 个根因和日期。底部二维码指向 `https://math.pansgo.com/?from=share`，旁边是「扫码打开本站」。图上没有孩子姓名，也不涉及付费。桌面端弹层里下载，手机端长按图片保存。二维码用仓库里的 qrcode-generator 2.0.4（MIT）本地绘制。图例仍是小学、初中、高中三色，选择性必修和必修同用高中色；英语页同样保留这三色，高中英语用高中色。分享图写上学科（英语）和诊断范围（例如选必一），不把英语册次写成高一。
+**诊断**：开始页先按学段筛选并搜索，册章列表仍在，但默认折叠。数学按年级整体诊断包含一至九年级，以及高一、高二、选必一、选必二、选必三。高中不提供上下册：必修两册的范围按钮写「必修整册」，选择性必修写「整册」。URL 用 `grade=高一`、`grade=高二`、`grade=选必二`（也接受 `高一必修`、`选择性必修第二册` 这类写法）。英语是 `?subject=english`，年级从三年级到九年级，再加上必修一到必修三、选必一到选必四。整册例如 `grade=四上`、`grade=八上`、`grade=选必一`（也接受 `选择性必修第一册`、`必修第一册`）。九年级英语只有全一册，范围按钮是「全一册」，URL 用 `grade=九全`。高中英语不提供上下册：必修三册的范围按钮是「必修整册」，选择性必修是「整册」。不带 `subject` 时 `grade=必修一` 或 `选择性必修第四册` 不会选到数学。语文是 `?subject=chinese`，年级从一年级到九年级，再加上必修上、必修下、选必上、选必中、选必下，上下册都有，学段是全部 / 小学 / 初中 / 高中。整册例如 `grade=一上`、`grade=七上`、`grade=必修上`。诊断进度仍用 `cncDiagnose.session.v2`，小学未完成的会话可以继续。数学和英语的诊断进度分开存在本机（`cnmDiagnose.session.v2` 与 `cneDiagnose.session.v2`），题量设置仍共用。答题卡片和选项加大（触控不小于 44px）。结果页把根因、不稳和学习路径分成卡片。路径图用与知识图谱相同的 Cytoscape：小学 / 初中 / 高中分色，硬先修实线，软先修虚线，薄弱根因红框标出；文字版路径列表仍在。导出 JSON 和打印保留。结果页可以「生成分享图」：在浏览器里用 canvas 画一张 1080×1920 的竖图，写上站名、学科和诊断范围、已掌握 / 不稳 / 薄弱 / 未测、最薄弱的 2–3 章或知识点、1–2 个根因和日期。底部二维码指向 `https://math.pansgo.com/?from=share`，旁边是「扫码打开本站」。图上没有孩子姓名，也不涉及付费。桌面端弹层里下载，手机端长按图片保存。二维码用 qrcode-generator 2.0.4（MIT）在浏览器本地绘制。图例仍是小学、初中、高中三色，选择性必修和必修同用高中色；英语页同样保留这三色，高中英语用高中色。分享图写上学科（英语）和诊断范围（例如选必一），不把英语册次写成高一。
 
 ![数学诊断分享图：五年级上册](screenshots/38-share-math.png)
 
@@ -691,21 +700,13 @@ python3 -m http.server 8000
 3. 用真实学生答题数据校准诊断题与先修强度。
 
 
-## 部署（Cloudflare Pages）
+## 站点部署
 
-生产站点：https://math.pansgo.com/ （Pages 项目 `cn-math-taxonomy`，备用 https://cn-math-taxonomy.pages.dev/）。
-
-本仓库更新后，在本机执行一次即可重新发布静态页：
-
-```bash
-./scripts/deploy-cf.sh
-```
-
-脚本会打包 `index.html`、`sw.js`、`manifest.webmanifest`、`assets/`（含图形库和图标）、`explore/`、`diagnose/`、`children/`、`data/` 中页面用到的文件，部署到 Cloudflare Pages 的 `main` 生产分支。不改动 VPS / Caddy。截图和出题批次不会打进部署包。
+生产站点：https://math.pansgo.com/ （备用 https://cn-math-taxonomy.pages.dev/）。站点由私有仓的网站源码构建并部署到 Cloudflare Pages；本仓不含部署脚本，也不部署。
 
 ## 许可证 / License
 
-本项目（知识图谱数据、题库、诊断工具代码及文档）采用 [知识共享 署名-非商业性使用 4.0 国际许可协议（CC BY-NC 4.0）](https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans) 授权，完整条款见 [LICENSE](LICENSE)。`assets/vendor/` 里的 Cytoscape、dagre、cytoscape-dagre 仍是各自的 MIT 许可证（见 `assets/vendor/VENDOR.md` 和同目录的 LICENSE 文件），不改成 CC BY-NC。
+本仓库发布的内容（知识图谱数据、题库、数据脚本及文档）采用 [知识共享 署名-非商业性使用 4.0 国际许可协议（CC BY-NC 4.0）](https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans) 授权，完整条款见 [LICENSE](LICENSE)。
 
 - ✅ 可以免费用于个人学习、教学、研究，可以修改和再分发，但需署名并注明来源（本仓库链接）。
 - ❌ 不得用于商业用途（包括但不限于付费课程、付费 App、机构收费服务、售卖题库等）。
