@@ -7407,6 +7407,264 @@
     ]
   },
   {
+    "id": "cnm_p286",
+    "name": "整时、半时",
+    "domain": "综合与实践",
+    "grade": 1,
+    "semester": "下",
+    "chapter": "一年级下册 时间的初步认识",
+    "type": "conceptual",
+    "description": "认识钟面上的时针和分针，知道分针指向 12 是整时、分针指向 6 是半时，能读出整时和半时。",
+    "mastery_criteria": [
+      "能分清钟面上短的是时针、长的是分针",
+      "能读出整时和半时（如 3 时、3 时半）"
+    ],
+    "diagnostic_question": {
+      "question": "钟面上，分针指向 12，时针指向 3。这是几时？",
+      "answer": "3时"
+    },
+    "external": false,
+    "standards": [
+      {
+        "id": "cms-2022:1.IP.03",
+        "confidence": "exact"
+      }
+    ]
+  },
+  {
+    "id": "cnm_p287",
+    "name": "读钟面上的时刻",
+    "domain": "综合与实践",
+    "grade": 2,
+    "semester": "下",
+    "chapter": "二年级下册 时间在哪里",
+    "type": "procedural",
+    "description": "能读出钟面上接近整时、半时的时刻和分针指在任意位置的时刻，知道分针每走 1 大格是 5 分。",
+    "mastery_criteria": [
+      "知道分针每走 1 大格是 5 分",
+      "能根据时针和分针的位置读出几时几分"
+    ],
+    "diagnostic_question": {
+      "question": "钟面上，分针指向 3，时针刚过 2。这是 2 时几分？",
+      "answer": "15"
+    },
+    "external": false,
+    "standards": [
+      {
+        "id": "cms-2022:1.IP.03",
+        "confidence": "exact"
+      }
+    ]
+  },
+  {
+    "id": "cnm_p288",
+    "name": "数墙",
+    "domain": "数与代数",
+    "grade": 1,
+    "semester": "下",
+    "chapter": "一年级下册 数学广场",
+    "type": "reasoning",
+    "description": "数墙里上面一块的数等于下面相邻两块的数之和，能在 20 以内据此求出未知的一块。",
+    "mastery_criteria": [
+      "知道上面一块等于下面相邻两块的和",
+      "能用加法或减法求出数墙里的未知数"
+    ],
+    "diagnostic_question": {
+      "question": "数墙里，下面相邻的两块分别是 6 和 7，它们上面的那一块是几？",
+      "answer": "13"
+    },
+    "external": false,
+    "standards": [
+      {
+        "id": "cms-2022:1.NA.03",
+        "confidence": "inferred",
+        "note": "数学广场的游戏载体，课标无专门条款；数墙靠加减互逆求未知数，取运算关系一条。"
+      }
+    ]
+  },
+  {
+    "id": "cnm_p289",
+    "name": "组算式",
+    "domain": "数与代数",
+    "grade": 1,
+    "semester": "下",
+    "chapter": "一年级下册 20 以内数的加减法（二）",
+    "type": "procedural",
+    "description": "用一组三个数（如 6、7、13）写出两道加法算式和两道减法算式，知道加法与减法之间的关系。",
+    "mastery_criteria": [
+      "能用一组三个数写出两道加法算式",
+      "能用同一组三个数写出两道减法算式"
+    ],
+    "diagnostic_question": {
+      "question": "用 5、8、13 写减法算式，下面哪个是对的？",
+      "answer": "13－5＝8"
+    },
+    "external": false,
+    "standards": [
+      {
+        "id": "cms-2022:1.NA.03",
+        "confidence": "exact"
+      }
+    ]
+  },
+  {
+    "id": "cnm_p290",
+    "name": "20以内加减法表的整理",
+    "domain": "数与代数",
+    "grade": 1,
+    "semester": "上",
+    "chapter": "一年级上册 20 以内数的加减法（一）",
+    "type": "reasoning",
+    "description": "把 20 以内的进位加法整理成加法表，发现一个加数加 1、得数也加 1 等规律，并能借助加减互逆整理出相应的减法算式。",
+    "mastery_criteria": [
+      "能把同类的进位加法按顺序排成一张表",
+      "能说出表里得数的变化规律",
+      "能由加法表想出对应的减法算式"
+    ],
+    "diagnostic_question": {
+      "question": "9＋2＝11，9＋3＝12，9＋4＝13。每往后一道，得数怎样变？",
+      "answer": "多 1"
+    },
+    "external": false,
+    "standards": [
+      {
+        "id": "cms-2022:1.NA.04",
+        "confidence": "exact"
+      }
+    ]
+  },
+  {
+    "id": "cnm_p291",
+    "name": "长短、高矮的比较",
+    "domain": "图形与几何",
+    "grade": 1,
+    "semester": "下",
+    "chapter": "一年级下册 长度的比较与测量",
+    "type": "conceptual",
+    "description": "能直接比较两个物体的长短、高矮（把一端对齐），知道不能直接比较时可借助第三个物体（如绳子、小棒）间接比较。",
+    "mastery_criteria": [
+      "知道比长短时要把物体的一端对齐",
+      "能借助绳子或小棒等参照物间接比较"
+    ],
+    "diagnostic_question": {
+      "question": "比较两支铅笔的长短时，要怎样放？",
+      "answer": "一端对齐"
+    },
+    "external": false,
+    "standards": [
+      {
+        "id": "cms-2022:1.GG.02",
+        "confidence": "inferred",
+        "note": "课标只写到认识长度单位和测量；直接、间接比较是建立统一单位前的铺垫，取最接近的一条。"
+      }
+    ]
+  },
+  {
+    "id": "cnm_p292",
+    "name": "20以内数的顺序",
+    "domain": "数与代数",
+    "grade": 1,
+    "semester": "上",
+    "chapter": "一年级上册 20 以内的数",
+    "type": "conceptual",
+    "description": "知道 20 以内数的先后顺序，能说出一个数前面和后面的数，认识相邻的数，会按顺序数和倒着数。",
+    "mastery_criteria": [
+      "能说出 20 以内任意数前面和后面的数",
+      "能把 20 以内的数按从小到大排列"
+    ],
+    "diagnostic_question": {
+      "question": "17 的前面一个数是几？",
+      "answer": "16"
+    },
+    "external": false,
+    "standards": [
+      {
+        "id": "cms-2022:1.NA.02",
+        "confidence": "inferred",
+        "note": "课标条款在比较数的大小；数序是比较大小的基础，沿用「数的顺序、比较大小」的取法。"
+      }
+    ]
+  },
+  {
+    "id": "cnm_p293",
+    "name": "幻方",
+    "domain": "数与代数",
+    "grade": 2,
+    "semester": "上",
+    "chapter": "二年级上册 数学广场",
+    "type": "reasoning",
+    "description": "知道三阶幻方每行、每列、每条对角线上三个数的和都相等，能根据已知数填出空格。",
+    "mastery_criteria": [
+      "知道三阶幻方每行、每列和两条对角线的和相等",
+      "能先求出一行的和，再算出空格里的数"
+    ],
+    "diagnostic_question": {
+      "question": "三阶幻方的第一行是 8、1、6。这一行三个数的和是多少？",
+      "answer": "15"
+    },
+    "external": false,
+    "standards": [
+      {
+        "id": "cms-2022:1.NA.06",
+        "confidence": "inferred",
+        "note": "数学广场的游戏载体，课标无专门条款；幻方靠加减运算与推理，取运算能力和推理意识一条。"
+      }
+    ]
+  },
+  {
+    "id": "cnm_p294",
+    "name": "树状算图与正推逆推",
+    "domain": "数与代数",
+    "grade": 4,
+    "semester": "上",
+    "chapter": "四年级上册 整数的四则运算与应用题",
+    "type": "application",
+    "description": "会用树状算图表示一个数连续经过几步运算的过程，会从起点正着推算、从结果倒着推算（逆推），并能把文字叙述的计算题列成算式。",
+    "mastery_criteria": [
+      "能看懂树状算图，按图写出算式并算出结果",
+      "能用逆推（倒着算）求出原来的数",
+      "能把文字叙述的计算题列成算式"
+    ],
+    "diagnostic_question": {
+      "question": "树状算图：先把 8 与 7 相加，再把和乘 3。结果是多少？",
+      "answer": "45"
+    },
+    "external": false,
+    "standards": [
+      {
+        "id": "cms-2022:2.NA.03",
+        "confidence": "inferred",
+        "note": "课标条款是整数四则混合运算；树状算图、逆推是表示和求解多步运算的方法，取最接近的一条。"
+      }
+    ]
+  },
+  {
+    "id": "cnm_p295",
+    "name": "自然数",
+    "domain": "数与代数",
+    "grade": 5,
+    "semester": "上",
+    "chapter": "五年级上册 因数与倍数",
+    "type": "conceptual",
+    "description": "知道 0、1、2、3…… 都是自然数，0 也是自然数，0 是最小的自然数，没有最大的自然数。",
+    "mastery_criteria": [
+      "知道 0 是最小的自然数",
+      "知道没有最大的自然数，能判断一个数是不是自然数"
+    ],
+    "diagnostic_question": {
+      "question": "下面哪个数不是自然数？",
+      "answer": "2.5"
+    },
+    "external": false,
+    "standards": [
+      {
+        "id": "cms-2022:3.NA.01",
+        "confidence": "inferred",
+        "note": "课标没有单列自然数条款；自然数是因数、倍数、奇偶、质合数的讨论范围，取该单元对应的一条。"
+      }
+    ]
+  },
+  {
     "id": "cnm_p199",
     "name": "扇形统计图",
     "domain": "统计与概率",

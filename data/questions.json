@@ -215208,6 +215208,616 @@
     "topicId": "cnm_p285"
   },
   {
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "钟面上，分针指向 12，时针指向 3。这是几时？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "3时"
+      },
+      {
+        "key": "B",
+        "text": "12时"
+      },
+      {
+        "key": "C",
+        "text": "3时半"
+      }
+    ],
+    "answer": "A",
+    "explanation": "分针指向 12 是整时，时针指向几就是几时，所以是 3 时。",
+    "verify": "'3时'",
+    "id": "cnm_p286_q1",
+    "topicId": "cnm_p286"
+  },
+  {
+    "difficulty": "basic",
+    "type": "numeric",
+    "prompt": "钟面上，分针指向 12，时针指向 8。这是几时？",
+    "answer": "8",
+    "explanation": "分针指向 12 是整时，时针指向 8，就是 8 时。",
+    "verify": "8",
+    "id": "cnm_p286_q2",
+    "topicId": "cnm_p286"
+  },
+  {
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "钟面上，分针指向 6，时针指在 4 和 5 的正中间。这是几时？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "5时半"
+      },
+      {
+        "key": "B",
+        "text": "4时半"
+      },
+      {
+        "key": "C",
+        "text": "6时"
+      }
+    ],
+    "answer": "B",
+    "explanation": "分针指向 6 是半时；时针刚过 4、还没到 5，所以是 4 时半。",
+    "verify": "'4时半'",
+    "id": "cnm_p286_q3",
+    "topicId": "cnm_p286"
+  },
+  {
+    "difficulty": "challenge",
+    "type": "numeric",
+    "prompt": "小明 3 时整放学，过 2 小时后吃晚饭。吃晚饭时，分针指向 12，时针指向几？",
+    "answer": "5",
+    "explanation": "3 时过 2 小时是 5 时，整时分针指向 12，时针指向 5。",
+    "verify": "3+2",
+    "id": "cnm_p286_q4",
+    "topicId": "cnm_p286"
+  },
+  {
+    "difficulty": "basic",
+    "type": "numeric",
+    "prompt": "钟面上，分针指向 3，时针刚过 2。这是 2 时几分？",
+    "answer": "15",
+    "explanation": "分针指向 3，是 3 个大格，3×5＝15（分），所以是 2 时 15 分。",
+    "verify": "3*5",
+    "id": "cnm_p287_q1",
+    "topicId": "cnm_p287"
+  },
+  {
+    "difficulty": "basic",
+    "type": "numeric",
+    "prompt": "钟面上，分针指向 8。这是几分？",
+    "answer": "40",
+    "explanation": "分针指向 8，是 8 个大格，8×5＝40（分）。",
+    "verify": "8*5",
+    "id": "cnm_p287_q2",
+    "topicId": "cnm_p287"
+  },
+  {
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "钟面上，时针在 5 和 6 之间，分针指向 9。这是几时几分？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "5时9分"
+      },
+      {
+        "key": "B",
+        "text": "5时45分"
+      },
+      {
+        "key": "C",
+        "text": "6时45分"
+      }
+    ],
+    "answer": "B",
+    "explanation": "分针指向 9 是 9×5＝45 分；时针还没到 6，所以是 5 时 45 分。",
+    "verify": "'5时45分'",
+    "id": "cnm_p287_q3",
+    "topicId": "cnm_p287"
+  },
+  {
+    "difficulty": "challenge",
+    "type": "numeric",
+    "prompt": "现在是 8 时 50 分。再过 10 分钟，时针指向几？",
+    "answer": "9",
+    "explanation": "8 时 50 分再过 10 分钟是 9 时整，时针指向 9。",
+    "verify": "8+1",
+    "id": "cnm_p287_q4",
+    "topicId": "cnm_p287"
+  },
+  {
+    "difficulty": "basic",
+    "type": "numeric",
+    "prompt": "数墙里，下面相邻的两块分别是 6 和 7，它们上面的那一块是几？",
+    "answer": "13",
+    "explanation": "上面一块等于下面两块的和，6＋7＝13。",
+    "verify": "6+7",
+    "id": "cnm_p288_q1",
+    "topicId": "cnm_p288"
+  },
+  {
+    "difficulty": "basic",
+    "type": "numeric",
+    "prompt": "数墙里，上面一块是 15，下面左边一块是 8。下面右边那一块是几？",
+    "answer": "7",
+    "explanation": "上面一块是两块的和，已知和与一块，用减法：15－8＝7。",
+    "verify": "15-8",
+    "id": "cnm_p288_q2",
+    "topicId": "cnm_p288"
+  },
+  {
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "三层数墙，最下面一层从左到右是 3、5、4。最上面一块是几？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "12"
+      },
+      {
+        "key": "B",
+        "text": "17"
+      },
+      {
+        "key": "C",
+        "text": "8"
+      }
+    ],
+    "answer": "B",
+    "explanation": "中间一层是 3＋5＝8 和 5＋4＝9，最上面是 8＋9＝17。",
+    "verify": "(3+5)+(5+4)",
+    "id": "cnm_p288_q3",
+    "topicId": "cnm_p288"
+  },
+  {
+    "difficulty": "challenge",
+    "type": "numeric",
+    "prompt": "三层数墙，最下面一层从左到右是 □、4、6。中间一层左边一块等于 □ 加 4，右边一块等于 4 加 6。最上面一块是 19。□ 是几？",
+    "answer": "5",
+    "explanation": "右边一块是 4＋6＝10，左边一块是 19－10＝9，□＝9－4＝5。",
+    "verify": "19-(4+6)-4",
+    "id": "cnm_p288_q4",
+    "topicId": "cnm_p288"
+  },
+  {
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "用 5、8、13 写减法算式，下面哪个是对的？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "13－5＝8"
+      },
+      {
+        "key": "B",
+        "text": "5－8＝13"
+      },
+      {
+        "key": "C",
+        "text": "8－5＝13"
+      }
+    ],
+    "answer": "A",
+    "explanation": "最大的数 13 放在最前面当被减数，13－5＝8。",
+    "verify": "'13－5＝8'",
+    "id": "cnm_p289_q1",
+    "topicId": "cnm_p289"
+  },
+  {
+    "difficulty": "basic",
+    "type": "numeric",
+    "prompt": "6＋7＝13，那么 13－6＝□。□ 是几？",
+    "answer": "7",
+    "explanation": "13 是 6 和 7 的和，13 减去 6 得 7。",
+    "verify": "13-6",
+    "id": "cnm_p289_q2",
+    "topicId": "cnm_p289"
+  },
+  {
+    "difficulty": "standard",
+    "type": "numeric",
+    "prompt": "用 7、8、15 能写出 7＋8＝15，8＋7＝15，15－7＝8，还有一道减法算式是 15－□＝7。□ 是几？",
+    "answer": "8",
+    "explanation": "15－8＝7，所以 □ 是 8。",
+    "verify": "15-7",
+    "id": "cnm_p289_q3",
+    "topicId": "cnm_p289"
+  },
+  {
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "下面三组数中，哪一组不能写出两道加法和两道减法算式？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "4、9、13"
+      },
+      {
+        "key": "B",
+        "text": "6、7、12"
+      },
+      {
+        "key": "C",
+        "text": "5、8、13"
+      }
+    ],
+    "answer": "B",
+    "explanation": "6＋7＝13，不是 12，所以 6、7、12 写不出这样的算式；另外两组都满足：4＋9＝13，5＋8＝13。",
+    "verify": "'6、7、12'",
+    "id": "cnm_p289_q4",
+    "topicId": "cnm_p289"
+  },
+  {
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "9＋2＝11，9＋3＝12，9＋4＝13。每往后一道，得数怎样变？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "多 1"
+      },
+      {
+        "key": "B",
+        "text": "少 1"
+      },
+      {
+        "key": "C",
+        "text": "不变"
+      }
+    ],
+    "answer": "A",
+    "explanation": "第一个加数不变，第二个加数每次多 1，得数也每次多 1。",
+    "verify": "'多 1'",
+    "id": "cnm_p290_q1",
+    "topicId": "cnm_p290"
+  },
+  {
+    "difficulty": "basic",
+    "type": "numeric",
+    "prompt": "按规律填一填：9＋5＝14，9＋6＝15，9＋7＝□。□ 是几？",
+    "answer": "16",
+    "explanation": "第二个加数多 1，得数多 1，15 后面是 16。",
+    "verify": "9+7",
+    "id": "cnm_p290_q2",
+    "topicId": "cnm_p290"
+  },
+  {
+    "difficulty": "standard",
+    "type": "numeric",
+    "prompt": "从加法表里的 9＋7＝16 想一想，减法表里的 16－9＝□。□ 是几？",
+    "answer": "7",
+    "explanation": "加法算式 9＋7＝16 反过来想，16 减去 9 就得 7。",
+    "verify": "16-9",
+    "id": "cnm_p290_q3",
+    "topicId": "cnm_p290"
+  },
+  {
+    "difficulty": "challenge",
+    "type": "numeric",
+    "prompt": "和是 11 的加法算式，两个加数都是一位数。从 2＋9 开始，一个加数依次加 1，另一个加数依次少 1，一直写到 9＋2。一共写了几道算式？",
+    "answer": "8",
+    "explanation": "第一个加数从 2 到 9，一共是 9－2＋1＝8 个，所以写了 8 道。",
+    "verify": "9-2+1",
+    "id": "cnm_p290_q4",
+    "topicId": "cnm_p290"
+  },
+  {
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "比较两支铅笔的长短时，要怎样放？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "一端对齐"
+      },
+      {
+        "key": "B",
+        "text": "随便放"
+      },
+      {
+        "key": "C",
+        "text": "斜着交叉放"
+      }
+    ],
+    "answer": "A",
+    "explanation": "要比长短，必须让两支铅笔的一端对齐，再看另一端。",
+    "verify": "'一端对齐'",
+    "id": "cnm_p291_q1",
+    "topicId": "cnm_p291"
+  },
+  {
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "把两支铅笔的左端对齐，右边那支露出一截。哪支铅笔更长？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "没有露出一截的那支"
+      },
+      {
+        "key": "B",
+        "text": "一样长"
+      },
+      {
+        "key": "C",
+        "text": "露出一截的那支"
+      }
+    ],
+    "answer": "C",
+    "explanation": "左端对齐后，露出一截的那支更长。",
+    "verify": "'露出一截的那支'",
+    "id": "cnm_p291_q2",
+    "topicId": "cnm_p291"
+  },
+  {
+    "difficulty": "standard",
+    "type": "numeric",
+    "prompt": "小明、小华、小红比高矮：小明比小华高，小红比小明高。按从高到矮排，小华排第几？",
+    "answer": "3",
+    "explanation": "小红比小明高，小明比小华高，所以小红最高、小华最矮，小华排第 3。",
+    "verify": "3",
+    "id": "cnm_p291_q3",
+    "topicId": "cnm_p291"
+  },
+  {
+    "difficulty": "challenge",
+    "type": "choice",
+    "prompt": "要比较门口和窗户哪个更宽，但它们不能放在一起比。下面哪种办法可以比？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "看哪个看起来更大"
+      },
+      {
+        "key": "B",
+        "text": "用一根绳子量一量门口，再拿去和窗户比"
+      },
+      {
+        "key": "C",
+        "text": "把门口和窗户画得一样大"
+      }
+    ],
+    "answer": "B",
+    "explanation": "用绳子当参照物，先比出门口的宽度，再拿去和窗户比，这是间接比较。",
+    "verify": "'用一根绳子量一量门口，再拿去和窗户比'",
+    "id": "cnm_p291_q4",
+    "topicId": "cnm_p291"
+  },
+  {
+    "difficulty": "basic",
+    "type": "numeric",
+    "prompt": "17 的前面一个数是几？",
+    "answer": "16",
+    "explanation": "17 往前数一个是 16。",
+    "verify": "17-1",
+    "id": "cnm_p292_q1",
+    "topicId": "cnm_p292"
+  },
+  {
+    "difficulty": "basic",
+    "type": "numeric",
+    "prompt": "13 的后面一个数是几？",
+    "answer": "14",
+    "explanation": "13 往后数一个是 14。",
+    "verify": "13+1",
+    "id": "cnm_p292_q2",
+    "topicId": "cnm_p292"
+  },
+  {
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "把 9、15、12 按从小到大的顺序排，排在中间的是哪个数？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "15"
+      },
+      {
+        "key": "B",
+        "text": "12"
+      },
+      {
+        "key": "C",
+        "text": "9"
+      }
+    ],
+    "answer": "B",
+    "explanation": "从小到大是 9、12、15，排在中间的是 12。",
+    "verify": "'12'",
+    "id": "cnm_p292_q3",
+    "topicId": "cnm_p292"
+  },
+  {
+    "difficulty": "challenge",
+    "type": "numeric",
+    "prompt": "从 20 开始倒着数：20、19、18……。数到第 5 个数是几？",
+    "answer": "16",
+    "explanation": "第 1 个是 20，第 5 个是 20－4＝16。",
+    "verify": "20-4",
+    "id": "cnm_p292_q4",
+    "topicId": "cnm_p292"
+  },
+  {
+    "difficulty": "basic",
+    "type": "numeric",
+    "prompt": "三阶幻方的第一行是 8、1、6。这一行三个数的和是多少？",
+    "answer": "15",
+    "explanation": "8＋1＋6＝15。",
+    "verify": "8+1+6",
+    "id": "cnm_p293_q1",
+    "topicId": "cnm_p293"
+  },
+  {
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "三阶幻方每行、每列、每条对角线的和都是 15。第二行是 3、□、7，□ 应填哪个数？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "4"
+      },
+      {
+        "key": "B",
+        "text": "5"
+      },
+      {
+        "key": "C",
+        "text": "6"
+      }
+    ],
+    "answer": "B",
+    "explanation": "3＋□＋7＝15，□＝15－3－7＝5。",
+    "verify": "15-3-7",
+    "id": "cnm_p293_q2",
+    "topicId": "cnm_p293"
+  },
+  {
+    "difficulty": "standard",
+    "type": "numeric",
+    "prompt": "三阶幻方每行、每列、每条对角线的和都相等。第一行 8、1、6，第二行 3、5、7，第三行 4、□、2。□ 是几？",
+    "answer": "9",
+    "explanation": "每行的和是 8＋1＋6＝15，第三行 4＋□＋2＝15，□＝9。",
+    "verify": "(8+1+6)-4-2",
+    "id": "cnm_p293_q3",
+    "topicId": "cnm_p293"
+  },
+  {
+    "difficulty": "challenge",
+    "type": "numeric",
+    "prompt": "三阶幻方每行、每列、每条对角线的和都是 15，中间格是 5，左上角是 8。右下角是几？",
+    "answer": "2",
+    "explanation": "左上角、中间格、右下角在同一条对角线上，8＋5＋□＝15，□＝2。",
+    "verify": "15-8-5",
+    "id": "cnm_p293_q4",
+    "topicId": "cnm_p293"
+  },
+  {
+    "difficulty": "basic",
+    "type": "numeric",
+    "prompt": "树状算图：先把 8 与 7 相加，再把和乘 3。结果是多少？",
+    "answer": "45",
+    "explanation": "先算 8＋7＝15，再算 15×3＝45。",
+    "verify": "(8+7)*3",
+    "id": "cnm_p294_q1",
+    "topicId": "cnm_p294"
+  },
+  {
+    "difficulty": "basic",
+    "type": "numeric",
+    "prompt": "一个数加 12 后得 40，这个数是几？",
+    "answer": "28",
+    "explanation": "逆推：和减去加数，40－12＝28。",
+    "verify": "40-12",
+    "id": "cnm_p294_q2",
+    "topicId": "cnm_p294"
+  },
+  {
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "把「36 与 24 的和，除以 5」列成算式，下面哪个是对的？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "36＋24÷5"
+      },
+      {
+        "key": "B",
+        "text": "(36＋24)÷5"
+      },
+      {
+        "key": "C",
+        "text": "36÷5＋24"
+      }
+    ],
+    "answer": "B",
+    "explanation": "要先算 36 与 24 的和，所以和要加小括号，再除以 5。",
+    "verify": "'(36＋24)÷5'",
+    "id": "cnm_p294_q3",
+    "topicId": "cnm_p294"
+  },
+  {
+    "difficulty": "challenge",
+    "type": "numeric",
+    "prompt": "树状算图：一个数先加 8，再乘 3，最后减去 5，结果是 40。这个数是几？",
+    "answer": "7",
+    "explanation": "从结果倒着算：40＋5＝45，45÷3＝15，15－8＝7。",
+    "verify": "(40+5)/3-8",
+    "id": "cnm_p294_q4",
+    "topicId": "cnm_p294"
+  },
+  {
+    "difficulty": "basic",
+    "type": "choice",
+    "prompt": "下面哪个数不是自然数？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "0"
+      },
+      {
+        "key": "B",
+        "text": "12"
+      },
+      {
+        "key": "C",
+        "text": "2.5"
+      }
+    ],
+    "answer": "C",
+    "explanation": "自然数是 0、1、2、3……，2.5 是小数，不是自然数；0 是自然数。",
+    "verify": "'2.5'",
+    "id": "cnm_p295_q1",
+    "topicId": "cnm_p295"
+  },
+  {
+    "difficulty": "basic",
+    "type": "numeric",
+    "prompt": "最小的自然数是几？",
+    "answer": "0",
+    "explanation": "0 是自然数，也是最小的自然数。",
+    "verify": "0",
+    "id": "cnm_p295_q2",
+    "topicId": "cnm_p295"
+  },
+  {
+    "difficulty": "standard",
+    "type": "choice",
+    "prompt": "关于自然数，下面说法对的是哪一个？",
+    "choices": [
+      {
+        "key": "A",
+        "text": "1 是最小的自然数"
+      },
+      {
+        "key": "B",
+        "text": "没有最大的自然数"
+      },
+      {
+        "key": "C",
+        "text": "0 不是自然数"
+      }
+    ],
+    "answer": "B",
+    "explanation": "任何一个自然数加 1 还是自然数，所以没有最大的自然数；0 是最小的自然数。",
+    "verify": "'没有最大的自然数'",
+    "id": "cnm_p295_q3",
+    "topicId": "cnm_p295"
+  },
+  {
+    "difficulty": "challenge",
+    "type": "numeric",
+    "prompt": "比 5 小的自然数一共有几个？",
+    "answer": "5",
+    "explanation": "0、1、2、3、4，共 5 个，别漏掉 0。",
+    "verify": "5",
+    "id": "cnm_p295_q4",
+    "topicId": "cnm_p295"
+  },
+  {
     "id": "cne_p209_q1",
     "topicId": "cne_p209",
     "difficulty": "basic",

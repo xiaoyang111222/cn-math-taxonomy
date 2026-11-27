@@ -21990,6 +21990,126 @@
     "reason": "「作息时间表中的秘密」对学习「年历设计师」有帮助，但不会前者也可以开始学后者。"
   },
   {
+    "topicId": "cnm_p286",
+    "prerequisiteId": "cnm_p016",
+    "strength": "hard",
+    "reason": "学习「整时、半时」需要先掌握「11～20各数的认识」。"
+  },
+  {
+    "topicId": "cnm_p287",
+    "prerequisiteId": "cnm_p286",
+    "strength": "hard",
+    "reason": "学习「读钟面上的时刻」需要先掌握「整时、半时」。"
+  },
+  {
+    "topicId": "cnm_p287",
+    "prerequisiteId": "cnm_p028",
+    "strength": "soft",
+    "reason": "「数数、数的组成」对学习「读钟面上的时刻」有帮助，但不会前者也可以开始学后者。"
+  },
+  {
+    "topicId": "cnm_p061",
+    "prerequisiteId": "cnm_p287",
+    "strength": "hard",
+    "reason": "学习「认识时间」需要先掌握「读钟面上的时刻」。"
+  },
+  {
+    "topicId": "cnm_p288",
+    "prerequisiteId": "cnm_p251",
+    "strength": "hard",
+    "reason": "学习「数墙」需要先掌握「5、4、3、2加几」。"
+  },
+  {
+    "topicId": "cnm_p288",
+    "prerequisiteId": "cnm_p027",
+    "strength": "hard",
+    "reason": "学习「数墙」需要先掌握「十几减5、4、3、2」。"
+  },
+  {
+    "topicId": "cnm_p289",
+    "prerequisiteId": "cnm_p251",
+    "strength": "hard",
+    "reason": "学习「组算式」需要先掌握「5、4、3、2加几」。"
+  },
+  {
+    "topicId": "cnm_p289",
+    "prerequisiteId": "cnm_p027",
+    "strength": "hard",
+    "reason": "学习「组算式」需要先掌握「十几减5、4、3、2」。"
+  },
+  {
+    "topicId": "cnm_p290",
+    "prerequisiteId": "cnm_p251",
+    "strength": "hard",
+    "reason": "学习「20以内加减法表的整理」需要先掌握「5、4、3、2加几」。"
+  },
+  {
+    "topicId": "cnm_p290",
+    "prerequisiteId": "cnm_p252",
+    "strength": "hard",
+    "reason": "学习「20以内加减法表的整理」需要先掌握「逆向用加法解决问题」。"
+  },
+  {
+    "topicId": "cnm_p291",
+    "prerequisiteId": "cnm_p009",
+    "strength": "soft",
+    "reason": "「10以内数的比较」对学习「长短、高矮的比较」有帮助，但不会前者也可以开始学后者。"
+  },
+  {
+    "topicId": "cnm_p040",
+    "prerequisiteId": "cnm_p291",
+    "strength": "hard",
+    "reason": "学习「认识厘米及用厘米量」需要先掌握「长短、高矮的比较」。"
+  },
+  {
+    "topicId": "cnm_p292",
+    "prerequisiteId": "cnm_p016",
+    "strength": "hard",
+    "reason": "学习「20以内数的顺序」需要先掌握「11～20各数的认识」。"
+  },
+  {
+    "topicId": "cnm_p293",
+    "prerequisiteId": "cnm_p033",
+    "strength": "hard",
+    "reason": "学习「幻方」需要先掌握「笔算加法」。"
+  },
+  {
+    "topicId": "cnm_p293",
+    "prerequisiteId": "cnm_p034",
+    "strength": "hard",
+    "reason": "学习「幻方」需要先掌握「笔算减法」。"
+  },
+  {
+    "topicId": "cnm_p294",
+    "prerequisiteId": "cnm_p112",
+    "strength": "hard",
+    "reason": "学习「树状算图与正推逆推」需要先掌握「整数四则混合运算」。"
+  },
+  {
+    "topicId": "cnm_p294",
+    "prerequisiteId": "cnm_p111",
+    "strength": "hard",
+    "reason": "学习「树状算图与正推逆推」需要先掌握「常见数量关系」。"
+  },
+  {
+    "topicId": "cnm_p295",
+    "prerequisiteId": "cnm_p005",
+    "strength": "hard",
+    "reason": "学习「自然数」需要先掌握「0的认识」。"
+  },
+  {
+    "topicId": "cnm_p295",
+    "prerequisiteId": "cnm_p096",
+    "strength": "soft",
+    "reason": "「亿以内数的认识」对学习「自然数」有帮助，但不会前者也可以开始学后者。"
+  },
+  {
+    "topicId": "cnm_p153",
+    "prerequisiteId": "cnm_p295",
+    "strength": "hard",
+    "reason": "学习「因数和倍数」需要先掌握「自然数」。"
+  },
+  {
     "topicId": "cne_p209",
     "prerequisiteId": "cne_p080",
     "strength": "soft",
