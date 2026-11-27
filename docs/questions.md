@@ -1,12 +1,12 @@
 # 题库说明（data/questions.json）
 
-给每个正式知识点建的小题库，供 `diagnose/` 诊断工具按「每个知识点最多 2 题」的规则出题。现在共 **828** 个知识点（小学 242 + 初中 315 + 高中必修 143 + 高中选择性必修 128），**3459** 题。三个学段一样出题。**题目与答案全部由 AI 生成，没有教师审核**；正确性靠下面的自动核验和独立复核尽量保证，但不等于权威答案。高中题只有自动核验，没有盲解。
+给每个正式知识点建的小题库，原供在线诊断工具按「每个知识点最多 2 题」的规则出题（诊断工具与站点源码已迁至私有仓，本仓只发布数据与数据工具链）。全库当前题数与学科分布以 README「数据规模」为准（2026-11-27 实测 17,031 题，覆盖全部 11 个学科）；本文各节按建题批次记录，其中的知识点数、题数是该批当时的数字，不随全库更新。**题目与答案全部由 AI 生成，没有教师审核**；正确性靠下面的自动核验和独立复核尽量保证，但不等于权威答案。高中题只有自动核验，没有盲解。
 
 下面「统计」「核验方法」里标成第五轮的数字只计当时的 1407 道初中题。全库和小学见文末「小学题（2026-10-19）」。
 
 ## 拆分版（2026-11-22）
 
-`data/questions.json` 仍是源数据（各 `*_build.py` 写它）。前端不再读整包，改读 `data/questions/<学科>.json`（学科代码同 `?subject=`：math chinese english physics chemistry biology history geography morality science）和只含各科题数的 `data/questions/index.json`。改过 `questions.json` 后运行 `python3 scripts/split_questions.py` 重新生成；`--check` 只核对不写。归属按题目 `topicId` 对应知识点的学科，拆分前后总数与题 id 逐一对账。
+`data/questions.json` 仍是源数据（各 `*_build.py` 写它）。前端不再读整包，改读 `data/questions/<学科>.json`（学科代码同 `?subject=`：math chinese english physics chemistry biology history geography morality science politics）和只含各科题数的 `data/questions/index.json`。改过 `questions.json` 后运行 `python3 scripts/split_questions.py` 重新生成；`--check` 只核对不写。归属按题目 `topicId` 对应知识点的学科，拆分前后总数与题 id 逐一对账。
 
 ## 格式
 
@@ -16,7 +16,7 @@
 |---|---|---|
 | `id` | 是 | `<topicId>_q<N>`，如 `cnm_221_q2`；`_q1` 由 `topics.json` 的 `diagnostic_question` 迁移而来（题干以原题文字开头，必要时在后面追加答案格式说明） |
 | `topicId` | 是 | 知识点 id，必须是正式知识点 |
-| `difficulty` | 是 | `basic`（直接套定义 / 一步计算）、`standard`（课本例题水平，2–3 步）、`advanced`（综合、多步或易错点） |
+| `difficulty` | 是 | `basic`（直接套定义 / 一步计算）、`standard`（课本例题水平，2–3 步）、`advanced`（综合、多步或易错点）、`challenge`（挑战档，分布在数学、语文、道德与法治、历史、地理、生物、化学、科学、思想政治等学科；2026-11-27 实测 2,111 题，basic 8,403、standard 6,162、advanced 355） |
 | `type` | 是 | `numeric` 数值题、`choice` 选择题、`short` 短答题、`self` 开放题（必须自评） |
 | `prompt` | 是 | 中文题干，自包含（几何条件用文字、长度、角度、坐标写全，不看图也能读懂条件）。单位写在题干里，答案不带单位。需要看形状时另有可选的 `figure` |
 | `answer` | 是 | 字符串。numeric：一个数（整数 / 小数 / 分数 `a/b` / 负数），多个答案用全角「，」分隔；choice：正确选项字母；short：标准短答案；self：参考答案 |
@@ -29,7 +29,7 @@
 | `unordered` | 否 | numeric 且多个答案顺序无关时为 `true`（如方程的两个根）；没有这个字段的多答案题按顺序比较 |
 | `fixed_from_source` | 否 | 迁移 `diagnostic_question` 时补充了条件（原题有歧义）才有，写明原因。目前 3 题：`cnm_061_q1`、`cnm_070_q1`、`cnm_253_q1` |
 
-`topics.json` 里的 `diagnostic_question` 原样保留（兼容；题库缺失时诊断工具回退到它）。
+`topics.json` 里的 `diagnostic_question` 原样保留（兼容；题库缺失时在线诊断工具回退到它）。
 
 ## 统计（第五轮，只计初中 1407 题）
 

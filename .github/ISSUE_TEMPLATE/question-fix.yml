@@ -31,6 +31,6 @@ body:
     id: context
     attributes:
       label: 补充信息
-      description: 截图说明、相关知识点、出现页面等（可选）
+      description: 截图说明、相关知识点、出现在哪个学科/册次等（可选）
     validations:
       required: false

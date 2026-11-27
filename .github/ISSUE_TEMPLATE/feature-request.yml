@@ -1,5 +1,5 @@
 name: 功能建议
-description: 诊断工具、浏览页、数据或文档的改进想法
+description: 题库数据、知识点与先修关系、版本映射或文档的改进想法（站点与诊断工具的功能建议不在本仓处理）
 title: "[建议] "
 labels: ["功能建议"]
 body:
@@ -14,7 +14,7 @@ body:
     id: proposal
     attributes:
       label: 建议方案
-      description: 你希望怎么改（界面、流程、数据字段等）
+      description: 你希望怎么改（涉及的学科/册次、数据字段、文档位置等）
     validations:
       required: true
   - type: dropdown
@@ -22,9 +22,10 @@ body:
     attributes:
       label: 相关模块
       options:
-        - 诊断工具
-        - 知识图谱浏览
-        - 题库 / 数据
+        - 题库数据
+        - 知识点与先修关系
+        - 教材版本映射
+        - 课标条目
         - 文档 / README
         - 其他
     validations:

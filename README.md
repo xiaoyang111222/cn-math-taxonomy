@@ -8,7 +8,7 @@
 [![在线试用](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E8%AF%95%E7%94%A8-math.pansgo.com-2ea44f)](https://math.pansgo.com/)
 [![GitHub Pages（README 网页版）](https://img.shields.io/badge/备份-GitHub%20Pages-lightgrey)](https://xiaoyang111222.github.io/cn-math-taxonomy/)
 
-> **商业授权：** 本项目采用 CC BY-NC 4.0，个人学习、教学、研究可免费使用；**商业使用（付费课程、付费 App、机构收费服务等）需单独授权**，请通过 X 私信 [@hassanyehiaa](https://x.com/hassanyehiaa)、邮箱 [499749204@qq.com](mailto:499749204@qq.com) 或在本仓库 [提交 Issue](https://github.com/xiaoyang111222/cn-math-taxonomy/issues) 联系，条款见文末「许可证 / License」。
+> **商业授权：** 本项目采用 CC BY-NC 4.0，个人学习、教学、研究可免费使用；**商业使用（付费课程、付费 App、机构收费服务等）需单独授权**，请通过 X 私信 [@hassanyehiaa](https://x.com/hassanyehiaa)、邮箱 [499749204@qq.com](mailto:499749204@qq.com) 联系；也可在本仓库 [提交 Issue](https://github.com/xiaoyang111222/cn-math-taxonomy/issues) 说明用途（报价与合同细节请走私信或邮件），条款见文末「许可证 / License」。
 
 ## 仓库拆分说明（2026-11-25）
 
@@ -52,7 +52,7 @@
 
 数据格式参考 [Marble os-taxonomy](https://github.com/withmarbleapp/os-taxonomy)（`topics` + `dependencies`）。
 
-**反馈 / 挑错：** 题干、答案或先修关系有问题，或想提功能建议，请 [提交 Issue](https://github.com/xiaoyang111222/cn-math-taxonomy/issues/new/choose)（已提供「题目纠错」「功能建议」模板）。
+**反馈 / 挑错：** 题干、答案或先修关系有问题，或想提功能建议，请 [提交 Issue](https://github.com/xiaoyang111222/cn-math-taxonomy/issues/new/choose)（已提供「题目纠错」「功能建议」模板）；想直接改数据，见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 > 知识点的拆分粒度、掌握标准、诊断题答案，尤其是**先修关系（哪些是 hard、哪些是 soft，甚至某条边该不该存在）都需要一线教师审核**后才能用于教学、诊断或学习路径推荐。小学和初中数学的诊断题有自动核验，初中数学另有盲解复核，小学数学有独立程序复核；**高中题和英语题没有做盲解**，`verify` 和答案来自同一条表达式。小学册次目录和高中章节目录多数不是官方逐页核对。高中数学课标已于 2026-11-06 记下人教社转载 PDF 的印刷页，句子仍是转述。英语语音、词汇、语法已于 2026-11-06 记了人教社电子书或转载 PDF 的印刷页，句子仍是转述。日常表达、读写，以及 PEP、Go for it!、高中 2019 的册次，标了「待核」的不要当成官方原文或页码。初中语文各册目录仍未逐页核对纸质课本。第一至第三学段学段要求已于 2026-11-06 对照人教社电子书印刷页 7–13，第四学段对照印刷页 14–16，库存句子仍是转述，未取得教育部 PDF。小学语文册次的逐课目录这次只抽查到一上修订要点，没有升成官方逐课目录。
 >
@@ -122,7 +122,7 @@
 
 网站源码已迁至私有仓维护，本仓只发布数据与数据工具链；拆分前的完整状态保留在 tag `pre-split-2026-11-25`。线上站点 [math.pansgo.com](https://math.pansgo.com/) 构建前会同步本仓 `data/`，功能不受影响（背景见上文「仓库拆分说明」）。
 
-本仓现有 429 个受版本控制的文件（`git ls-files` 实测）：
+本仓现有 431 个受版本控制的文件（`git ls-files` 实测）：
 
 | 位置 | 文件数 | 用途 |
 | --- | ---: | --- |
@@ -131,8 +131,8 @@
 | `tests/` | 6 | 数据侧校验测试（4 个 Python、2 个 Node） |
 | `docs/` | 36 | 文档：课标对齐说明、目录核对记录、题库说明、教材版本映射方案等 |
 | `screenshots/` | 14 | 本 README 引用的站点截图 |
-| `.github/` | 4 | Issue 模板（题目纠错、功能建议）与 CI 配置 |
-| 根目录 | 5 | `README.md`、`LICENSE`（CC BY-NC 4.0）、`CHANGELOG.md`、`package.json`、`.gitignore` |
+| `.github/` | 5 | Issue 模板（题目纠错、功能建议）、PR 模板与 CI 配置 |
+| 根目录 | 6 | `README.md`、`CONTRIBUTING.md`（贡献指南）、`LICENSE`（CC BY-NC 4.0）、`CHANGELOG.md`、`package.json`、`.gitignore` |
 
 ### 数据规模
 
@@ -175,7 +175,7 @@
 - `tests/`：数据侧校验测试，包括题目 id 与纠错模板、`verify` 表达式精确求值、初中道法入库安全（缺模块不删已有点，排序不改 id）、初中语文重建时保留高中指向初中的边、初中英语待核标记、CI 工作流。`npm test` 会依次运行这些测试，再跑 `validate.py`、`check_figures.py` 和 `verify_questions.py`。
 - `docs/`：文档，包括课标对齐说明 [docs/standards-mapping.md](docs/standards-mapping.md)、2025 年修订对齐记录 [docs/moe2025-alignment.md](docs/moe2025-alignment.md)、各学科目录核对记录、题库说明 [docs/questions.md](docs/questions.md) 和教材版本映射方案。
 - `screenshots/`：README 引用的站点截图。
-- 变更记录见根目录 [CHANGELOG.md](CHANGELOG.md)（按日期记录，含 id 变动说明）。
+- 变更记录见根目录 [CHANGELOG.md](CHANGELOG.md)（按日期记录，含 id 变动说明）。贡献方式见 [CONTRIBUTING.md](CONTRIBUTING.md)，PR 模板在 `.github/PULL_REQUEST_TEMPLATE.md`。
 
 ### topics.json 字段
 
@@ -185,15 +185,19 @@
 |---|---|
 | `id` | 稳定 id。初中 `cnm_001` …；小学 `cnm_p001` 起；高中 `cnm_h001` 起（必修到 `cnm_h143`，选择性必修从 `cnm_h144` 起。数学三套 id 不混用）。英语小学 `cne_p001` 起，初中 `cne_j001` 起，高中 `cne_h001` 起 |
 | `name` | 中文名称 |
-| `domain` | 数与代数 / 图形与几何 / 统计与概率 / 综合与实践 |
-| `grade` | 1–9 的整数 |
-| `semester` | "上" 或 "下" |
+| `subject` | 学科代码：`chinese` `english` `physics` `chemistry` `biology` `history` `geography` `morality` `science` `politics`。**数学知识点没有这个字段**（缺省即数学） |
+| `domain` | 因学科而异，是各学科自己的领域划分。数学为 数与代数 / 图形与几何 / 统计与概率 / 综合与实践；其他学科各用本学科的分类（如物理的 物质 / 能量 / 运动和相互作用，历史的 中国古代史 / 世界近代史 等），以 `data/topics.json` 里实际取值为准 |
+| `grade` | 1–16 的整数。1–9 为小学一年级到初中九年级；10 起为高中，按册次顺排（各册对应的数值见各学科章节） |
+| `semester` | "上"、"下"，或 "全"（全一册等整册合编的教材） |
 | `chapter` | 人教版章节。初中如 `七上 第一章 有理数 1.2.1`；小学如 `一年级上册 第1单元 5以内数的认识和加、减法`；高中必修如 `高一 第一章 集合与常用逻辑用语 1.1`（必修第一册）、`高二 第六章 平面向量及其应用 6.1`（必修第二册）。选择性必修如 `选必一 第一章 空间向量与立体几何 1.1`、`选必二 第五章 一元函数的导数及其应用 5.1`、`选必三 第六章 计数原理 6.1`。建模与探究不带「第×章」：`高一 数学建模 建立函数模型`、`选必三 数学探究 杨辉三角的性质与应用`、`选必三 数学建模 建立统计模型进行预测`。高中 `grade` 为 10–14，`semester` 都写「上」（不拆上下册）。12、13、14 只表示选择性必修三册，不是高三、高四 |
 | `type` | conceptual / procedural / reasoning / application / modeling |
 | `description` | 通俗说明（1—2 句） |
 | `mastery_criteria` | 2—3 条掌握标准（字符串数组） |
 | `diagnostic_question` | `{"question": "...", "answer": "..."}` |
 | `external` | `false` |
+| `lesson`、`frames` | **仅部分学科（目前只有道德与法治）**。统编教材的课题名与框题名 |
+| `catalog_status` | **仅部分学科（目前是道德与法治、英语）**。目录核对状态，如 `official_toc`（已对官方目录）、`body_checked_no_lesson`（已核正文、未对到具体课） |
+| `mathLinks` | **仅部分学科（目前是物理、科学）**。`[{id: cnm_…, reason}]`，指向用到的数学知识点；不进先修图 |
 | `standards` | 课标映射数组，元素 `{"id", "confidence", "note"?}`，见下节；可为空数组 |
 | `root_reason` | 仅当没有任何先修边时必填。现在只有 `cnm_p001`（1到5各数的认识） |
 | `mappings` | 可选。其他教材版本的对照，`{版本 id: {grade, term, unit?, chapter?, note?}}`，如 `hujiao_math`（沪教版）；缺省就是只有人教版。目前没有知识点带这个字段；教材版本映射现存放在 `data/mappings/` 下的独立文件（见上文「仓库结构」），贡献方式见 [docs/edition-mappings.md](docs/edition-mappings.md) |
@@ -711,6 +715,6 @@ python3 scripts/validate.py
 - ✅ 可以免费用于个人学习、教学、研究，可以修改和再分发，但需署名并注明来源（本仓库链接）。
 - ❌ 不得用于商业用途（包括但不限于付费课程、付费 App、机构收费服务、售卖题库等）。
 
-**商用授权：** 如需商业使用，请联系作者获取单独授权：X（Twitter）私信 [@hassanyehiaa](https://x.com/hassanyehiaa)、邮箱 [499749204@qq.com](mailto:499749204@qq.com)，或在本仓库 [提交 Issue](https://github.com/xiaoyang111222/cn-math-taxonomy/issues) 说明用途。
+**商用授权：** 如需商业使用，请联系作者获取单独授权：X（Twitter）私信 [@hassanyehiaa](https://x.com/hassanyehiaa)、邮箱 [499749204@qq.com](mailto:499749204@qq.com)；也可在本仓库 [提交 Issue](https://github.com/xiaoyang111222/cn-math-taxonomy/issues) 说明用途（报价与合同细节请走私信或邮件）。
 
-This project is licensed under CC BY-NC 4.0. For commercial licensing, please contact the author via X [@hassanyehiaa](https://x.com/hassanyehiaa), email [499749204@qq.com](mailto:499749204@qq.com), or open an issue.
+This project is licensed under CC BY-NC 4.0. For commercial licensing, please contact the author via X [@hassanyehiaa](https://x.com/hassanyehiaa), or email [499749204@qq.com](mailto:499749204@qq.com). You may also open an issue to describe your use case, but please keep pricing and contract details to DM or email.

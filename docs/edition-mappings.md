@@ -77,6 +77,6 @@
 
 ## 现状和限制
 
-- 本文这些下划线文件，前端**不读取**。图谱、诊断读的是 `data/mappings/hujiao-math.json`（见 `docs/hujiao-mapping-plan.md`）；孩子档案里「教材版本」只是备注，数学册次看 `editions.math`（见 `docs/pwa.md`）。
+- 本文这些下划线文件，前端**不读取**。图谱、诊断读的是 `data/mappings/hujiao-math.json`（见 `docs/hujiao-mapping-plan.md`）；站点里的「教材版本」选择属于站点功能，不在本仓范围。
 - 缺映射的知识点不会被隐藏：描述、先修、题库照常，目录里归入「该版本暂未覆盖」，不显示人教版的年级册次；先修回溯不看版本。
 - 对照表覆盖不全是正常状态，不要为了凑满而填占位值。
