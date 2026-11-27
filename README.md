@@ -6,7 +6,7 @@
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![在线试用](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E8%AF%95%E7%94%A8-math.pansgo.com-2ea44f)](https://math.pansgo.com/)
-[![GitHub Pages 备份](https://img.shields.io/badge/备份-GitHub%20Pages-lightgrey)](https://xiaoyang111222.github.io/cn-math-taxonomy/)
+[![GitHub Pages（README 网页版）](https://img.shields.io/badge/备份-GitHub%20Pages-lightgrey)](https://xiaoyang111222.github.io/cn-math-taxonomy/)
 
 > **商业授权：** 本项目采用 CC BY-NC 4.0，个人学习、教学、研究可免费使用；**商业使用（付费课程、付费 App、机构收费服务等）需单独授权**，请通过 X 私信 [@hassanyehiaa](https://x.com/hassanyehiaa)、邮箱 [499749204@qq.com](mailto:499749204@qq.com) 或在本仓库 [提交 Issue](https://github.com/xiaoyang111222/cn-math-taxonomy/issues) 联系，条款见文末「许可证 / License」。
 
@@ -16,7 +16,7 @@
 
 本仓从此只含**数据与数据工具链**：`data/` 下的知识点、先修边、题库、映射，`scripts/` 下生成与校验这些数据的脚本，`tests/` 下的纯数据测试，以及 `docs/` 里的数据文档。网站侧测试随源码一起迁走，网站仓构建和测试前会从本仓同步 `data/`。拆分前的完整状态保留在 tag `pre-split-2026-11-25`。本仓的目录布局与数据规模见下文「仓库结构」；下文各学科章节、「诊断小工具」和「线上站点功能说明」里提到的页面、URL 参数与交互，描述的是线上站点的功能，其源码已不在本仓。
 
-**[→ 在线试用诊断（演示：配方法）](https://math.pansgo.com/diagnose/?target=cnm_221&demo=1)** · [首页](https://math.pansgo.com/) · [知识图谱](https://math.pansgo.com/explore/) · [诊断工具](https://math.pansgo.com/diagnose/) · [GitHub Pages 备份](https://xiaoyang111222.github.io/cn-math-taxonomy/)
+**[→ 在线试用诊断（演示：配方法）](https://math.pansgo.com/diagnose/?target=cnm_221&demo=1)** · [首页](https://math.pansgo.com/) · [知识图谱](https://math.pansgo.com/explore/) · [诊断工具](https://math.pansgo.com/diagnose/) · [GitHub Pages（README 网页版）](https://xiaoyang111222.github.io/cn-math-taxonomy/)
 
 ![首页：三步说明、实时统计和年级入口](screenshots/06-home.png)
 
