@@ -7412,7 +7412,7 @@
     "domain": "综合与实践",
     "grade": 1,
     "semester": "下",
-    "chapter": "一年级下册 时间的初步认识",
+    "chapter": "一年级下册 第3单元 时间的初步认识",
     "type": "conceptual",
     "description": "认识钟面上的时针和分针，知道分针指向 12 是整时、分针指向 6 是半时，能读出整时和半时。",
     "mastery_criteria": [
@@ -7437,7 +7437,7 @@
     "domain": "综合与实践",
     "grade": 2,
     "semester": "下",
-    "chapter": "二年级下册 时间在哪里",
+    "chapter": "二年级下册 第3单元 时间在哪里",
     "type": "procedural",
     "description": "能读出钟面上接近整时、半时的时刻和分针指在任意位置的时刻，知道分针每走 1 大格是 5 分。",
     "mastery_criteria": [
@@ -7462,7 +7462,7 @@
     "domain": "数与代数",
     "grade": 1,
     "semester": "下",
-    "chapter": "一年级下册 数学广场",
+    "chapter": "一年级下册 第7单元 数学广场",
     "type": "reasoning",
     "description": "数墙里上面一块的数等于下面相邻两块的数之和，能在 20 以内据此求出未知的一块。",
     "mastery_criteria": [
@@ -7488,7 +7488,7 @@
     "domain": "数与代数",
     "grade": 1,
     "semester": "下",
-    "chapter": "一年级下册 20 以内数的加减法（二）",
+    "chapter": "一年级下册 第1单元 20 以内数的加减法（二）",
     "type": "procedural",
     "description": "用一组三个数（如 6、7、13）写出两道加法算式和两道减法算式，知道加法与减法之间的关系。",
     "mastery_criteria": [
@@ -7513,7 +7513,7 @@
     "domain": "数与代数",
     "grade": 1,
     "semester": "上",
-    "chapter": "一年级上册 20 以内数的加减法（一）",
+    "chapter": "一年级上册 第6单元 20 以内数的加减法（一）",
     "type": "reasoning",
     "description": "把 20 以内的进位加法整理成加法表，发现一个加数加 1、得数也加 1 等规律，并能借助加减互逆整理出相应的减法算式。",
     "mastery_criteria": [
@@ -7539,7 +7539,7 @@
     "domain": "图形与几何",
     "grade": 1,
     "semester": "下",
-    "chapter": "一年级下册 长度的比较与测量",
+    "chapter": "一年级下册 第5单元 长度的比较与测量",
     "type": "conceptual",
     "description": "能直接比较两个物体的长短、高矮（把一端对齐），知道不能直接比较时可借助第三个物体（如绳子、小棒）间接比较。",
     "mastery_criteria": [
@@ -7565,7 +7565,7 @@
     "domain": "数与代数",
     "grade": 1,
     "semester": "上",
-    "chapter": "一年级上册 20 以内的数",
+    "chapter": "一年级上册 第5单元 20 以内的数",
     "type": "conceptual",
     "description": "知道 20 以内数的先后顺序，能说出一个数前面和后面的数，认识相邻的数，会按顺序数和倒着数。",
     "mastery_criteria": [
@@ -7591,7 +7591,7 @@
     "domain": "数与代数",
     "grade": 2,
     "semester": "上",
-    "chapter": "二年级上册 数学广场",
+    "chapter": "二年级上册 第6单元 数学广场",
     "type": "reasoning",
     "description": "知道三阶幻方每行、每列、每条对角线上三个数的和都相等，能根据已知数填出空格。",
     "mastery_criteria": [
@@ -7617,7 +7617,7 @@
     "domain": "数与代数",
     "grade": 4,
     "semester": "上",
-    "chapter": "四年级上册 整数的四则运算与应用题",
+    "chapter": "四年级上册 第3单元 整数的四则运算与应用题",
     "type": "application",
     "description": "会用树状算图表示一个数连续经过几步运算的过程，会从起点正着推算、从结果倒着推算（逆推），并能把文字叙述的计算题列成算式。",
     "mastery_criteria": [
@@ -7644,7 +7644,7 @@
     "domain": "数与代数",
     "grade": 5,
     "semester": "上",
-    "chapter": "五年级上册 因数与倍数",
+    "chapter": "五年级上册 第7单元 因数与倍数",
     "type": "conceptual",
     "description": "知道 0、1、2、3…… 都是自然数，0 也是自然数，0 是最小的自然数，没有最大的自然数。",
     "mastery_criteria": [

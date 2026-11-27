@@ -22081,12 +22081,6 @@
   },
   {
     "topicId": "cnm_p294",
-    "prerequisiteId": "cnm_p112",
-    "strength": "hard",
-    "reason": "学习「树状算图与正推逆推」需要先掌握「整数四则混合运算」。"
-  },
-  {
-    "topicId": "cnm_p294",
     "prerequisiteId": "cnm_p111",
     "strength": "hard",
     "reason": "学习「树状算图与正推逆推」需要先掌握「常见数量关系」。"
