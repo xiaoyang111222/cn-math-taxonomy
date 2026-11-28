@@ -178,6 +178,29 @@ def check_hujiao(text, a):
             mismatch(f"README 第 {line_no} 行 hujiao-math.json 映射条数", val, a["hujiao"])
 
 
+
+def check_package_description(a):
+    pkg_path = ROOT / "package.json"
+    try:
+        desc = json.loads(pkg_path.read_text(encoding="utf-8")).get("description", "")
+    except Exception:
+        mismatch("package.json description", "（读不到）", "应存在")
+        return
+
+    def grab(label, pattern, actual):
+        m = re.search(pattern, desc)
+        if not m:
+            mismatch(f"package.json description：{label}", "（未找到表述）", actual)
+            return
+        val = num(m.group(1))
+        if val != actual:
+            mismatch(f"package.json description：{label}", val, actual)
+
+    grab("学科数", r"(\d+)\s*学科", a["subjects"])
+    grab("知识点总数", r"([\d,]+)\s*个知识点", a["topics"])
+    grab("先修关系总数", r"([\d,]+)\s*条先修关系", a["edges"])
+    grab("题目总数", r"([\d,]+)\s*道题", a["questions"])
+
 def main():
     a = compute()
     text = README.read_text(encoding="utf-8")
@@ -199,15 +222,16 @@ def main():
         check_table([l for l in lines[first_table:] if l.lstrip().startswith("|")], a)
 
     check_hujiao(text, a)
+    check_package_description(a)
 
     if problems:
-        print(f"README 数字与 data/ 实测不一致，共 {len(problems)} 处：")
+        print(f"README / package.json 数字与 data/ 实测不一致，共 {len(problems)} 处：")
         for where, readme_val, actual in problems:
             print(f"  - {where} / README 值: {readme_val} / 实测值: {actual}")
         return 1
 
     print(
-        f"OK README 数字与 data/ 一致："
+        f"OK README 与 package.json 数字与 data/ 一致："
         f"知识点 {a['topics']:,}，先修边 {a['edges']:,}（hard {a['hard']:,}，soft {a['soft']:,}），"
         f"题 {a['questions']:,}，学科 {a['subjects']}，课标条目 {a['standards']:,}，沪教映射 {a['hujiao']}"
     )
