@@ -189,13 +189,14 @@ MAPPING_FILE_STATUS = ("example", "draft", "reviewed")
 RT_VERSION_RE = re.compile(r"^[a-z][a-z0-9]*$")
 RT_FILE_RE = re.compile(r"^([a-z][a-z0-9]*)-([a-z]+)(?:-([a-z]+))?\.json$")
 RT_VERSIONS = ("hujiao",)
-RT_SUBJECTS = ("math",)  # 一期只有数学；物理、英语在三期
+RT_SUBJECTS = ("math", "english")  # 数学自一期；英语映射自 2026-11-28 起。物理仍在后期
 RT_STAGE_GRADES = {"primary": (1, 5)}  # 一期只有小学；junior 在二期，grade 6–9
 RT_HEAD_FIELDS = {"version", "subject", "stage", "label", "status", "source", "contributor", "note", "entries"}
 RT_ENTRY_FIELDS = {"grade", "term", "unit", "chapter", "note"}
 RT_STATUS = ("draft", "reviewed")
 RT_BANNED_WORDS = ("示例", "占位")
 PRIMARY_MATH_ID_RE = re.compile(r"^cnm_p\d+$")
+PRIMARY_ENG_ID_RE = re.compile(r"^cne_p\d+$")
 
 errors = []
 warnings = []
@@ -441,8 +442,10 @@ def _no_dup_pairs(pairs):
 
 def check_runtime_mapping_files(ids):
     """data/mappings/<version>-<subject>[-<stage>].json：站点运行时读的映射层。
-    返回 (文件数, 条目数, 覆盖统计 dict)。统计只在小学数学文件上有意义。"""
-    stats = {"denominator": 0, "numerator": 0, "entries": 0, "grade6": 0, "grade6_covered": 0}
+    返回 (文件数, 条目数, 覆盖统计 dict)。覆盖率按学科分开计。"""
+    stats = {"denominator": 0, "numerator": 0, "entries": 0, "grade6": 0, "grade6_covered": 0,
+             "en_denominator": 0, "en_numerator": 0, "en_entries": 0, "en_grade6": 0, "en_grade6_covered": 0,
+             "en_file": False}
     if not os.path.isdir(MAPPINGS_DIR):
         return 0, 0, stats
     n_files = n_entries = 0
@@ -519,6 +522,8 @@ def check_runtime_mapping_files(ids):
                 err("%s 只能对照%s正式知识点" % (ew, subject))
             elif subject == "math" and stage == "primary" and not PRIMARY_MATH_ID_RE.match(tid):
                 err("%s 小学映射只能含 cnm_p 开头的知识点" % ew)
+            elif subject == "english" and stage == "primary" and not PRIMARY_ENG_ID_RE.match(tid):
+                err("%s 小学映射只能含 cne_p 开头的知识点" % ew)
             if tid in seen_in_files and seen_in_files[tid] != fn:
                 err("%s 已出现在 %s，同一知识点不能跨文件重复" % (ew, seen_in_files[tid]))
             seen_in_files.setdefault(tid, fn)
@@ -553,6 +558,18 @@ def check_runtime_mapping_files(ids):
             stats["grade6_covered"] += sum(1 for i in g6 if i in entries)
             if len(numer) > len(denom) or len(numer) != len(entries):
                 err("%s 条目数 %d 与小学数学正式点命中数 %d 不符（条目指向了非小学数学 id？）" % (where, len(entries), len(numer)))
+        if subject == "english" and stage == "primary":
+            denom = [i for i, t in ids.items() if PRIMARY_ENG_ID_RE.match(i) and not t.get("external")]
+            numer = [i for i in denom if i in entries]
+            stats["en_denominator"] += len(denom)
+            stats["en_numerator"] += len(numer)
+            stats["en_entries"] += len(entries)
+            g6 = [i for i in denom if ids[i].get("grade") == 6]
+            stats["en_grade6"] += len(g6)
+            stats["en_grade6_covered"] += sum(1 for i in g6 if i in entries)
+            stats["en_file"] = True
+            if len(numer) > len(denom) or len(numer) != len(entries):
+                err("%s 条目数 %d 与小学英语正式点命中数 %d 不符（条目指向了非小学英语 id？）" % (where, len(entries), len(numer)))
     return n_files, n_entries, stats
 
 
@@ -2034,6 +2051,10 @@ def main():
         print("沪教版小学数学映射覆盖率：%d/%d（条目 %d；人教六年级点 %d 个，其中已有落点 %d 个）" % (
             rt_stats["numerator"], rt_stats["denominator"], rt_stats["entries"],
             rt_stats["grade6"], rt_stats["grade6_covered"]))
+        if rt_stats.get("en_file"):
+            print("沪教版小学英语映射覆盖率：%d/%d（条目 %d；人教六年级点 %d 个，其中已有落点 %d 个）" % (
+                rt_stats["en_numerator"], rt_stats["en_denominator"], rt_stats["en_entries"],
+                rt_stats["en_grade6"], rt_stats["en_grade6_covered"]))
     prereqs, dependents, n_hard, n_soft, n_en_hard, n_en_soft = check_deps(deps, ids)
     qs_for_split = load(QUESTIONS_PATH) if os.path.exists(QUESTIONS_PATH) else None
     check_g2b_yard_split(ids, deps, qs_for_split)

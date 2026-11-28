@@ -1,0 +1,288 @@
+{
+  "version": "hujiao",
+  "subject": "english",
+  "stage": "primary",
+  "label": "沪教版（上海教育出版社）英语 · 小学",
+  "status": "draft",
+  "source": "对照依据：上海教育出版社《义务教育教科书（五•四学制）•英语》（书名含「根据2022年版课程标准修订」）。2026-11-28 从国家中小学智慧教育平台教材预览的 Contents 页抄录三年级上册、四年级上册、五年级上册，各 10 个 Unit。平台 tch_material part_100 至 part_103 中，五四学制、上海教育出版社的小学英语只有这三册；没有一年级、二年级，也没有三下、四下、五下。上海教育出版社书目接口（教材分类「五·四学制 / 小学教材 / 英语」）能查到一上至五下的册名，条目没有单元目录。本文件只落有官方 Unit 标题、且与人教 PEP 知识点主题确实对应的条目。六年级不落。未使用旧版目录，没有 provisional 条目。status 为 draft。",
+  "contributor": "自研（官方目录2026-11-28）",
+  "note": "落点册次只来自三上、四上、五上的官方 Unit。一上、一下、二上、二下、三下、四下、五下没有官方单元目录，不建知识点、不落点。目录页上的 Starter 和主题色带（Our families and friends、Our teachers、The alphabet、Seasons、Numbers 等）不是 Unit。语音、家庭、颜色、数字、身体、文具、衣物、购物、规则、农场、四季、自然公园等对不上这三册 Unit 的知识点不挂。",
+  "entries": {
+    "cne_p017": {
+      "grade": 4,
+      "term": 1,
+      "unit": "3 Animals and their homes",
+      "note": "主题是动物。本点是 cat、dog、bird、duck；本课词表是 panda、monkey、elephant 等。"
+    },
+    "cne_p018": {
+      "grade": 4,
+      "term": 1,
+      "unit": "3 Animals and their homes",
+      "note": "用 This is a 介绍动物，对本课制作动物卡片。"
+    },
+    "cne_p019": {
+      "grade": 4,
+      "term": 1,
+      "unit": "3 Animals and their homes",
+      "note": "读介绍动物的句子。句中带颜色，颜色不是本课主题。"
+    },
+    "cne_p020": {
+      "grade": 3,
+      "term": 1,
+      "unit": "10 Foods around the world",
+      "note": "主题是食物。bread 在本课词表内；rice、egg、milk 不是本课词。"
+    },
+    "cne_p067": {
+      "grade": 4,
+      "term": 1,
+      "unit": "2 My classmates",
+      "note": "描述朋友或同学，对本课 My classmates。"
+    },
+    "cne_p069": {
+      "grade": 4,
+      "term": 1,
+      "unit": "2 My classmates",
+      "note": "介绍朋友，对本课猜测同学的任务。"
+    },
+    "cne_p070": {
+      "grade": 4,
+      "term": 1,
+      "unit": "2 My classmates",
+      "note": "读朋友介绍，对本课 My classmates。"
+    },
+    "cne_p077": {
+      "grade": 3,
+      "term": 1,
+      "unit": "10 Foods around the world",
+      "note": "beef、noodles 在本课词表内，主题是食物。"
+    },
+    "cne_p080": {
+      "grade": 3,
+      "term": 1,
+      "unit": "7 Jobs",
+      "note": "doctor、driver 在本课词表内，主题是职业。"
+    },
+    "cne_p081": {
+      "grade": 3,
+      "term": 1,
+      "unit": "7 Jobs",
+      "note": "What is his job? 对本课 What's ...? ... is ...。his、her 是同一点里的附带语法。"
+    },
+    "cne_p082": {
+      "grade": 3,
+      "term": 1,
+      "unit": "7 Jobs",
+      "note": "介绍家人的职业，对本课 Jobs。"
+    },
+    "cne_p083": {
+      "grade": 3,
+      "term": 1,
+      "unit": "7 Jobs",
+      "note": "读家人职业短文，对本课 Jobs。"
+    },
+    "cne_p084": {
+      "grade": 4,
+      "term": 1,
+      "unit": "1 My school",
+      "note": "library、computer room、sports field 对学校场所。playground 对 sports field。"
+    },
+    "cne_p086": {
+      "grade": 3,
+      "term": 1,
+      "unit": "8 Finding places",
+      "note": "本课 Talking time 标题是 Where is the library?，与用 Where is 询问学校场所一致。"
+    },
+    "cne_p087": {
+      "grade": 4,
+      "term": 1,
+      "unit": "1 My school",
+      "note": "读学校里有哪些地点。楼层不在本课词表。"
+    },
+    "cne_p089": {
+      "grade": 4,
+      "term": 1,
+      "unit": "9 What time is it?",
+      "note": "What time is it? 与 o'clock 对本课钟面时刻。"
+    },
+    "cne_p091": {
+      "grade": 4,
+      "term": 1,
+      "unit": "9 What time is it?",
+      "note": "从短文读出几点做什么，对本课时刻。"
+    },
+    "cne_p092": {
+      "grade": 4,
+      "term": 1,
+      "unit": "10 Weather",
+      "note": "主题是天气。本点是 cold、warm；本课词表是 sunny、rainy 等。"
+    },
+    "cne_p093": {
+      "grade": 4,
+      "term": 1,
+      "unit": "10 Weather",
+      "note": "用 It is 描述天气，对本课 Weather。"
+    },
+    "cne_p094": {
+      "grade": 4,
+      "term": 1,
+      "unit": "10 Weather",
+      "note": "谈论天气并给建议，对本课天气预报任务。"
+    },
+    "cne_p095": {
+      "grade": 4,
+      "term": 1,
+      "unit": "10 Weather",
+      "note": "读天气预报，对本课 Giving a weather report。"
+    },
+    "cne_p109": {
+      "grade": 4,
+      "term": 1,
+      "unit": "2 My classmates",
+      "note": "kind、strict 等是性格。本课词是 lovely、helpful 一类，不是五官外貌。"
+    },
+    "cne_p110": {
+      "grade": 4,
+      "term": 1,
+      "unit": "2 My classmates",
+      "note": "What is he like? 问性格，对本课 Who is he? 的猜人任务。"
+    },
+    "cne_p118": {
+      "grade": 3,
+      "term": 1,
+      "unit": "10 Foods around the world",
+      "note": "sandwich 在本课词表内，主题是食物。"
+    },
+    "cne_p121": {
+      "grade": 3,
+      "term": 1,
+      "unit": "2 Proud of you, proud of myself",
+      "note": "词表 sing、dance、draw 与本课 Topic words 重合，主题是会做的事。"
+    },
+    "cne_p122": {
+      "grade": 3,
+      "term": 1,
+      "unit": "2 Proud of you, proud of myself",
+      "note": "主题是能力。本课 Talking time 用 good at (doing)，本点用 can，说的是同一类活动。"
+    },
+    "cne_p123": {
+      "grade": 3,
+      "term": 1,
+      "unit": "2 Proud of you, proud of myself",
+      "note": "用 What can you do? 谈论会做的事，对本课「谈论自己和同学」的任务。"
+    },
+    "cne_p124": {
+      "grade": 3,
+      "term": 1,
+      "unit": "2 Proud of you, proud of myself",
+      "note": "读谁会做什么，对本课能力主题。"
+    },
+    "cne_p130": {
+      "grade": 4,
+      "term": 1,
+      "unit": "5 Visiting places",
+      "note": "本课 Talking time 就是 Is/Are there ...? 以及 Yes/No 回答。"
+    },
+    "cne_p171": {
+      "grade": 3,
+      "term": 1,
+      "unit": "7 Jobs",
+      "note": "主题是更多职业。factory、postman 等不在本课词表，仍按职业落在 Jobs。"
+    },
+    "cne_p172": {
+      "grade": 3,
+      "term": 1,
+      "unit": "7 Jobs",
+      "note": "What does he do? 询问职业，对本课 Jobs。"
+    },
+    "cne_p173": {
+      "grade": 3,
+      "term": 1,
+      "unit": "7 Jobs",
+      "note": "用 He is a 介绍职业。工作地点不在本课词表。"
+    },
+    "cne_p174": {
+      "grade": 3,
+      "term": 1,
+      "unit": "7 Jobs",
+      "note": "读职业短文，对本课 Jobs。"
+    },
+    "cne_p175": {
+      "grade": 3,
+      "term": 1,
+      "unit": "6 How do you feel?",
+      "note": "happy、sad 在本课词表内，主题是感受。"
+    },
+    "cne_p177": {
+      "grade": 3,
+      "term": 1,
+      "unit": "6 How do you feel?",
+      "note": "How do you feel? 与本课 Talking time 一致。should 建议不是该课句型。"
+    },
+    "cne_p209": {
+      "grade": 3,
+      "term": 1,
+      "unit": "5 I can help",
+      "note": "cook、clean 等家务词与本课 chore、do the dishes、clean the table 同题。"
+    },
+    "cne_p210": {
+      "grade": 3,
+      "term": 1,
+      "unit": "5 I can help",
+      "note": "I can help 与本课句型 can (do) 以及 Being a good helper 一致。"
+    },
+    "cne_p211": {
+      "grade": 3,
+      "term": 1,
+      "unit": "5 I can help",
+      "note": "短文内容是家人做的家务，对本课 Help with family chores。"
+    },
+    "cne_p212": {
+      "grade": 4,
+      "term": 1,
+      "unit": "2 My classmates",
+      "note": "helpful 在本课词表内，主题是朋友的品质。"
+    },
+    "cne_p213": {
+      "grade": 4,
+      "term": 1,
+      "unit": "2 My classmates",
+      "note": "用 He is / She is 介绍为什么选这个朋友，对本课描述同学。"
+    },
+    "cne_p214": {
+      "grade": 4,
+      "term": 1,
+      "unit": "5 Visiting places",
+      "note": "park、shop 在本课词表内，主题是去看一个地方。"
+    },
+    "cne_p215": {
+      "grade": 4,
+      "term": 1,
+      "unit": "5 Visiting places",
+      "note": "说公园、商店里人们做什么。本课词表是场所本身。"
+    },
+    "cne_p218": {
+      "grade": 4,
+      "term": 1,
+      "unit": "10 Weather",
+      "note": "按天气说适宜的活动，对本课 Weather。"
+    },
+    "cne_p219": {
+      "grade": 4,
+      "term": 1,
+      "unit": "10 Weather",
+      "note": "读坏天气提醒，对本课天气报告。"
+    },
+    "cne_p249": {
+      "grade": 4,
+      "term": 1,
+      "unit": "9 What time is it?",
+      "note": "读作息表里的几点，对本课时刻。"
+    },
+    "cne_p266": {
+      "grade": 4,
+      "term": 1,
+      "unit": "4 Our birthday",
+      "note": "主题是生日。本课任务是生日聚会计划，本点是询问生日日期。"
+    }
+  }
+}
