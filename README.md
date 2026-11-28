@@ -166,7 +166,7 @@ print([topics[p]["name"] for p in pre])  # 「配方法」的先修知识点
 | `docs/` | 38 | 文档：课标对齐说明、目录核对记录、题库说明、教材版本映射方案等 |
 | `screenshots/` | 14 | 站点截图（README 与 docs 引用） |
 | `.github/` | 5 | Issue 模板（题目纠错、功能建议）、PR 模板与 CI 配置 |
-| 根目录 | 6 | `README.md`、`CONTRIBUTING.md`（贡献指南）、`LICENSE`（CC BY-NC 4.0）、`CHANGELOG.md`、`package.json`、`.gitignore` |
+| 根目录 | 8 | `README.md`、`CONTRIBUTING.md`（贡献指南）、`LICENSE`（CC BY-NC 4.0）、`CHANGELOG.md`、`package.json`、`.gitignore`、`CITATION.cff`、`CODE_OF_CONDUCT.md` |
 
 ### 数据规模
 
