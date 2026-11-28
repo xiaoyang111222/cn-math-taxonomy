@@ -1,0 +1,1006 @@
+{
+  "edition": "beijing_english",
+  "label": "北京版（北京出版社）英语",
+  "status": "draft",
+  "source": "对照依据：北京版《英语》一年级上册至六年级上册（2024 年修订本）电子教材逐册识读的目录页与单元页，教材来源为京版云电子教材 https://www.jingbanyun.com/ebook/index （该站目前缺 2024 版六年级下册，待补；本次只提交已处理的 11 册）；单元名与课时名取自各册 Contents 与单元首页，课文与词表另行核对（content/bj-english，2026-11-09 抓取）。北京版是一年级起点、PEP 从三年级起，故一、二年级按知识点对照到 PEP 三上 / 三下；六年级下册暂缺、本表未含；复习单元（Revision）不对照。2026-11-10 编制，待一线教师与学生用书复核。",
+  "entries": [
+    {
+      "topicId": "cne_p005",
+      "grade": 1,
+      "term": "上",
+      "unit": "Unit One Hello, School!",
+      "chapter": "Lesson 1 Good Morning!；Lesson 2 Danny's School Day",
+      "note": "北京版一上第 1 单元（问候与自我介绍）；PEP 从三年级起，按知识点对照到三上第 1 单元。"
+    },
+    {
+      "topicId": "cne_p007",
+      "grade": 1,
+      "term": "上",
+      "unit": "Unit One Hello, School!",
+      "chapter": "Lesson 1 Good Morning!；Lesson 2 Danny's School Day",
+      "note": "北京版一上第 1 单元（问候与自我介绍）；PEP 从三年级起，按知识点对照到三上第 1 单元。"
+    },
+    {
+      "topicId": "cne_p008",
+      "grade": 1,
+      "term": "上",
+      "unit": "Unit Two You and Me",
+      "chapter": "Lesson 4 What's Your Name?；Lesson 5 Let's Play Together!",
+      "note": "同上：姓名问答与「Nice to meet you」并入 PEP 三上的自我介绍与问候用语。"
+    },
+    {
+      "topicId": "cne_p058",
+      "grade": 1,
+      "term": "上",
+      "unit": "Unit Three My Schoolbag",
+      "chapter": "Lesson 7 I'm Ready for class!；Lesson 8 It's My Pencil"
+    },
+    {
+      "topicId": "cne_p063",
+      "grade": 1,
+      "term": "上",
+      "unit": "Unit Three My Schoolbag",
+      "chapter": "Lesson 7 I'm Ready for class!；Lesson 8 It's My Pencil"
+    },
+    {
+      "topicId": "cne_p064",
+      "grade": 1,
+      "term": "上",
+      "unit": "Unit Three My Schoolbag",
+      "chapter": "Lesson 7 I'm Ready for class!；Lesson 8 It's My Pencil"
+    },
+    {
+      "topicId": "cne_p013",
+      "grade": 1,
+      "term": "上",
+      "unit": "Unit Four This Is Me",
+      "chapter": "Lesson 10 Touch Your Face；Lesson 11 We Are All Different"
+    },
+    {
+      "topicId": "cne_p015",
+      "grade": 1,
+      "term": "上",
+      "unit": "Unit Four This Is Me",
+      "chapter": "Lesson 10 Touch Your Face；Lesson 11 We Are All Different"
+    },
+    {
+      "topicId": "cne_p040",
+      "grade": 1,
+      "term": "上",
+      "unit": "Unit Four This Is Me",
+      "chapter": "Lesson 10 Touch Your Face；Lesson 11 We Are All Different"
+    },
+    {
+      "topicId": "cne_p041",
+      "grade": 1,
+      "term": "上",
+      "unit": "Unit Four This Is Me",
+      "chapter": "Lesson 10 Touch Your Face；Lesson 11 We Are All Different"
+    },
+    {
+      "topicId": "cne_p035",
+      "grade": 1,
+      "term": "上",
+      "unit": "Unit Five I Love My Family",
+      "chapter": "Lesson 13 We Are a Family；Lesson 14 My Big Family"
+    },
+    {
+      "topicId": "cne_p037",
+      "grade": 1,
+      "term": "上",
+      "unit": "Unit Five I Love My Family",
+      "chapter": "Lesson 13 We Are a Family；Lesson 14 My Big Family"
+    },
+    {
+      "topicId": "cne_p014",
+      "grade": 1,
+      "term": "上",
+      "unit": "Unit Five I Love My Family",
+      "chapter": "Lesson 13 We Are a Family；Lesson 14 My Big Family"
+    },
+    {
+      "topicId": "cne_p024",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Two Let's Count",
+      "chapter": "Lesson 4 One, Two, Three, ...；Lesson 5 I Have Ten Legs",
+      "note": "「I have ten legs」用到可数名词复数，对照到 PEP 三上「可数名词复数」。"
+    },
+    {
+      "topicId": "cne_p026",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Two Let's Count",
+      "chapter": "Lesson 4 One, Two, Three, ...；Lesson 5 I Have Ten Legs",
+      "note": "「I have ten legs」用到可数名词复数，对照到 PEP 三上「可数名词复数」。"
+    },
+    {
+      "topicId": "cne_p052",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Two Let's Count",
+      "chapter": "Lesson 4 One, Two, Three, ...；Lesson 5 I Have Ten Legs",
+      "note": "「I have ten legs」用到可数名词复数，对照到 PEP 三上「可数名词复数」。"
+    },
+    {
+      "topicId": "cne_p050",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Three Fruit for You and Me",
+      "chapter": "Lesson 7 We Like Fruit；Lesson 8 Fruit for the Family"
+    },
+    {
+      "topicId": "cne_p021",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Three Fruit for You and Me",
+      "chapter": "Lesson 7 We Like Fruit；Lesson 8 Fruit for the Family"
+    },
+    {
+      "topicId": "cne_p051",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Three Fruit for You and Me",
+      "chapter": "Lesson 7 We Like Fruit；Lesson 8 Fruit for the Family"
+    },
+    {
+      "topicId": "cne_p009",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Four Beautiful Colours",
+      "chapter": "Lesson 10 Colourful Flowers；Lesson 11 What Colour Is It?"
+    },
+    {
+      "topicId": "cne_p010",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Four Beautiful Colours",
+      "chapter": "Lesson 10 Colourful Flowers；Lesson 11 What Colour Is It?"
+    },
+    {
+      "topicId": "cne_p011",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Four Beautiful Colours",
+      "chapter": "Lesson 10 Colourful Flowers；Lesson 11 What Colour Is It?"
+    },
+    {
+      "topicId": "cne_p020",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Five Yummy Food",
+      "chapter": "Lesson 13 What Food Do You Like?；Lesson 14 I Am Hungry"
+    },
+    {
+      "topicId": "cne_p022",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Five Yummy Food",
+      "chapter": "Lesson 13 What Food Do You Like?；Lesson 14 I Am Hungry"
+    },
+    {
+      "topicId": "cne_p121",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Six What Can You Do?",
+      "chapter": "Lesson 16 I Can Sing；Lesson 17 I Can Help You"
+    },
+    {
+      "topicId": "cne_p122",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Six What Can You Do?",
+      "chapter": "Lesson 16 I Can Sing；Lesson 17 I Can Help You"
+    },
+    {
+      "topicId": "cne_p123",
+      "grade": 1,
+      "term": "下",
+      "unit": "Unit Six What Can You Do?",
+      "chapter": "Lesson 16 I Can Sing；Lesson 17 I Can Help You"
+    },
+    {
+      "topicId": "cne_p089",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit One It's Time to Get Up",
+      "chapter": "Lesson 1 It's Seven O'clock；Lesson 2 Please Go to Bed Early"
+    },
+    {
+      "topicId": "cne_p090",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit One It's Time to Get Up",
+      "chapter": "Lesson 1 It's Seven O'clock；Lesson 2 Please Go to Bed Early"
+    },
+    {
+      "topicId": "cne_p248",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit One It's Time to Get Up",
+      "chapter": "Lesson 1 It's Seven O'clock；Lesson 2 Please Go to Bed Early"
+    },
+    {
+      "topicId": "cne_p088",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit One It's Time to Get Up",
+      "chapter": "Lesson 1 It's Seven O'clock；Lesson 2 Please Go to Bed Early"
+    },
+    {
+      "topicId": "cne_p159",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit Two Ways to Go to School",
+      "chapter": "Lesson 4 How Do You Go to School?；Lesson 5 I Go to School on an Elephant Today"
+    },
+    {
+      "topicId": "cne_p161",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit Two Ways to Go to School",
+      "chapter": "Lesson 4 How Do You Go to School?；Lesson 5 I Go to School on an Elephant Today"
+    },
+    {
+      "topicId": "cne_p167",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit Three We Like Sports",
+      "chapter": "Lesson 7 Sports Are Fun；Lesson 8 A Super Player",
+      "note": "PEP 没有独立的「体育运动」词汇点，按「爱好」对照；句型层面与「谈论会做的事」相近。"
+    },
+    {
+      "topicId": "cne_p113",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit Four My Week",
+      "chapter": "Lesson 10 What Day Is It Today?；Lesson 11 A Nice Week"
+    },
+    {
+      "topicId": "cne_p114",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit Four My Week",
+      "chapter": "Lesson 10 What Day Is It Today?；Lesson 11 A Nice Week"
+    },
+    {
+      "topicId": "cne_p117",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit Four My Week",
+      "chapter": "Lesson 10 What Day Is It Today?；Lesson 11 A Nice Week"
+    },
+    {
+      "topicId": "cne_p115",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit Five My Weekend",
+      "chapter": "Lesson 13 This Is My Happy Weekend；Lesson 14 Sunday Is a Big Day"
+    },
+    {
+      "topicId": "cne_p116",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit Five My Weekend",
+      "chapter": "Lesson 13 This Is My Happy Weekend；Lesson 14 Sunday Is a Big Day"
+    },
+    {
+      "topicId": "cne_p017",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit Six Animals Are Fun",
+      "chapter": "Lesson 16 The Animals in a Park；Lesson 17 A Fun Race"
+    },
+    {
+      "topicId": "cne_p018",
+      "grade": 2,
+      "term": "上",
+      "unit": "Unit Six Animals Are Fun",
+      "chapter": "Lesson 16 The Animals in a Park；Lesson 17 A Fun Race"
+    },
+    {
+      "topicId": "cne_p137",
+      "grade": 2,
+      "term": "下",
+      "unit": "Unit One Lovely Seasons",
+      "chapter": "Lesson 1 The Four Seasons Come and Go；Lesson 2 The Seasons We Like",
+      "note": "单元名按教材目录（来源站点用的是旧版单元名）。"
+    },
+    {
+      "topicId": "cne_p138",
+      "grade": 2,
+      "term": "下",
+      "unit": "Unit One Lovely Seasons",
+      "chapter": "Lesson 1 The Four Seasons Come and Go；Lesson 2 The Seasons We Like",
+      "note": "单元名按教材目录（来源站点用的是旧版单元名）。"
+    },
+    {
+      "topicId": "cne_p260",
+      "grade": 2,
+      "term": "下",
+      "unit": "Unit One Lovely Seasons",
+      "chapter": "Lesson 1 The Four Seasons Come and Go；Lesson 2 The Seasons We Like",
+      "note": "单元名按教材目录（来源站点用的是旧版单元名）。"
+    },
+    {
+      "topicId": "cne_p092",
+      "grade": 2,
+      "term": "下",
+      "unit": "Unit Two Weather",
+      "chapter": "Lesson 4 How's the Weather?；Lesson 5 An Amazing Day"
+    },
+    {
+      "topicId": "cne_p093",
+      "grade": 2,
+      "term": "下",
+      "unit": "Unit Two Weather",
+      "chapter": "Lesson 4 How's the Weather?；Lesson 5 An Amazing Day"
+    },
+    {
+      "topicId": "cne_p094",
+      "grade": 2,
+      "term": "下",
+      "unit": "Unit Two Weather",
+      "chapter": "Lesson 4 How's the Weather?；Lesson 5 An Amazing Day"
+    },
+    {
+      "topicId": "cne_p140",
+      "grade": 2,
+      "term": "下",
+      "unit": "Unit Three Hello, Months!",
+      "chapter": "Lesson 7 The Months of the Year；Lesson 8 The Apple Tree"
+    },
+    {
+      "topicId": "cne_p263",
+      "grade": 2,
+      "term": "下",
+      "unit": "Unit Three Hello, Months!",
+      "chapter": "Lesson 7 The Months of the Year；Lesson 8 The Apple Tree"
+    },
+    {
+      "topicId": "cne_p141",
+      "grade": 2,
+      "term": "下",
+      "unit": "Unit Three Hello, Months!",
+      "chapter": "Lesson 7 The Months of the Year；Lesson 8 The Apple Tree"
+    },
+    {
+      "topicId": "cne_p266",
+      "grade": 2,
+      "term": "下",
+      "unit": "Unit Four Happy Birthday!",
+      "chapter": "Lesson 10 When Is Your Birthday?；Lesson 11 Mum's Birthday"
+    },
+    {
+      "topicId": "cne_p144",
+      "grade": 2,
+      "term": "下",
+      "unit": "Unit Four Happy Birthday!",
+      "chapter": "Lesson 10 When Is Your Birthday?；Lesson 11 Mum's Birthday"
+    },
+    {
+      "topicId": "cne_p145",
+      "grade": 2,
+      "term": "下",
+      "unit": "Unit Four Happy Birthday!",
+      "chapter": "Lesson 10 When Is Your Birthday?；Lesson 11 Mum's Birthday"
+    },
+    {
+      "topicId": "cne_p001",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit One Hello, New Friends!",
+      "chapter": "Lesson 1 Hello! I'm Baobao；Lesson 2 This Is Mike；Lesson 3 How Are You?；Lesson 4 I Have New Friends"
+    },
+    {
+      "topicId": "cne_p002",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit One Hello, New Friends!",
+      "chapter": "Lesson 1 Hello! I'm Baobao；Lesson 2 This Is Mike；Lesson 3 How Are You?；Lesson 4 I Have New Friends"
+    },
+    {
+      "topicId": "cne_p004",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit One Hello, New Friends!",
+      "chapter": "Lesson 1 Hello! I'm Baobao；Lesson 2 This Is Mike；Lesson 3 How Are You?；Lesson 4 I Have New Friends"
+    },
+    {
+      "topicId": "cne_p006",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit One Hello, New Friends!",
+      "chapter": "Lesson 1 Hello! I'm Baobao；Lesson 2 This Is Mike；Lesson 3 How Are You?；Lesson 4 I Have New Friends"
+    },
+    {
+      "topicId": "cne_p027",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit Two Numbers Around Us",
+      "chapter": "Lesson 5 I Have Six Classes Today；Lesson 6 I'm Nine Years Old；Lesson 7 There Are Twelve Basketballs；Lesson 8 Let's Travel"
+    },
+    {
+      "topicId": "cne_p054",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit Two Numbers Around Us",
+      "chapter": "Lesson 5 I Have Six Classes Today；Lesson 6 I'm Nine Years Old；Lesson 7 There Are Twelve Basketballs；Lesson 8 Let's Travel"
+    },
+    {
+      "topicId": "cne_p055",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit Two Numbers Around Us",
+      "chapter": "Lesson 5 I Have Six Classes Today；Lesson 6 I'm Nine Years Old；Lesson 7 There Are Twelve Basketballs；Lesson 8 Let's Travel"
+    },
+    {
+      "topicId": "cne_p019",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit Three Lovely Animals",
+      "chapter": "Lesson 9 It's a Cute Duck；Lesson 10 It Has Two Big Ears；Lesson 11 Kiki ls Not My Pet；Lesson 12 You Have Wings"
+    },
+    {
+      "topicId": "cne_p124",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit Five I can Do Many Things",
+      "chapter": "Lesson 15 I Can Dance；Lesson 16 I Can Play Ping-pong；Lesson 17 I Can Sweep the Floor；Lesson 18 I Can Do So Many Things"
+    },
+    {
+      "topicId": "cne_p012",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit Six Colours, Colours",
+      "chapter": "Lesson 19 A Colourful World；Lesson 20 Magic Colours；Lesson 21 I Like Many Colours；Lesson 22 Rainbows"
+    },
+    {
+      "topicId": "cne_p036",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit Seven Meet My Family",
+      "chapter": "Lesson 23 Welcome to My Home；Lesson 24 Family Photos；Lesson 25 My Super Mum and Dad；Lesson 26 I Love My Family"
+    },
+    {
+      "topicId": "cne_p038",
+      "grade": 3,
+      "term": "上",
+      "unit": "Unit Seven Meet My Family",
+      "chapter": "Lesson 23 Welcome to My Home；Lesson 24 Family Photos；Lesson 25 My Super Mum and Dad；Lesson 26 I Love My Family"
+    },
+    {
+      "topicId": "cne_p044",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit One Keep Things in Order",
+      "chapter": "Lesson 1 Where Is Your Red Scarf?；Lesson 2 My Book Is on My Desk；Lesson 3 Let's Put Our Clothes in Order；Lesson 4 I Should Tidy Up My Room"
+    },
+    {
+      "topicId": "cne_p045",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit One Keep Things in Order",
+      "chapter": "Lesson 1 Where Is Your Red Scarf?；Lesson 2 My Book Is on My Desk；Lesson 3 Let's Put Our Clothes in Order；Lesson 4 I Should Tidy Up My Room"
+    },
+    {
+      "topicId": "cne_p046",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit One Keep Things in Order",
+      "chapter": "Lesson 1 Where Is Your Red Scarf?；Lesson 2 My Book Is on My Desk；Lesson 3 Let's Put Our Clothes in Order；Lesson 4 I Should Tidy Up My Room"
+    },
+    {
+      "topicId": "cne_p047",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit One Keep Things in Order",
+      "chapter": "Lesson 1 Where Is Your Red Scarf?；Lesson 2 My Book Is on My Desk；Lesson 3 Let's Put Our Clothes in Order；Lesson 4 I Should Tidy Up My Room"
+    },
+    {
+      "topicId": "cne_p095",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit Two Get to Know the Weather",
+      "chapter": "Lesson 5 What's the Weather like Today?；Lesson 6 It Is Sunny in Sanya Now；Lesson 7 I Like Sunny Days；Lesson 8 The Weather in China"
+    },
+    {
+      "topicId": "cne_p100",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit Three Seasons in My Eyes",
+      "chapter": "Lesson 9 There Are Four Seasons in a Year；Lesson 10 What Do We Wear in the Four Seasons?；Lesson 11 I Like the Four Seasons in Beijing；Lesson 12 I Love All Seasons",
+      "note": "含 wear（穿着），同时对照 PEP 四上「衣服」。"
+    },
+    {
+      "topicId": "cne_p091",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit Five This Is My Day",
+      "chapter": "Lesson 15 What Time Is It?；Lesson 16 I Go to the Basketball Class at Three Thirty；Lesson 17 It's Time for the Birthday Party；Lesson 18 Get to Learn the Time"
+    },
+    {
+      "topicId": "cne_p118",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit Seven My Favourite Food",
+      "chapter": "Lesson 23 What Would You Like for Breakfast?；Lesson 24 Have Some Bread, Please；Lesson 25 My Favourite Food Is Jiaozi；Lesson 26 You Are What You Eat"
+    },
+    {
+      "topicId": "cne_p119",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit Seven My Favourite Food",
+      "chapter": "Lesson 23 What Would You Like for Breakfast?；Lesson 24 Have Some Bread, Please；Lesson 25 My Favourite Food Is Jiaozi；Lesson 26 You Are What You Eat"
+    },
+    {
+      "topicId": "cne_p120",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit Seven My Favourite Food",
+      "chapter": "Lesson 23 What Would You Like for Breakfast?；Lesson 24 Have Some Bread, Please；Lesson 25 My Favourite Food Is Jiaozi；Lesson 26 You Are What You Eat"
+    },
+    {
+      "topicId": "cne_p078",
+      "grade": 3,
+      "term": "下",
+      "unit": "Unit Seven My Favourite Food",
+      "chapter": "Lesson 23 What Would You Like for Breakfast?；Lesson 24 Have Some Bread, Please；Lesson 25 My Favourite Food Is Jiaozi；Lesson 26 You Are What You Eat"
+    },
+    {
+      "topicId": "cne_p175",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit One Share and Care",
+      "chapter": "Lesson 1 How Do You Feel Today?；Lesson 2 What's the Matter?；Lesson 3 Let's Take a Walk；Lesson 4 Yoyo and Joe"
+    },
+    {
+      "topicId": "cne_p177",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit One Share and Care",
+      "chapter": "Lesson 1 How Do You Feel Today?；Lesson 2 What's the Matter?；Lesson 3 Let's Take a Walk；Lesson 4 Yoyo and Joe"
+    },
+    {
+      "topicId": "cne_p067",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit Two Be Good Friends",
+      "chapter": "Lesson 5 We Can Read It Together；Lesson 6 Let Me Help You；Lesson 7 You Should Have a Good Rest；Lesson 8 A Cupcake"
+    },
+    {
+      "topicId": "cne_p068",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit Two Be Good Friends",
+      "chapter": "Lesson 5 We Can Read It Together；Lesson 6 Let Me Help You；Lesson 7 You Should Have a Good Rest；Lesson 8 A Cupcake"
+    },
+    {
+      "topicId": "cne_p069",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit Two Be Good Friends",
+      "chapter": "Lesson 5 We Can Read It Together；Lesson 6 Let Me Help You；Lesson 7 You Should Have a Good Rest；Lesson 8 A Cupcake"
+    },
+    {
+      "topicId": "cne_p212",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit Two Be Good Friends",
+      "chapter": "Lesson 5 We Can Read It Together；Lesson 6 Let Me Help You；Lesson 7 You Should Have a Good Rest；Lesson 8 A Cupcake"
+    },
+    {
+      "topicId": "cne_p152",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit Three Be a Nice Person",
+      "chapter": "Lesson 9 Can You Help Me, Please?；Lesson 10 Excuse Me；Lesson 11 I'm Sorry；Lesson 12 Could I Have a Banana, Please?",
+      "note": "「Excuse me / I'm sorry / Could I have...」按祈使句与 Let's 建议句对照（礼貌用语已在一年级上册对照过）。"
+    },
+    {
+      "topicId": "cne_p059",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit Three Be a Nice Person",
+      "chapter": "Lesson 9 Can You Help Me, Please?；Lesson 10 Excuse Me；Lesson 11 I'm Sorry；Lesson 12 Could I Have a Banana, Please?",
+      "note": "「Excuse me / I'm sorry / Could I have...」按祈使句与 Let's 建议句对照（礼貌用语已在一年级上册对照过）。"
+    },
+    {
+      "topicId": "cne_p129",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit Six Get Close to Nature",
+      "chapter": "Lesson 19 We Can't Live Without Nature；Lesson 20 Feel Nature on the Farm；Lesson 21 Snow Turns into Water；Lesson 22 I Love This Trip"
+    },
+    {
+      "topicId": "cne_p126",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit Six Get Close to Nature",
+      "chapter": "Lesson 19 We Can't Live Without Nature；Lesson 20 Feel Nature on the Farm；Lesson 21 Snow Turns into Water；Lesson 22 I Love This Trip"
+    },
+    {
+      "topicId": "cne_p131",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit Six Get Close to Nature",
+      "chapter": "Lesson 19 We Can't Live Without Nature；Lesson 20 Feel Nature on the Farm；Lesson 21 Snow Turns into Water；Lesson 22 I Love This Trip"
+    },
+    {
+      "topicId": "cne_p132",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit Six Get Close to Nature",
+      "chapter": "Lesson 19 We Can't Live Without Nature；Lesson 20 Feel Nature on the Farm；Lesson 21 Snow Turns into Water；Lesson 22 I Love This Trip"
+    },
+    {
+      "topicId": "cne_p238",
+      "grade": 4,
+      "term": "上",
+      "unit": "Unit Seven Be Together",
+      "chapter": "Lesson 23 Happy New Year!；Lesson 24 Happy Spring Festival!；Lesson 25 Happy Lantern Festival!；Lesson 26 The Story of Nian",
+      "note": "春节、元宵节这类节日活动，PEP 没有专门知识点，按「聚会与邀请词汇」近似对照。"
+    },
+    {
+      "topicId": "cne_p168",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit One My Hobbies",
+      "chapter": "Lesson 1 What's Your Hobby?；Lesson 2 I Want to Join the Dance Club；Lesson 3 I Want to Be a Football Player；Lesson 4 Hobbies of Animals"
+    },
+    {
+      "topicId": "cne_p169",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit One My Hobbies",
+      "chapter": "Lesson 1 What's Your Hobby?；Lesson 2 I Want to Join the Dance Club；Lesson 3 I Want to Be a Football Player；Lesson 4 Hobbies of Animals"
+    },
+    {
+      "topicId": "cne_p170",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit One My Hobbies",
+      "chapter": "Lesson 1 What's Your Hobby?；Lesson 2 I Want to Join the Dance Club；Lesson 3 I Want to Be a Football Player；Lesson 4 Hobbies of Animals"
+    },
+    {
+      "topicId": "cne_p246",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit Two Keep Safe",
+      "chapter": "Lesson 5 Please Don't Run Down the Stairs!；Lesson 6 It's Dangerous to Skate on Thin Ice；Lesson 7 No Pushing in the Crowd；Lesson 8 Stop at the Red Light!",
+      "note": "安全规则（Don't run / No pushing）对照 must 与 mustn't、Keep 与 No 类规则。"
+    },
+    {
+      "topicId": "cne_p271",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit Two Keep Safe",
+      "chapter": "Lesson 5 Please Don't Run Down the Stairs!；Lesson 6 It's Dangerous to Skate on Thin Ice；Lesson 7 No Pushing in the Crowd；Lesson 8 Stop at the Red Light!",
+      "note": "安全规则（Don't run / No pushing）对照 must 与 mustn't、Keep 与 No 类规则。"
+    },
+    {
+      "topicId": "cne_p142",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit Five Celebrate Special Holidays",
+      "chapter": "Lesson 15 What Do You Do on Labour Day?；Lesson 16 Children's Day Is for Us；Lesson 17 Happy Birthday, China!；Lesson 18 More Special Festivals"
+    },
+    {
+      "topicId": "cne_p264",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit Five Celebrate Special Holidays",
+      "chapter": "Lesson 15 What Do You Do on Labour Day?；Lesson 16 Children's Day Is for Us；Lesson 17 Happy Birthday, China!；Lesson 18 More Special Festivals"
+    },
+    {
+      "topicId": "cne_p258",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit Six Enjoy a Happy Life",
+      "chapter": "Lesson 19 A Happy Family Weekend；Lesson 20 Fun Time in the Park；Lesson 21 Weekend Clubs in the Community；Lesson 22 Wonderful Worlds in Books"
+    },
+    {
+      "topicId": "cne_p259",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit Six Enjoy a Happy Life",
+      "chapter": "Lesson 19 A Happy Family Weekend；Lesson 20 Fun Time in the Park；Lesson 21 Weekend Clubs in the Community；Lesson 22 Wonderful Worlds in Books"
+    },
+    {
+      "topicId": "cne_p214",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit Seven Welcome to Our Community",
+      "chapter": "Lesson 23 Could You Tell Me the Way to a Shop?；Lesson 24 Is There a Library near Here?；Lesson 25 This Is the Way to Our School；Lesson 26 Welcome to Our Smart Community",
+      "note": "问路与社区场所；PEP 的问路在六上「Amazing places」，此处只对照社区场所与问路功能。"
+    },
+    {
+      "topicId": "cne_p215",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit Seven Welcome to Our Community",
+      "chapter": "Lesson 23 Could You Tell Me the Way to a Shop?；Lesson 24 Is There a Library near Here?；Lesson 25 This Is the Way to Our School；Lesson 26 Welcome to Our Smart Community",
+      "note": "问路与社区场所；PEP 的问路在六上「Amazing places」，此处只对照社区场所与问路功能。"
+    },
+    {
+      "topicId": "cne_p157",
+      "grade": 4,
+      "term": "下",
+      "unit": "Unit Seven Welcome to Our Community",
+      "chapter": "Lesson 23 Could You Tell Me the Way to a Shop?；Lesson 24 Is There a Library near Here?；Lesson 25 This Is the Way to Our School；Lesson 26 Welcome to Our Smart Community",
+      "note": "问路与社区场所；PEP 的问路在六上「Amazing places」，此处只对照社区场所与问路功能。"
+    },
+    {
+      "topicId": "cne_p261",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit One My Favourite Things",
+      "chapter": "Lesson 1 Which One Do You Like Better?；Lesson 2 My Favourite Subject Is Maths；Lesson 3 My Hobby Is Drawing；Lesson 4 I Like Chinese Kung Fu Best",
+      "note": "favourite + because 说理由，对照「爱好」与「Why 与 because 说理由」。"
+    },
+    {
+      "topicId": "cne_p209",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit Three Grow up in Labour",
+      "chapter": "Lesson 9 I Can Take Care of Myself；Lesson 10 I Can Help My Family；Lesson 11 We Need Helpers for the Community；Lesson 12 I Am a Good Helper",
+      "note": "家务与社区帮手，对照 PEP 四上「家务活动」「帮忙做家务」「年轻人如何帮助社区」。"
+    },
+    {
+      "topicId": "cne_p210",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit Three Grow up in Labour",
+      "chapter": "Lesson 9 I Can Take Care of Myself；Lesson 10 I Can Help My Family；Lesson 11 We Need Helpers for the Community；Lesson 12 I Am a Good Helper",
+      "note": "家务与社区帮手，对照 PEP 四上「家务活动」「帮忙做家务」「年轻人如何帮助社区」。"
+    },
+    {
+      "topicId": "cne_p216",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit Three Grow up in Labour",
+      "chapter": "Lesson 9 I Can Take Care of Myself；Lesson 10 I Can Help My Family；Lesson 11 We Need Helpers for the Community；Lesson 12 I Am a Good Helper",
+      "note": "家务与社区帮手，对照 PEP 四上「家务活动」「帮忙做家务」「年轻人如何帮助社区」。"
+    },
+    {
+      "topicId": "cne_p164",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit Five Travel Around China",
+      "chapter": "Lesson 15 We Will See the Pandas in Chengdu；Lesson 16 Are We Going There by Plane?；Lesson 17 We Will Have a One-day Trip Around Chengdu；Lesson 18 What a Nice Travel Plan!",
+      "note": "旅行计划用 be going to，对照 PEP 六上「周末计划」一组（语法相同）。"
+    },
+    {
+      "topicId": "cne_p165",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit Five Travel Around China",
+      "chapter": "Lesson 15 We Will See the Pandas in Chengdu；Lesson 16 Are We Going There by Plane?；Lesson 17 We Will Have a One-day Trip Around Chengdu；Lesson 18 What a Nice Travel Plan!",
+      "note": "旅行计划用 be going to，对照 PEP 六上「周末计划」一组（语法相同）。"
+    },
+    {
+      "topicId": "cne_p166",
+      "grade": 5,
+      "term": "上",
+      "unit": "Unit Five Travel Around China",
+      "chapter": "Lesson 15 We Will See the Pandas in Chengdu；Lesson 16 Are We Going There by Plane?；Lesson 17 We Will Have a One-day Trip Around Chengdu；Lesson 18 What a Nice Travel Plan!",
+      "note": "旅行计划用 be going to，对照 PEP 六上「周末计划」一组（语法相同）。"
+    },
+    {
+      "topicId": "cne_p104",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Five Shopping in Different Ways",
+      "chapter": "Lesson 15 Make a Shopping List；Lesson 16 Shop in a Clothing Store；Lesson 17 Shop at the Flea Market；Lesson 18 Shop Online",
+      "note": "购物清单、服装店、跳蚤市场、网购，对照 PEP 四下「Going shopping」一组。"
+    },
+    {
+      "topicId": "cne_p105",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Five Shopping in Different Ways",
+      "chapter": "Lesson 15 Make a Shopping List；Lesson 16 Shop in a Clothing Store；Lesson 17 Shop at the Flea Market；Lesson 18 Shop Online",
+      "note": "购物清单、服装店、跳蚤市场、网购，对照 PEP 四下「Going shopping」一组。"
+    },
+    {
+      "topicId": "cne_p106",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Five Shopping in Different Ways",
+      "chapter": "Lesson 15 Make a Shopping List；Lesson 16 Shop in a Clothing Store；Lesson 17 Shop at the Flea Market；Lesson 18 Shop Online",
+      "note": "购物清单、服装店、跳蚤市场、网购，对照 PEP 四下「Going shopping」一组。"
+    },
+    {
+      "topicId": "cne_p107",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Five Shopping in Different Ways",
+      "chapter": "Lesson 15 Make a Shopping List；Lesson 16 Shop in a Clothing Store；Lesson 17 Shop at the Flea Market；Lesson 18 Shop Online",
+      "note": "购物清单、服装店、跳蚤市场、网购，对照 PEP 四下「Going shopping」一组。"
+    },
+    {
+      "topicId": "cne_p250",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Five Shopping in Different Ways",
+      "chapter": "Lesson 15 Make a Shopping List；Lesson 16 Shop in a Clothing Store；Lesson 17 Shop at the Flea Market；Lesson 18 Shop Online",
+      "note": "购物清单、服装店、跳蚤市场、网购，对照 PEP 四下「Going shopping」一组。"
+    },
+    {
+      "topicId": "cne_p251",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Five Shopping in Different Ways",
+      "chapter": "Lesson 15 Make a Shopping List；Lesson 16 Shop in a Clothing Store；Lesson 17 Shop at the Flea Market；Lesson 18 Shop Online",
+      "note": "购物清单、服装店、跳蚤市场、网购，对照 PEP 四下「Going shopping」一组。"
+    },
+    {
+      "topicId": "cne_p080",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Six Our Dream Jobs",
+      "chapter": "Lesson 19 Different Jobs；Lesson 20 My Dream Job；Lesson 21 Work for My Dream Job；Lesson 22 My Hero—Yuan Longping",
+      "note": "职业与理想职业，对照 PEP 四上「Helping at home」的职业一组与五上「更多职业」一组。"
+    },
+    {
+      "topicId": "cne_p081",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Six Our Dream Jobs",
+      "chapter": "Lesson 19 Different Jobs；Lesson 20 My Dream Job；Lesson 21 Work for My Dream Job；Lesson 22 My Hero—Yuan Longping",
+      "note": "职业与理想职业，对照 PEP 四上「Helping at home」的职业一组与五上「更多职业」一组。"
+    },
+    {
+      "topicId": "cne_p082",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Six Our Dream Jobs",
+      "chapter": "Lesson 19 Different Jobs；Lesson 20 My Dream Job；Lesson 21 Work for My Dream Job；Lesson 22 My Hero—Yuan Longping",
+      "note": "职业与理想职业，对照 PEP 四上「Helping at home」的职业一组与五上「更多职业」一组。"
+    },
+    {
+      "topicId": "cne_p083",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Six Our Dream Jobs",
+      "chapter": "Lesson 19 Different Jobs；Lesson 20 My Dream Job；Lesson 21 Work for My Dream Job；Lesson 22 My Hero—Yuan Longping",
+      "note": "职业与理想职业，对照 PEP 四上「Helping at home」的职业一组与五上「更多职业」一组。"
+    },
+    {
+      "topicId": "cne_p171",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Six Our Dream Jobs",
+      "chapter": "Lesson 19 Different Jobs；Lesson 20 My Dream Job；Lesson 21 Work for My Dream Job；Lesson 22 My Hero—Yuan Longping",
+      "note": "职业与理想职业，对照 PEP 四上「Helping at home」的职业一组与五上「更多职业」一组。"
+    },
+    {
+      "topicId": "cne_p172",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Six Our Dream Jobs",
+      "chapter": "Lesson 19 Different Jobs；Lesson 20 My Dream Job；Lesson 21 Work for My Dream Job；Lesson 22 My Hero—Yuan Longping",
+      "note": "职业与理想职业，对照 PEP 四上「Helping at home」的职业一组与五上「更多职业」一组。"
+    },
+    {
+      "topicId": "cne_p173",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Six Our Dream Jobs",
+      "chapter": "Lesson 19 Different Jobs；Lesson 20 My Dream Job；Lesson 21 Work for My Dream Job；Lesson 22 My Hero—Yuan Longping",
+      "note": "职业与理想职业，对照 PEP 四上「Helping at home」的职业一组与五上「更多职业」一组。"
+    },
+    {
+      "topicId": "cne_p174",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Six Our Dream Jobs",
+      "chapter": "Lesson 19 Different Jobs；Lesson 20 My Dream Job；Lesson 21 Work for My Dream Job；Lesson 22 My Hero—Yuan Longping",
+      "note": "职业与理想职业，对照 PEP 四上「Helping at home」的职业一组与五上「更多职业」一组。"
+    },
+    {
+      "topicId": "cne_p155",
+      "grade": 5,
+      "term": "下",
+      "unit": "Unit Seven Welcome to Beijing",
+      "chapter": "Lesson 23 Famous Places in Beijing；Lesson 24 Interesting Things in Beijing；Lesson 25 Beijing Central Axis；Lesson 26 Beijing in My Eyes",
+      "note": "北京景点；PEP 只有城市场所词汇，按「城市场所」近似对照。"
+    },
+    {
+      "topicId": "cne_p185",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit One A Wonderful Summer Holiday",
+      "chapter": "Lesson 1 We All Enjoyed Our Summer Holiday；Lesson 2 All of Us Had a Meaningful Summer Holiday；Lesson 3 My Summer Holiday；Lesson 4 The Children’s Summer Stories",
+      "note": "暑假见闻用一般过去时，对照 PEP 六上「Amazing places」里的过去式与旅行日记一组。"
+    },
+    {
+      "topicId": "cne_p186",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit One A Wonderful Summer Holiday",
+      "chapter": "Lesson 1 We All Enjoyed Our Summer Holiday；Lesson 2 All of Us Had a Meaningful Summer Holiday；Lesson 3 My Summer Holiday；Lesson 4 The Children’s Summer Stories",
+      "note": "暑假见闻用一般过去时，对照 PEP 六上「Amazing places」里的过去式与旅行日记一组。"
+    },
+    {
+      "topicId": "cne_p189",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit One A Wonderful Summer Holiday",
+      "chapter": "Lesson 1 We All Enjoyed Our Summer Holiday；Lesson 2 All of Us Had a Meaningful Summer Holiday；Lesson 3 My Summer Holiday；Lesson 4 The Children’s Summer Stories",
+      "note": "暑假见闻用一般过去时，对照 PEP 六上「Amazing places」里的过去式与旅行日记一组。"
+    },
+    {
+      "topicId": "cne_p190",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit One A Wonderful Summer Holiday",
+      "chapter": "Lesson 1 We All Enjoyed Our Summer Holiday；Lesson 2 All of Us Had a Meaningful Summer Holiday；Lesson 3 My Summer Holiday；Lesson 4 The Children’s Summer Stories",
+      "note": "暑假见闻用一般过去时，对照 PEP 六上「Amazing places」里的过去式与旅行日记一组。"
+    },
+    {
+      "topicId": "cne_p191",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit One A Wonderful Summer Holiday",
+      "chapter": "Lesson 1 We All Enjoyed Our Summer Holiday；Lesson 2 All of Us Had a Meaningful Summer Holiday；Lesson 3 My Summer Holiday；Lesson 4 The Children’s Summer Stories",
+      "note": "暑假见闻用一般过去时，对照 PEP 六上「Amazing places」里的过去式与旅行日记一组。"
+    },
+    {
+      "topicId": "cne_p176",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit Two Stay Safe and Healthy",
+      "chapter": "Lesson 5 We Should Ride Bikes Safely；Lesson 6 It’s Better to Eat Right and Play Smart；Lesson 7 Fire Safety；Lesson 8 Learn More to Stay Safe and Healthy",
+      "note": "安全与健康，对照 PEP 六上「Healthy life」一组。"
+    },
+    {
+      "topicId": "cne_p235",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit Two Stay Safe and Healthy",
+      "chapter": "Lesson 5 We Should Ride Bikes Safely；Lesson 6 It’s Better to Eat Right and Play Smart；Lesson 7 Fire Safety；Lesson 8 Learn More to Stay Safe and Healthy",
+      "note": "安全与健康，对照 PEP 六上「Healthy life」一组。"
+    },
+    {
+      "topicId": "cne_p236",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit Two Stay Safe and Healthy",
+      "chapter": "Lesson 5 We Should Ride Bikes Safely；Lesson 6 It’s Better to Eat Right and Play Smart；Lesson 7 Fire Safety；Lesson 8 Learn More to Stay Safe and Healthy",
+      "note": "安全与健康，对照 PEP 六上「Healthy life」一组。"
+    },
+    {
+      "topicId": "cne_p237",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit Two Stay Safe and Healthy",
+      "chapter": "Lesson 5 We Should Ride Bikes Safely；Lesson 6 It’s Better to Eat Right and Play Smart；Lesson 7 Fire Safety；Lesson 8 Learn More to Stay Safe and Healthy",
+      "note": "安全与健康，对照 PEP 六上「Healthy life」一组。"
+    },
+    {
+      "topicId": "cne_p101",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit Six Our Clothes",
+      "chapter": "Lesson 19 Dress Nicely for the English Speech；Lesson 20 Give Old Clothes a New Life；Lesson 21 Amazing Smart Clothes；Lesson 22 Special Clothing Keeps People Safe and Healthy",
+      "note": "衣服与穿着，对照 PEP 四上「Changing for the seasons」的 Whose 与穿着一组（衣服词汇本身已在三年级下册对照过）。"
+    },
+    {
+      "topicId": "cne_p102",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit Six Our Clothes",
+      "chapter": "Lesson 19 Dress Nicely for the English Speech；Lesson 20 Give Old Clothes a New Life；Lesson 21 Amazing Smart Clothes；Lesson 22 Special Clothing Keeps People Safe and Healthy",
+      "note": "衣服与穿着，对照 PEP 四上「Changing for the seasons」的 Whose 与穿着一组（衣服词汇本身已在三年级下册对照过）。"
+    },
+    {
+      "topicId": "cne_p103",
+      "grade": 6,
+      "term": "上",
+      "unit": "Unit Six Our Clothes",
+      "chapter": "Lesson 19 Dress Nicely for the English Speech；Lesson 20 Give Old Clothes a New Life；Lesson 21 Amazing Smart Clothes；Lesson 22 Special Clothing Keeps People Safe and Healthy",
+      "note": "衣服与穿着，对照 PEP 四上「Changing for the seasons」的 Whose 与穿着一组（衣服词汇本身已在三年级下册对照过）。"
+    }
+  ]
+}
