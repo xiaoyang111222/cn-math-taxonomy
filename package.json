@@ -1,7 +1,7 @@
 {
   "name": "cn-math-taxonomy",
   "version": "1.0.0",
-  "description": "对齐《义务教育数学课程标准（2022 年版）》与人教版一–九的知识点 DAG，附**自适应前置诊断**与题库。答错会沿先修边从初中一直回溯到具体的小学知识点，并给出按年级从低到高排列的学习路径。仓库名仍是 `cn-math-taxonomy`。",
+  "description": "中小学 11 学科知识图谱数据集（JSON）：4,231 个知识点、6,700 条先修关系、17,071 道题，对齐国家课程标准与人教版/统编版教材，附题库与教材版本映射。",
   "main": "index.js",
   "directories": {
     "doc": "docs",
@@ -14,9 +14,20 @@
     "type": "git",
     "url": "git+https://github.com/xiaoyang111222/cn-math-taxonomy.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "knowledge-graph",
+    "k12",
+    "education",
+    "dataset",
+    "question-bank",
+    "curriculum-standards",
+    "prerequisites",
+    "textbook",
+    "china",
+    "json"
+  ],
+  "author": "肖杨",
+  "license": "CC-BY-NC-4.0",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/xiaoyang111222/cn-math-taxonomy/issues"

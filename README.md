@@ -656,7 +656,7 @@ id 为 `cnm_h144`–`cnm_h271`，共 **128** 个。`grade` 12 / 13 / 14 分别�
 
 - 选必一：教师之家 <https://www.renjiaoshe.com/jiaocai/2072.html>，电子书课本网 <https://www.dzskb.com/rjabgzsxxzxbx1.html>，学习力 <http://www.xuexili.com/keben/70150.html>
 - 选必二：教师之家 <https://www.renjiaoshe.com/jiaocai/2073.html>，21 世纪教育网 <http://zy.21cnjy.com/20824168>。4.4 写成「数学归纳法*」，星号常表示选学，课标仍有这一要求，是否必学待核
-- 选必三：教师之家 <https://www.renjiaoshe.com/jiaocai/2074.html>，好多电子课本 <https://www.haoduoyun.cc/book/rjb/shuxue/bwx3.shtml>，学习力 <http://www.xuexili.com/keben/70201.html>，临汾升学考试网 <https://www.linfenk12.com/7302.html>。8.1、8.3 的节名不一致：知识点采用好多电子课本的「成对数据的统计相关性」「列联表与独立性检验」，教师之家写成「成对数据的相关关系」「分类变量与列联表」。数学探究和数学建模只建来源点了名的两项；好多电子课本把建模活动写成「数学模型」，这里仍标成数学建模
+- 选必三：教师之家 <https://www.renjiaoshe.com/jiaocai/2074.html>，好多电子课本 https://www.haoduoyun.cc/book/rjb/shuxue/bwx3.shtml（链接已失效），学习力 <http://www.xuexili.com/keben/70201.html>，临汾升学考试网 <https://www.linfenk12.com/7302.html>。8.1、8.3 的节名不一致：知识点采用好多电子课本的「成对数据的统计相关性」「列联表与独立性检验」，教师之家写成「成对数据的相关关系」「分类变量与列联表」。数学探究和数学建模只建来源点了名的两项；好多电子课本把建模活动写成「数学模型」，这里仍标成数学建模
 
 课标新增 32 条，续接原编号：`FUN.18`–`FUN.25`、`GA.13`–`GA.23`、`PS.09`–`PS.19`、`MI.03`–`MI.04`。全部 `verbatim: false`。2026-11-06 对照同一份 2020 年修订版 PDF 记下印刷页，正文仍是转述，句末的「待核」没有从 text 里删掉。
 

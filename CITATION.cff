@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "如果您在研究或教学中使用本数据集，请引用本仓库。"
+title: "cn-math-taxonomy：中小学 11 学科知识图谱数据集"
+authors:
+  - family-names: "肖"
+    given-names: "杨"
+repository-code: "https://github.com/xiaoyang111222/cn-math-taxonomy"
+license: CC-BY-NC-4.0
+version: "2026.11.27"
+date-released: 2026-11-27
+abstract: "中小学 11 个学科的知识点、先修关系与题库数据集（JSON），按国家课程标准逐条核对，含人教版/统编版对齐与沪教版等教材版本映射。"
+keywords:
+  - knowledge-graph
+  - k12
+  - dataset
+  - question-bank
+  - curriculum
