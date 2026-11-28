@@ -13824,7 +13824,7 @@
     "topicId": "cnm_019",
     "difficulty": "basic",
     "type": "numeric",
-    "prompt": "把 (-3)×(-3)×(-3)×(-3) 写成幂 a^n 的形式，指数 n 是多少？",
+    "prompt": "把 (-3)×(-3)×(-3)×(-3) 写成幂 (-3)^n 的形式，指数 n 是多少？",
     "answer": "4",
     "explanation": "4 个 (-3) 相乘，写成 (-3)^4，指数是 4。",
     "verify": "len([-3,-3,-3,-3])"
@@ -14006,7 +14006,7 @@
     "topicId": "cnm_022",
     "difficulty": "basic",
     "type": "numeric",
-    "prompt": "把 8 600 000 用科学记数法写成 a×10^n（1≤a<10）的形式，则 n 等于多少？",
+    "prompt": "把 8 600 000 用科学记数法写成 a×10^n（1≤a<10，n 为整数）的形式，则 n 等于多少？",
     "answer": "6",
     "explanation": "8 600 000=8.6×10^6，所以 n=6。",
     "verify": "floor(log10(8600000))"
@@ -14198,7 +14198,7 @@
     "topicId": "cnm_025",
     "difficulty": "basic",
     "type": "short",
-    "prompt": "用字母表示加法交换律。",
+    "prompt": "用字母 a、b 表示加法交换律。",
     "answer": "a+b=b+a",
     "accept": [
       "b+a=a+b",
@@ -14405,7 +14405,7 @@
     "topicId": "cnm_027",
     "difficulty": "advanced",
     "type": "choice",
-    "prompt": "某商品原价 a 元，先涨价 10%，再按涨价后的价格打八折出售，则现价是多少元？",
+    "prompt": "某商品原价 a 元（a>0），先涨价 10%，再按涨价后的价格打八折出售，则现价是多少元？",
     "answer": "A",
     "choices": [
       {
@@ -14545,7 +14545,7 @@
     "topicId": "cnm_030",
     "difficulty": "basic",
     "type": "short",
-    "prompt": "数列 3，5，7，9，… 的第 n 项是多少？",
+    "prompt": "数列 3，5，7，9，… 是由连续奇数排列成的等差数列，它的第 n 项是多少？",
     "answer": "2n+1",
     "accept": [
       "2n+1",
@@ -14832,7 +14832,7 @@
     "topicId": "cnm_034",
     "difficulty": "basic",
     "type": "numeric",
-    "prompt": "合并同类项 3a+5a-2a 后，结果是 ka，求 k 的值。",
+    "prompt": "合并同类项 3a+5a-2a 后，结果是 ka（a≠0），求 k 的值。",
     "answer": "6",
     "explanation": "同类项合并时系数相加，字母部分不变：3+5-2=6，结果为 6a。",
     "verify": "3+5-2"
@@ -15059,7 +15059,7 @@
     "topicId": "cnm_038",
     "difficulty": "basic",
     "type": "short",
-    "prompt": "长方形长为 a+2，宽为 a，周长怎样用整式表示？",
+    "prompt": "长方形长为 a+2，宽为 a，周长怎样用整式表示？（用去括号后的最简整式表示）",
     "answer": "4a+4",
     "accept": [
       "4a+4",

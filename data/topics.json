@@ -8338,7 +8338,7 @@
       "理解字母可取不同值"
     ],
     "diagnostic_question": {
-      "question": "用字母表示加法交换律。",
+      "question": "用字母 a、b 表示加法交换律。",
       "answer": "a+b=b+a"
     },
     "external": false,
@@ -8443,7 +8443,7 @@
       "能用代数式预测第 n 项的值"
     ],
     "diagnostic_question": {
-      "question": "数列 3，5，7，9，… 的第 n 项是多少？",
+      "question": "数列 3，5，7，9，… 是由连续奇数排列成的等差数列，它的第 n 项是多少？",
       "answer": "2n+1"
     },
     "external": false,
@@ -8674,7 +8674,7 @@
       "能解释化简结果的意义"
     ],
     "diagnostic_question": {
-      "question": "长方形长为 a+2，宽为 a，周长怎样用整式表示？",
+      "question": "长方形长为 a+2，宽为 a，周长怎样用整式表示？（用去括号后的最简整式表示）",
       "answer": "4a+4"
     },
     "external": false,
